@@ -1,15 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Basic//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-basic.dtd">
-<svg version="1.1" baseProfile="basic" id="svg8829" xmlns:svg="http://www.w3.org/2000/svg"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="320px" height="320px"
-	 viewBox="-70 -70 320 320" xml:space="preserve">
-<path id="path10693" fill="#A30075" d="M94.461-68.76c-16.964,0-30.732,13.767-30.732,30.73c0,14.118,9.522,26.037,22.5,29.635
-	V3.494L41.503,3.312v14.542H85.04l-4.207,191.975c-30.555-2.742-57.792-15.302-77.56-34.114l11.251-11.524l-45.639-36.404
-	l11.432,71.617l15.638-16.1c7.804,9.616,16.689,17.807,27.348,25.246c18.032,12.581,37.768,19.699,57.621,21.767l2.012,20.943
-	h20.853l2.104-20.943c32.115-3.444,62.768-19.983,85.24-47.741l17.378,16.828l9.329-72.62l-45.639,37.407l11.616,11.25
-	c-19.826,18.993-47.249,31.659-78.017,34.389l-4.116-191.975h43.535V3.312l-43.444,0.547V-8.213
-	c13.44-3.283,23.414-15.371,23.414-29.816C125.19-54.993,111.424-68.76,94.461-68.76z M94.425-52.663
-	c8.077,0,14.632,6.556,14.632,14.633c0,8.079-6.555,14.634-14.632,14.634c-8.079,0-14.635-6.556-14.635-14.634
-	C79.79-46.107,86.345-52.663,94.425-52.663z"/>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg8829"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="Harbour.svg"
+   inkscape:export-xdpi="89.361702"
+   inkscape:export-ydpi="89.361702"
+   inkscape:export-filename="C:\Dokumente und Einstellungen\rolf\Eigene Dateien\Eigene Karten\Harbour.png"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   x="0px"
+   y="0px"
+   width="320px"
+   height="320px"
+   viewBox="0 0 320 320"
+   enable-background="new 0 0 320 320"
+   xml:space="preserve"><metadata
+   id="metadata14"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata>
+<sodipodi:namedview
+   id="base"
+   inkscape:window-height="841"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:window-width="1440"
+   inkscape:window-x="-4"
+   inkscape:window-y="-3"
+   inkscape:current-layer="g2415"
+   showgrid="false"
+   guidetolerance="10.0"
+   inkscape:zoom="1.4722222"
+   gridtolerance="10.0"
+   objecttolerance="10.0"
+   borderopacity="1.0"
+   bordercolor="#666666"
+   inkscape:cx="90"
+   pagecolor="#ffffff"
+   inkscape:cy="146.67042">
+	</sodipodi:namedview>
+<defs
+   id="defs4">
+	
+	
+		<inkscape:perspective
+   id="perspective15"
+   inkscape:persp3d-origin="90 : 60 : 1"
+   sodipodi:type="inkscape:persp3d"
+   inkscape:vp_x="0 : 90 : 1"
+   inkscape:vp_y="0 : 1000 : 0"
+   inkscape:vp_z="180 : 90 : 1">
+		</inkscape:perspective>
+</defs>
+<g
+   id="g2415">
+	<path
+   id="path2421"
+   d="M 317.33253,159.73113 C 317.33253,246.44005 246.85641,316.7948 160,316.7948 C 73.14359,316.7948 2.6674639,246.44005 2.6674639,159.73113 C 2.6674639,73.022217 73.14359,2.667464 160,2.667464 C 246.85641,2.667464 317.33253,73.022217 317.33253,159.73113 z"
+   style="fill:none;stroke:#a30075;stroke-width:4.90096569" />
+	<path
+   id="path2417"
+   d="M 257.47734,185.7612 L 248.61559,235.72357 L 236.46755,224.49803 C 230.40926,231.22026 223.51023,236.9234 215.22667,242.12043 C 201.22997,250.89938 185.91071,255.86388 170.50391,257.29625 L 168.9296,271.9171 L 152.7332,271.9171 L 151.11366,257.29625 C 126.1735,254.89461 102.38778,243.36815 84.942547,223.98996 L 71.452265,235.72357 L 64.211035,185.07139 L 99.632491,211.16789 L 90.609469,219.02254 C 105.99462,232.25889 127.30335,241.10623 151.18643,242.99784 L 154.3793,109.07797 L 120.57148,109.07797 L 120.57148,98.936015 L 154.30652,99.306313 L 154.30652,90.874224 C 143.87341,88.589839 136.12479,80.157744 136.12479,70.087105 C 136.12479,58.240156 146.80866,48.654143 159.99803,48.654143 C 173.16578,48.654143 183.85751,58.240156 183.85751,70.087105 C 183.85751,79.928133 176.456,88.242003 166.38376,90.762839 L 166.38376,99.053258 L 201.11493,98.936015 L 201.11493,109.07797 L 167.30908,109.07797 L 170.57077,242.99784 C 194.28571,241.10428 215.43218,232.32533 230.77408,219.20623 L 222.05293,211.16594 L 257.47734,185.7612 z"
+   style="fill:#a30075;stroke:#a30075;stroke-width:4.90096569" />
+	
+		<ellipse
+   id="ellipse2419"
+   inkscape:transform-center-x="5.3433773"
+   sodipodi:ry="10.449"
+   sodipodi:rx="11.553"
+   sodipodi:cy="69.002998"
+   sodipodi:cx="160.02299"
+   cx="160.02299"
+   cy="69.002998"
+   rx="11.553"
+   ry="10.449"
+   transform="matrix(0.9833283,0,0,0.977068,2.6674639,2.667464)"
+   style="fill:none;stroke:#ffffff;stroke-width:5">
+	</ellipse>
+</g>
+<g
+   id="g2409"
+   transform="matrix(0.9833283,0,0,0.977068,2.6674639,2.667464)">
+	<path
+   id="path2411"
+   d="M 259.13,187.391 L 250.118,238.526 L 237.764,227.037 C 231.603,233.917 224.587,239.754 216.163,245.073 C 201.929,254.058 186.35,259.139 170.682,260.605 L 169.081,275.569 L 152.61,275.569 L 150.963,260.605 C 125.6,258.147 101.411,246.35 83.67,226.517 L 69.951,238.526 L 62.587,186.685 L 98.609,213.394 L 89.433,221.433 C 105.079,234.98 126.749,244.035 151.037,245.971 L 154.284,108.908 L 119.903,108.908 L 119.903,98.528 L 154.21,98.907 L 154.21,90.277 C 143.6,87.939 135.72,79.309 135.72,69.002 C 135.72,56.877 146.585,47.066 159.998,47.066 C 173.389,47.066 184.262,56.877 184.262,69.002 C 184.262,79.074 176.735,87.583 166.492,90.163 L 166.492,98.648 L 201.812,98.528 L 201.812,108.908 L 167.433,108.908 L 170.75,245.971 C 194.867,244.033 216.372,235.048 231.974,221.621 L 223.105,213.392 L 259.13,187.391 z M 171.576,69.003 C 171.576,63.236 166.403,58.556 160.023,58.556 C 153.647,58.556 148.474,63.238 148.474,69.003 C 148.474,74.773 153.647,79.452 160.023,79.452 C 166.402,79.452 171.576,74.771 171.576,69.003 z"
+   style="fill-opacity:0" />
+	
+		<ellipse
+   id="ellipse2413"
+   sodipodi:ry="10.449"
+   sodipodi:rx="11.553"
+   sodipodi:cy="69.002998"
+   sodipodi:cx="160.02299"
+   cx="160.02299"
+   cy="69.002998"
+   rx="11.553"
+   ry="10.449"
+   style="fill-opacity:0">
+	</ellipse>
+</g>
 </svg>
