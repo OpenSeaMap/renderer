@@ -18,26 +18,7 @@
   symbolsDir="../../../OpenSeaMap-styles/SeaMapSymbols"
   meter2pixel="0.1375">
  
-	<!-- Lateral-Marks -->
-		<rule e="node" k="seamark:BOYLAT:CATLAM" v="starboard-hand">
-			<symbol ref="Lateral_Pillar_Green" position="center"/>
-			<symbol ref="Cone_Green" position="center"/>
-		</rule>
-
-		<rule e="node"  k="seamark:BOYLAT:CATLAM" v="port-hand">
-			<symbol ref="Lateral_Pillar_Red" position="center"/>
-			<symbol ref="Cylinder_Red" position="center"/>
-		</rule>
-
-		<rule e="node"  k="seamark:LIGHTS:COLOUR" v="green">
-			<symbol ref="Light_Green" position="center"/>
-		</rule>
-
-		<rule e="node"  k="seamark:LIGHTS:COLOUR" v="red">
-			<symbol ref="Light_Red" position="center"/>
-		</rule>
-
-
+<!-- Lateral-Marks -->
 	<!--Safe water-->
 	<rule e="node" k="seamark:buoy_safe_water:shape" v="*">
 		<rule e="node" k="seamark:buoy_safe_water:shape" v="pillar">
@@ -57,12 +38,15 @@
 			<rule e="node" k="seamark:buoy_lateral:shape" v="*">
 				<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
 					<symbol ref="Lateral_Pillar_Green" position="center"/>
+					<text k ='seamark:name' class ='buoy-name' dy = '-6' dx = '5'/>
 				</rule>
 				<rule e="node" k="seamark:buoy_lateral:shape" v="spar">
 					<symbol ref="Lateral_Spar_Green" position="center"/>
+					<text k ='seamark:name' class ='buoy-name' dy = '-6' dx = '5'/>
 				</rule>
 				<rule e="node" k="seamark:buoy_lateral:shape" v="conical">
 					<symbol ref="Lateral_Conical_Green" position="center"/>
+					<text k ='seamark:name' class ='buoy-name' dy = '-3' dx = '5'/>
 				</rule>
 			</rule>
 			<else>
@@ -75,6 +59,7 @@
 				</rule>
 				<else>
 					<symbol ref="Cone_Green" position="center"/>
+					<text k ='seamark:name' class ='buoy-name' dy = '-6' dx = '5'/>
 				</else>
 			</rule>
 		</rule>
@@ -83,13 +68,16 @@
 			<rule e="node" k="seamark:buoy_lateral:shape" v="*">
 				<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
 					<symbol ref="Lateral_Pillar_Red" position="center"/>
+					<text k ='seamark:name' class ='buoy-name' dy = '-6' dx = '5'/>
 				</rule>
 				<rule e="node" k="seamark:buoy_lateral:shape" v="spar">
 					<symbol ref="Lateral_Spar_Red" position="center"/>
+					<text k ='seamark:name' class ='buoy-name' dy = '-6' dx = '5'/>
 				</rule>
 			</rule>
 			<else>
 				<symbol ref="Lateral_Pillar_Red" position="center"/>
+				<text k ='seamark:name' class ='buoy-name' dy = '-6' dx = '5'/>
 			</else>
 			<!-- Topmark -->
 			<rule e="node" k="seamark:topmark:colour" v="red">
@@ -100,9 +88,11 @@
 		<rule e="node" k="seamark:buoy_lateral:category" v="preferred_channel_starboard">
 			<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
 				<symbol ref="Lateral_Pillar_PreferredChannel_Starboard" position="center"/>
+				<text k ='seamark:name' class ='buoy-name' dy = '-6' dx = '5'/>
 			</rule>
 			<rule e="node" k="seamark:buoy_lateral:shape" v="conical">
 				<symbol ref="Lateral_Conical_PreferredChannel_Starboard" position="center"/>
+				<text k ='seamark:name' class ='buoy-name' dy = '-3' dx = '5'/>
 			</rule>
 			<rule e="node" k="seamark:topmark:shape" v="cone">
 				<rule e="node" k="seamark:buoy_lateral:shape" v="conical">
@@ -117,6 +107,7 @@
 		<rule e="node" k="seamark:buoy_lateral:category" v="preferred_channel_port">
 			<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
 				<symbol ref="Lateral_Pillar_PreferredChannel_Port" position="center"/>
+				<text k ='seamark:name' class ='buoy-name' dy = '-6' dx = '5'/>
 			</rule>
 			<rule e="node" k="seamark:topmark:shape" v="cylinder">
 				<symbol ref="Cylinder_Red" position="center"/>
@@ -183,64 +174,76 @@
 	</rule>
 
 
-	<!-- Cardinal-Marks -->
+<!-- Cardinal-Marks -->
 	<!-- Buoy -->
 	<rule e="node" k="seamark:buoy_cardinal:category" v="*">
 		<rule e="node" k="seamark:buoy_cardinal:category" v="north">
 			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
 				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
 					<symbol ref="Cardinal_Pillar_North" position="center"/>
+					<text k ='seamark:name' class ='buoy-name' dy = '-8' dx = '6'/>
 				</rule>
 				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
 					<symbol ref="Cardinal_Spar_North" position="center"/>
+					<text k ='seamark:name' class ='buoy-name' dy = '-8' dx = '6'/>
 				</rule>
 			</rule>
 			<else>
 				<symbol ref="Cardinal_Pillar_North" position="center"/>
+				<text k ='seamark:name' class ='buoy-name' dy = '-8' dx = '6'/>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:buoy_cardinal:category" v="east">
 			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
 				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
 					<symbol ref="Cardinal_Pillar_East" position="center"/>
+					<text k ='seamark:name' class ='buoy-name' dy = '-8' dx = '6'/>
 				</rule>
 				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
 					<symbol ref="Cardinal_Spar_East" position="center"/>
+					<text k ='seamark:name' class ='buoy-name' dy = '-8' dx = '6'/>
 				</rule>
 			</rule>
 			<else>
 				<symbol ref="Cardinal_Pillar_East" position="center"/>
+				<text k ='seamark:name' class ='buoy-name' dy = '-8' dx = '6'/>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:buoy_cardinal:category" v="south">
 			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
 				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
 					<symbol ref="Cardinal_Pillar_South" position="center"/>
+					<text k ='seamark:name' class ='buoy-name' dy = '-8' dx = '6'/>
 				</rule>
 				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
 					<symbol ref="Cardinal_Spar_South" position="center"/>
+					<text k ='seamark:name' class ='buoy-name' dy = '-8' dx = '6'/>
 				</rule>
 			</rule>
 			<else>
 				<symbol ref="Cardinal_Pillar_South" position="center"/>
+				<text k ='seamark:name' class ='buoy-name' dy = '-8' dx = '6'/>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:buoy_cardinal:category" v="west">
 			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
 				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
 					<symbol ref="Cardinal_Pillar_West" position="center"/>
+					<text k ='seamark:name' class ='buoy-name' dy = '-8' dx = '6'/>
 				</rule>
 				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
 					<symbol ref="Cardinal_Spar_West" position="center"/>
+					<text k ='seamark:name' class ='buoy-name' dy = '-8' dx = '6'/>
 				</rule>
 			</rule>
 			<else>
 				<symbol ref="Cardinal_Pillar_West" position="center"/>
+				<text k ='seamark:name' class ='buoy-name' dy = '-8' dx = '6'/>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:light:colour" v="white">
 			<symbol ref="Light_White" position="center"/>
-			<text k ='seamark:light:character' class ='cardinal-lightcharacter' dy = '10'/>
+			<text k ='seamark:light:character' class ='cardinal-lightcharacter' dy = '-4' dx = '6'/>
 		</rule>
 	</rule>
 
@@ -281,33 +284,33 @@
 	</rule>
 
 
-	<!--SpecialPurpose-->
-	<rule e="node" k="seamark" v="BOYSPP">
-		<symbol ref="SpecialPP_Pillar" position="center"/>
-		<rule e="node" k="seamark:TOPMAR:TOPSHP" v="x-shape">
-			<rule e="node" k="seamark:TOPMAR:COLOUR" v="red">
-				<symbol ref="X_Shape_Pillar_Red" position="center"/>
+<!--SpecialPurpose-->
+	<rule e="node" k="seamark:type" v="buoy_special_purpose">
+		<rule e="node" k="seamark:buoy_special_purpose:shape" v="*">
+			<rule e="node" k="seamark:buoy_special_purpose:shape" v="pillar">
+				<symbol ref="SpecialPP_Pillar" position="center"/>
+				<text k ='seamark:name' class ='buoy-name' dy = '-6' dx = '6'/>
+			</rule>
+			<rule e="node" k="seamark:buoy_special_purpose:shape" v="spar">
+				<symbol ref="SpecialPP_Spar" position="center"/>
+				<text k ='seamark:name' class ='buoy-name' dy = '-6' dx = '6'/>
+			</rule>
+			<rule e="node" k="seamark:buoy_special_purpose:shape" v="conical">
+				<symbol ref="SpecialPP_Conical" position="center"/>
+				<text k ='seamark:name' class ='buoy-name' dy = '-3' dx = '5'/>
+			</rule>
+			<rule e="node" k="seamark:buoy_special_purpose:shape" v="barrel">
+				<symbol ref="SpecialPP_Barrel" position="center"/>
+				<text k ='seamark:name' class ='buoy-name' dy = '-3' dx = '5'/>
 			</rule>
 		</rule>
-  		<rule e="node" k="seamark:LIGHTS:COLOUR" v="white">
-			<symbol ref="Light_White" position="center"/>
-			<text k ='seamark:LIGHTS:CHARACTER' class ='cardinal-lightcharacter' dy = '10'/>
-		</rule>
-	</rule>
-
-	<rule e="node" k="seamark:buoy_special_purpose:shape" v="*">
-		<rule e="node" k="seamark:buoy_special_purpose:shape" v="pillar">
+		<else>
 			<symbol ref="SpecialPP_Pillar" position="center"/>
-		</rule>
-		<rule e="node" k="seamark:buoy_special_purpose:shape" v="spar">
-			<symbol ref="SpecialPP_Spar" position="center"/>
-		</rule>
-		<rule e="node" k="seamark:buoy_special_purpose:shape" v="conical">
-			<symbol ref="SpecialPP_Conical" position="center"/>
-		</rule>
-		<rule e="node" k="seamark:buoy_special_purpose:shape" v="barrel">
-			<symbol ref="SpecialPP_Barrel" position="center"/>
-		</rule>
+			<rule e="node" k="seamark:topmark:shape" v="x-shape">
+				<symbol ref="X_Shape_Pillar_Yellow" position="center"/>
+				<text k ='seamark:name' class ='buoy-name' dy = '-6' dx = '6'/>
+			</rule>
+		</else>
 		<!-- Topmark Shape -->
 		<rule e="node" k="seamark:topmark:shape" v="x-shape">
 			<rule e="node" k="seamark:topmark:colour" v="red">
@@ -332,13 +335,6 @@
 			<text k ='seamark:light:character' class ='cardinal-lightcharacter' dy = '10'/>
 		</rule>
 	</rule>
-		<rule e="node" k="seamark:type" v="buoy_special_purpose">
-			<symbol ref="SpecialPP_Pillar" position="center"/>
-			<rule e="node" k="seamark:topmark:shape" v="x-shape">
-				<symbol ref="X_Shape_Pillar_Yellow" position="center"/>
-			</rule>
-	</rule>
-
 
 	<!-- Lighthouses -->
 	<rule e="node" k="seamark" v="LNDMRK">
@@ -412,6 +408,13 @@
 				stroke: none;
 			}
 
+			.buoy-name {
+				font-family: "DejaVu Sans";
+				font-weight: bold;
+				font-size: 3px;
+				text-anchor: right;
+			}
+
 			.lateral-lightcharacter {
 				font-family: "DejaVu Sans";
 				font-weight: normal;
@@ -422,14 +425,14 @@
 			.cardinal-lightcharacter {
 				font-family: "DejaVu Sans";
 				font-weight: normal;
-				font-size: 4px;
+				font-size: 3px;
 				text-anchor: right;
 			}
 
 			.lighthouse-lightcharacter {
 				font-family: "DejaVu Sans";
 				font-weight: normal;
-				font-size: 5px;
+				font-size: 4px;
 				text-anchor: right;
 			}
 
