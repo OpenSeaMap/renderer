@@ -279,20 +279,28 @@
 	</rule>
 
 
-	<!--SpecialPurpose-->
-	<rule e="node" k="seamark:buoy_special_purpose:shape" v="*">
-		<rule e="node" k="seamark:buoy_special_purpose:shape" v="pillar">
+<!--SpecialPurpose-->
+	<rule e="node" k="seamark:type" v="buoy_special_purpose">
+		<rule e="node" k="seamark:buoy_special_purpose:shape" v="*">
+			<rule e="node" k="seamark:buoy_special_purpose:shape" v="pillar">
+				<symbol ref="SpecialPP_Pillar" position="center"/>
+			</rule>
+			<rule e="node" k="seamark:buoy_special_purpose:shape" v="spar">
+				<symbol ref="SpecialPP_Spar" position="center"/>
+			</rule>
+			<rule e="node" k="seamark:buoy_special_purpose:shape" v="conical">
+				<symbol ref="SpecialPP_Conical" position="center"/>
+			</rule>
+			<rule e="node" k="seamark:buoy_special_purpose:shape" v="barrel">
+				<symbol ref="SpecialPP_Barrel" position="center"/>
+			</rule>
+		</rule>
+		<else>
 			<symbol ref="SpecialPP_Pillar" position="center"/>
-		</rule>
-		<rule e="node" k="seamark:buoy_special_purpose:shape" v="spar">
-			<symbol ref="SpecialPP_Spar" position="center"/>
-		</rule>
-		<rule e="node" k="seamark:buoy_special_purpose:shape" v="conical">
-			<symbol ref="SpecialPP_Conical" position="center"/>
-		</rule>
-		<rule e="node" k="seamark:buoy_special_purpose:shape" v="barrel">
-			<symbol ref="SpecialPP_Barrel" position="center"/>
-		</rule>
+			<rule e="node" k="seamark:topmark:shape" v="x-shape">
+				<symbol ref="X_Shape_Pillar_Yellow" position="center"/>
+			</rule>
+		</else>
 		<!-- Topmark Shape -->
 		<rule e="node" k="seamark:topmark:shape" v="x-shape">
 			<rule e="node" k="seamark:topmark:colour" v="red">
@@ -312,17 +320,10 @@
 				</else>
 			</rule>
 		</rule>
-		<!-- Lights -->
   		<rule e="node" k="seamark:light:colour" v="white">
 			<symbol ref="Light_White" position="center"/>
 			<text k ='seamark:light:character' class ='cardinal-lightcharacter' dy = '10'/>
 		</rule>
-	</rule>
-		<rule e="node" k="seamark:type" v="buoy_special_purpose">
-			<symbol ref="SpecialPP_Pillar" position="center"/>
-			<rule e="node" k="seamark:topmark:shape" v="x-shape">
-				<symbol ref="X_Shape_Pillar_Yellow" position="center"/>
-			</rule>
 	</rule>
 
 
