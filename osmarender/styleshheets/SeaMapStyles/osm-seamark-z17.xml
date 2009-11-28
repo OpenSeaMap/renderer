@@ -137,6 +137,9 @@
 			<rule e="node" k="seamark:beacon_lateral:shape" v="stake">
 				<symbol ref="Lateral_Beacon_Stake_Green" position="center"/>
 			</rule>
+			<rule e="node" k="seamark:beacon_lateral:shape" v="perch">
+				<symbol ref="Lateral_Beacon_Perch_Starboard" position="center"/>
+			</rule>
 			<rule e="node"  k="seamark:light:colour" v="green">
 				<symbol ref="Light_Green" position="center" layer="-1"/>
 			</rule>
@@ -144,6 +147,9 @@
 		<rule e="node" k="seamark:beacon_lateral:category" v="port">
 			<rule e="node" k="seamark:beacon_lateral:shape" v="stake">
 				<symbol ref="Lateral_Beacon_Stake_Red" position="center"/>
+			</rule>
+			<rule e="node" k="seamark:beacon_lateral:shape" v="perch">
+				<symbol ref="Lateral_Beacon_Perch_Port" position="center"/>
 			</rule>
 			<rule e="node"  k="seamark:light:colour" v="red">
 				<symbol ref="Light_Red" position="center" layer="-1"/>
