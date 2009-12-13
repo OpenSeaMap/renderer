@@ -27,8 +27,8 @@
     </rdf:RDF>
   </metadata>
   <sodipodi:namedview
-     inkscape:window-height="843"
-     inkscape:window-width="1440"
+     inkscape:window-height="991"
+     inkscape:window-width="1680"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      guidetolerance="10.0"
@@ -39,10 +39,10 @@
      pagecolor="#ffffff"
      id="base"
      showgrid="false"
-     inkscape:zoom="1.65625"
+     inkscape:zoom="1.73125"
      inkscape:cx="160"
      inkscape:cy="160"
-     inkscape:window-x="-5"
+     inkscape:window-x="-4"
      inkscape:window-y="-3"
      inkscape:current-layer="svg2" />
   <defs
@@ -56,13 +56,9 @@
        id="perspective9" />
   </defs>
   <path
-     d="M 258.13125,85.068748 L 251.93125,44.493748 L 222.59365,73.493748 L 258.13125,85.068748 z M 251.93125,78.231248 L 231.71875,71.006248 L 248.36875,54.256248 L 251.93125,78.231248 z"
+     d="M 237.075,81.89375 L 231.48125,98.6125 L 235.5125,99.925 L 241.10625,83.2375 L 237.075,81.89375 z M 258.13125,85.068748 L 251.93125,44.493748 L 222.59365,73.493748 L 258.13125,85.068748 z"
      id="path27763"
-     style="fill: rgb(0, 4, 7); fill-opacity: 1; fill-rule: evenodd; stroke: none;"
+     style="fill:#008000;fill-opacity:1;fill-rule:evenodd;stroke:none"
      transform="translate(-40, -40)"
-     sodipodi:nodetypes="cccccccc" />
-  <path
-     style="fill:#008000;fill-opacity:0.74934129999999999"
-     d="M 202.08302,34.440755 C 197.43396,32.765724 193.43125,31.210119 193.18811,30.983849 C 192.94497,30.757579 196.2272,27.098995 200.48199,22.853663 L 208.21796,15.134889 L 209.55484,24.164039 C 210.29011,29.130071 211.05099,34.174533 211.24565,35.373953 C 211.44018,36.573368 211.36018,37.539315 211.06765,37.520483 C 210.77512,37.501657 206.73208,36.11578 202.08302,34.440749 L 202.08302,34.440755 z"
-     id="path2388" />
+     sodipodi:nodetypes="ccccccccc" />
 </svg>

@@ -13,7 +13,7 @@
    id="svg2"
    sodipodi:version="0.32"
    inkscape:version="0.46"
-   sodipodi:docname="NChart-Symbol_INT_Pillar_Green_CylindricalTM.svg"
+   sodipodi:docname="Cylinder_Can_Red.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <metadata
      id="metadata6">
@@ -56,8 +56,8 @@
        id="perspective8" />
   </defs>
   <path
-     d="M 237.075,81.89375 L 231.48125,98.6125 L 235.5125,99.925 L 241.10625,83.2375 L 237.075,81.89375 z M 264.2875,49.912542 L 237.8625,41.125042 L 226.2875,74.912502 L 252.7125,83.550002 L 264.2875,49.912542 z"
-     id="path27763"
+     d="M 214.9375,143.15625 L 209.40625,160.28125 L 213.375,161.5625 L 218.90625,144.4375 L 214.9375,143.15625 z M 216.28048,102.92723 L 205.11682,136.46159 L 231.32759,145.18721 L 242.49124,111.65284 L 216.28048,102.92723 z"
+     id="path90440"
      style="fill:#d40000;fill-opacity:1;fill-rule:evenodd;stroke:none"
      transform="translate(-40, -40)"
      sodipodi:nodetypes="cccccccccc" />
