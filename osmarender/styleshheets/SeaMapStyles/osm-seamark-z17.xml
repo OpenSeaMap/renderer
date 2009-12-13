@@ -18,27 +18,7 @@
 	symbolsDir="../../../OpenSeaMap-styles/SeaMapSymbols"
 	meter2pixel="0.1375">
 
-	<!-- Lateral-Marks -->
-
-		<rule e="node" k="seamark:BOYLAT:CATLAM" v="starboard-hand">
-			<symbol ref="Lateral_Pillar_Green" position="center"/>
-			<symbol ref="Cone_Green" position="center"/>
-		</rule>
-
-		<rule e="node"  k="seamark:BOYLAT:CATLAM" v="port-hand">
-			<symbol ref="Lateral_Pillar_Red" position="center"/>
-			<symbol ref="Cylinder_Red" position="center"/>
-		</rule>
-
-		<rule e="node"  k="seamark:LIGHTS:COLOUR" v="green">
-			<symbol ref="Light_Green" position="center"/>
-		</rule>
-
-		<rule e="node"  k="seamark:LIGHTS:COLOUR" v="red">
-			<symbol ref="Light_Red" position="center"/>
-		</rule>
-
-
+<!-- Lateral-Marks -->
 	<!--Safe water-->
 	<rule e="node" k="seamark:buoy_safe_water:shape" v="*">
 		<rule e="node" k="seamark:buoy_safe_water:shape" v="pillar">
@@ -86,13 +66,21 @@
 				<rule e="node" k="seamark:buoy_lateral:shape" v="spar">
 					<symbol ref="Lateral_Spar_Red" position="center"/>
 				</rule>
+				<rule e="node" k="seamark:buoy_lateral:shape" v="can">
+					<symbol ref="Lateral_Can_Red" position="center"/>
+				</rule>
 			</rule>
 			<else>
 				<symbol ref="Lateral_Pillar_Red" position="center"/>
 			</else>
 			<!-- Topmark -->
 			<rule e="node" k="seamark:topmark:colour" v="red">
-				<symbol ref="Cylinder_Red" position="center"/>
+				<rule e="node" k="seamark:buoy_lateral:shape" v="can">
+					<symbol ref="Cylinder_Can_Red" position="center"/>
+				</rule>
+				<else>
+					<symbol ref="Cylinder_Red" position="center"/>
+				</else>
 			</rule>
 		</rule>
 
