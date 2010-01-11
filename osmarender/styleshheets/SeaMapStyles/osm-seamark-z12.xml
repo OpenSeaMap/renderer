@@ -7,14 +7,14 @@
 <rules 
   data="data.osm"
   scale="1"
-  symbolScale="0.2"
+  symbolScale="0.5"
   minimumMapWidth="0.5"
   minimumMapHeight="0.5"
   showScale="no"
   showGrid="no"
   showBorder="no"
   showLicense="no"
-  showZoomControls="yes"
+  showZoomControls="no"
   symbolsDir="../../../OpenSeaMap-styles/SeaMapSymbols"
   meter2pixel="0.1375">
  
@@ -72,10 +72,10 @@
 			<rule e="node" k="seamark:buoy_safe_water:shape" v="pillar">
 				<symbol ref="Safe_Water_Pillar" position="center"/>
 				<symbol ref="Sphere_Pillar_Red" position="center"/>
+				<text k ='seamark:name' class ='buoy-name' dy = '-30' dx = '25'/>
 			</rule>
 			<rule e="node" k="seamark:light:colour" v="white">
 				<symbol ref="Light_White" position="center"/>
-				<text k ='seamark:light:character' class ='cardinal-lightcharacter' dy = '10'/>
 			</rule>
 		</rule>
 	</rule>
@@ -114,20 +114,7 @@
 	</rule>
 	
 	<!-- Lighthouses -->
-	<rule e="node" k="seamark" v="LNDMRK">
-		<symbol ref="Lighthouse_Major" position="center"/>
-		<light k="seamark:LIGHTS:1" layer="-3"/>
-		<light k="seamark:LIGHTS:2" layer="-3"/>
-		<light k="seamark:LIGHTS:3" layer="-3"/>
-		<light k="seamark:LIGHTS:4" layer="-3"/>
-		<light k="seamark:LIGHTS:5" layer="-3"/>
-		<light k="seamark:LIGHTS:6" layer="-3"/>
-		<light k="seamark:LIGHTS:7" layer="-3"/>
-		<light k="seamark:LIGHTS:8" layer="-3"/>
-		<text k ='seamark:LIGHTS:CHARACTER' class ='lighthouse-lightcharacter' dy = '10'/>
-	</rule>
-
-	<rule e="node" k="seamark" v="landmark">
+	<rule e="node" k="seamark:type" v="landmark">
 		<symbol ref="Lighthouse_Major" position="center"/>
 		<light k="seamark:light:1" layer="-3"/>
 		<light k="seamark:light:2" layer="-3"/>
@@ -148,6 +135,13 @@
 			.map-background {
 				fill: #f8f8f8;
 				stroke: none;
+			}
+
+			.buoy-name {
+				font-family: "DejaVu Sans";
+				font-weight: bold;
+				font-size: 20px;
+				text-anchor: right;
 			}
 
 			.lateral-lightcharacter {
