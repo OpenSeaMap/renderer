@@ -108,8 +108,17 @@
 			<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
 				<symbol ref="Lateral_Pillar_PreferredChannel_Port" position="center"/>
 			</rule>
-			<rule e="node" k="seamark:topmark:shape" v="cylinder">
-				<symbol ref="Cylinder_Red" position="center"/>
+			<rule e="node" k="seamark:buoy_lateral:shape" v="can">
+				<symbol ref="Lateral_Can_PreferredChannel_Port" position="center"/>
+			</rule>
+			<!-- Topmark -->
+			<rule e="node" k="seamark:topmark:colour" v="red">
+				<rule e="node" k="seamark:buoy_lateral:shape" v="can">
+					<symbol ref="Cylinder_Can_Red" position="center"/>
+				</rule>
+				<else>
+					<symbol ref="Cylinder_Red" position="center"/>
+				</else>
 			</rule>
 		</rule>
 

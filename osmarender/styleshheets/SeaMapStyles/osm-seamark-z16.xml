@@ -121,8 +121,18 @@
 				<symbol ref="Lateral_Pillar_PreferredChannel_Port" position="center"/>
 				<text k ='seamark:name' class ='buoy-name' dy = '-6' dx = '5'/>
 			</rule>
-			<rule e="node" k="seamark:topmark:shape" v="cylinder">
-				<symbol ref="Cylinder_Red" position="center"/>
+			<rule e="node" k="seamark:buoy_lateral:shape" v="can">
+				<symbol ref="Lateral_Can_PreferredChannel_Port" position="center"/>
+				<text k ='seamark:name' class ='buoy-name' dy = '-3' dx = '3'/>
+			</rule>
+			<!-- Topmark -->
+			<rule e="node" k="seamark:topmark:colour" v="red">
+				<rule e="node" k="seamark:buoy_lateral:shape" v="can">
+					<symbol ref="Cylinder_Can_Red" position="center"/>
+				</rule>
+				<else>
+					<symbol ref="Cylinder_Red" position="center"/>
+				</else>
 			</rule>
 		</rule>
 
