@@ -20,14 +20,20 @@
 
 <!-- Lateral-Marks -->
 	<!--Safe water-->
-	<rule e="node" k="seamark:buoy_safe_water:shape" v="*">
-		<rule e="node" k="seamark:buoy_safe_water:shape" v="pillar">
+	<rule e="node" k="seamark:type" v="buoy_safe_water">
+		<rule e="node" k="seamark:buoy_safe_water:shape" v="*">
+			<rule e="node" k="seamark:buoy_safe_water:shape" v="pillar">
+				<symbol ref="Safe_Water_Pillar" position="center"/>
+				<symbol ref="Sphere_Pillar_Red" position="center"/>
+			</rule>
+			<rule e="node" k="seamark:buoy_safe_water:shape" v="sphere">
+				<symbol ref="Safe_Water_Sphere" position="center"/>
+			</rule>
+		</rule>
+		<else>
 			<symbol ref="Safe_Water_Pillar" position="center"/>
 			<symbol ref="Sphere_Pillar_Red" position="center"/>
-		</rule>
-		<rule e="node" k="seamark:buoy_safe_water:shape" v="sphere">
-			<symbol ref="Safe_Water_Sphere" position="center"/>
-		</rule>
+		</else>
 		<rule e="node" k="seamark:light:colour" v="white">
 			<symbol ref="Light_White" position="center"/>
 			<text k ='seamark:light:character' class ='cardinal-lightcharacter' dy = '10'/>
@@ -88,12 +94,17 @@
 		</rule>
 
 		<rule e="node" k="seamark:buoy_lateral:category" v="preferred_channel_starboard">
-			<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
+			<rule e="node" k="seamark:buoy_lateral:shape" v="*">
+				<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
+					<symbol ref="Lateral_Pillar_PreferredChannel_Starboard" position="center"/>
+				</rule>
+				<rule e="node" k="seamark:buoy_lateral:shape" v="conical">
+					<symbol ref="Lateral_Conical_PreferredChannel_Starboard" position="center"/>
+				</rule>
+			</rule>
+			<else e="node" k="seamark:buoy_lateral:shape" v="pillar">
 				<symbol ref="Lateral_Pillar_PreferredChannel_Starboard" position="center"/>
-			</rule>
-			<rule e="node" k="seamark:buoy_lateral:shape" v="conical">
-				<symbol ref="Lateral_Conical_PreferredChannel_Starboard" position="center"/>
-			</rule>
+			</else>
 			<rule e="node" k="seamark:topmark:shape" v="cone">
 				<rule e="node" k="seamark:buoy_lateral:shape" v="conical">
 					<symbol ref="Cone_Conical_Green" position="center"/>
@@ -105,12 +116,17 @@
 		</rule>
 
 		<rule e="node" k="seamark:buoy_lateral:category" v="preferred_channel_port">
-			<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
+			<rule e="node" k="seamark:buoy_lateral:shape" v="*">
+				<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
+					<symbol ref="Lateral_Pillar_PreferredChannel_Port" position="center"/>
+				</rule>
+				<rule e="node" k="seamark:buoy_lateral:shape" v="can">
+					<symbol ref="Lateral_Can_PreferredChannel_Port" position="center"/>
+				</rule>
+			</rule>
+			<else e="node" k="seamark:buoy_lateral:shape" v="pillar">
 				<symbol ref="Lateral_Pillar_PreferredChannel_Port" position="center"/>
-			</rule>
-			<rule e="node" k="seamark:buoy_lateral:shape" v="can">
-				<symbol ref="Lateral_Can_PreferredChannel_Port" position="center"/>
-			</rule>
+			</else>
 			<!-- Topmark -->
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<rule e="node" k="seamark:buoy_lateral:shape" v="can">
