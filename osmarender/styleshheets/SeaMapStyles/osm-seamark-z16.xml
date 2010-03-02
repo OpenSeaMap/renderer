@@ -194,6 +194,7 @@
 				<symbol ref="Light_Tower_Beacon_White" position="center"/>
 				<rule e="node" k="seamark:light:1" v="*">
 					<light k="seamark:light:1" layer="-3"/>
+					<light k="seamark:light:2" layer="-3"/>
 				</rule>
 				<else>
 					<circle r="8" stroke="yellow" stroke-width="1px" fill-opacity="0"/>
@@ -203,6 +204,7 @@
 				<symbol ref="Light_Tower_Beacon_Red" position="center"/>
 				<rule e="node" k="seamark:light:1" v="*">
 					<light k="seamark:light:1" layer="-3"/>
+					<light k="seamark:light:2" layer="-3"/>
 				</rule>
 				<else>
 					<circle r="8" stroke="red" stroke-width="1px" fill-opacity="0"/>
@@ -212,6 +214,7 @@
 				<symbol ref="Light_Tower_Beacon_Green" position="center"/>
 				<rule e="node" k="seamark:light:1" v="*">
 					<light k="seamark:light:1" layer="-3"/>
+					<light k="seamark:light:2" layer="-3"/>
 				</rule>
 				<else>
 					<circle r="8" stroke="green" stroke-width="1px" fill-opacity="0"/>
@@ -378,6 +381,14 @@
 				</else>
 			</rule>
 		</rule>
+		<rule e="node" k="seamark:topmark:shape" v="cylinder">
+			<rule e="node" k="seamark:buoy_special_purpose:shape" v="barrel">
+				<symbol ref="Cylinder_Barrel_Red_White_Red" position="center"/>
+			</rule>
+			<else>
+				<symbol ref="Cylinder_Red_White_Red" position="center"/>
+			</else>
+		</rule>
   		<rule e="node" k="seamark:light:colour" v="*">
 			<symbol ref="Light_White" position="center"/>
 			<text k ='seamark:light:character' class ='cardinal-lightcharacter' dx = '4'/>
@@ -411,7 +422,7 @@
 	</rule>
 
 	<rule e="node" k="leisure" v="slipway">
-		<symbol ref="slipway" position="center"/>
+		<symbol ref="Slipway" position="center"/>
 	</rule>
 
 	<rule e="node" k="man_made" v="crane">
@@ -434,6 +445,10 @@
 
 	<rule e="node" k="waterway" v="weir">
 		<symbol ref="Weir_Big" position="center"/>
+	</rule>
+
+	<rule e="node" k="waterway" v="fuel">
+		<symbol ref="Fuel" position="center"/>
 	</rule>
 	
 	<defs>

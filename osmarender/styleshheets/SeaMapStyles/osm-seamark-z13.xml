@@ -82,36 +82,39 @@
 	</rule>
 
 	<!-- Lights -->
-	<rule e="node" k="seamark" v="BCNLAT">
-		<rule e="node" k="seamark:LIGHTS:COLOUR" v="white">
-			<symbol ref="Light_Tower_Beacon_White" position="center"/>
-			<rule e="node" k="seamark:LIGHTS:1" v="*">
-				<light k="seamark:LIGHTS:1" layer="-3"/>
+		<rule e="node" k="seamark:beacon_lateral:shape" v="disabled">
+			<rule e="node" k="seamark:light:colour" v="white">
+				<symbol ref="Light_Tower_Beacon_White" position="center"/>
+				<rule e="node" k="seamark:light:1" v="*">
+					<light k="seamark:light:1" layer="-3"/>
+					<light k="seamark:light:2" layer="-3"/>
+				</rule>
+				<else>
+					<circle r="8" stroke="yellow" stroke-width="1px" fill-opacity="0"/>
+				</else>
 			</rule>
-			<else>
-				<circle r="8" stroke="yellow" stroke-width="1px" fill-opacity="0"/>
-			</else>
-		</rule>
-		<rule e="node" k="seamark:LIGHTS:COLOUR" v="red">
-			<symbol ref="Light_Tower_Beacon_Red" position="center"/>
-			<rule e="node" k="seamark:LIGHTS:1" v="*">
-				<light k="seamark:LIGHTS:1" layer="-3"/>
+			<rule e="node" k="seamark:light:colour" v="red">
+				<symbol ref="Light_Tower_Beacon_Red" position="center"/>
+				<rule e="node" k="seamark:light:1" v="*">
+					<light k="seamark:light:1" layer="-3"/>
+					<light k="seamark:light:2" layer="-3"/>
+				</rule>
+				<else>
+					<circle r="8" stroke="red" stroke-width="1px" fill-opacity="0"/>
+				</else>
 			</rule>
-			<else>
-				<circle r="8" stroke="red" stroke-width="1px" fill-opacity="0"/>
-			</else>
-		</rule>
-		<rule e="node" k="seamark:LIGHTS:COLOUR" v="green">
-			<symbol ref="Light_Tower_Beacon_Green" position="center"/>
-			<rule e="node" k="seamark:LIGHTS:1" v="*">
-				<light k="seamark:LIGHTS:1" layer="-3"/>
+			<rule e="node" k="seamark:light:colour" v="green">
+				<symbol ref="Light_Tower_Beacon_Green" position="center"/>
+				<rule e="node" k="seamark:light:1" v="*">
+					<light k="seamark:light:1" layer="-3"/>
+					<light k="seamark:light:2" layer="-3"/>
+				</rule>
+				<else>
+					<circle r="8" stroke="green" stroke-width="1px" fill-opacity="0"/>
+				</else>
 			</rule>
-			<else>
-				<circle r="8" stroke="green" stroke-width="1px" fill-opacity="0"/>
-			</else>
+			<text k ='seamark:light:character' class ='light-lightcharacter' dx='5' dy='10'/>
 		</rule>
-		<text k ='seamark:LIGHTS:CHARACTER' class ='light-lightcharacter' dx='5' dy='10'/>
-	</rule>
 
 	<!-- Lighthouses -->
 	<rule e="node" k="seamark:type" v="landmark">
@@ -128,7 +131,7 @@
 		<light k="seamark:light:10" layer="-3"/>
 		<text k ='seamark:light:character' class ='lighthouse-lightcharacter' dy = '-5'/>
 	</rule>
-
+landmark
 	
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
