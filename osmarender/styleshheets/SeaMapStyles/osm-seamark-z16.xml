@@ -136,6 +136,10 @@
 					<symbol ref="Lateral_Pillar_PreferredChannel_Port" position="center"/>
 					<text k ='seamark:name' class ='buoy-name' dy = '-4' dx = '4'/>
 				</rule>
+				<rule e="node" k="seamark:buoy_lateral:shape" v="spar">
+					<symbol ref="Lateral_Spar_PreferredChannel_Port" position="center"/>
+					<text k ='seamark:name' class ='buoy-name' dy = '-4' dx = '4'/>
+				</rule>
 				<rule e="node" k="seamark:buoy_lateral:shape" v="can">
 					<symbol ref="Lateral_Can_PreferredChannel_Port" position="center"/>
 					<text k ='seamark:name' class ='buoy-name' dy = '-3' dx = '3'/>
@@ -170,6 +174,9 @@
 		<rule e="node" k="seamark:beacon_lateral:category" v="starboard">
 			<rule e="node" k="seamark:beacon_lateral:shape" v="stake">
 				<symbol ref="Lateral_Beacon_Stake_Green" position="center"/>
+				<rule e="node" k="seamark:topmark:colour" v="green">
+					<symbol ref="Cone_Stake_Green" position="center"/>
+				</rule>
 			</rule>
 			<rule e="node" k="seamark:beacon_lateral:shape" v="perch">
 				<symbol ref="Lateral_Beacon_Perch_Starboard" position="center"/>
@@ -181,6 +188,9 @@
 		<rule e="node" k="seamark:beacon_lateral:category" v="port">
 			<rule e="node" k="seamark:beacon_lateral:shape" v="stake">
 				<symbol ref="Lateral_Beacon_Stake_Red" position="center"/>
+				<rule e="node" k="seamark:topmark:colour" v="red">
+					<symbol ref="Cylinder_Stake_Red" position="center"/>
+				</rule>
 			</rule>
 			<rule e="node" k="seamark:beacon_lateral:shape" v="perch">
 				<symbol ref="Lateral_Beacon_Perch_Port" position="center"/>
@@ -417,8 +427,12 @@
 		<text k ='name' class ='harbour' dx='5'/>
 	</rule>-->
 
-	<rule e="node" k="amenity" v="harbour_master">
+	<rule e="node" k="harbour" v="harbour_master">
 		<symbol ref="harbour_master" position="center"/>
+	</rule>
+
+	<rule e="node" k="harbour" v="fuel">
+		<symbol ref="Fuel" position="center"/>
 	</rule>
 
 	<rule e="node" k="leisure" v="slipway">
@@ -447,10 +461,6 @@
 		<symbol ref="Weir_Big" position="center"/>
 	</rule>
 
-	<rule e="node" k="waterway" v="fuel">
-		<symbol ref="Fuel" position="center"/>
-	</rule>
-	
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
 			.map-background {

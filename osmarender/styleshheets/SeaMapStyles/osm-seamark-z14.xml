@@ -120,14 +120,17 @@
 
 		<rule e="node" k="seamark:buoy_lateral:category" v="preferred_channel_port">
 			<rule e="node" k="seamark:buoy_lateral:shape" v="*">
-			<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
-				<symbol ref="Lateral_Pillar_PreferredChannel_Port" position="center"/>
+				<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
+					<symbol ref="Lateral_Pillar_PreferredChannel_Port" position="center"/>
+				</rule>
+				<rule e="node" k="seamark:buoy_lateral:shape" v="spar">
+					<symbol ref="Lateral_Spar_PreferredChannel_Port" position="center"/>
+				</rule>
+				<rule e="node" k="seamark:buoy_lateral:shape" v="can">
+					<symbol ref="Lateral_Can_PreferredChannel_Port" position="center"/>
+				</rule>
 			</rule>
-			<rule e="node" k="seamark:buoy_lateral:shape" v="can">
-				<symbol ref="Lateral_Can_PreferredChannel_Port" position="center"/>
-			</rule>
-			</rule>
-			<else e="node" k="seamark:buoy_lateral:shape" v="pillar">
+			<else>
 				<symbol ref="Lateral_Pillar_PreferredChannel_Port" position="center"/>
 			</else>
 			<!-- Topmark -->
@@ -156,6 +159,9 @@
 		<rule e="node" k="seamark:beacon_lateral:category" v="starboard">
 			<rule e="node" k="seamark:beacon_lateral:shape" v="stake">
 				<symbol ref="Lateral_Beacon_Stake_Green" position="center"/>
+				<rule e="node" k="seamark:topmark:colour" v="green">
+					<symbol ref="Cone_Stake_Green" position="center"/>
+				</rule>
 			</rule>
 			<rule e="node" k="seamark:beacon_lateral:shape" v="perch">
 				<symbol ref="Lateral_Beacon_Perch_Starboard" position="center"/>
@@ -167,6 +173,9 @@
 		<rule e="node" k="seamark:beacon_lateral:category" v="port">
 			<rule e="node" k="seamark:beacon_lateral:shape" v="stake">
 				<symbol ref="Lateral_Beacon_Stake_Red" position="center"/>
+				<rule e="node" k="seamark:topmark:colour" v="red">
+					<symbol ref="Cylinder_Stake_Red" position="center"/>
+				</rule>
 			</rule>
 			<rule e="node" k="seamark:beacon_lateral:shape" v="perch">
 				<symbol ref="Lateral_Beacon_Perch_Port" position="center"/>
