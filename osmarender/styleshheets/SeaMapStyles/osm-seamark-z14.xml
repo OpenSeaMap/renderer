@@ -1514,6 +1514,9 @@
 		<else>
 			<symbol ref="Special_Purpose_Pillar" position="center" />
 		</else>
+		<rule e="node" k="seamark:buoy_special_purpose:shape" v="barrel">
+			<symbol ref="Special_Purpose_Pillar" position="center" />
+		</rule>
 	</rule>
 
 	<!-- Special Purpose Floats -->

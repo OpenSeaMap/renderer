@@ -39,13 +39,13 @@
      inkscape:window-height="1088"
      id="namedview2911"
      showgrid="true"
-     inkscape:zoom="5.684375"
-     inkscape:cx="160.50833"
+     inkscape:zoom="2.8421875"
+     inkscape:cx="95.065779"
      inkscape:cy="234.96477"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer6"
      inkscape:snap-grids="false">
     <inkscape:grid
        type="xygrid"
@@ -312,7 +312,7 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Sphere Buoy"
-     style="display:inline">
+     style="display:none">
     <g
        id="g3739"
        transform="translate(0.02225953,9.9648297)">
@@ -327,7 +327,7 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Barrel Buoy"
-     style="display:none">
+     style="display:inline">
     <g
        id="g3795"
        transform="translate(0.04501062,9.9909525)">
@@ -354,8 +354,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer3"
-     inkscape:label="Cross Top"
-     style="display:inline">
+     inkscape:label="Sphere Cross Top"
+     style="display:none">
     <g
        id="g2984"
        transform="translate(0.08005459,9.9989941)">
