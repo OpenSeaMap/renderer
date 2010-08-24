@@ -1661,7 +1661,7 @@
 	<!-- Names -->
 
 	<rule e="node" k="seamark:name" v="*">
-		<text k="seamark:name" class="buoy-name" dx="6" dy="-6" />
+		<text k="seamark:name" class="buoy-name" dx="6" dy="-4" />
 	</rule>
 
 	<!--Harbours -->
@@ -1687,8 +1687,8 @@
 
 			.buoy-name {
 			font-family: "DejaVu Sans";
-			font-weight: normal;
-			font-size: 5px;
+			font-weight: bold;
+			font-size: 6px;
 			text-anchor: right;
 			}
 

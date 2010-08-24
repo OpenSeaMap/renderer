@@ -4,7 +4,7 @@
 
 <!-- OpenSeaMap Rules File for zoom level 13 -->
 
-<rules data="data.osm" scale="1" symbolScale="0.25" minimumMapWidth="0.5" minimumMapHeight="0.5" showScale="no" showGrid="no"
+<rules data="data.osm" scale="1" symbolScale="0.2" minimumMapWidth="0.5" minimumMapHeight="0.5" showScale="no" showGrid="no"
 	showBorder="no" showLicense="no" showZoomControls="no" symbolsDir="../../../OpenSeaMap-styles/SeaMapSymbols" meter2pixel="0.1375">
 
 	<!-- Lateral Buoys -->
@@ -1658,7 +1658,7 @@
 	<!-- Names -->
 
 	<rule e="node" k="seamark:name" v="*">
-		<text k="seamark:name" class="buoy-name" dx="6" dy="-6" />
+		<text k="seamark:name" class="buoy-name" dx="10" dy="-6" />
 	</rule>
 
 	<defs>
