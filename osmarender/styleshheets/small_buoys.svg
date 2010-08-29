@@ -12,7 +12,7 @@
    height="340"
    id="svg2"
    inkscape:version="0.47 r22583"
-   sodipodi:docname="Lateral_Perch_Starboard.svg"
+   sodipodi:docname="small_buoys.svg"
    style="display:inline">
   <metadata
      id="metadata2913">
@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,13 +39,13 @@
      inkscape:window-height="1088"
      id="namedview2911"
      showgrid="true"
-     inkscape:zoom="5.684375"
-     inkscape:cx="138.51112"
-     inkscape:cy="165.30367"
+     inkscape:zoom="5.6843751"
+     inkscape:cx="116.39792"
+     inkscape:cy="221.59834"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer11"
+     inkscape:current-layer="g336482"
      inkscape:snap-grids="false">
     <inkscape:grid
        type="xygrid"
@@ -348,7 +348,7 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Barrel Buoy"
-     style="display:none">
+     style="display:inline">
     <g
        id="g3795"
        transform="translate(0.04501062,9.9909525)">
@@ -357,38 +357,6 @@
          id="path90440-2"
          d="m 156,118 c -5.5646,0 -11.12256,0.16306 -17.1875,0.5 -9.29749,0.51653 -16.93178,2.27268 -22.25,8.625 -5.04525,6.02627 -7.72563,15.2814 -9.71875,30.0625 l -8.03125,0 0,5.65625 49.03125,0 c 1.28732,5.53295 6.23327,9.65624 12.15625,9.65625 5.92495,0 10.87095,-4.12052 12.15625,-9.65625 l 41.46875,0 0,-5.59375 -7.46875,0 C 204.13147,142.38849 201.18262,133.06849 195.875,127.0625 190.2898,120.7424 182.48141,119.01633 173.1875,118.5 167.12256,118.16306 161.5646,118 156,118 z m 0,7 c 5.42719,0 10.85439,0.16899 16.8125,0.5 8.70609,0.48367 13.8977,1.7576 17.8125,6.1875 3.63181,4.10968 6.50281,11.87657 8.46875,25.53125 l -26.9375,-0.0312 c -1.2853,-5.53573 -6.2313,-9.65625 -12.15625,-9.65625 -5.92298,1e-5 -10.86893,4.1233 -12.15625,9.65625 l -5.53125,0 c -1.03095,-12.57461 -3.69601,-21.46985 -9.8125,-31 1.95625,-0.33179 4.14041,-0.546 6.6875,-0.6875 5.95811,-0.33101 11.38531,-0.5 16.8125,-0.5 z m -30.375,3.46875 c 6.28429,9.15361 8.64265,16.50821 9.65625,28.71875 l -21.34375,0 c 1.94217,-13.6797 4.58578,-21.4844 8,-25.5625 1.09857,-1.31218 2.30765,-2.34206 3.6875,-3.15625 z M 160,152.5 c 4.14,0 7.5,3.36 7.5,7.5 0,4.14 -3.36,7.5 -7.5,7.5 -4.14,0 -7.5,-3.36 -7.5,-7.5 0,-4.14 3.36,-7.5 7.5,-7.5 z" />
     </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer9"
-     inkscape:label="Stake"
-     style="display:inline">
-    <path
-       style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       id="path7832"
-       d="m 149.725,172.26637 0,-4.6 7.8,-0.0107 0,-71.576837 4.9625,0 0.022,71.576837 7.76551,0.022 0,4.58867 -20.55,0"
-       sodipodi:nodetypes="ccccccccc" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer10"
-     inkscape:label="Perch Port"
-     style="display:none">
-    <path
-       style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       id="path7834"
-       d="m 149.77561,172.49031 0,-4.975 7.8,0 0,-37.925 -26.225,-30.099999 3.9,-3.2 24.8125,28.349999 24.8,-28.349999 3.9,3.2 -26.225,29.762499 0,38.2625 7.4375,0 0,4.975 -20.2,0" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer11"
-     inkscape:label="Perch Starboard"
-     style="display:none">
-    <path
-       style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       id="path7836"
-       d="m 149.69793,172.52221 0.0641,-4.95 7.73403,0 0,-60.6125 -22.6875,25.5125 -3.5375,-3.525 28.7,-32.249995 28.7125,32.249995 -3.9,3.525 -22.325,-25.5125 0,60.6125 7.7875,0 0.002,4.95"
-       sodipodi:nodetypes="ccccccccccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -402,6 +370,31 @@
          style="fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path28209"
          d="m 131.60087,181.31159 -61.62788,76.30842 -4.53011,5.57826 -5.557433,4.22374 -6.899414,2.10924 -7.322226,-0.10972 -6.812191,-2.29629 -5.747427,-4.33733 -4.201328,-6.0873 -2.224898,-7.05116 0.15697,-6.9752 2.73284,-6.08953 4.594775,-5.30836 5.593528,-4.86801 1.174178,-0.94649 90.670616,-44.15027 z m 28.00125,-25.26051 c 2.19706,-0.21962 4.15842,1.38525 4.37805,3.58229 0.21962,2.19706 -1.38525,4.15842 -3.58229,4.37805 -2.19706,0.21962 -4.15842,-1.38525 -4.37805,-3.58229 -0.21962,-2.19706 1.38525,-4.15842 3.58229,-4.37805 z" />
+    </g>
+  </g>
+  <g
+     style="display:inline"
+     inkscape:label="Barrel Cross Top"
+     id="g336482"
+     inkscape:groupmode="layer">
+    <g
+       transform="matrix(0.94832366,-0.31730466,0.31730466,0.94832366,-41.498847,77.405199)"
+       id="g336484">
+      <path
+         sodipodi:nodetypes="ccccc"
+         d="m 179.34375,93.031245 -6.375,18.562505 c 0.005,0.001 4.12677,1.28438 4.09375,1.25 l 6.3125,-18.468755 -4.03125,-1.34375 z"
+         id="path336486"
+         style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+    </g>
+    <g
+       id="g336488"
+       transform="matrix(0.94832366,-0.31730466,0.31730466,0.94832366,-41.576981,95.205335)"
+       style="display:inline">
+      <path
+         sodipodi:nodetypes="ccccccccccccc"
+         style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path336490"
+         d="m 166.75,81.299997 17.9375,-8.9375 -8.9375,-17.937503 4.475,-2.25 9.275,18.062503 17.95,-8.962503 2.2375,4.500003 -18.275,8.8375 8.9375,17.937498 -4.15,2.35 -9.275,-18.062498 -17.9375,8.95 -2.2375,-4.4875 z" />
     </g>
   </g>
   <g

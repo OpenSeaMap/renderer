@@ -21,56 +21,26 @@
 				<rule e="node" k="seamark:buoy_lateral:shape" v="*">
 					<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
 						<rule e="node" k="seamark:topmark:colour" v="red">
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Pillar_Red_Can_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Red_Can" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Red_Can" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Pillar_Red_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Red" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Red" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="spar">
 						<rule e="node" k="seamark:topmark:colour" v="red">
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Spar_Red_Can_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Red_Can" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Red_Can" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Spar_Red_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Red" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Red" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="can">
 						<rule e="node" k="seamark:topmark:colour" v="red">
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Can_Red_Can_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Can_Red_Can" position="center" />
-							</else>
+							<symbol ref="Lateral_Can_Red_Can" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Can_Red_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Can_Red" position="center" />
-							</else>
+							<symbol ref="Lateral_Can_Red" position="center" />
 						</else>
 					</rule>
 				</rule>
@@ -85,56 +55,26 @@
 				<rule e="node" k="seamark:buoy_lateral:shape" v="*">
 					<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
 						<rule e="node" k="seamark:topmark:colour" v="green">
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Pillar_Green_Can_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Green_Can" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Green_Can" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Pillar_Green_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Green" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Green" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="spar">
 						<rule e="node" k="seamark:topmark:colour" v="green">
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Spar_Green_Can_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Green_Can" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Green_Can" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Spar_Green_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Green" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Green" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="can">
 						<rule e="node" k="seamark:topmark:colour" v="green">
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Can_Green_Can_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Can_Green_Can" position="center" />
-							</else>
+							<symbol ref="Lateral_Can_Green_Can" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Can_Green_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Can_Green" position="center" />
-							</else>
+							<symbol ref="Lateral_Can_Green" position="center" />
 						</else>
 					</rule>
 				</rule>
@@ -154,56 +94,26 @@
 				<rule e="node" k="seamark:buoy_lateral:shape" v="*">
 					<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
 						<rule e="node" k="seamark:topmark:colour" v="green">
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Pillar_Green_Cone_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Green_Cone" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Green_Cone" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Pillar_Green_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Green" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Green" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="spar">
 						<rule e="node" k="seamark:topmark:colour" v="green">
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Spar_Green_Cone_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Green_Cone" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Green_Cone" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Spar_Green_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Green" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Green" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="conical">
 						<rule e="node" k="seamark:topmark:colour" v="green">
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Cone_Green_Cone_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Cone_Green_Cone" position="center" />
-							</else>
+							<symbol ref="Lateral_Cone_Green_Cone" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Cone_Green_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Cone_Green" position="center" />
-							</else>
+							<symbol ref="Lateral_Cone_Green" position="center" />
 						</else>
 					</rule>
 				</rule>
@@ -218,62 +128,32 @@
 				<rule e="node" k="seamark:buoy_lateral:shape" v="*">
 					<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
 						<rule e="node" k="seamark:topmark:colour" v="red">
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Pillar_Red_Cone_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Red_Cone" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Red_Cone" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Pillar_Red_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Red" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Red" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="spar">
 						<rule e="node" k="seamark:topmark:colour" v="red">
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Spar_Red_Cone_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Red_Cone" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Red_Cone" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Spar_Red_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Red" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Red" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="conical">
 						<rule e="node" k="seamark:topmark:colour" v="red">
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Cone_Red_Cone_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Cone_Red_Cone" position="center" />
-							</else>
+							<symbol ref="Lateral_Cone_Red_Cone" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Cone_Red_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Cone_Red" position="center" />
-							</else>
+							<symbol ref="Lateral_Cone_Red" position="center" />
 						</else>
 					</rule>
+					<else>
+						<symbol ref="Lateral_Pillar_Red" position="center" />
+					</else>
 				</rule>
-				<else>
-					<symbol ref="Lateral_Pillar_Red" position="center" />
-				</else>
 			</rule>
 		</rule>
 
@@ -287,56 +167,26 @@
 				<rule e="node" k="seamark:buoy_lateral:shape" v="*">
 					<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
 						<rule e="node" k="seamark:topmark:colour" v="red">
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Pillar_Red_Green_Red_Can_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Red_Green_Red_Can" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Red_Green_Red_Can" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Pillar_Red_Green_Red_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Red_Green_Red" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Red_Green_Red" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="spar">
 						<rule e="node" k="seamark:topmark:colour" v="red">
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Spar_Red_Green_Red_Can_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Red_Green_Red_Can" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Red_Green_Red_Can" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Spar_Red_Green_Red_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Red_Green_Red" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Red_Green_Red" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="can">
 						<rule e="node" k="seamark:topmark:colour" v="red">
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Can_Red_Green_Red_Can_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Can_Red_Green_Red_Can" position="center" />
-							</else>
+							<symbol ref="Lateral_Can_Red_Green_Red_Can" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Can_Red_Green_Red_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Can_Red_Green_Red" position="center" />
-							</else>
+							<symbol ref="Lateral_Can_Red_Green_Red" position="center" />
 						</else>
 					</rule>
 				</rule>
@@ -351,56 +201,26 @@
 				<rule e="node" k="seamark:buoy_lateral:shape" v="*">
 					<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
 						<rule e="node" k="seamark:topmark:colour" v="green">
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Pillar_Green_Red_Green_Can_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Green_Red_Green_Can" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Green_Red_Green_Can" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Pillar_Green_Red_Green_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Green_Red_Green" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Green_Red_Green" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="spar">
 						<rule e="node" k="seamark:topmark:colour" v="green">
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Spar_Green_Red_Green_Can_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Green_Red_Green_Can" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Green_Red_Green_Can" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Spar_Green_Red_Green_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Green_Red_Green" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Green_Red_Green" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="can">
 						<rule e="node" k="seamark:topmark:colour" v="green">
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Can_Green_Red_Green_Can_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Can_Green_Red_Green_Can" position="center" />
-							</else>
+							<symbol ref="Lateral_Can_Green_Red_Green_Can" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Can_Green_Red_Green_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Can_Green_Red_Green" position="center" />
-							</else>
+							<symbol ref="Lateral_Can_Green_Red_Green" position="center" />
 						</else>
 					</rule>
 				</rule>
@@ -420,56 +240,26 @@
 				<rule e="node" k="seamark:buoy_lateral:shape" v="*">
 					<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
 						<rule e="node" k="seamark:topmark:colour" v="green">
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Pillar_Green_Red_Green_Cone_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Green_Red_Green_Cone" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Green_Red_Green_Cone" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Pillar_Green_Red_Green_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Green_Red_Green" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Green_Red_Green" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="spar">
 						<rule e="node" k="seamark:topmark:colour" v="green">
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Spar_Green_Red_Green_Cone_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Green_Red_Green_Cone" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Green_Red_Green_Cone" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Spar_Green_Red_Green_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Green_Red_Green" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Green_Red_Green" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="conical">
 						<rule e="node" k="seamark:topmark:colour" v="green">
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Cone_Green_Red_Green_Cone_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Cone_Green_Red_Green_Cone" position="center" />
-							</else>
+							<symbol ref="Lateral_Cone_Green_Red_Green_Cone" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="green">
-								<symbol ref="Lateral_Cone_Green_Red_Green_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Cone_Green_Red_Green" position="center" />
-							</else>
+							<symbol ref="Lateral_Cone_Green_Red_Green" position="center" />
 						</else>
 					</rule>
 				</rule>
@@ -484,56 +274,26 @@
 				<rule e="node" k="seamark:buoy_lateral:shape" v="*">
 					<rule e="node" k="seamark:buoy_lateral:shape" v="pillar">
 						<rule e="node" k="seamark:topmark:colour" v="red">
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Pillar_Red_Green_Red_Cone_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Red_Green_Red_Cone" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Red_Green_Red_Cone" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Pillar_Red_Green_Red_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Pillar_Red_Green_Red" position="center" />
-							</else>
+							<symbol ref="Lateral_Pillar_Red_Green_Red" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="spar">
 						<rule e="node" k="seamark:topmark:colour" v="red">
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Spar_Red_Green_Red_Cone_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Red_Green_Red_Cone" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Red_Green_Red_Cone" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Spar_Red_Green_Red_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Spar_Red_Green_Red" position="center" />
-							</else>
+							<symbol ref="Lateral_Spar_Red_Green_Red" position="center" />
 						</else>
 					</rule>
 					<rule e="node" k="seamark:buoy_lateral:shape" v="conical">
 						<rule e="node" k="seamark:topmark:colour" v="red">
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Cone_Red_Green_Red_Cone_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Cone_Red_Green_Red_Cone" position="center" />
-							</else>
+							<symbol ref="Lateral_Cone_Red_Green_Red_Cone" position="center" />
 						</rule>
 						<else>
-							<rule e="node" k="seamark:light:colour" v="red">
-								<symbol ref="Lateral_Cone_Red_Green_Red_Lit" position="center" />
-							</rule>
-							<else>
-								<symbol ref="Lateral_Cone_Red_Green_Red" position="center" />
-							</else>
+							<symbol ref="Lateral_Cone_Red_Green_Red" position="center" />
 						</else>
 					</rule>
 				</rule>
@@ -557,38 +317,18 @@
 			<rule e="node" k="seamark:beacon_lateral:colour" v="red">
 				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
 					<rule e="node" k="seamark:topmark:colour" v="red">
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Tower_Red_Can_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Red_Can" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Red_Can" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Tower_Red_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Red" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Red" position="center" />
 					</else>
 				</rule>
 				<else>
 					<rule e="node" k="seamark:topmark:colour" v="red">
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Beacon_Red_Can_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Red_Can" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Red_Can" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Beacon_Red_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Red" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Red" position="center" />
 					</else>
 				</else>
 			</rule>
@@ -598,38 +338,18 @@
 			<rule e="node" k="seamark:beacon_lateral:colour" v="green">
 				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
 					<rule e="node" k="seamark:topmark:colour" v="green">
-						<rule e="node" k="seamark:light:colour" v="green">
-							<symbol ref="Lateral_Tower_Green_Can_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Green_Can" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Green_Can" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="green">
-							<symbol ref="Lateral_Tower_Green_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Green" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Green" position="center" />
 					</else>
 				</rule>
 				<else>
 					<rule e="node" k="seamark:topmark:colour" v="green">
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Beacon_Green_Can_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Green_Can" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Green_Can" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="green">
-							<symbol ref="Lateral_Beacon_Green_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Green" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Green" position="center" />
 					</else>
 				</else>
 			</rule>
@@ -644,38 +364,18 @@
 			<rule e="node" k="seamark:beacon_lateral:colour" v="green">
 				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
 					<rule e="node" k="seamark:topmark:colour" v="green">
-						<rule e="node" k="seamark:light:colour" v="green">
-							<symbol ref="Lateral_Tower_Green_Cone_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Green_Cone" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Green_Cone" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="green">
-							<symbol ref="Lateral_Tower_Green_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Green" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Green" position="center" />
 					</else>
 				</rule>
 				<else>
 					<rule e="node" k="seamark:topmark:colour" v="green">
-						<rule e="node" k="seamark:light:colour" v="green">
-							<symbol ref="Lateral_Beacon_Green_Cone_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Green_Cone" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Green_Cone" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="green">
-							<symbol ref="Lateral_Beacon_Green_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Green" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Green" position="center" />
 					</else>
 				</else>
 			</rule>
@@ -685,38 +385,18 @@
 			<rule e="node" k="seamark:beacon_lateral:colour" v="red">
 				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
 					<rule e="node" k="seamark:topmark:colour" v="red">
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Tower_Red_Cone_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Red_Cone" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Red_Cone" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Tower_Red_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Red" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Red" position="center" />
 					</else>
 				</rule>
 				<else>
 					<rule e="node" k="seamark:topmark:colour" v="red">
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Beacon_Red_Cone_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Red_Cone" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Red_Cone" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Beacon_Red_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Red" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Red" position="center" />
 					</else>
 				</else>
 			</rule>
@@ -731,38 +411,18 @@
 			<rule e="node" k="seamark:beacon_lateral:colour" v="red;green;red">
 				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
 					<rule e="node" k="seamark:topmark:colour" v="red">
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Tower_Red_Green_Red_Can_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Red_Green_Red_Can" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Red_Green_Red_Can" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Tower_Red_Green_Red_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Red_Green_Red" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Red_Green_Red" position="center" />
 					</else>
 				</rule>
 				<else>
 					<rule e="node" k="seamark:topmark:colour" v="red">
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Beacon_Red_Green_Red_Can_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Red_Green_Red_Can" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Red_Green_Red_Can" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Beacon_Red_Green_Red_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Red_Green_Red" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Red_Green_Red" position="center" />
 					</else>
 				</else>
 			</rule>
@@ -772,38 +432,18 @@
 			<rule e="node" k="seamark:beacon_lateral:colour" v="green;red;green">
 				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
 					<rule e="node" k="seamark:topmark:colour" v="green">
-						<rule e="node" k="seamark:light:colour" v="green">
-							<symbol ref="Lateral_Tower_Green_Red_Green_Can_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Green_Red_Green_Can" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Green_Red_Green_Can" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="green">
-							<symbol ref="Lateral_Tower_Green_Red_Green_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Green_Red_Green" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Green_Red_Green" position="center" />
 					</else>
 				</rule>
 				<else>
 					<rule e="node" k="seamark:topmark:colour" v="green">
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Beacon_Green_Red_Green_Can_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Green_Red_Green_Can" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Green_Red_Green_Can" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="green">
-							<symbol ref="Lateral_Beacon_Green_Red_Green_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Green_Red_Green" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Green_Red_Green" position="center" />
 					</else>
 				</else>
 			</rule>
@@ -818,38 +458,18 @@
 			<rule e="node" k="seamark:beacon_lateral:colour" v="green;red;green">
 				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
 					<rule e="node" k="seamark:topmark:colour" v="green">
-						<rule e="node" k="seamark:light:colour" v="green">
-							<symbol ref="Lateral_Tower_Green_Red_Green_Cone_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Green_Red_Green_Cone" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Green_Red_Green_Cone" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="green">
-							<symbol ref="Lateral_Tower_Green_Red_Green_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Green_Red_Green" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Green_Red_Green" position="center" />
 					</else>
 				</rule>
 				<else>
 					<rule e="node" k="seamark:topmark:colour" v="green">
-						<rule e="node" k="seamark:light:colour" v="green">
-							<symbol ref="Lateral_Beacon_Green_Red_Green_Cone_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Green_Red_Green_Cone" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Green_Red_Green_Cone" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="green">
-							<symbol ref="Lateral_Beacon_Green_Red_Green_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Green_Red_Green" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Green_Red_Green" position="center" />
 					</else>
 				</else>
 			</rule>
@@ -859,257 +479,21 @@
 			<rule e="node" k="seamark:beacon_lateral:colour" v="red;green;red">
 				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
 					<rule e="node" k="seamark:topmark:colour" v="red">
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Tower_Red_Green_Red_Cone_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Red_Green_Red_Cone" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Red_Green_Red_Cone" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Tower_Red_Green_Red_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Tower_Red_Green_Red" position="center" />
-						</else>
+						<symbol ref="Lateral_Tower_Red_Green_Red" position="center" />
 					</else>
 				</rule>
 				<else>
 					<rule e="node" k="seamark:topmark:colour" v="red">
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Beacon_Red_Green_Red_Cone_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Red_Green_Red_Cone" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Red_Green_Red_Cone" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="red">
-							<symbol ref="Lateral_Beacon_Red_Green_Red_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Lateral_Beacon_Red_Green_Red" position="center" />
-						</else>
+						<symbol ref="Lateral_Beacon_Red_Green_Red" position="center" />
 					</else>
 				</else>
 			</rule>
-		</rule>
-	</rule>
-
-	<!-- Cardinal-Marks -->
-
-	<!-- Buoy -->
-
-	<rule e="node" k="seamark:buoy_cardinal:category" v="*">
-		<rule e="node" k="seamark:buoy_cardinal:category" v="north">
-			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Pillar_North_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Pillar_North" position="center" />
-					</else>
-				</rule>
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Spar_North_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Spar_North" position="center" />
-					</else>
-				</rule>
-			</rule>
-			<else>
-				<symbol ref="Cardinal_Pillar_North" position="center" />
-			</else>
-		</rule>
-		<rule e="node" k="seamark:buoy_cardinal:category" v="east">
-			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Pillar_East_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Pillar_East" position="center" />
-					</else>
-				</rule>
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Spar_East_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Spar_East" position="center" />
-					</else>
-				</rule>
-			</rule>
-			<else>
-				<symbol ref="Cardinal_Pillar_East" position="center" />
-			</else>
-		</rule>
-		<rule e="node" k="seamark:buoy_cardinal:category" v="south">
-			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Pillar_South_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Pillar_South" position="center" />
-					</else>
-				</rule>
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Spar_South_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Spar_South" position="center" />
-					</else>
-				</rule>
-			</rule>
-			<else>
-				<symbol ref="Cardinal_Pillar_South" position="center" />
-			</else>
-		</rule>
-		<rule e="node" k="seamark:buoy_cardinal:category" v="west">
-			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Pillar_West_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Pillar_West" position="center" />
-					</else>
-				</rule>
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Spar_West_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Spar_West" position="center" />
-					</else>
-				</rule>
-			</rule>
-			<else>
-				<symbol ref="Cardinal_Pillar_West" position="center" />
-			</else>
-		</rule>
-	</rule>
-
-	<!-- Beacon -->
-
-	<rule e="node" k="seamark:beacon_cardinal:category" v="*">
-		<rule e="node" k="seamark:beacon_cardinal:category" v="north">
-			<rule e="node" k="seamark:beacon_cardinal:shape" v="*">
-				<rule e="node" k="seamark:beacon_cardinal:shape" v="tower">
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Tower_North_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Tower_North" position="center" />
-					</else>
-				</rule>
-				<else>
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Beacon_North_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Beacon_North" position="center" />
-					</else>
-				</else>
-			</rule>
-			<else>
-				<rule e="node" k="seamark:light:colour" v="white">
-					<symbol ref="Cardinal_Beacon_North_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Cardinal_Beacon_North" position="center" />
-				</else>
-			</else>
-		</rule>
-		<rule e="node" k="seamark:beacon_cardinal:category" v="east">
-			<rule e="node" k="seamark:beacon_cardinal:shape" v="*">
-				<rule e="node" k="seamark:beacon_cardinal:shape" v="tower">
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Tower_East_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Tower_East" position="center" />
-					</else>
-				</rule>
-				<else>
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Beacon_East_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Beacon_East" position="center" />
-					</else>
-				</else>
-			</rule>
-			<else>
-				<rule e="node" k="seamark:light:colour" v="white">
-					<symbol ref="Cardinal_Beacon_East_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Cardinal_Beacon_East" position="center" />
-				</else>
-			</else>
-		</rule>
-		<rule e="node" k="seamark:beacon_cardinal:category" v="south">
-			<rule e="node" k="seamark:beacon_cardinal:shape" v="*">
-				<rule e="node" k="seamark:beacon_cardinal:shape" v="tower">
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Tower_South_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Tower_South" position="center" />
-					</else>
-				</rule>
-				<else>
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Beacon_South_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Beacon_South" position="center" />
-					</else>
-				</else>
-			</rule>
-			<else>
-				<rule e="node" k="seamark:light:colour" v="white">
-					<symbol ref="Cardinal_Beacon_South_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Cardinal_Beacon_South" position="center" />
-				</else>
-			</else>
-		</rule>
-		<rule e="node" k="seamark:beacon_cardinal:category" v="west">
-			<rule e="node" k="seamark:beacon_cardinal:shape" v="*">
-				<rule e="node" k="seamark:beacon_cardinal:shape" v="tower">
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Tower_West_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Tower_West" position="center" />
-					</else>
-				</rule>
-				<else>
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Cardinal_Beacon_West_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Cardinal_Beacon_West" position="center" />
-					</else>
-				</else>
-			</rule>
-			<else>
-				<rule e="node" k="seamark:light:colour" v="white">
-					<symbol ref="Cardinal_Beacon_West_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Cardinal_Beacon_West" position="center" />
-				</else>
-			</else>
 		</rule>
 	</rule>
 
@@ -1120,29 +504,14 @@
 	<rule e="node" k="seamark:light_float:colour" v="red">
 		<rule e="node" k="seamark:topmark:colour" v="red">
 			<rule e="node" k="seamark:topmark:shape" v="cylinder">
-				<rule e="node" k="seamark:light:colour" v="red">
-					<symbol ref="Lateral_Float_Red_Can_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Float_Red_Can" position="center" />
-				</else>
+				<symbol ref="Lateral_Float_Red_Can" position="center" />
 			</rule>
 			<else>
-				<rule e="node" k="seamark:light:colour" v="red">
-					<symbol ref="Lateral_Float_Red_Cone_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Float_Red_Cone" position="center" />
-				</else>
+				<symbol ref="Lateral_Float_Red_Cone" position="center" />
 			</else>
 		</rule>
 		<else>
-			<rule e="node" k="seamark:light:colour" v="red">
-				<symbol ref="Lateral_Float_Red_Lit" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Lateral_Float_Red" position="center" />
-			</else>
+			<symbol ref="Lateral_Float_Red" position="center" />
 		</else>
 	</rule>
 
@@ -1151,29 +520,14 @@
 	<rule e="node" k="seamark:light_float:colour" v="green">
 		<rule e="node" k="seamark:topmark:colour" v="green">
 			<rule e="node" k="seamark:topmark:shape" v="cylinder">
-				<rule e="node" k="seamark:light:colour" v="green">
-					<symbol ref="Lateral_Float_Green_Can_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Float_Green_Can" position="center" />
-				</else>
+				<symbol ref="Lateral_Float_Green_Can" position="center" />
 			</rule>
 			<else>
-				<rule e="node" k="seamark:light:colour" v="green">
-					<symbol ref="Lateral_Float_Green_Cone_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Float_Green_Cone" position="center" />
-				</else>
+				<symbol ref="Lateral_Float_Green_Cone" position="center" />
 			</else>
 		</rule>
 		<else>
-			<rule e="node" k="seamark:light:colour" v="green">
-				<symbol ref="Lateral_Float_Green_Lit" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Lateral_Float_Green" position="center" />
-			</else>
+			<symbol ref="Lateral_Float_Green" position="center" />
 		</else>
 	</rule>
 
@@ -1182,29 +536,14 @@
 	<rule e="node" k="seamark:light_float:colour" v="red;green;red">
 		<rule e="node" k="seamark:topmark:colour" v="red">
 			<rule e="node" k="seamark:topmark:shape" v="cylinder">
-				<rule e="node" k="seamark:light:colour" v="red">
-					<symbol ref="Lateral_Float_Red_Green_Red_Can_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Float_Red_Green_Red_Can" position="center" />
-				</else>
+				<symbol ref="Lateral_Float_Red_Green_Red_Can" position="center" />
 			</rule>
 			<else>
-				<rule e="node" k="seamark:light:colour" v="red">
-					<symbol ref="Lateral_Float_Red_Green_Red_Cone_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Float_Red_Green_Red_Cone" position="center" />
-				</else>
+				<symbol ref="Lateral_Float_Red_Green_Red_Cone" position="center" />
 			</else>
 		</rule>
 		<else>
-			<rule e="node" k="seamark:light:colour" v="red">
-				<symbol ref="Lateral_Float_Red_Green_Red_Lit" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Lateral_Float_Red_Green_Red" position="center" />
-			</else>
+			<symbol ref="Lateral_Float_Red_Green_Red" position="center" />
 		</else>
 	</rule>
 
@@ -1213,30 +552,134 @@
 	<rule e="node" k="seamark:light_float:colour" v="green;red;green">
 		<rule e="node" k="seamark:topmark:colour" v="green">
 			<rule e="node" k="seamark:topmark:shape" v="cylinder">
-				<rule e="node" k="seamark:light:colour" v="green">
-					<symbol ref="Lateral_Float_Green_Red_Green_Can_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Float_Green_Red_Green_Can" position="center" />
-				</else>
+				<symbol ref="Lateral_Float_Green_Red_Green_Can" position="center" />
 			</rule>
 			<else>
-				<rule e="node" k="seamark:light:colour" v="green">
-					<symbol ref="Lateral_Float_Green_Red_Green_Cone_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Float_Green_Red_Green_Cone" position="center" />
-				</else>
+				<symbol ref="Lateral_Float_Green_Red_Green_Cone" position="center" />
 			</else>
 		</rule>
 		<else>
-			<rule e="node" k="seamark:light:colour" v="green">
-				<symbol ref="Lateral_Float_Green_Red_Green_Lit" position="center" />
+			<symbol ref="Lateral_Float_Green_Red_Green" position="center" />
+		</else>
+	</rule>
+
+	<!-- Cardinal-Marks -->
+
+	<!-- Buoy -->
+
+	<rule e="node" k="seamark:buoy_cardinal:category" v="*">
+		<rule e="node" k="seamark:buoy_cardinal:category" v="north">
+			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
+				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
+					<symbol ref="Cardinal_Pillar_North" position="center" />
+				</rule>
+				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
+					<symbol ref="Cardinal_Spar_North" position="center" />
+				</rule>
+			</rule>
+		</rule>
+		<rule e="node" k="seamark:buoy_cardinal:category" v="east">
+			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
+				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
+					<symbol ref="Cardinal_Pillar_East" position="center" />
+				</rule>
+				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
+					<symbol ref="Cardinal_Spar_East" position="center" />
+				</rule>
+			</rule>
+		</rule>
+		<rule e="node" k="seamark:buoy_cardinal:category" v="south">
+			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
+				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
+					<symbol ref="Cardinal_Pillar_South" position="center" />
+				</rule>
+				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
+					<symbol ref="Cardinal_Spar_South" position="center" />
+				</rule>
+			</rule>
+		</rule>
+		<rule e="node" k="seamark:buoy_cardinal:category" v="west">
+			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
+				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
+					<symbol ref="Cardinal_Pillar_West" position="center" />
+				</rule>
+				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
+					<symbol ref="Cardinal_Spar_West" position="center" />
+				</rule>
+			</rule>
+		</rule>
+	</rule>
+
+	<!-- Beacon -->
+
+	<rule e="node" k="seamark:beacon_cardinal:category" v="*">
+		<rule e="node" k="seamark:beacon_cardinal:category" v="north">
+			<rule e="node" k="seamark:beacon_cardinal:shape" v="*">
+				<rule e="node" k="seamark:beacon_cardinal:shape" v="tower">
+					<symbol ref="Cardinal_Tower_North" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Cardinal_Beacon_North" position="center" />
+				</else>
 			</rule>
 			<else>
-				<symbol ref="Lateral_Float_Green_Red_Green" position="center" />
+				<symbol ref="Cardinal_Beacon_North" position="center" />
 			</else>
-		</else>
+		</rule>
+		<rule e="node" k="seamark:beacon_cardinal:category" v="east">
+			<rule e="node" k="seamark:beacon_cardinal:shape" v="*">
+				<rule e="node" k="seamark:beacon_cardinal:shape" v="tower">
+					<symbol ref="Cardinal_Tower_East" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Cardinal_Beacon_East" position="center" />
+				</else>
+			</rule>
+			<else>
+				<symbol ref="Cardinal_Beacon_North" position="center" />
+			</else>
+		</rule>
+		<rule e="node" k="seamark:beacon_cardinal:category" v="south">
+			<rule e="node" k="seamark:beacon_cardinal:shape" v="*">
+				<rule e="node" k="seamark:beacon_cardinal:shape" v="tower">
+					<symbol ref="Cardinal_Tower_South" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Cardinal_Beacon_South" position="center" />
+				</else>
+			</rule>
+			<else>
+				<symbol ref="Cardinal_Beacon_North" position="center" />
+			</else>
+		</rule>
+		<rule e="node" k="seamark:beacon_cardinal:category" v="west">
+			<rule e="node" k="seamark:beacon_cardinal:shape" v="*">
+				<rule e="node" k="seamark:beacon_cardinal:shape" v="tower">
+					<symbol ref="Cardinal_Tower_West" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Cardinal_Beacon_West" position="center" />
+				</else>
+			</rule>
+			<else>
+				<symbol ref="Cardinal_Beacon_North" position="center" />
+			</else>
+		</rule>
+	</rule>
+
+	<!-- Cardinal Light Floats -->
+
+	<rule e="node" k="seamark:light_float:colour" v="black;yellow">
+		<symbol ref="Cardinal_Float_North" position="center" />
+	</rule>
+	<rule e="node" k="seamark:light_float:colour" v="black;yellow;black">
+		<symbol ref="Cardinal_Float_East" position="center" />
+	</rule>
+	<rule e="node" k="seamark:light_float:colour" v="yellow;black">
+		<symbol ref="Cardinal_Float_South" position="center" />
+	</rule>
+	<rule e="node" k="seamark:light_float:colour" v="yellow;black;yellow">
+		<symbol ref="Cardinal_Float_West" position="center" />
 	</rule>
 
 	<!--Safe water Buoys -->
@@ -1246,85 +689,40 @@
 			<rule e="node" k="seamark:buoy_safe_water:shape" v="pillar">
 				<rule e="node" k="seamark:topmark:colour" v="red">
 					<rule e="node" k="seamark:topmark:shape" v="spherical">
-						<rule e="node" k="seamark:light:colour" v="white">
-							<symbol ref="Safe_Water_Pillar_Sphere_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Safe_Water_Pillar_Sphere" position="center" />
-						</else>
+						<symbol ref="Safe_Water_Pillar_Sphere" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="white">
-							<symbol ref="Safe_Water_Pillar_Sphere_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Safe_Water_Pillar_Sphere" position="center" />
-						</else>
+						<symbol ref="Safe_Water_Pillar_Sphere" position="center" />
 					</else>
 				</rule>
 				<else>
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Safe_Water_Pillar_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Safe_Water_Pillar" position="center" />
-					</else>
+					<symbol ref="Safe_Water_Pillar" position="center" />
 				</else>
 			</rule>
 			<rule e="node" k="seamark:buoy_safe_water:shape" v="spar">
 				<rule e="node" k="seamark:topmark:colour" v="red">
 					<rule e="node" k="seamark:topmark:shape" v="spherical">
-						<rule e="node" k="seamark:light:colour" v="white">
-							<symbol ref="Safe_Water_Spar_Sphere_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Safe_Water_Spar_Sphere" position="center" />
-						</else>
+						<symbol ref="Safe_Water_Spar_Sphere" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="white">
-							<symbol ref="Safe_Water_Spar_Sphere_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Safe_Water_Spar_Sphere" position="center" />
-						</else>
+						<symbol ref="Safe_Water_Spar_Sphere" position="center" />
 					</else>
 				</rule>
 				<else>
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Safe_Water_Spar_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Safe_Water_Spar" position="center" />
-					</else>
+					<symbol ref="Safe_Water_Spar" position="center" />
 				</else>
 			</rule>
 			<rule e="node" k="seamark:buoy_safe_water:shape" v="sphere">
 				<rule e="node" k="seamark:topmark:colour" v="red">
 					<rule e="node" k="seamark:topmark:shape" v="spherical">
-						<rule e="node" k="seamark:light:colour" v="white">
-							<symbol ref="Safe_Water_Sphere_Sphere_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Safe_Water_Sphere_Sphere" position="center" />
-						</else>
+						<symbol ref="Safe_Water_Sphere_Sphere" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:light:colour" v="white">
-							<symbol ref="Safe_Water_Sphere_Sphere_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Safe_Water_Sphere_Sphere" position="center" />
-						</else>
+						<symbol ref="Safe_Water_Sphere_Sphere" position="center" />
 					</else>
 				</rule>
 				<else>
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Safe_Water_Sphere_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Safe_Water_Sphere" position="center" />
-					</else>
+					<symbol ref="Safe_Water_Sphere" position="center" />
 				</else>
 			</rule>
 		</rule>
@@ -1338,21 +736,11 @@
 	<rule e="node" k="seamark:beacon_safe_water:colour" v="red;white">
 		<rule e="node" k="seamark:topmark:colour" v="red">
 			<rule e="node" k="seamark:topmark:shape" v="spherical">
-				<rule e="node" k="seamark:light:colour" v="white">
-					<symbol ref="Safe_Water_Beacon_Sphere_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Safe_Water_Beacon_Sphere" position="center" />
-				</else>
+				<symbol ref="Safe_Water_Beacon_Sphere" position="center" />
 			</rule>
 		</rule>
 		<else>
-			<rule e="node" k="seamark:light:colour" v="white">
-				<symbol ref="Safe_Water_Beacon_Lit" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Safe_Water_Beacon" position="center" />
-			</else>
+			<symbol ref="Safe_Water_Beacon" position="center" />
 		</else>
 	</rule>
 
@@ -1361,64 +749,14 @@
 	<rule e="node" k="seamark:light_float:colour" v="red;white">
 		<rule e="node" k="seamark:topmark:colour" v="red">
 			<rule e="node" k="seamark:topmark:shape" v="spherical">
-				<rule e="node" k="seamark:light:colour" v="white">
-					<symbol ref="Safe_Water_Float_Sphere_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Safe_Water_Float_Sphere" position="center" />
-				</else>
+				<symbol ref="Safe_Water_Float_Sphere" position="center" />
 			</rule>
 			<else>
-				<rule e="node" k="seamark:light:colour" v="white">
-					<symbol ref="Safe_Water_Float_Sphere_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Safe_Water_Float_Sphere" position="center" />
-				</else>
+				<symbol ref="Safe_Water_Float_Sphere" position="center" />
 			</else>
 		</rule>
 		<else>
-			<rule e="node" k="seamark:light:colour" v="white">
-				<symbol ref="Safe_Water_Float_Lit" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Safe_Water_Float" position="center" />
-			</else>
-		</else>
-	</rule>
-
-	<!-- Cardinal Light Floats -->
-
-	<rule e="node" k="seamark:light_float:colour" v="black;yellow">
-		<rule e="node" k="seamark:light:colour" v="white">
-			<symbol ref="Cardinal_Float_North_Lit" position="center" />
-		</rule>
-		<else>
-			<symbol ref="Cardinal_Float_North" position="center" />
-		</else>
-	</rule>
-	<rule e="node" k="seamark:light_float:colour" v="black;yellow;black">
-		<rule e="node" k="seamark:light:colour" v="white">
-			<symbol ref="Cardinal_Float_East_Lit" position="center" />
-		</rule>
-		<else>
-			<symbol ref="Cardinal_Float_East" position="center" />
-		</else>
-	</rule>
-	<rule e="node" k="seamark:light_float:colour" v="yellow;black">
-		<rule e="node" k="seamark:light:colour" v="white">
-			<symbol ref="Cardinal_Float_South_Lit" position="center" />
-		</rule>
-		<else>
-			<symbol ref="Cardinal_Float_South" position="center" />
-		</else>
-	</rule>
-	<rule e="node" k="seamark:light_float:colour" v="yellow;black;yellow">
-		<rule e="node" k="seamark:light:colour" v="white">
-			<symbol ref="Cardinal_Float_West_Lit" position="center" />
-		</rule>
-		<else>
-			<symbol ref="Cardinal_Float_West" position="center" />
+			<symbol ref="Safe_Water_Float" position="center" />
 		</else>
 	</rule>
 
@@ -1429,93 +767,55 @@
 			<rule e="node" k="seamark:buoy_special_purpose:shape" v="pillar">
 				<rule e="node" k="seamark:topmark:colour" v="yellow">
 					<rule e="node" k="seamark:topmark:shape" v="x-shape">
-						<rule e="node" k="seamark:light:colour" v="white">
-							<symbol ref="Special_Purpose_Pillar_CrossY_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Special_Purpose_Pillar_CrossY" position="center" />
-						</else>
-					</rule>
-					<else>
-						<rule e="node" k="seamark:light:colour" v="white">
-							<symbol ref="Special_Purpose_Pillar_CrossY_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Special_Purpose_Pillar_CrossY" position="center" />
-						</else>
-					</else>
-				</rule>
-				<else>
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Special_Purpose_Pillar_Lit" position="center" />
+						<symbol ref="Special_Purpose_Pillar_CrossY" position="center" />
 					</rule>
 					<else>
 						<symbol ref="Special_Purpose_Pillar" position="center" />
 					</else>
+				</rule>
+				<else>
+					<symbol ref="Special_Purpose_Pillar" position="center" />
 				</else>
 			</rule>
 			<rule e="node" k="seamark:buoy_special_purpose:shape" v="spar">
 				<rule e="node" k="seamark:topmark:colour" v="yellow">
 					<rule e="node" k="seamark:topmark:shape" v="x-shape">
-						<rule e="node" k="seamark:light:colour" v="white">
-							<symbol ref="Special_Purpose_Spar_CrossY_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Special_Purpose_Spar_CrossY" position="center" />
-						</else>
-					</rule>
-					<else>
-						<rule e="node" k="seamark:light:colour" v="white">
-							<symbol ref="Special_Purpose_Spar_CrossY_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Special_Purpose_Spar_CrossY" position="center" />
-						</else>
-					</else>
-				</rule>
-				<else>
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Special_Purpose_Spar_Lit" position="center" />
+						<symbol ref="Special_Purpose_Spar_CrossY" position="center" />
 					</rule>
 					<else>
 						<symbol ref="Special_Purpose_Spar" position="center" />
 					</else>
+				</rule>
+				<else>
+					<symbol ref="Special_Purpose_Spar" position="center" />
 				</else>
 			</rule>
 			<rule e="node" k="seamark:buoy_special_purpose:shape" v="sphere">
 				<rule e="node" k="seamark:topmark:colour" v="yellow">
 					<rule e="node" k="seamark:topmark:shape" v="x-shape">
-						<rule e="node" k="seamark:light:colour" v="white">
-							<symbol ref="Special_Purpose_Sphere_CrossY_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Special_Purpose_Sphere_CrossY" position="center" />
-						</else>
-					</rule>
-					<else>
-						<rule e="node" k="seamark:light:colour" v="white">
-							<symbol ref="Special_Purpose_Sphere_CrossY_Lit" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Special_Purpose_Sphere_CrossY" position="center" />
-						</else>
-					</else>
-				</rule>
-				<else>
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Special_Purpose_Sphere_Lit" position="center" />
+						<symbol ref="Special_Purpose_Sphere_CrossY" position="center" />
 					</rule>
 					<else>
 						<symbol ref="Special_Purpose_Sphere" position="center" />
 					</else>
+				</rule>
+				<else>
+					<symbol ref="Special_Purpose_Sphere" position="center" />
 				</else>
 			</rule>
-		</rule>
-		<else>
-			<symbol ref="Special_Purpose_Pillar" position="center" />
-		</else>
-		<rule e="node" k="seamark:buoy_special_purpose:shape" v="barrel">
-			<symbol ref="Special_Purpose_Pillar" position="center" />
+			<rule e="node" k="seamark:buoy_special_purpose:shape" v="barrel">
+				<rule e="node" k="seamark:topmark:colour" v="yellow">
+					<rule e="node" k="seamark:topmark:shape" v="x-shape">
+						<symbol ref="Special_Purpose_Barrel_CrossY" position="center" />
+					</rule>
+					<else>
+						<symbol ref="Special_Purpose_Barrel" position="center" />
+					</else>
+				</rule>
+				<else>
+					<symbol ref="Special_Purpose_Barrel" position="center" />
+				</else>
+			</rule>
 		</rule>
 	</rule>
 
@@ -1524,21 +824,11 @@
 	<rule e="node" k="seamark:light_float:colour" v="yellow">
 		<rule e="node" k="seamark:topmark:colour" v="yellow">
 			<rule e="node" k="seamark:topmark:shape" v="x-shape">
-				<rule e="node" k="seamark:light:colour" v="white">
-					<symbol ref="Special_Purpose_Float_CrossY_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Special_Purpose_Float_CrossY" position="center" />
-				</else>
+				<symbol ref="Special_Purpose_Float_CrossY" position="center" />
 			</rule>
 		</rule>
 		<else>
-			<rule e="node" k="seamark:light:colour" v="white">
-				<symbol ref="Special_Purpose_Float_Lit" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Special_Purpose_Float" position="center" />
-			</else>
+			<symbol ref="Special_Purpose_Float" position="center" />
 		</else>
 	</rule>
 
@@ -1548,41 +838,21 @@
 		<rule e="node" k="seamark:beacon_special_purpose:shape" v="tower">
 			<rule e="node" k="seamark:topmark:colour" v="yellow">
 				<rule e="node" k="seamark:topmark:shape" v="x-shape">
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Special_Purpose_Tower_CrossY_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Special_Purpose_Tower_CrossY" position="center" />
-					</else>
+					<symbol ref="Special_Purpose_Tower_CrossY" position="center" />
 				</rule>
 			</rule>
 			<else>
-				<rule e="node" k="seamark:light:colour" v="white">
-					<symbol ref="Special_Purpose_Tower_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Special_Purpose_Tower" position="center" />
-				</else>
+				<symbol ref="Special_Purpose_Tower" position="center" />
 			</else>
 		</rule>
 		<else>
 			<rule e="node" k="seamark:topmark:colour" v="yellow">
 				<rule e="node" k="seamark:topmark:shape" v="x-shape">
-					<rule e="node" k="seamark:light:colour" v="white">
-						<symbol ref="Special_Purpose_Beacon_CrossY_Lit" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Special_Purpose_Beacon_CrossY" position="center" />
-					</else>
+					<symbol ref="Special_Purpose_Beacon_CrossY" position="center" />
 				</rule>
 			</rule>
 			<else>
-				<rule e="node" k="seamark:light:colour" v="white">
-					<symbol ref="Special_Purpose_Beacon_Lit" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Special_Purpose_Beacon" position="center" />
-				</else>
+				<symbol ref="Special_Purpose_Beacon" position="center" />
 			</else>
 		</else>
 	</rule>
@@ -1591,20 +861,10 @@
 
 	<rule e="node" k="seamark:buoy_isolated_danger:shape" v="*">
 		<rule e="node" k="seamark:buoy_isolated_danger:shape" v="pillar">
-			<rule e="node" k="seamark:light:colour" v="white">
-				<symbol ref="Cardinal_Pillar_Single_Lit" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Cardinal_Pillar_Single" position="center" />
-			</else>
+			<symbol ref="Cardinal_Pillar_Single" position="center" />
 		</rule>
 		<rule e="node" k="seamark:buoy_isolated_danger:shape" v="spar">
-			<rule e="node" k="seamark:light:colour" v="white">
-				<symbol ref="Cardinal_Spar_Single_Lit" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Cardinal_Spar_Single" position="center" />
-			</else>
+			<symbol ref="Cardinal_Spar_Single" position="center" />
 		</rule>
 	</rule>
 
@@ -1612,32 +872,17 @@
 
 	<rule e="node" k="seamark:type" v="beacon_isolated_danger">
 		<rule e="node" k="seamark:beacon_isolated_danger:shape" v="tower">
-			<rule e="node" k="seamark:light:colour" v="white">
-				<symbol ref="Cardinal_Tower_Single_Lit" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Cardinal_Tower_Single" position="center" />
-			</else>
+			<symbol ref="Cardinal_Tower_Single" position="center" />
 		</rule>
 		<else>
-			<rule e="node" k="seamark:light:colour" v="white">
-				<symbol ref="Cardinal_Beacon_Single_Lit" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Cardinal_Beacon_Single" position="center" />
-			</else>
+			<symbol ref="Cardinal_Beacon_Single" position="center" />
 		</else>
 	</rule>
 
 	<!-- Isolated Danger Light Float -->
 
 	<rule e="node" k="seamark:light_float:colour" v="black;red;black">
-		<rule e="node" k="seamark:light:colour" v="white">
-			<symbol ref="Cardinal_Float_Single_Lit" position="center" />
-		</rule>
-		<else>
-			<symbol ref="Cardinal_Float_Single" position="center" />
-		</else>
+		<symbol ref="Cardinal_Float_Single" position="center" />
 	</rule>
 
 	<!-- Lighthouse -->
@@ -1679,6 +924,20 @@
 	<rule e="node" k="seamark:type" v="light_minor">
 		<symbol ref="Light_Minor" position="center" />
 	</rule>
+
+	<!-- Light Flares -->
+
+	<rule e="node" k="seamark:light:colour" v="*">
+		<rule e="node" k="seamark:light:colour" v="white">
+			<symbol ref="Light_White_240" position="center" />
+		</rule>
+		<rule e="node" k="seamark:light:colour" v="red">
+			<symbol ref="Light_Red_240" position="center" />
+		</rule>
+		<rule e="node" k="seamark:light:colour" v="green">
+			<symbol ref="Light_Green_240" position="center" />
+		</rule>
+	</rule> 
 
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
