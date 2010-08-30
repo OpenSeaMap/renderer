@@ -8,11 +8,11 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="320"
-   height="340"
+   width="300"
+   height="400"
    id="svg2"
    inkscape:version="0.47 r22583"
-   sodipodi:docname="Light_White_240.svg"
+   sodipodi:docname="Light_White_120.svg"
    style="display:inline">
   <metadata
      id="metadata2913">
@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,9 +39,9 @@
      inkscape:window-height="1088"
      id="namedview2911"
      showgrid="true"
-     inkscape:zoom="2.8421873"
-     inkscape:cx="161.65203"
-     inkscape:cy="168.41945"
+     inkscape:zoom="4.2"
+     inkscape:cx="153.76449"
+     inkscape:cy="198.95478"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -602,12 +602,13 @@
      id="layer4"
      inkscape:label="Light"
      style="display:inline"
-     transform="translate(0,20)">
+     transform="translate(0,80)">
     <g
        id="g2992"
-       transform="matrix(0.98952579,0.1443562,-0.1443562,0.98952579,24.780232,-31.450143)">
+       transform="matrix(-0.27731007,-0.69684943,0.69684943,-0.27731007,82.874842,275.88271)"
+       style="fill:#ff0000;fill-opacity:1">
       <path
-         style="fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path28209"
          d="m 131.60087,181.31159 -61.62788,76.30842 -4.53011,5.57826 -5.557433,4.22374 -6.899414,2.10924 -7.322226,-0.10972 -6.812191,-2.29629 -5.747427,-4.33733 -4.201328,-6.0873 -2.224898,-7.05116 0.15697,-6.9752 2.73284,-6.08953 4.594775,-5.30836 5.593528,-4.86801 1.174178,-0.94649 90.670616,-44.15027 z m 28.00125,-25.26051 c 2.19706,-0.21962 4.15842,1.38525 4.37805,3.58229 0.21962,2.19706 -1.38525,4.15842 -3.58229,4.37805 -2.19706,0.21962 -4.15842,-1.38525 -4.37805,-3.58229 -0.21962,-2.19706 1.38525,-4.15842 3.58229,-4.37805 z" />
     </g>

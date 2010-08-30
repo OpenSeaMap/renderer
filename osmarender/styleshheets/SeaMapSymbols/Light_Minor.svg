@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="300"
-   height="300"
+   width="320"
+   height="340"
    id="svg2"
    sodipodi:version="0.32"
    inkscape:version="0.47 r22583"
@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -42,9 +42,9 @@
      pagecolor="#ffffff"
      id="base"
      showgrid="true"
-     inkscape:zoom="10.365131"
-     inkscape:cx="144.62584"
-     inkscape:cy="150"
+     inkscape:zoom="3.6646272"
+     inkscape:cx="160.97018"
+     inkscape:cy="167.97123"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:current-layer="svg2"
@@ -160,29 +160,11 @@
        sodipodi:type="inkscape:persp3d" />
   </defs>
   <g
-     transform="translate(-9.9401588,0.05198145)"
-     id="g2831"
-     inkscape:label="Beacon 3 Band"
-     style="display:inline">
-    <g
-       transform="translate(-0.04412785,-10.060108)"
-       id="g2992"
-       style="display:inline">
-      <path
-         d="m 131.60087,181.31159 -61.62788,76.30842 -4.53011,5.57826 -5.557433,4.22374 -6.899414,2.10924 -7.322226,-0.10972 -6.812191,-2.29629 -5.747427,-4.33733 -4.201328,-6.0873 -2.224898,-7.05116 0.15697,-6.9752 2.73284,-6.08953 4.594775,-5.30836 5.593528,-4.86801 1.174178,-0.94649 90.670616,-44.15027 z m 28.00125,-25.26051 c 2.19706,-0.21962 4.15842,1.38525 4.37805,3.58229 0.21962,2.19706 -1.38525,4.15842 -3.58229,4.37805 -2.19706,0.21962 -4.15842,-1.38525 -4.37805,-3.58229 -0.21962,-2.19706 1.38525,-4.15842 3.58229,-4.37805 z"
-         id="path28209"
-         style="fill:#d400d4;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    </g>
-    <g
-       transform="translate(-0.04730863,-10.020187)"
-       id="g2936"
-       style="display:inline" />
-  </g>
-  <g
      id="g3843"
-     transform="translate(-0.48310445,0.27747085)">
+     transform="translate(9.490679,20.270047)"
+     style="fill:#000000;stroke:none;stroke-opacity:1;fill-opacity:1">
     <path
-       style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       style="fill:#000000;stroke:none;stroke-opacity:1;fill-opacity:1"
        id="path10972"
        d="m 134.51873,171.50128 6.0126,-18.4125 -15.9375,-11.33751 19.4875,-0.37499 6.3749,-18.4125 6.025,18.4125 19.4875,0.37499 -15.5874,11.33751 6.0249,18.4125 -15.95,-11.325 -15.9375,11.325 z" />
   </g>

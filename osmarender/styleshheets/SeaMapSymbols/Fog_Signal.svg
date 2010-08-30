@@ -8,11 +8,11 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="320"
-   height="340"
+   width="300"
+   height="400"
    id="svg2"
    inkscape:version="0.47 r22583"
-   sodipodi:docname="Light_White_240.svg"
+   sodipodi:docname="Fog_Signal.svg"
    style="display:inline">
   <metadata
      id="metadata2913">
@@ -39,13 +39,13 @@
      inkscape:window-height="1088"
      id="namedview2911"
      showgrid="true"
-     inkscape:zoom="2.8421873"
-     inkscape:cx="161.65203"
-     inkscape:cy="168.41945"
+     inkscape:zoom="2.1"
+     inkscape:cx="118.64544"
+     inkscape:cy="221.57383"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer15"
      inkscape:snap-grids="false">
     <inkscape:grid
        type="xygrid"
@@ -599,17 +599,47 @@
   </defs>
   <g
      inkscape:groupmode="layer"
-     id="layer4"
-     inkscape:label="Light"
-     style="display:inline"
-     transform="translate(0,20)">
-    <g
-       id="g2992"
-       transform="matrix(0.98952579,0.1443562,-0.1443562,0.98952579,24.780232,-31.450143)">
-      <path
-         style="fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none"
-         id="path28209"
-         d="m 131.60087,181.31159 -61.62788,76.30842 -4.53011,5.57826 -5.557433,4.22374 -6.899414,2.10924 -7.322226,-0.10972 -6.812191,-2.29629 -5.747427,-4.33733 -4.201328,-6.0873 -2.224898,-7.05116 0.15697,-6.9752 2.73284,-6.08953 4.594775,-5.30836 5.593528,-4.86801 1.174178,-0.94649 90.670616,-44.15027 z m 28.00125,-25.26051 c 2.19706,-0.21962 4.15842,1.38525 4.37805,3.58229 0.21962,2.19706 -1.38525,4.15842 -3.58229,4.37805 -2.19706,0.21962 -4.15842,-1.38525 -4.37805,-3.58229 -0.21962,-2.19706 1.38525,-4.15842 3.58229,-4.37805 z" />
-    </g>
+     id="layer15"
+     inkscape:label="Fog Horn"
+     style="display:inline">
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#d400d4;stroke-width:4.064219;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3761"
+       sodipodi:cx="129.1259"
+       sodipodi:cy="207.36668"
+       sodipodi:rx="56.646511"
+       sodipodi:ry="42.045082"
+       d="M 92.810358,239.63482 A 56.646511,42.045082 0 0 1 73.349836,214.70911"
+       transform="matrix(2.1197953,0,0,2.8559584,-123.72047,-392.23063)"
+       sodipodi:open="true"
+       sodipodi:start="2.2667147"
+       sodipodi:end="2.9660603" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#d400d4;stroke-width:6.00326967;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3778"
+       sodipodi:cx="120.10714"
+       sodipodi:cy="213.96939"
+       sodipodi:rx="55.688774"
+       sodipodi:ry="54.384354"
+       d="M 84.411253,255.71211 A 55.688774,54.384354 0 0 1 65.264662,223.41457"
+       transform="matrix(1.6461344,0,0,1.6856173,-47.712493,-160.67051)"
+       sodipodi:start="2.2665823"
+       sodipodi:end="2.967033"
+       sodipodi:open="true" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#d400d4;stroke-width:1.2993052;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3780"
+       sodipodi:cx="54.735546"
+       sodipodi:cy="190.18878"
+       sodipodi:rx="9.4821424"
+       sodipodi:ry="6.9234695"
+       d="m 48.697153,195.52688 a 9.4821424,6.9234695 0 0 1 -3.294988,-4.11652"
+       transform="matrix(6.590239,0,0,9.0257615,-210.72033,-1516.5985)"
+       sodipodi:start="2.2611597"
+       sodipodi:end="2.9642244"
+       sodipodi:open="true" />
   </g>
 </svg>

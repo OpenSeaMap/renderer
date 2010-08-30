@@ -8,8 +8,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="360"
-   height="360"
+   width="320"
+   height="340"
    id="svg2"
    inkscape:version="0.47 r22583"
    sodipodi:docname="Light_Red_240.svg"
@@ -39,14 +39,15 @@
      inkscape:window-height="1088"
      id="namedview2911"
      showgrid="true"
-     inkscape:zoom="32.15568"
-     inkscape:cx="180.34789"
-     inkscape:cy="178.0692"
+     inkscape:zoom="2.8421874"
+     inkscape:cx="165.42051"
+     inkscape:cy="169.36156"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer4"
-     inkscape:snap-grids="false">
+     inkscape:snap-grids="false"
+     showborder="false">
     <inkscape:grid
        type="xygrid"
        id="grid2919"
@@ -602,10 +603,10 @@
      id="layer4"
      inkscape:label="Light"
      style="display:inline"
-     transform="translate(0,40)">
+     transform="translate(0,20)">
     <g
        id="g2992"
-       transform="matrix(0.98952579,0.1443562,-0.1443562,0.98952579,44.794486,-41.44023)">
+       transform="matrix(0.98952579,0.1443562,-0.1443562,0.98952579,24.782469,-31.426447)">
       <path
          style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path28209"

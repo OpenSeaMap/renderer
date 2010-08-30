@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -11,7 +12,7 @@
    version="1.1"
    id="svg8829"
    sodipodi:version="0.32"
-   inkscape:version="0.46"
+   inkscape:version="0.47 r22583"
    sodipodi:docname="Harbour.svg"
    inkscape:export-xdpi="89.361702"
    inkscape:export-ydpi="89.361702"
@@ -29,24 +30,31 @@
          rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata>
 <sodipodi:namedview
    id="base"
-   inkscape:window-height="841"
+   inkscape:window-height="1088"
    inkscape:pageshadow="2"
    inkscape:pageopacity="0.0"
-   inkscape:window-width="1440"
-   inkscape:window-x="-4"
-   inkscape:window-y="-3"
+   inkscape:window-width="1920"
+   inkscape:window-x="1440"
+   inkscape:window-y="0"
    inkscape:current-layer="g2415"
-   showgrid="false"
+   showgrid="true"
    guidetolerance="10.0"
-   inkscape:zoom="1.4722222"
+   inkscape:zoom="2.0820366"
    gridtolerance="10.0"
    objecttolerance="10.0"
    borderopacity="1.0"
    bordercolor="#666666"
-   inkscape:cx="90"
+   inkscape:cx="174.05232"
    pagecolor="#ffffff"
-   inkscape:cy="146.67042">
-	</sodipodi:namedview>
+   inkscape:cy="117.85248"
+   inkscape:window-maximized="0">
+	<inkscape:grid
+   type="xygrid"
+   id="grid3611"
+   empspacing="5"
+   visible="true"
+   enabled="true"
+   snapvisiblegridlinesonly="true" /></sodipodi:namedview>
 <defs
    id="defs4">
 	
@@ -64,8 +72,8 @@
    id="g2415">
 	<path
    id="path2421"
-   d="M 317.33253,159.73113 C 317.33253,246.44005 246.85641,316.7948 160,316.7948 C 73.14359,316.7948 2.6674639,246.44005 2.6674639,159.73113 C 2.6674639,73.022217 73.14359,2.667464 160,2.667464 C 246.85641,2.667464 317.33253,73.022217 317.33253,159.73113 z"
-   style="fill:none;stroke:#a30075;stroke-width:4.90096569" />
+   d="m 312.63269,160.0313 c 0,84.21378 -68.31706,152.54396 -152.51263,152.54396 -84.195532,0 -152.512607,-68.33018 -152.512607,-152.54396 0,-84.213726 68.317075,-152.5439217 152.512607,-152.5439217 84.19557,0 152.51263,68.3301957 152.51263,152.5439217 z"
+   style="fill:none;stroke:#a30075;stroke-width:15;stroke-miterlimit:4;stroke-dasharray:none" />
 	<path
    id="path2417"
    d="M 257.47734,185.7612 L 248.61559,235.72357 L 236.46755,224.49803 C 230.40926,231.22026 223.51023,236.9234 215.22667,242.12043 C 201.22997,250.89938 185.91071,255.86388 170.50391,257.29625 L 168.9296,271.9171 L 152.7332,271.9171 L 151.11366,257.29625 C 126.1735,254.89461 102.38778,243.36815 84.942547,223.98996 L 71.452265,235.72357 L 64.211035,185.07139 L 99.632491,211.16789 L 90.609469,219.02254 C 105.99462,232.25889 127.30335,241.10623 151.18643,242.99784 L 154.3793,109.07797 L 120.57148,109.07797 L 120.57148,98.936015 L 154.30652,99.306313 L 154.30652,90.874224 C 143.87341,88.589839 136.12479,80.157744 136.12479,70.087105 C 136.12479,58.240156 146.80866,48.654143 159.99803,48.654143 C 173.16578,48.654143 183.85751,58.240156 183.85751,70.087105 C 183.85751,79.928133 176.456,88.242003 166.38376,90.762839 L 166.38376,99.053258 L 201.11493,98.936015 L 201.11493,109.07797 L 167.30908,109.07797 L 170.57077,242.99784 C 194.28571,241.10428 215.43218,232.32533 230.77408,219.20623 L 222.05293,211.16594 L 257.47734,185.7612 z"
@@ -104,7 +112,8 @@
    cy="69.002998"
    rx="11.553"
    ry="10.449"
-   style="fill-opacity:0">
+   style="fill-opacity:0"
+   d="m 171.576,69.002998 c 0,5.770824 -5.17246,10.449001 -11.55301,10.449001 -6.38054,0 -11.553,-4.678177 -11.553,-10.449001 0,-5.770823 5.17246,-10.449 11.553,-10.449 6.38055,0 11.55301,4.678177 11.55301,10.449 z">
 	</ellipse>
 </g>
 </svg>

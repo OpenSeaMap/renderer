@@ -8,11 +8,11 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="320"
-   height="340"
+   width="300"
+   height="400"
    id="svg2"
    inkscape:version="0.47 r22583"
-   sodipodi:docname="Light_White_240.svg"
+   sodipodi:docname="Radar_Station.svg"
    style="display:inline">
   <metadata
      id="metadata2913">
@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,9 +39,9 @@
      inkscape:window-height="1088"
      id="namedview2911"
      showgrid="true"
-     inkscape:zoom="2.8421873"
-     inkscape:cx="161.65203"
-     inkscape:cy="168.41945"
+     inkscape:zoom="67.2"
+     inkscape:cx="153.88354"
+     inkscape:cy="198.95478"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -602,10 +602,10 @@
      id="layer4"
      inkscape:label="Light"
      style="display:inline"
-     transform="translate(0,20)">
+     transform="translate(0,80)">
     <g
        id="g2992"
-       transform="matrix(0.98952579,0.1443562,-0.1443562,0.98952579,24.780232,-31.450143)">
+       transform="matrix(-0.27731007,-0.69684943,0.69684943,-0.27731007,82.874842,275.88271)">
       <path
          style="fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path28209"
