@@ -8,8 +8,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="320"
-   height="340"
+   width="300"
+   height="400"
    id="svg2"
    inkscape:version="0.47 r22583"
    sodipodi:docname="Lateral_Perch_Port.svg"
@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,9 +39,9 @@
      inkscape:window-height="1088"
      id="namedview2911"
      showgrid="true"
-     inkscape:zoom="5.684375"
-     inkscape:cx="159.79754"
-     inkscape:cy="165.30367"
+     inkscape:zoom="4.0194601"
+     inkscape:cx="152.33385"
+     inkscape:cy="196.79261"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -223,10 +223,11 @@
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="Perch Port"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(0,60)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path7834"
-       d="m 149.77561,172.49031 0,-4.975 7.8,0 0,-37.925 -26.225,-30.099999 3.9,-3.2 24.8125,28.349999 24.8,-28.349999 3.9,3.2 -26.225,29.762499 0,38.2625 7.4375,0 0,4.975 -20.2,0" />
+       d="m 139.72613,142.47382 0,-4.975 7.8,0 0,-37.925002 -26.225,-30.099999 3.9,-3.2 24.8125,28.349999 24.8,-28.349999 3.9,3.2 -26.225,29.762499 0,38.262502 7.4375,0 0,4.975 -20.2,0" />
   </g>
 </svg>

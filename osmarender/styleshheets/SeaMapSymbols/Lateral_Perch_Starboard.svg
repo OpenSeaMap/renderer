@@ -8,8 +8,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="320"
-   height="340"
+   width="300"
+   height="400"
    id="svg2"
    inkscape:version="0.47 r22583"
    sodipodi:docname="Lateral_Perch_Starboard.svg"
@@ -40,8 +40,8 @@
      id="namedview2911"
      showgrid="true"
      inkscape:zoom="5.684375"
-     inkscape:cx="138.51112"
-     inkscape:cy="165.30367"
+     inkscape:cx="152.19455"
+     inkscape:cy="193.451"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -223,11 +223,12 @@
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="Perch Starboard"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(0,60)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path7836"
-       d="m 149.69793,172.52221 0.0641,-4.95 7.73403,0 0,-60.6125 -22.6875,25.5125 -3.5375,-3.525 28.7,-32.249995 28.7125,32.249995 -3.9,3.525 -22.325,-25.5125 0,60.6125 7.7875,0 0.002,4.95"
+       d="m 139.71038,142.51262 0.0641,-4.95 7.73403,0 0,-60.612504 -22.6875,25.512504 -3.5375,-3.525004 28.7,-32.249995 28.7125,32.249995 -3.9,3.525004 -22.325,-25.512504 0,60.612504 7.7875,0 0.002,4.95"
        sodipodi:nodetypes="ccccccccccccc" />
   </g>
 </svg>

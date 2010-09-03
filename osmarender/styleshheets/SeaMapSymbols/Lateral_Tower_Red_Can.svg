@@ -8,11 +8,11 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="320"
-   height="340"
+   width="300"
+   height="400"
    id="svg2"
    inkscape:version="0.47 r22583"
-   sodipodi:docname="Lateral_Tower_Red_Can_Lit.svg"
+   sodipodi:docname="Lateral_Tower_Red_Can.svg"
    style="display:inline">
   <metadata
      id="metadata2913">
@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,9 +39,9 @@
      inkscape:window-height="1088"
      id="namedview2911"
      showgrid="true"
-     inkscape:zoom="2.8421875"
-     inkscape:cx="69.548649"
-     inkscape:cy="207.39853"
+     inkscape:zoom="2.0097301"
+     inkscape:cx="137.66397"
+     inkscape:cy="193.19984"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -147,7 +147,7 @@
      id="layer1"
      inkscape:label="Beacon"
      style="display:none"
-     transform="translate(0,20)">
+     transform="translate(0,80)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline"
        d="m 151.18292,76.278139 0,64.750001 c -1.70454,1.6489 -2.94669,3.77114 -3.5,6.15625 l -8.4375,0 -0.125,5.65625 8.5625,0 c 1.28732,5.53295 6.23327,9.65624 12.15625,9.65625 5.92495,0 10.87095,-4.12052 12.15625,-9.65625 l 8.3125,-0.0312 0,-5.65625 -8.3125,0.0312 c -0.58668,-2.52896 -1.94655,-4.75116 -3.8125,-6.4375 l 0,-64.468751 -6.375,0 -4.25,0 -6.375,0 z m 4.0625,4.03125 8.96875,0 0,57.687501 -8.96875,0 0,-57.687501 z m 4.59375,62.187501 c 4.14,0 7.5,3.36 7.5,7.5 0,4.14 -3.36,7.5 -7.5,7.5 -4.14,0 -7.5,-3.36 -7.5,-7.5 0,-4.14 3.36,-7.5 7.5,-7.5 z"
@@ -158,7 +158,7 @@
      inkscape:label="Beacon 3 Band"
      id="g2831"
      inkscape:groupmode="layer"
-     transform="translate(0,20)">
+     transform="translate(0,80)">
     <path
        id="path2833"
        d="m 151.18292,76.278139 0,64.750001 c -1.70454,1.6489 -2.94669,3.77114 -3.5,6.15625 l -8.4375,0 -0.125,5.65625 8.5625,0 c 1.28732,5.53295 6.23327,9.65624 12.15625,9.65625 5.92495,0 10.87095,-4.12052 12.15625,-9.65625 l 8.3125,-0.0312 0,-5.65625 -8.3125,0.0312 c -0.58668,-2.52896 -1.94655,-4.75116 -3.8125,-6.4375 l 0,-64.468751 -6.375,0 -4.25,0 -6.375,0 z m 4.0625,4.03125 8.96875,0 0,57.687501 -8.96875,0 0,-57.687501 z m 4.59375,62.187501 c 4.14,0 7.5,3.36 7.5,7.5 0,4.14 -3.36,7.5 -7.5,7.5 -4.14,0 -7.5,-3.36 -7.5,-7.5 0,-4.14 3.36,-7.5 7.5,-7.5 z"
@@ -203,7 +203,7 @@
      inkscape:label="Beacon 2 Band"
      id="g2825"
      inkscape:groupmode="layer"
-     transform="translate(0,20)">
+     transform="translate(0,80)">
     <path
        id="path2827"
        d="m 151.18292,76.278139 0,64.750001 c -1.70454,1.6489 -2.94669,3.77114 -3.5,6.15625 l -8.4375,0 -0.125,5.65625 8.5625,0 c 1.28732,5.53295 6.23327,9.65624 12.15625,9.65625 5.92495,0 10.87095,-4.12052 12.15625,-9.65625 l 8.3125,-0.0312 0,-5.65625 -8.3125,0.0312 c -0.58668,-2.52896 -1.94655,-4.75116 -3.8125,-6.4375 l 0,-64.468751 -6.375,0 -4.25,0 -6.375,0 z m 4.0625,4.03125 8.96875,0 0,57.687501 -8.96875,0 0,-57.687501 z m 4.59375,62.187501 c 4.14,0 7.5,3.36 7.5,7.5 0,4.14 -3.36,7.5 -7.5,7.5 -4.14,0 -7.5,-3.36 -7.5,-7.5 0,-4.14 3.36,-7.5 7.5,-7.5 z"
@@ -221,23 +221,22 @@
      id="layer2"
      inkscape:label="Tower"
      style="display:inline"
-     transform="translate(0,20)">
+     transform="translate(0,80)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path2558"
-       d="m 136.557,76.304224 -4.625,70.874996 -8.15625,0 0,5.65625 24,0 c 1.28732,5.53295 6.23327,9.65624 12.15625,9.65625 5.92495,0 10.87095,-4.12052 12.15625,-9.65625 l 24,0 0,-5.65625 -8.15625,0 -4.96875,-70.874996 -46.40625,0 z m 6.71875,7.09375 33.3125,0 4.59375,63.781246 -9.09375,0 c -1.2853,-5.53573 -6.2313,-9.65625 -12.15625,-9.65625 -5.92298,1e-5 -10.86893,4.1233 -12.15625,9.65625 l -9.09375,0 4.59375,-63.781246 z M 159.932,142.49172 c 4.14,0 7.5,3.36 7.5,7.5 0,4.14 -3.36,7.5 -7.5,7.5 -4.14,0 -7.5,-3.36 -7.5,-7.5 0,-4.14 3.36,-7.5 7.5,-7.5 z" />
+       d="m 126.62007,46.312311 -4.625,70.874989 -8.15625,0 0,5.65625 24,0 c 1.28732,5.53295 6.23327,9.65624 12.15625,9.65625 5.92495,0 10.87095,-4.12052 12.15625,-9.65625 l 24,0 0,-5.65625 -8.15625,0 -4.96875,-70.874989 -46.40625,0 z m 6.71875,7.09375 33.3125,0 4.59375,63.781239 -9.09375,0 c -1.2853,-5.53573 -6.2313,-9.65625 -12.15625,-9.65625 -5.92298,1e-5 -10.86893,4.1233 -12.15625,9.65625 l -9.09375,0 4.59375,-63.781239 z m 16.65625,59.093739 c 4.14,0 7.5,3.36 7.5,7.5 0,4.14 -3.36,7.5 -7.5,7.5 -4.14,0 -7.5,-3.36 -7.5,-7.5 0,-4.14 3.36,-7.5 7.5,-7.5 z" />
     <path
        style="fill:#d40000;fill-opacity:1;stroke:none"
-       d="m 138.99638,166.29031 c -0.0101,-1.37753 4.26545,-61.27135 4.43305,-62.10005 l 0.16011,-0.79165 16.33799,0 16.33799,0 0.18199,1.14349 c 0.19129,1.20201 4.43493,60.38048 4.42791,61.74821 -0.004,0.77853 -0.0769,0.79164 -4.40209,0.79164 -3.28202,0 -4.39889,-0.1116 -4.40146,-0.4398 -0.008,-1.06321 -1.82507,-4.20218 -3.21006,-5.54626 -4.99932,-4.85168 -13.06166,-4.83058 -17.93917,0.0469 -1.32074,1.32074 -3.11299,4.4788 -3.12097,5.49933 -0.003,0.3282 -1.11943,0.4398 -4.40145,0.4398 -4.32463,0 -4.39812,-0.0132 -4.40384,-0.79164 z"
-       id="path4661"
-       transform="translate(0,-20)" />
+       d="m 129.05945,116.29839 c -0.0101,-1.37753 4.26545,-61.271343 4.43305,-62.100043 l 0.16011,-0.79165 16.33799,0 16.33799,0 0.18199,1.14349 c 0.19129,1.20201 4.43493,60.380473 4.42791,61.748203 -0.004,0.77853 -0.0769,0.79164 -4.40209,0.79164 -3.28202,0 -4.39889,-0.1116 -4.40146,-0.4398 -0.008,-1.06321 -1.82507,-4.20218 -3.21006,-5.54626 -4.99932,-4.85168 -13.06166,-4.83058 -17.93917,0.0469 -1.32074,1.32074 -3.11299,4.4788 -3.12097,5.49933 -0.003,0.3282 -1.11943,0.4398 -4.40145,0.4398 -4.32463,0 -4.39812,-0.0132 -4.40384,-0.79164 z"
+       id="path4661" />
   </g>
   <g
      style="display:none"
      inkscape:label="Tower 3 Band"
      id="g2845"
      inkscape:groupmode="layer"
-     transform="translate(0,20)">
+     transform="translate(0,80)">
     <path
        d="m 136.557,76.304224 -4.625,70.874996 -8.15625,0 0,5.65625 24,0 c 1.28732,5.53295 6.23327,9.65624 12.15625,9.65625 5.92495,0 10.87095,-4.12052 12.15625,-9.65625 l 24,0 0,-5.65625 -8.15625,0 -4.96875,-70.874996 -46.40625,0 z m 6.71875,7.09375 33.3125,0 4.59375,63.781246 -9.09375,0 c -1.2853,-5.53573 -6.2313,-9.65625 -12.15625,-9.65625 -5.92298,1e-5 -10.86893,4.1233 -12.15625,9.65625 l -9.09375,0 4.59375,-63.781246 z M 159.932,142.49172 c 4.14,0 7.5,3.36 7.5,7.5 0,4.14 -3.36,7.5 -7.5,7.5 -4.14,0 -7.5,-3.36 -7.5,-7.5 0,-4.14 3.36,-7.5 7.5,-7.5 z"
        id="path2847"
@@ -262,7 +261,7 @@
      inkscape:label="Tower 2 Band"
      id="g2839"
      inkscape:groupmode="layer"
-     transform="translate(0,20)">
+     transform="translate(0,80)">
     <path
        d="m 136.557,76.304224 -4.625,70.874996 -8.15625,0 0,5.65625 24,0 c 1.28732,5.53295 6.23327,9.65624 12.15625,9.65625 5.92495,0 10.87095,-4.12052 12.15625,-9.65625 l 24,0 0,-5.65625 -8.15625,0 -4.96875,-70.874996 -46.40625,0 z m 6.71875,7.09375 33.3125,0 4.59375,63.781246 -9.09375,0 c -1.2853,-5.53573 -6.2313,-9.65625 -12.15625,-9.65625 -5.92298,1e-5 -10.86893,4.1233 -12.15625,9.65625 l -9.09375,0 4.59375,-63.781246 z M 159.932,142.49172 c 4.14,0 7.5,3.36 7.5,7.5 0,4.14 -3.36,7.5 -7.5,7.5 -4.14,0 -7.5,-3.36 -7.5,-7.5 0,-4.14 3.36,-7.5 7.5,-7.5 z"
        id="path2841"
@@ -280,7 +279,7 @@
      id="layer4"
      inkscape:label="Light"
      style="display:inline"
-     transform="translate(0,20)">
+     transform="translate(0,80)">
     <g
        id="g2992"
        transform="translate(-0.04412785,-10.060108)" />
@@ -290,10 +289,10 @@
      id="layer3"
      inkscape:label="Top Support"
      style="display:inline"
-     transform="translate(0,20)">
+     transform="translate(0,80)">
     <g
        id="g2936"
-       transform="translate(-0.04730863,-10.020187)">
+       transform="translate(-9.9842469,-40.0121)">
       <path
          transform="translate(-40,-40)"
          style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -306,7 +305,8 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Top North"
-     style="display:none">
+     style="display:none"
+     transform="translate(0,60)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path27763-2"
@@ -317,7 +317,8 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Top West"
-     style="display:none">
+     style="display:none"
+     transform="translate(0,60)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path27763-3"
@@ -328,7 +329,8 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="Top South"
-     style="display:none">
+     style="display:none"
+     transform="translate(0,60)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path27763-0"
@@ -339,7 +341,8 @@
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="Top East"
-     style="display:none">
+     style="display:none"
+     transform="translate(0,60)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path27763-9"
@@ -350,7 +353,8 @@
      inkscape:groupmode="layer"
      id="layer9"
      inkscape:label="Top Cone"
-     style="display:none">
+     style="display:none"
+     transform="translate(0,60)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path4179"
@@ -365,22 +369,24 @@
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="Top Can"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(0,60)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path2520-0"
-       d="m 146.15182,43.534363 -0.375,35.0625 28.34375,0 0,-35.0625 -27.96875,0 z m 4.9375,4.59375 18.04168,-0.04398 0.0648,25.5 -18.2824,0.04398 0.17592,-25.5 z"
+       d="m 136.21489,13.54245 -0.375,35.0625 28.34375,0 0,-35.0625 -27.96875,0 z m 4.9375,4.59375 18.04168,-0.04398 0.0648,25.5 -18.2824,0.04398 0.17592,-25.5 z"
        sodipodi:nodetypes="cccccccccc" />
     <path
        style="fill:#d40000;fill-opacity:1;stroke:none"
-       d="m 151.08428,67.4228 c 0.12662,-3.338097 0.23071,-9.037932 0.2313,-12.6663 l 0.001,-6.597031 8.79605,0 8.79604,0 0,12.6663 0,12.6663 -9.02735,0 -9.02734,0 0.23023,-6.069269 z"
+       d="m 141.14735,37.430887 c 0.12662,-3.338097 0.23071,-9.037932 0.2313,-12.6663 l 0.001,-6.597031 8.79605,0 8.79604,0 0,12.6663 0,12.6663 -9.02735,0 -9.02734,0 0.23023,-6.069269 z"
        id="path4751" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="Top Sphere"
-     style="display:none">
+     style="display:none"
+     transform="translate(0,60)">
     <g
        id="g3206"
        transform="translate(-2.4344823,68.168619)">
@@ -395,7 +401,8 @@
      inkscape:groupmode="layer"
      id="layer12"
      inkscape:label="Top 2 Spheres"
-     style="display:none">
+     style="display:none"
+     transform="translate(0,60)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path27763"

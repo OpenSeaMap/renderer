@@ -8,11 +8,11 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="320"
-   height="380"
+   width="300"
+   height="400"
    id="svg2"
    inkscape:version="0.47 r22583"
-   sodipodi:docname="Lateral_Spar_Green_Can_Lit.svg"
+   sodipodi:docname="Lateral_Spar_Green_Can.svg"
    inkscape:label="Pillar"
    style="display:inline">
   <metadata
@@ -23,7 +23,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -41,8 +41,8 @@
      id="namedview2820"
      showgrid="true"
      inkscape:zoom="2.625"
-     inkscape:cx="57.320537"
-     inkscape:cy="243.0369"
+     inkscape:cx="150.25457"
+     inkscape:cy="201.28393"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -225,7 +225,7 @@
      id="layer3"
      inkscape:label="Pillar"
      style="display:none"
-     transform="translate(0,60)">
+     transform="translate(0,80)">
     <path
        d="m 191.53964,28.603189 -6.53125,-2.09375 -30.46875,68.062503 -29.78125,32.593748 -7.78125,0 -0.125,5.65625 31.0625,0 c 1.28732,5.53295 6.23327,9.65624 12.15625,9.65625 5.92495,0 10.87095,-4.12052 12.15625,-9.65625 l 24.125,0 0,-5.65625 -7.78125,0 -2.46875,-22.34375 16.625,-72.625001 -7.15625,-2.28125 -4.03125,-1.3125 z m -2.28125,6.40625 4.96875,1.78125 -15.21875,68.031251 2.46875,22.34375 -9.25,0 c -1.28251,-5.53956 -6.22858,-9.6875 -12.15625,-9.6875 -5.92576,0 -10.87178,4.15063 -12.15625,9.6875 l -13.59375,0 26.25,-28.374998 28.6875,-63.781253 z m -21.7,94.981251 c 0,4.14 -3.36,7.5 -7.5,7.5 -4.14,0 -7.5,-3.36 -7.5,-7.5 0,-4.14 3.36,-7.5 7.5,-7.5 4.14,0 7.5,3.36 7.5,7.5 z"
        id="path13269"
@@ -237,7 +237,7 @@
      inkscape:label="Pillar 2 Stripe"
      id="g3674"
      inkscape:groupmode="layer"
-     transform="translate(0,60)">
+     transform="translate(0,80)">
     <path
        sodipodi:nodetypes="cccccccscccccccccccccscccccsssc"
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline"
@@ -254,7 +254,7 @@
      inkscape:label="Pillar 3 Band"
      id="g3660"
      inkscape:groupmode="layer"
-     transform="translate(0,60)">
+     transform="translate(0,80)">
     <path
        sodipodi:nodetypes="cccccccscccccccccccccscccccsssc"
        style="fill:#000204;fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline"
@@ -276,7 +276,7 @@
      inkscape:label="Pillar 2 Band"
      id="g2880"
      inkscape:groupmode="layer"
-     transform="translate(0,60)">
+     transform="translate(0,80)">
     <path
        sodipodi:nodetypes="cccccccscccccccccccccscccccsssc"
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline"
@@ -292,10 +292,11 @@
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="Spar"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(0,20)">
     <g
        id="g3002"
-       transform="translate(0.07504381,0.00169189)">
+       transform="translate(-9.9221527,-9.99154)">
       <g
          transform="translate(0,-20)"
          style="display:inline"
@@ -472,18 +473,19 @@
     </g>
     <path
        style="fill:#000000;fill-opacity:1"
-       d="M 185.25,86.375 154,179.25 l 17.5625,5.9375 31.25,-92.875 L 185.25,86.375 z m 2.46875,4.875 10.34375,3.5 -28.65625,85.125 L 159.0625,176.40625 187.71875,91.25 z"
+       d="m 175.25281,76.381768 -31.25,92.875002 17.5625,5.9375 31.25,-92.875002 -17.5625,-5.9375 z m 2.46875,4.875 10.34375,3.5 -28.65625,85.125002 -10.34375,-3.46875 28.65625,-85.156252 z"
        id="rect3043" />
     <path
        style="fill:#00d400;fill-opacity:1;stroke:none"
-       d="m 164.23482,177.98943 c -2.56666,-0.8662 -4.66666,-1.76893 -4.66666,-2.00606 0,-0.49486 28.09103,-84.000193 28.34189,-84.251051 0.13886,-0.138859 9.28014,2.860584 9.70493,3.184389 0.197,0.150174 -28.28739,84.711872 -28.52301,84.676342 -0.10477,-0.0158 -2.29048,-0.73742 -4.85715,-1.60362 z"
+       d="m 154.23763,167.9962 c -2.56666,-0.8662 -4.66666,-1.76893 -4.66666,-2.00606 0,-0.49486 28.09103,-84.000195 28.34189,-84.251053 0.13886,-0.138859 9.28014,2.860584 9.70493,3.184389 0.197,0.150174 -28.28739,84.711874 -28.52301,84.676344 -0.10477,-0.0158 -2.29048,-0.73742 -4.85715,-1.60362 z"
        id="path8152" />
   </g>
   <g
      style="display:none"
      inkscape:label="Spar 2 Band"
      id="g3895"
-     inkscape:groupmode="layer">
+     inkscape:groupmode="layer"
+     transform="translate(0,20)">
     <g
        transform="translate(0.07504381,0.00169189)"
        id="g3897">
@@ -678,7 +680,8 @@
      inkscape:groupmode="layer"
      id="g3971"
      inkscape:label="Spar 3 Band"
-     style="display:none">
+     style="display:none"
+     transform="translate(0,20)">
     <g
        id="g3973"
        transform="translate(0.07504381,0.00169189)">
@@ -881,7 +884,8 @@
      style="display:none"
      inkscape:label="Spar 2 Stripe"
      id="g3821"
-     inkscape:groupmode="layer">
+     inkscape:groupmode="layer"
+     transform="translate(0,20)">
     <g
        transform="translate(0.07504381,0.00169189)"
        id="g3823">
@@ -1074,7 +1078,7 @@
      id="layer7"
      inkscape:label="Light"
      style="display:none"
-     transform="translate(0,60)">
+     transform="translate(0,80)">
     <g
        id="g3019"
        transform="translate(0.01692762,-29.994108)">
@@ -1089,10 +1093,10 @@
      id="layer1"
      inkscape:label="Top Support"
      style="display:inline"
-     transform="translate(0,60)">
+     transform="translate(0,80)">
     <g
        id="g2870"
-       transform="translate(0.05305884,-29.888181)">
+       transform="translate(-9.9441376,-39.881413)">
       <path
          transform="translate(-40,-40)"
          style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -1106,7 +1110,7 @@
      id="layer8"
      inkscape:label="Top X"
      style="display:none"
-     transform="translate(0,20)">
+     transform="translate(0,40)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path27763-3"
@@ -1118,7 +1122,7 @@
      id="layer9"
      inkscape:label="Top North"
      style="display:none"
-     transform="translate(0,20)">
+     transform="translate(0,40)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path27763-2"
@@ -1131,7 +1135,7 @@
        sodipodi:nodetypes="cccc" />
   </g>
   <g
-     transform="translate(0,20)"
+     transform="translate(0,40)"
      style="display:none"
      inkscape:label="Top West"
      id="g3091"
@@ -1152,7 +1156,7 @@
      id="layer10"
      inkscape:label="Top South"
      style="display:none"
-     transform="translate(0,20)">
+     transform="translate(0,40)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path27763-22"
@@ -1160,7 +1164,7 @@
        sodipodi:nodetypes="cccccccc" />
   </g>
   <g
-     transform="translate(0,20)"
+     transform="translate(0,40)"
      style="display:none"
      inkscape:label="Top East"
      id="g3147"
@@ -1181,7 +1185,7 @@
      id="layer2"
      inkscape:label="Top Cone"
      style="display:none"
-     transform="translate(0,60)">
+     transform="translate(0,80)">
     <g
        id="g2916"
        transform="translate(-1.12511,-26.476249)">
@@ -1198,10 +1202,10 @@
      id="layer4"
      inkscape:label="Top Can"
      style="display:inline"
-     transform="translate(0,60)">
+     transform="translate(0,80)">
     <g
        id="g2972"
-       transform="translate(-1.0006298,-26.729331)">
+       transform="translate(-10.997826,-36.722563)">
       <path
          transform="translate(-40,-40)"
          style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -1211,16 +1215,15 @@
     </g>
     <path
        style="fill:#00d400;fill-opacity:1;stroke:none"
-       d="m 200.28673,67.346612 -7.85286,-2.894531 3.80574,-11.458776 c 2.09315,-6.302327 3.92,-11.586124 4.05966,-11.74177 0.34085,-0.379877 16.41174,5.487617 16.41174,5.99194 0,0.217826 -1.68598,5.450995 -3.74663,11.629265 -2.43948,7.314083 -3.93472,11.256799 -4.28572,11.30081 -0.29649,0.03718 -4.07286,-1.234946 -8.39193,-2.826938 l 0,0 z"
-       id="path8240"
-       transform="translate(0,-60)" />
+       d="m 190.28954,-2.6466197 -7.85286,-2.894531 3.80574,-11.4587763 c 2.09315,-6.302327 3.92,-11.586124 4.05966,-11.74177 0.34085,-0.379877 16.41174,5.487617 16.41174,5.99194 0,0.217826 -1.68598,5.450995 -3.74663,11.629265 -2.43948,7.3140833 -3.93472,11.25679936 -4.28572,11.30081036 -0.29649,0.03718 -4.07286,-1.23494606 -8.39193,-2.82693806 l 0,0 z"
+       id="path8240" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Top Sphere"
      style="display:none"
-     transform="translate(0,60)">
+     transform="translate(0,80)">
     <g
        id="g3094"
        transform="translate(-1.2726137,-25.876936)">
@@ -1236,7 +1239,7 @@
      id="layer6"
      inkscape:label="Top 2 Spheres"
      style="display:none"
-     transform="translate(0,60)">
+     transform="translate(0,80)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path27763-02"

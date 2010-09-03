@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="320"
-   height="340"
+   width="300"
+   height="400"
    id="svg2"
    sodipodi:version="0.32"
    inkscape:version="0.47 r22583"
@@ -41,9 +41,9 @@
      pagecolor="#ffffff"
      id="base"
      showgrid="true"
-     inkscape:zoom="2.5912828"
-     inkscape:cx="169.87156"
-     inkscape:cy="173.15455"
+     inkscape:zoom="3.6646273"
+     inkscape:cx="146.98713"
+     inkscape:cy="195.45306"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:current-layer="svg2"
@@ -152,14 +152,14 @@
        sodipodi:type="inkscape:persp3d" />
   </defs>
   <path
-     d="m 122.58887,221.12911 15.07284,-44.31585 -37.02951,-26.58059 45.17469,0 14.43114,-43.71277 13.81157,43.71277 45.79434,0 -37.00746,27.20601 13.81157,43.69043 -36.41002,-27.20601 -37.64916,27.20601 z m 49.87794,-51.08603 c 0,6.9047 -5.55289,12.5085 -12.39484,12.5085 -6.84195,0 -12.39484,-5.6038 -12.39484,-12.5085 0,-6.90469 5.55289,-12.50851 12.39484,-12.50851 6.84195,0 12.39484,5.60382 12.39484,12.50851 z"
+     d="m 112.60205,251.12449 15.07284,-44.31585 -37.029512,-26.58059 45.174692,0 14.43114,-43.71277 13.81157,43.71277 45.79434,0 -37.00746,27.20601 13.81157,43.69043 -36.41002,-27.20601 -37.64916,27.20601 z m 49.87794,-51.08603 c 0,6.9047 -5.55289,12.5085 -12.39484,12.5085 -6.84195,0 -12.39484,-5.6038 -12.39484,-12.5085 0,-6.90469 5.55289,-12.50851 12.39484,-12.50851 6.84195,0 12.39484,5.60382 12.39484,12.50851 z"
      id="path12984"
      style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
      inkscape:export-filename="/home/olaf/source/Website-2/SeamapEdit/resources/light/Lighthouse_Major.png"
      inkscape:export-xdpi="77"
      inkscape:export-ydpi="77" />
   <g
-     transform="translate(0.09348168,20.032938)"
+     transform="matrix(0.75,0,0,0.75,30.054391,87.506332)"
      id="g2831"
      inkscape:label="Beacon 3 Band"
      style="display:inline">

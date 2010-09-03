@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="320"
-   height="340"
+   width="300"
+   height="400"
    id="svg2"
    sodipodi:version="0.32"
    inkscape:version="0.47 r22583"
@@ -42,9 +42,9 @@
      pagecolor="#ffffff"
      id="base"
      showgrid="true"
-     inkscape:zoom="3.6646273"
-     inkscape:cx="164.02709"
-     inkscape:cy="161.57728"
+     inkscape:zoom="2.5912828"
+     inkscape:cx="153.63399"
+     inkscape:cy="200.1682"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:current-layer="svg2"
@@ -167,7 +167,7 @@
        sodipodi:type="inkscape:persp3d" />
   </defs>
   <g
-     transform="translate(0.10418223,20.085021)"
+     transform="matrix(0.75,0,0,0.75,30.073703,87.507069)"
      id="g2831"
      inkscape:label="Beacon 3 Band"
      style="display:inline">
@@ -187,7 +187,7 @@
   </g>
   <g
      id="g2901"
-     transform="translate(10.136988,20.066488)">
+     transform="translate(0.07457319,50.049793)">
     <path
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path12984-3"
