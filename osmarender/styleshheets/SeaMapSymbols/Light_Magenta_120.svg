@@ -12,7 +12,7 @@
    height="400"
    id="svg2"
    inkscape:version="0.47 r22583"
-   sodipodi:docname="Light_Major.svg"
+   sodipodi:docname="Light_Magenta_120.svg"
    style="display:inline">
   <metadata
      id="metadata2913">
@@ -39,13 +39,13 @@
      inkscape:window-height="1088"
      id="namedview2911"
      showgrid="true"
-     inkscape:zoom="2.1"
-     inkscape:cx="128.11994"
+     inkscape:zoom="47.517576"
+     inkscape:cx="152.24018"
      inkscape:cy="196.57179"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer4"
      inkscape:snap-grids="false">
     <inkscape:grid
        type="xygrid"
@@ -599,35 +599,18 @@
   </defs>
   <g
      inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="Light Major"
+     id="layer4"
+     inkscape:label="Light"
      style="display:inline"
-     transform="translate(0,40)">
+     transform="translate(0,80)">
     <g
-       id="g4347"
-       transform="translate(-0.01574886,9.9937995)">
-      <g
-         style="display:inline"
-         inkscape:label="Beacon 3 Band"
-         id="g2831-0"
-         transform="translate(-9.9401588,0.05198145)">
-        <g
-           style="display:inline"
-           id="g2992-3"
-           transform="translate(-0.04412785,-10.060108)" />
-        <g
-           style="display:inline"
-           id="g2936-99"
-           transform="translate(-0.04730863,-10.020187)" />
-      </g>
-      <g
-         transform="translate(0.09264766,0.03344801)"
-         id="g2901">
-        <path
-           d="m 128.83138,178.58872 8.5124,-24.8 -20.91245,-14.875 25.51245,0 8.15,-24.4625 7.8001,24.4625 25.8624,0 -20.9,15.225 7.8001,24.45 -20.5626,-15.225 -21.2624,15.225 z M 157,150 c 0,3.864 -3.136,7 -7,7 -3.864,0 -7,-3.136 -7,-7 0,-3.864 3.136,-7 7,-7 3.864,0 7,3.136 7,7 z"
-           id="path12984-3"
-           style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-      </g>
+       id="g2992"
+       transform="matrix(-0.27731007,-0.69684943,0.69684943,-0.27731007,82.844018,275.8776)"
+       style="fill:#ff00ff;fill-opacity:1">
+      <path
+         style="fill:#ff00ff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path28209"
+         d="m 131.60087,181.31159 -61.62788,76.30842 -4.53011,5.57826 -5.557433,4.22374 -6.899414,2.10924 -7.322226,-0.10972 -6.812191,-2.29629 -5.747427,-4.33733 -4.201328,-6.0873 -2.224898,-7.05116 0.15697,-6.9752 2.73284,-6.08953 4.594775,-5.30836 5.593528,-4.86801 1.174178,-0.94649 90.670616,-44.15027 z m 28.00125,-25.26051 c 2.19706,-0.21962 4.15842,1.38525 4.37805,3.58229 0.21962,2.19706 -1.38525,4.15842 -3.58229,4.37805 -2.19706,0.21962 -4.15842,-1.38525 -4.37805,-3.58229 -0.21962,-2.19706 1.38525,-4.15842 3.58229,-4.37805 z" />
     </g>
   </g>
 </svg>

@@ -39,13 +39,13 @@
      inkscape:window-height="1088"
      id="namedview2911"
      showgrid="true"
-     inkscape:zoom="2.1"
-     inkscape:cx="176.26449"
-     inkscape:cy="221.57383"
+     inkscape:zoom="8.4"
+     inkscape:cx="149.95497"
+     inkscape:cy="232.28608"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer17"
+     inkscape:current-layer="g2999"
      inkscape:snap-grids="false">
     <inkscape:grid
        type="xygrid"
@@ -601,7 +601,7 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="Light"
-     style="display:inline"
+     style="display:none"
      transform="translate(0,80)">
     <g
        id="g2992"
@@ -1119,10 +1119,36 @@
        id="path4458" />
   </g>
   <g
+     transform="translate(0,60)"
+     style="display:inline"
+     inkscape:label="Top Diamond"
+     id="g2999"
+     inkscape:groupmode="layer">
+    <g
+       transform="translate(-10.114135,53.633184)"
+       id="g3005"
+       style="display:inline">
+      <path
+         sodipodi:nodetypes="ccccc"
+         d="m 197.875,108.625 0,17.71875 4.25,0 0,-17.71875 -4.25,0 z"
+         id="path3007"
+         style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         transform="translate(-40,-40)" />
+    </g>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2.89753866;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3009"
+       width="21.021105"
+       height="21.021103"
+       x="35.591465"
+       y="175.91345"
+       transform="matrix(0.64513799,-0.76406608,0.64513799,0.76406608,0,0)" />
+  </g>
+  <g
      inkscape:groupmode="layer"
      id="layer14"
      inkscape:label="Radar Station"
-     style="display:inline">
+     style="display:none">
     <path
        sodipodi:type="arc"
        style="fill:none;stroke:#d400d4;stroke-width:2.33185363;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -1138,7 +1164,7 @@
      inkscape:groupmode="layer"
      id="layer17"
      inkscape:label="Radar Reflector"
-     style="display:inline">
+     style="display:none">
     <path
        style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 150.04103,166.53393 0,10.03982"
@@ -1161,7 +1187,7 @@
        id="path3795" />
     <path
        sodipodi:type="arc"
-       style="fill:none;stroke:#000000;stroke-width:0.98458082;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.98458081;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="path3799"
        sodipodi:cx="151.0119"
        sodipodi:cy="203.86905"
@@ -1177,7 +1203,7 @@
      inkscape:groupmode="layer"
      id="layer15"
      inkscape:label="Fog Horn"
-     style="display:inline">
+     style="display:none">
     <path
        sodipodi:type="arc"
        style="fill:none;stroke:#d400d4;stroke-width:4.064219;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
