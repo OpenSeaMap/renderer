@@ -1031,8 +1031,7 @@
 
 			.buoy-name {
 			font-family:
-			"DejaVu
-			Sans";
+			"DejaVu Sans";
 			font-weight: bold;
 			font-size: 3px;
 			text-anchor: right;
