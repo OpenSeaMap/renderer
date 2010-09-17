@@ -544,56 +544,72 @@
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Can_Red_Buoy" position="center" />
 			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="green">
-				<symbol ref="Top_Can_Green_Buoy" position="center" />
-			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="yellow">
-				<symbol ref="Top_Can_Yellow_Buoy" position="center" />
-			</rule>
 			<else>
-				<symbol ref="Top_Can_Buoy" position="center" />
+				<rule e="node" k="seamark:topmark:colour" v="green">
+					<symbol ref="Top_Can_Green_Buoy" position="center" />
+				</rule>
+				<else>
+					<rule e="node" k="seamark:topmark:colour" v="yellow">
+						<symbol ref="Top_Can_Yellow_Buoy" position="center" />
+					</rule>
+					<else>
+						<symbol ref="Top_Can_Buoy" position="center" />
+					</else>
+				</else>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="can">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Can_Red_Buoy_Small" position="center" />
 			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="green">
-				<symbol ref="Top_Can_Green_Buoy_Small" position="center" />
-			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="yellow">
-				<symbol ref="Top_Can_Yellow_Buoy_Small" position="center" />
-			</rule>
 			<else>
-				<symbol ref="Top_Can_Buoy_Small" position="center" />
+				<rule e="node" k="seamark:topmark:colour" v="green">
+					<symbol ref="Top_Can_Green_Buoy_Small" position="center" />
+				</rule>
+				<else>
+					<rule e="node" k="seamark:topmark:colour" v="yellow">
+						<symbol ref="Top_Can_Yellow_Buoy_Small" position="center" />
+					</rule>
+					<else>
+						<symbol ref="Top_Can_Buoy_Small" position="center" />
+					</else>
+				</else>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:type" v="beacon_lateral">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Can_Red_Beacon" position="center" />
 			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="green">
-				<symbol ref="Top_Can_Green_Beacon" position="center" />
-			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="yellow">
-				<symbol ref="Top_Can_Yellow_Beacon" position="center" />
-			</rule>
 			<else>
-				<symbol ref="Top_Can_Beacon" position="center" />
+				<rule e="node" k="seamark:topmark:colour" v="green">
+					<symbol ref="Top_Can_Green_Beacon" position="center" />
+				</rule>
+				<else>
+					<rule e="node" k="seamark:topmark:colour" v="yellow">
+						<symbol ref="Top_Can_Yellow_Beacon" position="center" />
+					</rule>
+					<else>
+						<symbol ref="Top_Can_Beacon" position="center" />
+					</else>
+				</else>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:type" v="light_float">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Can_Red_Float" position="center" />
 			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="green">
-				<symbol ref="Top_Can_Green_Float" position="center" />
-			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="yellow">
-				<symbol ref="Top_Can_Yellow_Float" position="center" />
-			</rule>
 			<else>
-				<symbol ref="Top_Can_Float" position="center" />
+				<rule e="node" k="seamark:topmark:colour" v="green">
+					<symbol ref="Top_Can_Green_Float" position="center" />
+				</rule>
+				<else>
+					<rule e="node" k="seamark:topmark:colour" v="yellow">
+						<symbol ref="Top_Can_Yellow_Float" position="center" />
+					</rule>
+					<else>
+						<symbol ref="Top_Can_Float" position="center" />
+					</else>
+				</else>
 			</else>
 		</rule>
 	</rule>
@@ -603,56 +619,72 @@
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Cone_Red_Buoy" position="center" />
 			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="green">
-				<symbol ref="Top_Cone_Green_Buoy" position="center" />
-			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="yellow">
-				<symbol ref="Top_Cone_Yellow_Buoy" position="center" />
-			</rule>
 			<else>
-				<symbol ref="Top_Cone_Buoy" position="center" />
+				<rule e="node" k="seamark:topmark:colour" v="green">
+					<symbol ref="Top_Cone_Green_Buoy" position="center" />
+				</rule>
+				<else>
+					<rule e="node" k="seamark:topmark:colour" v="yellow">
+						<symbol ref="Top_Cone_Yellow_Buoy" position="center" />
+					</rule>
+					<else>
+						<symbol ref="Top_Cone_Buoy" position="center" />
+					</else>
+				</else>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="conical">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Cone_Red_Buoy_Small" position="center" />
 			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="green">
-				<symbol ref="Top_Cone_Green_Buoy_Small" position="center" />
-			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="yellow">
-				<symbol ref="Top_Cone_Yellow_Buoy_Small" position="center" />
-			</rule>
 			<else>
-				<symbol ref="Top_Cone_Buoy_Small" position="center" />
+				<rule e="node" k="seamark:topmark:colour" v="green">
+					<symbol ref="Top_Cone_Green_Buoy_Small" position="center" />
+				</rule>
+				<else>
+					<rule e="node" k="seamark:topmark:colour" v="yellow">
+						<symbol ref="Top_Cone_Yellow_Buoy_Small" position="center" />
+					</rule>
+					<else>
+						<symbol ref="Top_Cone_Buoy_Small" position="center" />
+					</else>
+				</else>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:type" v="beacon_lateral">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Cone_Red_Beacon" position="center" />
 			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="green">
-				<symbol ref="Top_Cone_Green_Beacon" position="center" />
-			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="yellow">
-				<symbol ref="Top_Cone_Yellow_Beacon" position="center" />
-			</rule>
 			<else>
-				<symbol ref="Top_Cone_Beacon" position="center" />
+				<rule e="node" k="seamark:topmark:colour" v="green">
+					<symbol ref="Top_Cone_Green_Beacon" position="center" />
+				</rule>
+				<else>
+					<rule e="node" k="seamark:topmark:colour" v="yellow">
+						<symbol ref="Top_Cone_Yellow_Beacon" position="center" />
+					</rule>
+					<else>
+						<symbol ref="Top_Cone_Beacon" position="center" />
+					</else>
+				</else>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:type" v="light_float">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Cone_Red_Float" position="center" />
 			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="green">
-				<symbol ref="Top_Cone_Green_Float" position="center" />
-			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="yellow">
-				<symbol ref="Top_Cone_Yellow_Float" position="center" />
-			</rule>
 			<else>
-				<symbol ref="Top_Cone_Float" position="center" />
+				<rule e="node" k="seamark:topmark:colour" v="green">
+					<symbol ref="Top_Cone_Green_Float" position="center" />
+				</rule>
+				<else>
+					<rule e="node" k="seamark:topmark:colour" v="yellow">
+						<symbol ref="Top_Cone_Yellow_Float" position="center" />
+					</rule>
+					<else>
+						<symbol ref="Top_Cone_Float" position="center" />
+					</else>
+				</else>
 			</else>
 		</rule>
 	</rule>
@@ -697,44 +729,52 @@
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_X_Red_Buoy" position="center" />
 			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="yellow">
-				<symbol ref="Top_X_Yellow_Buoy" position="center" />
-			</rule>
 			<else>
-				<symbol ref="Top_X_Buoy" position="center" />
+				<rule e="node" k="seamark:topmark:colour" v="yellow">
+					<symbol ref="Top_X_Yellow_Buoy" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Top_X_Buoy" position="center" />
+				</else>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:buoy_special_purpose:shape" v="sphere|barrel|can|conical">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_X_Red_Buoy_Small" position="center" />
 			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="yellow">
-				<symbol ref="Top_X_Yellow_Buoy_Small" position="center" />
-			</rule>
 			<else>
-				<symbol ref="Top_X_Buoy_Small" position="center" />
+				<rule e="node" k="seamark:topmark:colour" v="yellow">
+					<symbol ref="Top_X_Yellow_Buoy_Small" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Top_X_Buoy_Small" position="center" />
+				</else>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:type" v="beacon_special_purpose">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_X_Red_Beacon" position="center" />
 			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="yellow">
-				<symbol ref="Top_X_Yellow_Beacon" position="center" />
-			</rule>
 			<else>
-				<symbol ref="Top_X_Beacon" position="center" />
+				<rule e="node" k="seamark:topmark:colour" v="yellow">
+					<symbol ref="Top_X_Yellow_Beacon" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Top_X_Beacon" position="center" />
+				</else>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:type" v="light_float">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_X_Red_Float" position="center" />
 			</rule>
-			<rule e="node" k="seamark:topmark:colour" v="yellow">
-				<symbol ref="Top_X_Yellow_Float" position="center" />
-			</rule>
 			<else>
-				<symbol ref="Top_X_Float" position="center" />
+				<rule e="node" k="seamark:topmark:colour" v="yellow">
+					<symbol ref="Top_X_Yellow_Float" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Top_X_Float" position="center" />
+				</else>
 			</else>
 		</rule>
 	</rule>
@@ -753,7 +793,6 @@
 			<light k="seamark:light:7" layer="-3" />
 			<light k="seamark:light:8" layer="-3" />
 			<light k="seamark:light:9" layer="-3" />
-			<light k="seamark:light:10" layer="-3" />
 		</rule>
 	</rule>
 
@@ -770,7 +809,6 @@
 		<light k="seamark:light:7" layer="-3" />
 		<light k="seamark:light:8" layer="-3" />
 		<light k="seamark:light:9" layer="-3" />
-		<light k="seamark:light:10" layer="-3" />
 	</rule>
 
 	<!-- Minor Light -->
