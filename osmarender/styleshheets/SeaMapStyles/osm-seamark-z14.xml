@@ -483,6 +483,12 @@
 			<rule e="node" k="seamark:buoy_special_purpose:shape" v="spar">
 				<symbol ref="Special_Purpose_Spar" position="center" />
 			</rule>
+			<rule e="node" k="seamark:buoy_special_purpose:shape" v="can">
+				<symbol ref="Special_Purpose_Can" position="center" />
+			</rule>
+			<rule e="node" k="seamark:buoy_special_purpose:shape" v="conical">
+				<symbol ref="Special_Purpose_Cone" position="center" />
+			</rule>
 			<rule e="node" k="seamark:buoy_special_purpose:shape" v="sphere">
 				<symbol ref="Special_Purpose_Sphere" position="center" />
 			</rule>
@@ -844,15 +850,6 @@
 	<rule e="node" k="seamark:type" v="landmark">
 		<rule e="node" k="seamark:light|seamark:light:1" v="*">
 			<symbol ref="Light_House" position="center" />
-			<light k="seamark:light:1" layer="-3" />
-			<light k="seamark:light:2" layer="-3" />
-			<light k="seamark:light:3" layer="-3" />
-			<light k="seamark:light:4" layer="-3" />
-			<light k="seamark:light:5" layer="-3" />
-			<light k="seamark:light:6" layer="-3" />
-			<light k="seamark:light:7" layer="-3" />
-			<light k="seamark:light:8" layer="-3" />
-			<light k="seamark:light:9" layer="-3" />
 		</rule>
 	</rule>
 
@@ -860,21 +857,64 @@
 
 	<rule e="node" k="seamark:type" v="light_major">
 		<symbol ref="Light_Major" position="center" />
-		<light k="seamark:light:1" layer="-3" />
-		<light k="seamark:light:2" layer="-3" />
-		<light k="seamark:light:3" layer="-3" />
-		<light k="seamark:light:4" layer="-3" />
-		<light k="seamark:light:5" layer="-3" />
-		<light k="seamark:light:6" layer="-3" />
-		<light k="seamark:light:7" layer="-3" />
-		<light k="seamark:light:8" layer="-3" />
-		<light k="seamark:light:9" layer="-3" />
 	</rule>
 
 	<!-- Minor Light -->
 
 	<rule e="node" k="seamark:type" v="light_minor">
 		<symbol ref="Light_Minor" position="center" />
+	</rule>
+
+	<!-- Light Flares -->
+
+	<rule e="node" k="seamark:light:colour" v="*">
+		<rule e="node" k="seamark:light:colour" v="white">
+			<symbol ref="Light_White_120" position="center" />
+		</rule>
+		<rule e="node" k="seamark:light:colour" v="red">
+			<symbol ref="Light_Red_120" position="center" />
+		</rule>
+		<rule e="node" k="seamark:light:colour" v="green">
+			<symbol ref="Light_Green_120" position="center" />
+		</rule>
+	</rule> 
+
+	<!-- Light Sectors -->
+
+	<rule e="node" k="seamark:light:1" v="*">
+		<light k="seamark:light:1" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:2" v="*">
+		<light k="seamark:light:2" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:3" v="*">
+		<light k="seamark:light:3" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:4" v="*">
+		<light k="seamark:light:4" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:5" v="*">
+		<light k="seamark:light:5" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:6" v="*">
+		<light k="seamark:light:6" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:7" v="*">
+		<light k="seamark:light:7" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:8" v="*">
+		<light k="seamark:light:8" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:9" v="*">
+		<light k="seamark:light:9" layer="-3" />
 	</rule>
 
 	<!-- Light Flares -->
@@ -895,6 +935,16 @@
 
 	<rule e="node" k="seamark:name" v="*">
 		<text k="seamark:name" class="buoy-name" dx="6" dy="-4" />
+	</rule>
+
+	<!-- Shoreline -->
+
+	<rule e="way" k="natural" v="coastline">
+		<line class="coast" layer="-4" />
+	</rule>
+
+	<rule e="way" k="waterway" v="riverbank">
+		<line class="coast" layer="-4" />
 	</rule>
 
 	<!--Harbours -->
