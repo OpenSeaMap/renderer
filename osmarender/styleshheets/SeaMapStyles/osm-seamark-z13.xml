@@ -6,7 +6,8 @@
 
 <rules data="data.osm" scale="1" symbolScale="0.2" minimumMapWidth="0.5" minimumMapHeight="0.5" showScale="no" showGrid="no"
 	showBorder="no" showLicense="no" showZoomControls="no" symbolsDir="../../../OpenSeaMap-styles/SeaMapSymbols" meter2pixel="0.1375">
-
+<!-- Display only major seamarks -->
+<rule e="node" k="seamark:category" v="major">
 	<!-- Lateral Buoys -->
 
 	<rule e="node" k="seamark:buoy_lateral:category" v="*">
@@ -784,14 +785,21 @@
 			</else>
 		</rule>
 	</rule>
-
-	<!-- Lighthouse -->
-
-	<rule e="node" k="seamark:type" v="landmark">
-		<rule e="node" k="seamark:light|seamark:light:1" v="*">
-			<symbol ref="Light_House" position="center" />
+	<!-- Light Flares -->
+	
+	<rule e="node" k="seamark:light:colour" v="*">
+		<rule e="node" k="seamark:light:colour" v="white">
+			<symbol ref="Light_White_120" position="center" />
+		</rule>
+		<rule e="node" k="seamark:light:colour" v="red">
+			<symbol ref="Light_Red_120" position="center" />
+		</rule>
+		<rule e="node" k="seamark:light:colour" v="green">
+			<symbol ref="Light_Green_120" position="center" />
 		</rule>
 	</rule>
+
+</rule>
 
 	<!-- Major Light -->
 
@@ -805,56 +813,21 @@
 		<symbol ref="Light_Minor" position="center" />
 	</rule>
 
-	<!-- Light Flares -->
 
-	<rule e="node" k="seamark:light:colour" v="*">
-		<rule e="node" k="seamark:light:colour" v="white">
-			<symbol ref="Light_White_120" position="center" />
-		</rule>
-		<rule e="node" k="seamark:light:colour" v="red">
-			<symbol ref="Light_Red_120" position="center" />
-		</rule>
-		<rule e="node" k="seamark:light:colour" v="green">
-			<symbol ref="Light_Green_120" position="center" />
-		</rule>
-	</rule> 
-
-	<!-- Light Sectors -->
-
-	<rule e="node" k="seamark:light:1" v="*">
-		<light k="seamark:light:1" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:2" v="*">
-		<light k="seamark:light:2" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:3" v="*">
-		<light k="seamark:light:3" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:4" v="*">
-		<light k="seamark:light:4" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:5" v="*">
-		<light k="seamark:light:5" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:6" v="*">
-		<light k="seamark:light:6" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:7" v="*">
-		<light k="seamark:light:7" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:8" v="*">
-		<light k="seamark:light:8" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:9" v="*">
-		<light k="seamark:light:9" layer="-3" />
+	<!-- Lighthouses -->
+	<rule e="node" k="seamark:type" v="landmark">
+	   <symbol ref="Lighthouse_Major" position="center"/>
+	   <light k="seamark:light:1" layer="-3"/>
+	   <light k="seamark:light:2" layer="-3"/>
+	   <light k="seamark:light:3" layer="-3"/>
+	   <light k="seamark:light:4" layer="-3"/>
+	   <light k="seamark:light:5" layer="-3"/>
+	   <light k="seamark:light:6" layer="-3"/>
+	   <light k="seamark:light:7" layer="-3"/>
+	   <light k="seamark:light:8" layer="-3"/>
+	   <light k="seamark:light:9" layer="-3"/>
+	   <light k="seamark:light:10" layer="-3"/>
+	   <text k ='seamark:light:character' class ='lighthouse-lightcharacter' dy = '-5'/>
 	</rule>
 
 	<!-- Shoreline -->
@@ -865,12 +838,6 @@
 
 	<rule e="way" k="waterway" v="riverbank">
 		<line class="coast" layer="-4" />
-	</rule>
-
-	<!-- Names -->
-
-	<rule e="node" k="seamark:name" v="*">
-		<text k="seamark:name" class="buoy-name" dx="10" dy="-6" />
 	</rule>
 
 	<defs>
