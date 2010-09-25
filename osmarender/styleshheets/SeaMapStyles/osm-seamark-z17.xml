@@ -974,7 +974,20 @@
 					<text class="light-character" dx="3" dy="1"><tag k="seamark:light:character" />(<tag k="seamark:light:group" />) G <tag k="seamark:light:period" />s</text>
 				</rule>
 				<rule e="node" k="seamark:light:colour" v="white">
-					<text class="light-character" dx="3" dy="1"><tag k="seamark:light:character" />(<tag k="seamark:light:group" />) <tag k="seamark:light:period" />s</text>
+					<rule e="node" k="seamark:light:character" v="Q+LFl|VQ+LFl|UQ+LFl">
+						<rule e="node" k="seamark:light:character" v="Q+LFl">
+							<text class="light-character" dx="3" dy="1">Q(<tag k="seamark:light:group" />)+LFl <tag k="seamark:light:period" />s</text>
+						</rule>
+						<rule e="node" k="seamark:light:character" v="VQ+LFl">
+							<text class="light-character" dx="3" dy="1">VQ(<tag k="seamark:light:group" />)+LFl <tag k="seamark:light:period" />s</text>
+						</rule>
+						<rule e="node" k="seamark:light:character" v="UQ+LFl">
+							<text class="light-character" dx="3" dy="1">UQ(<tag k="seamark:light:group" />)+LFl <tag k="seamark:light:period" />s</text>
+						</rule>
+					</rule>
+					<else>
+						<text class="light-character" dx="3" dy="1"><tag k="seamark:light:character" />(<tag k="seamark:light:group" />) <tag k="seamark:light:period" />s</text>
+					</else>
 				</rule>
 			</rule>
 			<else>
@@ -985,7 +998,20 @@
 					<text class="light-character" dx="3" dy="1"><tag k="seamark:light:character" />(<tag k="seamark:light:group" />) G</text>
 				</rule>
 				<rule e="node" k="seamark:light:colour" v="white">
-					<text class="light-character" dx="3" dy="1"><tag k="seamark:light:character" />(<tag k="seamark:light:group" />)</text>
+					<rule e="node" k="seamark:light:character" v="Q+LFl|VQ+LFl|UQ+LFl">
+						<rule e="node" k="seamark:light:character" v="Q+LFl">
+							<text class="light-character" dx="3" dy="1">Q(<tag k="seamark:light:group" />)+LFl</text>
+						</rule>
+						<rule e="node" k="seamark:light:character" v="VQ+LFl">
+							<text class="light-character" dx="3" dy="1">VQ(<tag k="seamark:light:group" />)+LFl</text>
+						</rule>
+						<rule e="node" k="seamark:light:character" v="UQ+LFl">
+							<text class="light-character" dx="3" dy="1">UQ(<tag k="seamark:light:group" />)+LFl</text>
+						</rule>
+					</rule>
+					<else>
+						<text class="light-character" dx="3" dy="1"><tag k="seamark:light:character" />(<tag k="seamark:light:group" />)</text>
+					</else>
 				</rule>
 			</else>
 		</rule>
