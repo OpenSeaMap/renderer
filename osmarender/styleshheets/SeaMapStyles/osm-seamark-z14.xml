@@ -917,27 +917,13 @@
 		<light k="seamark:light:9" layer="-3" />
 	</rule>
 
-	<!-- Light Flares -->
-
-	<rule e="node" k="seamark:light:colour" v="*">
-		<rule e="node" k="seamark:light:colour" v="white">
-			<symbol ref="Light_White_240" position="center" />
-		</rule>
-		<rule e="node" k="seamark:light:colour" v="red">
-			<symbol ref="Light_Red_240" position="center" />
-		</rule>
-		<rule e="node" k="seamark:light:colour" v="green">
-			<symbol ref="Light_Green_240" position="center" />
-		</rule>
-	</rule> 
-
 	<!-- Names -->
 
 	<rule e="node" k="seamark:name" v="*">
 		<text k="seamark:name" class="buoy-name" dx="6" dy="-4" />
 	</rule>
 
-	<!-- Shoreline -->
+	<!-- Shoreline 
 
 	<rule e="way" k="natural" v="coastline">
 		<line class="coast" layer="-4" />
@@ -946,6 +932,7 @@
 	<rule e="way" k="waterway" v="riverbank">
 		<line class="coast" layer="-4" />
 	</rule>
+-->
 
 	<!--Harbours -->
 	<!--<rule e="node" k="leisure" v="marina"> <symbol ref="Marina" position="right"/> <text k ='name' class ='harbour' dx='5'/> </rule> -->
