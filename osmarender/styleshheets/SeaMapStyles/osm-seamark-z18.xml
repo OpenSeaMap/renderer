@@ -1,14 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="osmarender.xsl"?>
 
 
-<!-- OpenSeaMap Rules File for zoom level 12 -->
+<!-- OpenSeaMap Rules File for zoom level 18 -->
 
-<rules data="data.osm" scale="1" symbolScale="0.4" minimumMapWidth="0.5" minimumMapHeight="0.5" showScale="no" showGrid="no"
+<rules data="data.osm" scale="1" symbolScale="0.03" minimumMapWidth="0.5" minimumMapHeight="0.5" showScale="no" showGrid="no"
 	showBorder="no" showLicense="no" showZoomControls="no" symbolsDir="../../../OpenSeaMap-styles/SeaMapSymbols" meter2pixel="0.1375">
-
-<!-- Display only major seamarks -->
-<rule e="node" k="seamark:category" v="major">
 
 	<!-- Lateral Buoys -->
 
@@ -788,21 +785,110 @@
 		</rule>
 	</rule>
 
-   <!-- Light Flares -->
-   
-   <rule e="node" k="seamark:light:colour" v="*">
-	   <rule e="node" k="seamark:light:colour" v="white">
-		   <symbol ref="Light_White_120" position="center" />
-	   </rule>
-	   <rule e="node" k="seamark:light:colour" v="red">
-		   <symbol ref="Light_Red_120" position="center" />
-	   </rule>
-	   <rule e="node" k="seamark:light:colour" v="green">
-		   <symbol ref="Light_Green_120" position="center" />
-	   </rule>
-   </rule>
-   
-</rule>
+	<!-- Radar Reflector -->
+
+	<rule e="node" k="seamark:radar_reflector" v="yes">
+		<rule e="node" k="seamark:type" v="buoy_lateral|buoy_cardinal|buoy_isolated_danger|buoy_safe_water|buoy_special_purpose">
+			<rule e="node"
+				k="seamark:buoy_lateral:shape|seamark:buoy_cardinal:shape|seamark:buoy_isolated_danger:shape|seamark:buoy_safe_water:shape|seamark:buoy_special_purpose:shape"
+				v="pillar|spar">
+				<rule e="node" k="seamark:topmark:shape" v="*">
+					<symbol ref="Radar_Reflector_355" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Radar_Reflector_305" position="center" />
+				</else>
+			</rule>
+			<else>
+				<rule e="node" k="seamark:topmark:shape" v="*">
+					<symbol ref="Radar_Reflector_305" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Radar_Reflector_250" position="center" />
+				</else>
+			</else>
+		</rule>
+		<else>
+			<rule e="node" k="seamark:type" v="beacon_lateral|beacon_cardinal|beacon_isolated_danger|beacon_safe_water|beacon_special_purpose">
+				<rule e="node" k="seamark:topmark:shape" v="*">
+					<symbol ref="Radar_Reflector_355" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Radar_Reflector_280" position="center" />
+				</else>
+			</rule>
+			<else>
+				<rule e="node" k="seamark:type" v="light_float">
+					<rule e="node" k="seamark:topmark:shape" v="*">
+						<symbol ref="Radar_Reflector_320" position="center" />
+					</rule>
+					<else>
+						<symbol ref="Radar_Reflector_280" position="center" />
+					</else>
+				</rule>
+				<else>
+					<symbol ref="Radar_Reflector_355" position="center" />
+				</else>
+			</else>
+		</else>
+	</rule>
+
+	<!-- Radar Transponder -->
+
+	<rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
+		<symbol ref="Radar_Station" position="center" />
+		<rule e="node" k="seamark:radar_transponder:category" v="racon">
+			<rule e="node" k="seamark:radar_transponder:group" v="*">
+					<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Racon(<tag k="seamark:radar_transponder:group" />)</text>
+			</rule>
+			<else>
+				<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Racon</text>
+			</else>
+		</rule>
+		<rule e="node" k="seamark:radar_transponder:category" v="ramark">
+			<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Ramark</text>
+		</rule>
+		<rule e="node" k="seamark:radar_transponder:category" v="leading">
+			<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Leading</text>
+		</rule>
+	</rule>
+
+	<!-- Fog Signal -->
+
+	<rule e="node" k="seamark:fog_signal|seamark:fog_signal:category" v="*">
+		<symbol ref="Fog_Signal" position="center" />
+		<rule e="node" k="seamark:fog_signal:category" v="horn">
+			<rule e="node" k="seamark:fog_signal:group" v="*">
+				<rule e="node" k="seamark:fog_signal:period" v="*">
+					<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Horn(<tag k="seamark:fog_signal:group" />) <tag k="seamark:fog_signal:period" />s</text>
+				</rule>
+				<else>
+					<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Horn(<tag k="seamark:fog_signal:group" />)</text>
+				</else>
+			</rule>
+			<else>
+				<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Horn</text>
+			</else>
+		</rule>
+		<rule e="node" k="seamark:fog_signal:category" v="gong">
+			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Gong</text>
+		</rule>
+		<rule e="node" k="seamark:fog_signal:category" v="siren">
+			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Siren</text>
+		</rule>
+		<rule e="node" k="seamark:fog_signal:category" v="diaphone">
+			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Dia</text>
+		</rule>
+		<rule e="node" k="seamark:fog_signal:category" v="bell">
+			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Bell</text>
+		</rule>
+		<rule e="node" k="seamark:fog_signal:category" v="whistle">
+			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Whis</text>
+		</rule>
+		<rule e="node" k="seamark:fog_signal:category" v="explosive">
+			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Explos</text>
+		</rule>
+	</rule>
 
 	<!-- Lighthouse -->
 
@@ -824,46 +910,145 @@
 		<symbol ref="Light_Minor" position="center" />
 	</rule>
 
-   <!-- Light Sectors -->
-   
-   <rule e="node" k="seamark:light:1" v="*">
-	   <light k="seamark:light:1" layer="-3" />
-   </rule>
-   
-   <rule e="node" k="seamark:light:2" v="*">
-	   <light k="seamark:light:2" layer="-3" />
-   </rule>
-   
-   <rule e="node" k="seamark:light:3" v="*">
-	   <light k="seamark:light:3" layer="-3" />
-   </rule>
-   
-   <rule e="node" k="seamark:light:4" v="*">
-	   <light k="seamark:light:4" layer="-3" />
-   </rule>
-   
-   <rule e="node" k="seamark:light:5" v="*">
-	   <light k="seamark:light:5" layer="-3" />
-   </rule>
-   
-   <rule e="node" k="seamark:light:6" v="*">
-	   <light k="seamark:light:6" layer="-3" />
-   </rule>
-   
-   <rule e="node" k="seamark:light:7" v="*">
-	   <light k="seamark:light:7" layer="-3" />
-   </rule>
-   
-   <rule e="node" k="seamark:light:8" v="*">
-	   <light k="seamark:light:8" layer="-3" />
-   </rule>
-   
-   <rule e="node" k="seamark:light:9" v="*">
-	   <light k="seamark:light:9" layer="-3" />
-   </rule>
-     
-	<!-- Shoreline
-	
+	<!-- Light Flares -->
+
+	<rule e="node" k="seamark:light:colour" v="*">
+		<rule e="node" k="seamark:light:colour" v="white">
+			<symbol ref="Light_White_120" position="center" />
+		</rule>
+		<rule e="node" k="seamark:light:colour" v="red">
+			<symbol ref="Light_Red_120" position="center" />
+		</rule>
+		<rule e="node" k="seamark:light:colour" v="green">
+			<symbol ref="Light_Green_120" position="center" />
+		</rule>
+	</rule> 
+
+	<!-- Light Sectors -->
+
+	<rule e="node" k="seamark:light:1" v="*">
+		<light k="seamark:light:1" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:2" v="*">
+		<light k="seamark:light:2" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:3" v="*">
+		<light k="seamark:light:3" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:4" v="*">
+		<light k="seamark:light:4" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:5" v="*">
+		<light k="seamark:light:5" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:6" v="*">
+		<light k="seamark:light:6" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:7" v="*">
+		<light k="seamark:light:7" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:8" v="*">
+		<light k="seamark:light:8" layer="-3" />
+	</rule>
+
+	<rule e="node" k="seamark:light:9" v="*">
+		<light k="seamark:light:9" layer="-3" />
+	</rule>
+
+	<!-- Light characters -->
+
+	<rule e="node" k="seamark:light:character" v="*">
+		<rule e="node" k="seamark:light:group" v="*">
+			<rule e="node" k="seamark:light:period" v="*">
+				<rule e="node" k="seamark:light:colour" v="red">
+					<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:group" />) R <tag k="seamark:light:period" />s</text>
+				</rule>
+				<rule e="node" k="seamark:light:colour" v="green">
+					<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:group" />) G <tag k="seamark:light:period" />s</text>
+				</rule>
+				<rule e="node" k="seamark:light:colour" v="white">
+					<rule e="node" k="seamark:light:character" v="Q+LFl|VQ+LFl|UQ+LFl">
+						<rule e="node" k="seamark:light:character" v="Q+LFl">
+							<text class="light-character" dx="2" dy="0">Q(<tag k="seamark:light:group" />)+LFl <tag k="seamark:light:period" />s</text>
+						</rule>
+						<rule e="node" k="seamark:light:character" v="VQ+LFl">
+							<text class="light-character" dx="2" dy="0">VQ(<tag k="seamark:light:group" />)+LFl <tag k="seamark:light:period" />s</text>
+						</rule>
+						<rule e="node" k="seamark:light:character" v="UQ+LFl">
+							<text class="light-character" dx="2" dy="0">UQ(<tag k="seamark:light:group" />)+LFl <tag k="seamark:light:period" />s</text>
+						</rule>
+					</rule>
+					<else>
+						<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:group" />) <tag k="seamark:light:period" />s</text>
+					</else>
+				</rule>
+			</rule>
+			<else>
+				<rule e="node" k="seamark:light:colour" v="red">
+					<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:group" />) R</text>
+				</rule>
+				<rule e="node" k="seamark:light:colour" v="green">
+					<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:group" />) G</text>
+				</rule>
+				<rule e="node" k="seamark:light:colour" v="white">
+					<rule e="node" k="seamark:light:character" v="Q+LFl|VQ+LFl|UQ+LFl">
+						<rule e="node" k="seamark:light:character" v="Q+LFl">
+							<text class="light-character" dx="2" dy="0">Q(<tag k="seamark:light:group" />)+LFl</text>
+						</rule>
+						<rule e="node" k="seamark:light:character" v="VQ+LFl">
+							<text class="light-character" dx="2" dy="0">VQ(<tag k="seamark:light:group" />)+LFl</text>
+						</rule>
+						<rule e="node" k="seamark:light:character" v="UQ+LFl">
+							<text class="light-character" dx="2" dy="0">UQ(<tag k="seamark:light:group" />)+LFl</text>
+						</rule>
+					</rule>
+					<else>
+						<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:group" />)</text>
+					</else>
+				</rule>
+			</else>
+		</rule>
+		<else>
+			<rule e="node" k="seamark:light:period" v="*">
+				<rule e="node" k="seamark:light:colour" v="red">
+					<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" /> R <tag k="seamark:light:period" />s</text>
+				</rule>
+				<rule e="node" k="seamark:light:colour" v="green">
+					<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" /> G <tag k="seamark:light:period" />s</text>
+				</rule>
+				<rule e="node" k="seamark:light:colour" v="white">
+					<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" /> <tag k="seamark:light:period" />s</text>
+				</rule>
+			</rule>
+			<else>
+				<rule e="node" k="seamark:light:colour" v="red">
+					<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" /> R</text>
+				</rule>
+				<rule e="node" k="seamark:light:colour" v="green">
+					<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" /> G</text>
+				</rule>
+				<rule e="node" k="seamark:light:colour" v="white">
+					<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" /></text>
+				</rule>
+			</else>
+		</else>
+	</rule>
+
+	<!-- Names -->
+
+	<rule e="node" k="seamark:name" v="*">
+		<text k="seamark:name" class="buoy-name" dx="2" dy="-2" />
+	</rule>
+	  
+	<!-- Shoreline -->
+
 	<rule e="way" k="natural" v="coastline">
 		<line class="coast" layer="-4" />
 	</rule>
@@ -874,31 +1059,111 @@
 
 	<rule e="way" k="waterway" v="riverbank">
 		<line class="coast" layer="-4" />
-	</rule> -->
+	</rule>
+
+	<!--Harbours -->
+
+	<!--<rule e="node" k="leisure" v="marina"> <symbol ref="Marina" position="center"/> <text k ='name' class ='harbour' dx='5'/> </rule> -->
+
+	<rule e="node" k="harbour" v="harbour_master">
+		<symbol ref="harbour_master" position="center" />
+	</rule>
+	<rule e="node" k="harbour" v="fuel">
+		<symbol ref="Fuel" position="center" />
+	</rule>
+	<rule e="node" k="leisure" v="slipway">
+		<symbol ref="Slipway" position="center" />
+	</rule>
+	<rule e="node" k="man_made" v="crane">
+		<symbol ref="crane" position="center" />
+	</rule>
+	<rule e="way" k="man_made" v="pier">
+		<line class="pier" layer="-4" />
+		<pathText k="name" class="harbour" text-anchor="left" dy="0.33px" dx="10px" startOffset="30%" />
+	</rule>
+	<rule e="way" k="man_made" v="breakwater">
+		<line class="breakwater-base" layer="-5" />
+		<line class="breakwater-overlay" layer="-5" />
+	</rule>
+	<rule e="node" k="waterway" v="lock_gate">
+		<symbol ref="Lock_Gate_Single" position="center" />
+	</rule>
+	<rule e="node" k="waterway" v="weir">
+		<symbol ref="Weir_Big" position="center" />
+	</rule>
 
 	<defs>
-		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
+		<style xmlns="http://www.w3.org/2000/svg" type="text/css">
+
 			.map-background {
 			fill: #f8f8f8;
 			stroke: none;
 			}
 
-			.harbour {
+			.buoy-name {
 			font-family: "DejaVu Sans";
-			font-weight: normal;
+			font-weight: bold;
 			font-size: 2px;
-			stroke: 808080;
+			text-anchor: right;
 			}
 
+			.light-character {
+			font-family: "DejaVu Sans";
+			font-weight: normal;
+			font-size: 1.5px;
+			text-anchor: right;
+			}
+
+			.signal-character {
+			font-family: "DejaVu Sans";
+			font-weight: normal;
+			font-size: 1.5px;
+			text-anchor: right;
+			}
+
+			.harbour {
+			font-family: "DejaVu Sans";
+			font-weight: bold;
+			font-size: 1.5px;
+			stroke: #808080;
+			stroke-miterlimit: 1.5;
+			}
+
+			.pier {
+			stroke-width: 2.0px;
+			stroke-linecap: butt;
+			stroke-linejoin: round;
+			fill: none;
+			fill-opacity: 0;
+			stroke: #C0C0C0;
+			}
+
+			.breakwater-base {
+			stroke-width: 0.5px;
+			stroke-linecap: butt;
+			stroke-linejoin: round;
+			fill: none;
+			fill-opacity: 0;
+			stroke: #808080;
+			}
+
+			.breakwater-overlay {
+			stroke-width: 1.5px;
+			stroke-dasharray: 2,2;
+			stroke-linecap: butt;
+			stroke-linejoin: round;
+			fill: none;
+			fill-opacity: 0;
+			stroke: #808080;
+			}
+			
 			.coast {
-			stroke-width: 1.0px;
+			stroke-width: 0.5px;
 			fill: none;
 			fill-opacity: 0;
 			stroke: #80C0C0;
 			}
 
-		</style>
+    		</style>
 	</defs>
-
-
 </rules>

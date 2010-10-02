@@ -1047,16 +1047,19 @@
 		<text k="seamark:name" class="buoy-name" dx="5" dy="-5" />
 	</rule>
 
-	<!-- Shoreline 
-
+	<!-- Shoreline
+	
 	<rule e="way" k="natural" v="coastline">
+		<line class="coast" layer="-4" />
+	</rule>
+
+	<rule e="way" k="natural" v="water">
 		<line class="coast" layer="-4" />
 	</rule>
 
 	<rule e="way" k="waterway" v="riverbank">
 		<line class="coast" layer="-4" />
-	</rule>
--->
+	</rule> -->
 
 	<!--Depth -->
 	<!--<rule e="node" k="waterway" v="depth"> <water_depth k ='name' class ='water_depth'/> </rule> -->
@@ -1181,6 +1184,13 @@
 			stroke: #808080;
 			}
 			
+			.coast {
+			stroke-width: 0.5px;
+			fill: none;
+			fill-opacity: 0;
+			stroke: #80C0C0;
+			}
+
 		</style>
 	</defs>
 
