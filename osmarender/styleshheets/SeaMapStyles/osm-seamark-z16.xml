@@ -496,6 +496,10 @@
 				<symbol ref="Special_Purpose_Barrel" position="center" />
 			</rule>
 		</rule>
+		<else>
+			<!-- default to shape = pillar -->
+			<symbol ref="Special_Purpose_Pillar" position="center" />
+		</else>
 	</rule>
 
 	<!-- Special Purpose Floats -->
@@ -731,7 +735,61 @@
 	</rule>
 
 	<rule e="node" k="seamark:topmark:shape" v="x-shape">
-		<rule e="node" k="seamark:buoy_special_purpose:shape" v="pillar|spar">
+		<rule e="node" k="seamark:buoy_special_purpose:shape" v="*">
+			<rule e="node" k="seamark:buoy_special_purpose:shape" v="pillar|spar">
+				<rule e="node" k="seamark:topmark:colour" v="red">
+					<symbol ref="Top_X_Red_Buoy" position="center" />
+				</rule>
+				<else>
+					<rule e="node" k="seamark:topmark:colour" v="yellow">
+						<symbol ref="Top_X_Yellow_Buoy" position="center" />
+					</rule>
+					<else>
+						<symbol ref="Top_X_Buoy" position="center" />
+					</else>
+				</else>
+			</rule>
+			<rule e="node" k="seamark:buoy_special_purpose:shape" v="sphere|barrel|can|conical">
+				<rule e="node" k="seamark:topmark:colour" v="red">
+					<symbol ref="Top_X_Red_Buoy_Small" position="center" />
+				</rule>
+				<else>
+					<rule e="node" k="seamark:topmark:colour" v="yellow">
+						<symbol ref="Top_X_Yellow_Buoy_Small" position="center" />
+					</rule>
+					<else>
+						<symbol ref="Top_X_Buoy_Small" position="center" />
+					</else>
+				</else>
+			</rule>
+			<rule e="node" k="seamark:type" v="beacon_special_purpose">
+				<rule e="node" k="seamark:topmark:colour" v="red">
+					<symbol ref="Top_X_Red_Beacon" position="center" />
+				</rule>
+				<else>
+					<rule e="node" k="seamark:topmark:colour" v="yellow">
+						<symbol ref="Top_X_Yellow_Beacon" position="center" />
+					</rule>
+					<else>
+						<symbol ref="Top_X_Beacon" position="center" />
+					</else>
+				</else>
+			</rule>
+			<rule e="node" k="seamark:type" v="light_float">
+				<rule e="node" k="seamark:topmark:colour" v="red">
+					<symbol ref="Top_X_Red_Float" position="center" />
+				</rule>
+				<else>
+					<rule e="node" k="seamark:topmark:colour" v="yellow">
+						<symbol ref="Top_X_Yellow_Float" position="center" />
+					</rule>
+					<else>
+						<symbol ref="Top_X_Float" position="center" />
+					</else>
+				</else>
+			</rule>
+		</rule>
+		<else>
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_X_Red_Buoy" position="center" />
 			</rule>
@@ -743,46 +801,7 @@
 					<symbol ref="Top_X_Buoy" position="center" />
 				</else>
 			</else>
-		</rule>
-		<rule e="node" k="seamark:buoy_special_purpose:shape" v="sphere|barrel|can|conical">
-			<rule e="node" k="seamark:topmark:colour" v="red">
-				<symbol ref="Top_X_Red_Buoy_Small" position="center" />
-			</rule>
-			<else>
-				<rule e="node" k="seamark:topmark:colour" v="yellow">
-					<symbol ref="Top_X_Yellow_Buoy_Small" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Top_X_Buoy_Small" position="center" />
-				</else>
-			</else>
-		</rule>
-		<rule e="node" k="seamark:type" v="beacon_special_purpose">
-			<rule e="node" k="seamark:topmark:colour" v="red">
-				<symbol ref="Top_X_Red_Beacon" position="center" />
-			</rule>
-			<else>
-				<rule e="node" k="seamark:topmark:colour" v="yellow">
-					<symbol ref="Top_X_Yellow_Beacon" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Top_X_Beacon" position="center" />
-				</else>
-			</else>
-		</rule>
-		<rule e="node" k="seamark:type" v="light_float">
-			<rule e="node" k="seamark:topmark:colour" v="red">
-				<symbol ref="Top_X_Red_Float" position="center" />
-			</rule>
-			<else>
-				<rule e="node" k="seamark:topmark:colour" v="yellow">
-					<symbol ref="Top_X_Yellow_Float" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Top_X_Float" position="center" />
-				</else>
-			</else>
-		</rule>
+		</else>
 	</rule>
 
 	<!-- Radar Reflector -->
