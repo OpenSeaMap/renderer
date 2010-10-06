@@ -940,12 +940,12 @@
 
 	<rule e="way" k="seamark:leading_line" v="*">
 		<line class="leading-line" />
-		<pathText k="seamark:leading_line" class="line-character" dx="15" dy="-1.5" />
+		<pathText k="seamark:leading_line" class="line-character" startOffset="50" dy="-1.5" />
 	</rule>
 
 	<rule e="way" k="seamark:transit_line" v="*">
 		<line class="transit-line" />
-		<pathText k="seamark:transit_line" class="line-character" dx="15" dy="-1.5" />
+		<pathText k="seamark:transit_line" class="line-character" startOffset="50" dy="-1.5" />
 	</rule>
 
 	<!-- Shoreline
