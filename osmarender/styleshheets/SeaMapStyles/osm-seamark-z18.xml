@@ -1047,6 +1047,18 @@
 		<text k="seamark:name" class="buoy-name" dx="2" dy="-2" />
 	</rule>
 	  
+	<!-- Leading & Transit Lines -->
+
+	<rule e="way" k="seamark:leading_line" v="*">
+		<line class="leading-line" />
+		<pathText k="seamark:leading_line" class="line-character" dx="10" dy="-1.0" />
+	</rule>
+
+	<rule e="way" k="seamark:transit_line" v="*">
+		<line class="transit-line" />
+		<pathText k="seamark:transit_line" class="line-character" dx="10" dy="-1.0" />
+	</rule>
+
 	<!-- Shoreline -->
 
 	<rule e="way" k="natural" v="coastline">
@@ -1121,6 +1133,13 @@
 			text-anchor: right;
 			}
 
+			.line-character {
+			font-family: "DejaVu Sans";
+			font-weight: normal;
+			font-size: 1.0px;
+			text-anchor: right;
+			}
+
 			.harbour {
 			font-family: "DejaVu Sans";
 			font-weight: bold;
@@ -1155,6 +1174,25 @@
 			fill: none;
 			fill-opacity: 0;
 			stroke: #808080;
+			}
+			
+			.leading-line {
+			stroke-width: 0.5px;
+			stroke-linecap: butt;
+			stroke-linejoin: round;
+			fill: none;
+			fill-opacity: 0;
+			stroke: #000000;
+			}
+
+			.transit-line {
+			stroke-width: 0.5px;
+			stroke-dasharray: 2,2;
+			stroke-linecap: butt;
+			stroke-linejoin: round;
+			fill: none;
+			fill-opacity: 0;
+			stroke: #000000;
 			}
 			
 			.coast {
