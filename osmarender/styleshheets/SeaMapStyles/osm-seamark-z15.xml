@@ -586,6 +586,14 @@
 				</else>
 			</else>
 		</rule>
+		<rule e="node" k="seamark:buoy_special_purpose:shape" v="barrel">
+			<rule e="node" k="seamark:topmark:colour" v="red:white:red">
+				<symbol ref="Top_Can_Red_White_Red_Barrel" position="center" />
+			</rule>
+			<else>
+				<symbol ref="Top_Can_Float" position="center" />
+			</else>
+		</rule>
 		<rule e="node" k="seamark:type" v="beacon_lateral">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Can_Red_Beacon" position="center" />
@@ -1119,20 +1127,25 @@
 		<text k='name' class='name' dy='-4' dx='9' />
 	</rule>
 
-	<rule e="way" k="man_made" v="pier">
+	<!--<rule e="way" k="man_made" v="pier">
 		<line class="pier" layer="-4" />
 		<pathText k="name" class="harbour" text-anchor="left" dy="0.33px" dx="10px" startOffset="30%" />
-	</rule>
+	</rule>-->
 
 	<rule e="way" k="man_made" v="breakwater">
 		<line class="breakwater-base" layer="-5" />
 		<line class="breakwater-overlay" layer="-5" />
 	</rule>
 
-	<rule e="node" k="waterway" v="lock_gate">
-		<symbol ref="Lock_Gate_Single" position="center" />
+   <!--Waterway keys -->
+	<rule e="node" k="waterway:sign" v="no_entry">
+		<symbol ref="No_Entry" position="center" />
 	</rule>
 
+   <rule e="node" k="waterway" v="lock_gate">
+	   <symbol ref="Lock_Gate_Single" position="center" />
+   </rule>
+   
 	<rule e="node" k="waterway" v="weir">
 		<symbol ref="Weir_Big" position="center" />
 	</rule>
