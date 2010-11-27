@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="320"
+   height="320"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="Cylinder_Barrel_Red_White_Red.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata6">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="789"
+     inkscape:window-width="1328"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false"
+     inkscape:zoom="2.3997436"
+     inkscape:cx="160"
+     inkscape:cy="175.88718"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:current-layer="g2463" />
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 160 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="320 : 160 : 1"
+       inkscape:persp3d-origin="160 : 106.66667 : 1"
+       id="perspective8" />
+    <inkscape:perspective
+       id="perspective2437"
+       inkscape:persp3d-origin="160 : 106.66667 : 1"
+       inkscape:vp_z="320 : 160 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 160 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2461"
+       inkscape:persp3d-origin="160 : 106.66667 : 1"
+       inkscape:vp_z="320 : 160 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 160 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.8948102px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 160.29466,95.16343 L 160.29466,115.2233"
+     id="path2440" />
+  <g
+     id="g2463"
+     transform="matrix(1.0728122,-0.3108506,0.3508667,0.9504588,-67.908499,120.25314)"
+     inkscape:transform-center-x="46.094777"
+     inkscape:transform-center-y="4.1827162">
+    <path
+       sodipodi:nodetypes="ccccc"
+       transform="translate(-40,-40)"
+       style="fill:#d40000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       id="path2465"
+       d="M 264.2875,49.912542 L 237.8625,41.125042 L 226.2875,74.912502 L 252.7125,83.550002 L 264.2875,49.912542 z" />
+    <path
+       id="path2389"
+       d="M 193.84681,12.620583 L 220.41055,21.462934 L 220.41055,21.462934"
+       style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       id="path2391"
+       d="M 190.88617,21.398809 L 217.29531,30.135603"
+       style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00012529px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0520889;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 157.23911,80.743958 C 150.2229,80.72043 144.4751,80.69392 144.46623,80.685048 C 144.43766,80.65647 144.57017,72.626007 144.59989,72.585524 C 144.62225,72.555058 175.91322,72.66595 175.9408,72.696592 C 175.94454,72.70075 175.9164,74.368392 175.87826,76.402464 C 175.84011,78.436535 175.80776,80.258995 175.80634,80.452375 L 175.80377,80.803975 L 172.89982,80.795356 C 171.30264,80.790616 164.25532,80.767487 157.23911,80.743959 L 157.23911,80.743958 z"
+       id="path2475"
+       transform="matrix(0.8420597,0.2753983,-0.3108506,0.9504588,94.563772,-95.593765)" />
+  </g>
+</svg>
