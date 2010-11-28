@@ -1125,11 +1125,25 @@
 		<line class="breakwater-overlay" layer="-5" />
 	</rule>
 
-   <!--Waterway keys -->
-	<rule e="node" k="waterway:sign" v="no_entry">
+	<!--Waterway keys -->
+	<rule e="node" k="waterway" v="no_entry">
 		<symbol ref="No_Entry" position="center" />
 	</rule>
 
+	<rule e="node" k="waterway:maxheight" v="*">
+		<symbol ref="Max_Height" position="center" />
+		<text class="waterway_sign" dx="2.5" dy="0.5">
+			<tag k="waterway:maxheight" />m
+		</text>
+	</rule>
+   
+	<rule e="node" k="waterway:mindepth" v="*">
+		<symbol ref="Min_Depth" position="center" />
+		<text class="waterway_sign" dx="2.5" dy="0.5">
+			<tag k="waterway:mindepth" />m
+		</text>
+	</rule>
+   
 	<rule e="node" k="waterway" v="lock_gate">
 		<symbol ref="Lock_Gate_Single" position="center" />
 	</rule>
@@ -1142,100 +1156,107 @@
 		<style xmlns="http://www.w3.org/2000/svg" type="text/css">
 
 			.map-background {
-			fill: #f8f8f8;
-			stroke: none;
+				fill: #f8f8f8;
+				stroke: none;
 			}
 
 			.buoy-name {
-			font-family: "DejaVu Sans";
-			font-weight: bold;
-			font-size: 2.0px;
-			text-anchor: right;
+				font-family: "DejaVu Sans";
+				font-weight: bold;
+				font-size: 2.0px;
+				text-anchor: right;
 			}
 
 			.light-character {
-			font-family: "DejaVu Sans";
-			font-weight: normal;
-			font-size: 1.5px;
-			text-anchor: right;
+				font-family: "DejaVu Sans";
+				font-weight: normal;
+				font-size: 1.5px;
+				text-anchor: right;
 			}
 
 			.signal-character {
-			font-family: "DejaVu Sans";
-			font-weight: normal;
-			font-size: 1.5px;
-			text-anchor: right;
+				font-family: "DejaVu Sans";
+				font-weight: normal;
+				font-size: 1.5px;
+				text-anchor: right;
 			}
 
 			.line-character {
-			font-family: "DejaVu Sans";
-			font-weight: normal;
-			font-size: 1.0px;
-			text-anchor: right;
+				font-family: "DejaVu Sans";
+				font-weight: normal;
+				font-size: 1.0px;
+				text-anchor: right;
+			}
+
+			.waterway_sign {
+				font-family: "DejaVu Sans";
+				font-weight: normal;
+				font-size: 2.0px;
+				text-anchor: right;
 			}
 
 			.harbour {
-			font-family: "DejaVu Sans";
-			font-weight: bold;
-			font-size: 1.5px;
-			stroke: #808080;
-			stroke-miterlimit: 1.5;
+				font-family: "DejaVu Sans";
+				font-weight: bold;
+				font-size: 1.5px;
+				stroke: #808080;
+				stroke-miterlimit: 1.5;
 			}
 
 			.pier {
-			stroke-width: 2.0px;
-			stroke-linecap: butt;
-			stroke-linejoin: round;
-			fill: none;
-			fill-opacity: 0;
-			stroke: #C0C0C0;
+				stroke-width: 2.0px;
+				stroke-linecap: butt;
+				stroke-linejoin: round;
+				fill: none;
+				fill-opacity: 0;
+				stroke: #C0C0C0;
 			}
 
 			.breakwater-base {
-			stroke-width: 0.5px;
-			stroke-linecap: butt;
-			stroke-linejoin: round;
-			fill: none;
-			fill-opacity: 0;
-			stroke: #808080;
+				stroke-width: 0.5px;
+				stroke-linecap: butt;
+				stroke-linejoin: round;
+				fill: none;
+				fill-opacity: 0;
+				stroke: #808080;
 			}
 
 			.breakwater-overlay {
-			stroke-width: 1.5px;
-			stroke-dasharray: 2,2;
-			stroke-linecap: butt;
-			stroke-linejoin: round;
-			fill: none;
-			fill-opacity: 0;
-			stroke: #808080;
+				stroke-width: 1.5px;
+				stroke-dasharray: 2,2;
+				stroke-linecap: butt;
+				stroke-linejoin: round;
+				fill: none;
+				fill-opacity: 0;
+				stroke: #808080;
 			}
 			
 			.leading-line {
-			stroke-width: 0.5px;
-			stroke-linecap: butt;
-			stroke-linejoin: round;
-			fill: none;
-			fill-opacity: 0;
-			stroke: #000000;
+				stroke-width: 0.5px;
+				stroke-linecap: butt;
+				stroke-linejoin: round;
+				fill: none;
+				fill-opacity: 0;
+				stroke: #000000;
 			}
 
 			.transit-line {
-			stroke-width: 0.5px;
-			stroke-dasharray: 2,2;
-			stroke-linecap: butt;
-			stroke-linejoin: round;
-			fill: none;
-			fill-opacity: 0;
-			stroke: #000000;
+				stroke-width: 0.5px;
+				stroke-dasharray: 2,2;
+				stroke-linecap: butt;
+				stroke-linejoin: round;
+				fill: none;
+				fill-opacity: 0;
+				stroke: #000000;
 			}
 			
 			.coast {
-			stroke-width: 0.5px;
-			fill: none;
-			fill-opacity: 0;
-			stroke: #80C0C0;
+				stroke-width: 0.5px;
+				fill: none;
+				fill-opacity: 0;
+				stroke: #80C0C0;
 			}
 
-    		</style>
+    	</style>
 	</defs>
 </rules>
