@@ -186,116 +186,126 @@
 
 	<!-- Lateral Beacons -->
 
-	<rule e="node" k="seamark:beacon_lateral:category" v="*">
+	<!-- Port Beacons -->
 
-		<!-- Port Beacons -->
+	<rule e="node" k="seamark:beacon_lateral:category" v="port">
 
-		<rule e="node" k="seamark:beacon_lateral:category" v="port">
+		<!-- IALA-A -->
 
-			<!-- IALA-A -->
-
-			<rule e="node" k="seamark:beacon_lateral:colour" v="red">
-				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-					<symbol ref="Lateral_Tower_Red" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Beacon_Red" position="center" />
-				</else>
+		<rule e="node" k="seamark:beacon_lateral:colour" v="red">
+			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+				<symbol ref="Lateral_Tower_Red" position="center" />
 			</rule>
-
-			<!-- IALA-B -->
-
-			<rule e="node" k="seamark:beacon_lateral:colour" v="green">
-				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-					<symbol ref="Lateral_Tower_Green" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Beacon_Green" position="center" />
-				</else>
-			</rule>
+			<else>
+				<symbol ref="Lateral_Beacon_Red" position="center" />
+			</else>
 		</rule>
 
-		<!-- Starboard Beacons -->
+		<!-- IALA-B -->
 
-		<rule e="node" k="seamark:beacon_lateral:category" v="starboard">
-
-			<!-- IALA-A -->
-
-			<rule e="node" k="seamark:beacon_lateral:colour" v="green">
-				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-					<symbol ref="Lateral_Tower_Green" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Beacon_Green" position="center" />
-				</else>
+		<rule e="node" k="seamark:beacon_lateral:colour" v="green">
+			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+				<symbol ref="Lateral_Tower_Green" position="center" />
 			</rule>
-
-			<!-- IALA-B -->
-
-			<rule e="node" k="seamark:beacon_lateral:colour" v="red">
-				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-					<symbol ref="Lateral_Tower_Red" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Beacon_Red" position="center" />
-				</else>
-			</rule>
+			<else>
+				<symbol ref="Lateral_Beacon_Green" position="center" />
+			</else>
 		</rule>
 
-		<!-- Referred Channel Port Beacons -->
+		<!-- Perch -->
 
-		<rule e="node" k="seamark:beacon_lateral:category" v="preferred_channel_port">
-
-			<!-- IALA-A -->
-
-			<rule e="node" k="seamark:beacon_lateral:colour" v="red;green;red">
-				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-					<symbol ref="Lateral_Tower_Red_Green_Red" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Beacon_Red_Green_Red" position="center" />
-				</else>
-			</rule>
-
-			<!-- IALA-B -->
-
-			<rule e="node" k="seamark:beacon_lateral:colour" v="green;red;green">
-				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-					<symbol ref="Lateral_Tower_Green_Red_Green" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Beacon_Green_Red_Green" position="center" />
-				</else>
-			</rule>
-		</rule>
-
-		<!-- Preferred Channel Starboard Beacons -->
-
-		<rule e="node" k="seamark:beacon_lateral:category" v="preferred_channel_starboard">
-
-			<!-- IALA-A -->
-
-			<rule e="node" k="seamark:beacon_lateral:colour" v="green;red;green">
-				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-					<symbol ref="Lateral_Tower_Green_Red_Green" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Beacon_Green_Red_Green" position="center" />
-				</else>
-			</rule>
-
-			<!-- IALA-B -->
-
-			<rule e="node" k="seamark:beacon_lateral:colour" v="red;green;red">
-				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-					<symbol ref="Lateral_Tower_Red_Green_Red" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Lateral_Beacon_Red_Green_Red" position="center" />
-				</else>
-			</rule>
+		<rule e="node" k="seamark:beacon_lateral:shape" v="perch">
+			<symbol ref="Lateral_Perch_Port" position="center" />
 		</rule>
 	</rule>
+
+	<!-- Starboard Beacons -->
+
+	<rule e="node" k="seamark:beacon_lateral:category" v="starboard">
+
+		<!-- IALA-A -->
+
+		<rule e="node" k="seamark:beacon_lateral:colour" v="green">
+			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+				<symbol ref="Lateral_Tower_Green" position="center" />
+			</rule>
+			<else>
+				<symbol ref="Lateral_Beacon_Green" position="center" />
+			</else>
+		</rule>
+
+		<!-- IALA-B -->
+
+		<rule e="node" k="seamark:beacon_lateral:colour" v="red">
+			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+				<symbol ref="Lateral_Tower_Red" position="center" />
+			</rule>
+			<else>
+				<symbol ref="Lateral_Beacon_Red" position="center" />
+			</else>
+		</rule>
+
+		<!-- Perch -->
+
+		<rule e="node" k="seamark:beacon_lateral:shape" v="perch">
+			<symbol ref="Lateral_Perch_Starboard" position="center" />
+		</rule>
+	</rule>
+
+	<!-- Referred Channel Port Beacons -->
+
+	<rule e="node" k="seamark:beacon_lateral:category" v="preferred_channel_port">
+
+		<!-- IALA-A -->
+
+		<rule e="node" k="seamark:beacon_lateral:colour" v="red;green;red">
+			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+				<symbol ref="Lateral_Tower_Red_Green_Red" position="center" />
+			</rule>
+			<else>
+				<symbol ref="Lateral_Beacon_Red_Green_Red" position="center" />
+			</else>
+		</rule>
+
+		<!-- IALA-B -->
+
+		<rule e="node" k="seamark:beacon_lateral:colour" v="green;red;green">
+			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+				<symbol ref="Lateral_Tower_Green_Red_Green" position="center" />
+			</rule>
+			<else>
+				<symbol ref="Lateral_Beacon_Green_Red_Green" position="center" />
+			</else>
+		</rule>
+	</rule>
+
+	<!-- Preferred Channel Starboard Beacons -->
+
+	<rule e="node" k="seamark:beacon_lateral:category" v="preferred_channel_starboard">
+
+		<!-- IALA-A -->
+
+		<rule e="node" k="seamark:beacon_lateral:colour" v="green;red;green">
+			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+				<symbol ref="Lateral_Tower_Green_Red_Green" position="center" />
+			</rule>
+			<else>
+				<symbol ref="Lateral_Beacon_Green_Red_Green" position="center" />
+			</else>
+		</rule>
+
+		<!-- IALA-B -->
+
+		<rule e="node" k="seamark:beacon_lateral:colour" v="red;green;red">
+			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+				<symbol ref="Lateral_Tower_Red_Green_Red" position="center" />
+			</rule>
+			<else>
+				<symbol ref="Lateral_Beacon_Red_Green_Red" position="center" />
+			</else>
+		</rule>
+	</rule>
+
 
 	<!-- Lateral Light Floats -->
 
