@@ -1172,7 +1172,7 @@
 	</rule>
 
 	<rule e="node" k="harbour" v="dolphin">
-		<circle r="1" class="harbour_dolphin" />
+		<circle r="0.75" class="harbour_dolphin" />
 	</rule>
 
 	<!--Waterway keys -->
@@ -1249,7 +1249,7 @@
 			}
 
 			.harbour_dolphin {
-				stroke-width: 0.4px;
+				stroke-width: 0.3px;
 				stroke: #000000;
 				fill: none;
 			}

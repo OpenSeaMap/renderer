@@ -1172,9 +1172,9 @@
 		<symbol ref="Fuel" position="center" />
 	</rule>
 
-   <rule e="node" k="harbour" v="dolphin">
+   <!--<rule e="node" k="harbour" v="dolphin">
 	   <circle r="2" class="harbour_dolphin" />
-   </rule>
+   </rule>-->
    
 	<!--Waterway keys -->
 	<rule e="node" k="waterway" v="no_entry">
