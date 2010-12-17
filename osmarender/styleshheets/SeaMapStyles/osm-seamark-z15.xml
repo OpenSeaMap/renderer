@@ -667,7 +667,7 @@
 	</rule>
 
 	<!--Shape = Cone, point up********************************************************************************-->
-	<rule e="node" k="seamark:topmark:shape" v="cone, point up">
+	<rule e="node" k="seamark:topmark:shape" v="cone, point up|cone">
 		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="pillar|spar">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Cone_Red_Buoy" position="center" />
@@ -1140,14 +1140,6 @@
 	<!--Harbours -->
 	<!--<rule e="node" k="leisure" v="marina"> <symbol ref="Marina" position="right"/> <text k ='name' class ='harbour' dx='5'/> </rule> -->
 
-	<rule e="node" k="harbour" v="harbour_master">
-		<symbol ref="harbour_master" position="center" />
-	</rule>
-
-	<rule e="node" k="harbour" v="fuel">
-		<symbol ref="Fuel" position="center" />
-	</rule>
-
 	<rule e="node" k="leisure" v="slipway">
 		<symbol ref="Slipway" position="center" />
 	</rule>
@@ -1158,7 +1150,7 @@
 
 	<rule e="node" k="radio" v="coast_radio_station">
 		<symbol ref="radio" position="center" />
-		<text k='name' class='name' dy='-4' dx='9' />
+		<text k='name' class='buoy-name' dy='-4' dx='9' />
 	</rule>
 
 	<!--<rule e="way" k="man_made" v="pier">
@@ -1171,9 +1163,26 @@
 		<line class="breakwater-overlay" layer="-5" />
 	</rule>
 
-   <!--Waterway keys -->
+	<!--harbour keys -->
+	<rule e="node" k="harbour" v="harbour_master">
+		<symbol ref="harbour_master" position="center" />
+	</rule>
+
+	<rule e="node" k="harbour|waterway" v="fuel">
+		<symbol ref="Fuel" position="center" />
+	</rule>
+
+   <rule e="node" k="harbour" v="dolphin">
+	   <circle r="2" class="harbour_dolphin" />
+   </rule>
+   
+	<!--Waterway keys -->
 	<rule e="node" k="waterway" v="no_entry">
 		<symbol ref="No_Entry" position="center" />
+	</rule>
+
+	<rule e="node" k="waterway" v="turning_point">
+		<symbol ref="Turning_Point" position="center" />
 	</rule>
 
 	<rule e="node" k="waterway:maxheight" v="*">
@@ -1196,10 +1205,6 @@
    
 	<rule e="node" k="waterway" v="weir">
 		<symbol ref="Weir_Big" position="center" />
-	</rule>
-
-	<rule e="node" k="waterway" v="fuel">
-		<symbol ref="Fuel" position="center" />
 	</rule>
 
 	<defs>
@@ -1249,9 +1254,15 @@
 
 			.waterway_sign {
 				font-family: "DejaVu Sans";
-				font-weight: normal;
+				font-weight: bold;
 				font-size: 4.5px;
 				text-anchor: right;
+			}
+
+			.harbour_dolphin {
+				stroke-width: 0.4px;
+				stroke: #000000;
+				fill: none;
 			}
 
 			.harbour {

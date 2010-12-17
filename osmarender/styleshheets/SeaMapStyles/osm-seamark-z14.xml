@@ -1025,6 +1025,10 @@
 		<symbol ref="No_Entry" position="center" />
 	</rule>
 
+	<rule e="node" k="waterway" v="turning_point">
+		<symbol ref="Turning_Point" position="center" />
+	</rule>
+
 	<rule e="node" k="waterway:maxheight" v="*">
 		<symbol ref="Max_Height" position="center" />
 		<text class="waterway_sign" dx="6" dy="2">

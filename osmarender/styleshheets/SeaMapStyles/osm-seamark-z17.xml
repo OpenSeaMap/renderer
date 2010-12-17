@@ -669,7 +669,8 @@
 		</rule>
 	</rule>
 
-	<rule e="node" k="seamark:topmark:shape" v="cone, point up">
+   <!--Shape = Cone, point up********************************************************************************-->
+   <rule e="node" k="seamark:topmark:shape" v="cone, point up|cone">
 		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="pillar|spar">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Cone_Red_Buoy" position="center" />
@@ -1139,30 +1140,49 @@
 
 	<!--<rule e="node" k="leisure" v="marina"> <symbol ref="Marina" position="center"/> <text k ='name' class ='harbour' dx='5'/> </rule> -->
 
-	<rule e="node" k="harbour" v="harbour_master">
-		<symbol ref="harbour_master" position="center" />
-	</rule>
-	<rule e="node" k="harbour" v="fuel">
-		<symbol ref="Fuel" position="center" />
-	</rule>
 	<rule e="node" k="leisure" v="slipway">
 		<symbol ref="Slipway" position="center" />
 	</rule>
+
 	<rule e="node" k="man_made" v="crane">
 		<symbol ref="crane" position="center" />
 	</rule>
+
+	<rule e="node" k="radio" v="coast_radio_station">
+		<symbol ref="radio" position="center" />
+		<text k='name' class='buoy-name' dy='-2' dx='5' />
+	</rule>
+
 	<!--<rule e="way" k="man_made" v="pier">
 		<line class="pier" layer="-4" />
 		<pathText k="name" class="harbour" text-anchor="left" dy="0.33px" dx="10px" startOffset="30%" />
 	</rule>-->
+
 	<rule e="way" k="man_made" v="breakwater">
 		<line class="breakwater-base" layer="-5" />
 		<line class="breakwater-overlay" layer="-5" />
 	</rule>
 
+	<!--harbour keys -->
+	<rule e="node" k="harbour" v="harbour_master">
+	   <symbol ref="harbour_master" position="center" />
+	</rule>
+
+	<rule e="node" k="harbour|waterway" v="fuel">
+	   <symbol ref="Fuel" position="center" />
+	</rule>
+   
+	<rule e="node" k="harbour" v="dolphin">
+		<circle r="0.5" class="harbour_dolphin" />
+	</rule>
+
 	<!--Waterway keys -->
 	<rule e="node" k="waterway" v="no_entry">
 		<symbol ref="No_Entry" position="center" />
+	</rule>
+
+	<rule e="node" k="waterway" v="turning_point">
+		<symbol ref="Turning_Point" position="center" />
 	</rule>
 
 	<rule e="node" k="waterway:maxheight" v="*">
@@ -1228,6 +1248,12 @@
 				font-weight: normal;
 				font-size: 2.0px;
 				text-anchor: right;
+			}
+
+			.harbour_dolphin {
+				stroke-width: 0.4px;
+				stroke: #000000;
+				fill: none;
 			}
 
 			.harbour {
