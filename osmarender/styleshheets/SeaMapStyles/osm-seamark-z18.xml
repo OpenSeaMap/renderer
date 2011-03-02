@@ -898,17 +898,17 @@
 		<symbol ref="Radar_Station" position="center" />
 		<rule e="node" k="seamark:radar_transponder:category" v="racon">
 			<rule e="node" k="seamark:radar_transponder:group" v="*">
-					<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Racon(<tag k="seamark:radar_transponder:group" />)</text>
+					<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Racon(<tag k="seamark:radar_transponder:group" />) . . .</text>
 			</rule>
 			<else>
-				<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Racon</text>
+				<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Racon . . .</text>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:radar_transponder:category" v="ramark">
-			<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Ramark</text>
+			<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Ramark . . .</text>
 		</rule>
 		<rule e="node" k="seamark:radar_transponder:category" v="leading">
-			<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Leading</text>
+			<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Leading . . .</text>
 		</rule>
 	</rule>
 
@@ -919,33 +919,33 @@
 		<rule e="node" k="seamark:fog_signal:category" v="horn">
 			<rule e="node" k="seamark:fog_signal:group" v="*">
 				<rule e="node" k="seamark:fog_signal:period" v="*">
-					<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Horn(<tag k="seamark:fog_signal:group" />) <tag k="seamark:fog_signal:period" />s</text>
+					<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Horn(<tag k="seamark:fog_signal:group" />) <tag k="seamark:fog_signal:period" />s . . .</text>
 				</rule>
 				<else>
-					<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Horn(<tag k="seamark:fog_signal:group" />)</text>
+					<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Horn(<tag k="seamark:fog_signal:group" />) . . .</text>
 				</else>
 			</rule>
 			<else>
-				<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Horn</text>
+				<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Horn . . .</text>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:fog_signal:category" v="gong">
-			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Gong</text>
+			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Gong . . .</text>
 		</rule>
 		<rule e="node" k="seamark:fog_signal:category" v="siren">
-			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Siren</text>
+			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Siren . . .</text>
 		</rule>
 		<rule e="node" k="seamark:fog_signal:category" v="diaphone">
-			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Dia</text>
+			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Dia . . .</text>
 		</rule>
 		<rule e="node" k="seamark:fog_signal:category" v="bell">
-			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Bell</text>
+			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Bell . . .</text>
 		</rule>
 		<rule e="node" k="seamark:fog_signal:category" v="whistle">
-			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Whis</text>
+			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Whis . . .</text>
 		</rule>
 		<rule e="node" k="seamark:fog_signal:category" v="explosive">
-			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Explos</text>
+			<text class="signal-character" dx="-3" dy="0" text-anchor="end" >Explos . . .</text>
 		</rule>
 	</rule>
 
@@ -1140,6 +1140,7 @@
 		<line class="pier" layer="-4" />
 		<pathText k="name" class="harbour" text-anchor="left" dy="0.33px" dx="10px" startOffset="30%" />
 	</rule>-->
+	
 	<rule e="way" k="man_made" v="breakwater">
 		<line class="breakwater-base" layer="-5" />
 		<line class="breakwater-overlay" layer="-5" />
@@ -1306,6 +1307,33 @@
 				stroke: #000000;
 			}
 			
+			.arc-line-red {
+			stroke-width: 2.0px;
+			stroke-linecap: butt;
+			stroke-linejoin: round;
+			fill: none;
+			fill-opacity: 0;
+			stroke: #F40000;
+			}
+
+			.arc-line-green {
+			stroke-width: 2.0px;
+			stroke-linecap: butt;
+			stroke-linejoin: round;
+			fill: none;
+			fill-opacity: 0;
+			stroke: #00F400;
+			}
+
+			.arc-line-yellow {
+			stroke-width: 2.0px;
+			stroke-linecap: butt;
+			stroke-linejoin: round;
+			fill: none;
+			fill-opacity: 0;
+			stroke: #F4F400;
+			}
+
 			.coast {
 				stroke-width: 0.5px;
 				fill: none;

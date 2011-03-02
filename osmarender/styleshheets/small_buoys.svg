@@ -39,13 +39,13 @@
      inkscape:window-height="1088"
      id="namedview2911"
      showgrid="true"
-     inkscape:zoom="16"
-     inkscape:cx="166.48747"
-     inkscape:cy="258.50529"
+     inkscape:zoom="4.2"
+     inkscape:cx="140.47619"
+     inkscape:cy="238.09524"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="g3399"
      inkscape:snap-grids="false">
     <inkscape:grid
        type="xygrid"
@@ -1169,7 +1169,7 @@
            sodipodi:end="4.3932674"
            sodipodi:start="2.9444111"
            transform="matrix(1.4164674,0.47394337,-0.48206808,1.4407496,172.65842,-93.634291)"
-           d="M 15.635753,156.98217 A 31.466251,30.935923 0 0 1 36.620282,121.54762"
+           d="m 15.635753,156.98217 c -3.114542,-15.3273 5.88908,-30.53085 20.984529,-35.43455"
            sodipodi:ry="30.935923"
            sodipodi:rx="31.466251"
            sodipodi:cy="150.92163"
@@ -1182,7 +1182,7 @@
            sodipodi:end="6.0542529"
            sodipodi:start="5.0415963"
            transform="matrix(1.8607362,0.62259362,-0.61353771,1.8336709,19.201188,-153.26853)"
-           d="m 110.53956,99.547479 a 23.953241,24.306795 0 0 1 15.58437,17.485361"
+           d="m 110.53956,99.547479 c 7.81904,2.710721 13.70924,9.319411 15.58437,17.485361"
            sodipodi:ry="24.306795"
            sodipodi:rx="23.953241"
            sodipodi:cy="122.54897"
@@ -1354,7 +1354,7 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Barrel Buoy"
-     style="display:none"
+     style="display:inline"
      transform="translate(0,60)">
     <g
        id="g3795"
@@ -1397,7 +1397,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer4"
-     inkscape:label="Sphere Top">
+     inkscape:label="Sphere Top"
+     style="display:none">
     <g
        transform="translate(-19.789374,142.36049)"
        style="display:inline"
@@ -1418,5 +1419,35 @@
          d="m 187.12755,1.9713871 -5.59375,16.7187499 4.03125,1.3125 5.59375,-16.6874999 -4.03125,-1.34375 z"
          sodipodi:nodetypes="ccccc" />
     </g>
+  </g>
+  <g
+     inkscape:label="Mooring Top"
+     id="g3399"
+     inkscape:groupmode="layer">
+    <g
+       id="g3401"
+       inkscape:label="Top Sphere"
+       style="display:inline"
+       transform="matrix(0.58823529,0,0,0.58823529,53.392281,155.71309)">
+      <g
+         id="g3403"
+         transform="translate(-11.273124,-35.911118)">
+        <path
+           style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           id="path3405"
+           d="m 206,5.6875 c -9.35666,0 -17,7.643343 -17,17 0,9.356657 7.64334,17 17,17 9.35666,0 17,-7.643343 17,-17 0,-9.356657 -7.64334,-16.9999999 -17,-17 z m 0,5 c 6.65134,0 12,5.348657 12,12 0,6.651343 -5.34866,12 -12,12 -6.65134,0 -12,-5.348657 -12,-12 0,-6.651343 5.34866,-12 12,-12 z"
+           sodipodi:nodetypes="csssccsssc" />
+      </g>
+    </g>
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="path3409"
+       sodipodi:cx="76.125"
+       sodipodi:cy="82.125"
+       sodipodi:rx="3.375"
+       sodipodi:ry="3.375"
+       d="m 79.5,82.125 a 3.375,3.375 0 1 1 -6.75,0 3.375,3.375 0 1 1 6.75,0 z"
+       transform="matrix(0.74074074,0,0,0.74074074,107.9694,98.534567)" />
   </g>
 </svg>

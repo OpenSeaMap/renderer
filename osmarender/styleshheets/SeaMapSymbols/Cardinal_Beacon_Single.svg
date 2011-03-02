@@ -13,7 +13,10 @@
    id="svg2"
    inkscape:version="0.47 r22583"
    sodipodi:docname="Cardinal_Beacon_Single.svg"
-   style="display:inline">
+   style="display:inline"
+   inkscape:export-filename="/Users/mherring/boatsw/oseam/josm/plugins/smed/plugs/oseam/src/images/beacon_black;red;black.png"
+   inkscape:export-xdpi="45"
+   inkscape:export-ydpi="45">
   <metadata
      id="metadata2913">
     <rdf:RDF>
@@ -22,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -178,21 +181,5 @@
        style="fill:#000000;fill-opacity:1;stroke:none"
        d="m 145.84267,98.58909 0,-9.32381 4.2221,0 4.2221,0 0,9.32381 0,9.3238 -4.2221,0 -4.2221,0 0,-9.3238 z"
        id="path3819" />
-    <g
-       style="display:inline"
-       id="g2936"
-       transform="translate(-9.7433819,-40.041367)">
-      <path
-         transform="translate(-40,-40)"
-         style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
-         id="path2558-0"
-         d="m 197.875,108.625 0,17.71875 4.25,0 0,-17.71875 -4.25,0 z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <path
-       style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline"
-       id="path27763"
-       d="m 164.81067,-14.674966 c 0,8.003999 -6.47999,14.45601906 -14.48399,14.45601906 -8.004,0 -14.45381,-6.52709906 -14.45381,-14.53109806 0,-8.004 6.39203,-14.5 14.39603,-14.5 8.004,0 14.54177,6.571079 14.54177,14.575079 z m 0.0184,28.924917 c 0,8.004 -6.496,14.500004 -14.5,14.500004 -8.004,0 -14.5,-6.496004 -14.5,-14.500004 0,-8.004001 6.496,-14.50000094 14.5,-14.50000094 8.004,0 14.5,6.49599994 14.5,14.50000094 z"
-       sodipodi:nodetypes="csssccsssc" />
   </g>
 </svg>

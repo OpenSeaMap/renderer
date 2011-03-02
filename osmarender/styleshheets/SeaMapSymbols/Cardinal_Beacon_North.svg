@@ -167,21 +167,5 @@
        style="fill:#ffd400;fill-opacity:1;stroke:none"
        d="m 145.52015,93.927572 0,-13.93222 4.47821,0 4.47822,0 0,13.93222 0,13.932218 -4.47822,0 -4.47821,0 0,-13.932218 z"
        id="path3745" />
-    <g
-       style="display:inline"
-       id="g2936"
-       transform="translate(-9.7812028,-40.061535)">
-      <path
-         transform="translate(-40,-40)"
-         style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
-         id="path2558-0"
-         d="m 197.875,108.625 0,17.71875 4.25,0 0,-17.71875 -4.25,0 z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <path
-       style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline"
-       id="path27763-2"
-       d="m 150.33524,-3.9816943 -16.27838,32.5998443 32.59125,0.0025 -16.31287,-32.6023703 0,2.6e-5 z m -16.28173,0.484611 16.29219,-36.6176497 16.33067,36.6161867 -32.62286,0.0015 0,-3.7e-5 z"
-       sodipodi:nodetypes="cccccccccc" />
   </g>
 </svg>

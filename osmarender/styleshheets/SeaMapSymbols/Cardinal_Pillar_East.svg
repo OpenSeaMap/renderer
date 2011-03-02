@@ -190,26 +190,5 @@
        style="fill:#ffd400;fill-opacity:1"
        d="m 159.85752,91.03249 c -4.81904,-1.6539 -8.75096,-3.06438 -8.73758,-3.13439 0.0455,-0.23835 13.83584,-30.86757 13.96142,-31.00931 0.1216,-0.13725 11.00543,3.38536 11.30947,3.66037 0.10923,0.0988 -6.10694,28.55493 -7.23055,33.099757 -0.0583,0.23572 -0.20381,0.42005 -0.3234,0.40962 -0.1196,-0.0104 -4.16031,-1.37214 -8.97936,-3.026047 z"
        id="path3196" />
-    <path
-       sodipodi:nodetypes="cccc"
-       d="m 188.97515,3.0284101 -4.7875,-35.9750001 30.5875,10.2376 -25.8,25.7374001 z"
-       id="path3149"
-       style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline" />
-    <path
-       style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline"
-       id="path27763-23"
-       d="m 185.3423,-37.140759 25.8,-25.7625 5.1375,36.1125 -30.9375,-10.35 z"
-       sodipodi:nodetypes="cccc" />
-    <g
-       style="display:inline"
-       id="g2870"
-       transform="translate(-9.9469409,-39.888181)">
-      <path
-         transform="translate(-40,-40)"
-         style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
-         id="path27763"
-         d="m 237.075,81.89375 -5.59375,16.71875 4.03125,1.3125 5.59375,-16.6875 -4.03125,-1.34375 z m -14.48135,-8.400002 0,0 z m 9.1251,-2.4875 0,0 z"
-         sodipodi:nodetypes="ccccccccc" />
-    </g>
   </g>
 </svg>
