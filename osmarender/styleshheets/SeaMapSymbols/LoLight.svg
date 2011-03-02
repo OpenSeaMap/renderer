@@ -13,7 +13,10 @@
    id="svg2"
    inkscape:version="0.47 r22583"
    sodipodi:docname="LoLight.svg"
-   style="display:inline">
+   style="display:inline"
+   inkscape:export-filename="/Users/mherring/Desktop/LoLight.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <metadata
      id="metadata2913">
     <rdf:RDF>
@@ -40,7 +43,7 @@
      id="namedview2911"
      showgrid="true"
      inkscape:zoom="11.879394"
-     inkscape:cx="156.32003"
+     inkscape:cx="140.74685"
      inkscape:cy="189.49357"
      inkscape:window-x="1440"
      inkscape:window-y="0"
@@ -626,7 +629,7 @@
         <path
            d="m 128.83138,178.58872 8.5124,-24.8 -20.91245,-14.875 25.51245,0 8.15,-24.4625 7.8001,24.4625 25.8624,0 -20.9,15.225 7.8001,24.45 -20.5626,-15.225 -21.2624,15.225 z"
            id="path12984-3"
-           style="fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           style="fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-opacity:1"
            sodipodi:nodetypes="ccccccccccc" />
       </g>
     </g>
@@ -640,5 +643,15 @@
          id="tspan4428"
          x="143.44165"
          y="170.09132">!</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial Black;-inkscape-font-specification:'Arial Black, Heavy'"
+       x="109.26482"
+       y="196.52367"
+       id="text2897"><tspan
+         sodipodi:role="line"
+         id="tspan2899"
+         x="109.26482"
+         y="196.52367">Check Position</tspan></text>
   </g>
 </svg>
