@@ -330,47 +330,61 @@
 
 	<!-- Buoy -->
 
-	<rule e="node" k="seamark:buoy_cardinal:category" v="*">
-		<rule e="node" k="seamark:buoy_cardinal:category" v="north">
-			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
-					<symbol ref="Cardinal_Pillar_North" position="center" />
-				</rule>
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
-					<symbol ref="Cardinal_Spar_North" position="center" />
-				</rule>
+	<rule e="node" k="seamark:buoy_cardinal:category" v="north">
+		<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
+			<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
+				<symbol ref="Cardinal_Pillar_North" position="center" />
+			</rule>
+			<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
+				<symbol ref="Cardinal_Spar_North" position="center" />
 			</rule>
 		</rule>
-		<rule e="node" k="seamark:buoy_cardinal:category" v="east">
-			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
-					<symbol ref="Cardinal_Pillar_East" position="center" />
-				</rule>
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
-					<symbol ref="Cardinal_Spar_East" position="center" />
-				</rule>
+		<else>
+			<symbol ref="Cardinal_Pillar_North" position="center" />
+		</else>
+		<symbol ref="Top_North_Buoy" position="center" />
+	</rule>
+	<rule e="node" k="seamark:buoy_cardinal:category" v="east">
+		<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
+			<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
+				<symbol ref="Cardinal_Pillar_East" position="center" />
+			</rule>
+			<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
+				<symbol ref="Cardinal_Spar_East" position="center" />
 			</rule>
 		</rule>
-		<rule e="node" k="seamark:buoy_cardinal:category" v="south">
-			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
-					<symbol ref="Cardinal_Pillar_South" position="center" />
-				</rule>
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
-					<symbol ref="Cardinal_Spar_South" position="center" />
-				</rule>
+		<else>
+			<symbol ref="Cardinal_Pillar_East" position="center" />
+		</else>
+		<symbol ref="Top_East_Buoy" position="center" />
+	</rule>
+	<rule e="node" k="seamark:buoy_cardinal:category" v="south">
+		<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
+			<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
+				<symbol ref="Cardinal_Pillar_South" position="center" />
+			</rule>
+			<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
+				<symbol ref="Cardinal_Spar_South" position="center" />
 			</rule>
 		</rule>
-		<rule e="node" k="seamark:buoy_cardinal:category" v="west">
-			<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
-					<symbol ref="Cardinal_Pillar_West" position="center" />
-				</rule>
-				<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
-					<symbol ref="Cardinal_Spar_West" position="center" />
-				</rule>
+		<else>
+			<symbol ref="Cardinal_Pillar_South" position="center" />
+		</else>
+		<symbol ref="Top_South_Buoy" position="center" />
+	</rule>
+	<rule e="node" k="seamark:buoy_cardinal:category" v="west">
+		<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
+			<rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
+				<symbol ref="Cardinal_Pillar_West" position="center" />
+			</rule>
+			<rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
+				<symbol ref="Cardinal_Spar_West" position="center" />
 			</rule>
 		</rule>
+		<else>
+			<symbol ref="Cardinal_Pillar_West" position="center" />
+		</else>
+		<symbol ref="Top_West_Buoy" position="center" />
 	</rule>
 
 	<!-- Beacon -->
@@ -388,6 +402,7 @@
 			<else>
 				<symbol ref="Cardinal_Beacon_North" position="center" />
 			</else>
+		<symbol ref="Top_North_Beacon" position="center" />
 		</rule>
 		<rule e="node" k="seamark:beacon_cardinal:category" v="east">
 			<rule e="node" k="seamark:beacon_cardinal:shape" v="*">
@@ -401,6 +416,7 @@
 			<else>
 				<symbol ref="Cardinal_Beacon_East" position="center" />
 			</else>
+		<symbol ref="Top_East_Beacon" position="center" />
 		</rule>
 		<rule e="node" k="seamark:beacon_cardinal:category" v="south">
 			<rule e="node" k="seamark:beacon_cardinal:shape" v="*">
@@ -414,6 +430,7 @@
 			<else>
 				<symbol ref="Cardinal_Beacon_South" position="center" />
 			</else>
+		<symbol ref="Top_South_Beacon" position="center" />
 		</rule>
 		<rule e="node" k="seamark:beacon_cardinal:category" v="west">
 			<rule e="node" k="seamark:beacon_cardinal:shape" v="*">
@@ -427,6 +444,7 @@
 			<else>
 				<symbol ref="Cardinal_Beacon_West" position="center" />
 			</else>
+		<symbol ref="Top_West_Beacon" position="center" />
 		</rule>
 	</rule>
 
@@ -434,15 +452,19 @@
 
 	<rule e="node" k="seamark:light_float:colour" v="black;yellow">
 		<symbol ref="Cardinal_Float_North" position="center" />
+		<symbol ref="Top_North_Float" position="center" />
 	</rule>
 	<rule e="node" k="seamark:light_float:colour" v="black;yellow;black">
 		<symbol ref="Cardinal_Float_East" position="center" />
+		<symbol ref="Top_East_Float" position="center" />
 	</rule>
 	<rule e="node" k="seamark:light_float:colour" v="yellow;black">
 		<symbol ref="Cardinal_Float_South" position="center" />
+		<symbol ref="Top_South_Float" position="center" />
 	</rule>
 	<rule e="node" k="seamark:light_float:colour" v="yellow;black;yellow">
 		<symbol ref="Cardinal_Float_West" position="center" />
+		<symbol ref="Top_West_Float" position="center" />
 	</rule>
 
 	<!--Safe water Buoys -->
@@ -527,6 +549,7 @@
 		<rule e="node" k="seamark:buoy_isolated_danger:shape" v="spar">
 			<symbol ref="Cardinal_Spar_Single" position="center" />
 		</rule>
+		<symbol ref="Top_Isol_Buoy" position="center" />
 	</rule>
 
 	<!-- Isolated Danger Beacons -->
@@ -538,12 +561,14 @@
 		<else>
 			<symbol ref="Cardinal_Beacon_Single" position="center" />
 		</else>
+		<symbol ref="Top_Isol_Beacon" position="center" />
 	</rule>
 
 	<!-- Isolated Danger Light Float -->
 
 	<rule e="node" k="seamark:light_float:colour" v="black;red;black">
 		<symbol ref="Cardinal_Float_Single" position="center" />
+		<symbol ref="Top_Isol_Float" position="center" />
 	</rule>
 
 	<!-- Topmarks -->

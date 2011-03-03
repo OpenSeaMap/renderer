@@ -7,8 +7,6 @@
 <rules data="data.osm" scale="1" symbolScale="0.04" minimumMapWidth="0.5" minimumMapHeight="0.5" showScale="no" showGrid="no"
 	showBorder="no" showLicense="no" showZoomControls="no" symbolsDir="../../../OpenSeaMap-styles/SeaMapSymbols" meter2pixel="0.1375">
 
-<rule e="node" k="seamark:fixme" v="~">
-
 	<!-- Lateral Buoys -->
 
 	<rule e="node" k="seamark:buoy_lateral:category" v="*">
@@ -353,6 +351,7 @@
 		<else>
 			<symbol ref="Cardinal_Pillar_North" position="center" />
 		</else>
+		<symbol ref="Top_North_Buoy" position="center" />
 	</rule>
 	<rule e="node" k="seamark:buoy_cardinal:category" v="east">
 		<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
@@ -366,6 +365,7 @@
 		<else>
 			<symbol ref="Cardinal_Pillar_East" position="center" />
 		</else>
+		<symbol ref="Top_East_Buoy" position="center" />
 	</rule>
 	<rule e="node" k="seamark:buoy_cardinal:category" v="south">
 		<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
@@ -379,6 +379,7 @@
 		<else>
 			<symbol ref="Cardinal_Pillar_South" position="center" />
 		</else>
+		<symbol ref="Top_South_Buoy" position="center" />
 	</rule>
 	<rule e="node" k="seamark:buoy_cardinal:category" v="west">
 		<rule e="node" k="seamark:buoy_cardinal:shape" v="*">
@@ -392,6 +393,7 @@
 		<else>
 			<symbol ref="Cardinal_Pillar_West" position="center" />
 		</else>
+		<symbol ref="Top_West_Buoy" position="center" />
 	</rule>
 
 	<!-- Beacon -->
@@ -409,6 +411,7 @@
 			<else>
 				<symbol ref="Cardinal_Beacon_North" position="center" />
 			</else>
+		<symbol ref="Top_North_Beacon" position="center" />
 		</rule>
 		<rule e="node" k="seamark:beacon_cardinal:category" v="east">
 			<rule e="node" k="seamark:beacon_cardinal:shape" v="*">
@@ -422,6 +425,7 @@
 			<else>
 				<symbol ref="Cardinal_Beacon_East" position="center" />
 			</else>
+		<symbol ref="Top_East_Beacon" position="center" />
 		</rule>
 		<rule e="node" k="seamark:beacon_cardinal:category" v="south">
 			<rule e="node" k="seamark:beacon_cardinal:shape" v="*">
@@ -435,6 +439,7 @@
 			<else>
 				<symbol ref="Cardinal_Beacon_South" position="center" />
 			</else>
+		<symbol ref="Top_South_Beacon" position="center" />
 		</rule>
 		<rule e="node" k="seamark:beacon_cardinal:category" v="west">
 			<rule e="node" k="seamark:beacon_cardinal:shape" v="*">
@@ -448,6 +453,7 @@
 			<else>
 				<symbol ref="Cardinal_Beacon_West" position="center" />
 			</else>
+		<symbol ref="Top_West_Beacon" position="center" />
 		</rule>
 	</rule>
 
@@ -455,15 +461,19 @@
 
 	<rule e="node" k="seamark:light_float:colour" v="black;yellow">
 		<symbol ref="Cardinal_Float_North" position="center" />
+		<symbol ref="Top_North_Float" position="center" />
 	</rule>
 	<rule e="node" k="seamark:light_float:colour" v="black;yellow;black">
 		<symbol ref="Cardinal_Float_East" position="center" />
+		<symbol ref="Top_East_Float" position="center" />
 	</rule>
 	<rule e="node" k="seamark:light_float:colour" v="yellow;black">
 		<symbol ref="Cardinal_Float_South" position="center" />
+		<symbol ref="Top_South_Float" position="center" />
 	</rule>
 	<rule e="node" k="seamark:light_float:colour" v="yellow;black;yellow">
 		<symbol ref="Cardinal_Float_West" position="center" />
+		<symbol ref="Top_West_Float" position="center" />
 	</rule>
 
 	<!--Safe water Buoys -->
@@ -552,6 +562,7 @@
 		<rule e="node" k="seamark:buoy_isolated_danger:shape" v="spar">
 			<symbol ref="Cardinal_Spar_Single" position="center" />
 		</rule>
+		<symbol ref="Top_Isol_Buoy" position="center" />
 	</rule>
 
 	<!-- Isolated Danger Beacons -->
@@ -563,16 +574,18 @@
 		<else>
 			<symbol ref="Cardinal_Beacon_Single" position="center" />
 		</else>
+		<symbol ref="Top_Isol_Beacon" position="center" />
 	</rule>
 
 	<!-- Isolated Danger Light Float -->
 
 	<rule e="node" k="seamark:light_float:colour" v="black;red;black">
 		<symbol ref="Cardinal_Float_Single" position="center" />
+		<symbol ref="Top_Isol_Float" position="center" />
 	</rule>
 
 	<!-- Topmarks -->
-	<!--Shape = Cylinder*************************************************************************************-->
+	<!--Shape = Cylinder-->
 	<rule e="node" k="seamark:topmark:shape" v="cylinder">
 		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="pillar|spar">
 			<rule e="node" k="seamark:topmark:colour" v="red">
@@ -671,7 +684,7 @@
 		</rule>
 	</rule>
 
-   <!--Shape = Cone, point up********************************************************************************-->
+   <!--Shape = Cone, point up-->
    <rule e="node" k="seamark:topmark:shape" v="cone, point up|cone">
 		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="pillar|spar">
 			<rule e="node" k="seamark:topmark:colour" v="red">
@@ -1027,9 +1040,8 @@
 		<light k="seamark:light:9" layer="-3" />
 	</rule>
 
-</rule>
 <rule e="node" k="seamark:fixme" v="*">
-<symbol ref="LoLight" position="center" />
+<symbol ref="LoLcaption" position="center" />
 </rule>
 
 	<!-- Light characters -->
