@@ -1007,7 +1007,7 @@
 		<pathText k="seamark:transit_line" class="line-character" startOffset="50%" dy="-1.5" />
 	</rule>
 
-<rule e="node" k="seamark:fixme" v="*">
+<rule e="node" k="seamark:fixme" v="please_fix_position">
 <symbol ref="LoLcaption" position="center" />
 </rule>
 

@@ -1036,7 +1036,7 @@
 		<light k="seamark:light:9" layer="-3" />
 	</rule>
 
-<rule e="node" k="seamark:fixme" v="*">
+<rule e="node" k="seamark:fixme" v="please_fix_position">
 <symbol ref="LoLcaption" position="center" />
 </rule>
 
