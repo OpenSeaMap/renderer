@@ -2,20 +2,10 @@
 <?xml-stylesheet type="text/xsl" href="osmarender.xsl"?>
 
 
-<!-- OpenSeaMap Rules File for zoom level 18 -->
+<!-- OpenSeaMap Rules File for zoom level 17 -->
 
-<rules data="data.osm"
-	scale="1"
-	symbolScale="0.03"
-	minimumMapWidth="0.5"
-	minimumMapHeight="0.5"
-	showScale="no"
-	showGrid="no"
-	showBorder="no"
-	showLicense="no"
-	showZoomControls="no"
-	symbolsDir="../../../OpenSeaMap-styles/SeaMapSymbols"
-	meter2pixel="0.1375">
+<rules data="data.osm" scale="1" symbolScale="0.05" minimumMapWidth="0.5" minimumMapHeight="0.5" showScale="no" showGrid="no"
+	showBorder="no" showLicense="no" showZoomControls="no" symbolsDir="../SeaMapSymbols" meter2pixel="0.1375">
 
 	<!-- Lateral Buoys -->
 
@@ -540,6 +530,10 @@
 				<symbol ref="Special_Purpose_Barrel" position="center" />
 			</rule>
 		</rule>
+		<else>
+			<!-- default to shape = pillar -->
+			<symbol ref="Special_Purpose_Pillar" position="center" />
+		</else>
 	</rule>
 
 	<!-- Special Purpose Floats -->
@@ -1108,24 +1102,24 @@
 				<rule e="node" k="seamark:light:multiple" v="*">
 					<rule e="node" k="seamark:light:period" v="*">
 						<rule e="node" k="seamark:light:colour" v="red">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/><tag k="seamark:light:character"/>.R.<tag k="seamark:light:period"/>s(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.R.<tag k="seamark:light:period"/>s(<tag k="seamark:light:category"/>)</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="green">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/><tag k="seamark:light:character"/>.G.<tag k="seamark:light:period"/>s(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.G.<tag k="seamark:light:period"/>s(<tag k="seamark:light:category"/>)</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="white">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/><tag k="seamark:light:character"/><tag k="seamark:light:period"/>s(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/><tag k="seamark:light:period"/>s(<tag k="seamark:light:category"/>)</text>
 						</rule>
 					</rule>
 					<else>
 						<rule e="node" k="seamark:light:colour" v="red">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/><tag k="seamark:light:character"/>.R(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.R(<tag k="seamark:light:category"/>)</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="green">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/><tag k="seamark:light:character"/>.G(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.G(<tag k="seamark:light:category"/>)</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="white">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/><tag k="seamark:light:character"/>(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>(<tag k="seamark:light:category"/>)</text>
 						</rule>
 					</else>
 				</rule>
@@ -1158,24 +1152,24 @@
 				<rule e="node" k="seamark:light:multiple" v="*">
 					<rule e="node" k="seamark:light:period" v="*">
 						<rule e="node" k="seamark:light:colour" v="red">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/><tag k="seamark:light:character"/>.R.<tag k="seamark:light:period"/>s</text>
+							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.R.<tag k="seamark:light:period"/>s</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="green">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/><tag k="seamark:light:character"/>.G.<tag k="seamark:light:period"/>s</text>
+							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.G.<tag k="seamark:light:period"/>s</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="white">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/><tag k="seamark:light:character"/><tag k="seamark:light:period"/>s</text>
+							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/><tag k="seamark:light:period"/>s</text>
 						</rule>
 					</rule>
 					<else>
 						<rule e="node" k="seamark:light:colour" v="red">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/><tag k="seamark:light:character"/>.R</text>
+							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.R</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="green">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/><tag k="seamark:light:character"/>.G</text>
+							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.G</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="white">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/><tag k="seamark:light:character"/></text>
+							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/></text>
 						</rule>
 					</else>
 				</rule>
@@ -1212,33 +1206,33 @@
   <rule e="node" k="seamark:type" v="signal_station_traffic">
     <symbol ref="Signal_Station" position="center" />
     <rule e="node" k="seamark:signal_station_traffic:category" v="*">
-      <text class="light-character" dx="1" dy="0">SS(<tag k="seamark:signal_station_traffic:category"/>)</text>
+      <text class="light-character" dx="1.5" dy="0">SS(<tag k="seamark:signal_station_traffic:category"/>)</text>
     </rule>
     <else>
-      <text class="light-character" dx="1" dy="0">SS</text>
+      <text class="light-character" dx="1.5" dy="0">SS</text>
     </else>
     <rule e="node" k="seamark:signal_station_traffic:channel" v="*">
-      <text class="light-character" dx="1" dy="2">Ch.<tag k="seamark:signal_station_traffic:channel"/></text>
+      <text class="light-character" dx="1.5" dy="2">Ch.<tag k="seamark:signal_station_traffic:channel"/></text>
     </rule>
   </rule>
   
   <rule e="node" k="seamark:type" v="signal_station_warning">
     <symbol ref="Signal_Station" position="center" />
     <rule e="node" k="seamark:signal_station_warning:category" v="*">
-      <text class="light-character" dx="1" dy="0">SS(<tag k="seamark:signal_station_warning:category"/>)</text>
+      <text class="light-character" dx="1.5" dy="0">SS(<tag k="seamark:signal_station_warning:category"/>)</text>
     </rule>
     <else>
-      <text class="light-character" dx="1" dy="0">SS</text>
+      <text class="light-character" dx="1.5" dy="0">SS</text>
     </else>
     <rule e="node" k="seamark:signal_station_warning:channel" v="*">
-      <text class="light-character" dx="1" dy="2">Ch.<tag k="seamark:signal_station_warning:channel"/></text>
+      <text class="light-character" dx="1.5" dy="2">Ch.<tag k="seamark:signal_station_warning:channel"/></text>
     </rule>
   </rule>
   
 	<!-- Names -->
 
 	<rule e="node" k="seamark:name" v="*">
-		<text k="seamark:name" class="buoy-name" dx="2" dy="-2" />
+		<text k="seamark:name" class="buoy-name" dx="2.5" dy="-2" />
 	</rule>
 	  
 	<!-- Leading & Transit Lines -->
@@ -1253,9 +1247,8 @@
 		<pathText k="seamark:transit_line" class="line-character" startOffset="50%" dy="-1.0" />
 	</rule>
 
-
 	<!-- Shoreline
-
+	
 	<rule e="way" k="natural" v="coastline">
 		<line class="coast" layer="-4" />
 	</rule>
@@ -1266,23 +1259,11 @@
 
 	<rule e="way" k="waterway" v="riverbank">
 		<line class="coast" layer="-4" />
-	</rule>
--->
+	</rule> -->
 
 	<!--Harbours -->
 
 	<!--<rule e="node" k="leisure" v="marina"> <symbol ref="Marina" position="center"/> <text k ='name' class ='harbour' dx='5'/> </rule> -->
-
-	<!--<rule e="way" k="man_made" v="pier">
-		<line class="pier" layer="-4" />
-		<pathText k="name" class="harbour" text-anchor="left" dy="0.33px" dx="10px" startOffset="30%" />
-	</rule>
--->
-	
-	<rule e="way" k="man_made" v="breakwater">
-		<line class="breakwater-base" layer="-5" />
-		<line class="breakwater-overlay" layer="-5" />
-	</rule>
 
 	<rule e="node" k="leisure" v="slipway">
 		<symbol ref="Slipway" position="center" />
@@ -1294,22 +1275,32 @@
 
 	<rule e="node" k="radio" v="coast_radio_station">
 		<symbol ref="radio" position="center" />
-		<text k='name' class='buoy-name' dy='-2' dx='4' />
+		<text k='name' class='buoy-name' dy='-2' dx='5' />
+	</rule>
+
+	<!--<rule e="way" k="man_made" v="pier">
+		<line class="pier" layer="-4" />
+		<pathText k="name" class="harbour" text-anchor="left" dy="0.33px" dx="10px" startOffset="30%" />
+	</rule>-->
+
+	<rule e="way" k="man_made" v="breakwater">
+		<line class="breakwater-base" layer="-5" />
+		<line class="breakwater-overlay" layer="-5" />
 	</rule>
 
 	<!--harbour keys -->
 	<rule e="node" k="harbour" v="harbour_master">
-		<symbol ref="harbour_master" position="center" />
-	</rule>
-   
-	<rule e="node" k="harbour|waterway" v="fuel">
-		<symbol ref="Fuel" position="center" />
+	   <symbol ref="harbour_master" position="center" />
 	</rule>
 
-	<rule e="node" k="harbour" v="dolphin">
-	   <circle r="0.25" class="harbour_dolphin" />
+	<rule e="node" k="harbour|waterway" v="fuel">
+	   <symbol ref="Fuel" position="center" />
 	</rule>
    
+	<rule e="node" k="harbour" v="dolphin">
+		<circle r="0.4" class="harbour_dolphin" />
+	</rule>
+
 	<!--Waterway keys -->
 	<rule e="node" k="waterway" v="no_entry">
 		<symbol ref="No_Entry" position="center" />
@@ -1321,18 +1312,18 @@
 
 	<rule e="node" k="waterway:maxheight" v="*">
 		<symbol ref="Max_Height" position="center" />
-		<text class="waterway_sign" dx="1.5" dy="0.5">
+		<text class="waterway_sign" dx="2.5" dy="0.5">
 			<tag k="waterway:maxheight" />m
 		</text>
 	</rule>
    
 	<rule e="node" k="waterway:mindepth" v="*">
 		<symbol ref="Min_Depth" position="center" />
-		<text class="waterway_sign" dx="1.5" dy="0.5">
+		<text class="waterway_sign" dx="2.5" dy="0.5">
 			<tag k="waterway:mindepth" />m
 		</text>
 	</rule>
-
+   
 	<rule e="node" k="waterway" v="lock_gate">
 		<symbol ref="Lock_Gate_Single" position="center" />
 	</rule>
@@ -1352,7 +1343,7 @@
 			.buoy-name {
 				font-family: "DejaVu Sans";
 				font-weight: bold;
-				font-size: 2px;
+				font-size: 2.0px;
 				text-anchor: right;
 			}
 
@@ -1377,8 +1368,15 @@
 				text-anchor: right;
 			}
 
+			.waterway_sign {
+				font-family: "DejaVu Sans";
+				font-weight: normal;
+				font-size: 2.0px;
+				text-anchor: right;
+			}
+
 			.harbour_dolphin {
-				stroke-width: 0.4px;
+				stroke-width: 0.2px;
 				stroke: #000000;
 				fill: none;
 			}
@@ -1389,13 +1387,6 @@
 				font-size: 1.5px;
 				stroke: #808080;
 				stroke-miterlimit: 1.5;
-			}
-
-			.waterway_sign {
-				font-family: "DejaVu Sans";
-				font-weight: normal;
-				font-size: 1.5px;
-				text-anchor: right;
 			}
 
 			.pier {
@@ -1445,33 +1436,6 @@
 				stroke: #000000;
 			}
 			
-			.arc-line-red {
-			stroke-width: 2.0px;
-			stroke-linecap: butt;
-			stroke-linejoin: round;
-			fill: none;
-			fill-opacity: 0;
-			stroke: #F40000;
-			}
-
-			.arc-line-green {
-			stroke-width: 2.0px;
-			stroke-linecap: butt;
-			stroke-linejoin: round;
-			fill: none;
-			fill-opacity: 0;
-			stroke: #00F400;
-			}
-
-			.arc-line-yellow {
-			stroke-width: 2.0px;
-			stroke-linecap: butt;
-			stroke-linejoin: round;
-			fill: none;
-			fill-opacity: 0;
-			stroke: #F4F400;
-			}
-
 			.coast {
 				stroke-width: 0.5px;
 				fill: none;

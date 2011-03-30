@@ -2,10 +2,10 @@
 <?xml-stylesheet type="text/xsl" href="osmarender.xsl"?>
 
 
-<!-- OpenSeaMap Rules File for zoom level 14 -->
+<!-- OpenSeaMap Rules File for zoom level 12 -->
 
-<rules data="data.osm" scale="1" symbolScale="0.1" minimumMapWidth="0.5" minimumMapHeight="0.5" showScale="no" showGrid="no"
-	showBorder="no" showLicense="no" showZoomControls="no" symbolsDir="../../../OpenSeaMap-styles/SeaMapSymbols" meter2pixel="0.1375">
+<rules data="data.osm" scale="1" symbolScale="0.5" minimumMapWidth="0.5" minimumMapHeight="0.5" showScale="no" showGrid="no"
+	showBorder="no" showLicense="no" showZoomControls="no" symbolsDir="../SeaMapSymbols" meter2pixel="0.1375">
 
 	<!-- Lateral Buoys -->
 
@@ -186,126 +186,116 @@
 
 	<!-- Lateral Beacons -->
 
-	<!-- Port Beacons -->
+	<rule e="node" k="seamark:beacon_lateral:category" v="*">
 
-	<rule e="node" k="seamark:beacon_lateral:category" v="port">
+		<!-- Port Beacons -->
 
-		<!-- IALA-A -->
+		<rule e="node" k="seamark:beacon_lateral:category" v="port">
 
-		<rule e="node" k="seamark:beacon_lateral:colour" v="red">
-			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-				<symbol ref="Lateral_Tower_Red" position="center" />
+			<!-- IALA-A -->
+
+			<rule e="node" k="seamark:beacon_lateral:colour" v="red">
+				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+					<symbol ref="Lateral_Tower_Red" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Lateral_Beacon_Red" position="center" />
+				</else>
 			</rule>
-			<else>
-				<symbol ref="Lateral_Beacon_Red" position="center" />
-			</else>
+
+			<!-- IALA-B -->
+
+			<rule e="node" k="seamark:beacon_lateral:colour" v="green">
+				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+					<symbol ref="Lateral_Tower_Green" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Lateral_Beacon_Green" position="center" />
+				</else>
+			</rule>
 		</rule>
 
-		<!-- IALA-B -->
+		<!-- Starboard Beacons -->
 
-		<rule e="node" k="seamark:beacon_lateral:colour" v="green">
-			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-				<symbol ref="Lateral_Tower_Green" position="center" />
+		<rule e="node" k="seamark:beacon_lateral:category" v="starboard">
+
+			<!-- IALA-A -->
+
+			<rule e="node" k="seamark:beacon_lateral:colour" v="green">
+				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+					<symbol ref="Lateral_Tower_Green" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Lateral_Beacon_Green" position="center" />
+				</else>
 			</rule>
-			<else>
-				<symbol ref="Lateral_Beacon_Green" position="center" />
-			</else>
+
+			<!-- IALA-B -->
+
+			<rule e="node" k="seamark:beacon_lateral:colour" v="red">
+				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+					<symbol ref="Lateral_Tower_Red" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Lateral_Beacon_Red" position="center" />
+				</else>
+			</rule>
 		</rule>
 
-		<!-- Perch -->
+		<!-- Referred Channel Port Beacons -->
 
-		<rule e="node" k="seamark:beacon_lateral:shape" v="perch">
-			<symbol ref="Lateral_Perch_Port" position="center" />
+		<rule e="node" k="seamark:beacon_lateral:category" v="preferred_channel_port">
+
+			<!-- IALA-A -->
+
+			<rule e="node" k="seamark:beacon_lateral:colour" v="red;green;red">
+				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+					<symbol ref="Lateral_Tower_Red_Green_Red" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Lateral_Beacon_Red_Green_Red" position="center" />
+				</else>
+			</rule>
+
+			<!-- IALA-B -->
+
+			<rule e="node" k="seamark:beacon_lateral:colour" v="green;red;green">
+				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+					<symbol ref="Lateral_Tower_Green_Red_Green" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Lateral_Beacon_Green_Red_Green" position="center" />
+				</else>
+			</rule>
+		</rule>
+
+		<!-- Preferred Channel Starboard Beacons -->
+
+		<rule e="node" k="seamark:beacon_lateral:category" v="preferred_channel_starboard">
+
+			<!-- IALA-A -->
+
+			<rule e="node" k="seamark:beacon_lateral:colour" v="green;red;green">
+				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+					<symbol ref="Lateral_Tower_Green_Red_Green" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Lateral_Beacon_Green_Red_Green" position="center" />
+				</else>
+			</rule>
+
+			<!-- IALA-B -->
+
+			<rule e="node" k="seamark:beacon_lateral:colour" v="red;green;red">
+				<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
+					<symbol ref="Lateral_Tower_Red_Green_Red" position="center" />
+				</rule>
+				<else>
+					<symbol ref="Lateral_Beacon_Red_Green_Red" position="center" />
+				</else>
+			</rule>
 		</rule>
 	</rule>
-
-	<!-- Starboard Beacons -->
-
-	<rule e="node" k="seamark:beacon_lateral:category" v="starboard">
-
-		<!-- IALA-A -->
-
-		<rule e="node" k="seamark:beacon_lateral:colour" v="green">
-			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-				<symbol ref="Lateral_Tower_Green" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Lateral_Beacon_Green" position="center" />
-			</else>
-		</rule>
-
-		<!-- IALA-B -->
-
-		<rule e="node" k="seamark:beacon_lateral:colour" v="red">
-			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-				<symbol ref="Lateral_Tower_Red" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Lateral_Beacon_Red" position="center" />
-			</else>
-		</rule>
-
-		<!-- Perch -->
-
-		<rule e="node" k="seamark:beacon_lateral:shape" v="perch">
-			<symbol ref="Lateral_Perch_Starboard" position="center" />
-		</rule>
-	</rule>
-
-	<!-- Referred Channel Port Beacons -->
-
-	<rule e="node" k="seamark:beacon_lateral:category" v="preferred_channel_port">
-
-		<!-- IALA-A -->
-
-		<rule e="node" k="seamark:beacon_lateral:colour" v="red;green;red">
-			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-				<symbol ref="Lateral_Tower_Red_Green_Red" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Lateral_Beacon_Red_Green_Red" position="center" />
-			</else>
-		</rule>
-
-		<!-- IALA-B -->
-
-		<rule e="node" k="seamark:beacon_lateral:colour" v="green;red;green">
-			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-				<symbol ref="Lateral_Tower_Green_Red_Green" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Lateral_Beacon_Green_Red_Green" position="center" />
-			</else>
-		</rule>
-	</rule>
-
-	<!-- Preferred Channel Starboard Beacons -->
-
-	<rule e="node" k="seamark:beacon_lateral:category" v="preferred_channel_starboard">
-
-		<!-- IALA-A -->
-
-		<rule e="node" k="seamark:beacon_lateral:colour" v="green;red;green">
-			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-				<symbol ref="Lateral_Tower_Green_Red_Green" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Lateral_Beacon_Green_Red_Green" position="center" />
-			</else>
-		</rule>
-
-		<!-- IALA-B -->
-
-		<rule e="node" k="seamark:beacon_lateral:colour" v="red;green;red">
-			<rule e="node" k="seamark:beacon_lateral:shape" v="tower">
-				<symbol ref="Lateral_Tower_Red_Green_Red" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Lateral_Beacon_Red_Green_Red" position="center" />
-			</else>
-		</rule>
-	</rule>
-
 
 	<!-- Lateral Light Floats -->
 
@@ -528,10 +518,6 @@
 				<symbol ref="Special_Purpose_Barrel" position="center" />
 			</rule>
 		</rule>
-		<else>
-			<!-- default to shape = pillar -->
-			<symbol ref="Special_Purpose_Pillar" position="center" />
-		</else>
 	</rule>
 
 	<!-- Special Purpose Floats -->
@@ -583,7 +569,7 @@
 	</rule>
 
 	<!-- Topmarks -->
-	<!--Shape = Cylinder-->
+
 	<rule e="node" k="seamark:topmark:shape" v="cylinder">
 		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="pillar|spar">
 			<rule e="node" k="seamark:topmark:colour" v="red">
@@ -598,17 +584,12 @@
 						<symbol ref="Top_Can_Yellow_Buoy" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:topmark:colour" v="red:white:red">
-							<symbol ref="Top_Can_Red_White_Red_Buoy" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Top_Can_Buoy" position="center" />
-						</else>
+						<symbol ref="Top_Can_Buoy" position="center" />
 					</else>
 				</else>
 			</else>
 		</rule>
-		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="can|conical">
+		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="can">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Can_Red_Buoy_Small" position="center" />
 			</rule>
@@ -621,25 +602,12 @@
 						<symbol ref="Top_Can_Yellow_Buoy_Small" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:topmark:colour" v="red:white:red">
-							<symbol ref="Top_Can_Red_White_Red_Buoy_Small" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Top_Can_Buoy_Small" position="center" />
-						</else>
+						<symbol ref="Top_Can_Buoy_Small" position="center" />
 					</else>
 				</else>
 			</else>
 		</rule>
-		<rule e="node" k="seamark:buoy_special_purpose:shape" v="barrel">
-			<rule e="node" k="seamark:topmark:colour" v="red:white:red">
-				<symbol ref="Top_Can_Red_White_Red_Barrel" position="center" />
-			</rule>
-			<else>
-				<symbol ref="Top_Can_Float" position="center" />
-			</else>
-		</rule>
-		<rule e="node" k="seamark:type" v="beacon_lateral|beacon_special_purpose">
+		<rule e="node" k="seamark:type" v="beacon_lateral">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Can_Red_Beacon" position="center" />
 			</rule>
@@ -652,12 +620,7 @@
 						<symbol ref="Top_Can_Yellow_Beacon" position="center" />
 					</rule>
 					<else>
-						<rule e="node" k="seamark:topmark:colour" v="red:white:red">
-							<symbol ref="Top_Can_Red_White_Red_Beacon" position="center" />
-						</rule>
-						<else>
-							<symbol ref="Top_Can_Beacon" position="center" />
-						</else>
+						<symbol ref="Top_Can_Beacon" position="center" />
 					</else>
 				</else>
 			</else>
@@ -682,8 +645,7 @@
 		</rule>
 	</rule>
 
-	<!--Shape = Cone, point up-->
-	<rule e="node" k="seamark:topmark:shape" v="cone, point up|cone">
+	<rule e="node" k="seamark:topmark:shape" v="cone, point up">
 		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="pillar|spar">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Cone_Red_Buoy" position="center" />
@@ -758,7 +720,6 @@
 		</rule>
 	</rule>
 
-   <!--Shape = Sphere-->
 	<rule e="node" k="seamark:topmark:shape" v="sphere">
 		<rule e="node" k="seamark:buoy_safe_water:shape" v="pillar|spar">
 			<rule e="node" k="seamark:topmark:colour" v="red">
@@ -794,7 +755,6 @@
 		</rule>
 	</rule>
 
-	<!--Shape = x-shape-->
 	<rule e="node" k="seamark:topmark:shape" v="x-shape">
 		<rule e="node" k="seamark:buoy_special_purpose:shape" v="pillar|spar">
 			<rule e="node" k="seamark:topmark:colour" v="red">
@@ -809,7 +769,7 @@
 				</else>
 			</else>
 		</rule>
-		<rule e="node" k="seamark:buoy_special_purpose:shape" v="sphere|can|conical">
+		<rule e="node" k="seamark:buoy_special_purpose:shape" v="sphere|barrel|can|conical">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_X_Red_Buoy_Small" position="center" />
 			</rule>
@@ -819,19 +779,6 @@
 				</rule>
 				<else>
 					<symbol ref="Top_X_Buoy_Small" position="center" />
-				</else>
-			</else>
-		</rule>
-		<rule e="node" k="seamark:buoy_special_purpose:shape" v="barrel">
-			<rule e="node" k="seamark:topmark:colour" v="red">
-				<symbol ref="Top_X_Red_Float" position="center" />
-			</rule>
-			<else>
-				<rule e="node" k="seamark:topmark:colour" v="yellow">
-					<symbol ref="Top_X_Yellow_Float" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Top_X_Float" position="center" />
 				</else>
 			</else>
 		</rule>
@@ -863,65 +810,29 @@
 		</rule>
 	</rule>
 
-	<!-- Radar Reflector -->
-
-	<rule e="node" k="seamark:radar_reflector" v="yes">
-		<rule e="node" k="seamark:type" v="buoy_lateral|buoy_cardinal|buoy_isolated_danger|buoy_safe_water|buoy_special_purpose">
-			<rule e="node"
-				k="seamark:buoy_lateral:shape|seamark:buoy_cardinal:shape|seamark:buoy_isolated_danger:shape|seamark:buoy_safe_water:shape|seamark:buoy_special_purpose:shape"
-				v="pillar|spar">
-				<rule e="node" k="seamark:topmark:shape" v="*">
-					<symbol ref="Radar_Reflector_355" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Radar_Reflector_305" position="center" />
-				</else>
-			</rule>
-			<else>
-				<rule e="node" k="seamark:topmark:shape" v="*">
-					<symbol ref="Radar_Reflector_305" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Radar_Reflector_250" position="center" />
-				</else>
-			</else>
-		</rule>
-		<else>
-			<rule e="node" k="seamark:type" v="beacon_lateral|beacon_cardinal|beacon_isolated_danger|beacon_safe_water|beacon_special_purpose">
-				<rule e="node" k="seamark:topmark:shape" v="*">
-					<symbol ref="Radar_Reflector_355" position="center" />
-				</rule>
-				<else>
-					<symbol ref="Radar_Reflector_280" position="center" />
-				</else>
-			</rule>
-			<else>
-				<rule e="node" k="seamark:type" v="light_float">
-					<rule e="node" k="seamark:topmark:shape" v="*">
-						<symbol ref="Radar_Reflector_320" position="center" />
-					</rule>
-					<else>
-						<symbol ref="Radar_Reflector_280" position="center" />
-					</else>
-				</rule>
-				<else>
-					<symbol ref="Radar_Reflector_355" position="center" />
-				</else>
-			</else>
-		</else>
-	</rule>
-
-	<!-- Radar Transponder -->
-
-	<rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
-		<symbol ref="Radar_Station" position="center" />
-	</rule>
-
-	<!-- Fog Signal -->
-
-	<rule e="node" k="seamark:fog_signal|seamark:fog_signal:category" v="*">
-		<symbol ref="Fog_Signal" position="center" />
-	</rule>
+  <!-- Signal Stations -->
+  
+  <rule e="node" k="seamark:type" v="signal_station_traffic">
+    <symbol ref="Signal_Station" position="center" />
+  </rule>
+  
+  <rule e="node" k="seamark:type" v="signal_station_warning">
+    <symbol ref="Signal_Station" position="center" />
+  </rule>
+  
+   <!-- Light Flares -->
+   
+   <rule e="node" k="seamark:light:colour" v="*">
+	   <rule e="node" k="seamark:light:colour" v="white">
+		   <symbol ref="Light_White_120" position="center" />
+	   </rule>
+	   <rule e="node" k="seamark:light:colour" v="red">
+		   <symbol ref="Light_Red_120" position="center" />
+	   </rule>
+	   <rule e="node" k="seamark:light:colour" v="green">
+		   <symbol ref="Light_Green_120" position="center" />
+	   </rule>
+   </rule>
 
 	<!-- Lighthouse -->
 
@@ -943,84 +854,44 @@
 		<symbol ref="Light_Minor" position="center" />
 	</rule>
 
-	<!-- Light Flares -->
-
-	<rule e="node" k="seamark:light:colour" v="*">
-		<rule e="node" k="seamark:light:colour" v="white">
-			<symbol ref="Light_White_120" position="center" />
-		</rule>
-		<rule e="node" k="seamark:light:colour" v="red">
-			<symbol ref="Light_Red_120" position="center" />
-		</rule>
-		<rule e="node" k="seamark:light:colour" v="green">
-			<symbol ref="Light_Green_120" position="center" />
-		</rule>
-	</rule> 
-
-	<!-- Light Sectors -->
-
-	<rule e="node" k="seamark:light:1" v="*">
-		<light k="seamark:light:1" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:2" v="*">
-		<light k="seamark:light:2" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:3" v="*">
-		<light k="seamark:light:3" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:4" v="*">
-		<light k="seamark:light:4" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:5" v="*">
-		<light k="seamark:light:5" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:6" v="*">
-		<light k="seamark:light:6" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:7" v="*">
-		<light k="seamark:light:7" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:8" v="*">
-		<light k="seamark:light:8" layer="-3" />
-	</rule>
-
-	<rule e="node" k="seamark:light:9" v="*">
-		<light k="seamark:light:9" layer="-3" />
-	</rule>
-
-  <!-- Signal Stations -->
-  
-  <rule e="node" k="seamark:type" v="signal_station_traffic">
-    <symbol ref="Signal_Station" position="center" />
-  </rule>
-  
-  <rule e="node" k="seamark:type" v="signal_station_warning">
-    <symbol ref="Signal_Station" position="center" />
-  </rule>
-  
-	<!-- Leading & Transit Lines -->
-
-	<rule e="way" k="seamark:leading_line" v="*">
-		<line class="leading-line" />
-		<pathText k="seamark:leading_line" class="line-character" startOffset="50%" dy="-1.5" />
-	</rule>
-
-	<rule e="way" k="seamark:transit_line" v="*">
-		<line class="transit-line" />
-		<pathText k="seamark:transit_line" class="line-character" startOffset="50%" dy="-1.5" />
-	</rule>
-
-<rule e="node" k="seamark:fixme" v="*">
-<symbol ref="LoLcaption" position="center" />
-</rule>
-
+   <!-- Light Sectors -->
+   
+   <rule e="node" k="seamark:light:1" v="*">
+	   <light k="seamark:light:1" layer="-3" />
+   </rule>
+   
+   <rule e="node" k="seamark:light:2" v="*">
+	   <light k="seamark:light:2" layer="-3" />
+   </rule>
+   
+   <rule e="node" k="seamark:light:3" v="*">
+	   <light k="seamark:light:3" layer="-3" />
+   </rule>
+   
+   <rule e="node" k="seamark:light:4" v="*">
+	   <light k="seamark:light:4" layer="-3" />
+   </rule>
+   
+   <rule e="node" k="seamark:light:5" v="*">
+	   <light k="seamark:light:5" layer="-3" />
+   </rule>
+   
+   <rule e="node" k="seamark:light:6" v="*">
+	   <light k="seamark:light:6" layer="-3" />
+   </rule>
+   
+   <rule e="node" k="seamark:light:7" v="*">
+	   <light k="seamark:light:7" layer="-3" />
+   </rule>
+   
+   <rule e="node" k="seamark:light:8" v="*">
+	   <light k="seamark:light:8" layer="-3" />
+   </rule>
+   
+   <rule e="node" k="seamark:light:9" v="*">
+	   <light k="seamark:light:9" layer="-3" />
+   </rule>
+     
 	<!-- Shoreline
 	
 	<rule e="way" k="natural" v="coastline">
@@ -1035,129 +906,25 @@
 		<line class="coast" layer="-4" />
 	</rule> -->
 
-	<!--Harbours -->
-	<!--<rule e="node" k="leisure" v="marina"> <symbol ref="Marina" position="right"/> <text k ='name' class ='harbour' dx='5'/> </rule> -->
-
-	<!--<rule e="way" k="man_made" v="pier">
-		<line class="pier" layer="-4" />
-		<pathText k="name" class="harbour" text-anchor="left" dy="0.33px" dx="10px" startOffset="30%" />
-	</rule>-->
-
-	<rule e="way" k="man_made" v="breakwater">
-		<line class="breakwater-base" layer="-5" />
-		<line class="breakwater-overlay" layer="-5" />
-	</rule>
-
-	<!--Waterway keys -->
-	<rule e="node" k="waterway" v="no_entry">
-		<symbol ref="No_Entry" position="center" />
-	</rule>
-
-	<rule e="node" k="waterway" v="turning_point">
-		<symbol ref="Turning_Point" position="center" />
-	</rule>
-
-	<rule e="node" k="waterway:maxheight" v="*">
-		<symbol ref="Max_Height" position="center" />
-		<text class="waterway_sign" dx="6" dy="2">
-			<tag k="waterway:maxheight" />m
-		</text>
-	</rule>
-   
-	<rule e="node" k="waterway:mindepth" v="*">
-		<symbol ref="Min_Depth" position="center" />
-		<text class="waterway_sign" dx="6" dy="2">
-			<tag k="waterway:mindepth" />m
-		</text>
-   </rule>
-
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
 			.map-background {
-				fill: #f8f8f8;
-				stroke: none;
+			fill: #f8f8f8;
+			stroke: none;
 			}
 
-			.buoy-name {
-				font-family: "DejaVu Sans";
-				font-weight: bold;
-				font-size: 6px;
-				text-anchor: right;
-			}
-
-			.waterway_sign {
-				font-family: "DejaVu Sans";
-				font-weight: normal;
-				font-size: 6px;
-				text-anchor: right;
-			}
 			.harbour {
-				font-family: "DejaVu Sans";
-				font-weight: bold;
-				font-size: 2px;
-				stroke: 808080;
-				stroke-miterlimit: 1.5;
+			font-family: "DejaVu Sans";
+			font-weight: normal;
+			font-size: 2px;
+			stroke: 808080;
 			}
 
-			.pier {
-				stroke-width: 2.0px;
-				stroke-linecap: butt;
-				stroke-linejoin: round;
-				fill: none;
-				fill-opacity: 0;
-				stroke: #C0C0C0;
-			}
-
-			.line-character {
-				font-family: "DejaVu Sans";
-				font-weight: normal;
-				font-size: 6.0px;
-				text-anchor: right;
-			}
-
-			.breakwater-base {
-				stroke-width: 0.5px;
-				stroke-linecap: butt;
-				stroke-linejoin: round;
-				fill: none;
-				fill-opacity: 0;
-				stroke: #808080;
-			}
-
-			.breakwater-overlay {
-				stroke-width: 1.5px;
-				stroke-dasharray: 2,2;
-				stroke-linecap: butt;
-				stroke-linejoin: round;
-				fill: none;
-				fill-opacity: 0;
-				stroke: #808080;
-			}
-
-			.leading-line {
-				stroke-width: 0.5px;
-				stroke-linecap: butt;
-				stroke-linejoin: round;
-				fill: none;
-				fill-opacity: 0;
-				stroke: #000000;
-			}
-
-			.transit-line {
-				stroke-width: 0.5px;
-				stroke-dasharray: 2,2;
-				stroke-linecap: butt;
-				stroke-linejoin: round;
-				fill: none;
-				fill-opacity: 0;
-				stroke: #000000;
-			}
-			
 			.coast {
-				stroke-width: 0.5px;
-				fill: none;
-				fill-opacity: 0;
-				stroke: #80C0C0;
+			stroke-width: 1.0px;
+			fill: none;
+			fill-opacity: 0;
+			stroke: #80C0C0;
 			}
 
 		</style>
