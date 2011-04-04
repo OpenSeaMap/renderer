@@ -4,7 +4,7 @@
 
 <!-- OpenSeaMap Rules File for zoom level 15 -->
 
-<rules data="data.osm" scale="1" symbolScale="0.09" minimumMapWidth="0.5" minimumMapHeight="0.5" showScale="no" showGrid="no"
+<rules data="../work/data.osm" scale="1" symbolScale="0.09" minimumMapWidth="0.5" minimumMapHeight="0.5" showScale="no" showGrid="no"
 	showBorder="no" showLicense="no" showZoomControls="no" symbolsDir="../SeaMapSymbols" meter2pixel="0.1375">
 
 	<!-- Lateral Buoys -->
@@ -914,17 +914,17 @@
 		<symbol ref="Radar_Station" position="center" />
 		<rule e="node" k="seamark:radar_transponder:category" v="racon">
 			<rule e="node" k="seamark:radar_transponder:group" v="*">
-					<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Racon(<tag k="seamark:radar_transponder:group" />) . . .</text>
+					<text class="signal-character" dx="-3" dy="-3.5" text-anchor="end" >Racon(<tag k="seamark:radar_transponder:group" />) . . .</text>
 			</rule>
 			<else>
-				<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Racon . . .</text>
+				<text class="signal-character" dx="-3" dy="-3.5" text-anchor="end" >Racon . . .</text>
 			</else>
 		</rule>
 		<rule e="node" k="seamark:radar_transponder:category" v="ramark">
-			<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Ramark . . .</text>
+			<text class="signal-character" dx="-3" dy="-3.5" text-anchor="end" >Ramark . . .</text>
 		</rule>
 		<rule e="node" k="seamark:radar_transponder:category" v="leading">
-			<text class="signal-character" dx="-3" dy="-3" text-anchor="end" >Leading . . .</text>
+			<text class="signal-character" dx="-3" dy="-3.5" text-anchor="end" >Leading . . .</text>
 		</rule>
 	</rule>
 
@@ -1047,49 +1047,49 @@
 		<rule e="node" k="seamark:light:group" v="*">
 			<rule e="node" k="seamark:light:period" v="*">
 				<rule e="node" k="seamark:light:colour" v="red">
-					<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:group"/>).R.<tag k="seamark:light:period"/>s</text>
+					<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:group"/>).R.<tag k="seamark:light:period"/>s</text>
 				</rule>
 				<rule e="node" k="seamark:light:colour" v="green">
-					<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:group"/>).G.<tag k="seamark:light:period"/>s</text>
+					<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:group"/>).G.<tag k="seamark:light:period"/>s</text>
 				</rule>
 				<rule e="node" k="seamark:light:colour" v="white">
 					<rule e="node" k="seamark:light:character" v="Q+LFl|VQ+LFl|UQ+LFl">
 						<rule e="node" k="seamark:light:character" v="Q+LFl">
-							<text class="light-character" dx="2" dy="0">Q(<tag k="seamark:light:group"/>)+LFl.<tag k="seamark:light:period"/>s</text>
+							<text class="light-character" dx="5" dy="0">Q(<tag k="seamark:light:group"/>)+LFl.<tag k="seamark:light:period"/>s</text>
 						</rule>
 						<rule e="node" k="seamark:light:character" v="VQ+LFl">
-							<text class="light-character" dx="2" dy="0">VQ(<tag k="seamark:light:group"/>)+LFl.<tag k="seamark:light:period"/>s</text>
+							<text class="light-character" dx="5" dy="0">VQ(<tag k="seamark:light:group"/>)+LFl.<tag k="seamark:light:period"/>s</text>
 						</rule>
 						<rule e="node" k="seamark:light:character" v="UQ+LFl">
-							<text class="light-character" dx="2" dy="0">UQ(<tag k="seamark:light:group"/>)+LFl.<tag k="seamark:light:period"/>s</text>
+							<text class="light-character" dx="5" dy="0">UQ(<tag k="seamark:light:group"/>)+LFl.<tag k="seamark:light:period"/>s</text>
 						</rule>
 					</rule>
 					<else>
-						<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character"/>(<tag k="seamark:light:group"/>)<tag k="seamark:light:period"/>s</text>
+						<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character"/>(<tag k="seamark:light:group"/>)<tag k="seamark:light:period"/>s</text>
 					</else>
 				</rule>
 			</rule>
 			<else>
 				<rule e="node" k="seamark:light:colour" v="red">
-					<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character"/>(<tag k="seamark:light:group"/>)R</text>
+					<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character"/>(<tag k="seamark:light:group"/>)R</text>
 				</rule>
 				<rule e="node" k="seamark:light:colour" v="green">
-					<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character"/>(<tag k="seamark:light:group"/>)G</text>
+					<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character"/>(<tag k="seamark:light:group"/>)G</text>
 				</rule>
 				<rule e="node" k="seamark:light:colour" v="white">
 					<rule e="node" k="seamark:light:character" v="Q+LFl|VQ+LFl|UQ+LFl">
 						<rule e="node" k="seamark:light:character" v="Q+LFl">
-							<text class="light-character" dx="2" dy="0">Q(<tag k="seamark:light:group"/>)+LFl</text>
+							<text class="light-character" dx="5" dy="0">Q(<tag k="seamark:light:group"/>)+LFl</text>
 						</rule>
 						<rule e="node" k="seamark:light:character" v="VQ+LFl">
-							<text class="light-character" dx="2" dy="0">VQ(<tag k="seamark:light:group"/>)+LFl</text>
+							<text class="light-character" dx="5" dy="0">VQ(<tag k="seamark:light:group"/>)+LFl</text>
 						</rule>
 						<rule e="node" k="seamark:light:character" v="UQ+LFl">
-							<text class="light-character" dx="2" dy="0">UQ(<tag k="seamark:light:group"/>)+LFl</text>
+							<text class="light-character" dx="5" dy="0">UQ(<tag k="seamark:light:group"/>)+LFl</text>
 						</rule>
 					</rule>
 					<else>
-						<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character"/>(<tag k="seamark:light:group"/>)</text>
+						<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character"/>(<tag k="seamark:light:group"/>)</text>
 					</else>
 				</rule>
 			</else>
@@ -1099,48 +1099,48 @@
 				<rule e="node" k="seamark:light:multiple" v="*">
 					<rule e="node" k="seamark:light:period" v="*">
 						<rule e="node" k="seamark:light:colour" v="red">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.R.<tag k="seamark:light:period"/>s(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.R.<tag k="seamark:light:period"/>s(<tag k="seamark:light:category"/>)</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="green">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.G.<tag k="seamark:light:period"/>s(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.G.<tag k="seamark:light:period"/>s(<tag k="seamark:light:category"/>)</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="white">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/><tag k="seamark:light:period"/>s(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/><tag k="seamark:light:period"/>s(<tag k="seamark:light:category"/>)</text>
 						</rule>
 					</rule>
 					<else>
 						<rule e="node" k="seamark:light:colour" v="red">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.R(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.R(<tag k="seamark:light:category"/>)</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="green">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.G(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.G(<tag k="seamark:light:category"/>)</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="white">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>(<tag k="seamark:light:category"/>)</text>
 						</rule>
 					</else>
 				</rule>
 				<else>
 					<rule e="node" k="seamark:light:period" v="*">
 						<rule e="node" k="seamark:light:colour" v="red">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" />.R.<tag k="seamark:light:period" />s(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character" />.R.<tag k="seamark:light:period" />s(<tag k="seamark:light:category"/>)</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="green">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" />.G.<tag k="seamark:light:period" />s(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character" />.G.<tag k="seamark:light:period" />s(<tag k="seamark:light:category"/>)</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="white">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" /><tag k="seamark:light:period" />s(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character" /><tag k="seamark:light:period" />s(<tag k="seamark:light:category"/>)</text>
 						</rule>
 					</rule>
 					<else>
 						<rule e="node" k="seamark:light:colour" v="red">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" />.R(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character" />.R(<tag k="seamark:light:category"/>)</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="green">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" />.G(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character" />.G(<tag k="seamark:light:category"/>)</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="white">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:category"/>)</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:category"/>)</text>
 						</rule>
 					</else>
 				</else>
@@ -1149,48 +1149,48 @@
 				<rule e="node" k="seamark:light:multiple" v="*">
 					<rule e="node" k="seamark:light:period" v="*">
 						<rule e="node" k="seamark:light:colour" v="red">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.R.<tag k="seamark:light:period"/>s</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.R.<tag k="seamark:light:period"/>s</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="green">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.G.<tag k="seamark:light:period"/>s</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.G.<tag k="seamark:light:period"/>s</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="white">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/><tag k="seamark:light:period"/>s</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/><tag k="seamark:light:period"/>s</text>
 						</rule>
 					</rule>
 					<else>
 						<rule e="node" k="seamark:light:colour" v="red">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.R</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.R</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="green">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.G</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/>.G</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="white">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/></text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:multiple"/> <tag k="seamark:light:character"/></text>
 						</rule>
 					</else>
 				</rule>
 				<else>
 					<rule e="node" k="seamark:light:period" v="*">
 						<rule e="node" k="seamark:light:colour" v="red">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character"/>.R.<tag k="seamark:light:period"/>s</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character"/>.R.<tag k="seamark:light:period"/>s</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="green">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character"/>.G.<tag k="seamark:light:period"/>s</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character"/>.G.<tag k="seamark:light:period"/>s</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="white">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character"/><tag k="seamark:light:period"/>s</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character"/><tag k="seamark:light:period"/>s</text>
 						</rule>
 					</rule>
 					<else>
 						<rule e="node" k="seamark:light:colour" v="red">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character"/>.R</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character"/>.R</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="green">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character"/>.G</text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character"/>.G</text>
 						</rule>
 						<rule e="node" k="seamark:light:colour" v="white">
-							<text class="light-character" dx="2" dy="0"><tag k="seamark:light:character"/></text>
+							<text class="light-character" dx="5" dy="0"><tag k="seamark:light:character"/></text>
 						</rule>
 					</else>
 				</else>
@@ -1348,15 +1348,14 @@
 			.light-character {
 				font-family: "DejaVu Sans";
 				font-weight: normal;
-				font-size: 4.5px;
+				font-size: 3.5px;
 				text-anchor: right;
 			}
 
 			.signal-character {
 				font-family: "DejaVu Sans";
-				font-weight:
-				normal;
-				font-size: 2.5px;
+				font-weight: normal;
+				font-size: 3.5px;
 				text-anchor: right;
 			}
 

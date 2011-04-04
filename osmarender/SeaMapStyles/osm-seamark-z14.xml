@@ -4,7 +4,7 @@
 
 <!-- OpenSeaMap Rules File for zoom level 14 -->
 
-<rules data="data.osm" scale="1" symbolScale="0.125" minimumMapWidth="0.5" minimumMapHeight="0.5" showScale="no" showGrid="no"
+<rules data="../work/data.osm" scale="1" symbolScale="0.125" minimumMapWidth="0.5" minimumMapHeight="0.5" showScale="no" showGrid="no"
 	showBorder="no" showLicense="no" showZoomControls="no" symbolsDir="../SeaMapSymbols" meter2pixel="0.1375">
 
 	<!-- Lateral Buoys -->
