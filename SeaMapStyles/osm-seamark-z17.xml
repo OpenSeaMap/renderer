@@ -213,6 +213,9 @@
       <rule e="node" k="seamark:beacon_cardinal:shape" v="pile|lattice|~">
         <symbol ref="Cardinal_Beacon_North" position="center" />
 			</rule>
+      <rule e="node" k="seamark:beacon_cardinal:shape" v="stake">
+        <symbol ref="Stake" position="center" />
+      </rule>
       <symbol ref="Top_North_Beacon" position="center" />
     </rule>
     
@@ -223,6 +226,9 @@
       <rule e="node" k="seamark:beacon_cardinal:shape" v="pile|lattice|~">
         <symbol ref="Cardinal_Beacon_East" position="center" />
 			</rule>
+      <rule e="node" k="seamark:beacon_cardinal:shape" v="stake">
+        <symbol ref="Stake" position="center" />
+      </rule>
       <symbol ref="Top_East_Beacon" position="center" />
     </rule>
     
@@ -233,6 +239,9 @@
       <rule e="node" k="seamark:beacon_cardinal:shape" v="pile|lattice|~">
         <symbol ref="Cardinal_Beacon_South" position="center" />
 			</rule>
+      <rule e="node" k="seamark:beacon_cardinal:shape" v="stake">
+        <symbol ref="Stake" position="center" />
+      </rule>
       <symbol ref="Top_South_Beacon" position="center" />
     </rule>
     
@@ -243,6 +252,9 @@
       <rule e="node" k="seamark:beacon_cardinal:shape" v="pile|lattice|~">
         <symbol ref="Cardinal_Beacon_West" position="center" />
 			</rule>
+      <rule e="node" k="seamark:beacon_cardinal:shape" v="stake">
+        <symbol ref="Stake" position="center" />
+      </rule>
       <symbol ref="Top_West_Beacon" position="center" />
     </rule>
     
@@ -324,6 +336,9 @@
 		<rule e="node" k="seamark:beacon_isolated_danger:shape" v="pile|lattice|~">
 			<symbol ref="Cardinal_Beacon_Single" position="center" />
 		</rule>
+    <rule e="node" k="seamark:beacon_isolated_danger:shape" v="stake">
+      <symbol ref="Stake" position="center" />
+    </rule>
 		<symbol ref="Top_Isol_Beacon" position="center" />
 	</rule>
   
@@ -1082,7 +1097,7 @@
 		<style xmlns="http://www.w3.org/2000/svg" type="text/css">
 
 			.map-background {
-				fill: #f8f8f8;
+				fill: none;
 				stroke: none;
 			}
 

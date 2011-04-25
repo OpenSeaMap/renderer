@@ -213,6 +213,9 @@
       <rule e="node" k="seamark:beacon_cardinal:shape" v="pile|lattice|~">
         <symbol ref="Cardinal_Beacon_North" position="center" />
 			</rule>
+      <rule e="node" k="seamark:beacon_cardinal:shape" v="stake">
+        <symbol ref="Stake" position="center" />
+      </rule>
       <symbol ref="Top_North_Beacon" position="center" />
     </rule>
     
@@ -223,6 +226,9 @@
       <rule e="node" k="seamark:beacon_cardinal:shape" v="pile|lattice|~">
         <symbol ref="Cardinal_Beacon_East" position="center" />
 			</rule>
+      <rule e="node" k="seamark:beacon_cardinal:shape" v="stake">
+        <symbol ref="Stake" position="center" />
+      </rule>
       <symbol ref="Top_East_Beacon" position="center" />
     </rule>
     
@@ -233,6 +239,9 @@
       <rule e="node" k="seamark:beacon_cardinal:shape" v="pile|lattice|~">
         <symbol ref="Cardinal_Beacon_South" position="center" />
 			</rule>
+      <rule e="node" k="seamark:beacon_cardinal:shape" v="stake">
+        <symbol ref="Stake" position="center" />
+      </rule>
       <symbol ref="Top_South_Beacon" position="center" />
     </rule>
     
@@ -243,6 +252,9 @@
       <rule e="node" k="seamark:beacon_cardinal:shape" v="pile|lattice|~">
         <symbol ref="Cardinal_Beacon_West" position="center" />
 			</rule>
+      <rule e="node" k="seamark:beacon_cardinal:shape" v="stake">
+        <symbol ref="Stake" position="center" />
+      </rule>
       <symbol ref="Top_West_Beacon" position="center" />
     </rule>
     
@@ -324,6 +336,9 @@
 		<rule e="node" k="seamark:beacon_isolated_danger:shape" v="pile|lattice|~">
 			<symbol ref="Cardinal_Beacon_Single" position="center" />
 		</rule>
+    <rule e="node" k="seamark:beacon_isolated_danger:shape" v="stake">
+      <symbol ref="Stake" position="center" />
+    </rule>
 		<symbol ref="Top_Isol_Beacon" position="center" />
 	</rule>
   
@@ -1081,89 +1096,89 @@
   
 	<defs>
 		<style xmlns="http://www.w3.org/2000/svg" type="text/css">
-
+      
 			.map-background {
-				fill: #f8f8f8;
-				stroke: none;
+      fill: none;
+      stroke: none;
 			}
-
+      
 			.buoy-name {
-				font-family: "Arial";
-				font-weight: bold;
-				font-size: 0.3px;
-				text-anchor: start;
+      font-family: "Arial";
+      font-weight: bold;
+      font-size: 0.3px;
+      text-anchor: start;
 			}
-
+      
 			.light-character {
-				font-family: "Arial";
-				font-weight: normal;
-				font-size: 0.25px;
-				text-anchor: start;
+      font-family: "Arial";
+      font-weight: normal;
+      font-size: 0.25px;
+      text-anchor: start;
 			}
-
+      
 			.signal-character {
-				font-family: "Arial";
-				font-weight: normal;
-				font-size: 0.25px;
-				text-anchor: end;
+      font-family: "Arial";
+      font-weight: normal;
+      font-size: 0.25px;
+      text-anchor: end;
 			}
-
+      
 			.line-character {
-				font-family: "Arial";
-				font-weight: normal;
-				font-size: 0.3px;
-				text-anchor: middle;
+      font-family: "Arial";
+      font-weight: normal;
+      font-size: 0.3px;
+      text-anchor: middle;
 			}
-
+      
 			.harbour_dolphin {
-				stroke-width: 0.4px;
-				stroke: #000000;
-				fill: none;
+      stroke-width: 0.4px;
+      stroke: #000000;
+      fill: none;
 			}
-
+      
 			.waterway_sign {
-				font-family: "Arial";
-				font-weight: normal;
-				font-size: 1.5px;
-				text-anchor: start;
+      font-family: "Arial";
+      font-weight: normal;
+      font-size: 1.5px;
+      text-anchor: start;
 			}
-
+      
 			.breakwater-base {
-				stroke-width: 0.5px;
-				stroke-linecap: butt;
-				stroke-linejoin: round;
-				fill: none;
-				fill-opacity: 0;
-				stroke: #808080;
+      stroke-width: 0.5px;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+      fill: none;
+      fill-opacity: 0;
+      stroke: #808080;
 			}
-
+      
 			.breakwater-overlay {
-				stroke-width: 1.5px;
-				stroke-dasharray: 2,2;
-				stroke-linecap: butt;
-				stroke-linejoin: round;
-				fill: none;
-				fill-opacity: 0;
-				stroke: #808080;
+      stroke-width: 1.5px;
+      stroke-dasharray: 2,2;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+      fill: none;
+      fill-opacity: 0;
+      stroke: #808080;
 			}
 			
 			.leading-line {
-				stroke-width: 0.5px;
-				stroke-linecap: butt;
-				stroke-linejoin: round;
-				fill: none;
-				fill-opacity: 0;
-				stroke: #000000;
+      stroke-width: 0.5px;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+      fill: none;
+      fill-opacity: 0;
+      stroke: #000000;
 			}
-
+      
 			.transit-line {
-				stroke-width: 0.5px;
-				stroke-dasharray: 2,2;
-				stroke-linecap: butt;
-				stroke-linejoin: round;
-				fill: none;
-				fill-opacity: 0;
-				stroke: #000000;
+      stroke-width: 0.5px;
+      stroke-dasharray: 2,2;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+      fill: none;
+      fill-opacity: 0;
+      stroke: #000000;
 			}
 			
 			.wall-line {
@@ -1193,7 +1208,7 @@
 			fill-opacity: 0;
 			stroke: #F40000;
 			}
-
+      
 			.arc-line-green {
 			stroke-width: 2.0px;
 			stroke-linecap: butt;
@@ -1202,7 +1217,7 @@
 			fill-opacity: 0;
 			stroke: #00F400;
 			}
-
+      
 			.arc-line-yellow {
 			stroke-width: 2.0px;
 			stroke-linecap: butt;
@@ -1211,7 +1226,7 @@
 			fill-opacity: 0;
 			stroke: #F4F400;
 			}
-
-    	</style>
+      
+    </style>
 	</defs>
 </rules>
