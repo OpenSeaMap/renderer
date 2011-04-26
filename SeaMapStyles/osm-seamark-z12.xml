@@ -398,6 +398,27 @@
     </rule>
   </rule>
   
+	<!-- Mooring Buoys -->
+  
+	<rule e="node" k="seamark:type" v="mooring">
+    <rule e="node" k="seamark:mooring:category" v="mooring_buoy">
+      <rule e="node" k="seamark:mooring:shape" v="super-buoy">
+        <rule e="node" k="seamark:mooring:colour" v="yellow|black">
+          <rule e="node" k="seamark:mooring:colour" v="yellow">
+            <symbol ref="Float_Major_Yellow" position="center" />
+          </rule>
+          <rule e="node" k="seamark:mooring:colour" v="black">
+            <symbol ref="Float_Major_Black" position="center" />
+          </rule>
+        </rule>
+        <else>
+          <symbol ref="Float_Major_Black" position="center" />
+        </else>
+        <symbol ref="Mooring_Float" position="center" />
+      </rule>
+    </rule>
+	</rule>
+  
 	<!-- Topmarks -->
 
 	<rule e="node" k="seamark:topmark:shape" v="cylinder">
@@ -624,16 +645,6 @@
 		</rule>
 	</rule>
 
-  <!-- Signal Stations -->
-  
-  <rule e="node" k="seamark:type" v="signal_station_traffic">
-    <symbol ref="Signal_Station" position="center" />
-  </rule>
-  
-  <rule e="node" k="seamark:type" v="signal_station_warning">
-    <symbol ref="Signal_Station" position="center" />
-  </rule>
-  
 	<!-- Lighthouse -->
 
 	<rule e="node" k="seamark:type" v="landmark">
@@ -646,12 +657,6 @@
 
 	<rule e="node" k="seamark:type" v="light_major">
 		<symbol ref="Light_Major" position="center" />
-	</rule>
-
-	<!-- Minor Light -->
-
-	<rule e="node" k="seamark:type" v="light_minor">
-		<symbol ref="Light_Minor" position="center" />
 	</rule>
 
 	<!-- Light Vessel -->

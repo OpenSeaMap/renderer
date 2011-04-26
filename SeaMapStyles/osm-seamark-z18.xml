@@ -398,6 +398,27 @@
     </rule>
 	</rule>
   
+	<!-- Mooring Buoys -->
+  
+	<rule e="node" k="seamark:type" v="mooring">
+    <rule e="node" k="seamark:mooring:category" v="mooring_buoy">
+      <rule e="node" k="seamark:mooring:shape" v="super-buoy">
+        <rule e="node" k="seamark:mooring:colour" v="yellow|black">
+          <rule e="node" k="seamark:mooring:colour" v="yellow">
+            <symbol ref="Float_Major_Yellow" position="center" />
+          </rule>
+          <rule e="node" k="seamark:mooring:colour" v="black">
+            <symbol ref="Float_Major_Black" position="center" />
+          </rule>
+        </rule>
+        <else>
+          <symbol ref="Float_Major_Black" position="center" />
+        </else>
+        <symbol ref="Mooring_Float" position="center" />
+      </rule>
+    </rule>
+	</rule>
+  
 	<!-- Topmarks -->
   
 	<rule e="node" k="seamark:topmark:shape" v="cylinder">
@@ -808,20 +829,16 @@
 		<light k="seamark:light:9" layer="-3" />
 	</rule>
 
-<rule e="node" k="seamark:fixme" v="*">
-<symbol ref="LoLcaption" position="center" />
-</rule>
-
 	<!-- Light characters -->
 
 	<rule e="node" k="seamark:light:character" v="*">
 		<rule e="node" k="seamark:light:group" v="*">
 			<rule e="node" k="seamark:light:period" v="*">
 				<rule e="node" k="seamark:light:colour" v="red">
-					<text class="light-character" dx="0.45" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:group"/>).R.<tag k="seamark:light:period"/>s</text>
+					<text class="light-character" dx="0.45" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:group"/>)R.<tag k="seamark:light:period"/>s</text>
 				</rule>
 				<rule e="node" k="seamark:light:colour" v="green">
-					<text class="light-character" dx="0.45" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:group"/>).G.<tag k="seamark:light:period"/>s</text>
+					<text class="light-character" dx="0.45" dy="0"><tag k="seamark:light:character" />(<tag k="seamark:light:group"/>)G.<tag k="seamark:light:period"/>s</text>
 				</rule>
 				<rule e="node" k="seamark:light:colour" v="white">
 					<rule e="node" k="seamark:light:character" v="Q+LFl|VQ+LFl|UQ+LFl">
@@ -1020,65 +1037,6 @@
 		<pathText k="seamark:transit_line" class="line-character" startOffset="50%" dy="-1.0" />
 	</rule>
 
-
-	<rule e="way" k="man_made" v="breakwater">
-		<line class="breakwater-base" layer="-5" />
-		<line class="breakwater-overlay" layer="-5" />
-	</rule>
-
-	<rule e="node" k="leisure" v="slipway">
-		<symbol ref="Slipway" position="center" />
-	</rule>
-
-	<rule e="node" k="man_made" v="crane">
-		<symbol ref="crane" position="center" />
-	</rule>
-
-	<rule e="node" k="radio" v="coast_radio_station">
-		<symbol ref="radio" position="center" />
-		<text k='name' class='buoy-name' dy='-2' dx='4' />
-	</rule>
-
-	<!--harbour keys -->
-	<rule e="node" k="harbour" v="harbour_master">
-		<symbol ref="harbour_master" position="center" />
-	</rule>
-   
-	<rule e="node" k="harbour|waterway" v="fuel">
-		<symbol ref="Fuel" position="center" />
-	</rule>
-
-	<rule e="node" k="harbour" v="dolphin">
-	   <circle r="0.25" class="harbour_dolphin" />
-	</rule>
-   
-	<!--Waterway keys -->
-	<rule e="node" k="waterway" v="no_entry">
-		<symbol ref="No_Entry" position="center" />
-	</rule>
-
-	<rule e="node" k="waterway" v="turning_point">
-		<symbol ref="Turning_Point" position="center" />
-	</rule>
-
-	<rule e="node" k="waterway:maxheight" v="*">
-		<symbol ref="Max_Height" position="center" />
-		<text class="waterway_sign" dx="1.5" dy="0.5">
-			<tag k="waterway:maxheight" />m
-		</text>
-	</rule>
-   
-	<rule e="node" k="waterway:mindepth" v="*">
-		<symbol ref="Min_Depth" position="center" />
-		<text class="waterway_sign" dx="1.5" dy="0.5">
-			<tag k="waterway:mindepth" />m
-		</text>
-	</rule>
-
-	<rule e="node" k="waterway" v="weir">
-		<symbol ref="Weir_Big" position="center" />
-	</rule>
-
 	<!-- Walls -->
   
 	<rule e="way" k="seamark:type" v="shoreline_construction">
@@ -1093,6 +1051,10 @@
       </else>
     </rule>
 	</rule>
+  
+  <rule e="node" k="seamark:fixme" v="*">
+    <symbol ref="LoLcaption" position="center" />
+  </rule>
   
 	<defs>
 		<style xmlns="http://www.w3.org/2000/svg" type="text/css">
@@ -1130,38 +1092,6 @@
       text-anchor: middle;
 			}
       
-			.harbour_dolphin {
-      stroke-width: 0.4px;
-      stroke: #000000;
-      fill: none;
-			}
-      
-			.waterway_sign {
-      font-family: "Arial";
-      font-weight: normal;
-      font-size: 1.5px;
-      text-anchor: start;
-			}
-      
-			.breakwater-base {
-      stroke-width: 0.5px;
-      stroke-linecap: butt;
-      stroke-linejoin: round;
-      fill: none;
-      fill-opacity: 0;
-      stroke: #808080;
-			}
-      
-			.breakwater-overlay {
-      stroke-width: 1.5px;
-      stroke-dasharray: 2,2;
-      stroke-linecap: butt;
-      stroke-linejoin: round;
-      fill: none;
-      fill-opacity: 0;
-      stroke: #808080;
-			}
-			
 			.leading-line {
       stroke-width: 0.5px;
       stroke-linecap: butt;
