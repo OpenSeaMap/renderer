@@ -828,16 +828,32 @@
     <symbol ref="Signal_Station" position="center" />
   </rule>
   
-	<!-- Leading & Transit Lines -->
-
-	<rule e="way" k="seamark:leading_line" v="*">
-		<line class="leading-line" />
-		<pathText k="seamark:leading_line" class="line-character" startOffset="50%" dy="-1.5" />
+	<!-- Traffic Separation Schemes -->
+  
+	<rule e="way" k="seamark:type" v="separation_zone|separation_crossing|separation_roundabout">
+		<area class="separation-area" layer="-1" />
 	</rule>
-
-	<rule e="way" k="seamark:transit_line" v="*">
+  
+	<rule e="way" k="seamark:type" v="separation_line">
+		<line class="separation-line" layer="-1" />
+	</rule>
+  
+	<rule e="way" k="seamark:type" v="separation_boundary">
+		<line class="separation-dashed" layer="-1" />
+	</rule>
+  
+  <rule e="way" k="seamark:type" v="separation_lane">
+    <line class="lane-arrow" layer="-1" />
+  </rule>
+  
+	<!-- Leading & Transit Lines -->
+  
+	<rule e="way" k="seamark:type" v="recommended_track">
+		<line class="leading-line" />
+	</rule>
+  
+	<rule e="way" k="seamark:type" v="navigation_line">
 		<line class="transit-line" />
-		<pathText k="seamark:transit_line" class="line-character" startOffset="50%" dy="-1.5" />
 	</rule>
   
 	<!-- Walls -->
@@ -878,8 +894,41 @@
 				text-anchor: right;
 			}
 
-			.leading-line {
+			.separation-area {
+      stroke: none;
+      fill: #c480ff;
+      fill-opacity: 0.5;
+			}
+      
+			.separation-line {
+      stroke-width: 2px;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+      fill: none;
+      stroke: #c480ff;
+      stroke-opacity: 0.5;
+			}
+      
+			.separation-dashed {
       stroke-width: 0.5px;
+      stroke-dasharray: 1,1;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+      fill: none;
+      stroke: #c480ff;
+      stroke-opacity: 0.5;
+			}
+			
+			.lane-arrow {
+			fill: none;
+			stroke: #ffffff;
+			stroke-width: 0.1px;
+			stroke-opacity: 0;
+			marker-mid: url(#lane-arrow);
+			}
+      
+			.leading-line {
+      stroke-width: 0.25px;
       stroke-linecap: butt;
       stroke-linejoin: round;
       fill: none;
@@ -888,8 +937,8 @@
 			}
       
 			.transit-line {
-      stroke-width: 0.5px;
-      stroke-dasharray: 2,2;
+      stroke-width: 0.25px;
+      stroke-dasharray: 1,1;
       stroke-linecap: butt;
       stroke-linejoin: round;
       fill: none;
@@ -917,7 +966,11 @@
 			}
 			
 		</style>
+    
+		<svg:marker fill="none" id="lane-arrow" markerHeight="2px" markerUnits="userSpaceOnUse" markerWidth="2px" orient="auto" refX="1px" refY="5px" stroke="#c480ff" stroke-width="1px" stroke-opacity="0.5" viewBox="0 0 4 4">
+			<svg:path d="M 15,5 L 11,10 L 11,7 L 0,7 L 0,3 L 11,3 L 11,0 Z"/>
+		</svg:marker>
+    
 	</defs>
-
 
 </rules>

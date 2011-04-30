@@ -1059,16 +1059,38 @@
     </else>
 	</rule>
 	  
+	<!-- Traffic Separation Schemes -->
+  
+	<rule e="way" k="seamark:type" v="separation_zone|separation_crossing|separation_roundabout">
+		<area class="separation-area" layer="-1" />
+	</rule>
+  
+	<rule e="way" k="seamark:type" v="separation_line">
+		<line class="separation-line" layer="-1" />
+	</rule>
+  
+	<rule e="way" k="seamark:type" v="separation_boundary">
+		<line class="separation-dashed" layer="-1" />
+	</rule>
+  
+  <rule e="way" k="seamark:type" v="separation_lane">
+    <line class="lane-arrow" layer="-1" />
+  </rule>
+
 	<!-- Leading & Transit Lines -->
 
-	<rule e="way" k="seamark:leading_line" v="*">
+	<rule e="way" k="seamark:type" v="recommended_track">
 		<line class="leading-line" />
-		<pathText k="seamark:leading_line" class="line-character" startOffset="50%" dy="-1.0" />
+    <rule e="way" k="seamark:recommended_track:orientation" v="*">
+      <pathText k="seamark:recommended_track:orientation" class="line-character" startOffset="50%" dy="-0.2" />
+    </rule>
 	</rule>
 
-	<rule e="way" k="seamark:transit_line" v="*">
+	<rule e="way" k="seamark:type" v="navigation_line">
 		<line class="transit-line" />
-		<pathText k="seamark:transit_line" class="line-character" startOffset="50%" dy="-1.0" />
+    <rule e="way" k="seamark:navigation_line:orientation" v="*">
+      <pathText k="seamark:navigation_line:orientation" class="line-character" startOffset="50%" dy="-0.2" />
+    </rule>
 	</rule>
 
 	<!-- Walls -->
@@ -1083,6 +1105,15 @@
       <else>
         <line class="wall-line" />
       </else>
+    </rule>
+	</rule>
+  
+	<!-- Depth Contours -->
+  
+	<rule e="way" k="seamark:type" v="depth_contour">
+		<line class="contour-line" layer="-1"/>
+    <rule e="way" k="seamark:depth_contour:value" v="*">
+      <pathText k="seamark:depth_contour:value" class="depth-character" startOffset="50%" dy="0" />
     </rule>
 	</rule>
   
@@ -1126,22 +1157,68 @@
       text-anchor: middle;
 			}
       
-			.leading-line {
-      stroke-width: 0.5px;
+			.depth-character {
+      font-family: "Arial";
+      font-weight: normal;
+      font-size: 0.2px;
+      text-anchor: middle;
+			}
+      
+			.separation-area {
+      stroke: none;
+      fill: #c480ff;
+      fill-opacity: 0.5;
+			}
+      
+			.separation-line {
+      stroke-width: 0.4px;
       stroke-linecap: butt;
       stroke-linejoin: round;
       fill: none;
-      fill-opacity: 0;
+      stroke: #c480ff;
+      stroke-opacity: 0.5;
+			}
+      
+			.separation-dashed {
+      stroke-width: 0.2px;
+      stroke-dasharray: 0.2,0.2;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+      fill: none;
+      stroke: #c480ff;
+      stroke-opacity: 0.5;
+			}
+			
+			.lane-arrow {
+			fill: none;
+			stroke: #ffffff;
+			stroke-width: 0.1px;
+			stroke-opacity: 0;
+			marker-mid: url(#lane-arrow);
+			}
+      
+			.contour-line {
+      stroke-width: 0.05px;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+      fill: none;
+      stroke: #000000;
+			}
+      
+			.leading-line {
+      stroke-width: 0.1px;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+      fill: none;
       stroke: #000000;
 			}
       
 			.transit-line {
-      stroke-width: 0.5px;
-      stroke-dasharray: 2,2;
+      stroke-width: 0.1px;
+      stroke-dasharray: 0.2,0.2;
       stroke-linecap: butt;
       stroke-linejoin: round;
       fill: none;
-      fill-opacity: 0;
       stroke: #000000;
 			}
 			
@@ -1150,7 +1227,6 @@
       stroke-linecap: butt;
       stroke-linejoin: round;
       fill: none;
-      fill-opacity: 0;
       stroke: #000000;
 			}
       
@@ -1160,7 +1236,6 @@
       stroke-linecap: butt;
       stroke-linejoin: round;
       fill: none;
-      fill-opacity: 0;
       stroke: #000000;
 			}
 			
@@ -1169,7 +1244,6 @@
 			stroke-linecap: butt;
 			stroke-linejoin: round;
 			fill: none;
-			fill-opacity: 0;
 			stroke: #F40000;
 			}
       
@@ -1178,7 +1252,6 @@
 			stroke-linecap: butt;
 			stroke-linejoin: round;
 			fill: none;
-			fill-opacity: 0;
 			stroke: #00F400;
 			}
       
@@ -1187,10 +1260,15 @@
 			stroke-linecap: butt;
 			stroke-linejoin: round;
 			fill: none;
-			fill-opacity: 0;
 			stroke: #F4F400;
 			}
       
     </style>
+
+		<svg:marker fill="none" id="lane-arrow" markerHeight="2px" markerUnits="userSpaceOnUse" markerWidth="2px" orient="auto" refX="1px" refY="5px" stroke="#c480ff" stroke-width="1px" stroke-opacity="0.5" viewBox="0 0 10 10">
+			<svg:path d="M 15,5 L 11,10 L 11,7 L 0,7 L 0,3 L 11,3 L 11,0 Z"/>
+		</svg:marker>
+
 	</defs>
+  
 </rules>
