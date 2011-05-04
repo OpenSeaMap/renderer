@@ -450,7 +450,7 @@
         <symbol ref="Top_Can_Buoy" position="center" />
       </else>
 		</rule>
-		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="can">
+		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="can|conical|sphere|barrel">
 			<rule e="node" k="seamark:topmark:colour" v="red|green|yellow">
         <rule e="node" k="seamark:topmark:colour" v="red">
           <symbol ref="Top_Can_Red_Buoy_Small" position="center" />
@@ -517,7 +517,7 @@
         <symbol ref="Top_Cone_Buoy" position="center" />
       </else>
 		</rule>
-		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="conical">
+		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="can|conical|sphere|barrel">
 			<rule e="node" k="seamark:topmark:colour" v="red|green|yellow">
         <rule e="node" k="seamark:topmark:colour" v="red">
           <symbol ref="Top_Cone_Red_Buoy_Small" position="center" />
@@ -576,7 +576,7 @@
 				<symbol ref="Top_Sphere_Buoy" position="center" />
 			</else>
 		</rule>
-		<rule e="node" k="seamark:buoy_safe_water:shape" v="sphere">
+		<rule e="node" k="seamark:buoy_safe_water:shape" v="can|conical|sphere|barrel">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Sphere_Red_Buoy_Small" position="center" />
 			</rule>
@@ -716,7 +716,7 @@
 	<!-- Lighthouse -->
 
 	<rule e="node" k="seamark:type" v="landmark">
-		<rule e="node" k="seamark:light|seamark:light:1" v="*">
+		<rule e="node" k="seamark:light:colour|seamark:light:character|seamark:light:1|seamark:light:1:colour|seamark:light:1:character" v="*">
 			<symbol ref="Light_House" position="center" />
 		</rule>
 	</rule>
@@ -827,6 +827,12 @@
   <rule e="node" k="seamark:type" v="signal_station_warning">
     <symbol ref="Signal_Station" position="center" />
   </rule>
+  
+	<!-- Marina -->
+  
+	<rule e="way" k="seamark:harbour_area:category" v="marina|yacht|yacht_harbour">
+    <symbol ref="Marina" position="center" />
+	</rule>
   
 	<!-- Traffic Separation Schemes -->
   

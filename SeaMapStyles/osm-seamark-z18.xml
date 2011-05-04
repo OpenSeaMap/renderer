@@ -450,7 +450,7 @@
         <symbol ref="Top_Can_Buoy" position="center" />
       </else>
 		</rule>
-		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="can">
+		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="can|conical|sphere|barrel">
 			<rule e="node" k="seamark:topmark:colour" v="red|green|yellow">
         <rule e="node" k="seamark:topmark:colour" v="red">
           <symbol ref="Top_Can_Red_Buoy_Small" position="center" />
@@ -517,7 +517,7 @@
         <symbol ref="Top_Cone_Buoy" position="center" />
       </else>
 		</rule>
-		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="conical">
+		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="can|conical|sphere|barrel">
 			<rule e="node" k="seamark:topmark:colour" v="red|green|yellow">
         <rule e="node" k="seamark:topmark:colour" v="red">
           <symbol ref="Top_Cone_Red_Buoy_Small" position="center" />
@@ -576,7 +576,7 @@
 				<symbol ref="Top_Sphere_Buoy" position="center" />
 			</else>
 		</rule>
-		<rule e="node" k="seamark:buoy_safe_water:shape" v="sphere">
+		<rule e="node" k="seamark:buoy_safe_water:shape" v="can|conical|sphere|barrel">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Sphere_Red_Buoy_Small" position="center" />
 			</rule>
@@ -761,7 +761,7 @@
 	<!-- Lighthouse -->
 
 	<rule e="node" k="seamark:type" v="landmark">
-		<rule e="node" k="seamark:light|seamark:light:1" v="*">
+		<rule e="node" k="seamark:light:colour|seamark:light:character|seamark:light:1|seamark:light:1:colour|seamark:light:1:character" v="*">
 			<symbol ref="Light_House" position="center" />
 		</rule>
 	</rule>
@@ -1047,6 +1047,27 @@
       <text class="light-character" dx="0.3" dy="0.3">Ch.<tag k="seamark:signal_station_warning:channel"/></text>
     </rule>
   </rule>
+  
+	<!-- Marina -->
+  
+	<rule e="way" k="seamark:harbour_area:category" v="marina|yacht|yacht_harbour">
+    <symbol ref="Marina" position="center" />
+	</rule>
+  
+	<!-- Small Craft Facilities -->
+  
+	<rule e="node" k="seamark:small_craft_facility:category" v="boat_hoist">
+    <symbol ref="Crane" position="center" />
+	</rule>
+	<rule e="node" k="seamark:small_craft_facility:category" v="fuel_station">
+    <symbol ref="Fuel" position="center" />
+	</rule>
+	<rule e="node" k="seamark:small_craft_facility:category" v="slipway">
+    <symbol ref="Slipway" position="center" />
+	</rule>
+	<rule e="node" k="seamark:small_craft_facility:category" v="refuse_bin">
+    <symbol ref="Waste_Disposal" position="center" />
+	</rule>
   
 	<!-- Names -->
 
