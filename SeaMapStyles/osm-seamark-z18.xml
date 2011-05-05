@@ -1050,7 +1050,7 @@
   
 	<!-- Marina -->
   
-	<rule e="way" k="seamark:harbour_area:category" v="marina|yacht|yacht_harbour">
+	<rule e="way" k="seamark:harbour:category" v="marina|yacht|yacht_harbour">
     <symbol ref="Marina" position="center" />
 	</rule>
   
@@ -1067,6 +1067,12 @@
 	</rule>
 	<rule e="node" k="seamark:small_craft_facility:category" v="refuse_bin">
     <symbol ref="Waste_Disposal" position="center" />
+	</rule>
+	<rule e="node" k="seamark:small_craft_facility:category" v="visitor_berth">
+    <symbol ref="Visitor_Berth" position="center" />
+	</rule>
+	<rule e="node" k="seamark:small_craft_facility:category" v="visitor_mooring">
+    <symbol ref="Visitor_Mooring" position="center" />
 	</rule>
   
 	<!-- Names -->

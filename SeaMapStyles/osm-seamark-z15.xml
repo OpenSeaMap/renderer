@@ -1050,7 +1050,7 @@
   
 	<!-- Marina -->
   
-	<rule e="way" k="seamark:harbour_area:category" v="marina|yacht|yacht_harbour">
+	<rule e="way" k="seamark:harbour:category" v="marina|yacht|yacht_harbour">
     <symbol ref="Marina" position="center" />
 	</rule>
   
