@@ -751,6 +751,18 @@
     <symbol ref="Marina" position="center" />
 	</rule>
   
+	<!-- Anchorages -->
+  
+	<rule e="node" k="seamark:type" v="anchorage">
+    <symbol ref="Anchorage" position="center" />
+	</rule>
+	<rule e="node" k="seamark:type" v="anchor_berth">
+    <symbol ref="Anchor_Berth" position="center" />
+	</rule>
+	<rule e="way" k="seamark:type" v="anchorage">
+    <symbol ref="Anchorage" position="center" />
+	</rule>
+  
 	<!-- Traffic Separation Schemes -->
   
 	<rule e="way" k="seamark:type" v="separation_zone|separation_crossing|separation_roundabout">
