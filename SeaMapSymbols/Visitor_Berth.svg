@@ -9,9 +9,9 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
    id="body"
-   width="86"
-   height="86"
-   viewBox="0 0 1 1"
+   width="60"
+   height="60"
+   viewBox="0 0 0.69767442 0.69767442"
    preserveAspectRatio="none"
    sodipodi:version="0.32"
    inkscape:version="0.48.1 r9760"
@@ -71,7 +71,11 @@
      inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
-       id="grid3793" />
+       id="grid3793"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
   </sodipodi:namedview>
   <title
      id="title3">SVG drawing</title>
@@ -79,7 +83,7 @@
      id="desc5">This was produced by version 4.2 of GNU libplot, a free library for exporting 2-D vector graphics.</desc>
   <g
      id="content"
-     transform="matrix(1.7361e-3,0,0,-1.7361e-3,-0.4891854,0.7606965)"
+     transform="matrix(0.0017361,0,0,-0.0017361,-0.4891854,0.45837092)"
      xml:space="preserve"
      stroke-miterlimit="10.433"
      fill-rule="even-odd"
@@ -90,7 +94,7 @@
      font-size-adjust="none"
      letter-spacing="normal"
      word-spacing="normal"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0">
 
 
 
@@ -137,14 +141,14 @@
 
 <path
    sodipodi:type="arc"
-   style="fill:none;stroke:#a30075;stroke-width:2;stroke-miterlimit:4;stroke-opacity:0;stroke-dasharray:none"
+   style="fill:none;stroke:#a30075;stroke-width:2.53333688;stroke-miterlimit:4;stroke-opacity:0;stroke-dasharray:none"
    id="path3007"
    sodipodi:cx="31.254852"
    sodipodi:cy="33.465248"
    sodipodi:rx="22.055729"
    sodipodi:ry="18.287415"
    d="m 53.310581,33.465248 a 22.055729,18.287415 0 1 1 -44.1114576,0 22.055729,18.287415 0 1 1 44.1114576,0 z"
-   transform="matrix(6.6977173,0,0,-6.6977173,281.77259,438.16399)" /><path
+   transform="matrix(5.2876647,0,0,-5.2876647,255.33453,290.46141)" /><path
    sodipodi:type="arc"
    style="fill:#a30075;fill-opacity:1;stroke:none"
    id="path3783"
@@ -153,27 +157,28 @@
    sodipodi:rx="18.453663"
    sodipodi:ry="16.458673"
    d="m -17.73325,35.626488 a 18.453663,16.458673 0 1 1 -36.907325,0 18.453663,16.458673 0 1 1 36.907325,0 z"
-   transform="matrix(13.792018,0,0,-15.463777,1068.865,701.08221)" /><text
+   transform="matrix(10.888422,0,0,-12.208229,876.72248,498.02815)" /><text
    xml:space="preserve"
-   style="font-size:428.65615845px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#a30075;stroke-width:1;stroke-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
-   x="429.12015"
-   y="16.780876"
+   style="font-size:338.412323px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#a30075;stroke-width:1;stroke-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
+   x="371.66125"
+   y="68.705429"
    id="text3779"
    sodipodi:linespacing="125%"
-   transform="scale(1.0000052,-0.99999475)"><tspan
+   transform="scale(1.0000052,-0.99999482)"><tspan
      sodipodi:role="line"
      id="tspan3781"
-     x="429.12015"
-     y="16.780876"
+     x="371.66125"
+     y="68.705429"
      style="stroke-width:1">V</tspan></text>
+
 <flowRoot
    xml:space="preserve"
    id="flowRoot3785"
-   style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:DejaVu Sans;font-style:normal;font-weight:normal;font-size:4px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:DejaVu Sans;font-stretch:normal;font-variant:normal"><flowRegion
+   style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"><flowRegion
      id="flowRegion3787"><rect
        id="rect3789"
        width="3.6574829"
        height="9.0882902"
        x="51.64809"
        y="31.359423" /></flowRegion><flowPara
-     id="flowPara3791"></flowPara></flowRoot></g></svg>
+     id="flowPara3791" /></flowRoot></g></svg>

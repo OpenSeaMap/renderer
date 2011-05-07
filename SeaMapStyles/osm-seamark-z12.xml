@@ -744,6 +744,9 @@
 	<rule e="node" k="seamark:light:19" v="*">
 		<light k="seamark:light:19" layer="-3" />
 	</rule>
+	<rule e="node" k="seamark:light:20" v="*">
+		<light k="seamark:light:20" layer="-3" />
+	</rule>
      
 	<!-- Marina -->
   
@@ -769,6 +772,12 @@
 		<area class="separation-area" layer="-1" />
 	</rule>
   
+  <rule e="way" k="seamark:type" v="separation_zone">
+    <rule e="way" k="seamark:name" v="*">
+      <caption k="seamark:name" class="area-name" />
+    </rule>
+  </rule>
+  
 	<rule e="way" k="seamark:type" v="separation_line">
 		<line class="separation-line" layer="-1" />
 	</rule>
@@ -778,7 +787,33 @@
 	</rule>
   
   <rule e="way" k="seamark:type" v="separation_lane">
-    <line class="lane-arrow" layer="-1" />
+    <line class="lane-arrow-casing lane-arrow-casing-1" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-casing lane-arrow-casing-2" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-casing lane-arrow-casing-3" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-casing lane-arrow-casing-4" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-casing lane-arrow-casing-5" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-casing lane-arrow-casing-6" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-casing lane-arrow-casing-7" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-casing lane-arrow-casing-8" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-casing lane-arrow-casing-9" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-casing lane-arrow-casing-10" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-casing lane-arrow-casing-11" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-casing lane-arrow-casing-12" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-casing lane-arrow-casing-13" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-casing lane-arrow-casing-14" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-casing lane-arrow-casing-15" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-core lane-arrow-core-1" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-core lane-arrow-core-2" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-core lane-arrow-core-3" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-core lane-arrow-core-4" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-core lane-arrow-core-5" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-core lane-arrow-core-6" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-core lane-arrow-core-7" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-core lane-arrow-core-8" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-core lane-arrow-core-9" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-core lane-arrow-core-10" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-core lane-arrow-core-11" smart-linecap="no" layer="-1" />
+    <line class="lane-arrow-core lane-arrow-core-12" smart-linecap="no" layer="-1" />
   </rule>
   
 	<!-- Walls -->
@@ -801,6 +836,13 @@
 			stroke: none;
 			}
 
+			.area-name {
+      font-family: "Arial";
+      font-weight: bold;
+      font-size: 12px;
+      text-anchor: middle;
+			}
+      
 			.separation-area {
       stroke: none;
       fill: #c480ff;
@@ -826,13 +868,35 @@
       stroke-opacity: 0.5;
 			}
 			
-			.lane-arrow {
-			fill: none;
-			stroke: #ffffff;
-			stroke-width: 0.1px;
-			stroke-opacity: 0;
-			marker-mid: url(#lane-arrow);
-			}
+			.lane-arrow-casing { fill: none; stroke-linecap: butt; stroke: #c480ff; stroke-opacity: 0.5; }
+			.lane-arrow-core { fill: none; stroke-linecap: butt; stroke: #b5d0d0; stroke-opacity: 1.0; }
+			.lane-arrow-casing-1 { stroke-width: 4.8px; stroke-dasharray: 33.6,46.4; stroke-dashoffset: 209.6; } 
+			.lane-arrow-casing-2 { stroke-width: 11.2px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 16.0; }
+			.lane-arrow-casing-3 { stroke-width: 10.4px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 15.2; }
+			.lane-arrow-casing-4 { stroke-width: 9.6px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 14.4; }
+			.lane-arrow-casing-5 { stroke-width: 8.8px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 13.6; }
+			.lane-arrow-casing-6 { stroke-width: 8.0px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 12.8; }
+			.lane-arrow-casing-7 { stroke-width: 7.2px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 12.0; }
+			.lane-arrow-casing-8 { stroke-width: 6.4px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 11.2; }
+			.lane-arrow-casing-9 { stroke-width: 5.6px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 10.4; }
+			.lane-arrow-casing-10 { stroke-width: 4.8px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 9.6; }
+			.lane-arrow-casing-11 { stroke-width: 4.0px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 8.8; }
+			.lane-arrow-casing-12 { stroke-width: 3.2px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 8.0; }
+			.lane-arrow-casing-13 { stroke-width: 2.4px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 7.2; }
+			.lane-arrow-casing-14 { stroke-width: 1.6px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 6.4; }
+			.lane-arrow-casing-15 { stroke-width: 0.8px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 5.6; }
+			.lane-arrow-core-1 { stroke-width: 3.2px; stroke-dasharray: 33.6,46.4; stroke-dashoffset: 208.8; } 
+			.lane-arrow-core-2 { stroke-width: 8.8px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 15.2; } 
+			.lane-arrow-core-3 { stroke-width: 8.0px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 14.4; } 
+			.lane-arrow-core-4 { stroke-width: 7.2px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 13.6; } 
+			.lane-arrow-core-5 { stroke-width: 6.4px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 12.8; } 
+			.lane-arrow-core-6 { stroke-width: 5.6px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 12.0; } 
+			.lane-arrow-core-7 { stroke-width: 4.8px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 11.2; } 
+			.lane-arrow-core-8 { stroke-width: 4.0px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 10.4; } 
+			.lane-arrow-core-9 { stroke-width: 3.2px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 9.6; } 
+			.lane-arrow-core-10 { stroke-width: 2.4px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 8.8; } 
+			.lane-arrow-core-11 { stroke-width: 1.6px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 8.0; } 
+			.lane-arrow-core-12 { stroke-width: 0.8px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 7.2; } 
       
 			.wall-line {
       stroke-width: 0.5px;
@@ -854,10 +918,6 @@
 			}
 			
 		</style>
-    
-		<svg:marker fill="none" id="lane-arrow" markerHeight="2px" markerUnits="userSpaceOnUse" markerWidth="2px" orient="auto" refX="1px" refY="5px" stroke="#c480ff" stroke-width="1px" stroke-opacity="0.5" viewBox="0 0 2 2">
-			<svg:path d="M 15,5 L 11,10 L 11,7 L 0,7 L 0,3 L 11,3 L 11,0 Z"/>
-		</svg:marker>
     
 	</defs>
 

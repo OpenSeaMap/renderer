@@ -9,9 +9,9 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
    id="body"
-   width="86"
-   height="86"
-   viewBox="0 0 1 1"
+   width="60"
+   height="60"
+   viewBox="0 0 0.69767442 0.69767442"
    preserveAspectRatio="none"
    sodipodi:version="0.32"
    inkscape:version="0.48.1 r9760"
@@ -82,7 +82,7 @@
      id="desc5">This was produced by version 4.2 of GNU libplot, a free library for exporting 2-D vector graphics.</desc>
   <g
      id="content"
-     transform="matrix(1.7361e-3,0,0,-1.7361e-3,-0.4891854,0.7606965)"
+     transform="matrix(0.0017361,0,0,-0.0017361,-0.4891854,0.45837092)"
      xml:space="preserve"
      stroke-miterlimit="10.433"
      fill-rule="even-odd"
@@ -93,7 +93,7 @@
      font-size-adjust="none"
      letter-spacing="normal"
      word-spacing="normal"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0">
 
 
 
@@ -102,7 +102,8 @@
 
 <g
    transform="matrix(-4.6321561,-4.0982455e-5,4.0982455e-5,-4.6321561,859.24398,432.45316)"
-   id="g3">
+   id="g3"
+   style="stroke-width:1">
 	
 	
 	
@@ -152,25 +153,25 @@
 
 <g
    id="g2532"
-   transform="matrix(-3.4459455,-1.5424193e-2,1.5424193e-2,-3.4459455,849.76364,484.31797)"
-   style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1"><polyline
+   transform="matrix(-2.3793448,-0.01065004,0.01065004,-2.3793451,676.03013,293.81863)"
+   style="fill:none;stroke:#000000;stroke-width:1.44827497;stroke-opacity:1"><polyline
      points="  101.565,81.659 73.936,81.659 62.656,93.322 34.543,93.322 62.978,118.943 129.196,118.943 145.951,109.745 145.951,95.145   125.413,95.145 "
      stroke-miterlimit="3.863"
      id="polyline2448"
-     style="fill:none;stroke:#a30075;stroke-width:4;stroke-linecap:round;stroke-miterlimit:3.86299992000000003;fill-opacity:1;stroke-opacity:1"
+     style="fill:none;stroke:#a30075;stroke-width:5.79309988;stroke-linecap:round;stroke-miterlimit:3.86299992;stroke-opacity:1"
      transform="matrix(1.162336,0,0,1.162336,-24.191332,-9.1805915)" /><polygon
-     points="126.377,85.308 126.377,67.065 148.608,76.185 126.377,85.308 "
+     points="148.608,76.185 126.377,85.308 126.377,85.308 126.377,67.065 "
      id="polygon2450"
      transform="matrix(1.162336,0,0,1.162336,-24.191332,-9.1805915)"
-     style="fill:#a30075;fill-opacity:1;stroke:none;stroke-opacity:1" /><polygon
-     points="91.981,109.902 91.981,93.48 115.825,93.48 115.825,104.982 112.601,109.902 91.981,109.902 "
+     style="fill:#a30075;fill-opacity:1;stroke:none" /><polygon
+     points="115.825,93.48 115.825,104.982 112.601,109.902 91.981,109.902 91.981,109.902 91.981,93.48 "
      id="polygon2452"
      transform="matrix(1.162336,0,0,1.162336,-24.191332,-9.1805915)"
-     style="fill:#a30075;fill-opacity:1;stroke:none;stroke-opacity:1" /><polyline
+     style="fill:#a30075;fill-opacity:1;stroke:none" /><polyline
      points="  100.116,107.604 86.261,107.604 86.261,60 108.976,60 108.976,76.185 127.988,76.185 "
      stroke-miterlimit="3.863"
      id="polyline2454"
-     style="fill:none;stroke:#a30075;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.86299992000000003;fill-opacity:1;stroke-opacity:1"
+     style="fill:none;stroke:#a30075;stroke-width:8.68964863;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.86299992;stroke-opacity:1"
      transform="matrix(1.162336,0,0,1.162336,-24.191332,-9.1805915)" /></g><rect
    style="fill:none;stroke:#a30075;stroke-width:2;stroke-miterlimit:4;stroke-opacity:0;stroke-dasharray:none"
    id="rect3767"
@@ -190,12 +191,12 @@
    transform="matrix(6.6977173,0,0,-6.6977173,281.77259,438.16399)"
    rx="133.95433"
    ry="9.4044762" /><rect
-   style="fill:none;stroke:#a30075;stroke-width:13.39543343;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+   style="fill:none;stroke:#a30075;stroke-width:13.39543247;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
    id="rect3768"
-   width="562.60828"
-   height="562.60822"
-   x="288.47031"
-   y="-431.46628"
+   width="388.46783"
+   height="388.46783"
+   x="288.47018"
+   y="-257.32574"
    transform="scale(1,-1)"
    rx="100.00001"
    ry="99.999992" /></g></svg>
