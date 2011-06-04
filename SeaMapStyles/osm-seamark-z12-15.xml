@@ -293,7 +293,7 @@
 			<rule e="node" k="seamark:buoy_safe_water:shape" v="spar">
 				<symbol ref="Safe_Water_Spar" position="center" />
 			</rule>
-			<rule e="node" k="seamark:buoy_safe_water:shape" v="sphere">
+			<rule e="node" k="seamark:buoy_safe_water:shape" v="spherical">
 				<symbol ref="Safe_Water_Sphere" position="center" />
 			</rule>
 		</rule>
@@ -367,7 +367,7 @@
 			<rule e="node" k="seamark:buoy_special_purpose:shape" v="conical">
 				<symbol ref="Special_Purpose_Cone" position="center" />
 			</rule>
-			<rule e="node" k="seamark:buoy_special_purpose:shape" v="sphere">
+			<rule e="node" k="seamark:buoy_special_purpose:shape" v="spherical">
 				<symbol ref="Special_Purpose_Sphere" position="center" />
 			</rule>
 			<rule e="node" k="seamark:buoy_special_purpose:shape" v="barrel">
@@ -416,7 +416,7 @@
         </else>
         <symbol ref="Top_Mooring_Float" position="center" />
       </rule>
-      <rule e="node" k="seamark:mooring:shape" v="sphere">
+      <rule e="node" k="seamark:mooring:shape" v="spherical">
         <symbol ref="Sphere_Buoy" position="center" />
         <symbol ref="Top_Mooring_Buoy_Small" position="center" />
       </rule>
@@ -450,7 +450,7 @@
         <symbol ref="Top_Can_Buoy" position="center" />
       </else>
 		</rule>
-		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="can|conical|sphere|barrel">
+		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="can|conical|spherical|barrel">
 			<rule e="node" k="seamark:topmark:colour" v="red|green|yellow">
         <rule e="node" k="seamark:topmark:colour" v="red">
           <symbol ref="Top_Can_Red_Buoy_Small" position="center" />
@@ -517,7 +517,7 @@
         <symbol ref="Top_Cone_Buoy" position="center" />
       </else>
 		</rule>
-		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="can|conical|sphere|barrel">
+		<rule e="node" k="seamark:buoy_lateral:shape|seamark:buoy_special_purpose:shape" v="can|conical|spherical|barrel">
 			<rule e="node" k="seamark:topmark:colour" v="red|green|yellow">
         <rule e="node" k="seamark:topmark:colour" v="red">
           <symbol ref="Top_Cone_Red_Buoy_Small" position="center" />
@@ -576,7 +576,7 @@
 				<symbol ref="Top_Sphere_Buoy" position="center" />
 			</else>
 		</rule>
-		<rule e="node" k="seamark:buoy_safe_water:shape" v="can|conical|sphere|barrel">
+		<rule e="node" k="seamark:buoy_safe_water:shape" v="can|conical|spherical|barrel">
 			<rule e="node" k="seamark:topmark:colour" v="red">
 				<symbol ref="Top_Sphere_Red_Buoy_Small" position="center" />
 			</rule>
@@ -616,7 +616,7 @@
         <symbol ref="Top_X_Buoy" position="center" />
       </else>
 		</rule>
-		<rule e="node" k="seamark:buoy_special_purpose:shape" v="sphere|barrel|can|conical">
+		<rule e="node" k="seamark:buoy_special_purpose:shape" v="spherical|barrel|can|conical">
 			<rule e="node" k="seamark:topmark:colour" v="red|yellow">
         <rule e="node" k="seamark:topmark:colour" v="red">
           <symbol ref="Top_X_Red_Buoy_Small" position="center" />
