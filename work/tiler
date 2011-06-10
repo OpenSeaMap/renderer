@@ -1,0 +1,10 @@
+#!/bin/bash
+
+while true; do
+	for file in $(ls cache); do
+		tile=$(echo $file | sed -e s?-?/?g)
+		mkdir -p $(dirname $tile)
+		mv -f cache/$file $tile
+	done
+	sleep 300
+done

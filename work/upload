@@ -1,0 +1,19 @@
+#!/bin/bash
+
+while true; do
+	if [ -e sending ]; then
+		cat sending | while read file; do
+			echo "put $file cache/$(echo $file | sed -e s?/?-?g)" >> batchfile
+		done
+		while ! sftp -b batchfile malcolm@netz.smurf.noris.de; do
+			echo "SFTP failure - retrying"
+			sleep 60
+		done
+		rm sending
+		rm batchfile
+	fi
+	while [ ! -e uploads ]; do
+		sleep 300
+	done
+	mv uploads sending
+done
