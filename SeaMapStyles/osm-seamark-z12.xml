@@ -859,8 +859,8 @@
 			}
       
 			.separation-dashed {
-      stroke-width: 0.5px;
-      stroke-dasharray: 2,2;
+      stroke-width: 2.0px;
+      stroke-dasharray: 4,4;
       stroke-linecap: butt;
       stroke-linejoin: round;
       fill: none;
