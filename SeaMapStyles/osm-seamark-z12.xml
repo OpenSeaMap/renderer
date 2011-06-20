@@ -211,7 +211,21 @@
       <rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
         <symbol ref="Cardinal_Spar_North" position="center" />
       </rule>
-      <symbol ref="Top_North_Buoy" position="center" />
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="can">
+        <symbol ref="Cardinal_Can_North" position="center" />
+      </rule>
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="conical">
+        <symbol ref="Cardinal_Cone_North" position="center" />
+      </rule>
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="spherical">
+        <symbol ref="Cardinal_Sphere_North" position="center" />
+      </rule>
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar|spar|~">
+        <symbol ref="Top_North_Buoy" position="center" />
+      </rule>
+      <else>
+        <symbol ref="Top_North_Buoy_Small" position="center" />
+      </else>
     </rule>
     <rule e="node" k="seamark:buoy_cardinal:category" v="east">
       <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
@@ -220,7 +234,21 @@
       <rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
         <symbol ref="Cardinal_Spar_East" position="center" />
       </rule>
-      <symbol ref="Top_East_Buoy" position="center" />
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="can">
+        <symbol ref="Cardinal_Can_East" position="center" />
+      </rule>
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="conical">
+        <symbol ref="Cardinal_Cone_East" position="center" />
+      </rule>
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="spherical">
+        <symbol ref="Cardinal_Sphere_East" position="center" />
+      </rule>
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar|spar|~">
+        <symbol ref="Top_East_Buoy" position="center" />
+      </rule>
+      <else>
+        <symbol ref="Top_East_Buoy_Small" position="center" />
+      </else>
     </rule>
     <rule e="node" k="seamark:buoy_cardinal:category" v="south">
       <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
@@ -229,7 +257,21 @@
       <rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
         <symbol ref="Cardinal_Spar_South" position="center" />
       </rule>
-      <symbol ref="Top_South_Buoy" position="center" />
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="can">
+        <symbol ref="Cardinal_Can_South" position="center" />
+      </rule>
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="conical">
+        <symbol ref="Cardinal_Cone_South" position="center" />
+      </rule>
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="spherical">
+        <symbol ref="Cardinal_Sphere_South" position="center" />
+      </rule>
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar|spar|~">
+        <symbol ref="Top_South_Buoy" position="center" />
+      </rule>
+      <else>
+        <symbol ref="Top_South_Buoy_Small" position="center" />
+      </else>
     </rule>
     <rule e="node" k="seamark:buoy_cardinal:category" v="west">
       <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
@@ -238,7 +280,21 @@
       <rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
         <symbol ref="Cardinal_Spar_West" position="center" />
       </rule>
-      <symbol ref="Top_West_Buoy" position="center" />
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="can">
+        <symbol ref="Cardinal_Can_West" position="center" />
+      </rule>
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="conical">
+        <symbol ref="Cardinal_Cone_West" position="center" />
+      </rule>
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="spherical">
+        <symbol ref="Cardinal_Sphere_West" position="center" />
+      </rule>
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar|spar|~">
+        <symbol ref="Top_West_Buoy" position="center" />
+      </rule>
+      <else>
+        <symbol ref="Top_West_Buoy_Small" position="center" />
+      </else>
     </rule>
 	</rule>
 
