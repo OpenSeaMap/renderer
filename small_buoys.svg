@@ -40,12 +40,12 @@
      id="namedview2911"
      showgrid="true"
      inkscape:zoom="11.879394"
-     inkscape:cx="162.45204"
-     inkscape:cy="210.97656"
+     inkscape:cx="140.10384"
+     inkscape:cy="219.20898"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g7856"
+     inkscape:current-layer="g3213"
      inkscape:snap-grids="false">
     <inkscape:grid
        type="xygrid"
@@ -1211,6 +1211,75 @@
     </g>
   </g>
   <g
+     transform="translate(0,60)"
+     style="display:inline"
+     inkscape:label="Cone Buoy 4 Band"
+     id="g3213"
+     inkscape:groupmode="layer">
+    <g
+       id="g3215">
+      <g
+         id="g3217">
+        <path
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccsccccccscccsssc"
+           d="m 108.23157,137.16671 0,5.65625 29.6875,0 c 1.28732,5.53295 6.23327,9.65624 12.15625,9.65625 5.92495,0 10.87095,-4.12052 12.15625,-9.65625 l 29.84375,0 0,-0.0625 0,-5.59375 -83.84375,0 z m 54,0 c -1.2853,-5.53573 -6.2313,-9.65625 -12.15625,-9.65625 -5.92298,1e-5 -10.86893,4.1233 -12.15625,9.65625 l 24.3125,0 z m -12.15625,-4.6875 c 4.14,0 7.5,3.36 7.5,7.5 0,4.14 -3.36,7.5 -7.5,7.5 -4.14,0 -7.5,-3.36 -7.5,-7.5 0,-4.14 3.36,-7.5 7.5,-7.5 z"
+           id="path3219"
+           style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+        <path
+           sodipodi:type="arc"
+           style="fill:none;stroke:#000000;stroke-width:4.64683294;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+           id="path3221"
+           sodipodi:cx="46.492271"
+           sodipodi:cy="150.92163"
+           sodipodi:rx="31.466251"
+           sodipodi:ry="30.935923"
+           d="m 15.635753,156.98217 c -3.114542,-15.3273 5.88908,-30.53085 20.984529,-35.43455"
+           transform="matrix(1.4164674,0.47394337,-0.48206808,1.4407496,172.65842,-93.634291)"
+           sodipodi:start="2.9444111"
+           sodipodi:end="4.3932674"
+           sodipodi:open="true" />
+        <path
+           sodipodi:type="arc"
+           style="fill:none;stroke:#000000;stroke-width:3.59378028;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+           id="path3223"
+           sodipodi:cx="102.79565"
+           sodipodi:cy="122.54897"
+           sodipodi:rx="23.953241"
+           sodipodi:ry="24.306795"
+           d="m 110.53956,99.547479 c 7.81904,2.710721 13.70924,9.319411 15.58437,17.485361"
+           transform="matrix(1.8607362,0.62259362,-0.61353771,1.8336709,19.201188,-153.26853)"
+           sodipodi:start="5.0415963"
+           sodipodi:end="6.0542529"
+           sodipodi:open="true" />
+      </g>
+      <rect
+         y="70.639336"
+         x="160.19763"
+         height="0.82489997"
+         width="52.331997"
+         id="rect3225"
+         style="fill:#000000;fill-opacity:1;stroke:none;display:inline"
+         transform="matrix(0.94832365,0.31730466,-0.31730466,0.94832365,0,0)" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;display:inline"
+         id="rect3227"
+         width="49.989216"
+         height="0.70672113"
+         x="161.33473"
+         y="63.043678"
+         transform="matrix(0.94832365,0.31730466,-0.31730466,0.94832365,0,0)" />
+      <rect
+         y="55.071892"
+         x="167.9221"
+         height="0.70672113"
+         width="37.191597"
+         id="rect3229"
+         style="fill:#000000;fill-opacity:1;stroke:none;display:inline"
+         transform="matrix(0.94832365,0.31730466,-0.31730466,0.94832365,0,0)" />
+    </g>
+  </g>
+  <g
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="Cone Top"
@@ -1234,7 +1303,8 @@
        style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path90440-0"
        d="m 159.48157,100.26046 -28.0625,-8.843752 -15.21875,45.750002 -7.96875,0 0,5.65625 29.6875,0 c 1.28732,5.53295 6.23327,9.65624 12.15625,9.65625 5.92495,0 10.87095,-4.12052 12.15625,-9.65625 l 29.84375,0 0,-0.0625 0,-5.59375 -7.6875,0 9,-26.1875 -29.9375,-9.4375 -3.96875,-1.28125 z m -23.03125,-0.21875 47.15625,15.96875 -7.21875,21.15625 -14.15625,0 c -1.2853,-5.53573 -6.2313,-9.65625 -12.15625,-9.65625 -5.92298,1e-5 -10.86893,4.1233 -12.15625,9.65625 l -13.71875,0 12.25,-37.125 z m 13.625,32.4375 c 4.14,0 7.5,3.36 7.5,7.5 0,4.14 -3.36,7.5 -7.5,7.5 -4.14,0 -7.5,-3.36 -7.5,-7.5 0,-4.14 3.36,-7.5 7.5,-7.5 z"
-       sodipodi:nodetypes="ccccccsccccccccccccsccccsssc" />
+       sodipodi:nodetypes="ccccccsccccccccccccsccccsssc"
+       inkscape:connector-curvature="0" />
   </g>
   <g
      style="display:none"
@@ -1243,10 +1313,11 @@
      inkscape:groupmode="layer"
      transform="translate(0,60)">
     <path
-       sodipodi:nodetypes="cccccsccccccccccsccccsssc"
-       d="m 131.41907,91.416708 -15.21875,45.750002 -7.96875,0 0,5.65625 29.6875,0 c 1.28732,5.53295 6.23327,9.65624 12.15625,9.65625 5.92495,0 10.87095,-4.12052 12.15625,-9.65625 l 29.84375,0 0,-0.0625 0,-5.59375 -7.6875,0 -52.96875,-45.750002 z m 5.03125,8.625002 47.15625,15.96875 -7.21875,21.15625 -14.15625,0 c -1.2853,-5.53573 -6.2313,-9.65625 -12.15625,-9.65625 -5.92298,1e-5 -10.86893,4.1233 -12.15625,9.65625 l -13.71875,0 12.25,-37.125 z m 13.625,32.4375 c 4.14,0 7.5,3.36 7.5,7.5 0,4.14 -3.36,7.5 -7.5,7.5 -4.14,0 -7.5,-3.36 -7.5,-7.5 0,-4.14 3.36,-7.5 7.5,-7.5 z"
+       sodipodi:nodetypes="cccccscccccccccccsccccsssc"
+       d="m 131.41907,91.416708 -15.21875,45.750002 -7.96875,0 0,5.65625 29.6875,0 c 1.28732,5.53295 6.23327,9.65624 12.15625,9.65625 5.92495,0 10.87095,-4.12052 12.15625,-9.65625 l 29.84375,0 0,-0.0625 0,-5.59375 -7.6875,0 9.04112,-26.13686 z m 5.03125,8.625002 47.15625,15.96875 -7.21875,21.15625 -14.15625,0 c -1.2853,-5.53573 -6.2313,-9.65625 -12.15625,-9.65625 -5.92298,1e-5 -10.86893,4.1233 -12.15625,9.65625 l -13.71875,0 z m 13.625,32.4375 c 4.14,0 7.5,3.36 7.5,7.5 0,4.14 -3.36,7.5 -7.5,7.5 -4.14,0 -7.5,-3.36 -7.5,-7.5 0,-4.14 3.36,-7.5 7.5,-7.5 z"
        id="path4869"
-       style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+       style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       inkscape:connector-curvature="0" />
     <rect
        style="fill:#000000;fill-opacity:1;stroke:none"
        id="rect5149"
@@ -1262,6 +1333,43 @@
        height="0.70672113"
        width="49.989216"
        id="rect5151"
+       style="fill:#000000;fill-opacity:1;stroke:none" />
+  </g>
+  <g
+     transform="translate(0,60)"
+     inkscape:groupmode="layer"
+     id="g3203"
+     inkscape:label="Can Buoy 4 Band"
+     style="display:none">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       id="path3205"
+       d="m 131.41907,91.416708 -15.21875,45.750002 -7.96875,0 0,5.65625 29.6875,0 c 1.28732,5.53295 6.23327,9.65624 12.15625,9.65625 5.92495,0 10.87095,-4.12052 12.15625,-9.65625 l 29.84375,0 0,-0.0625 0,-5.59375 -7.6875,0 9.04112,-26.13686 z m 5.03125,8.625002 47.15625,15.96875 -7.21875,21.15625 -14.15625,0 c -1.2853,-5.53573 -6.2313,-9.65625 -12.15625,-9.65625 -5.92298,1e-5 -10.86893,4.1233 -12.15625,9.65625 l -13.71875,0 z m 13.625,32.4375 c 4.14,0 7.5,3.36 7.5,7.5 0,4.14 -3.36,7.5 -7.5,7.5 -4.14,0 -7.5,-3.36 -7.5,-7.5 0,-4.14 3.36,-7.5 7.5,-7.5 z"
+       sodipodi:nodetypes="cccccscccccccccccsccccsssc" />
+    <rect
+       transform="matrix(0.94832365,0.31730466,-0.31730466,0.94832365,0,0)"
+       y="71.420815"
+       x="160.96355"
+       height="0.82489997"
+       width="49.831997"
+       id="rect3207"
+       style="fill:#000000;fill-opacity:1;stroke:none" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="rect3209"
+       width="49.989216"
+       height="0.70672113"
+       x="160.86575"
+       y="64.450401"
+       transform="matrix(0.94832365,0.31730466,-0.31730466,0.94832365,0,0)" />
+    <rect
+       transform="matrix(0.94832365,0.31730466,-0.31730466,0.94832365,0,0)"
+       y="57.679092"
+       x="161.01833"
+       height="0.70672113"
+       width="49.989216"
+       id="rect3211"
        style="fill:#000000;fill-opacity:1;stroke:none" />
   </g>
   <g
@@ -1355,8 +1463,8 @@
   <g
      inkscape:groupmode="layer"
      id="g7856"
-     inkscape:label="Sphere Buoy 2 Band copy"
-     style="display:inline">
+     inkscape:label="Sphere Buoy 4 Band"
+     style="display:none">
     <g
        id="g7858">
       <g
@@ -1369,7 +1477,7 @@
            sodipodi:cy="143"
            sodipodi:rx="24.4375"
            sodipodi:ry="23.625"
-           d="m 129.32694,154.256 c -6.43031,-11.47162 -2.0237,-25.81069 9.84245,-32.02721 11.86614,-6.21652 26.69836,-1.95641 33.12867,9.51521 3.96093,7.06626 3.93423,15.59456 -0.0709,22.63752"
+           d="m 129.32694,154.256 a 24.4375,23.625 0 1 1 42.90025,0.12552"
            transform="matrix(1.1867088,0,0,1.2275216,-24.073718,10.69257)"
            sodipodi:start="2.6449863"
            sodipodi:end="6.7858445"
