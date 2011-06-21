@@ -1332,6 +1332,12 @@
     </rule>
 	</rule>
   
+	<!-- Sandwaves -->
+  
+	<rule e="way" k="seamark:type" v="sandwaves">
+		<area class="sandwaves" layer="-1"/>
+	</rule>
+  
   <rule e="node" k="seamark:fixme" v="*">
     <symbol ref="LoLcaption" position="center" />
   </rule>
@@ -1471,7 +1477,21 @@
       stroke: #000000;
 			}
 			
+			.sandwaves {
+      fill: url(#sandwaves);
+      stroke: #ffc000;
+      stroke-width: 0.2px;
+      stroke-dasharray: 0.5,0.5;
+      stroke-opacity: 0.75;
+			}
+			
 		</style>
+    
+		<svg:pattern id="sandwaves" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="scale(1.0)">
+			<svg:path fill="none" stroke="#e0c000" stroke-width="0.1" stroke-opacity="0.75" d="
+	M0.00,3.45 L0.33,3.08 L0.66,2.5 L0.99,1.93 L1.32,1.60 L1.65,1.61 L1.82,1.95 L1.99,2.5 L2.16,3.03 L2.33,3.34 L2.50,3.33 L2.83,3.01 L3.16,2.5 L3.49,2.01 L3.82,1.72 L4.15,1.73 L4.32,2.03 L4.49,2.5 L4.66,2.96 L4.83,3.22 L5.00,3.21
+	M5.00,8.45 L5.33,8.08 L5.66,7.5 L5.99,6.93 L6.32,6.60 L6.65,6.61 L6.82,6.95 L6.99,7.5 L7.16,8.03 L7.33,8.34 L7.50,8.33 L7.83,8.01 L8.16,7.5 L8.49,7.01 L8.82,6.72 L9.15,6.73 L9.32,7.03 L9.49,7.5 L9.66,7.96 L9.83,8.22 L10.00,8.21"/>
+		</svg:pattern>
     
 	</defs>
 
