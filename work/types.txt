@@ -19,6 +19,7 @@ landmark
 mooring
 navigation_line
 recommended_track
+sandwaves
 separation_boundary
 separation_crossing
 separation_lane
