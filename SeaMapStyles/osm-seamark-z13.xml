@@ -189,7 +189,17 @@
     </rule>
     
     <rule e="node" k="seamark:beacon_lateral:shape" v="stake">
-      <symbol ref="Stake" position="center" />
+			<rule e="node" k="seamark:beacon_lateral:colour" v="red|green">
+        <rule e="node" k="seamark:beacon_lateral:colour" v="red">
+          <symbol ref="Stake_Red" position="center" />
+        </rule>
+        <rule e="node" k="seamark:beacon_lateral:colour" v="green">
+          <symbol ref="Stake_Green" position="center" />
+        </rule>
+      </rule>
+      <else>
+        <symbol ref="Stake" position="center" />
+      </else>
     </rule>
     
   </rule>
@@ -499,8 +509,18 @@
 	<!-- Special Purpose Beacons -->
   
 	<rule e="node" k="seamark:type" v="beacon_special_purpose">
-		<rule e="node" k="seamark:beacon_special_purpose:shape" v="tower">
-			<symbol ref="Special_Purpose_Tower" position="center" />
+		<rule e="node" k="seamark:beacon_special_purpose:shape" v="tower|stake">
+      <rule e="node" k="seamark:beacon_special_purpose:shape" v="tower">
+        <symbol ref="Special_Purpose_Tower" position="center" />
+      </rule>
+      <rule e="node" k="seamark:beacon_special_purpose:shape" v="stake">
+        <rule e="node" k="seamark:beacon_lateral:colour" v="yellow">
+          <symbol ref="Stake_Yellow" position="center" />
+        </rule>
+        <else>
+          <symbol ref="Stake" position="center" />
+        </else>
+      </rule>
 		</rule>
 		<else>
       <rule e="node" k="seamark:beacon_special_purpose:colour" v="red;green;red;green">
