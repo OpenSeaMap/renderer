@@ -12,7 +12,7 @@
    height="400"
    id="svg2"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="Stake.svg"
+   sodipodi:docname="Stake_Green.svg"
    style="display:inline">
   <metadata
      id="metadata2913">
@@ -39,9 +39,9 @@
      inkscape:window-height="1088"
      id="namedview2911"
      showgrid="true"
-     inkscape:zoom="4.8992075"
-     inkscape:cx="96.292708"
-     inkscape:cy="246.5655"
+     inkscape:zoom="27.714103"
+     inkscape:cx="141.80321"
+     inkscape:cy="204.12473"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -944,10 +944,10 @@
          inkscape:label="Stake"
          id="layer9-8">
         <path
-           sodipodi:nodetypes="ccccccccc"
-           d="m 149.725,172.26637 0,-4.6 7.8,-0.0107 0,-71.576837 4.9625,0 0.022,71.576837 7.76551,0.022 0,4.58867 -20.55,0"
+           sodipodi:nodetypes="cccc"
+           d="m 157.525,167.65567 0,-71.576837 4.9625,0 0.022,71.576837"
            id="path7832"
-           style="fill:#d40000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+           style="fill:#d40000;fill-opacity:1;fill-rule:evenodd;stroke:none"
            inkscape:connector-curvature="0" />
       </g>
       <g
@@ -1014,5 +1014,12 @@
         </g>
       </g>
     </g>
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="rect3136"
+       width="21"
+       height="4.5"
+       x="139.67525"
+       y="137.71135" />
   </g>
 </svg>
