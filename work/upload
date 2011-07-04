@@ -5,9 +5,11 @@ while true; do
 		cat sending | while read file; do
 			echo "put $file cache/$(echo $file | sed -e s?/?-?g)" >> batchfile
 		done
+		backoff=0
 		while ! sftp -b batchfile malcolm@netz.smurf.noris.de; do
 			echo "SFTP failure - retrying"
-			sleep 60
+			backoff=$(($backoff+1))
+			sleep $((60*$backoff))
 		done
 		rm sending
 		rm batchfile
