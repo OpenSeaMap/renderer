@@ -250,7 +250,7 @@
       </else>
     </rule>
     <rule e="node" k="seamark:buoy_cardinal:category" v="east">
-      <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar|~">
         <symbol ref="Cardinal_Pillar_East" position="center" />
       </rule>
       <rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
@@ -273,7 +273,7 @@
       </else>
     </rule>
     <rule e="node" k="seamark:buoy_cardinal:category" v="south">
-      <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar|~">
         <symbol ref="Cardinal_Pillar_South" position="center" />
       </rule>
       <rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
@@ -296,7 +296,7 @@
       </else>
     </rule>
     <rule e="node" k="seamark:buoy_cardinal:category" v="west">
-      <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar">
+      <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar|~">
         <symbol ref="Cardinal_Pillar_West" position="center" />
       </rule>
       <rule e="node" k="seamark:buoy_cardinal:shape" v="spar">
