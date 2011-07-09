@@ -938,6 +938,11 @@
       <symbol ref="Light_Magenta_120" position="center" />
     </else>
 	</rule> 
+  <rule e="node" k="seamark:light:character" v="*">
+    <rule e="node" k="seamark:light:colour" v="~">
+      <symbol ref="Light_Magenta_120" position="center" />
+    </rule>
+  </rule>
 
 	<!-- Light Sectors -->
 
