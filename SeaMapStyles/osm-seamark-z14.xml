@@ -1089,10 +1089,16 @@
   
 	<rule e="way" k="seamark:type" v="recommended_track">
 		<line class="leading-line" />
+    <rule e="way" k="seamark:recommended_track:orientation" v="*">
+      <pathText class="line-character" startOffset="50%" dy="-0.5"><tag k="seamark:recommended_track:orientation"/>°</pathText>
+    </rule>
 	</rule>
   
 	<rule e="way" k="seamark:type" v="navigation_line">
 		<line class="transit-line" />
+    <rule e="way" k="seamark:navigation_line:orientation" v="*">
+      <pathText class="line-character" startOffset="50%" dy="-0.5"><tag k="seamark:navigation_line:orientation"/>°</pathText>
+    </rule>
 	</rule>
   
 	<!-- Walls -->
@@ -1142,7 +1148,7 @@
 			.line-character {
       font-family: "Arial";
       font-weight: normal;
-      font-size: 6.0px;
+      font-size: 3.0px;
       text-anchor: right;
 			}
       

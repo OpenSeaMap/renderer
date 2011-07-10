@@ -838,6 +838,12 @@
 		</rule>
 	</rule>
 
+	<!-- Radar Transponder -->
+  
+	<rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
+		<symbol ref="Radar_Station" position="center" />
+	</rule>
+  
 	<!-- Lighthouse -->
 
 	<rule e="node" k="seamark:type" v="landmark">

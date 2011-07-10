@@ -1277,14 +1277,14 @@
 	<rule e="way" k="seamark:type" v="recommended_track">
 		<line class="leading-line" />
     <rule e="way" k="seamark:recommended_track:orientation" v="*">
-      <pathText k="seamark:recommended_track:orientation" class="line-character" startOffset="50%" dy="-0.2" />
+      <pathText class="line-character" startOffset="50%" dy="-0.2"><tag k="seamark:recommended_track:orientation"/>°</pathText>
     </rule>
 	</rule>
   
 	<rule e="way" k="seamark:type" v="navigation_line">
 		<line class="transit-line" />
     <rule e="way" k="seamark:navigation_line:orientation" v="*">
-      <pathText k="seamark:navigation_line:orientation" class="line-character" startOffset="50%" dy="-0.2" />
+      <pathText class="line-character" startOffset="50%" dy="-0.2"><tag k="seamark:navigation_line:orientation"/>°</pathText>>
     </rule>
 	</rule>
 

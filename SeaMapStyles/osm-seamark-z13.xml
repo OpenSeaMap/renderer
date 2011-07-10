@@ -841,6 +841,12 @@
     <symbol ref="Marina" position="center" />
 	</rule>
   
+	<!-- Radar Transponder -->
+  
+	<rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
+		<symbol ref="Radar_Station" position="center" />
+	</rule>
+  
 	<!-- Lighthouse -->
 
 	<rule e="node" k="seamark:type" v="landmark">
@@ -992,6 +998,16 @@
     <line class="lane-arrow-core lane-arrow-core-12" smart-linecap="no" layer="-1" />
   </rule>
   
+	<!-- Leading & Transit Lines -->
+  
+	<rule e="way" k="seamark:type" v="recommended_track">
+		<line class="leading-line" />
+	</rule>
+  
+	<rule e="way" k="seamark:type" v="navigation_line">
+		<line class="transit-line" />
+	</rule>
+  
 	<!-- Walls -->
   
 	<rule e="way" k="seamark:type" v="shoreline_construction">
@@ -1080,6 +1096,25 @@
 			.lane-arrow-core-11 { stroke-width: 0.8px; stroke-dasharray: 0.4,39.6; stroke-dashoffset: 4.0; } 
 			.lane-arrow-core-12 { stroke-width: 0.4px; stroke-dasharray: 0.4,39.6; stroke-dashoffset: 3.6; } 
       
+			.leading-line {
+      stroke-width: 0.5px;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+      fill: none;
+      fill-opacity: 0;
+      stroke: #000000;
+			}
+      
+			.transit-line {
+      stroke-width: 0.5px;
+      stroke-dasharray: 2,2;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+      fill: none;
+      fill-opacity: 0;
+      stroke: #000000;
+			}
+			
 			.wall-line {
       stroke-width: 0.5px;
       stroke-linecap: butt;
