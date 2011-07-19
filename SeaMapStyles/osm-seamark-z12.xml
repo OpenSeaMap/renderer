@@ -866,6 +866,22 @@
   
    <!-- Light Sectors -->
   
+  <rule e="way" k="seamark:light_radial" v="*">
+    <line class="sector-radial" />
+  </rule>
+  
+  <rule e="way" k="seamark:light_arc" v="white|yellow">
+    <line class="arc-yellow" />
+  </rule>
+  
+  <rule e="way" k="seamark:light_arc" v="red">
+    <line class="arc-red" />
+  </rule>
+  
+  <rule e="way" k="seamark:light_arc" v="green">
+    <line class="arc-green" />
+  </rule>
+  
 	<rule e="node" k="seamark:type" v="*">
     <rule e="node" k="seamark:light:1" v="*">
       <light k="seamark:light:1" layer="-3" />
@@ -1021,7 +1037,8 @@
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
 			.map-background {
-			fill: none;
+      fill: #b5d0d0;
+      fill-opacity: 0;
 			stroke: none;
 			}
 
@@ -1106,6 +1123,40 @@
       stroke: #000000;
 			}
 			
+			.sector-radial {
+      stroke-width: 0.5px;
+      stroke-dasharray: 2,2;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+      fill: none;
+      fill-opacity: 0;
+      stroke: #000000;
+			}
+			
+			.arc-red {
+			stroke-width: 2.0px;
+			stroke-linecap: butt;
+			stroke-linejoin: round;
+			fill: none;
+			stroke: #F40000;
+			}
+      
+			.arc-green {
+			stroke-width: 2.0px;
+			stroke-linecap: butt;
+			stroke-linejoin: round;
+			fill: none;
+			stroke: #00F400;
+			}
+      
+			.arc-yellow {
+			stroke-width: 2.0px;
+			stroke-linecap: butt;
+			stroke-linejoin: round;
+			fill: none;
+			stroke: #F4F400;
+			}
+      
 			.sandwaves {
       fill: url(#sandwaves);
 			}
