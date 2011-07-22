@@ -879,7 +879,7 @@
 		<symbol ref="Float_Major" position="center" />
 	</rule>
   
-   <!-- Light Sectors -->
+  <!-- Light Sectors -->
   
   <rule e="way" k="seamark:light_radial" v="*">
     <line class="sector-radial" />
@@ -896,7 +896,7 @@
   <rule e="way" k="seamark:light_arc" v="green">
     <line class="arc-green" />
   </rule>
-  
+           
 	<rule e="node" k="seamark:type" v="*">
     <rule e="node" k="seamark:light:1" v="*">
       <light k="seamark:light:1" layer="-3" />
