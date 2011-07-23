@@ -1515,7 +1515,7 @@
 			}
 			
 			.arc-red {
-			stroke-width: 2.0px;
+			stroke-width: 0.5px;
 			stroke-linecap: butt;
 			stroke-linejoin: round;
 			fill: none;
@@ -1523,7 +1523,7 @@
 			}
       
 			.arc-green {
-			stroke-width: 2.0px;
+			stroke-width: 0.5px;
 			stroke-linecap: butt;
 			stroke-linejoin: round;
 			fill: none;
@@ -1531,7 +1531,7 @@
 			}
       
 			.arc-yellow {
-			stroke-width: 2.0px;
+			stroke-width: 0.5px;
 			stroke-linecap: butt;
 			stroke-linejoin: round;
 			fill: none;

@@ -1504,8 +1504,8 @@
 			}
 			
 			.sector-radial {
-      stroke-width: 0.1px;
-      stroke-dasharray: 0.75,0.75;
+      stroke-width: 0.3px;
+      stroke-dasharray: 1.0,1.0;
       stroke-linecap: butt;
       stroke-linejoin: round;
       fill: none;
@@ -1514,7 +1514,7 @@
 			}
 			
 			.arc-red {
-			stroke-width: 2.0px;
+			stroke-width: 1.0px;
 			stroke-linecap: butt;
 			stroke-linejoin: round;
 			fill: none;
@@ -1522,7 +1522,7 @@
 			}
       
 			.arc-green {
-			stroke-width: 2.0px;
+			stroke-width: 1.0px;
 			stroke-linecap: butt;
 			stroke-linejoin: round;
 			fill: none;
@@ -1530,7 +1530,7 @@
 			}
       
 			.arc-yellow {
-			stroke-width: 2.0px;
+			stroke-width: 1.0px;
 			stroke-linecap: butt;
 			stroke-linejoin: round;
 			fill: none;
