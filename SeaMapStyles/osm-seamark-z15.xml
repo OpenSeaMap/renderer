@@ -517,7 +517,7 @@
         <symbol ref="Special_Purpose_Tower" position="center" />
       </rule>
       <rule e="node" k="seamark:beacon_special_purpose:shape" v="stake|pole|post">
-        <rule e="node" k="seamark:beacon_lateral:colour" v="yellow">
+        <rule e="node" k="seamark:beacon_special_purpose:colour" v="yellow">
           <symbol ref="Stake_Yellow" position="center" />
         </rule>
         <else>
@@ -1029,69 +1029,6 @@
     <line class="arc-green" />
   </rule>
   
-	<rule e="node" k="seamark:type" v="*">
-    <rule e="node" k="seamark:light:1" v="*">
-      <light k="seamark:light:1" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:2" v="*">
-      <light k="seamark:light:2" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:3" v="*">
-      <light k="seamark:light:3" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:4" v="*">
-      <light k="seamark:light:4" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:5" v="*">
-      <light k="seamark:light:5" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:6" v="*">
-      <light k="seamark:light:6" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:7" v="*">
-      <light k="seamark:light:7" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:8" v="*">
-      <light k="seamark:light:8" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:9" v="*">
-      <light k="seamark:light:9" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:10" v="*">
-      <light k="seamark:light:10" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:11" v="*">
-      <light k="seamark:light:11" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:12" v="*">
-      <light k="seamark:light:12" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:13" v="*">
-      <light k="seamark:light:13" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:14" v="*">
-      <light k="seamark:light:14" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:15" v="*">
-      <light k="seamark:light:15" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:16" v="*">
-      <light k="seamark:light:16" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:17" v="*">
-      <light k="seamark:light:17" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:18" v="*">
-      <light k="seamark:light:18" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:19" v="*">
-      <light k="seamark:light:19" layer="-3" />
-    </rule>
-    <rule e="node" k="seamark:light:20" v="*">
-      <light k="seamark:light:20" layer="-3" />
-    </rule>
-	</rule>
-
 	<!-- Light characters -->
   
 	<rule e="node" k="seamark:type" v="*">

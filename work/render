@@ -27,7 +27,7 @@ download () {
 			done
 		done
 	done
-	../smfilter < merge.osm > next.osm
+	../smfilter/smfilter < merge.osm > next.osm
 	rm merge.osm
 	echo "$(date) successful download" >> log.txt
 }
