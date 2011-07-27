@@ -904,8 +904,8 @@
 
 	<!-- Lighthouse -->
 
-	<rule e="node" k="seamark:type" v="landmark">
-		<rule e="node" k="seamark:light:colour|seamark:light:character|seamark:light:1|seamark:light:1:colour|seamark:light:1:character" v="*">
+	<rule e="way|node" k="seamark:type" v="landmark">
+		<rule e="way|node" k="seamark:light:colour|seamark:light:character|seamark:light:1|seamark:light:1:colour|seamark:light:1:character" v="*">
 			<symbol ref="Light_House" position="center" />
 		</rule>
 	</rule>
@@ -986,22 +986,19 @@
   
 	<!-- Marina -->
   
-	<rule e="way" k="seamark:type" v="harbour">
-    <rule e="way" k="seamark:harbour:category" v="marina|yacht|yacht_harbour">
+	<rule e="way|node" k="seamark:type" v="harbour">
+    <rule e="way|node" k="seamark:harbour:category" v="marina|yacht|yacht_harbour">
       <symbol ref="Marina" position="center" />
     </rule>
 	</rule>
   
 	<!-- Anchorages -->
   
-	<rule e="node" k="seamark:type" v="anchorage">
+	<rule e="way|node" k="seamark:type" v="anchorage">
     <symbol ref="Anchorage" position="center" />
 	</rule>
 	<rule e="node" k="seamark:type" v="anchor_berth">
     <symbol ref="Anchor_Berth" position="center" />
-	</rule>
-	<rule e="way" k="seamark:type" v="anchorage">
-    <symbol ref="Anchorage" position="center" />
 	</rule>
   
 	<!-- Traffic Separation Schemes -->
