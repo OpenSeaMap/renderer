@@ -27,7 +27,7 @@ download () {
 			done
 		done
 	done
-	../smfilter/smfilter < merge.osm > next.osm
+	../smfilter/smfilter -a 0.02 < merge.osm > next.osm
 	rm merge.osm
 	echo "$(date) successful download" >> log.txt
 }
@@ -89,11 +89,11 @@ subtile () {
 
 tile () {
 	clean 12 $1 $2
-	perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-z12-15.xml -b $3 -o panel.svg panel.osm 2>/dev/null
+	perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-z12-15.xml -b $3 -o panel.svg panel-z12.osm 2>/dev/null
 	inkscape panel.svg -e panel.png -d 90 -a 256:256:512:512 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
 	if [ $(stat panel.png | cut -f 8 -d' ') -ge 410 ]; then
 		for ((k=12; k<=18; k=k+1)); do
-			perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-z$k.xml -b $3 -o panel_$k.svg panel.osm 2>/dev/null
+			perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-z$k.xml -b $3 -o panel_$k.svg panel-z12.osm 2>/dev/null
 		done;
 		mkdir -p tiles/12/$1
 		filename="tiles/12/$1/$2.png"
@@ -108,6 +108,7 @@ tile () {
 }
 
 search () {
+echo $1 $2 $3
 	zoom[$1]=$(($1+1))
 	x[$1]=$(($2*2))
 	y[$1]=$(($3*2))
@@ -130,8 +131,8 @@ search () {
 			yx=$(echo "scale=8; 4*a(1)*(1-((2*$tile)/${z[$1]}))" | bc -l)
 			minlat=$(echo "scale=8; ((a((e($yx)-(1/e($yx)))/2))*180)/(4*a(1))" | bc -l)
 			bb="$minlon,$minlat,$maxlon,$maxlat"
-			osmosis -q --rx file=world.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=panel.osm
-			for timestamp in $( grep timestamp panel.osm | cut -f 6 -d \" ); do
+			osmosis -q --rx file=panel-z$1.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=panel-z${zoom[$1]}.osm
+			for timestamp in $( grep timestamp panel-z$1.osm | cut -f 6 -d \" ); do
 				if [ $timestamp \> $previous ]; then
 					if [ ${zoom[$1]} -lt 12 ]; then
 						search ${zoom[$1]} $((${x[$1]}+${i[$1]})) $((${y[$1]}+${j[$1]}))
@@ -158,6 +159,7 @@ else
 fi
 
 if [ $# -eq 3 ]; then
+	cp world.osm panel-z$1.osm
 	search $1 $2 $3
 	echo "$(date) Rendering of $1 $2 $3 complete" >> log.txt
 	exit
@@ -168,6 +170,7 @@ while true; do
 		download
 	fi
 	mv next.osm world.osm
+	cp world.osm panel-z0.osm
 	search 0 0 0
 	latest=$previous
 	for timestamp in $( grep timestamp world.osm | cut -f 6 -d \" ); do

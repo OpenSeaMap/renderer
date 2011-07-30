@@ -191,10 +191,10 @@
     <rule e="node" k="seamark:beacon_lateral:shape" v="stake|pole|post">
 			<rule e="node" k="seamark:beacon_lateral:colour" v="red|green">
         <rule e="node" k="seamark:beacon_lateral:colour" v="red">
-          <symbol ref="Stake_Red" position="center" />
+          <symbol ref="Lateral_Stake_Red" position="center" />
         </rule>
         <rule e="node" k="seamark:beacon_lateral:colour" v="green">
-          <symbol ref="Stake_Green" position="center" />
+          <symbol ref="Lateral_Stake_Green" position="center" />
         </rule>
       </rule>
       <else>
@@ -518,7 +518,7 @@
       </rule>
       <rule e="node" k="seamark:beacon_special_purpose:shape" v="stake|pole|post">
         <rule e="node" k="seamark:beacon_special_purpose:colour" v="yellow">
-          <symbol ref="Stake_Yellow" position="center" />
+          <symbol ref="Special_Purpose_Stake_Yellow" position="center" />
         </rule>
         <else>
           <symbol ref="Stake" position="center" />
@@ -931,26 +931,28 @@
 	<!-- Light Flares -->
   
 	<rule e="node" k="seamark:type" v="*">
-    <rule e="node" k="seamark:light:1:colour" v="~">
-      <rule e="node" k="seamark:light:colour" v="*">
-        <rule e="node" k="seamark:light:colour" v="white|yellow|red|green">
-          <rule e="node" k="seamark:light:colour" v="white|yellow">
-            <symbol ref="Light_White_120" position="center" />
+    <rule e="node" k="seamark:light:radius" v="~">
+      <rule e="node" k="seamark:light:1:colour" v="~">
+        <rule e="node" k="seamark:light:colour" v="*">
+          <rule e="node" k="seamark:light:colour" v="white|yellow|red|green">
+            <rule e="node" k="seamark:light:colour" v="white|yellow">
+              <symbol ref="Light_White_120" position="center" />
+            </rule>
+            <rule e="node" k="seamark:light:colour" v="red">
+              <symbol ref="Light_Red_120" position="center" />
+            </rule>
+            <rule e="node" k="seamark:light:colour" v="green">
+              <symbol ref="Light_Green_120" position="center" />
+            </rule>
           </rule>
-          <rule e="node" k="seamark:light:colour" v="red">
-            <symbol ref="Light_Red_120" position="center" />
+          <else>
+            <symbol ref="Light_Magenta_120" position="center" />
+          </else>
+        </rule> 
+        <rule e="node" k="seamark:light:character" v="*">
+          <rule e="node" k="seamark:light:colour" v="~">
+            <symbol ref="Light_Magenta_120" position="center" />
           </rule>
-          <rule e="node" k="seamark:light:colour" v="green">
-            <symbol ref="Light_Green_120" position="center" />
-          </rule>
-        </rule>
-        <else>
-          <symbol ref="Light_Magenta_120" position="center" />
-        </else>
-      </rule> 
-      <rule e="node" k="seamark:light:character" v="*">
-        <rule e="node" k="seamark:light:colour" v="~">
-          <symbol ref="Light_Magenta_120" position="center" />
         </rule>
       </rule>
     </rule>
