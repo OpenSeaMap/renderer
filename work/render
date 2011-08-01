@@ -27,7 +27,7 @@ download () {
 			done
 		done
 	done
-	../smfilter/smfilter -a 0.02 < merge.osm > next.osm
+	../smfilter/smfilter -a 0.01 < merge.osm > next.osm
 	rm merge.osm
 	echo "$(date) successful download" >> log.txt
 }
@@ -108,7 +108,7 @@ tile () {
 }
 
 search () {
-echo $1 $2 $3
+#echo $1 $2 $3
 	zoom[$1]=$(($1+1))
 	x[$1]=$(($2*2))
 	y[$1]=$(($3*2))

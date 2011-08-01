@@ -1404,7 +1404,7 @@
 			}
 			
 			.sector-radial {
-      stroke-width: 0.3px;
+      stroke-width: 0.2px;
       stroke-dasharray: 1,1;
       stroke-linecap: butt;
       stroke-linejoin: round;
