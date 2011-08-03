@@ -43,6 +43,7 @@ clean () {
 			filename="tiles/${zoom[$1]}/$xc/$yc.png"
 			if [ -e $filename ]; then
 				rm $filename
+				echo "rm $filename" >> uploads
 			fi
 			if [ ${zoom[$1]} -lt 18 ]; then
 				clean ${zoom[$1]} $xc $yc
@@ -78,7 +79,7 @@ subtile () {
 					subtile ${zoom[$1]} $xs $ys $x0 $y1
 				fi
 			else
-				echo "$filename" >> uploads
+				echo "put $filename cache/$(echo $filename | sed -e s?/?-?g)" >> uploads
 				if [ ${zoom[$1]} -lt 18 ]; then
 					subtile ${zoom[$1]} $xs $ys $x0 $y1
 				fi
@@ -101,7 +102,7 @@ tile () {
 		if [ $(stat "$filename" | cut -f 8 -d' ') -lt 410 ]; then
 			rm $filename
 		else
-			echo "$filename" >> uploads
+			echo "put $filename cache/$(echo $filename | sed -e s?/?-?g)" >> uploads
 		fi
 		subtile 12 $1 $2 256 512
 	fi

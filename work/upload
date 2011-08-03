@@ -2,17 +2,13 @@
 
 while true; do
 	if [ -e sending ]; then
-		cat sending | while read file; do
-			echo "put $file cache/$(echo $file | sed -e s?/?-?g)" >> batchfile
-		done
 		backoff=0
-		while ! sftp -b batchfile malcolm@netz.smurf.noris.de; do
+		while ! sftp -q -b sending malcolm@netz.smurf.noris.de; do
 			echo "SFTP failure - retrying"
 			backoff=$(($backoff+1))
 			sleep $((60*$backoff))
 		done
 		rm sending
-		rm batchfile
 	fi
 	while [ ! -e uploads ]; do
 		sleep 300
