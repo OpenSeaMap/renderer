@@ -10,8 +10,9 @@ while true; do
 		done
 		rm sending
 	fi
+	sleep 60
 	while [ ! -e uploads ]; do
-		sleep 300
+		sleep 60
 	done
 	mv uploads sending
 done

@@ -133,16 +133,14 @@ search () {
 			minlat=$(echo "scale=8; ((a((e($yx)-(1/e($yx)))/2))*180)/(4*a(1))" | bc -l)
 			bb="$minlon,$minlat,$maxlon,$maxlat"
 			osmosis -q --rx file=panel-z$1.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=panel-z${zoom[$1]}.osm
-			for timestamp in $( grep timestamp panel-z$1.osm | cut -f 6 -d \" ); do
-				if [ $timestamp \> $previous ]; then
-					if [ ${zoom[$1]} -lt 12 ]; then
-						search ${zoom[$1]} $((${x[$1]}+${i[$1]})) $((${y[$1]}+${j[$1]}))
-					else
-						tile $((${x[$1]}+${i[$1]})) $((${y[$1]}+${j[$1]})) $minlat,$minlon,$maxlat,$maxlon
-					fi
-					break
+			timestamp=$(../util/checkdate panel-z$1.osm)
+			if [ $timestamp \> $previous ]; then
+				if [ ${zoom[$1]} -lt 12 ]; then
+					search ${zoom[$1]} $((${x[$1]}+${i[$1]})) $((${y[$1]}+${j[$1]}))
+				else
+					tile $((${x[$1]}+${i[$1]})) $((${y[$1]}+${j[$1]})) $minlat,$minlon,$maxlat,$maxlon
 				fi
-			done
+			fi
 		done
 	done
 }
@@ -174,11 +172,10 @@ while true; do
 	cp world.osm panel-z0.osm
 	search 0 0 0
 	latest=$previous
-	for timestamp in $( grep timestamp world.osm | cut -f 6 -d \" ); do
-		if [ $timestamp \> $latest ]; then
-			latest=$timestamp;
-		fi;
-	done
+	timestamp=$(../util/checkdate panel-z$1.osm)
+	if [ $timestamp \> $latest ]; then
+		latest=$timestamp;
+	fi;
 	echo "$latest" > datestamp
 	echo "$(date) Rendered to latest timestamp: $latest" >> log.txt
 	if [ -e stop ]; then

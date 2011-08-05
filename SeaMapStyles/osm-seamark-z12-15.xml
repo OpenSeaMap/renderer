@@ -550,30 +550,36 @@
   
 	<rule e="node" k="seamark:type" v="mooring">
     <rule e="node" k="seamark:mooring:category" v="mooring_buoy">
-      <rule e="node" k="seamark:mooring:shape" v="super-buoy">
-        <rule e="node" k="seamark:mooring:colour" v="yellow|black">
-          <rule e="node" k="seamark:mooring:colour" v="yellow">
-            <symbol ref="Float_Major_Yellow" position="center" />
+      <rule e="node" k="seamark:mooring:shape" v="*">
+        <rule e="node" k="seamark:mooring:shape" v="super-buoy">
+          <rule e="node" k="seamark:mooring:colour" v="yellow|black">
+            <rule e="node" k="seamark:mooring:colour" v="yellow">
+              <symbol ref="Float_Major_Yellow" position="center" />
+            </rule>
+            <rule e="node" k="seamark:mooring:colour" v="black">
+              <symbol ref="Float_Major_Black" position="center" />
+            </rule>
           </rule>
-          <rule e="node" k="seamark:mooring:colour" v="black">
+          <else>
             <symbol ref="Float_Major_Black" position="center" />
-          </rule>
+          </else>
+          <symbol ref="Top_Mooring_Float" position="center" />
         </rule>
-        <else>
-          <symbol ref="Float_Major_Black" position="center" />
-        </else>
-        <symbol ref="Top_Mooring_Float" position="center" />
+        <rule e="node" k="seamark:mooring:shape" v="spherical">
+          <symbol ref="Sphere_Buoy" position="center" />
+          <symbol ref="Top_Mooring_Buoy_Small" position="center" />
+        </rule>
+        <rule e="node" k="seamark:mooring:shape" v="can">
+          <symbol ref="Can_Buoy" position="center" />
+          <symbol ref="Top_Mooring_Buoy_Small" position="center" />
+        </rule>
+        <rule e="node" k="seamark:mooring:shape" v="barrel">
+          <symbol ref="Barrel_Buoy" position="center" />
+          <symbol ref="Top_Mooring_Buoy_Small" position="center" />
+        </rule>
       </rule>
-      <rule e="node" k="seamark:mooring:shape" v="spherical">
+      <rule e="node" k="seamark:mooring:shape" v="~">
         <symbol ref="Sphere_Buoy" position="center" />
-        <symbol ref="Top_Mooring_Buoy_Small" position="center" />
-      </rule>
-      <rule e="node" k="seamark:mooring:shape" v="can">
-        <symbol ref="Can_Buoy" position="center" />
-        <symbol ref="Top_Mooring_Buoy_Small" position="center" />
-      </rule>
-      <rule e="node" k="seamark:mooring:shape" v="barrel">
-        <symbol ref="Barrel_Buoy" position="center" />
         <symbol ref="Top_Mooring_Buoy_Small" position="center" />
       </rule>
     </rule>
