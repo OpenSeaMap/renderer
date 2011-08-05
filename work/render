@@ -175,7 +175,7 @@ while true; do
 	cp world.osm panel-z0.osm
 	search 0 0 0
 	latest=$previous
-	timestamp=$(../util/checkdate panel-z$1.osm)
+	timestamp=$(../util/checkdate world.osm)
 	if [ $timestamp \> $latest ]; then
 		latest=$timestamp;
 	fi;
