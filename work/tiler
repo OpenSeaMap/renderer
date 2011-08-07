@@ -6,5 +6,5 @@ while true; do
 		mkdir -p $(dirname $tile)
 		mv -f cache/$file $tile
 	done
-	sleep 300
+	sleep 60
 done
