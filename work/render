@@ -40,10 +40,10 @@ clean () {
 		for ((j[$1]=0; ${j[$1]}<2; j[$1]=${j[$1]}+1)); do
 			xc=$((${x[$1]}+${i[$1]}))
 			yc=$((${y[$1]}+${j[$1]}))
-			filename="tiles/${zoom[$1]}/$xc/$yc.png"
-			if [ -e $filename ]; then
-				rm $filename
-				echo "rm $filename" >> uploads
+			cleanname="tiles/${zoom[$1]}/$xc/$yc.png"
+			if [ -e $cleanname ]; then
+				rm $cleanname
+				echo "rm $cleanname" >> deletions
 			fi
 			if [ ${zoom[$1]} -lt 18 ]; then
 				clean ${zoom[$1]} $xc $yc
@@ -52,43 +52,11 @@ clean () {
 	done
 }
 
-subtile () {
-	zoom[$1]=$(($1+1))
-	x[$1]=$(($2*2))
-	y[$1]=$(($3*2))
-	dx[$1]=$4
-	dy[$1]=$5
-	z[$1]=$((2**${zoom[$1]}))
-	for ((i[$1]=0; ${i[$1]}<2; i[$1]=${i[$1]}+1)); do
-		for ((j[$1]=0; ${j[$1]}<2; j[$1]=${j[$1]}+1)); do
-			xs=$((${x[$1]}+${i[$1]}))
-			ys=$((${y[$1]}+${j[$1]}))
-			mkdir -p tiles/${zoom[$1]}/$xs
-			filename="tiles/${zoom[$1]}/$xs/$ys.png"
-			m=$((${z[$1]}/4096))
-			bpi=$((90*$m))
-			xy=$((256/$m))
-			x0=$((${dx[$1]}+(${i[$1]}*$xy)))
-			y0=$(((${dy[$1]}-$xy)-(${j[$1]}*$xy)))
-			x1=$(((${dx[$1]}+$xy)+(${i[$1]}*$xy)))
-			y1=$((${dy[$1]}-(${j[$1]}*$xy)))
-			/Applications/Inkscape.app/Contents/Resources/bin/inkscape panel_${zoom[$1]}.svg -e $filename -d $bpi -a $x0:$y0:$x1:$y1 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
-			if [ $(stat "$filename" | cut -f 8 -d' ') -lt 410 ]; then
-				rm $filename
-				if [ ${zoom[$1]} -lt 15 ]; then
-					subtile ${zoom[$1]} $xs $ys $x0 $y1
-				fi
-			else
-				echo "put $filename cache/$(echo $filename | sed -e s?/?-?g)" >> uploads
-				if [ ${zoom[$1]} -lt 18 ]; then
-					subtile ${zoom[$1]} $xs $ys $x0 $y1
-				fi
-			fi
-		done
-	done
-}
-
 tile () {
+	filename="tiles/12/$1/$2.png"
+	if [ -e $filename ]; then
+		echo "rm $filename" >> deletions
+	fi
 	clean 12 $1 $2
 	perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-z12-15.xml -b $3 -o panel.svg panel-z12.osm 2>/dev/null
 	/Applications/Inkscape.app/Contents/Resources/bin/inkscape panel.svg -e panel.png -d 90 -a 256:256:512:512 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
@@ -96,21 +64,20 @@ tile () {
 		for k in {12..18}; do
 			perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-z$k.xml -b $3 -o panel_$k.svg panel-z12.osm 2>/dev/null &
 		done;
-		while [ $(ps -a | grep -c perl) \> 1 ]; do
+		while [ $(ps -a | grep -c perl) -gt 1 ]; do
 			sleep 1
 		done
 		mkdir -p tiles/12/$1
-		filename="tiles/12/$1/$2.png"
-		if [ -e $filename ]; then
-			echo "rm $filename" >> uploads
-		fi
 		/Applications/Inkscape.app/Contents/Resources/bin/inkscape panel_12.svg -e $filename -d 90 -a 256:256:512:512 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
 		if [ $(stat "$filename" | cut -f 8 -d' ') -lt 410 ]; then
 			rm $filename
 		else
-			echo "put $filename cache/$(echo $filename | sed -e s?/?-?g)" >> uploads
+			echo "put $filename cache/$(echo $filename | sed -e s?/?-?g)" >> tile.send
 		fi
-		subtile 12 $1 $2 256 512
+		./subtile 12 $1 $2 256 512
+		while [ $(ps -a | grep -c subtile) -gt 1 ]; do
+			sleep 1
+		done
 	fi
 }
 

@@ -1,6 +1,11 @@
 #!/bin/bash
 
 while true; do
+	while [ -e deletions ]; do
+		mv deletions deleting
+		sftp -q -b deleting malcolm@netz.smurf.noris.de
+		rm deleting
+	done
 	if [ -e sending ]; then
 		backoff=0
 		while ! sftp -q -b sending malcolm@netz.smurf.noris.de; do
@@ -11,8 +16,12 @@ while true; do
 		rm sending
 	fi
 	sleep 60
-	while [ ! -e uploads ]; do
+	while [ $(ls | grep -c '.send') -eq 0 ]; do
 		sleep 60
 	done
-	mv uploads sending
+	for file in $(ls | grep '.send'); do
+		mv $file send
+		cat send >> sending
+	done
+	rm send
 done
