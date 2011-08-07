@@ -867,19 +867,19 @@
    <!-- Light Sectors -->
   
   <rule e="way" k="seamark:light_radial" v="*">
-    <line class="sector-radial" />
+    <line class="sector-radial" layer="-1" />
   </rule>
   
   <rule e="way" k="seamark:light_arc" v="white|yellow">
-    <line class="arc-yellow" />
+    <line class="arc-yellow" layer="-1" />
   </rule>
   
   <rule e="way" k="seamark:light_arc" v="red">
-    <line class="arc-red" />
+    <line class="arc-red" layer="-1" />
   </rule>
   
   <rule e="way" k="seamark:light_arc" v="green">
-    <line class="arc-green" />
+    <line class="arc-green" layer="-1" />
   </rule>
   
 	<!-- Marina -->
@@ -1062,6 +1062,7 @@
       stroke-dasharray: 1,1;
       stroke-linecap: butt;
       stroke-linejoin: round;
+      stroke-opacity: 0.75;
       fill: none;
       fill-opacity: 0;
       stroke: #000000;
