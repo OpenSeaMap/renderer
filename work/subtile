@@ -20,7 +20,7 @@ subsubtile () {
 			y0=$(((${dy[$1]}-$xy)-(${j[$1]}*$xy)))
 			x1=$(((${dx[$1]}+$xy)+(${i[$1]}*$xy)))
 			y1=$((${dy[$1]}-(${j[$1]}*$xy)))
-			/Applications/Inkscape.app/Contents/Resources/bin/inkscape panel_${zoom[$1]}.svg -e $tilename -d $bpi -a $x0:$y0:$x1:$y1 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
+			inkscape panel_${zoom[$1]}.svg -e $tilename -d $bpi -a $x0:$y0:$x1:$y1 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
 			if [ $(stat "$tilename" | cut -f 8 -d' ') -lt 410 ]; then
 				rm $tilename
 				if [ ${zoom[$1]} -lt 15 ]; then
