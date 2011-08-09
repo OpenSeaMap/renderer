@@ -53,6 +53,9 @@ clean () {
 }
 
 tile () {
+	while [ $(ps -a | grep -c subtile) -gt 1 ]; do
+		sleep 1
+	done
 	filename="tiles/12/$1/$2.png"
 	if [ -e $filename ]; then
 		echo "rm $filename" >> deletions
@@ -74,10 +77,7 @@ tile () {
 		else
 			echo "put $filename cache/$(echo $filename | sed -e s?/?-?g)" >> tile.send
 		fi
-		./subtile 12 $1 $2 256 512
-		while [ $(ps -a | grep -c subtile) -gt 1 ]; do
-			sleep 1
-		done
+		./subtile 12 $1 $2 256 512 &
 	fi
 }
 
