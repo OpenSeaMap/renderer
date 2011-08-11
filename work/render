@@ -32,92 +32,6 @@ download () {
 	echo "$(date) successful download" >> log.txt
 }
 
-clean () {
-	zoom[$1]=$(($1+1))
-	x[$1]=$(($2*2))
-	y[$1]=$(($3*2))
-	for ((i[$1]=0; ${i[$1]}<2; i[$1]=${i[$1]}+1)); do
-		for ((j[$1]=0; ${j[$1]}<2; j[$1]=${j[$1]}+1)); do
-			xc=$((${x[$1]}+${i[$1]}))
-			yc=$((${y[$1]}+${j[$1]}))
-			cleanname="tiles/${zoom[$1]}/$xc/$yc.png"
-			if [ -e $cleanname ]; then
-				rm $cleanname
-				echo "rm $cleanname" >> deletions
-			fi
-			if [ ${zoom[$1]} -lt 18 ]; then
-				clean ${zoom[$1]} $xc $yc
-			fi
-		done
-	done
-}
-
-tile () {
-	filename="tiles/12/$1/$2.png"
-	if [ -e $filename ]; then
-		echo "rm $filename" >> deletions
-	fi
-	clean 12 $1 $2
-	perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-z12-15.xml -b $3 -o panel.svg panel-z12.osm 2>/dev/null
-	inkscape panel.svg -e panel.png -d 90 -a 256:256:512:512 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
-	if [ $(stat panel.png | cut -f 8 -d' ') -ge 410 ]; then
-		while [ $(ps -a | grep -c subtile) -gt 1 ]; do
-			sleep 1
-		done
-		for k in {12..18}; do
-			perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-z$k.xml -b $3 -o panel_$k.svg panel-z12.osm 2>/dev/null &
-		done;
-		while [ $(ps -a | grep -c perl) -gt 1 ]; do
-			sleep 1
-		done
-		mkdir -p tiles/12/$1
-		inkscape panel_12.svg -e $filename -d 90 -a 256:256:512:512 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
-		if [ $(stat "$filename" | cut -f 8 -d' ') -lt 410 ]; then
-			rm $filename
-		else
-			echo "put $filename cache/$(echo $filename | sed -e s?/?-?g)" >> tile.send
-		fi
-		./subtile 12 $1 $2 256 512 &
-	fi
-}
-
-search () {
-#echo $1 $2 $3
-	zoom[$1]=$(($1+1))
-	x[$1]=$(($2*2))
-	y[$1]=$(($3*2))
-	z[$1]=$((2**${zoom[$1]}))
-	for ((i[$1]=0; ${i[$1]}<2; i[$1]=${i[$1]}+1)); do
-		for ((j[$1]=0; ${j[$1]}<2; j[$1]=${j[$1]}+1)); do
-			os=$(echo "scale=8; ${z[$1]}/4096" | bc)
-			tile=$(echo "scale=8; (${x[$1]}+${i[$1]}-$os)" | bc)
-			tile=$(echo "scale=8; if ($tile < 0) $tile+${z[$1]} else $tile" | bc)
-			minlon=$(echo "scale=8; (($tile/${z[$1]})*360)-180" | bc)
-			tile=$(echo "scale=8; (${x[$1]}+${i[$1]}+1+$os)" | bc)
-			tile=$(echo "scale=8; if ($tile >= ${z[$1]}) $tile-${z[$1]} else $tile" | bc)
-			maxlon=$(echo "scale=8; (($tile/${z[$1]})*360)-180" | bc)
-			tile=$(echo "scale=8; (${y[$1]}+${j[$1]}-$os)" | bc -l)
-			tile=$(echo "scale=8; if ($tile < 0) 0 else $tile" | bc)
-			yx=$(echo "scale=8; 4*a(1)*(1-((2*$tile)/${z[$1]}))" | bc -l)
-			maxlat=$(echo "scale=8; ((a((e($yx)-(1/e($yx)))/2))*180)/(4*a(1))" | bc -l)
-			tile=$(echo "scale=8; (${y[$1]}+${j[$1]}+1+$os)" | bc -l)
-			tile=$(echo "scale=8; if ($tile >= ${z[$1]}) ${z[$1]}-1 else $tile" | bc)
-			yx=$(echo "scale=8; 4*a(1)*(1-((2*$tile)/${z[$1]}))" | bc -l)
-			minlat=$(echo "scale=8; ((a((e($yx)-(1/e($yx)))/2))*180)/(4*a(1))" | bc -l)
-			bb="$minlon,$minlat,$maxlon,$maxlat"
-			osmosis -q --rx file=panel-z$1.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=panel-z${zoom[$1]}.osm
-			timestamp=$(../util/checkdate panel-z$1.osm)
-			if [ $timestamp \> $previous ]; then
-				if [ ${zoom[$1]} -lt 12 ]; then
-					search ${zoom[$1]} $((${x[$1]}+${i[$1]})) $((${y[$1]}+${j[$1]}))
-				else
-					tile $((${x[$1]}+${i[$1]})) $((${y[$1]}+${j[$1]})) $minlat,$minlon,$maxlat,$maxlon
-				fi
-			fi
-		done
-	done
-}
-
 if [ $# -eq 0 ]; then
 	if [ -e datestamp ]; then
 		previous=$(cat datestamp)
@@ -132,7 +46,7 @@ fi
 
 if [ $# -eq 3 ]; then
 	cp world.osm panel-z$1.osm
-	search $1 $2 $3
+	./search $1 $2 $3 $previous
 	echo "$(date) Rendering of $1 $2 $3 complete" >> log.txt
 	exit
 fi
@@ -142,8 +56,8 @@ while true; do
 		download
 	fi
 	mv next.osm world.osm
-	cp world.osm panel-z0.osm
-	search 0 0 0
+	cp world.osm tmp/panel-z0.osm
+	./search 0 0 0 $previous
 	latest=$previous
 	timestamp=$(../util/checkdate world.osm)
 	if [ $timestamp \> $latest ]; then
