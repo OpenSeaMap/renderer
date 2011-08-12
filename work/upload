@@ -6,6 +6,7 @@ while true; do
 		sftp -q -b tmp/deleting malcolm@netz.smurf.noris.de
 		rm tmp/deleting
 	done
+	sleep 10
 	if [ -e tmp/sending ]; then
 		backoff=0
 		while ! sftp -q -b tmp/sending malcolm@netz.smurf.noris.de; do
