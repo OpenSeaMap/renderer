@@ -64,7 +64,7 @@ while true; do
 		latest=$timestamp;
 	fi;
 	echo "$latest" > datestamp
-	echo "$(date) Tiles queued for rendering to latest timestamp: $latest" >> log.txt
+	echo "$(date) Rendering queued to latest timestamp: $latest" >> log.txt
 	if [ -e stop ]; then
 		echo "$(date) Stopped" >> log.txt
 		exit
