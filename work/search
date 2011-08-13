@@ -22,8 +22,9 @@ subsearch () {
       tile=$(echo "scale=8; if ($tile >= ${z[$1]}) ${z[$1]}-1 else $tile" | bc)
       yx=$(echo "scale=8; 4*a(1)*(1-((2*$tile)/${z[$1]}))" | bc -l)
       minlat=$(echo "scale=8; ((a((e($yx)-(1/e($yx)))/2))*180)/(4*a(1))" | bc -l)
+			if [ $minlat = 0 ]; then minlat=-85.0; fi
       osmosis -q --rx file=tmp/panel-z$1.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=tmp/panel-z${zoom[$1]}.osm
-      timestamp=$(../util/checkdate tmp/panel-z$1.osm)
+      timestamp=$(../util/checkdate tmp/panel-z${zoom[$1]}.osm)
       bb="$minlat,$minlon,$maxlat,$maxlon"
       tx=$((${x[$1]}+${i[$1]}))
       ty=$((${y[$1]}+${j[$1]}))
