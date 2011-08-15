@@ -28,7 +28,7 @@ download () {
 		done
 	done
 	../smfilter/smfilter -a 0.01 < merge.osm > next.osm
-	rm merge.osm
+	mv merge.osm world.osm
 	echo "$(date) successful download" >> log.txt
 }
 
@@ -100,8 +100,7 @@ while true; do
 	if [ ! -e next.osm ]; then
 		download
 	fi
-	mv next.osm world.osm
-	cp world.osm tmp/panel-z0.osm
+	mv next.osm tmp/panel-z0.osm
 	search 0 0 0
 	latest=$previous
 	timestamp=$(../util/checkdate world.osm)
