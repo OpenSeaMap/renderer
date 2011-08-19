@@ -1227,15 +1227,15 @@
   
 	<rule e="way" k="seamark:type" v="separation_zone|separation_crossing|separation_roundabout">
     <!--		<area class="separation-area" layer="-1" /> -->
-		<line class="separation-line" layer="-1" />
+		<line class="separation-line" layer="-2" />
 	</rule>
   
 	<rule e="way" k="seamark:type" v="separation_line">
-		<line class="separation-line" layer="-1" />
+		<line class="separation-line" layer="-2" />
 	</rule>
   
 	<rule e="way" k="seamark:type" v="separation_boundary">
-		<line class="separation-dashed" layer="-1" />
+		<line class="separation-dashed" layer="-2" />
 	</rule>
   
   <rule e="way" k="seamark:type" v="separation_lane">
