@@ -57,5 +57,6 @@ while true; do
   for file in $(ls tmp | grep "\_tile"); do
     tile $file
     rm tmp/$file
+    echo $(date)
   done
 done

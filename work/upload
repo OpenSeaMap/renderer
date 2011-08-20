@@ -15,6 +15,7 @@ while true; do
 			sleep $((60*$backoff))
 		done
 		rm tmp/sending
+		echo $(date)
 	fi
 	sleep 60
 	while [ $(ls tmp | grep -c '.send') -eq 0 ]; do
