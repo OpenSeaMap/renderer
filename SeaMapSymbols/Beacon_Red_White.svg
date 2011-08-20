@@ -12,7 +12,7 @@
    height="400"
    id="svg2"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="beacons.svg"
+   sodipodi:docname="Beacon_Red_White.svg"
    style="display:inline">
   <metadata
      id="metadata2913">
@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -40,7 +40,7 @@
      id="namedview2911"
      showgrid="true"
      inkscape:zoom="13.857051"
-     inkscape:cx="160.74216"
+     inkscape:cx="147.96888"
      inkscape:cy="235.62826"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -805,13 +805,13 @@
        x="149.53316"
        y="50.008118" />
     <path
-       style="fill:#d40000;fill-opacity:1;stroke:#a30075;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:#ffffff;fill-opacity:1;stroke:#a30075;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 145.44309,159.17583 0,-28.79401 2.02063,0 2.02063,0 0,28.79401 0,28.794 -2.02063,0 -2.02063,0 0,-28.794 z"
        id="path4017"
        inkscape:connector-curvature="0"
        transform="translate(0,-80)" />
     <path
-       style="fill:#ffffff;fill-opacity:1;stroke:#a30075;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:#d40000;fill-opacity:1;stroke:#a30075;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 150.56683,159.17583 0,-28.79401 1.87631,0 1.8763,0 0,28.79401 0,28.794 -1.8763,0 -1.87631,0 0,-28.794 z"
        id="path4019"
        inkscape:connector-curvature="0"
