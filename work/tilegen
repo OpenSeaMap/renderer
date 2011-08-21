@@ -48,6 +48,7 @@ tile () {
     fi
   fi
 	./subtile 12 $tx $ty 256 512 &
+  echo "$tx $ty $(date)"
 }
 
 while true; do
@@ -57,6 +58,5 @@ while true; do
   for file in $(ls tmp | grep "\_tile"); do
     tile $file
     rm tmp/$file
-    echo $(date)
   done
 done
