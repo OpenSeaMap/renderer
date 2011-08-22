@@ -59,6 +59,7 @@ while true; do
     tile $file
     rm tmp/$file
     if [ -e pause ]; then
+    	echo "Paused"
     	break
     fi
   done
