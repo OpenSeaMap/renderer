@@ -58,5 +58,11 @@ while true; do
   for file in $(ls tmp | grep "\_tile"); do
     tile $file
     rm tmp/$file
+    if [ -e pause ]; then
+    	break
+    fi
+  done
+  while [ -e pause ]; do
+  	sleep 60
   done
 done
