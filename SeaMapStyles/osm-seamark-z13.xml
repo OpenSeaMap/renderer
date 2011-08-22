@@ -434,10 +434,10 @@
   
 	<rule e="node" k="seamark:type" v="buoy_isolated_danger">
 		<rule e="node" k="seamark:buoy_isolated_danger:shape" v="pillar|~">
-			<symbol ref="Pillar_Black_Red_BLack" position="center" />
+			<symbol ref="Pillar_Black_Red_Black" position="center" />
 		</rule>
 		<rule e="node" k="seamark:buoy_isolated_danger:shape" v="spar">
-			<symbol ref="Spar_Black_Red_BLack" position="center" />
+			<symbol ref="Spar_Black_Red_Black" position="center" />
 		</rule>
 		<symbol ref="Top_Isol_Buoy" position="center" />
 	</rule>
@@ -446,10 +446,10 @@
   
 	<rule e="node" k="seamark:type" v="beacon_isolated_danger">
 		<rule e="node" k="seamark:beacon_isolated_danger:shape" v="tower">
-			<symbol ref="Tower_Black_Red_BLack" position="center" />
+			<symbol ref="Tower_Black_Red_Black" position="center" />
 		</rule>
 		<rule e="node" k="seamark:beacon_isolated_danger:shape" v="pile|lattice|~">
-			<symbol ref="Beacon_Black_Red_BLack" position="center" />
+			<symbol ref="Beacon_Black_Red_Black" position="center" />
 		</rule>
     <rule e="node" k="seamark:beacon_isolated_danger:shape" v="stake">
       <symbol ref="Stake" position="center" />
@@ -461,7 +461,7 @@
   
 	<rule e="node" k="seamark:type" v="light_float">
     <rule e="node" k="seamark:light_float:colour" v="black;red;black">
-      <symbol ref="Float_Black_Red_BLack" position="center" />
+      <symbol ref="Float_Black_Red_Black" position="center" />
       <symbol ref="Top_Isol_Float" position="center" />
     </rule>
 	</rule>
@@ -509,7 +509,7 @@
 	<!-- Special Purpose Beacons -->
   
 	<rule e="node" k="seamark:type" v="beacon_special_purpose">
-		<rule e="node" k="seamark:beacon_special_purpose:shape" v="tower|stake|pole|post">
+		<rule e="node" k="seamark:beacon_special_purpose:shape" v="tower|stake|pole|post|cairn">
       <rule e="node" k="seamark:beacon_special_purpose:shape" v="tower">
         <symbol ref="Tower_Yellow" position="center" />
       </rule>
@@ -520,6 +520,9 @@
         <else>
           <symbol ref="Stake" position="center" />
         </else>
+      </rule>
+      <rule e="node" k="seamark:beacon_special_purpose:shape" v="cairn">
+        <symbol ref="Cairn" position="center" />
       </rule>
 		</rule>
 		<else>
