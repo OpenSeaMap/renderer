@@ -545,7 +545,7 @@
       <symbol ref="Float_Yellow" position="center" />
     </rule>
     <rule e="node" k="seamark:light_float:colour" v="~">
-      <symbol ref="Float_Minor" position="center" />
+      <symbol ref="Float" position="center" />
     </rule>
 	</rule>
   
@@ -557,14 +557,14 @@
         <rule e="node" k="seamark:mooring:shape" v="super-buoy">
           <rule e="node" k="seamark:mooring:colour" v="yellow|black">
             <rule e="node" k="seamark:mooring:colour" v="yellow">
-              <symbol ref="Float_Major_Yellow" position="center" />
+              <symbol ref="Super_Yellow" position="center" />
             </rule>
             <rule e="node" k="seamark:mooring:colour" v="black">
-              <symbol ref="Float_Major_Black" position="center" />
+              <symbol ref="Super_Black" position="center" />
             </rule>
           </rule>
           <else>
-            <symbol ref="Float_Major_Black" position="center" />
+            <symbol ref="Super_Black" position="center" />
           </else>
           <symbol ref="Top_Mooring_Float" position="center" />
         </rule>
@@ -934,7 +934,7 @@
 	<!-- Light Vessel -->
   
 	<rule e="node" k="seamark:type" v="light_vessel">
-		<symbol ref="Float_Major" position="center" />
+		<symbol ref="Super" position="center" />
 	</rule>
   
 	<!-- Light Flares -->
