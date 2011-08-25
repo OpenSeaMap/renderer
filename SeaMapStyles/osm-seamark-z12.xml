@@ -552,7 +552,7 @@
 	<!-- Mooring Buoys -->
   
 	<rule e="node" k="seamark:type" v="mooring">
-    <rule e="node" k="seamark:mooring:category" v="mooring_buoy">
+    <rule e="node" k="seamark:mooring:category" v="buoy">
       <rule e="node" k="seamark:mooring:shape" v="super-buoy">
         <rule e="node" k="seamark:mooring:colour" v="yellow|black">
           <rule e="node" k="seamark:mooring:colour" v="yellow">
