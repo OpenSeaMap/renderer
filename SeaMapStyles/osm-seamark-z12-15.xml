@@ -1285,6 +1285,10 @@
     <symbol ref="LoLcaption" position="center" />
   </rule>
   
+	<rule e="way" k="seamark:route_track" v="*" >
+		<line class="transit-line" />
+	</rule>
+  
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
 			.map-background {

@@ -81,16 +81,16 @@ if [ $# -eq 0 ]; then
 	if [ -e datestamp ]; then
 		previous=$(cat datestamp)
 	else
-		previous=0
+		previous=0000-00-00T00:00:00Z
 	fi
 elif [ $# -eq 1 ]; then
 	previous=$1
 else
-	previous=0
+	previous=0000-00-00T00:00:00Z
 fi
 
 if [ $# -eq 3 ]; then
-	cp world.osm panel-z$1.osm
+	cp tmp/panel-z0.osm tmp/panel-z$1.osm
 	search $1 $2 $3
 	echo "$(date) Rendering of $1 $2 $3 complete" >> log.txt
 	exit
