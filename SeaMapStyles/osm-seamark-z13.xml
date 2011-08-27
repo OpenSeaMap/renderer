@@ -412,6 +412,9 @@
 				<symbol ref="Sphere_Red_White" position="center" />
 			</rule>
 		</rule>
+    <else>
+      <symbol ref="Pillar_Red_White" position="center" />
+    </else>
 	</rule>
   
 	<!-- Safe Water Beacon -->
