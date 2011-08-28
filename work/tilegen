@@ -56,12 +56,12 @@ while true; do
     sleep 10
   done
   for file in $(ls tmp | grep "\_tile"); do
-    tile $file
-    rm tmp/$file
     if [ -e pause ]; then
     	echo "Paused"
     	break
     fi
+    tile $file
+    rm tmp/$file
   done
   while [ -e pause ]; do
   	sleep 60
