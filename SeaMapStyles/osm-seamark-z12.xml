@@ -893,7 +893,7 @@
         <line class="arc-yellow5" layer="-1" />
       </rule>
       <rule e="way" k="seamark:arc_style" v="taper_4">
-        <line class="arc-yello4" layer="-1" />
+        <line class="arc-yellow4" layer="-1" />
       </rule>
       <rule e="way" k="seamark:arc_style" v="taper_3">
         <line class="arc-yellow3" layer="-1" />
