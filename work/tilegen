@@ -55,6 +55,20 @@ while true; do
   while [ $(ls tmp | grep -c "\_tile") -eq 0 ]; do
     sleep 10
   done
+  for file in $(ls tmp | grep "\.png"); do
+		tile=$(echo $file | sed -e s?-?/?g)
+		if [ $(stat tmp/$file | cut -f 8 -d' ') -ge 410 ]; then
+			mkdir -p $(dirname $tile)
+			mv -f tmp/$file $tile
+			echo "put $tile cache/$file" >> tmp/10-11.send
+		else
+			if [ -e $tile ]; then
+				rm $tile
+				echo "rm $tile" >> tmp/deletions
+			fi
+			rm tmp/$file
+		fi
+  done
   for file in $(ls tmp | grep "\_tile"); do
     if [ -e pause ]; then
     	echo "Paused"

@@ -62,6 +62,12 @@ search () {
       ty=$((${y[$1]}+${j[$1]}))
       if [ $timestamp \> $previous ]; then
         if [ ${zoom[$1]} -lt 12 ]; then
+	        if [ ${zoom[$1]} -eq 10 ]; then
+	        	bb10=$bb; tx10=$tx; ty10=$ty
+	        fi
+	        if [ ${zoom[$1]} -eq 11 ]; then
+	        	bb11=$bb; tx11=$tx; ty11=$ty
+	        fi
           search ${zoom[$1]} $tx $ty
         else
           perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-z12-15.xml -b $bb -o tmp/panel.svg tmp/panel-z12.osm 2>/dev/null
@@ -69,6 +75,10 @@ search () {
           if [ -e tmp/panel.png ]; then
             if [ $(stat tmp/panel.png | cut -f 8 -d' ') -ge 410 ]; then
               cp tmp/panel-z12.osm tmp/$tx\_$ty\_$bb\_tile
+		          perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-z10.xml -b $bb10 -o tmp/panel10.svg tmp/panel-z10.osm 2>/dev/null
+    		      inkscape tmp/panel10.svg -e tmp/tiles-10-$tx10-$ty10.png -d 22.5 -a 256:256:1280:1280 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
+		          perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-z11.xml -b $bb11 -o tmp/panel11.svg tmp/panel-z11.osm 2>/dev/null
+    		      inkscape tmp/panel11.svg -e tmp/tiles-11-$tx11-$ty11.png -d 45 -a 256:256:768:768 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
             fi
           fi
         fi
