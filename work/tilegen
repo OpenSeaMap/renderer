@@ -52,9 +52,6 @@ tile () {
 }
 
 while true; do
-  while [ $(ls tmp | grep -c "\_tile") -eq 0 ]; do
-    sleep 10
-  done
   for file in $(ls tmp | grep "\.png"); do
 		tile=$(echo $file | sed -e s?-?/?g)
 		if [ $(stat tmp/$file | cut -f 8 -d' ') -ge 410 ]; then
@@ -69,14 +66,18 @@ while true; do
 			rm tmp/$file
 		fi
   done
-  for file in $(ls tmp | grep "\_tile"); do
-    if [ -e pause ]; then
-    	echo "Paused"
-    	break
-    fi
-    tile $file
-    rm tmp/$file
-  done
+  if [ $(ls tmp | grep -c "\_tile") -eq 0 ]; then
+    sleep 10
+  else
+	  for file in $(ls tmp | grep "\_tile"); do
+  	  if [ -e pause ]; then
+    		echo "Paused"
+    		break
+    	fi
+    	tile $file
+    	rm tmp/$file
+  	done
+  fi
   while [ -e pause ]; do
   	sleep 60
   done
