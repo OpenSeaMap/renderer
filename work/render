@@ -76,9 +76,9 @@ search () {
             if [ $(stat tmp/panel.png | cut -f 8 -d' ') -ge 410 ]; then
               cp tmp/panel-z12.osm tmp/$tx\_$ty\_$bb\_tile
 		          perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-z10.xml -b $bb10 -o tmp/panel.svg tmp/panel-z10.osm 2>/dev/null
-    		      inkscape tmp/panel10.svg -e tmp/tiles-10-$tx10-$ty10.png -d 22.5 -a 256:256:1280:1280 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
+    		      inkscape tmp/panel.svg -e tmp/tiles-10-$tx10-$ty10.png -d 22.5 -a 256:256:1280:1280 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
 		          perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-z11.xml -b $bb11 -o tmp/panel.svg tmp/panel-z11.osm 2>/dev/null
-    		      inkscape tmp/panel11.svg -e tmp/tiles-11-$tx11-$ty11.png -d 45 -a 256:256:768:768 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
+    		      inkscape tmp/panel.svg -e tmp/tiles-11-$tx11-$ty11.png -d 45 -a 256:256:768:768 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
             fi
           fi
         fi
