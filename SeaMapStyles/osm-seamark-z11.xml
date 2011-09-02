@@ -416,7 +416,49 @@
     </rule>
 	</rule>
   
-	<!--Safe water Buoys -->
+	<!-- Isolated Danger Buoys -->
+  
+	<rule e="node" k="seamark:type" v="buoy_isolated_danger">
+    <rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
+      <rule e="node" k="seamark:buoy_isolated_danger:shape" v="pillar|~">
+        <symbol ref="Pillar_Black_Red_Black" position="center" />
+      </rule>
+      <rule e="node" k="seamark:buoy_isolated_danger:shape" v="spar">
+        <symbol ref="Spar_Black_Red_Black" position="center" />
+      </rule>
+      <symbol ref="Top_Isol_Buoy" position="center" />
+    </rule>
+	</rule>
+  
+	<!-- Isolated Danger Beacons -->
+  
+	<rule e="node" k="seamark:type" v="beacon_isolated_danger">
+    <rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
+      <rule e="node" k="seamark:beacon_isolated_danger:shape" v="tower">
+        <symbol ref="Tower_Black_Red_Black" position="center" />
+      </rule>
+      <rule e="node" k="seamark:beacon_isolated_danger:shape" v="pile|lattice|~">
+        <symbol ref="Beacon_Black_Red_Black" position="center" />
+      </rule>
+      <rule e="node" k="seamark:beacon_isolated_danger:shape" v="stake">
+        <symbol ref="Stake" position="center" />
+      </rule>
+      <symbol ref="Top_Isol_Beacon" position="center" />
+    </rule>
+	</rule>
+  
+	<!-- Isolated Danger Light Float -->
+  
+	<rule e="node" k="seamark:type" v="light_float">
+    <rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
+      <rule e="node" k="seamark:light_float:colour" v="black;red;black">
+        <symbol ref="Float_Black_Red_Black" position="center" />
+        <symbol ref="Top_Isol_Float" position="center" />
+      </rule>
+    </rule>
+	</rule>
+
+    <!--Safe water Buoys -->
 
 	<rule e="node" k="seamark:type" v="buoy_safe_water">
 		<rule e="node" k="seamark:buoy_safe_water:shape" v="*">
