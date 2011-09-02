@@ -703,33 +703,33 @@
 			
 			.lane-arrow-casing { fill: none; stroke-linecap: butt; stroke: #c480ff; stroke-opacity: 0.5; }
 			.lane-arrow-core { fill: none; stroke-linecap: butt; stroke: #b5d0d0; stroke-opacity: 1.0; }
-			.lane-arrow-casing-1 { stroke-width: 4.8px; stroke-dasharray: 33.6,46.4; stroke-dashoffset: 209.6; } 
-			.lane-arrow-casing-2 { stroke-width: 11.2px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 16.0; }
-			.lane-arrow-casing-3 { stroke-width: 10.4px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 15.2; }
-			.lane-arrow-casing-4 { stroke-width: 9.6px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 14.4; }
-			.lane-arrow-casing-5 { stroke-width: 8.8px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 13.6; }
-			.lane-arrow-casing-6 { stroke-width: 8.0px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 12.8; }
-			.lane-arrow-casing-7 { stroke-width: 7.2px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 12.0; }
-			.lane-arrow-casing-8 { stroke-width: 6.4px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 11.2; }
-			.lane-arrow-casing-9 { stroke-width: 5.6px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 10.4; }
-			.lane-arrow-casing-10 { stroke-width: 4.8px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 9.6; }
-			.lane-arrow-casing-11 { stroke-width: 4.0px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 8.8; }
-			.lane-arrow-casing-12 { stroke-width: 3.2px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 8.0; }
-			.lane-arrow-casing-13 { stroke-width: 2.4px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 7.2; }
-			.lane-arrow-casing-14 { stroke-width: 1.6px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 6.4; }
-			.lane-arrow-casing-15 { stroke-width: 0.8px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 5.6; }
-			.lane-arrow-core-1 { stroke-width: 3.2px; stroke-dasharray: 33.6,46.4; stroke-dashoffset: 208.8; } 
-			.lane-arrow-core-2 { stroke-width: 8.8px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 15.2; } 
-			.lane-arrow-core-3 { stroke-width: 8.0px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 14.4; } 
-			.lane-arrow-core-4 { stroke-width: 7.2px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 13.6; } 
-			.lane-arrow-core-5 { stroke-width: 6.4px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 12.8; } 
-			.lane-arrow-core-6 { stroke-width: 5.6px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 12.0; } 
-			.lane-arrow-core-7 { stroke-width: 4.8px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 11.2; } 
-			.lane-arrow-core-8 { stroke-width: 4.0px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 10.4; } 
-			.lane-arrow-core-9 { stroke-width: 3.2px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 9.6; } 
-			.lane-arrow-core-10 { stroke-width: 2.4px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 8.8; } 
-			.lane-arrow-core-11 { stroke-width: 1.6px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 8.0; } 
-			.lane-arrow-core-12 { stroke-width: 0.8px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 7.2; } 
+			.lane-arrow-casing-1 { stroke-width: 7.2px; stroke-dasharray: 50.4,69.6; stroke-dashoffset: 314.4; } 
+			.lane-arrow-casing-2 { stroke-width: 16.8px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 24.0; }
+			.lane-arrow-casing-3 { stroke-width: 15.6px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 22.8; }
+			.lane-arrow-casing-4 { stroke-width: 14.4px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 14.4; }
+			.lane-arrow-casing-5 { stroke-width: 13.2px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 21.6; }
+			.lane-arrow-casing-6 { stroke-width: 12.0px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 19.2; }
+			.lane-arrow-casing-7 { stroke-width: 10.8px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 18.0; }
+			.lane-arrow-casing-8 { stroke-width: 9.6px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 16.8; }
+			.lane-arrow-casing-9 { stroke-width: 5.6px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 15.6; }
+			.lane-arrow-casing-10 { stroke-width: 7.2px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 14.4; }
+			.lane-arrow-casing-11 { stroke-width: 6.0px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 13.2; }
+			.lane-arrow-casing-12 { stroke-width: 4.8px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 12.0; }
+			.lane-arrow-casing-13 { stroke-width: 3.6px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 10.8; }
+			.lane-arrow-casing-14 { stroke-width: 2.4px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 9.6; }
+			.lane-arrow-casing-15 { stroke-width: 1.2px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 8.4; }
+			.lane-arrow-core-1 { stroke-width: 8.4px; stroke-dasharray: 50.4,69.6; stroke-dashoffset: 313.2; } 
+			.lane-arrow-core-2 { stroke-width: 13.2px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 22.8; } 
+			.lane-arrow-core-3 { stroke-width: 12.0px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 21.6; } 
+			.lane-arrow-core-4 { stroke-width: 10.8px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 20.4; } 
+			.lane-arrow-core-5 { stroke-width: 9.6px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 19.2; } 
+			.lane-arrow-core-6 { stroke-width: 8.4px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 18.0; } 
+			.lane-arrow-core-7 { stroke-width: 7.2px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 16.8; } 
+			.lane-arrow-core-8 { stroke-width: 6.0px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 15.6; } 
+			.lane-arrow-core-9 { stroke-width: 4.8px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 14.4; } 
+			.lane-arrow-core-10 { stroke-width: 3.6px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 13.2; } 
+			.lane-arrow-core-11 { stroke-width: 2.4px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 12.0; } 
+			.lane-arrow-core-12 { stroke-width: 1.2px; stroke-dasharray: 1.2,118.8; stroke-dashoffset: 10.8; } 
       
 			.wall-line { stroke-width: 0.5px; stroke-linecap: butt; stroke-linejoin: round; fill: none; fill-opacity: 0; stroke: #000000; }
 			.wall-dashed { stroke-width: 0.5px; stroke-dasharray: 2,2; stroke-linecap: butt; stroke-linejoin: round; fill: none; fill-opacity: 0; stroke: #000000; }
