@@ -61,7 +61,7 @@ while true; do
 		else
 			if [ -e $tile ]; then
 				rm $tile
-				echo "rm $file" >> tmp/deletions
+				echo "rm $tile" >> tmp/deletions
 			fi
 			rm tmp/$file
 		fi
