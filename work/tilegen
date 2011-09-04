@@ -66,10 +66,10 @@ while true; do
 			rm tmp/$file
 		fi
   done
-  if [ $(ls tmp | grep -c "\_tile") -eq 0 ]; then
+  if [ $(ls tmp | grep -c "\_12\.osm") -eq 0 ]; then
     sleep 10
   else
-	  for file in $(ls tmp | grep "\_tile"); do
+	  for file in $(ls tmp | grep "\_12\.osm"); do
   	  if [ -e pause ]; then
     		echo "Paused"
     		break
