@@ -201,7 +201,7 @@
 
 			.map-background { fill: #b5d0d0; fill-opacity: 0; stroke: none; }
 
-			.area-name { font-family: "Arial"; font-weight: bold; font-size: 12px; text-anchor: middle; }
+			.area-name { font-family: "Arial"; font-weight: bold; font-size: 28px; text-anchor: middle; }
       
 			.separation-area { stroke: none; fill: #c480ff; fill-opacity: 0.5; }
 			.separation-line { stroke-width: 8px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #c480ff; stroke-opacity: 0.5; }
