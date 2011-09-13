@@ -856,6 +856,14 @@
 		<symbol ref="Light_Major" position="center" />
 	</rule>
 
+	<!-- Minor Light -->
+  
+	<rule e="node" k="seamark:type" v="light_minor">
+    <rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
+      <symbol ref="Light_Minor" position="center" />
+    </rule>
+	</rule>
+  
 	<!-- Light Vessel -->
   
 	<rule e="node" k="seamark:type" v="light_vessel">
