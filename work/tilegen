@@ -76,6 +76,9 @@ while true; do
     	fi
     	tile $file
     	rm tmp/$file
+		  if [ $(ls tmp | grep -c "tiles\-") -ne 0 ]; then
+		  	break;
+		  fi
   	done
   fi
   while [ -e pause ]; do
