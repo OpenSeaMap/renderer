@@ -18,6 +18,7 @@ light_vessel
 landmark
 mooring
 navigation_line
+production_area
 recommended_track
 sandwaves
 separation_boundary
