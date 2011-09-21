@@ -1383,15 +1383,6 @@
     </rule>
 	</rule>
   
-	<!-- Depth Contours -->
-  
-	<rule e="way" k="seamark:type" v="depth_contour">
-		<line class="contour-line" layer="-1"/>
-    <rule e="way" k="seamark:depth_contour:value" v="*">
-      <pathText k="seamark:depth_contour:value" class="depth-character" startOffset="50%" dy="0" />
-    </rule>
-	</rule>
-  
 	<!-- Sandwaves -->
   
 	<rule e="way" k="seamark:type" v="sandwaves">
@@ -1401,6 +1392,28 @@
   <rule e="node" k="seamark:fixme" v="*">
     <symbol ref="LoLcaption" position="center" />
   </rule>
+  
+	<!-- Wind Generator -->
+  
+	<rule e="node" k="seamark:type" v="landmark">
+    <rule e="node" k="seamark:landmark:category" v="windmotor">
+		<symbol ref="Wind_Motor" position="center" />
+    </rule>
+	</rule>
+  
+	<!-- Wind Farm -->
+  
+	<rule e="way|node" k="seamark:type" v="production_area">
+    <rule e="way|node" k="seamark:production_area:category" v="wind_farm">
+      <symbol ref="Wind_Farm" position="center" layer="-1" />
+    </rule>
+	</rule>
+  
+	<rule e="way" k="seamark:type" v="production_area">
+    <rule e="way" k="seamark:production_area:category" v="wind_farm">
+      <line class="production-dashed" layer="-2" />
+    </rule>
+	</rule>
   
 	<defs>
 		<style xmlns="http://www.w3.org/2000/svg" type="text/css">
@@ -1414,6 +1427,8 @@
 			.signal-character { font-family: "Arial"; font-weight: normal; font-size: 0.25px; text-anchor: end; }
 			.line-character { font-family: "Arial"; font-weight: normal; font-size: 0.3px; text-anchor: middle; }
 			.depth-character { font-family: "Arial"; font-weight: normal; font-size: 0.2px; text-anchor: middle; }
+      
+			.production-dashed { stroke-width: 0.2px; stroke-dasharray: 0.2,0.2; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #000000; stroke-opacity: 0.5; }
       
 			.separation-area { stroke: none; fill: #c480ff; fill-opacity: 0.5; }
 			.separation-line { stroke-width: 0.4px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #c480ff; stroke-opacity: 0.5; }
@@ -1449,8 +1464,6 @@
 			.lane-arrow-core-11 { stroke-width: 0.1px; stroke-dasharray: 0.05,4.95; stroke-dashoffset: 0.5; } 
 			.lane-arrow-core-12 { stroke-width: 0.05px; stroke-dasharray: 0.05,4.95; stroke-dashoffset: 0.45; } 
 
-			.contour-line { stroke-width: 0.05px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #000000; }
-      
 			.leading-line { stroke-width: 0.1px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #000000; }
 			.transit-line { stroke-width: 0.1px; stroke-dasharray: 0.2,0.2; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #000000; }
 			

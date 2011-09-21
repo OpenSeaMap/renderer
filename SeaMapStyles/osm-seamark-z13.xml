@@ -1075,12 +1075,36 @@
 		<area class="sandwaves" layer="-1"/>
 	</rule>
   
+	<!-- Wind Generator -->
+  
+	<rule e="node" k="seamark:type" v="landmark">
+    <rule e="node" k="seamark:landmark:category" v="windmotor">
+      <symbol ref="Wind_Motor" position="center" />
+    </rule>
+	</rule>
+  
+	<!-- Wind Farm -->
+  
+	<rule e="way|node" k="seamark:type" v="production_area">
+    <rule e="way|node" k="seamark:production_area:category" v="wind_farm">
+      <symbol ref="Wind_Farm" position="center" layer="-1" />
+    </rule>
+	</rule>
+  
+	<rule e="way" k="seamark:type" v="production_area">
+    <rule e="way" k="seamark:production_area:category" v="wind_farm">
+      <line class="production-dashed" layer="-2" />
+    </rule>
+	</rule>
+  
   <defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
 
 			.map-background { fill: #b5d0d0; fill-opacity: 0; stroke: none; }
 
 			.area-name { font-family: "Arial"; font-weight: bold; font-size: 8px; text-anchor: middle; }
+      
+			.production-dashed { stroke-width: 1.0px; stroke-dasharray: 2,2; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #000000; stroke-opacity: 0.5; }
       
 			.separation-area { stroke: none; fill: #c480ff; fill-opacity: 0.5; }
 			.separation-line { stroke-width: 2px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #c480ff; stroke-opacity: 0.5; }

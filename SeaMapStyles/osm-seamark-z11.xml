@@ -4,7 +4,7 @@
 
 <!-- OpenSeaMap Rules File for zoom level 11 -->
 
-<rules data="../work/data.osm" scale="0.291271" symbolScale="0.28" minimumMapWidth="0.5" minimumMapHeight="0.5" showScale="no" showGrid="no"
+<rules data="../work/data.osm" scale="0.291271" symbolScale="0.25" minimumMapWidth="0.5" minimumMapHeight="0.5" showScale="no" showGrid="no"
 	showBorder="no" showLicense="no" showZoomControls="no" symbolsDir="../SeaMapSymbols" meter2pixel="0.1375">
 
 	<!-- Lateral Buoys -->
@@ -698,12 +698,28 @@
 		<area class="sandwaves" layer="-1"/>
 	</rule>
   
+	<!-- Wind Farm -->
+  
+	<rule e="way|node" k="seamark:type" v="production_area">
+    <rule e="way|node" k="seamark:production_area:category" v="wind_farm">
+      <symbol ref="Wind_Farm" position="center" layer="-1" />
+    </rule>
+	</rule>
+  
+	<rule e="way" k="seamark:type" v="production_area">
+    <rule e="way" k="seamark:production_area:category" v="wind_farm">
+      <line class="production-dashed" layer="-2" />
+    </rule>
+	</rule>
+  
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
 
 			.map-background { fill: #b5d0d0; fill-opacity: 0; stroke: none; }
 
 			.area-name { font-family: "Arial"; font-weight: bold; font-size: 18px; text-anchor: middle; }
+      
+			.production-dashed { stroke-width: 4px; stroke-dasharray: 8,8; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #000000; stroke-opacity: 0.5; }
       
 			.separation-area { stroke: none; fill: #c480ff; fill-opacity: 0.5; }
 			.separation-line { stroke-width: 4px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #c480ff; stroke-opacity: 0.5; }

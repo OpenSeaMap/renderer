@@ -1393,6 +1393,28 @@
     <symbol ref="LoLcaption" position="center" />
   </rule>
   
+	<!-- Wind Generator -->
+  
+	<rule e="node" k="seamark:type" v="landmark">
+    <rule e="node" k="seamark:landmark:category" v="windmotor">
+      <symbol ref="Wind_Motor" position="center" />
+    </rule>
+	</rule>
+  
+	<!-- Wind Farm -->
+  
+	<rule e="way|node" k="seamark:type" v="production_area">
+    <rule e="way|node" k="seamark:production_area:category" v="wind_farm">
+      <symbol ref="Wind_Farm" position="center" layer="-1" />
+    </rule>
+	</rule>
+  
+	<rule e="way" k="seamark:type" v="production_area">
+    <rule e="way" k="seamark:production_area:category" v="wind_farm">
+      <line class="production-dashed" layer="-2" />
+    </rule>
+	</rule>
+  
 	<defs>
 		<style xmlns="http://www.w3.org/2000/svg" type="text/css">
       
@@ -1404,6 +1426,8 @@
 			.light-character { font-family: "Arial"; font-weight: normal; font-size: 0.4px; text-anchor: start; }
 			.signal-character { font-family: "Arial"; font-weight: normal; font-size: 0.4px; text-anchor: end; }
 			.line-character { font-family: "Arial"; font-weight: normal; font-size: 0.5px; text-anchor: middle; }
+      
+			.production-dashed { stroke-width: 0.3px; stroke-dasharray: 0.4,0.4; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #000000; stroke-opacity: 0.5; }
       
 			.separation-area { stroke: none; fill: #c480ff; fill-opacity: 0.5; }
 			.separation-line { stroke-width: 0.6px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #c480ff; stroke-opacity: 0.5; }
