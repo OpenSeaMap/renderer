@@ -107,7 +107,7 @@
 
 			.area-name { font-family: "Arial"; font-weight: bold; font-size: 56px; text-anchor: middle; }
       
-			.production-dashed { stroke-width: 8px; stroke-dasharray: 16,16; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #000000; stroke-opacity: 0.5; }
+			.production-dashed { stroke-width: 8px; stroke-dasharray: 16,16; stroke-linecap: butt; stroke-linejoin: round; fill: #b5d0d0; stroke: #000000; }
 
 			.separation-area { stroke: none; fill: #c480ff; fill-opacity: 0.5; }
 			.separation-line { stroke-width: 16px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #c480ff; stroke-opacity: 0.5; }
