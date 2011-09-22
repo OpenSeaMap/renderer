@@ -57,7 +57,7 @@ while true; do
 		if [ $(stat tmp/$file | cut -f 8 -d' ') -ge 410 ]; then
 			mkdir -p $(dirname $tile)
 			mv -f tmp/$file $tile
-			echo "put $tile cache/$file" >> tmp/10-11.send
+			echo "put $tile cache/$file" >> tmp/9-10-11.send
 		else
 			if [ -e $tile ]; then
 				rm $tile
@@ -72,16 +72,18 @@ while true; do
 	  for file in $(ls tmp | grep "\_12\.osm"); do
   	  if [ -e pause ]; then
     		echo "Paused"
+			  while [ -e pause ]; do
+  				sleep 60
+  			done
     		break
     	fi
     	tile $file
-    	rm tmp/$file
+    	if [ -e tmp/$file ] ; then
+	    	rm tmp/$file
+	    fi
 		  if [ $(ls tmp | grep -c "tiles\-") -ne 0 ]; then
 		  	break;
 		  fi
   	done
   fi
-  while [ -e pause ]; do
-  	sleep 60
-  done
 done
