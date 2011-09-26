@@ -1068,11 +1068,7 @@
   
   <!-- Signal Stations -->
   
-  <rule e="node" k="seamark:type" v="signal_station_traffic">
-    <symbol ref="Signal_Station" position="center" />
-  </rule>
-  
-  <rule e="node" k="seamark:type" v="signal_station_warning">
+  <rule e="node" k="seamark:type" v="signal_station_traffic|signal_station_warning">
     <symbol ref="Signal_Station" position="center" />
   </rule>
   

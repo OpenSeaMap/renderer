@@ -1219,27 +1219,41 @@
   <rule e="node" k="seamark:type" v="signal_station_traffic">
     <symbol ref="Signal_Station" position="center" />
     <rule e="node" k="seamark:signal_station_traffic:category" v="*">
-      <text class="light-character" dx="1.2" dy="0">SS(<tag k="seamark:signal_station_traffic:category"/>)</text>
+      <rule e="node" k="seamark:signal_station_traffic:channel" v="*">
+        <text class="light-character" dx="0.9" dy="-1.3">SS(<tag k="seamark:signal_station_traffic:category"/>) Ch.<tag k="seamark:signal_station_traffic:channel"/></text>
+      </rule>
+      <else>
+        <text class="light-character" dx="0.9" dy="-1.3">SS(<tag k="seamark:signal_station_traffic:category"/>)</text>
+      </else>
     </rule>
     <else>
-      <text class="light-character" dx="1.2" dy="0">SS</text>
+      <rule e="node" k="seamark:signal_station_traffic:channel" v="*">
+        <text class="light-character" dx="0.9" dy="-1.3">SS Ch.<tag k="seamark:signal_station_traffic:channel"/></text>
+      </rule>
+      <else>
+        <text class="light-character" dx="0.9" dy="-1.3">SS</text>
+      </else>
     </else>
-    <rule e="node" k="seamark:signal_station_traffic:channel" v="*">
-      <text class="light-character" dx="1.2" dy="1.4">Ch.<tag k="seamark:signal_station_traffic:channel"/></text>
-    </rule>
   </rule>
   
   <rule e="node" k="seamark:type" v="signal_station_warning">
     <symbol ref="Signal_Station" position="center" />
     <rule e="node" k="seamark:signal_station_warning:category" v="*">
-      <text class="light-character" dx="1.2" dy="0">SS(<tag k="seamark:signal_station_warning:category"/>)</text>
+      <rule e="node" k="seamark:signal_station_warning:channel" v="*">
+        <text class="light-character" dx="0.9" dy="-1.3">SS(<tag k="seamark:signal_station_warning:category"/>) Ch.<tag k="seamark:signal_station_warning:channel"/></text>
+      </rule>
+      <else>
+        <text class="light-character" dx="0.9" dy="-1.3">SS(<tag k="seamark:signal_station_warning:category"/>)</text>
+      </else>
     </rule>
     <else>
-      <text class="light-character" dx="1.2" dy="0">SS</text>
+      <rule e="node" k="seamark:signal_station_warning:channel" v="*">
+        <text class="light-character" dx="0.9" dy="-1.3">SS Ch.<tag k="seamark:signal_station_warning:channel"/></text>
+      </rule>
+      <else>
+        <text class="light-character" dx="0.9" dy="-1.3">SS</text>
+      </else>
     </else>
-    <rule e="node" k="seamark:signal_station_warning:channel" v="*">
-      <text class="light-character" dx="1.2" dy="1.4">Ch.<tag k="seamark:signal_station_warning:channel"/></text>
-    </rule>
   </rule>
   
 	<!-- Marina -->
@@ -1258,7 +1272,12 @@
         <text k="seamark:name" class="buoy-name" dx="0" dy="-1.5" />
       </rule>
       <else>
-        <text k="seamark:name" class="buoy-name" dx="1.9" dy="-1.5" />
+        <rule e="node" k="seamark:type" v="signal_station_warning|signal_station_traffic">
+          <text k="seamark:name" class="buoy-name" dx="0" dy="-2.5" />
+        </rule>
+        <else>
+          <text k="seamark:name" class="buoy-name" dx="1.9" dy="-1.5" />
+        </else>
       </else>
     </rule>
 	</rule>
