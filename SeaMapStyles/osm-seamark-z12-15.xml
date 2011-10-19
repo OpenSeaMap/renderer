@@ -1385,6 +1385,10 @@
     </rule>
 	</rule>
   
+  <rule e="node" k="seamark:del" v="*" >
+    <symbol ref="Dot" position="center" />
+  </rule>
+  
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
 
