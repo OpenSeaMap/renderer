@@ -1385,7 +1385,7 @@
     </rule>
 	</rule>
   
-  <rule e="node" k="seamark:del" v="*" >
+  <rule e="node" k="seamark:type" v="del" >
     <symbol ref="Dot" position="center" />
   </rule>
   
