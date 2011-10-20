@@ -18,12 +18,11 @@ while true; do
 		echo $(date)
 	fi
 	sleep 60
-	while [ $(ls tmp | grep -c '.send') -eq 0 ]; do
-		sleep 60
-	done
-	for file in $(ls tmp | grep '.send'); do
-		mv tmp/$file tmp/send
-		cat tmp/send >> tmp/sending
-	done
-	rm tmp/send
+	if [ $(ls tmp | grep -c '.send') -ne 0 ]; then
+		for file in $(ls tmp | grep '.send'); do
+			mv tmp/$file tmp/send
+			cat tmp/send >> tmp/sending
+		done
+		rm tmp/send
+	fi
 done
