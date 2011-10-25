@@ -12,11 +12,11 @@ while true; do
 		echo $(date)
 	fi
 	sleep 60
-	while [ -e tmp/deletions ]; do
+	if [ -e tmp/deletions ]; then
 		mv tmp/deletions tmp/deleting
 		sftp -q -b tmp/deleting malcolm@netz.smurf.noris.de
 		rm tmp/deleting
-	done
+	fi
 	sleep 10
 	if [ $(ls tmp | grep -c '.send') -ne 0 ]; then
 		for file in $(ls tmp | grep '.send'); do
