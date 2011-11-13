@@ -923,7 +923,7 @@
     <rule e="node" k="seamark:landmark:category" v="windmotor">
       <symbol ref="Wind_Motor" position="center" />
     </rule>
-	<!--     <rule e="node" k="seamark:landmark:category" v="water_tower">
+    <rule e="node" k="seamark:landmark:category" v="water_tower">
       <symbol ref="WaterTower" position="center" />
     </rule>
     <rule e="node" k="seamark:landmark:category" v="radio_mast">
@@ -947,7 +947,7 @@
     <rule e="node" k="seamark:landmark:category" v="chimney">
       <symbol ref="Chimney" position="center" />
     </rule>
- -->    <rule e="node" k="seamark:landmark:category" v="cairn">
+    <rule e="node" k="seamark:landmark:category" v="cairn">
       <symbol ref="Cairn" position="center" />
     </rule>
 	</rule>
