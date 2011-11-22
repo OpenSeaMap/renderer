@@ -1017,6 +1017,12 @@
     </rule>
   </rule>
            
+  <!-- Platforms -->
+  
+  <rule e="node" k="seamark:type" v="offshore_platform">
+    <symbol ref="Platform" position="center" />
+  </rule>
+  
 	<!-- Anchorages -->
   
 	<rule e="way|node" k="seamark:type" v="anchorage">

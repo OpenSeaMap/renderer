@@ -1096,6 +1096,12 @@
     </rule>
   </rule>
   
+  <!-- Platforms -->
+  
+  <rule e="node" k="seamark:type" v="offshore_platform">
+    <symbol ref="Platform" position="center" />
+  </rule>
+  
   <!-- Signal Stations -->
   
   <rule e="node" k="seamark:type" v="signal_station_traffic|signal_station_warning">
