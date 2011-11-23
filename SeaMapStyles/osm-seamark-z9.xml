@@ -59,7 +59,7 @@
   
   <!-- Platforms -->
   
-  <rule e="node" k="seamark:type" v="platform">
+  <rule e="way|node" k="seamark:type" v="platform">
     <symbol ref="Platform" position="center" />
   </rule>
   
