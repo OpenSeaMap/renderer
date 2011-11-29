@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 13.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 14948)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="120"
+   height="120"
+   viewBox="-0.258 -0.548 120 120"
+   xml:space="preserve"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="scuba_diving.svg"><metadata
+   id="metadata23"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs21" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1088"
+   id="namedview19"
+   showgrid="false"
+   inkscape:zoom="2.363626"
+   inkscape:cx="-13.111444"
+   inkscape:cy="61.769501"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<g
+   id="g3"
+   transform="matrix(0.97135318,0,0,0.97135318,-1.0923924,-0.49069067)">
+	<path
+   style="fill:#231f20"
+   d="m 109.656,123.48 c 8.148,0 14.742,-6.617 14.742,-14.773 V 14.691 c 0,-8.156 -6.594,-14.75 -14.742,-14.75 H 15.625 c -8.172,0 -14.766,6.594 -14.766,14.75 v 94.016 c 0,8.156 6.594,14.773 14.766,14.773 h 94.031 z"
+   id="path5"
+   inkscape:connector-curvature="0" />
+	<path
+   style="fill:#ffffff"
+   d="M 15.625,2.434 C 8.859,2.434 3.359,7.926 3.359,14.692 v 94.016 c 0,6.766 5.5,12.258 12.266,12.258 h 94.031 c 6.734,0 12.227,-5.492 12.227,-12.258 V 14.691 c 0,-6.766 -5.492,-12.258 -12.227,-12.258 H 15.625 z"
+   id="path7"
+   inkscape:connector-curvature="0" />
+	<polygon
+   style="fill:#231f20"
+   points="34.375,30.465 28.984,20.012 12.922,19.965 28.422,35.809 "
+   id="polygon9" />
+	<path
+   style="fill:#231f20"
+   d="m 82.797,64.348 c 2.93,0.805 6.078,-0.852 6.914,-3.828 0.805,-2.93 -0.906,-6.008 -3.859,-6.836 l -2.297,-0.641 -2.977,10.648 2.219,0.657 z"
+   id="path11"
+   inkscape:connector-curvature="0" />
+	<path
+   style="fill:#231f20"
+   d="M 80.992,52.363 62.437,47.136 c -1.219,-0.32 -2.445,0.414 -2.781,1.633 l -1.742,6.203 c -0.344,1.219 0.32,2.469 1.57,2.836 l 18.555,5.172 2.953,-10.617 z"
+   id="path13"
+   inkscape:connector-curvature="0" />
+	<path
+   style="fill:#231f20"
+   d="M 83.922,69.988 C 82.508,68.644 80.75,67.574 78.695,67.011 l -22.492,-6.297 0,0 -13.82,-24.516 c -0.727,-1.266 -1.898,-2.273 -3.414,-2.688 -3.031,-0.852 -6.18,0.93 -7.008,3.961 -0.414,1.438 -0.219,2.906 0.438,4.148 l 17.289,30.32 c 0,0 1.414,2.273 4.977,3.445 l 31.43,8.812 14.578,14.797 c 0.484,0.508 1.117,0.898 1.875,1.117 2.195,0.609 4.492,-0.703 5.133,-2.875 0.414,-1.539 -0.078,-3.156 -1.172,-4.156 L 83.922,69.988 z"
+   id="path15"
+   inkscape:connector-curvature="0" />
+	<path
+   style="fill:#231f20"
+   d="m 100.695,76.113 3.266,4.273 6.641,-7.25 -5.609,-3.125 c 0.531,-3.93 -1.906,-7.734 -5.812,-8.836 -4.297,-1.195 -8.766,1.297 -9.961,5.594 -1.219,4.32 1.297,8.766 5.594,9.961 2.045,0.586 4.124,0.266 5.881,-0.617 z"
+   id="path17"
+   inkscape:connector-curvature="0" />
+</g>
+</svg>
