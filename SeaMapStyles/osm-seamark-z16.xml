@@ -1061,90 +1061,27 @@
     <line class="sector-radial" layer="-1" />
   </rule>
   
-  <rule e="way" k="seamark:light_arc" v="white|yellow">
+  <rule e="way" k="seamark:light_arc|seamark:light_arc_al2" v="white|yellow">
     <rule e="way" k="seamark:arc_style" v="solid">
       <line class="arc-yellow" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_7">
-      <line class="arc-yellow7" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_6">
-      <line class="arc-yellow6" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_5">
-      <line class="arc-yellow5" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_4">
-      <line class="arc-yellow4" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_3">
-      <line class="arc-yellow3" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_2">
-      <line class="arc-yellow2" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_1">
-      <line class="arc-yellow1" layer="-1" />
     </rule>
     <rule e="way" k="seamark:arc_style" v="dashed">
       <line class="arc-dashed-yellow" layer="-1" />
     </rule>
   </rule>
   
-  <rule e="way" k="seamark:light_arc" v="red">
+  <rule e="way" k="seamark:light_arc|seamark:light_arc_al2" v="red">
     <rule e="way" k="seamark:arc_style" v="solid">
       <line class="arc-red" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_7">
-      <line class="arc-red7" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_6">
-      <line class="arc-red6" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_5">
-      <line class="arc-red5" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_4">
-      <line class="arc-red4" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_3">
-      <line class="arc-red3" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_2">
-      <line class="arc-red2" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_1">
-      <line class="arc-red1" layer="-1" />
     </rule>
     <rule e="way" k="seamark:arc_style" v="dashed">
       <line class="arc-dashed-red" layer="-1" />
     </rule>
   </rule>
   
-  <rule e="way" k="seamark:light_arc" v="green">
+  <rule e="way" k="seamark:light_arc|seamark:light_arc_al2" v="green">
     <rule e="way" k="seamark:arc_style" v="solid">
       <line class="arc-green" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_7">
-      <line class="arc-green7" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_6">
-      <line class="arc-green6" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_5">
-      <line class="arc-green5" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_4">
-      <line class="arc-green4" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_3">
-      <line class="arc-green3" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_2">
-      <line class="arc-green2" layer="-1" />
-    </rule>
-    <rule e="way" k="seamark:arc_style" v="taper_1">
-      <line class="arc-green1" layer="-1" />
     </rule>
     <rule e="way" k="seamark:arc_style" v="dashed">
       <line class="arc-dashed-green" layer="-1" />
@@ -1518,34 +1455,13 @@
 			
 			.sector-radial { stroke-width: 0.12px; stroke-dasharray: 1.0,1.0; stroke-linecap: butt; stroke-linejoin: round; stroke-opacity: 0.5; fill: none; fill-opacity: 0; stroke: #000000; }
 			
-			.arc-red { stroke-width: 1.0px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
-			.arc-red7 { stroke-width: 0.875px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
-			.arc-red6 { stroke-width: 0.75px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
-			.arc-red5 { stroke-width: 0.625px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
-			.arc-red4 { stroke-width: 0.5px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
-			.arc-red3 { stroke-width: 0.375px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
-			.arc-red2 { stroke-width: 0.25px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
-			.arc-red1 { stroke-width: 0.125px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
+			.arc-red { stroke-width: 1.2px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
 			.arc-dashed-red { stroke-width: 0.25px; stroke-linecap: butt;	stroke-linejoin: round; stroke-dasharray: 1,1; fill: none; stroke: #F40000; }
       
-			.arc-green { stroke-width: 1.0px; stroke-linecap: butt; stroke-linejoin: round; fill: none;	stroke: #00F400; }
-			.arc-green7 { stroke-width: 0.875px; stroke-linecap: butt; stroke-linejoin: round; fill: none;	stroke: #00F400; }
-			.arc-green6 { stroke-width: 0.75px; stroke-linecap: butt; stroke-linejoin: round; fill: none;	stroke: #00F400; }
-			.arc-green5 { stroke-width: 0.625px; stroke-linecap: butt; stroke-linejoin: round; fill: none;	stroke: #00F400; }
-			.arc-green4 { stroke-width: 0.5px; stroke-linecap: butt; stroke-linejoin: round; fill: none;	stroke: #00F400; }
-			.arc-green3 { stroke-width: 0.375px; stroke-linecap: butt; stroke-linejoin: round; fill: none;	stroke: #00F400; }
-			.arc-green2 { stroke-width: 0.25px; stroke-linecap: butt; stroke-linejoin: round; fill: none;	stroke: #00F400; }
-			.arc-green1 { stroke-width: 0.125px; stroke-linecap: butt; stroke-linejoin: round; fill: none;	stroke: #00F400; }
+			.arc-green { stroke-width: 1.2px; stroke-linecap: butt; stroke-linejoin: round; fill: none;	stroke: #00F400; }
 			.arc-dashed-green { stroke-width: 0.25px; stroke-linecap: butt;	stroke-linejoin: round; stroke-dasharray: 1,1; fill: none; stroke: #00F400; }
       
-			.arc-yellow { stroke-width: 1.0px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F4F400; }
-			.arc-yellow7 { stroke-width: 0.875px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F4F400; }
-			.arc-yellow6 { stroke-width: 0.75px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F4F400; }
-			.arc-yellow5 { stroke-width: 0.625px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F4F400; }
-			.arc-yellow4 { stroke-width: 0.5px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F4F400; }
-			.arc-yellow3 { stroke-width: 0.375px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F4F400; }
-			.arc-yellow2 { stroke-width: 0.25px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F4F400; }
-			.arc-yellow1 { stroke-width: 0.125px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F4F400; }
+			.arc-yellow { stroke-width: 1.2px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F4F400; }
 			.arc-dashed-yellow { stroke-width: 0.25px; stroke-linecap: butt;	stroke-linejoin: round; stroke-dasharray: 1,1; fill: none; stroke: #F4F400; }
       
 			.sandwaves { fill: url(#sandwaves); }
