@@ -1061,7 +1061,7 @@
     <line class="sector-radial" layer="-1" />
   </rule>
   
-  <rule e="way" k="seamark:light_arc|seamark:light_arc_al2" v="white|yellow">
+  <rule e="way" k="seamark:light_arc|seamark:light_arc_al3" v="white|yellow">
     <rule e="way" k="seamark:arc_style" v="solid">
       <line class="arc-yellow" layer="-1" />
     </rule>
@@ -1070,7 +1070,7 @@
     </rule>
   </rule>
   
-  <rule e="way" k="seamark:light_arc|seamark:light_arc_al2" v="red">
+  <rule e="way" k="seamark:light_arc|seamark:light_arc_al3" v="red">
     <rule e="way" k="seamark:arc_style" v="solid">
       <line class="arc-red" layer="-1" />
     </rule>
@@ -1079,7 +1079,7 @@
     </rule>
   </rule>
   
-  <rule e="way" k="seamark:light_arc|seamark:light_arc_al2" v="green">
+  <rule e="way" k="seamark:light_arc|seamark:light_arc_al3" v="green">
     <rule e="way" k="seamark:arc_style" v="solid">
       <line class="arc-green" layer="-1" />
     </rule>
@@ -1455,13 +1455,13 @@
 			
 			.sector-radial { stroke-width: 0.12px; stroke-dasharray: 1.0,1.0; stroke-linecap: butt; stroke-linejoin: round; stroke-opacity: 0.5; fill: none; fill-opacity: 0; stroke: #000000; }
 			
-			.arc-red { stroke-width: 1.2px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
+			.arc-red { stroke-width: 1.28px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
 			.arc-dashed-red { stroke-width: 0.25px; stroke-linecap: butt;	stroke-linejoin: round; stroke-dasharray: 1,1; fill: none; stroke: #F40000; }
       
-			.arc-green { stroke-width: 1.2px; stroke-linecap: butt; stroke-linejoin: round; fill: none;	stroke: #00F400; }
+			.arc-green { stroke-width: 1.28px; stroke-linecap: butt; stroke-linejoin: round; fill: none;	stroke: #00F400; }
 			.arc-dashed-green { stroke-width: 0.25px; stroke-linecap: butt;	stroke-linejoin: round; stroke-dasharray: 1,1; fill: none; stroke: #00F400; }
       
-			.arc-yellow { stroke-width: 1.2px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F4F400; }
+			.arc-yellow { stroke-width: 1.28px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F4F400; }
 			.arc-dashed-yellow { stroke-width: 0.25px; stroke-linecap: butt;	stroke-linejoin: round; stroke-dasharray: 1,1; fill: none; stroke: #F4F400; }
       
 			.sandwaves { fill: url(#sandwaves); }

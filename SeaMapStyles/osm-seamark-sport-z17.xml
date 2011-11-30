@@ -5,56 +5,42 @@
 <!-- OpenSeaMap-Sport Rules File for zoom level 17 -->
 
 <rules 
-	data="data.osm"
-	scale="1"
-	symbolScale="0.04"
+	data="../work/data.osm"
+	scale="0.291271"
+	symbolScale="0.01144"
 	minimumMapWidth="0.5"
 	minimumMapHeight="0.5"
 	showScale="no"
 	showGrid="no"
 	showBorder="no"
 	showLicense="no"
-	showZoomControls="yes"
-	symbolsDir="../../../OpenSeaMap-styles/SportSymbols"
+	showZoomControls="no"
+	symbolsDir="../SeaMapSymbols"
 	meter2pixel="0.1375">
   
-	<rule e="way" k="seamark:area" v="yes" layer="-5">
-		<area class="regatta-area" layer="-5"/>
-		<caption k="seamark:name" class="regatta-text" text-anchor="middle" startOffset='50%'/>
-	</rule>
+	<rule e="way" k="seamark:type" v="restricted_area">
+    <rule e="way" k="seamark:restricted_area:category" v="*">
+      <area class="sport-area" layer="-5"/>
+      <caption k="seamark:name" class="area-name" text-anchor="middle" startOffset='50%'/>
+      <symbol ref="scuba_diving" position="center"/>
+    </rule>
+  </rule>
   
-	<rule e="node" k="sport" v="scuba_diving">
-		<symbol ref="diving" position="center"/>
+	<rule e="node|way" k="sport" v="scuba_diving">
+		<symbol ref="scuba_diving" position="center"/>
 		<text k ='name' class ='poi-name' dy = '-1' dx = '3'/>
 	</rule>
   
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
       
-			.map-background {
-      fill: #f8f8f8;
-      stroke: none;
-			}
+			.map-background { fill: #b5d0d0; fill-opacity: 0; stroke: none; }
       
-			.regatta-area {
-      fill: #bde3cb;
-      stroke: #6fc18e;
-      stroke-width: 2.0px;
-			}
+			.sport-area { fill: #bde3cb; stroke: #6fc18e; stroke-width: 2.0px; }
       
-			.regatta-text {
-      fill: black;
-      stroke: black;
-      stroke-width: 0.05px;
-      font-family: "DejaVu Sans";
-      font-weight: bold;
-			}
+			.area-name { font-family: "Arial"; font-weight: bold; font-size: 0.5px; text-anchor: middle; }
       
-			.poi-name {
-      font-size: 1.2px;
-      font-family: "DejaVu Sans";
-      font-weight: bold;
-			}
+			.poi-name { font-size: 0.5px; font-family: "Arial"; font-weight: bold; }
       
 		</style>
 	</defs>

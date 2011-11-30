@@ -1,0 +1,11 @@
+sport=fishing
+sport=kitesurfing
+sport=canoeing
+sport=rowing
+sport=sailing
+sport=scuba_diving
+sport=surfing
+sport=swimming
+sport=water_ski
+sport=windsurfing
+sport=water_sports

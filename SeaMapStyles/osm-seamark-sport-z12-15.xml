@@ -2,12 +2,12 @@
 <?xml-stylesheet type="text/xsl" href="osmarender.xsl"?>
 
 
-<!-- OpenSeaMap-Sport Rules File for zoom level 16 -->
+<!-- OpenSeaMap-Sport Rules File for test rendering. Will generate zoom 12 sized symbols with zoom 15 caption -->
 
 <rules 
 	data="../work/data.osm"
 	scale="0.291271"
-	symbolScale="0.01875"
+	symbolScale="0.150"
 	minimumMapWidth="0.5"
 	minimumMapHeight="0.5"
 	showScale="no"
@@ -38,9 +38,9 @@
       
 			.sport-area { fill: #bde3cb; stroke: #6fc18e; stroke-width: 2.0px; }
       
-			.area-name { font-family: "Arial"; font-weight: bold; font-size: 0.7px; text-anchor: middle; }
+			.area-name { font-family: "Arial"; font-weight: bold; font-size: 1.4px; text-anchor: middle; }
       
-			.poi-name { font-size: 0.7px; font-family: "Arial"; font-weight: bold; }
+			.poi-name { font-size: 1.4px; font-family: "Arial"; font-weight: bold; }
       
 		</style>
 	</defs>

@@ -5,47 +5,37 @@
 <!-- OpenSeaMap-Sport Rules File for zoom level 12 -->
 
 <rules 
-  data="data.osm"
-  scale="1"
-  symbolScale="0.1"
-  minimumMapWidth="0.5"
-  minimumMapHeight="0.5"
-  showScale="no"
-  showGrid="no"
-  showBorder="no"
-  showLicense="no"
-  showZoomControls="yes"
-  symbolsDir="../stylesheets/SeaMapSymbols"
-  meter2pixel="0.1375">
- 
-	<rule e="way" k="seamark:area" v="yes" layer="-5">
-		<area class="regatta-area" layer="-5"/>
-		<caption k="seamark:name" class="regatta-text" text-anchor="middle" startOffset='50%'/>
-	</rule>
-
+	data="../work/data.osm"
+	scale="0.291271"
+	symbolScale="0.15"
+	minimumMapWidth="0.5"
+	minimumMapHeight="0.5"
+	showScale="no"
+	showGrid="no"
+	showBorder="no"
+	showLicense="no"
+	showZoomControls="no"
+	symbolsDir="../SeaMapSymbols"
+	meter2pixel="0.1375">
+  
+	<rule e="way" k="seamark:type" v="restricted_area">
+    <rule e="way" k="seamark:restricted_area:category" v="*">
+      <area class="sport-area" layer="-5"/>
+      <caption k="seamark:name" class="area-name" text-anchor="middle" startOffset='50%'/>
+    </rule>
+  </rule>
+  
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
-
-			.map-background {
-				fill: #f8f8f8;
-				stroke: none;
-			}
-
-			.regatta-area {
-				fill: #bde3cb;
-				stroke: #6fc18e;
-				stroke-width: 2.0px;
-			}
-
-			.regatta-text {
-				fill: black;
-				stroke: black;
-				stroke-width: 0.05px;
-				font-family: "DejaVu Sans";
-				font-size: 30.0px;
-				font-weight: bold;
-			}
-
+      
+			.map-background { fill: #b5d0d0; fill-opacity: 0; stroke: none; }
+      
+			.sport-area { fill: #bde3cb; stroke: #6fc18e; stroke-width: 2.0px; }
+      
+			.area-name { font-family: "Arial"; font-weight: bold; font-size: 12px; text-anchor: middle; }
+      
+			.poi-name { font-size: 0.7px; font-family: "Arial"; font-weight: bold; }
+      
 		</style>
 	</defs>
 </rules>
