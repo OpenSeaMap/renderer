@@ -18,11 +18,8 @@
 	symbolsDir="../SeaMapSymbols"
 	meter2pixel="0.1375">
   
-	<rule e="way" k="seamark:type" v="restricted_area">
-    <rule e="way" k="seamark:restricted_area:category" v="*">
-      <area class="sport-area" layer="-5"/>
-      <caption k="seamark:name" class="area-name" text-anchor="middle" startOffset='50%'/>
-    </rule>
+	<rule e="way" k="sport" v="*">
+    <area class="sport-area" layer="-5"/>
   </rule>
   
 	<defs>
