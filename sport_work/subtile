@@ -11,8 +11,8 @@ subsubtile () {
 		for ((j[$1]=0; ${j[$1]}<2; j[$1]=${j[$1]}+1)); do
 			xs=$((${x[$1]}+${i[$1]}))
 			ys=$((${y[$1]}+${j[$1]}))
-			mkdir -p sport-tiles/${zoom[$1]}/$xs
-			tilename="sport-tiles/${zoom[$1]}/$xs/$ys.png"
+			mkdir -p sport_tiles/${zoom[$1]}/$xs
+			tilename="sport_tiles/${zoom[$1]}/$xs/$ys.png"
 			m=$((${z[$1]}/4096))
 			bpi=$((90*$m))
 			xy=$((256/$m))

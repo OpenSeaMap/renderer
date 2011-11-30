@@ -8,7 +8,8 @@ clean () {
     for ((j[$1]=0; ${j[$1]}<2; j[$1]=${j[$1]}+1)); do
       xc=$((${x[$1]}+${i[$1]}))
       yc=$((${y[$1]}+${j[$1]}))
-      cleanname="sport_tiles/${zoom[$1]}/$xc/$yc.png"
+      cleanname="w
+      sport_tiles/${zoom[$1]}/$xc/$yc.png"
       if [ -e $cleanname ]; then
         rm $cleanname
         echo "rm $cleanname" >> tmp/deletions
@@ -33,12 +34,12 @@ tile () {
 	while [ $(ps -a | grep -c perl) -gt 1 ]; do
 		sleep 1
 	done
-  filename="sport-tiles/12/$tx/$ty.png"
+  filename="sport_tiles/12/$tx/$ty.png"
   if [ -e $filename ]; then
     echo "rm $filename" >> tmp/deletions
   fi
   clean 12 $tx $ty
-	mkdir -p sport-tiles/12/$tx
+	mkdir -p sport_tiles/12/$tx
 	inkscape tmp/panel_12.svg -e $filename -d 90 -a 256:256:512:512 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
   if [ -e $filename ]; then
     if [ $(stat "$filename" | cut -f 8 -d' ') -lt 410 ]; then
@@ -52,7 +53,7 @@ tile () {
 }
 
 while true; do
-  for file in $(ls tmp | grep "sport-tiles\-"); do
+  for file in $(ls tmp | grep "sport_tiles\-"); do
 		tile=$(echo $file | sed -e s?-?/?g)
 		if [ $(stat tmp/$file | cut -f 8 -d' ') -ge 410 ]; then
 			mkdir -p $(dirname $tile)
@@ -81,7 +82,7 @@ while true; do
     	if [ -e tmp/$file ] ; then
 	    	rm tmp/$file
 	    fi
-		  if [ $(ls tmp | grep -c "sport-tiles\-") -ne 0 ]; then
+		  if [ $(ls tmp | grep -c "sport_tiles\-") -ne 0 ]; then
 		  	break;
 		  fi
   	done
