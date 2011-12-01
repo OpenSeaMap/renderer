@@ -32,7 +32,7 @@
       
 			.map-background { fill: #b5d0d0; fill-opacity: 0; stroke: none; }
       
-			.sport-area { fill: #bde3cb; stroke: #6fc18e; stroke-width: 2.0px; }
+			.sport-area { fill: none; stroke: #6fc18e; stroke-opacity: 0.25; stroke-width: 2.0px; }
       
 			.area-name { font-family: "Arial"; font-weight: bold; font-size: 1.4px; text-anchor: middle; }
       

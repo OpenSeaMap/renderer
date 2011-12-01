@@ -8,8 +8,7 @@ clean () {
     for ((j[$1]=0; ${j[$1]}<2; j[$1]=${j[$1]}+1)); do
       xc=$((${x[$1]}+${i[$1]}))
       yc=$((${y[$1]}+${j[$1]}))
-      cleanname="w
-      sport_tiles/${zoom[$1]}/$xc/$yc.png"
+      cleanname="sport_tiles/${zoom[$1]}/$xc/$yc.png"
       if [ -e $cleanname ]; then
         rm $cleanname
         echo "rm $cleanname" >> tmp/deletions
@@ -29,11 +28,8 @@ tile () {
 		sleep 1
 	done
 	for k in {12..18}; do
-		perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-sport-z$k.xml -b $bb -o tmp/panel_$k.svg tmp/$1 2>/dev/null &
+		perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-sport-z$k.xml -b $bb -o tmp/panel_$k.svg tmp/$1 2>/dev/null
 	done;
-	while [ $(ps -a | grep -c perl) -gt 1 ]; do
-		sleep 1
-	done
   filename="sport_tiles/12/$tx/$ty.png"
   if [ -e $filename ]; then
     echo "rm $filename" >> tmp/deletions
