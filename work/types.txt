@@ -21,6 +21,7 @@ navigation_line
 platform
 production_area
 recommended_track
+restricted_area
 sandwaves
 separation_boundary
 separation_crossing
@@ -32,4 +33,3 @@ shoreline_construction
 signal_station_traffic
 signal_station_warning
 small_craft_facility
-del
