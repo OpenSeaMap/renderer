@@ -506,37 +506,8 @@
 	<rule e="way|node" k="seamark:type" v="landmark">
 		<rule e="way|node" k="seamark:landmark:category" v="~">
 			<symbol ref="Light_House" position="center" />
+      <symbol ref="Light_Magenta_120" position="center" />
 		</rule>
-    <rule e="node" k="seamark:landmark:category" v="windmotor">
-      <symbol ref="Wind_Motor" position="center" />
-    </rule>
-    <rule e="node" k="seamark:landmark:category" v="water_tower">
-      <symbol ref="WaterTower" position="center" />
-    </rule>
-    <rule e="node" k="seamark:landmark:category" v="radio_mast">
-      <symbol ref="RadioMast" position="center" />
-    </rule>
-    <rule e="node" k="seamark:landmark:category" v="tower">
-      <symbol ref="LandTower" position="center" />
-    </rule>
-    <rule e="node" k="seamark:landmark:category" v="monument">
-      <symbol ref="Monument" position="center" />
-    </rule>
-    <rule e="node" k="seamark:landmark:category" v="flare_stack">
-      <symbol ref="FlareStack" position="center" />
-    </rule>
-    <rule e="node" k="seamark:landmark:category" v="flagstaff">
-      <symbol ref="Flagstaff" position="center" />
-    </rule>
-    <rule e="node" k="seamark:landmark:category" v="dish_aerial">
-      <symbol ref="DishAerial" position="center" />
-    </rule>
-    <rule e="node" k="seamark:landmark:category" v="chimney">
-      <symbol ref="Chimney" position="center" />
-    </rule>
-    <rule e="node" k="seamark:landmark:category" v="cairn">
-      <symbol ref="Cairn" position="center" />
-    </rule>
 	</rule>
 
 	<!-- Major Light -->
