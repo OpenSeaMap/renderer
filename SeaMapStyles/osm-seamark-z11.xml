@@ -692,6 +692,7 @@
 
 			.area-name { font-family: "Arial"; font-weight: bold; font-size: 18px; text-anchor: middle; }
       
+			.area-line { stroke-width: 2px; stroke-dasharray: 8,8; stroke-linecap: butt; stroke-linejoin: round; stroke: #c480ff; stroke-opacity: 0.5; fill: none; }
 			.production-dashed { stroke-width: 4px; stroke-dasharray: 8,8; stroke-linecap: butt; stroke-linejoin: round; fill: #b5d0d0; stroke: #000000; }
       
 			.separation-area { stroke: none; fill: #c480ff; fill-opacity: 0.5; }

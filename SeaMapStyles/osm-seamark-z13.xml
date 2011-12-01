@@ -1062,6 +1062,12 @@
     </rule>
 	</rule>
   
+	<!-- Restricted Areas -->
+  
+	<rule e="way" k="seamark:type" v="restricted_area">
+    <line class="area-line" layer="-2" />
+	</rule>
+  
   <defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
 
@@ -1069,6 +1075,7 @@
 
 			.area-name { font-family: "Arial"; font-weight: bold; font-size: 8px; text-anchor: middle; }
       
+			.area-line { stroke-width: 0.5px; stroke-dasharray: 2,2; stroke-linecap: butt; stroke-linejoin: round; stroke: #c480ff; stroke-opacity: 0.5; fill: none; }
 			.production-dashed { stroke-width: 1.0px; stroke-dasharray: 2,2; stroke-linecap: butt; stroke-linejoin: round; fill: #b5d0d0; stroke: #000000; }
       
 			.separation-area { stroke: none; fill: #c480ff; fill-opacity: 0.5; }
