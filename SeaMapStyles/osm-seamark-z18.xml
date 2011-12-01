@@ -1239,7 +1239,7 @@
   
 	<!-- Small Craft Facilities -->
   
-  <rule e="node" k="seamark:type" v="small_craft_facility">
+  <rule e="way|node" k="seamark:type" v="small_craft_facility">
     <rule e="node" k="seamark:small_craft_facility:category" v="boat_hoist">
       <symbol ref="Crane" position="center" />
     </rule>
