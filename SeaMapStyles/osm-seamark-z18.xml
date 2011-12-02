@@ -1407,6 +1407,10 @@
   
 	<!-- Locks -->
   
+	<rule e="node" k="seamark:type" v="lock_basin">
+    <symbol ref="Lock_Single" position="center" layer="-1" />
+	</rule>
+  
 	<rule e="way|node" k="seamark:type" v="gate">
     <rule e="way|node" k="seamark:gate:category" v="lock">
       <symbol ref="Lock_Gate_Single" position="center" layer="-1" />
