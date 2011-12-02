@@ -10,12 +10,14 @@ buoy_isolated_danger
 buoy_lateral
 buoy_safe_water
 buoy_special_purpose
+gate
 harbour
+landmark
 light_major
 light_minor
 light_float
 light_vessel
-landmark
+lock_basin
 mooring
 navigation_line
 platform

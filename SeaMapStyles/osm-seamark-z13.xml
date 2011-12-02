@@ -1068,6 +1068,12 @@
     <line class="area-line" layer="-2" />
 	</rule>
   
+	<!-- Locks -->
+  
+	<rule e="way|node" k="seamark:type" v="lock_basin">
+    <symbol ref="Lock_Single" position="center" layer="-1" />
+	</rule>
+  
   <defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
 

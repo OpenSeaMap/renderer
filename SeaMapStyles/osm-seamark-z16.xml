@@ -1405,6 +1405,14 @@
     <line class="area-line" layer="-2" />
 	</rule>
   
+	<!-- Locks -->
+  
+	<rule e="way|node" k="seamark:type" v="gate">
+    <rule e="way|node" k="seamark:gate:category" v="lock">
+      <symbol ref="Lock_Gate_Single" position="center" layer="-1" />
+    </rule>
+	</rule>
+  
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
       
