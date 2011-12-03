@@ -20,7 +20,7 @@
   
 	<rule e="way" k="sport" v="fishing|kite_surfing|canoeing|rowing|sailing|scuba_diving|surfing|swimming|water_ski|wind_surfing|water_sports">
     <area class="sport-area" layer="-5"/>
-		<caption k="name" class="area-name" dy="-0.5"/>
+		<caption k="name" class="area-name" dy="-0.8"/>
   </rule>
   
 	<rule e="node|way" k="sport" v="scuba_diving">
