@@ -34,7 +34,7 @@
 		<symbol ref="swimming" position="center"/>
 	</rule>
   
-	<rule e="node|way" k="sport" v="windsurfing">
+	<rule e="node|way" k="sport" v="wind_surfing">
 		<symbol ref="windsurfing" position="center"/>
 	</rule>
   
