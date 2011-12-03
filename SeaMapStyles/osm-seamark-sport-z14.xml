@@ -20,10 +20,23 @@
   
 	<rule e="way" k="sport" v="*">
     <area class="sport-area" layer="-5"/>
+		<caption k="name" class="poi-name"/>
   </rule>
   
 	<rule e="node|way" k="sport" v="scuba_diving">
 		<symbol ref="scuba_diving" position="center"/>
+	</rule>
+  
+	<rule e="node|way" k="sport" v="sailing">
+		<symbol ref="sailing" position="center"/>
+	</rule>
+  
+	<rule e="node|way" k="sport" v="swimming">
+		<symbol ref="swimming" position="center"/>
+	</rule>
+  
+	<rule e="node|way" k="sport" v="windsurfing">
+		<symbol ref="windsurfing" position="center"/>
 	</rule>
   
 	<defs>
