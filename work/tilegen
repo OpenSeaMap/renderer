@@ -48,6 +48,9 @@ tile () {
     fi
   fi
 	./subtile 12 $tx $ty 256 512 &
+  while [ $(ps -a | grep -c subtile) -gt 1 ]; do
+		sleep 1
+  done
   echo "$tx $ty $(date)"
 }
 

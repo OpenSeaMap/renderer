@@ -24,9 +24,6 @@ tile () {
   tx=$(echo $1 | cut -f 1 -d'_')
   ty=$(echo $1 | cut -f 2 -d'_')
   bb=$(echo $1 | cut -f 3 -d'_')
-	while [ $(ps -a | grep -c subtile) -gt 1 ]; do
-		sleep 1
-	done
 	for k in {12..18}; do
 		perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-sport-z$k.xml -b $bb -o tmp/panel_$k.svg tmp/$1 2>/dev/null
 	done;
@@ -44,7 +41,7 @@ tile () {
       echo "put $filename cache/$(echo $filename | sed -e s?/?-?g)" >> tmp/12-$tx-$ty.send
     fi
   fi
-	./subtile 12 $tx $ty 256 512 &
+	./subtile 12 $tx $ty 256 512
   echo "$tx $ty $(date)"
 }
 

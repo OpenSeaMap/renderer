@@ -18,9 +18,9 @@
 	symbolsDir="../SeaMapSymbols"
 	meter2pixel="0.1375">
   
-	<rule e="way" k="sport" v="*">
+	<rule e="way" k="sport" v="fishing|kite_surfing|canoeing|rowing|sailing|scuba_diving|surfing|swimming|water_ski|wind_surfing|water_sports">
     <area class="sport-area" layer="-5"/>
-		<caption k="name" class="poi-name"/>
+		<caption k="name" class="area-name"/>
   </rule>
   
 	<rule e="node|way" k="sport" v="scuba_diving">
@@ -39,6 +39,18 @@
 		<symbol ref="windsurfing" position="center"/>
 	</rule>
   
+	<rule e="node|way" k="sport" v="kite_surfing">
+		<symbol ref="kitesurfing" position="center"/>
+	</rule>
+  
+	<rule e="node|way" k="sport" v="surfing">
+		<symbol ref="surfing" position="center"/>
+	</rule>
+  
+	<rule e="node|way" k="sport" v="water_ski">
+		<symbol ref="waterskiing" position="center"/>
+	</rule>
+  
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
       
@@ -47,8 +59,6 @@
 			.sport-area { fill: none; stroke: #6fc18e; stroke-opacity: 0.25; stroke-width: 2.0px; }
       
 			.area-name { font-family: "Arial"; font-weight: bold; font-size: 1.4px; text-anchor: middle; }
-      
-			.poi-name { font-size: 1.4px; font-family: "Arial"; font-weight: bold; }
       
 		</style>
 	</defs>
