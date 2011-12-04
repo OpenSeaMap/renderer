@@ -51,6 +51,14 @@
 		<symbol ref="waterskiing" position="center"/>
 	</rule>
   
+	<rule e="node|way" k="sport" v="canoe">
+		<symbol ref="canoeing" position="center"/>
+	</rule>
+  
+	<rule e="node|way" k="sport" v="rowing">
+		<symbol ref="rowing" position="center"/>
+	</rule>
+  
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
       
