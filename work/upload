@@ -5,10 +5,12 @@ while true; do
 		backoff=0
 		while ! sftp -q -b tmp/sending malcolm@netz.smurf.noris.de; do
 			echo "SFTP failure - retrying"
+			touch pause
 			backoff=$(($backoff+1))
 			sleep $((60*$backoff))
 		done
 		rm tmp/sending
+		rm -f pause
 		echo $(date)
 	fi
 	sleep 60
