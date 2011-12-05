@@ -28,7 +28,7 @@ download () {
 			done
 		done
 	done
-	../smfilter/smfilter -a 0.01 -b 1 < merge.osm > next.osm
+	../smfilter/smfilter -a 0.01 < merge.osm > next.osm
 	mv merge.osm world.osm
 	echo "$(date) successful download" >> log.txt
 }
