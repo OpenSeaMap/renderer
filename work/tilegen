@@ -84,9 +84,6 @@ while true; do
     	if [ -e tmp/$file ] ; then
 	    	rm tmp/$file
 	    fi
-		  if [ $(ls tmp | grep -c "tiles\-") -ne 0 ]; then
-		  	break;
-		  fi
   	done
   fi
 done

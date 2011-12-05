@@ -46,20 +46,6 @@ tile () {
 }
 
 while true; do
-  for file in $(ls tmp | grep "sport_tiles\-"); do
-		tile=$(echo $file | sed -e s?-?/?g)
-		if [ $(stat tmp/$file | cut -f 8 -d' ') -ge 410 ]; then
-			mkdir -p $(dirname $tile)
-			mv -f tmp/$file $tile
-			echo "put $tile cache/$file" >> tmp/9-10-11.send
-		else
-			if [ -e $tile ]; then
-				rm $tile
-				echo "rm $tile" >> tmp/deletions
-			fi
-			rm tmp/$file
-		fi
-  done
   if [ $(ls tmp | grep -c "\_12\.osm") -eq 0 ]; then
     sleep 10
   else
@@ -75,9 +61,6 @@ while true; do
     	if [ -e tmp/$file ] ; then
 	    	rm tmp/$file
 	    fi
-		  if [ $(ls tmp | grep -c "sport_tiles\-") -ne 0 ]; then
-		  	break;
-		  fi
   	done
   fi
 done
