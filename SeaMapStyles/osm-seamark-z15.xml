@@ -1192,40 +1192,20 @@
   <rule e="node" k="seamark:type" v="signal_station_traffic">
     <symbol ref="Signal_Station" position="center" />
     <rule e="node" k="seamark:signal_station_traffic:category" v="*">
-      <rule e="node" k="seamark:signal_station_traffic:channel" v="*">
-        <text class="light-character" dx="0.9" dy="-1.3">SS(<tag k="seamark:signal_station_traffic:category"/>) Ch.<tag k="seamark:signal_station_traffic:channel"/></text>
-      </rule>
-      <else>
-        <text class="light-character" dx="0.9" dy="-1.3">SS(<tag k="seamark:signal_station_traffic:category"/>)</text>
-      </else>
+      <text class="colour-character" dx="0" dy="2.1">SS(<tag k="seamark:signal_station_traffic:category"/>)</text>
     </rule>
     <else>
-      <rule e="node" k="seamark:signal_station_traffic:channel" v="*">
-        <text class="light-character" dx="0.9" dy="-1.3">SS Ch.<tag k="seamark:signal_station_traffic:channel"/></text>
-      </rule>
-      <else>
-        <text class="light-character" dx="0.9" dy="-1.3">SS</text>
-      </else>
+      <text class="colour-character" dx="0" dy="2.1">SS</text>
     </else>
   </rule>
   
   <rule e="node" k="seamark:type" v="signal_station_warning">
     <symbol ref="Signal_Station" position="center" />
     <rule e="node" k="seamark:signal_station_warning:category" v="*">
-      <rule e="node" k="seamark:signal_station_warning:channel" v="*">
-        <text class="light-character" dx="0.9" dy="-1.3">SS(<tag k="seamark:signal_station_warning:category"/>) Ch.<tag k="seamark:signal_station_warning:channel"/></text>
-      </rule>
-      <else>
-        <text class="light-character" dx="0.9" dy="-1.3">SS(<tag k="seamark:signal_station_warning:category"/>)</text>
-      </else>
+      <text class="colour-character" dx="0" dy="2.1">SS(<tag k="seamark:signal_station_warning:category"/>)</text>
     </rule>
     <else>
-      <rule e="node" k="seamark:signal_station_warning:channel" v="*">
-        <text class="light-character" dx="0.9" dy="-1.3">SS Ch.<tag k="seamark:signal_station_warning:channel"/></text>
-      </rule>
-      <else>
-        <text class="light-character" dx="0.9" dy="-1.3">SS</text>
-      </else>
+      <text class="colour-character" dx="0" dy="2.1">SS</text>
     </else>
   </rule>
   
@@ -1242,11 +1222,11 @@
 	<rule e="node" k="seamark:type" v="*">
     <rule e="node" k="seamark:name" v="*">
       <rule e="node" k="seamark:type" v="light_major|light_minor">
-        <text k="seamark:name" class="buoy-name" dx="0" dy="-1.5" />
+        <text k="seamark:name" class="light-name" dx="0" dy="-1.5" />
       </rule>
       <else>
         <rule e="node" k="seamark:type" v="signal_station_warning|signal_station_traffic">
-          <text k="seamark:name" class="buoy-name" dx="0" dy="-2.5" />
+          <text k="seamark:name" class="light-name" dx="0" dy="-1.5" />
         </rule>
         <else>
           <text k="seamark:name" class="buoy-name" dx="1.9" dy="-1.5" />
@@ -1382,8 +1362,10 @@
       
 			.area-name { font-family: "Arial"; font-weight: bold; font-size: 1.4px; text-anchor: middle; }
 			.buoy-name { font-family: "Arial"; font-weight: bold; font-size: 1.4px; text-anchor: start; }
+			.light-name { font-family: "Arial"; font-weight: bold; font-size: 1.4px; text-anchor: middle; }
       
 			.light-character { font-family: "Arial"; font-weight: normal; font-size: 1.4px; text-anchor: start; }
+			.colour-character { font-family: "Arial"; font-weight: normal; font-size: 1.4px; text-anchor: middle; }
 			.signal-character { font-family: "Arial"; font-weight: normal; font-size: 1.4px; text-anchor: end; }
 			.line-character { font-family: "Arial"; font-weight: normal; font-size: 1.4px; text-anchor: middle; }
       

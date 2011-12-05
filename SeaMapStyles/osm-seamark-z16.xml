@@ -1192,41 +1192,27 @@
   <rule e="node" k="seamark:type" v="signal_station_traffic">
     <symbol ref="Signal_Station" position="center" />
     <rule e="node" k="seamark:signal_station_traffic:category" v="*">
-      <rule e="node" k="seamark:signal_station_traffic:channel" v="*">
-        <text class="light-character" dx="0.5" dy="-0.7">SS(<tag k="seamark:signal_station_traffic:category"/>) Ch.<tag k="seamark:signal_station_traffic:channel"/></text>
-      </rule>
-      <else>
-        <text class="light-character" dx="0.5" dy="-0.7">SS(<tag k="seamark:signal_station_traffic:category"/>)</text>
-      </else>
+      <text class="colour-character" dx="0" dy="1.2">SS(<tag k="seamark:signal_station_traffic:category"/>)</text>
     </rule>
     <else>
-      <rule e="node" k="seamark:signal_station_traffic:channel" v="*">
-        <text class="light-character" dx="0.5" dy="-0.7">SS Ch.<tag k="seamark:signal_station_traffic:channel"/></text>
-      </rule>
-      <else>
-        <text class="light-character" dx="0.5" dy="-0.7">SS</text>
-      </else>
+      <text class="colour-character" dx="0" dy="1.2">SS</text>
     </else>
+    <rule e="node" k="seamark:signal_station_traffic:channel" v="*">
+      <text class="colour-character" dx="0" dy="2.0">Ch.<tag k="seamark:signal_station_traffic:channel"/></text>
+    </rule>
   </rule>
   
   <rule e="node" k="seamark:type" v="signal_station_warning">
     <symbol ref="Signal_Station" position="center" />
     <rule e="node" k="seamark:signal_station_warning:category" v="*">
-      <rule e="node" k="seamark:signal_station_warning:channel" v="*">
-        <text class="light-character" dx="0.5" dy="-0.7">SS(<tag k="seamark:signal_station_warning:category"/>) Ch.<tag k="seamark:signal_station_warning:channel"/></text>
-      </rule>
-      <else>
-        <text class="light-character" dx="0.5" dy="-0.7">SS(<tag k="seamark:signal_station_warning:category"/>)</text>
-      </else>
+      <text class="colour-character" dx="0" dy="1.2">SS(<tag k="seamark:signal_station_warning:category"/>)</text>
     </rule>
     <else>
-      <rule e="node" k="seamark:signal_station_warning:channel" v="*">
-        <text class="light-character" dx="0.5" dy="-0.7">SS Ch.<tag k="seamark:signal_station_warning:channel"/></text>
-      </rule>
-      <else>
-        <text class="light-character" dx="0.5" dy="-0.7">SS</text>
-      </else>
+      <text class="colour-character" dx="0" dy="1.2">SS</text>
     </else>
+    <rule e="node" k="seamark:signal_station_warning:channel" v="*">
+      <text class="colour-character" dx="0" dy="2.0">Ch.<tag k="seamark:signal_station_warning:channel"/></text>
+    </rule>
   </rule>
 
 	<!-- Marina -->
@@ -1277,11 +1263,11 @@
 	<rule e="node" k="seamark:type" v="*">
     <rule e="node" k="seamark:name" v="*">
       <rule e="node" k="seamark:type" v="light_major|light_minor">
-        <text k="seamark:name" class="buoy-name" dx="0" dy="-0.8" />
+        <text k="seamark:name" class="light-name" dx="0" dy="-0.8" />
       </rule>
       <else>
         <rule e="node" k="seamark:type" v="signal_station_warning|signal_station_traffic">
-          <text k="seamark:name" class="buoy-name" dx="0" dy="-1.4" />
+          <text k="seamark:name" class="light-name" dx="0" dy="-0.8" />
         </rule>
         <else>
           <text k="seamark:name" class="buoy-name" dx="1.2" dy="-0.8" />
@@ -1424,8 +1410,10 @@
       
 			.area-name { font-family: "Arial"; font-weight: bold; font-size: 0.7px; text-anchor: middle; }
 			.buoy-name { font-family: "Arial"; font-weight: bold; font-size: 0.7px; text-anchor: start; }
+			.light-name { font-family: "Arial"; font-weight: bold; font-size: 0.7px; text-anchor: middle; }
       
 			.light-character { font-family: "Arial"; font-weight: normal; font-size: 0.7px; text-anchor: start; }
+			.colour-character { font-family: "Arial"; font-weight: normal; font-size: 0.7px; text-anchor: middle; }
 			.signal-character { font-family: "Arial"; font-weight: normal; font-size: 0.7px; text-anchor: end; }
 			.line-character { font-family: "Arial"; font-weight: normal; font-size: 0.7px; text-anchor: middle; }
       
