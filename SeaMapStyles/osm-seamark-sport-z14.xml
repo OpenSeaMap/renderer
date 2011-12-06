@@ -58,6 +58,14 @@
 		<symbol ref="rowing" position="center"/>
 	</rule>
   
+	<rule e="node|way" k="sport" v="fishing">
+		<symbol ref="fishing" position="center"/>
+	</rule>
+  
+	<rule e="node|way" k="sport" v="water_sports">
+		<symbol ref="sports" position="center"/>
+	</rule>
+  
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
       
