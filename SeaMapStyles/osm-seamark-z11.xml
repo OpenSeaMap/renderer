@@ -518,7 +518,9 @@
 	<rule e="way|node" k="seamark:type" v="landmark">
 		<rule e="way|node" k="seamark:landmark:category" v="~">
 			<symbol ref="Light_House" position="center" />
-      <symbol ref="Light_Magenta_120" position="center" />
+      <rule e="way|node" k="seamark:light:1:colour" v="~">
+        <symbol ref="Light_Magenta_120" position="center" />
+      </rule>
 		</rule>
 	</rule>
 

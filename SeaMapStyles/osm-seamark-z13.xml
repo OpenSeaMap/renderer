@@ -999,6 +999,9 @@
 	<rule e="way|node" k="seamark:type" v="landmark">
 		<rule e="way|node" k="seamark:landmark:category" v="~">
 			<symbol ref="Light_House" position="center" />
+      <rule e="way|node" k="seamark:light:1:colour" v="~">
+        <symbol ref="Light_Magenta_120" position="center" />
+      </rule>
 		</rule>
     <rule e="node" k="seamark:landmark:category" v="windmotor">
       <symbol ref="Wind_Motor" position="center" />
