@@ -1363,13 +1363,13 @@
 			.lane-arrow-core-11 { stroke-width: 0.4px; stroke-dasharray: 0.2,19.8; stroke-dashoffset: 2.0; } 
 			.lane-arrow-core-12 { stroke-width: 0.2px; stroke-dasharray: 0.2,19.8; stroke-dashoffset: 1.8; } 
       
-			.leading-line { stroke-width: 0.25px; stroke-linecap: butt; stroke-linejoin: round; fill: none; fill-opacity: 0; stroke: #000000; }
-			.transit-line { stroke-width: 0.25px; stroke-dasharray: 1,1; stroke-linecap: butt; stroke-linejoin: round; fill: none; fill-opacity: 0; stroke: #000000; }
+			.leading-line { stroke-width: 0.3px; stroke-linecap: butt; stroke-linejoin: round; fill: none; fill-opacity: 0; stroke: #000000; }
+			.transit-line { stroke-width: 0.3px; stroke-dasharray: 1,1; stroke-linecap: butt; stroke-linejoin: round; fill: none; fill-opacity: 0; stroke: #000000; }
 			
 			.wall-line { stroke-width: 0.5px; stroke-linecap: butt; stroke-linejoin: round; fill: none; fill-opacity: 0; stroke: #000000; }
 			.wall-dashed { stroke-width: 0.5px; stroke-dasharray: 2,2; stroke-linecap: butt; stroke-linejoin: round; fill: none; fill-opacity: 0; stroke: #000000; }
 			
-			.sector-radial { stroke-width: 0.3px; stroke-dasharray: 1,1; stroke-linecap: butt; stroke-linejoin: round; stroke-opacity: 0.5; fill: none; fill-opacity: 0; stroke: #000000; }
+			.sector-radial { stroke-width: 0.2px; stroke-dasharray: 1,1; stroke-linecap: butt; stroke-linejoin: round; stroke-opacity: 0.5; fill: none; fill-opacity: 0; stroke: #000000; }
 			
 			.arc-red { stroke-width: 1.8px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
 			.arc-dashed-red { stroke-width: 0.4px; stroke-dasharray: 1,1; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
