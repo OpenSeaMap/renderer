@@ -16,7 +16,10 @@
    version="1.1"
    inkscape:version="0.48.1 r9760"
    sodipodi:docname="sports.svg"
-   style="display:inline">
+   style="display:inline"
+   inkscape:export-filename="/Users/mherring/boatsw/oseam/openseamap/josm/icons/WindSurfing16.png"
+   inkscape:export-xdpi="12"
+   inkscape:export-ydpi="12">
   <defs
      id="defs4">
     <inkscape:perspective
@@ -22899,6 +22902,19 @@
        inkscape:vp_x="0 : 90 : 1"
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_z="180 : 90 : 1" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath6640">
+      <rect
+         style="fill:#ffffff;fill-opacity:0;stroke:none"
+         id="rect6642"
+         width="120"
+         height="120"
+         x="-0.10063532"
+         y="-0.028488895"
+         rx="20"
+         ry="20" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -22908,10 +22924,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6"
-     inkscape:cx="72.684365"
+     inkscape:cx="51.077222"
      inkscape:cy="54.362245"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="g4333"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1088"
@@ -22935,12 +22951,12 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     style="display:none"
+     style="display:inline"
      inkscape:label="Wind Surfing"
      id="g4333"
      inkscape:groupmode="layer"
@@ -23563,7 +23579,7 @@
       <polygon
          transform="translate(87.118115,138.8688)"
          id="polygon11-7"
-         points="16.781,74.684 72.609,6.52 72.609,74.684 "
+         points="72.609,6.52 72.609,74.684 16.781,74.684 "
          style="fill:#ffffff;fill-opacity:1" />
       <path
          id="path13-5-8"
@@ -23604,7 +23620,7 @@
          style="display:inline">
         <polygon
            style="fill:#ffffff;fill-opacity:1"
-           points="72.609,6.52 72.609,74.684 16.781,74.684 "
+           points="72.609,74.684 16.781,74.684 72.609,6.52 "
            id="polygon11-7-1"
            transform="translate(87.118115,138.8688)" />
         <path
@@ -23858,7 +23874,7 @@
       <polygon
          transform="matrix(0.97135318,0,0,0.97135318,112.15014,183.39557)"
          id="polygon9-0"
-         points="12.922,19.965 28.422,35.809 34.375,30.465 28.984,20.012 "
+         points="28.422,35.809 34.375,30.465 28.984,20.012 12.922,19.965 "
          style="fill:#ffffff;fill-opacity:1" />
       <path
          inkscape:connector-curvature="0"
@@ -23913,7 +23929,7 @@
          id="g4413-0">
         <polygon
            style="fill:#ffffff;fill-opacity:1"
-           points="28.422,35.809 34.375,30.465 28.984,20.012 12.922,19.965 "
+           points="34.375,30.465 28.984,20.012 12.922,19.965 28.422,35.809 "
            id="polygon9-0-5"
            transform="matrix(0.97135318,0,0,0.97135318,112.15014,183.39557)" />
         <path
@@ -23943,11 +23959,12 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Fishing"
-     style="display:inline">
+     style="display:none">
     <g
        style="display:inline"
        id="g14912"
-       transform="translate(0.10063532,0.02848508)">
+       transform="translate(0.10063532,0.02848508)"
+       clip-path="url(#clipPath6640)">
       <g
          style="display:inline"
          inkscape:label="Background"
@@ -24035,7 +24052,7 @@
            style="display:inline">
           <polygon
              style="fill:#ffffff;fill-opacity:1"
-             points="72.609,74.684 16.781,74.684 16.781,74.684 72.609,6.52 "
+             points="16.781,74.684 16.781,74.684 72.609,6.52 72.609,74.684 "
              id="polygon11-7-5"
              transform="translate(87.118115,138.8688)" />
           <path

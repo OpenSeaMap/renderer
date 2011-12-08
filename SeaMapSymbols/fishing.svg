@@ -22899,6 +22899,19 @@
        inkscape:vp_x="0 : 90 : 1"
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_z="180 : 90 : 1" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath6453">
+      <rect
+         style="fill:#ffffff;fill-opacity:0;stroke:none"
+         id="rect6455"
+         width="120"
+         height="120"
+         x="-0.10063532"
+         y="-0.028488895"
+         rx="20"
+         ry="20" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -22917,7 +22930,7 @@
      inkscape:window-height="1088"
      inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      inkscape:snap-global="false">
     <inkscape:grid
        type="xygrid"
@@ -22947,7 +22960,11 @@
     <g
        style="display:inline"
        id="g14912"
-       transform="translate(0.10063532,0.02848508)">
+       transform="translate(0.10063532,0.02848508)"
+       clip-path="url(#clipPath6453)"
+       inkscape:export-filename="/Users/mherring/boatsw/oseam/openseamap/josm/icons/Fishing16.png"
+       inkscape:export-xdpi="12"
+       inkscape:export-ydpi="12">
       <g
          style="display:inline"
          inkscape:label="Background"
