@@ -1146,6 +1146,7 @@
 
 	<rule e="node" k="seamark:type" v="light_major">
 		<symbol ref="Light_Major" position="center" />
+    <symbol ref="Light_Magenta_120" position="center" />
 	</rule>
 
 	<!-- Minor Light -->
@@ -1158,6 +1159,7 @@
   
 	<rule e="node" k="seamark:type" v="light_vessel">
 		<symbol ref="Super" position="center" />
+    <symbol ref="Light_Magenta_120" position="center" />
 	</rule>
   
 	<!-- Light Flares -->
