@@ -24,7 +24,7 @@ subsubtile () {
       if [ -e $tilename ]; then
         if [ $(stat "$tilename" | cut -f 8 -d' ') -lt 410 ]; then
           rm $tilename
-          if [ ${zoom[$1]} -lt 16 ]; then
+          if [ ${zoom[$1]} -lt 15 ]; then
             if [ $(ps -a | grep -c subtile) -lt 10 ]; then
               ./subtile ${zoom[$1]} $xs $ys $x0 $y1 &
             else

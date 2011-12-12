@@ -1352,6 +1352,12 @@
     </rule>
 	</rule>
   
+	<!-- Small Craft Facilities -->
+  
+  <rule e="way|node" k="seamark:type" v="small_craft_facility">
+    <symbol ref="Dot" position="center" />
+	</rule>
+  
 	<!-- Names -->
   
 	<rule e="node" k="seamark:type" v="*">
@@ -1498,6 +1504,12 @@
   
 	<rule e="way|node" k="seamark:type" v="lock_basin">
     <symbol ref="Lock_Single" position="center" layer="-1" />
+	</rule>
+  
+	<rule e="way|node" k="seamark:type" v="gate">
+    <rule e="way|node" k="seamark:gate:category" v="lock">
+      <symbol ref="Dot" position="center" layer="-1" />
+    </rule>
 	</rule>
   
 	<defs>

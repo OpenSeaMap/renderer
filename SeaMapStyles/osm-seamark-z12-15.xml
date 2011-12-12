@@ -1360,6 +1360,41 @@
     </rule>
 	</rule>
   
+	<!-- Small Craft Facilities -->
+  
+  <rule e="way|node" k="seamark:type" v="small_craft_facility">
+    <rule e="node" k="seamark:small_craft_facility:category" v="boat_hoist">
+      <symbol ref="Crane" position="center" />
+    </rule>
+    <rule e="node" k="seamark:small_craft_facility:category" v="fuel_station">
+      <symbol ref="Fuel" position="center" />
+    </rule>
+    <rule e="node" k="seamark:small_craft_facility:category" v="slipway">
+      <symbol ref="Slipway" position="center" />
+    </rule>
+    <rule e="node" k="seamark:small_craft_facility:category" v="pump-out">
+      <symbol ref="Waste_Disposal" position="center" />
+    </rule>
+    <rule e="way|node" k="seamark:small_craft_facility:category" v="visitor_berth">
+      <symbol ref="Visitor_Berth" position="center" />
+    </rule>
+    <rule e="way|node" k="seamark:small_craft_facility:category" v="visitor_mooring">
+      <symbol ref="Visitor_Mooring" position="center" />
+    </rule>
+    <rule e="way|node" k="seamark:small_craft_facility:category" v="toilets">
+      <symbol ref="Toilet" position="center" />
+    </rule>
+    <rule e="way|node" k="seamark:small_craft_facility:category" v="showers">
+      <symbol ref="Shower" position="center" />
+    </rule>
+    <rule e="way|node" k="seamark:small_craft_facility:category" v="chandler">
+      <symbol ref="Chandler" position="center" />
+    </rule>
+    <rule e="way|node" k="seamark:small_craft_facility:category" v="boatyard">
+      <symbol ref="Boatyard" position="center" />
+    </rule>
+	</rule>
+  
 	<!-- Names -->
   
 	<rule e="node" k="seamark:type" v="*">
