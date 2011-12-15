@@ -19,6 +19,7 @@ while true; do
 		sftp -q -b tmp/deleting malcolm@netz.smurf.noris.de
 		rm tmp/deleting
 	done
+	sleep 5
 	if [ $(ls tmp | grep -c '.send') -ne 0 ]; then
 		for file in $(ls tmp | grep '.send'); do
 			mv tmp/$file tmp/send
