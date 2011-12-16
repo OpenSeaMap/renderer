@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg8829"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="Dot.svg"
+   inkscape:export-xdpi="89.361702"
+   inkscape:export-ydpi="89.361702"
+   inkscape:export-filename="/Users/mherring/Desktop/try.png"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   x="0px"
+   y="0px"
+   width="320"
+   height="320"
+   viewBox="0 0 320 320"
+   enable-background="new 0 0 320 320"
+   xml:space="preserve"><metadata
+   id="metadata14"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata>
+<sodipodi:namedview
+   id="base"
+   inkscape:window-height="1088"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:window-width="1920"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:current-layer="g2415"
+   showgrid="true"
+   guidetolerance="10.0"
+   inkscape:zoom="33.312586"
+   gridtolerance="10.0"
+   objecttolerance="10.0"
+   borderopacity="1.0"
+   bordercolor="#666666"
+   inkscape:cx="159.72247"
+   pagecolor="#ffffff"
+   inkscape:cy="169.89506"
+   inkscape:window-maximized="0">
+	<inkscape:grid
+   type="xygrid"
+   id="grid3611"
+   empspacing="5"
+   visible="true"
+   enabled="true"
+   snapvisiblegridlinesonly="true" /></sodipodi:namedview>
+<defs
+   id="defs4">
+	
+	
+		<inkscape:perspective
+   id="perspective15"
+   inkscape:persp3d-origin="90 : 60 : 1"
+   sodipodi:type="inkscape:persp3d"
+   inkscape:vp_x="0 : 90 : 1"
+   inkscape:vp_y="0 : 1000 : 0"
+   inkscape:vp_z="180 : 90 : 1">
+		</inkscape:perspective>
+</defs>
+<g
+   id="g2415">
+	
+	
+	
+		
+<path
+   sodipodi:type="arc"
+   style="fill:#b5d0d0;fill-opacity:1;stroke:none"
+   id="path3008"
+   sodipodi:cx="160"
+   sodipodi:cy="155"
+   sodipodi:rx="20"
+   sodipodi:ry="15"
+   d="m 180,155 a 20,15 0 1 1 -40,0 20,15 0 1 1 40,0 z"
+   transform="matrix(0.075,0,0,0.1,148,144.5)" /></g>
+
+</svg>
