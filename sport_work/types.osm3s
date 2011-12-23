@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm-script timeout="3600">
+	<union>
+		<query type="node">
+			<has-kv k="sport" v="*"/>
+		</query>
+	</union>
+	<union into="way_result">
+		<query type="way" into="way_result">
+			<has-kv k="sport" v="*"/>
+		</query>
+	</union>
+	<union>
+		<item/>
+		<item set="way_result"/>
+		<recurse type="way-node" from="way_result"/>
+	</union>
+		<print mode="meta"/>
+	<union>
+		<query type="relation">
+			<has-kv k="sport" v="*"/>
+		</query>
+	</union>
+	<print mode="meta"/>
+</osm-script>

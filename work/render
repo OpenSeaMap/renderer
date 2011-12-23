@@ -7,8 +7,10 @@ download () {
 		cat types.txt | while read type; do
 			touch sort.osm
 			while [ -e sort.osm ]; do
-#					while ! wget -q -T 3600 --limit-rate=500k -O xapi.osm http://jxapi.openstreetmap.org/xapi/api/0.6/*[seamark:type=$type]; do
-					while ! wget -q -T 3600 --limit-rate=500k -O xapi.osm http://overpass-api.de/api/xapi?*[seamark:type=$type][@meta]; do
+#				while ! wget -q -T 3600 --limit-rate=500k -O xapi.osm http://jxapi.openstreetmap.org/xapi/api/0.6/*[seamark:type=$type]; do
+#				while ! wget -q -T 3600 --limit-rate=500k -O xapi.osm http://overpass-api.de/api/xapi?*[seamark:type=$type][@meta]; do
+				sed s/*/$type/ types.osm3s > get.osm3s
+				while !	wget -q -T 10000 -O xapi.osm --limit-rate=500k --post-file=get.osm3s http://www.overpass-api.de/api/interpreter; do
 					echo "$(date) wget error - retrying JXAPI" >> log.txt
 					sleep 60
 				done
