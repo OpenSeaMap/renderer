@@ -3,6 +3,9 @@
 while true; do
 	if [ -e tmp/sending ]; then
 		backoff=0
+    while [ $(ps -a | grep -c sftp) -gt 1 ]; do
+    	sleep 1
+    done          
 		while ! sftp -q -b tmp/sending malcolm@netz.smurf.noris.de; do
 			echo "SFTP failure - retrying"
 			touch pause
@@ -16,6 +19,9 @@ while true; do
 	sleep 60
 	while [ -e tmp/deletions ]; do
 		mv tmp/deletions tmp/deleting
+    while [ $(ps -a | grep -c sftp) -gt 1 ]; do
+    	sleep 1
+    done          
 		sftp -q -b tmp/deleting malcolm@netz.smurf.noris.de
 		rm tmp/deleting
 	done
