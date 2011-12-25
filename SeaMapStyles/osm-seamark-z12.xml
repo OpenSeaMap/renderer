@@ -982,9 +982,6 @@
 	<rule e="way|node" k="seamark:type" v="landmark">
 		<rule e="way|node" k="seamark:landmark:category" v="~">
 			<symbol ref="Light_House" position="center" />
-      <rule e="way|node" k="seamark:light:1:colour" v="~">
-        <symbol ref="Light_Magenta_120" position="center" />
-      </rule>
 		</rule>
     <rule e="node" k="seamark:landmark:category" v="windmotor">
       <symbol ref="Wind_Motor" position="center" />
@@ -1022,7 +1019,6 @@
   
 	<rule e="node" k="seamark:type" v="light_major">
 		<symbol ref="Light_Major" position="center" />
-    <symbol ref="Light_Magenta_120" position="center" />
 	</rule>
   
 	<!-- Minor Light -->
@@ -1037,7 +1033,6 @@
   
 	<rule e="node" k="seamark:type" v="light_vessel">
 		<symbol ref="Super" position="center" />
-    <symbol ref="Light_Magenta_120" position="center" />
 	</rule>
   
 	<!-- Light Float -->
@@ -1047,6 +1042,36 @@
       <symbol ref="Float" position="center" />
     </rule>
 	</rule>
+  
+	<!-- Light Flares -->
+  
+	<rule e="node" k="seamark:type" v="*">
+    <rule e="node" k="seamark:light:radius" v="~">
+      <rule e="node" k="seamark:light:1:colour" v="~">
+        <rule e="node" k="seamark:light:colour" v="*">
+          <rule e="node" k="seamark:light:colour" v="white|yellow|red|green">
+            <rule e="node" k="seamark:light:colour" v="white|yellow">
+              <symbol ref="Light_White_120" position="center" />
+            </rule>
+            <rule e="node" k="seamark:light:colour" v="red">
+              <symbol ref="Light_Red_120" position="center" />
+            </rule>
+            <rule e="node" k="seamark:light:colour" v="green">
+              <symbol ref="Light_Green_120" position="center" />
+            </rule>
+          </rule>
+          <else>
+            <symbol ref="Light_Magenta_120" position="center" />
+          </else>
+        </rule> 
+        <rule e="node" k="seamark:light:character" v="*">
+          <rule e="node" k="seamark:light:colour" v="~">
+            <symbol ref="Light_Magenta_120" position="center" />
+          </rule>
+        </rule>
+      </rule>
+    </rule>
+  </rule>
   
    <!-- Light Sectors -->
   
