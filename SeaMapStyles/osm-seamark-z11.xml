@@ -505,6 +505,166 @@
     </rule>
 	</rule>
   
+	<!--SpecialPurpose Buoys -->
+  
+	<rule e="node" k="seamark:type" v="buoy_special_purpose">
+    <rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
+      <rule e="node" k="seamark:buoy_special_purpose:shape" v="pillar|~">
+        <rule e="node" k="seamark:buoy_special_purpose:colour" v="yellow|red;green;red;green|~">
+          <rule e="node" k="seamark:buoy_special_purpose:colour" v="yellow|~">
+            <symbol ref="Pillar_Yellow" position="center" />
+          </rule>
+          <rule e="node" k="seamark:buoy_special_purpose:colour" v="red;green;red;green">
+            <symbol ref="Pillar_Red_Green_Red_Green" position="center" />
+          </rule>
+        </rule>
+        <else>
+          <symbol ref="Pillar" position="center" />
+        </else>
+      </rule>
+      <rule e="node" k="seamark:buoy_special_purpose:shape" v="spar">
+        <rule e="node" k="seamark:buoy_special_purpose:colour" v="yellow|red;green;red;green|~">
+          <rule e="node" k="seamark:buoy_special_purpose:colour" v="yellow|~">
+            <symbol ref="Spar_Yellow" position="center" />
+          </rule>
+          <rule e="node" k="seamark:buoy_special_purpose:colour" v="red;green;red;green">
+            <symbol ref="Spar_Red_Green_Red_Green" position="center" />
+          </rule>
+        </rule>
+        <else>
+          <symbol ref="Spar" position="center" />
+        </else>
+      </rule>
+      <rule e="node" k="seamark:buoy_special_purpose:shape" v="can">
+        <rule e="node" k="seamark:buoy_special_purpose:colour" v="yellow|red;green;red;green|~">
+          <rule e="node" k="seamark:buoy_special_purpose:colour" v="yellow|~">
+            <symbol ref="Can_Yellow" position="center" />
+          </rule>
+          <rule e="node" k="seamark:buoy_special_purpose:colour" v="red;green;red;green">
+            <symbol ref="Can_Red_Green_Red_Green" position="center" />
+          </rule>
+        </rule>
+        <else>
+          <symbol ref="Can" position="center" />
+        </else>
+      </rule>
+      <rule e="node" k="seamark:buoy_special_purpose:shape" v="conical">
+        <rule e="node" k="seamark:buoy_special_purpose:colour" v="yellow|red;green;red;green|~">
+          <rule e="node" k="seamark:buoy_special_purpose:colour" v="yellow|~">
+            <symbol ref="Cone_Yellow" position="center" />
+          </rule>
+          <rule e="node" k="seamark:buoy_special_purpose:colour" v="red;green;red;green">
+            <symbol ref="Cone_Red_Green_Red_Green" position="center" />
+          </rule>
+        </rule>
+        <else>
+          <symbol ref="Cone" position="center" />
+        </else>
+      </rule>
+      <rule e="node" k="seamark:buoy_special_purpose:shape" v="spherical">
+        <rule e="node" k="seamark:buoy_special_purpose:colour" v="yellow|red;green;red;green|white;yellow|yellow;red|~">
+          <rule e="node" k="seamark:buoy_special_purpose:colour" v="yellow|~">
+            <symbol ref="Sphere_Yellow" position="center" />
+          </rule>
+          <rule e="node" k="seamark:buoy_special_purpose:colour" v="red;green;red;green">
+            <symbol ref="Sphere_Red_Green_Red_Green" position="center" />
+          </rule>
+          <rule e="node" k="seamark:buoy_special_purpose:colour" v="white;yellow">
+            <symbol ref="Sphere_White_Yellow" position="center" />
+          </rule>
+          <rule e="node" k="seamark:buoy_special_purpose:colour" v="yellow;red">
+            <symbol ref="Sphere_Yellow_Red" position="center" />
+          </rule>
+        </rule>
+        <else>
+          <symbol ref="Sphere" position="center" />
+        </else>
+      </rule>
+      <rule e="node" k="seamark:buoy_special_purpose:shape" v="barrel">
+        <rule e="node" k="seamark:buoy_special_purpose:colour" v="yellow|~">
+          <rule e="node" k="seamark:buoy_special_purpose:colour" v="yellow|~">
+            <symbol ref="Barrel_Yellow" position="center" />
+          </rule>
+        </rule>
+        <else>
+          <symbol ref="Barrel" position="center" />
+        </else>
+      </rule>
+      <rule e="node" k="seamark:buoy_special_purpose:shape" v="super-buoy">
+        <rule e="node" k="seamark:buoy_special_purpose:colour" v="yellow|black|~">
+          <rule e="node" k="seamark:buoy_special_purpose:colour" v="yellow|~">
+            <symbol ref="Super_Yellow" position="center" />
+          </rule>
+          <rule e="node" k="seamark:buoy_special_purpose:colour" v="black">
+            <symbol ref="Super_Black" position="center" />
+          </rule>
+        </rule>
+        <else>
+          <symbol ref="Super" position="center" />
+        </else>
+      </rule>
+    </rule>
+	</rule>
+  
+	<!-- Special Purpose Beacons -->
+  
+	<rule e="node" k="seamark:type" v="beacon_special_purpose">
+    <rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
+      <rule e="node" k="seamark:beacon_special_purpose:shape" v="tower|stake|pole|post|cairn">
+        <rule e="node" k="seamark:beacon_special_purpose:shape" v="tower">
+          <rule e="node" k="seamark:beacon_special_purpose:colour" v="yellow|~">
+            <symbol ref="Tower_Yellow" position="center" />
+          </rule>
+          <else>
+            <symbol ref="Tower" position="center" />
+          </else>
+        </rule>
+        <rule e="node" k="seamark:beacon_special_purpose:shape" v="stake|pole|post">
+          <rule e="node" k="seamark:beacon_special_purpose:colour" v="yellow|~">
+            <symbol ref="Stake_Yellow" position="center" />
+          </rule>
+          <else>
+            <symbol ref="Stake" position="center" />
+          </else>
+        </rule>
+        <rule e="node" k="seamark:beacon_special_purpose:shape" v="cairn">
+          <symbol ref="Cairn" position="center" />
+        </rule>
+      </rule>
+      <else>
+        <rule e="node" k="seamark:beacon_special_purpose:colour" v="red;green;red;green|yellow|~">
+          <rule e="node" k="seamark:beacon_special_purpose:colour" v="yellow|~">
+            <symbol ref="Beacon_Yellow" position="center" />
+          </rule>
+          <rule e="node" k="seamark:beacon_special_purpose:colour" v="red;green;red;green">
+            <symbol ref="Beacon_Red_Green_Red_Green" position="center" />
+          </rule>
+        </rule>
+        <else>
+          <symbol ref="Beacon" position="center" />
+        </else>
+      </else>
+    </rule>
+	</rule>
+  
+	<!-- Special Purpose Floats -->
+  
+	<rule e="node" k="seamark:type" v="light_float">
+    <rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
+      <rule e="node" k="seamark:light_float:colour" v="yellow|black|white|brown|grey|pink|magenta|orange|amber|blue|violet">
+        <rule e="node" k="seamark:light_float:colour" v="yellow">
+          <symbol ref="Float_Yellow" position="center" />
+        </rule>
+        <else>
+          <symbol ref="Float" position="center" />
+        </else>
+      </rule>
+      <rule e="node" k="seamark:light_float:colour" v="~">
+        <symbol ref="Float" position="center" />
+      </rule>
+    </rule>
+	</rule>
+  
 	<!-- Radar Transponder -->
   
 	<rule e="node" k="seamark:type" v="*">
@@ -544,6 +704,16 @@
 	<rule e="node" k="seamark:type" v="light_vessel">
 		<symbol ref="Super" position="center" />
     <symbol ref="Light_Magenta_120" position="center" />
+	</rule>
+  
+	<!-- Light Float -->
+  
+	<rule e="node" k="seamark:type" v="light_float">
+    <rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
+      <rule e="node" k="seamark:light_float_colour" v="~">
+        <symbol ref="Float" position="center" />
+      </rule>
+    </rule>
 	</rule>
   
   <!-- Platforms -->
