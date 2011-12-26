@@ -1045,7 +1045,7 @@
   
 	<!-- Light Flares -->
   
-	<rule e="node" k="seamark:type" v="*">
+	<rule e="node" k="seamark:type" v="landmark|light_major|light_vessel">
     <rule e="node" k="seamark:light:radius" v="~">
       <rule e="node" k="seamark:light:1:colour" v="~">
         <rule e="node" k="seamark:light:colour" v="*">
