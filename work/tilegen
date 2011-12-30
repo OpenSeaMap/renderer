@@ -24,7 +24,7 @@ tile () {
   tx=$(echo $1 | cut -f 1 -d'_')
   ty=$(echo $1 | cut -f 2 -d'_')
   bb=$(echo $1 | cut -f 3 -d'_')
-	while [ $(ps -a | grep -c subtile) -gt 1 ]; do
+	while [ $(ps -a | grep -c inkscape) -gt 1 ]; do
 		sleep 1
 	done
 	for k in {12..18}; do
@@ -48,7 +48,7 @@ tile () {
     fi
   fi
 	./subtile 12 $tx $ty 256 512 &
-  while [ $(ps -a | grep -c subtile) -gt 1 ]; do
+  while [ $(ps -a | grep -c inkscape) -gt 1 ]; do
 		sleep 1
   done
   echo "$tx $ty $(date)"
