@@ -30,7 +30,7 @@ tile () {
 	for k in {12..18}; do
 		perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-z$k.xml -b $bb -o tmp/panel_$k.svg tmp/$1 2>/dev/null &
 	done;
-	while [ $(ps -a | grep -c perl) -gt 1 ]; do
+	while [ $(ps -a | grep $term | grep -c perl) -gt 1 ]; do
 		sleep 1
 	done
   filename="tiles/12/$tx/$ty.png"
@@ -48,10 +48,10 @@ tile () {
     fi
   fi
 	./subtile 12 $tx $ty 256 512 &
-  while [ $(ps -a | grep -c inkscape) -gt 1 ]; do
+  while [ $(ps -a | grep $term | grep -c inkscape) -gt 1 ]; do
 		sleep 1
   done
-  echo "$tx $ty $(date)"
+  echo "$(date) $tx $ty" >> log.txt
 }
 
 tile91011() {
@@ -71,6 +71,7 @@ tile91011() {
   done
 }
 
+term=$(ps -p $$ | tail -1 | cut -f 4 -d' ')
 while true; do
 	tile91011
   if [ $(ls tmp | grep -c "\_12\.osm") -eq 0 ]; then
