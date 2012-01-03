@@ -48,7 +48,7 @@ tile () {
   while [ $(ps -a | grep -c inkscape) -gt 1 ]; do
 		sleep 1
 	done
-  echo "$tx $ty $(date)"
+  echo "$(date) $tx $ty" >> log.txt
 }
 
 while true; do
