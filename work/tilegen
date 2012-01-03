@@ -21,10 +21,11 @@ clean () {
 }
 
 tile () {
+	term=$(ps -p $$ | tail -1 | cut -f 4 -d' ')
   tx=$(echo $1 | cut -f 1 -d'_')
   ty=$(echo $1 | cut -f 2 -d'_')
   bb=$(echo $1 | cut -f 3 -d'_')
-	while [ $(ps -a | grep -c inkscape) -gt 1 ]; do
+	while [ $(ps -a | grep $term | grep -c inkscape) -gt 1 ]; do
 		sleep 1
 	done
 	for k in {12..18}; do
@@ -71,7 +72,6 @@ tile91011() {
   done
 }
 
-term=$(ps -p $$ | tail -1 | cut -f 4 -d' ')
 while true; do
 	tile91011
   if [ $(ls tmp | grep -c "\_12\.osm") -eq 0 ]; then
