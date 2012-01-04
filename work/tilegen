@@ -25,14 +25,12 @@ tile () {
   tx=$(echo $1 | cut -f 1 -d'_')
   ty=$(echo $1 | cut -f 2 -d'_')
   bb=$(echo $1 | cut -f 3 -d'_')
-#	while [ $(ps -a | grep $term | grep -c inkscape) -gt 1 ]; do
 	while [ $(ps -a | grep -c inkscape) -gt 1 ]; do
 		sleep 1
 	done
 	for k in {12..18}; do
 		perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-z$k.xml -b $bb -o tmp/panel_$k.svg tmp/$1 2>/dev/null &
 	done;
-#	while [ $(ps -a | grep $term | grep -c perl) -gt 1 ]; do
 	while [ $(ps -a | grep -c perl) -gt 1 ]; do
 		sleep 1
 	done
@@ -50,8 +48,7 @@ tile () {
       echo "put $filename cache/$(echo $filename | sed -e s?/?-?g)" >> tmp/12-$tx-$ty.send
     fi
   fi
-	./subtile 12 $tx $ty 256 512 &
-#  while [ $(ps -a | grep $term | grep -c inkscape) -gt 1 ]; do
+	./subtile 12 $tx $ty 256 512
   while [ $(ps -a | grep -c inkscape) -gt 1 ]; do
 		sleep 1
   done
