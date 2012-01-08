@@ -25,7 +25,7 @@ subsubtile () {
         if [ $(stat "$tilename" | cut -f 8 -d' ') -lt 410 ]; then
           rm $tilename
           if [ ${zoom[$1]} -lt 15 ]; then
-            if [ $(ps -a | grep -c inkscape) -lt 8 ]; then
+            if [ $(ps -a | grep -c inkscape) -lt 6 ]; then
               ./subtile ${zoom[$1]} $xs $ys $x0 $y1 &
             else
               subsubtile ${zoom[$1]} $xs $ys $x0 $y1
@@ -34,7 +34,7 @@ subsubtile () {
         else
           echo "put $tilename cache/$(echo $tilename | sed -e s?/?-?g)" >> tmp/$1-$2-$3.send
           if [ ${zoom[$1]} -lt 18 ]; then
-            if [ $(ps -a | grep -c inkscape) -lt 8 ]; then
+            if [ $(ps -a | grep -c inkscape) -lt 6 ]; then
               ./subtile ${zoom[$1]} $xs $ys $x0 $y1 &
             else
               subsubtile ${zoom[$1]} $xs $ys $x0 $y1
