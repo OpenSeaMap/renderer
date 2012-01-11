@@ -687,7 +687,7 @@
     </rule>
 	</rule>
   
-	<!-- Mooring Buoys -->
+	<!-- Moorings -->
   
 	<rule e="node" k="seamark:type" v="mooring">
     <rule e="node" k="seamark:mooring:category" v="buoy">
@@ -702,7 +702,7 @@
             </rule>
           </rule>
           <else>
-            <symbol ref="Super_Black" position="center" />
+            <symbol ref="Super" position="center" />
           </else>
           <symbol ref="Top_Mooring_Float" position="center" />
         </rule>
@@ -723,6 +723,15 @@
         <symbol ref="Sphere" position="center" />
         <symbol ref="Top_Mooring_Buoy_Small" position="center" />
       </rule>
+    </rule>
+    <rule e="node" k="seamark:mooring:category" v="dolphin">
+      <symbol ref="Dolphin" position="center" />
+    </rule>
+    <rule e="node" k="seamark:mooring:category" v="deviation_dolphin">
+      <symbol ref="DeviationDolphin" position="center" />
+    </rule>
+    <rule e="node" k="seamark:mooring:category" v="post|pile">
+      <symbol ref="Post" position="center" />
     </rule>
   </rule>
   

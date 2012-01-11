@@ -687,23 +687,25 @@
     </rule>
 	</rule>
   
-	<!-- Mooring Buoys -->
+	<!-- Moorings -->
   
 	<rule e="node" k="seamark:type" v="mooring">
     <rule e="node" k="seamark:mooring:category" v="buoy">
-      <rule e="node" k="seamark:mooring:shape" v="super-buoy">
-        <rule e="node" k="seamark:mooring:colour" v="yellow|black">
-          <rule e="node" k="seamark:mooring:colour" v="yellow">
-            <symbol ref="Super_Yellow" position="center" />
+      <rule e="node" k="seamark:mooring:shape" v="*">
+        <rule e="node" k="seamark:mooring:shape" v="super-buoy">
+          <rule e="node" k="seamark:mooring:colour" v="yellow|black">
+            <rule e="node" k="seamark:mooring:colour" v="yellow">
+              <symbol ref="Super_Yellow" position="center" />
+            </rule>
+            <rule e="node" k="seamark:mooring:colour" v="black">
+              <symbol ref="Super_Black" position="center" />
+            </rule>
           </rule>
-          <rule e="node" k="seamark:mooring:colour" v="black">
-            <symbol ref="Super_Black" position="center" />
-          </rule>
+          <else>
+            <symbol ref="Super" position="center" />
+          </else>
+          <symbol ref="Top_Mooring_Float" position="center" />
         </rule>
-        <else>
-          <symbol ref="Super_Black" position="center" />
-        </else>
-        <symbol ref="Top_Mooring_Float" position="center" />
       </rule>
     </rule>
   </rule>
