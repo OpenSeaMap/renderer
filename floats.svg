@@ -11,7 +11,7 @@
    width="300"
    height="400"
    id="svg2"
-   inkscape:version="0.48.1 r9760"
+   inkscape:version="0.48.2 r9819"
    sodipodi:docname="floats.svg"
    style="display:inline">
   <metadata
@@ -39,13 +39,13 @@
      inkscape:window-height="1088"
      id="namedview2911"
      showgrid="true"
-     inkscape:zoom="5.6843752"
-     inkscape:cx="147.35804"
-     inkscape:cy="218.47204"
+     inkscape:zoom="4.0194603"
+     inkscape:cx="146.97839"
+     inkscape:cy="196.57925"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g3129"
+     inkscape:current-layer="layer4"
      inkscape:snap-grids="false">
     <inkscape:grid
        type="xygrid"
@@ -414,7 +414,7 @@
   </g>
   <g
      transform="translate(0,80)"
-     style="display:inline"
+     style="display:none"
      inkscape:label="Minor Float 2 Stripe"
      id="g3129"
      inkscape:groupmode="layer">
@@ -559,6 +559,27 @@
        d="m 120.01249,75.21577 -20.042602,42.0154 -3.97592,-0.0311 0.0515,5.67134 41.716482,-0.0151 c 1.28732,5.53295 6.23327,9.65624 12.15625,9.65625 5.92495,0 10.87095,-4.12052 12.15625,-9.65625 l 41.97505,0 0,-5.65625 -4.01238,-0.0311 -19.96607,-41.9221 -60.05858,-0.0311 z m 3.70218,5.66321 52.84248,-0.0622 17.57537,36.40151 -32.05805,-0.0182 c -1.2853,-5.53573 -6.2313,-9.65625 -12.15625,-9.65625 -5.92298,1e-5 -10.86893,4.1233 -12.15625,9.65625 l -31.80484,0.0129 17.75754,-36.33397 z m 26.20355,31.63359 c 4.14,0 7.5,3.36 7.5,7.5 0,4.14 -3.36,7.5 -7.5,7.5 -4.14,0 -7.5,-3.36 -7.5,-7.5 0,-4.14 3.36,-7.5 7.5,-7.5 z"
        sodipodi:nodetypes="cccccsccccccccccsccccsssc"
        inkscape:connector-curvature="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Storage Float">
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#000000;stroke-width:10.42247391;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3153"
+       sodipodi:cx="119.62617"
+       sodipodi:cy="174.82133"
+       sodipodi:rx="20.582737"
+       sodipodi:ry="21.1105"
+       d="m 140.2089,174.82133 a 20.582737,21.1105 0 1 1 -41.16547,0 20.582737,21.1105 0 1 1 41.16547,0 z"
+       transform="matrix(0.48584404,0,0,0.47369792,91.88034,117.1875)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 100,200 10,-20 80,0 10,20 -10,20 -80,0 z"
+       id="path3923"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
