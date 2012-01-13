@@ -1042,14 +1042,6 @@
     </rule>
 	</rule>
 
-	<!-- Radar Transponder -->
-  
-	<rule e="node" k="seamark:type" v="*">
-    <rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
-      <symbol ref="Radar_Station" position="center" />
-    </rule>
-	</rule>
-
 	<!-- Fog Signal -->
   
 	<rule e="node" k="seamark:type" v="*">
@@ -1180,7 +1172,12 @@
   <!-- Platforms -->
   
   <rule e="way|node" k="seamark:type" v="platform">
-    <symbol ref="Platform" position="center" />
+    <rule e="way|node" k="seamark:platform:category" v="fpso">
+      <symbol ref="Storage" position="center" />
+    </rule>
+    <else>
+      <symbol ref="Platform" position="center" />
+    </else>
   </rule>
   
   <!-- Signal Stations -->
@@ -1188,6 +1185,14 @@
   <rule e="node" k="seamark:type" v="signal_station_traffic|signal_station_warning">
     <symbol ref="Signal_Station" position="center" />
   </rule>
+  
+	<!-- Radar Transponder -->
+  
+	<rule e="node" k="seamark:type" v="*">
+    <rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
+      <symbol ref="Radar_Station" position="center" />
+    </rule>
+	</rule>
   
 	<!-- Marina -->
   

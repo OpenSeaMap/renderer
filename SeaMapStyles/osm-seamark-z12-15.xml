@@ -1042,38 +1042,6 @@
     </rule>
 	</rule>
   
-	<!-- Radar Transponder -->
-  
-  <rule e="node" k="seamark:type" v="*">
-    <rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
-      <symbol ref="Radar_Station" position="center" />
-      <rule e="node" k="seamark:radar_transponder:category" v="racon">
-        <rule e="node" k="seamark:radar_transponder:group" v="*">
-          <rule e="node" k="seamark:radar_transponder:period" v="*">
-            <text class="signal-character" dx="-3" dy="-1.25" text-anchor="end" >Racon(<tag k="seamark:radar_transponder:group" />)<tag k="seamark:radar_transponder:period"/>s . . .</text>
-          </rule>
-          <else>
-            <text class="signal-character" dx="-3" dy="-1.25" text-anchor="end" >Racon(<tag k="seamark:radar_transponder:group" />) . . .</text>
-          </else>
-        </rule>
-        <else>
-          <rule e="node" k="seamark:radar_transponder:period" v="*">
-            <text class="signal-character" dx="-3" dy="-1.25" text-anchor="end" >Racon <tag k="seamark:radar_transponder:period"/>s . . .</text>
-          </rule>
-          <else>
-            <text class="signal-character" dx="-3" dy="-1.25" text-anchor="end" >Racon . . .</text>
-          </else>
-        </else>
-      </rule>
-      <rule e="node" k="seamark:radar_transponder:category" v="ramark">
-        <text class="signal-character" dx="-3" dy="-1.25" text-anchor="end" >Ramark . . .</text>
-      </rule>
-      <rule e="node" k="seamark:radar_transponder:category" v="leading">
-        <text class="signal-character" dx="-3" dy="-1.25" text-anchor="end" >Leading . . .</text>
-      </rule>
-    </rule>
-  </rule>
-
 	<!-- Fog Signal -->
   
   <rule e="node" k="seamark:type" v="*">
@@ -1330,7 +1298,12 @@
   <!-- Platforms -->
   
   <rule e="way|node" k="seamark:type" v="platform">
-    <symbol ref="Platform" position="center" />
+    <rule e="way|node" k="seamark:platform:category" v="fpso">
+      <symbol ref="Storage" position="center" />
+    </rule>
+    <else>
+      <symbol ref="Platform" position="center" />
+    </else>
   </rule>
   
   <!-- Signal Stations -->
@@ -1358,6 +1331,56 @@
     </else>
     <rule e="node" k="seamark:signal_station_warning:channel" v="*">
       <text class="colour-character" dx="0" dy="3.4">Ch.<tag k="seamark:signal_station_warning:channel"/></text>
+    </rule>
+  </rule>
+  
+  <rule e="node" k="seamark:type" v="coastguard_station">
+    <symbol ref="Signal_Station" position="center" />
+    <text class="colour-character" dx="0" dy="2.1">CG</text>
+  </rule>
+  
+  <rule e="node" k="seamark:type" v="radio_station|radar_station">
+    <symbol ref="Signal_Station" position="center" />
+    <symbol ref="Radar_Station" position="center" />
+  </rule>
+  
+  <rule e="node" k="seamark:type" v="rescue_station">
+    <symbol ref="Rescue" position="center" />
+  </rule>
+  
+  <rule e="node" k="seamark:type" v="pilot_boarding">
+    <symbol ref="Pilot" position="center" />
+  </rule>
+  
+	<!-- Radar Transponder -->
+  
+  <rule e="node" k="seamark:type" v="*">
+    <rule e="node" k="seamark:radar_transponder|seamark:radar_transponder:category" v="*">
+      <symbol ref="Radar_Station" position="center" />
+      <rule e="node" k="seamark:radar_transponder:category" v="racon">
+        <rule e="node" k="seamark:radar_transponder:group" v="*">
+          <rule e="node" k="seamark:radar_transponder:period" v="*">
+            <text class="signal-character" dx="-3" dy="-1.25" text-anchor="end" >Racon(<tag k="seamark:radar_transponder:group" />)<tag k="seamark:radar_transponder:period"/>s . . .</text>
+          </rule>
+          <else>
+            <text class="signal-character" dx="-3" dy="-1.25" text-anchor="end" >Racon(<tag k="seamark:radar_transponder:group" />) . . .</text>
+          </else>
+        </rule>
+        <else>
+          <rule e="node" k="seamark:radar_transponder:period" v="*">
+            <text class="signal-character" dx="-3" dy="-1.25" text-anchor="end" >Racon <tag k="seamark:radar_transponder:period"/>s . . .</text>
+          </rule>
+          <else>
+            <text class="signal-character" dx="-3" dy="-1.25" text-anchor="end" >Racon . . .</text>
+          </else>
+        </else>
+      </rule>
+      <rule e="node" k="seamark:radar_transponder:category" v="ramark">
+        <text class="signal-character" dx="-3" dy="-1.25" text-anchor="end" >Ramark . . .</text>
+      </rule>
+      <rule e="node" k="seamark:radar_transponder:category" v="leading">
+        <text class="signal-character" dx="-3" dy="-1.25" text-anchor="end" >Leading . . .</text>
+      </rule>
     </rule>
   </rule>
   
