@@ -1596,7 +1596,7 @@
 			.depth-character { font-family: "Arial"; font-weight: normal; font-size: 0.2px; text-anchor: middle; }
       
 			.area-line { stroke-width: 0.1px; stroke-dasharray: 0.2,0.2; stroke-linecap: butt; stroke-linejoin: round; stroke: #c480ff; stroke-opacity: 0.5; fill: none; }
-			.production-dashed { stroke-width: 0.2px; stroke-dasharray: 0.2,0.2; stroke-linecap: butt; stroke-linejoin: round; fill: #b5d0d0; stroke: #000000; }
+			.production-dashed { stroke-width: 0.2px; stroke-dasharray: 0.2,0.2; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #000000; }
       
 			.separation-area { stroke: none; fill: #c480ff; fill-opacity: 0.5; }
 			.separation-line { stroke-width: 0.4px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #c480ff; stroke-opacity: 0.5; }
