@@ -2,12 +2,12 @@
 <osm-script timeout="3600">
 	<union>
 		<query type="node">
-			<has-kv k="sport" v="*"/>
+			<has-kv k="sport" v="swimming"/>
 		</query>
 	</union>
 	<union into="way_result">
 		<query type="way" into="way_result">
-			<has-kv k="sport" v="*"/>
+			<has-kv k="sport" v="swimming"/>
 		</query>
 	</union>
 	<union>
@@ -18,7 +18,7 @@
 		<print mode="meta"/>
 	<union>
 		<query type="relation">
-			<has-kv k="sport" v="*"/>
+			<has-kv k="sport" v="swimming"/>
 		</query>
 	</union>
 	<print mode="meta"/>
