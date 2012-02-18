@@ -91,6 +91,10 @@
     <line class="whitewater-6" layer="-5"/>
   </rule>
   
+	<rule e="way" k="whitewater:section_name" v="*">
+    <pathText class="section-name" startOffset="50%" k="whitewater:section_name" />
+  </rule>
+  
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
       
@@ -106,6 +110,7 @@
 			.whitewater-6 { fill: none; stroke: #8000ff; stroke-opacity: 0.75; stroke-width: 1.0px; stroke-linecap: round; stroke-linejoin: round; }
       
 			.area-name { font-family: "Arial"; font-weight: bold; font-size: 0.3px; text-anchor: middle; }
+			.section-name { font-family: "Arial"; font-weight: normal; font-size: 0.3px; text-anchor: middle; }
       
 		</style>
 	</defs>
