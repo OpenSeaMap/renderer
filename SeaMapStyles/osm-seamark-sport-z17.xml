@@ -98,12 +98,12 @@
       
 			.sport-area { fill: none; stroke: #6fc18e; stroke-opacity: 0.25; stroke-width: 1.2px; }
       
-			.whitewater-1 { fill: none; stroke: #00d400; stroke-opacity: 0.75; stroke-width: 1.2px; stroke-linecap: butt; stroke-linejoin: round; }
-			.whitewater-2 { fill: none; stroke: #ffd400; stroke-opacity: 0.75; stroke-width: 1.2px; stroke-linecap: butt; stroke-linejoin: round; }
-			.whitewater-3 { fill: none; stroke: #ff8000; stroke-opacity: 0.75; stroke-width: 1.2px; stroke-linecap: butt; stroke-linejoin: round; }
-			.whitewater-4 { fill: none; stroke: #f00000; stroke-opacity: 0.75; stroke-width: 1.2px; stroke-linecap: butt; stroke-linejoin: round; }
-			.whitewater-5 { fill: none; stroke: #e000e0; stroke-opacity: 0.75; stroke-width: 1.2px; stroke-linecap: butt; stroke-linejoin: round; }
-			.whitewater-6 { fill: none; stroke: #8000ff; stroke-opacity: 0.75; stroke-width: 1.2px; stroke-linecap: butt; stroke-linejoin: round; }
+			.whitewater-1 { fill: none; stroke: #00d400; stroke-opacity: 0.75; stroke-width: 1.2px; stroke-linecap: round; stroke-linejoin: round; }
+			.whitewater-2 { fill: none; stroke: #ffd400; stroke-opacity: 0.75; stroke-width: 1.2px; stroke-linecap: round; stroke-linejoin: round; }
+			.whitewater-3 { fill: none; stroke: #ff8000; stroke-opacity: 0.75; stroke-width: 1.2px; stroke-linecap: round; stroke-linejoin: round; }
+			.whitewater-4 { fill: none; stroke: #f00000; stroke-opacity: 0.75; stroke-width: 1.2px; stroke-linecap: round; stroke-linejoin: round; }
+			.whitewater-5 { fill: none; stroke: #e000e0; stroke-opacity: 0.75; stroke-width: 1.2px; stroke-linecap: round; stroke-linejoin: round; }
+			.whitewater-6 { fill: none; stroke: #8000ff; stroke-opacity: 0.75; stroke-width: 1.2px; stroke-linecap: round; stroke-linejoin: round; }
       
 			.area-name { font-family: "Arial"; font-weight: bold; font-size: 0.5px; text-anchor: middle; }
       
