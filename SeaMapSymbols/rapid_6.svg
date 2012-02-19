@@ -22990,7 +22990,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.9195959"
-     inkscape:cx="19.592137"
+     inkscape:cx="81.060148"
      inkscape:cy="58.721337"
      inkscape:document-units="px"
      inkscape:current-layer="layer5"
@@ -23043,18 +23043,7 @@
        height="76"
        width="76"
        id="rect7024"
-       style="fill:none;stroke:#00213e;stroke-width:3.99999976;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       style="fill:none;stroke:#8000ff;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        mask="none" />
-    <text
-       xml:space="preserve"
-       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:none;stroke:#8000ff;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
-       x="39.639137"
-       y="85.090378"
-       id="text7093"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan7095"
-         x="39.639137"
-         y="85.090378">6</tspan></text>
   </g>
 </svg>
