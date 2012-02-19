@@ -65,7 +65,39 @@
 	<rule e="node|way" k="sport" v="water_sports">
 		<symbol ref="sports" position="center"/>
 	</rule>
-  
+  <!--  
+   <rule e="node" k="whitewater" v="put_in">
+   <symbol ref="put_in" position="center"/>
+   </rule>
+   
+   <rule e="node" k="whitewater" v="put_in;egress|egress;put_in">
+   <symbol ref="put_in_egress" position="center"/>
+   </rule>
+   
+   <rule e="node" k="whitewater" v="egress">
+   <symbol ref="egress" position="center"/>
+   </rule>
+   
+   <rule e="node" k="whitewater" v="hazard">
+   <symbol ref="hazard" position="center"/>
+   </rule>
+   
+   <rule e="node" k="whitewater" v="rapid">
+   <symbol ref="rapid" position="center"/>
+   </rule>
+   <rule e="node" k="whitewater:rapid_grade" v="3">
+   <symbol ref="rapid3" position="center"/>
+   </rule>
+   <rule e="node" k="whitewater:rapid_grade" v="4">
+   <symbol ref="rapid4" position="center"/>
+   </rule>
+   <rule e="node" k="whitewater:rapid_grade" v="5">
+   <symbol ref="rapid5" position="center"/>
+   </rule>
+   <rule e="node" k="whitewater:rapid_grade" v="6">
+   <symbol ref="rapid6" position="center"/>
+   </rule>
+   -->  
 	<rule e="way" k="whitewater:section_grade" v="1|1+|1-">
     <line class="whitewater-1" layer="-5"/>
   </rule>
