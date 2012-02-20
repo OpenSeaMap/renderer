@@ -99,8 +99,8 @@
     <symbol ref="rapid_6" position="center"/>
   </rule>
   
-	<rule e="node" k="whitewater" v="rapid_name">
-		<caption k="rapid_name" class="rapid-name" dy="-1.2"/>
+	<rule e="node" k="whitewater:rapid_name" v="*">
+		<caption k="whitewater:rapid_name" class="rapid-name" dy="-1.0"/>
 	</rule>
   
 	<rule e="way" k="whitewater:section_grade" v="1|1+|1-">
@@ -128,7 +128,7 @@
   </rule>
   
 	<rule e="way" k="whitewater:section_name" v="*">
-    <pathText class="section-name" startOffset="50%" k="whitewater:section_name" />
+    <pathText class="section-name" startOffset="50%" dy="0.4" k="whitewater:section_name" />
   </rule>
   
 	<defs>
@@ -147,7 +147,7 @@
       
 			.area-name { font-family: "Arial"; font-weight: bold; font-size: 0.7px; text-anchor: middle; }
 			.rapid-name { font-family: "Arial"; font-weight: bold; font-size: 0.7px; text-anchor: middle; }
-			.section-name { font-family: "Arial"; font-weight: normal; font-size: 0.7px; text-anchor: middle; }
+			.section-name { font-family: "Arial"; font-weight: bold; font-size: 1.1px; text-anchor: middle; }
       
 		</style>
 	</defs>
