@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="sports.svg"
+   sodipodi:docname="egress.svg"
    style="display:inline"
    inkscape:export-filename="/Users/mherring/boatsw/oseam/openseamap/josm/icons/WindSurfing16.png"
    inkscape:export-xdpi="12"
@@ -22981,6 +22981,20 @@
          id="rect7084"
          style="fill:none;stroke:#00213e;stroke-width:3.99999976;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath10287">
+      <rect
+         mask="none"
+         style="fill:none;stroke:#00213e;stroke-width:3.99999976;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         id="rect10289"
+         width="76"
+         height="76"
+         x="22"
+         y="22"
+         rx="20"
+         ry="20" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -22990,10 +23004,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.9195959"
-     inkscape:cx="49.139099"
+     inkscape:cx="33.860542"
      inkscape:cy="58.721337"
      inkscape:document-units="px"
-     inkscape:current-layer="layer5"
+     inkscape:current-layer="g6673"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1088"
@@ -23017,7 +23031,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -23025,7 +23039,7 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Whitewater Rapid"
-     style="display:inline">
+     style="display:none">
     <image
        y="20"
        x="20"
@@ -23071,30 +23085,6 @@
        mask="none" />
   </g>
   <g
-     inkscape:groupmode="layer"
-     id="g6829"
-     inkscape:label="Whitewater Egress"
-     style="display:none">
-    <image
-       y="20"
-       x="20"
-       id="image6878"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAqxJREFU OI2Fk0toXGUUx3/nu9+dV562iGC6KGoWAa1Q7EJXZteVuhVsdOtCV1n6QMEXZFM3MhsXBgTpRrJV aANaSrHFNlCbNi0NpVZNMpnJzOR73Hu/08WMoBs9cB6L8+b/l3a7/Qawyv+I6sgkTagqSZVanp+x wOri4iKtY/MYgVzAGsgEBFAgKVRjLRIMCuXu7bvcWP9+1QK0js0z1/yP6b+eRc4toy+9wsbJb+jF jJm544QQMaqKjBOTQiiVflD+Gia2eyWHF5aRc8twYgG5uMZzV5eYsgVGlBACtiwLtvYKbpUlNVGM gAgY4IXrZ5CLa3BiAbyD+ePI+hrP8xZXTn2H8x4TY4FBmbGJmZoylSvTVpnMdVQMcP03qIZw4x4A sr5G3UBwDhtDJCNRy6CW/fNwuP1uFyn7PPPJHFQHsFNx84tDMBlNKzjvsSEGREFF0PHXR2P+duOg G8ABIlgjTGTgncN670dHY0goR1s5n14KnL8f2PEV51814wYJOiBixtsK3ges9w5jDEdawoUHBT9e 8WzsllzbDVx+fRYxh3BH4VkgQt0KDWtQAy44rHeB3MC3m5EftktudUr2DxVi4vHJHNUpyteexn61 RXX6KVq5oWHBiBB8wNYbdVauOjZ2Ew+GFQOXiN0BhILuMPLkbIPO0ibmTcgMNEWwGYQEMQTML3d+ J8syNvdLOv2SeOCg04X9fb7++R6dQaCZC00r1DPBmhFGHvZLQozYzl6Pk3WIgwAhgguQWQh7XLv0 Bx9t77B0eoEnjk4w3ciJRcVuz3G/V3D55kNk/tTLulV7kXfeXsL5SPfA0RsEhq4gxJKUFEvFZF2Y nW7y2EyTiUaNLz9bgT9/Qtrt9vvLH37+cb/vQQwYC1k+4q+mETJUOZIP6MTWv0jWXnnvg0cylle3 WrgY6wAAAABJRU5ErkJggg== "
-       height="80"
-       width="80"
-       clip-path="url(#clipPath7060)" />
-    <rect
-       ry="20"
-       rx="20"
-       y="22"
-       x="22"
-       height="76"
-       width="76"
-       id="rect7024-7"
-       style="fill:none;stroke:#00213e;stroke-width:3.99999976;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       mask="none" />
-  </g>
-  <g
      inkscape:label="Whitewater Put-in Egress"
      id="g6881"
      inkscape:groupmode="layer"
@@ -23117,6 +23107,44 @@
        id="rect7024-0"
        style="fill:none;stroke:#00213e;stroke-width:3.99999976;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        mask="none" />
+  </g>
+  <g
+     style="display:inline"
+     inkscape:groupmode="layer"
+     id="g6673"
+     inkscape:label="Whitewater Egress">
+    <image
+       y="20"
+       x="20"
+       id="image10284"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAqxJREFU
+OI2Fk0toXGUUx3/nu9+dV562iGC6KGoWAa1Q7EJXZteVuhVsdOtCV1n6QMEXZFM3MhsXBgTpRrJV
+aANaSrHFNlCbNi0NpVZNMpnJzOR73Hu/08WMoBs9cB6L8+b/l3a7/Qawyv+I6sgkTagqSZVanp+x
+wOri4iKtY/MYgVzAGsgEBFAgKVRjLRIMCuXu7bvcWP9+1QK0js0z1/yP6b+eRc4toy+9wsbJb+jF
+jJm544QQMaqKjBOTQiiVflD+Gia2eyWHF5aRc8twYgG5uMZzV5eYsgVGlBACtiwLtvYKbpUlNVGM
+gAgY4IXrZ5CLa3BiAbyD+ePI+hrP8xZXTn2H8x4TY4FBmbGJmZoylSvTVpnMdVQMcP03qIZw4x4A
+sr5G3UBwDhtDJCNRy6CW/fNwuP1uFyn7PPPJHFQHsFNx84tDMBlNKzjvsSEGREFF0PHXR2P+duOg
+G8ABIlgjTGTgncN670dHY0goR1s5n14KnL8f2PEV51814wYJOiBixtsK3ges9w5jDEdawoUHBT9e
+8WzsllzbDVx+fRYxh3BH4VkgQt0KDWtQAy44rHeB3MC3m5EftktudUr2DxVi4vHJHNUpyteexn61
+RXX6KVq5oWHBiBB8wNYbdVauOjZ2Ew+GFQOXiN0BhILuMPLkbIPO0ibmTcgMNEWwGYQEMQTML3d+
+J8syNvdLOv2SeOCg04X9fb7++R6dQaCZC00r1DPBmhFGHvZLQozYzl6Pk3WIgwAhgguQWQh7XLv0
+Bx9t77B0eoEnjk4w3ciJRcVuz3G/V3D55kNk/tTLulV7kXfeXsL5SPfA0RsEhq4gxJKUFEvFZF2Y
+nW7y2EyTiUaNLz9bgT9/Qtrt9vvLH37+cb/vQQwYC1k+4q+mETJUOZIP6MTWv0jWXnnvg0cylle3
+WrgY6wAAAABJRU5ErkJggg==
+"
+       height="80"
+       width="80"
+       clip-path="url(#clipPath10287)" />
+    <rect
+       mask="none"
+       style="fill:none;stroke:#00213e;stroke-width:3.99999976;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       id="rect6677"
+       width="76"
+       height="76"
+       x="22"
+       y="22"
+       rx="20"
+       ry="20" />
   </g>
   <g
      inkscape:groupmode="layer"
