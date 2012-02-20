@@ -99,6 +99,10 @@
     <symbol ref="rapid_6" position="center"/>
   </rule>
  
+	<rule e="node" k="whitewater" v="rapid_name">
+		<caption k="rapid_name" class="rapid-name" dy="-4"/>
+	</rule>
+  
 	<rule e="way" k="whitewater:section_grade" v="1|1+|1-">
     <line class="whitewater-1" smart-linecap="no" layer="-5"/>
   </rule>
@@ -142,6 +146,7 @@
 			.whitewater-6 { fill: none; stroke: #8000ff; stroke-opacity: 0.75; stroke-width: 2.0px; stroke-linecap: butt; stroke-linejoin: butt; }
       
 			.area-name { font-family: "Arial"; font-weight: bold; font-size: 1.4px; text-anchor: middle; }
+			.rapid-name { font-family: "Arial"; font-weight: bold; font-size: 1.4px; text-anchor: middle; }
 			.section-name { font-family: "Arial"; font-weight: normal; font-size: 1.4px; text-anchor: middle; }
       
 		</style>
