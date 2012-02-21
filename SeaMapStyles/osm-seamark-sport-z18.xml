@@ -134,7 +134,7 @@
     <pathText class="section-name" startOffset="50%" dy="0.18" k="whitewater:section_name" />
   </rule>
 	<rule e="way" k="whitewater:name" v="*">
-    <pathText class="section-name" startOffset="50%" dy="1.0" k="whitewater:name" />
+    <pathText class="section-name" startOffset="50%" dy="0.18" k="whitewater:name" />
   </rule>
   
 	<defs>
