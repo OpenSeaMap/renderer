@@ -133,6 +133,9 @@
 	<rule e="way" k="whitewater:section_name" v="*">
     <pathText class="section-name" startOffset="50%" dy="1.0" k="whitewater:section_name" />
   </rule>
+	<rule e="way" k="whitewater:name" v="*">
+    <pathText class="section-name" startOffset="50%" dy="1.0" k="whitewater:name" />
+  </rule>
   
 	<defs>
 		<style type="text/css" xmlns="http://www.w3.org/2000/svg">
