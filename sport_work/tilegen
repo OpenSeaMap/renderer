@@ -69,7 +69,6 @@ tile91011() {
 }
 
 while true; do
-	tile91011
   if [ $(ls tmp | grep -c "\_12\.osm") -eq 0 ]; then
     sleep 10
   else
@@ -85,6 +84,7 @@ while true; do
     	if [ -e tmp/$file ] ; then
 	    	rm tmp/$file
 	    fi
+			tile91011
   	done
   fi
 done
