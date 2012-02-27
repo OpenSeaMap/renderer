@@ -106,6 +106,10 @@
 		<caption k="whitewater:rapid_name" class="whitewater-name" dy="-1.0"/>
 	</rule>
   
+	<rule e="way" k="whitewater:section_grade" v="0">
+    <line class="whitewater-0" smart-linecap="no" layer="-5"/>
+  </rule>
+  
 	<rule e="way" k="whitewater:section_grade" v="1|1+|1-">
     <line class="whitewater-1" smart-linecap="no" layer="-5"/>
   </rule>
@@ -144,6 +148,7 @@
       
 			.sport-area { fill: none; stroke: #6fc18e; stroke-opacity: 0.25; stroke-width: 1.5px; }
       
+			.whitewater-0 { fill: none; stroke: #0080ff; stroke-opacity: 0.75; stroke-width: 1.0px; stroke-linecap: butt; stroke-linejoin: butt; }
 			.whitewater-1 { fill: none; stroke: #00d400; stroke-opacity: 0.75; stroke-width: 1.0px; stroke-linecap: butt; stroke-linejoin: butt; }
 			.whitewater-2 { fill: none; stroke: #ffd400; stroke-opacity: 0.75; stroke-width: 1.0px; stroke-linecap: butt; stroke-linejoin: butt; }
 			.whitewater-3 { fill: none; stroke: #ff8000; stroke-opacity: 0.75; stroke-width: 1.0px; stroke-linecap: butt; stroke-linejoin: butt; }
