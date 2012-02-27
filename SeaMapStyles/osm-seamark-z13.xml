@@ -290,10 +290,10 @@
         <symbol ref="Sphere_Black_Yellow" position="center" />
       </rule>
       <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar|spar|~">
-        <symbol ref="Top_Black_Yellow_Buoy" position="center" />
+        <symbol ref="Top_North_Buoy" position="center" />
       </rule>
       <else>
-        <symbol ref="Top_Black_Yellow_Buoy_Small" position="center" />
+        <symbol ref="Top_North_Buoy_Small" position="center" />
       </else>
     </rule>
     <rule e="node" k="seamark:buoy_cardinal:category" v="east">
@@ -313,10 +313,10 @@
         <symbol ref="Sphere_Black_Yellow_Black" position="center" />
       </rule>
       <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar|spar|~">
-        <symbol ref="Top_Black_Yellow_Black_Buoy" position="center" />
+        <symbol ref="Top_East_Buoy" position="center" />
       </rule>
       <else>
-        <symbol ref="Top_Black_Yellow_Black_Buoy_Small" position="center" />
+        <symbol ref="Top_East_Buoy_Small" position="center" />
       </else>
     </rule>
     <rule e="node" k="seamark:buoy_cardinal:category" v="south">
@@ -336,10 +336,10 @@
         <symbol ref="Sphere_Yellow_Black" position="center" />
       </rule>
       <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar|spar|~">
-        <symbol ref="Top_Yellow_Black_Buoy" position="center" />
+        <symbol ref="Top_South_Buoy" position="center" />
       </rule>
       <else>
-        <symbol ref="Top_Yellow_Black_Buoy_Small" position="center" />
+        <symbol ref="Top_South_Buoy_Small" position="center" />
       </else>
     </rule>
     <rule e="node" k="seamark:buoy_cardinal:category" v="west">
@@ -359,10 +359,10 @@
         <symbol ref="Sphere_Yellow_Black_Yellow" position="center" />
       </rule>
       <rule e="node" k="seamark:buoy_cardinal:shape" v="pillar|spar|~">
-        <symbol ref="Top_Yellow_Black_Yellow_Buoy" position="center" />
+        <symbol ref="Top_West_Buoy" position="center" />
       </rule>
       <else>
-        <symbol ref="Top_Yellow_Black_Yellow_Buoy_Small" position="center" />
+        <symbol ref="Top_West_Buoy_Small" position="center" />
       </else>
     </rule>
 	</rule>
@@ -381,7 +381,7 @@
       <rule e="node" k="seamark:beacon_cardinal:shape" v="stake">
         <symbol ref="Stake" position="center" />
       </rule>
-      <symbol ref="Top_Black_Yellow_Beacon" position="center" />
+      <symbol ref="Top_North_Beacon" position="center" />
     </rule>
     
 		<rule e="node" k="seamark:beacon_cardinal:category" v="east">
@@ -394,7 +394,7 @@
       <rule e="node" k="seamark:beacon_cardinal:shape" v="stake">
         <symbol ref="Stake" position="center" />
       </rule>
-      <symbol ref="Top_Black_Yellow_Black_Beacon" position="center" />
+      <symbol ref="Top_East_Beacon" position="center" />
     </rule>
     
 		<rule e="node" k="seamark:beacon_cardinal:category" v="south">
@@ -404,7 +404,7 @@
       <rule e="node" k="seamark:beacon_cardinal:shape" v="pile|lattice|~">
         <symbol ref="Beacon_Yellow_Black" position="center" />
 			</rule>
-      <symbol ref="Top_Yellow_Black_Beacon" position="center" />
+      <symbol ref="Top_South_Beacon" position="center" />
     </rule>
     
 		<rule e="node" k="seamark:beacon_cardinal:category" v="west">
@@ -417,7 +417,7 @@
       <rule e="node" k="seamark:beacon_cardinal:shape" v="stake">
         <symbol ref="Stake" position="center" />
       </rule>
-      <symbol ref="Top_Yellow_Black_Yellow_Beacon" position="center" />
+      <symbol ref="Top_West_Beacon" position="center" />
     </rule>
     
 	</rule>
@@ -428,19 +428,19 @@
     
     <rule e="node" k="seamark:light_float:colour" v="black;yellow">
       <symbol ref="Float_Black_Yellow" position="center" />
-      <symbol ref="Top_Black_Yellow_Float" position="center" />
+      <symbol ref="Top_North_Float" position="center" />
     </rule>
     <rule e="node" k="seamark:light_float:colour" v="black;yellow;black">
       <symbol ref="Float_Black_Yellow_Black" position="center" />
-      <symbol ref="Top_Black_Yellow_Black_Float" position="center" />
+      <symbol ref="Top_East_Float" position="center" />
     </rule>
     <rule e="node" k="seamark:light_float:colour" v="yellow;black">
       <symbol ref="Float_Yellow_Black" position="center" />
-      <symbol ref="Top_Yellow_Black_Float" position="center" />
+      <symbol ref="Top_South_Float" position="center" />
     </rule>
     <rule e="node" k="seamark:light_float:colour" v="yellow;black;yellow">
       <symbol ref="Float_Yellow_Black_Yellow" position="center" />
-      <symbol ref="Top_Yellow_Black_Yellow_Float" position="center" />
+      <symbol ref="Top_West_Float" position="center" />
     </rule>
     
 	</rule>
