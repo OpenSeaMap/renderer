@@ -76,11 +76,12 @@ while true; do
     sleep 10
   else
 	  for file in $(ls tmp | grep "\_12\.osm"); do
-  	  if [ -e pause ]; then
-    		echo "Paused"
-			  while [ -e pause ]; do
+  	  if [ -e hold ]; then
+    		echo "Holding..."
+			  while [ -e hold ]; do
   				sleep 60
   			done
+  			echo "Resuming"
     		break
     	fi
     	tile $file
