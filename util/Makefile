@@ -3,10 +3,10 @@ all: tagfilter checkdate
 checkdate: checkdate.c
 	gcc -o checkdate checkdate.c
 
-tagfilter: main.o seamaps.o
-	gcc -o tagfilter main.o seamaps.o
+tagfilter: tagfilter.o seamaps.o
+	gcc -o tagfilter tagfilter.o seamaps.o
 
-main.o: main.c seamaps.h
+tagfilter.o: tagfilter.c seamaps.h
 
 seamaps.o: seamaps.c seamaps.h
 

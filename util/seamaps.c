@@ -475,9 +475,11 @@ const ConSTR_t ConSTR[] = {
 
 Key_t getkey(Map_t map[], char *val) {
   int i;
-  for (i = 0; map[i].key != NULKEY; i++) {
-    if (strcmp(map[i].val, val) == 0) {
-      return (map[i].key);
+  if (val != NULL) {
+    for (i = 0; map[i].key != NULKEY; i++) {
+      if (strcmp(map[i].val, val) == 0) {
+        return (map[i].key);
+      }
     }
   }
   return (0);
