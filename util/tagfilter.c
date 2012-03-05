@@ -255,15 +255,19 @@ int main (int argc, const char * argv[]) {
       
       /* Construct light strings for sector arcs */
       
-      if ((sector != 0) && (seamark.lgt[sector].lit != DIR) && (seamark.lgt[sector].rad > 0.2)) {
+      if ((sector != 0) && (seamark.lgt[sector].lit != DIR) && (seamark.lgt[0].lit != DIR) && (seamark.lgt[sector].rad > 0.2)) {
         if (seamark.lgt[sector].alt != UNKCOL)
           strcpy(str, "Al.");
         else
           strcpy(str, "");
         if (strlen(seamark.lgt[sector].chr) > 0)
           sprintf(strchr(str, 0), "%s", seamark.lgt[sector].chr);
+        else if (strlen(seamark.lgt[0].chr) > 0)
+          sprintf(strchr(str, 0), "%s", seamark.lgt[0].chr);
         if (strlen(seamark.lgt[sector].grp) > 0)
           sprintf(strchr(str, 0), "(%s)", seamark.lgt[sector].grp);
+        else if (strlen(seamark.lgt[0].grp) > 0)
+          sprintf(strchr(str, 0), "(%s)", seamark.lgt[0].grp);
         else if (strlen(str) > 0)
           strcat(str, ".");
         strcat(str, getval((Map_t*)ColMAP, (Key_t)seamark.lgt[sector].col));
@@ -271,6 +275,8 @@ int main (int argc, const char * argv[]) {
           strcat(str, getval((Map_t*)ColMAP, (Key_t)seamark.lgt[sector].alt));
         if (seamark.lgt[sector].per > 0)
           sprintf(strchr(str, 0), " %ds", seamark.lgt[sector].per);
+        else if (seamark.lgt[0].per > 0)
+          sprintf(strchr(str, 0), " %ds", seamark.lgt[0].per);
         printf("<tag k=\"seamark:arc_caption\" v=\"%s\"/>\n", str);
         printf("<tag k=\"seamark:arc_colour\" v=\"%s%s\"/>\n",
                getval((Map_t*)ColMAP, (Key_t)seamark.lgt[sector].col),
