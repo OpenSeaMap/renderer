@@ -778,8 +778,8 @@
     
     .map-background { fill: #b5d0d0; fill-opacity: 0; stroke: none; }
     
-    .bold-character { font-family:Arial; font-weight:bold; font-size:0.3px; }
-    .normal-character { font-family:Arial; font-weight:normal; font-size:0.3px; }
+    .bold-text { font-family:Arial; font-weight:bold; font-size:0.3px; }
+    .normal-text { font-family:Arial; font-weight:normal; font-size:0.3px; }
     
     .area-line { stroke-width: 0.1px; stroke-dasharray: 0.2,0.2; stroke-linecap: butt; stroke-linejoin: round; stroke: #c480ff; stroke-opacity: 0.5; fill: none; }
     .production-dashed { stroke-width: 0.2px; stroke-dasharray: 0.2,0.2; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #000000; }
