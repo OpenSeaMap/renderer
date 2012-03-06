@@ -149,6 +149,8 @@ const CatSTR_t CatSTR[] = {
 
 const ShpSTR_t ShpSTR[] = {
   {BEACON, "beacon"},
+  {BEACON, "pile"},
+  {BEACON, "lattice"},
   {PILLAR, "pillar"},
   {SPAR, "spar"},
   {CAN, "can"},

@@ -15,7 +15,7 @@
 
 void lightstring(int, char*);
 
-char line[250];
+char line[1000];
 char *tokens;
 char *ele;
 char *key;
@@ -69,7 +69,7 @@ struct seamark_s {
 
 int main (int argc, const char * argv[]) {
   
-	while (fgets(line, 250, stdin) != NULL) {
+	while (fgets(line, 1000, stdin) != NULL) {
     tokens = strdup(line);
 		ele = strtok(tokens, " <");
     
@@ -341,22 +341,28 @@ int main (int argc, const char * argv[]) {
             case MORFAC:
               break;
             case LNDMRK:
-              if (seamark.shp == UNKSHP)
+              if (seamark.shp == UNKSHP) {
                 seamark.shp = HOUSE;
-              break;
+                printf("<tag k=\"seamark:class\" v=\"light\"/>\n");
+              }
+             break;
             case LITMAJ:
               seamark.shp = MAJOR;
+              printf("<tag k=\"seamark:class\" v=\"light\"/>\n");
               break;
             case LITMIN:
               seamark.shp = MINOR;
+              printf("<tag k=\"seamark:class\" v=\"light\"/>\n");
               break;
             case LITFLT:
               if (seamark.shp == UNKSHP)
                 seamark.shp = FLOAT;
+              printf("<tag k=\"seamark:class\" v=\"light\"/>\n");
               break;
             case LITVES:
               if (seamark.shp == UNKSHP)
                 seamark.shp = SUPER;
+              printf("<tag k=\"seamark:class\" v=\"light\"/>\n");
               break;
             case SISTAW:
             case SISTAT:
