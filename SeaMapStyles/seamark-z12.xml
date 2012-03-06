@@ -648,6 +648,9 @@
 			.lane-arrow-core-11 { stroke-width: 1.6px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 8.0; } 
 			.lane-arrow-core-12 { stroke-width: 0.8px; stroke-dasharray: 0.8,79.2; stroke-dashoffset: 7.2; } 
       
+			.leading-line { stroke-width: 0.5px; stroke-linecap: butt; stroke-linejoin: round; fill: none; fill-opacity: 0; stroke: #000000; }
+			.transit-line { stroke-width: 0.5px; stroke-dasharray: 2,2; stroke-linecap: butt; stroke-linejoin: round; fill: none; fill-opacity: 0; stroke: #000000; }
+			
 			.wall-line { stroke-width: 0.5px; stroke-linecap: butt; stroke-linejoin: round; fill: none; fill-opacity: 0; stroke: #000000; }
 			.wall-dashed { stroke-width: 0.5px; stroke-dasharray: 2,2; stroke-linecap: butt; stroke-linejoin: round; fill: none; fill-opacity: 0; stroke: #000000; }
 			
