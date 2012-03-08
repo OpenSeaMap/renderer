@@ -403,6 +403,54 @@
     </rule>
   </rule>
   
+	<!-- Moorings -->
+  
+  <rule e="node" k="seamark:top_shape" v="mooring">
+    <rule e="node" k="seamark:body_shape" v="float|super-buoy"><symbol ref="Top_Mooring_Float" position="center"/></rule>
+    <rule e="node" k="seamark:body_shape" v="can|conical|spherical|barrel"><symbol ref="Top_Mooring_Buoy_Small" position="center"/></rule>
+  </rule>
+  <rule e="node" k="seamark:body_shape" v="dolphin"><symbol ref="Dolphin" position="center"/></rule>
+  <rule e="node" k="seamark:body_shape" v="deviation_dolphin"><symbol ref="DeviationDolphin" position="center"/></rule>
+  <rule e="node" k="seamark:body_shape" v="pile"><symbol ref="Post" position="center"/></rule>
+  <rule e="node" k="seamark:body_shape" v="post"><symbol ref="Post" position="center"/></rule>
+  
+  <!-- Signal Stations -->
+  
+  <rule e="node" k="seamark:body_shape" v="signal_station">
+    <symbol ref="Signal_Station" position="center" />
+    <rule e="node" k="seamark:fog_char" v="*">
+      <caption class="normal-text" dx="0" dy="2.2" text-anchor="middle" k="seamark:sis_type"/>
+      <caption class="normal-text" dx="0" dy="3.0" text-anchor="middle" k="seamark:sis_chan"/>
+    </rule>
+    <else>
+      <caption class="normal-text" dx="0" dy="1.2" text-anchor="middle" k="seamark:sis_type"/>
+      <caption class="normal-text" dx="0" dy="2.0" text-anchor="middle" k="seamark:sis_chan"/>
+    </else>
+  </rule>
+  
+  <rule e="node" k="seamark:type" v="radio_station|radar_station">
+    <symbol ref="Signal_Station" position="center" />
+    <symbol ref="Radar_Station" position="center" />
+  </rule>
+  
+  <rule e="node" k="seamark:type" v="rescue_station"><symbol ref="Rescue" position="center"/></rule>
+  <rule e="node" k="seamark:type" v="pilot_boarding"><symbol ref="Pilot" position="center"/></rule>
+  
+	<!-- Fog Signal -->
+  
+  <rule e="node" k="seamark:type|seamark:body_shape" v="*">
+    <rule e="node" k="seamark:fog_char" v="*">
+      <symbol ref="Fog_Signal" position="center"/>
+      <rule e="node" k="seamark:body_shape" v="float|super-buoy|barrel|spar|beacon|lighthouse|platform|fpso">
+        <rule e="node" k="seamark:body_shape" v="spar|beacon">
+          <caption class="normal-text" dx="-0" dy="-0.2" text-anchor="end"><tag k="seamark:fog_char"/> .</caption>
+        </rule>
+        <else><caption class="normal-text" dx="-0" dy="-0.2" text-anchor="end"><tag k="seamark:fog_char"/> . . .</caption></else>
+      </rule>
+      <else><caption class="normal-text" dx="-0" dy="-0.2" text-anchor="end"><tag k="seamark:fog_char"/> . .</caption></else>
+    </rule>
+	</rule>
+  
 	<!-- Radar Reflector -->
   
   <rule e="node" k="seamark:radar_reflector" v="yes">
@@ -442,32 +490,6 @@
     </rule>
   </rule>
   
-	<!-- Fog Signal -->
-  
-  <rule e="node" k="seamark:type|seamark:body_shape" v="*">
-    <rule e="node" k="seamark:fog_char" v="*">
-      <symbol ref="Fog_Signal" position="center"/>
-      <rule e="node" k="seamark:body_shape" v="float|super-buoy|barrel|spar|beacon|lighthouse|platform|fpso">
-        <rule e="node" k="seamark:body_shape" v="spar|beacon">
-          <caption class="normal-text" dx="-0" dy="-0.2" text-anchor="end"><tag k="seamark:fog_char"/> .</caption>
-        </rule>
-        <else><caption class="normal-text" dx="-0" dy="-0.2" text-anchor="end"><tag k="seamark:fog_char"/> . . .</caption></else>
-      </rule>
-      <else><caption class="normal-text" dx="-0" dy="-0.2" text-anchor="end"><tag k="seamark:fog_char"/> . .</caption></else>
-    </rule>
-	</rule>
-  
-	<!-- Moorings -->
-  
-  <rule e="node" k="seamark:top_shape" v="mooring">
-    <rule e="node" k="seamark:body_shape" v="float|super-buoy"><symbol ref="Top_Mooring_Float" position="center"/></rule>
-    <rule e="node" k="seamark:body_shape" v="can|conical|spherical|barrel"><symbol ref="Top_Mooring_Buoy_Small" position="center"/></rule>
-  </rule>
-  <rule e="node" k="seamark:body_shape" v="dolphin"><symbol ref="Dolphin" position="center"/></rule>
-  <rule e="node" k="seamark:body_shape" v="deviation_dolphin"><symbol ref="DeviationDolphin" position="center"/></rule>
-  <rule e="node" k="seamark:body_shape" v="pile"><symbol ref="Post" position="center"/></rule>
-  <rule e="node" k="seamark:body_shape" v="post"><symbol ref="Post" position="center"/></rule>
-  
 	<!-- Landmarks -->
   
   <rule e="way|node" k="seamark:body_shape" v="windmotor"><symbol ref="Wind_Motor" position="center"/></rule>
@@ -486,28 +508,6 @@
   <rule e="way|node" k="seamark:body_shape" v="platform"><symbol ref="Platform" position="center"/></rule>
   <rule e="way|node" k="seamark:body_shape" v="fpso"><symbol ref="Storage" position="center"/></rule>
 	<rule e="node" k="seamark:type" v="buoy_installation"><symbol ref="Super_Black" position="center"/></rule>
-  
-  <!-- Signal Stations -->
-  
-  <rule e="node" k="seamark:body_shape" v="signal_station">
-    <symbol ref="Signal_Station" position="center" />
-    <rule e="node" k="seamark:fog_char" v="*">
-      <caption class="normal-text" dx="0" dy="2.2" text-anchor="middle" k="seamark:sis_type"/>
-      <caption class="normal-text" dx="0" dy="3.0" text-anchor="middle" k="seamark:sis_chan"/>
-    </rule>
-    <else>
-      <caption class="normal-text" dx="0" dy="1.2" text-anchor="middle" k="seamark:sis_type"/>
-      <caption class="normal-text" dx="0" dy="2.0" text-anchor="middle" k="seamark:sis_chan"/>
-    </else>
-  </rule>
-  
-  <rule e="node" k="seamark:type" v="radio_station|radar_station">
-    <symbol ref="Signal_Station" position="center" />
-    <symbol ref="Radar_Station" position="center" />
-  </rule>
-  
-  <rule e="node" k="seamark:type" v="rescue_station"><symbol ref="Rescue" position="center"/></rule>
-  <rule e="node" k="seamark:type" v="pilot_boarding"><symbol ref="Pilot" position="center"/></rule>
   
 	<!-- Light Sectors -->
   

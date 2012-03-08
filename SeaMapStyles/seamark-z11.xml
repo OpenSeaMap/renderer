@@ -10,6 +10,7 @@
 	<!-- Buoys, Beacons & Floats -->
   
   <rule e="node" k="seamark:rtb_char" v="*">
+    
     <rule e="node" k="seamark:body_shape" v="pillar">
       <rule e="node" k="seamark:body_colour" v="R|G|RGR|GRG|RWRW|GWGW|RGRG|BRB|BYB|BY|YBY|YB|RW|Y">
         <rule e="node" k="seamark:body_colour" v="R"><symbol ref="Pillar_Red" position="center"/></rule>
@@ -211,20 +212,19 @@
         <caption style="font-family:Arial; font-weight:normal; font-size:0.3px;" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
       </else>
     </rule>
+    
+    <!-- Fog Signal -->
+    
+    <rule e="node" k="seamark:type|seamark:body_shape" v="*">
+      <rule e="node" k="seamark:fog_char" v="*"><symbol ref="Fog_Signal" position="center"/></rule>
+    </rule>
+    
   </rule>
   
   <!-- Radar Transponder -->
   
   <rule e="node" k="seamark:type|seamark:body_shape" v="*">
     <rule e="node" k="seamark:rtb_char" v="*"><symbol ref="Radar_Station" position="center"/></rule>
-  </rule>
-  
-	<!-- Fog Signal -->
-  
-  <rule e="node" k="seamark:rtb_char" v="*">
-    <rule e="node" k="seamark:type|seamark:body_shape" v="*">
-      <rule e="node" k="seamark:fog_char" v="*"><symbol ref="Fog_Signal" position="center"/></rule>
-    </rule>
   </rule>
   
 	<!-- Lights -->
