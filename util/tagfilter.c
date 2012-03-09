@@ -168,7 +168,7 @@ int main (int argc, const char * argv[]) {
             else if (seamark.lgt[0].per != 0)
               sprintf(strchr(str, 0), "%ds ", seamark.lgt[0].per);
             for (j = 0; j < 4; j++) {
-              if (*group[j].charstr == 0) {
+              if (group[j].matches == 0) {
                 strcpy(group[j].charstr, str);
                 group[j].matches = 1;
                 group[j].matching = (1 << i);
@@ -697,7 +697,7 @@ void lightstring(int idx, char *key) {
     sprintf(strchr(str, 0), "(%s)", seamark.lgt[j].grp);
   } else if (strlen(seamark.lgt[0].grp) > 0) {
     sprintf(strchr(str, 0), "(%s)", seamark.lgt[0].grp);
-  } else
+  } else if (strlen(str) > 0)
     strcat(str, ".");
   for (i = 1; i < 256; i <<= 1) {
     if (i & colours)
