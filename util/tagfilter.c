@@ -150,7 +150,7 @@ int main (int argc, const char * argv[]) {
         /* Sort sectors into groups with same characteristics */
         
         if (secmax > 0) {
-          int i, j, k;
+          int i, j, k, n;
           for (i = 1; i <= secmax; i++) {
             if (strlen(seamark.lgt[i].chr) > 0)
               strcpy(str, seamark.lgt[i].chr);
@@ -183,29 +183,33 @@ int main (int argc, const char * argv[]) {
             }
           }
           
-          /* Construct light strings for two most common groups */
+          /* Construct light strings for three most common groups */
           
-          for (i = j = k = 0; i < 4; i++) {
-            if (group[i].matches > j)
-              j = group[i].matches;
-            if ((group[i].matches > k) && (group[i].matches < j))
-              k = group[i].matches;
+          i = j = k = -1;
+          for (n = 0; n < 4; n++) {
+            if ((i < 0) || (group[n].matches > group[i].matches)) {
+              i = n;
+            }
           }
-          if (j > 0) {
-            for (i = 0; i < 4; i++) {
-              if (group[i].matches == j) {
-                lightstring(i, "seamark:light_primary");
-                break;
-              }
+          for (n = 0; n < 4; n++) {
+            if (((j < 0) || (group[n].matches > group[j].matches)) && (n != i)) {
+              j = n;
             }
-            if (k > 0) {
-              for (i = 0; i < 4; i++) {
-                if (group[i].matches == k) {
-                  lightstring(i, "seamark:light_secondary");
-                  break;
-                }
-              }
+          }
+          for (n = 0; n < 4; n++) {
+            if (((k < 0) || (group[n].matches > group[k].matches)) && (n != i) && (n != j)) {
+              k = n;
             }
+          }
+          
+          if ((i >= 0) && (group[i].matches > 0)) {
+            lightstring(i, "seamark:light_primary");
+          }
+          if ((j >= 0) && (group[j].matches > 0)) {
+            lightstring(j, "seamark:light_secondary");
+          }
+          if ((k >= 0) && (group[k].matches > 0)) {
+            lightstring(k, "seamark:light_tertiary");
           }
         } else {
           
@@ -667,9 +671,12 @@ int main (int argc, const char * argv[]) {
 void lightstring(int idx, char *key) {
   int i, j;
   int colours = 0;
+  int rng = seamark.lgt[0].rng;
   for (i = group[idx].matching, j = 0; i != 0; i >>= 1, j++) {
     if (i & 1) {
       colours |= seamark.lgt[j].col;
+      if (seamark.lgt[j].rng > rng)
+        rng = seamark.lgt[j].rng;
     }
   }
   for (i = group[idx].matching, j = 0; (i & 1) == 0; i >>= 1, j++){}
@@ -704,9 +711,7 @@ void lightstring(int idx, char *key) {
     sprintf(strchr(str, 0), " %dm", seamark.lgt[j].hgt);
   else if (seamark.lgt[0].hgt > 0)
     sprintf(strchr(str, 0), " %dm", seamark.lgt[0].hgt);
-  if (seamark.lgt[j].rng > 0)
-    sprintf(strchr(str, 0), " %dM", seamark.lgt[j].rng);
-  else if (seamark.lgt[0].rng > 0)
-    sprintf(strchr(str, 0), " %dM", seamark.lgt[0].rng);
+  if (rng > 0)
+    sprintf(strchr(str, 0), " %dM", rng);
   printf("    <tag k=\"%s\" v=\"%s\"/>\n", key, str);  
 }

@@ -28,7 +28,7 @@
     </rule>
     <else>
       <symbol ref="Pillar" position="center"/>
-      <caption style="font-family:Arial; font-weight:normal; font-size:0.3px;" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
+      <caption class="normal-text" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
     </else>
   </rule>
   
@@ -51,7 +51,7 @@
     </rule>
     <else>
       <symbol ref="Spar" position="center"/>
-      <caption style="font-family:Arial; font-weight:normal; font-size:0.3px;" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
+      <caption class="normal-text" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
     </else>
   </rule>
   
@@ -76,7 +76,7 @@
     </rule>
     <else>
       <symbol ref="Sphere" position="center"/>
-      <caption style="font-family:Arial; font-weight:normal; font-size:0.3px;" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
+      <caption class="normal-text" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
     </else>
   </rule>
   
@@ -97,7 +97,7 @@
     </rule>
     <else>
       <symbol ref="Can" position="center"/>
-      <caption style="font-family:Arial; font-weight:normal; font-size:0.3px;" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
+      <caption class="normal-text" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
     </else>
   </rule>
   
@@ -118,7 +118,7 @@
     </rule>
     <else>
       <symbol ref="Cone" position="center"/>
-      <caption style="font-family:Arial; font-weight:normal; font-size:0.3px;" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
+      <caption class="normal-text" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
     </else>
   </rule>
   
@@ -128,7 +128,7 @@
     </rule>
     <else>
       <symbol ref="Barrel" position="center"/>
-      <caption style="font-family:Arial; font-weight:normal; font-size:0.3px;" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
+      <caption class="normal-text" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
     </else>
   </rule>
   
@@ -151,7 +151,7 @@
     </rule>
     <else>
       <symbol ref="Float" position="center"/>
-      <caption style="font-family:Arial; font-weight:normal; font-size:0.3px;" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
+      <caption class="normal-text" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
     </else>
   </rule>
   
@@ -162,7 +162,7 @@
     </rule>
     <else>
       <symbol ref="Super" position="center"/>
-      <caption style="font-family:Arial; font-weight:normal; font-size:0.3px;" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
+      <caption class="normal-text" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
     </else>
   </rule>
   
@@ -185,7 +185,7 @@
     </rule>
     <else>
       <symbol ref="Beacon" position="center"/>
-      <caption style="font-family:Arial; font-weight:normal; font-size:0.3px;" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
+      <caption class="normal-text" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
     </else>
   </rule>
   
@@ -207,7 +207,7 @@
     </rule>
     <else>
       <symbol ref="Tower" position="center"/>
-      <caption style="font-family:Arial; font-weight:normal; font-size:0.3px;" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
+      <caption class="normal-text" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
     </else>
   </rule>
   
@@ -219,7 +219,7 @@
     </rule>
     <else>
       <symbol ref="Stake" position="center"/>
-      <caption style="font-family:Arial; font-weight:normal; font-size:0.3px;" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
+      <caption class="normal-text" dy="0.4" text-anchor="middle" k="seamark:body_colour"/>
     </else>
   </rule>
   
@@ -419,12 +419,12 @@
   <rule e="node" k="seamark:body_shape" v="signal_station">
     <symbol ref="Signal_Station" position="center" />
     <rule e="node" k="seamark:fog_char" v="*">
-      <caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" dx="0" dy="0.75" text-anchor="middle" k="seamark:sis_type"/>
-      <caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" dx="0" dy="1.0" text-anchor="middle" k="seamark:sis_chan"/>
+      <caption class="normal-text" dx="0" dy="0.75" text-anchor="middle" k="seamark:sis_type"/>
+      <caption class="normal-text" dx="0" dy="1.0" text-anchor="middle" k="seamark:sis_chan"/>
     </rule>
     <else>
-      <caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" dx="0" dy="0.45" text-anchor="middle" k="seamark:sis_type"/>
-      <caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" dx="0" dy="0.7" text-anchor="middle" k="seamark:sis_chan"/>
+      <caption class="normal-text" dx="0" dy="0.45" text-anchor="middle" k="seamark:sis_type"/>
+      <caption class="normal-text" dx="0" dy="0.7" text-anchor="middle" k="seamark:sis_chan"/>
     </else>
   </rule>
   
@@ -443,11 +443,11 @@
       <symbol ref="Fog_Signal" position="center"/>
       <rule e="node" k="seamark:body_shape" v="float|super-buoy|barrel|spar|beacon|lighthouse|platform|fpso">
         <rule e="node" k="seamark:body_shape" v="spar|beacon">
-          <caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" dx="-0" dy="-0.1" text-anchor="end"><tag k="seamark:fog_char"/> .</caption>
+          <caption class="normal-text" dx="-0" dy="-0.1" text-anchor="end"><tag k="seamark:fog_char"/> .</caption>
         </rule>
-        <else><caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" dx="-0" dy="-0.1" text-anchor="end"><tag k="seamark:fog_char"/> . . .</caption></else>
+        <else><caption class="normal-text" dx="-0" dy="-0.1" text-anchor="end"><tag k="seamark:fog_char"/> . . .</caption></else>
       </rule>
-      <else><caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" dx="-0" dy="-0.1" text-anchor="end"><tag k="seamark:fog_char"/> . .</caption></else>
+      <else><caption class="normal-text" dx="-0" dy="-0.1" text-anchor="end"><tag k="seamark:fog_char"/> . .</caption></else>
     </rule>
 	</rule>
   
@@ -495,11 +495,11 @@
       <symbol ref="Radar_Station" position="center"/>
       <rule e="node" k="seamark:body_shape" v="float|super-buoy|beacon|tower|lighthouse">
         <rule e="node" k="seamark:body_shape" v="super-buoy|tower">
-          <caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" dx="-0" dy="-0.4" text-anchor="end"><tag k="seamark:rtb_char"/> . .</caption>
+          <caption class="normal-text" dx="-0" dy="-0.4" text-anchor="end"><tag k="seamark:rtb_char"/> . .</caption>
         </rule>
-        <else><caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" dx="-0" dy="-0.4" text-anchor="end"><tag k="seamark:rtb_char"/> .</caption></else>
+        <else><caption class="normal-text" dx="-0" dy="-0.4" text-anchor="end"><tag k="seamark:rtb_char"/> .</caption></else>
       </rule>
-      <else><caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" dx="0" dy="-0.4" text-anchor="end"><tag k="seamark:rtb_char"/></caption></else>
+      <else><caption class="normal-text" dx="0" dy="-0.4" text-anchor="end"><tag k="seamark:rtb_char"/></caption></else>
     </rule>
   </rule>
 
@@ -555,10 +555,10 @@
   <rule e="way" k="seamark:light_arc" v="*">
     <rule e="way" k="seamark:arc_caption" v="*">
       <rule e="way" k="seamark:arc_nodes" v="2|3|4">
-        <pathText style="font-family:Arial; font-weight:normal; font-size:0.5px;" text-anchor="middle" startOffset="50%" dy="-0.25" k="seamark:arc_colour"/>
+        <pathText class="normal-text" text-anchor="middle" startOffset="50%" dy="-0.25" k="seamark:arc_colour"/>
       </rule>
       <else>
-        <pathText style="font-family:Arial; font-weight:normal; font-size:0.5px;" text-anchor="middle" startOffset="50%" dy="-0.25" k="seamark:arc_caption"/>
+        <pathText class="normal-text" text-anchor="middle" startOffset="50%" dy="-0.25" k="seamark:arc_caption"/>
       </else>
     </rule>
   </rule>
@@ -569,23 +569,29 @@
     <rule e="node" k="seamark:light_secondary" v="*">
       <rule e="node" k="seamark:light_primary" v="*">
         <rule e="node" k="seamark:body_shape" v="spar|beacon|tower|light_major|light_minor|signal_station">
-          <caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" text-anchor="start" dx="0.3" dy="-0.4" k="seamark:light_primary"/>
+          <caption class="normal-text" text-anchor="start" dx="0.3" dy="-0.4" k="seamark:light_primary"/>
         </rule>
-        <else><caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" text-anchor="start" dx="0.45" dy="-0.4" k="seamark:light_primary"/></else>
+        <else><caption class="normal-text" text-anchor="start" dx="0.45" dy="-0.4" k="seamark:light_primary"/></else>
       </rule>
       <rule e="node" k="seamark:light_secondary" v="*">
         <rule e="node" k="seamark:body_shape" v="spar|beacon|tower|light_major|light_minor|signal_station">
-          <caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" text-anchor="start" dx="0.3" dy="-0.1" k="seamark:light_secondary"/>
+          <caption class="normal-text" text-anchor="start" dx="0.3" dy="-0.1" k="seamark:light_secondary"/>
         </rule>
-        <else><caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" text-anchor="start" dx="0.45" dy="-0.1" k="seamark:light_secondary"/></else>
+        <else><caption class="normal-text" text-anchor="start" dx="0.45" dy="-0.1" k="seamark:light_secondary"/></else>
+      </rule>
+      <rule e="node" k="seamark:light_tertiary" v="*">
+        <rule e="node" k="seamark:body_shape" v="spar|beacon|tower|light_major|light_minor|signal_station">
+          <caption class="normal-text" text-anchor="start" dx="0.3" dy="0.2" k="seamark:light_tertiary"/>
+        </rule>
+        <else><caption class="normal-text" text-anchor="start" dx="0.45" dy="0.2" k="seamark:light_tertiary"/></else>
       </rule>
     </rule>
     <else>
       <rule e="node" k="seamark:light_primary" v="*">
         <rule e="node" k="seamark:body_shape" v="spar|beacon|tower|light_major|light_minor|signal_station">
-          <caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" text-anchor="start" dx="0.3" dy="-0.1" k="seamark:light_primary"/>
+          <caption class="normal-text" text-anchor="start" dx="0.3" dy="-0.1" k="seamark:light_primary"/>
         </rule>
-        <else><caption style="font-family:Arial; font-weight:normal; font-size:0.25px;" text-anchor="start" dx="0.45" dy="-0.1" k="seamark:light_primary"/></else>
+        <else><caption class="normal-text" text-anchor="start" dx="0.45" dy="-0.1" k="seamark:light_primary"/></else>
       </rule>
     </else>
   </rule>
@@ -637,14 +643,14 @@
     <rule e="node" k="seamark:name" v="*">
       <rule e="node" k="seamark:body_shape" v="lighthouse|light_major|light_minor|signal_station">
         <rule e="node" k="seamark:rtb_char|seamark:light_secondary" v="*">
-          <text k="seamark:name" style="font-family:Arial; font-weight:bold; font-size:0.3px;" text-anchor="middle" dx="0" dy="-0.7" />
+          <text k="seamark:name" class="bold-text" text-anchor="middle" dx="0" dy="-0.7" />
         </rule>
         <else>
-          <text k="seamark:name" style="font-family:Arial; font-weight:bold; font-size:0.3px;" text-anchor="middle" dx="0" dy="-0.4" />
+          <text k="seamark:name" class="bold-text" text-anchor="middle" dx="0" dy="-0.4" />
         </else>
       </rule>
       <else>
-        <text k="seamark:name" style="font-family:Arial; font-weight:bold; font-size:0.3px;" text-anchor="start" dx="0.45" dy="-0.4" />
+        <text k="seamark:name" class="bold-text" text-anchor="start" dx="0.45" dy="-0.4" />
       </else>
     </rule>
   </rule>
