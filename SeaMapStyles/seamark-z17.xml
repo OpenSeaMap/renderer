@@ -585,6 +585,12 @@
         </rule>
         <else><caption class="normal-text" text-anchor="start" dx="0.75" dy="0.3" k="seamark:light_tertiary"/></else>
       </rule>
+      <rule e="node" k="seamark:light_quaternary" v="*">
+        <rule e="node" k="seamark:body_shape" v="spar|beacon|tower|light_major|light_minor|signal_station">
+          <caption class="normal-text" text-anchor="start" dx="0.5" dy="0.75" k="seamark:light_quaternary"/>
+        </rule>
+        <else><caption class="normal-text" text-anchor="start" dx="0.75" dy="0.75" k="seamark:light_quaternary"/></else>
+      </rule>
     </rule>
     <else>
       <rule e="node" k="seamark:light_primary" v="*">

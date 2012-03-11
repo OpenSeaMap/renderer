@@ -150,7 +150,7 @@ int main (int argc, const char * argv[]) {
         /* Sort sectors into groups with same characteristics */
         
         if (secmax > 0) {
-          int i, j, k, n;
+          int i, j, k, l, n;
           for (i = 1; i <= secmax; i++) {
             if (strlen(seamark.lgt[i].chr) > 0)
               strcpy(str, seamark.lgt[i].chr);
@@ -185,7 +185,7 @@ int main (int argc, const char * argv[]) {
           
           /* Construct light strings for three most common groups */
           
-          i = j = k = -1;
+          i = j = k = l = -1;
           for (n = 0; n < 4; n++) {
             if ((i < 0) || (group[n].matches > group[i].matches)) {
               i = n;
@@ -201,6 +201,11 @@ int main (int argc, const char * argv[]) {
               k = n;
             }
           }
+          for (n = 0; n < 4; n++) {
+            if (((l < 0) || (group[n].matches > group[l].matches)) && (n != i) && (n != j) && (n != k)) {
+              l = n;
+            }
+          }
           
           if ((i >= 0) && (group[i].matches > 0)) {
             lightstring(i, "seamark:light_primary");
@@ -210,6 +215,9 @@ int main (int argc, const char * argv[]) {
           }
           if ((k >= 0) && (group[k].matches > 0)) {
             lightstring(k, "seamark:light_tertiary");
+          }
+          if ((l >= 0) && (group[l].matches > 0)) {
+            lightstring(l, "seamark:light_quaternary");
           }
         } else {
           
