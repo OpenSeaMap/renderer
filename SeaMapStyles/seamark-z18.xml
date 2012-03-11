@@ -555,10 +555,10 @@
   <rule e="way" k="seamark:light_arc" v="*">
     <rule e="way" k="seamark:arc_caption" v="*">
       <rule e="way" k="seamark:arc_nodes" v="2|3|4">
-        <pathText class="normal-text" text-anchor="middle" startOffset="50%" dy="-0.25" k="seamark:arc_colour"/>
+        <pathText class="normal-text" text-anchor="middle" startOffset="50%" dy="-0.20" k="seamark:arc_colour"/>
       </rule>
       <else>
-        <pathText class="normal-text" text-anchor="middle" startOffset="50%" dy="-0.25" k="seamark:arc_caption"/>
+        <pathText class="normal-text" text-anchor="middle" startOffset="50%" dy="-0.20" k="seamark:arc_caption"/>
       </else>
     </rule>
   </rule>
