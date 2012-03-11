@@ -832,17 +832,17 @@
     
     .sector-radial { stroke-width: 0.02px; stroke-dasharray: 0.25,0.25; stroke-linecap: butt; stroke-linejoin: round; stroke-opacity: 0.5; fill: none; fill-opacity: 0; stroke: #000000; }
     
-    .arc-red { stroke-width: 0.36px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
-    .arc-dashed-red { stroke-width: 0.08px; stroke-dasharray: 0.25,0.25; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
+    .arc-red { stroke-width: 0.25px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
+    .arc-dashed-red { stroke-width: 0.1px; stroke-dasharray: 0.25,0.25; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
     
-    .arc-green { stroke-width: 0.36px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #00F400; }
-    .arc-dashed-green { stroke-width: 0.08px; stroke-dasharray: 0.25,0.25; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #00F400; }
+    .arc-green { stroke-width: 0.25px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #00F400; }
+    .arc-dashed-green { stroke-width: 0.1px; stroke-dasharray: 0.25,0.25; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #00F400; }
     
-    .arc-yellow { stroke-width: 0.36px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F4F400; }
-    .arc-dashed-yellow { stroke-width: 0.08px; stroke-dasharray: 0.25,0.25; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F4F400; }
+    .arc-yellow { stroke-width: 0.25px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F4F400; }
+    .arc-dashed-yellow { stroke-width: 0.1px; stroke-dasharray: 0.25,0.25; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F4F400; }
     
-    .arc-magenta { stroke-width: 0.36px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F000F0; }
-    .arc-dashed-magenta { stroke-width: 0.08px; stroke-dasharray: 0.25,0.25; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F000F0; }
+    .arc-magenta { stroke-width: 0.25px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F000F0; }
+    .arc-dashed-magenta { stroke-width: 0.1px; stroke-dasharray: 0.25,0.25; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F000F0; }
     
     .sandwaves { fill: url(#sandwaves); }
     
