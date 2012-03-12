@@ -629,7 +629,12 @@
         </else>
       </rule>
       <else>
-        <text k="seamark:name" class="bold-text" text-anchor="start" dx="1.4" dy="-1.6" />
+        <rule e="node" k="seamark:light_secondary" v="*">
+          <text k="seamark:name" class="bold-text" text-anchor="start" dx="1.4" dy="-3.0" />
+        </rule>
+        <else>
+          <text k="seamark:name" class="bold-text" text-anchor="start" dx="1.4" dy="-1.6" />
+        </else>
       </else>
     </rule>
   </rule>
