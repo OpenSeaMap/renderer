@@ -708,10 +708,10 @@
     <line class="leading-line" />
     <rule e="way" k="seamark:recommended_track:orientation" v="*">
       <rule e="way" k="seamark:recommended_track:category" v="*">
-        <pathText class="line-character" startOffset="50%" text-anchor="middle" dy="-0.2"><tag k="seamark:name"/> <tag k="seamark:recommended_track:orientation"/>° (<tag k="seamark:recommended_track:category"/>)</pathText>
+        <pathText class="normal-text" startOffset="50%" text-anchor="middle" dy="-0.2"><tag k="seamark:name"/> <tag k="seamark:recommended_track:orientation"/>° (<tag k="seamark:recommended_track:category"/>)</pathText>
       </rule>
       <else>
-        <pathText class="line-character" startOffset="50%" dy="-0.2"><tag k="seamark:name"/> <tag k="seamark:recommended_track:orientation"/>°</pathText>
+        <pathText class="normal-text" startOffset="50%" dy="-0.2"><tag k="seamark:name"/> <tag k="seamark:recommended_track:orientation"/>°</pathText>
       </else>
     </rule>
   </rule>
@@ -720,10 +720,10 @@
     <line class="transit-line" />
     <rule e="way" k="seamark:navigation_line:orientation" v="*">
       <rule e="way" k="seamark:navigation_line:category" v="*">
-        <pathText class="line-character" startOffset="50%" dy="-0.2"><tag k="seamark:name"/> <tag k="seamark:navigation_line:orientation"/>° (<tag k="seamark:navigation_line:category"/>)</pathText>
+        <pathText class="normal-text" startOffset="50%" dy="-0.2"><tag k="seamark:name"/> <tag k="seamark:navigation_line:orientation"/>° (<tag k="seamark:navigation_line:category"/>)</pathText>
       </rule>
       <else>
-        <pathText class="line-character" startOffset="50%" dy="-0.2"><tag k="seamark:name"/> <tag k="seamark:navigation_line:orientation"/>°</pathText>
+        <pathText class="normal-text" startOffset="50%" dy="-0.2"><tag k="seamark:name"/> <tag k="seamark:navigation_line:orientation"/>°</pathText>
       </else>
     </rule>
   </rule>
