@@ -402,8 +402,9 @@ int main (int argc, const char * argv[]) {
               int idx = 0;
               if (isdigit(attribute[0])) {
                 idx = atoi(attribute);
-                secmax = idx > secmax ? idx : secmax;
                 attribute = strtok(NULL, ":");
+                if (attribute != NULL)
+                  secmax = idx > secmax ? idx : secmax;
               }
               switch (getkey((Map_t*)AtlSTR, attribute)) {
                 case COL:
