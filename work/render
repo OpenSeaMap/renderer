@@ -31,7 +31,7 @@ download () {
 #			done
 #		done
 #	done
-				while ! wget -q -T 1800 --limit-rate=500k -O world.osm http://overpass.osm.rambler.ru/cgi/xapi?*[seamark:type=$type][@meta]; do
+				while ! wget -q -T 1800 --limit-rate=500k -O world.osm http://overpass.osm.rambler.ru/cgi/xapi?*[seamark:type=*][@meta]; do
 					echo "$(date) wget error - retrying JXAPI" >> log.txt
 					sleep 60
 				done
