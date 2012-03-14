@@ -18,6 +18,7 @@ void lightstring(int, char*);
 char line[1000];
 char *tokens;
 char *ele;
+char *id;
 char *key;
 char *prefix;
 char *attribute;
@@ -56,6 +57,7 @@ struct seamark_s {
   Obj_t obj;
   Shp_t shp;
   Cat_t cat;
+  Fnc_t fnc;
   Fog_t fog;
   char fog_grp[40];
   char fog_per[40];
@@ -75,17 +77,32 @@ int main (int argc, const char * argv[]) {
     
     /* Start new seamark node */
     
-    if ((strcmp(ele, "node") == 0) && (strstr(line, "/>") == NULL)) {
-      node = TRUE;
-      secmax = 0;
-      bzero(&seamark, sizeof(struct seamark_s));
-      bzero(&group[0], 4*sizeof(struct GROUP));
+    if (strcmp(ele, "node") == 0) {
+      if (strstr(line, "/>") == NULL) {
+        strtok(NULL, "\"\'");
+        id = strtok(NULL, "\"\'");
+        node = TRUE;
+        way = FALSE;
+        secmax = 0;
+        bzero(&seamark, sizeof(struct seamark_s));
+        bzero(&group[0], 4*sizeof(struct GROUP));
+      } else {
+        printf("%s", line);
+        continue;
+      }
     }
     
     if (strcmp(ele, "way") == 0) {
+      strtok(NULL, "\"\'");
+      id = strtok(NULL, "\"\'");
       way = TRUE;
+      node = FALSE;
       sector = 0;
       waynodes = 0;
+      if (*id != '-') {
+        bzero(&seamark, sizeof(struct seamark_s));
+        bzero(&group[0], 4*sizeof(struct GROUP));
+      }
     }
     
     if (strcmp(ele, "nd") == 0) {
@@ -115,7 +132,49 @@ int main (int argc, const char * argv[]) {
           printf("<tag k=\"seamark:body_shape\" v=\"%s\"/>\n", (char*)getval((Map_t*)ShpSTR, (Key_t)seamark.shp));
         }
       }
+      node = FALSE;
+    }
       
+    /* Complete seamark way */
+    
+    if  (strcmp(ele, "/way>\n") == 0) {
+      
+      /* Construct light strings for sector arcs */
+      
+      if ((sector != 0) && (seamark.lgt[sector].lit != DIR) && (seamark.lgt[0].lit != DIR) && (seamark.lgt[sector].rad > 0.2)) {
+        if (seamark.lgt[sector].alt != UNKCOL)
+          strcpy(str, "Al.");
+        else
+          strcpy(str, "");
+        if (strlen(seamark.lgt[sector].chr) > 0)
+          sprintf(strchr(str, 0), "%s", seamark.lgt[sector].chr);
+        else if (strlen(seamark.lgt[0].chr) > 0)
+          sprintf(strchr(str, 0), "%s", seamark.lgt[0].chr);
+        if (strlen(seamark.lgt[sector].grp) > 0)
+          sprintf(strchr(str, 0), "(%s)", seamark.lgt[sector].grp);
+        else if (strlen(seamark.lgt[0].grp) > 0)
+          sprintf(strchr(str, 0), "(%s)", seamark.lgt[0].grp);
+        else if (strlen(str) > 0)
+          strcat(str, ".");
+        strcat(str, getval((Map_t*)ColMAP, (Key_t)seamark.lgt[sector].col));
+        if (seamark.lgt[sector].alt != UNKCOL)
+          strcat(str, getval((Map_t*)ColMAP, (Key_t)seamark.lgt[sector].alt));
+        if (seamark.lgt[sector].per > 0)
+          sprintf(strchr(str, 0), ".%ds", seamark.lgt[sector].per);
+        else if (seamark.lgt[0].per > 0)
+          sprintf(strchr(str, 0), ".%ds", seamark.lgt[0].per);
+        printf("<tag k=\"seamark:arc_caption\" v=\"%s\"/>\n", str);
+        printf("<tag k=\"seamark:arc_colour\" v=\"%s%s\"/>\n",
+               getval((Map_t*)ColMAP, (Key_t)seamark.lgt[sector].col),
+               getval((Map_t*)ColMAP, (Key_t)seamark.lgt[sector].alt));
+        printf("<tag k=\"seamark:arc_nodes\" v=\"%d\"/>\n", waynodes);
+      }
+      way = FALSE;
+    }
+    
+    /* Common node & way completion */
+    
+    if (!way && !node && (seamark.obj != UNKOBJ) && (*id != '-')) {
       /* Construct fog signal string */
       
       if (seamark.fog != NOFOG) {
@@ -245,57 +304,23 @@ int main (int argc, const char * argv[]) {
               strcat(colstr, getval((Map_t*)ColMAP, (Key_t)seamark.lgt[0].alt));
             }
           }
-          if ((seamark.lgt[0].lit != UNKLIT) && (seamark.lgt[0].lit < DIR))
+          if ((seamark.lgt[0].lit != UNKLIT) && ((seamark.lgt[0].lit == VERT) || (seamark.lgt[0].lit == HORIZ)))
             sprintf(strchr(str, 0), "(%s)", getval((Map_t*)LitMAP, (Key_t)seamark.lgt[0].lit));
+          if (((seamark.lgt[0].per > 0) || (seamark.lgt[0].hgt > 0) || (seamark.lgt[0].rng > 0)) && (str[strlen(str)-1] != ')'))
+            strcat(str, ".");
           if (seamark.lgt[0].per > 0)
-            sprintf(strchr(str, 0), " %ds", seamark.lgt[0].per);
+            sprintf(strchr(str, 0), "%ds", seamark.lgt[0].per);
           if (seamark.lgt[0].hgt > 0)
-            sprintf(strchr(str, 0), " %dm", seamark.lgt[0].hgt);
+            sprintf(strchr(str, 0), "%dm", seamark.lgt[0].hgt);
           if (seamark.lgt[0].rng > 0)
-            sprintf(strchr(str, 0), " %dM", seamark.lgt[0].rng);
+            sprintf(strchr(str, 0), "%dM", seamark.lgt[0].rng);
+          if ((seamark.lgt[0].lit != UNKLIT) && (seamark.lgt[0].lit >= UPPER))
+            sprintf(strchr(str, 0), "(%s)", getval((Map_t*)LitMAP, (Key_t)seamark.lgt[0].lit));
           printf("<tag k=\"seamark:light_primary\" v=\"%s\"/>\n", str);
           if (strlen(colstr) > 0)
             printf("<tag k=\"seamark:light_colour\" v=\"%s\"/>\n", colstr);
         }
       }
-      node = FALSE;
-    }
-    
-    /* Complete seamark way */
-    
-    if  (strcmp(ele, "/way>\n") == 0) {
-      
-      /* Construct light strings for sector arcs */
-      
-      if ((sector != 0) && (seamark.lgt[sector].lit != DIR) && (seamark.lgt[0].lit != DIR) && (seamark.lgt[sector].rad > 0.2)) {
-        if (seamark.lgt[sector].alt != UNKCOL)
-          strcpy(str, "Al.");
-        else
-          strcpy(str, "");
-        if (strlen(seamark.lgt[sector].chr) > 0)
-          sprintf(strchr(str, 0), "%s", seamark.lgt[sector].chr);
-        else if (strlen(seamark.lgt[0].chr) > 0)
-          sprintf(strchr(str, 0), "%s", seamark.lgt[0].chr);
-        if (strlen(seamark.lgt[sector].grp) > 0)
-          sprintf(strchr(str, 0), "(%s)", seamark.lgt[sector].grp);
-        else if (strlen(seamark.lgt[0].grp) > 0)
-          sprintf(strchr(str, 0), "(%s)", seamark.lgt[0].grp);
-        else if (strlen(str) > 0)
-          strcat(str, ".");
-        strcat(str, getval((Map_t*)ColMAP, (Key_t)seamark.lgt[sector].col));
-        if (seamark.lgt[sector].alt != UNKCOL)
-          strcat(str, getval((Map_t*)ColMAP, (Key_t)seamark.lgt[sector].alt));
-        if (seamark.lgt[sector].per > 0)
-          sprintf(strchr(str, 0), " %ds", seamark.lgt[sector].per);
-        else if (seamark.lgt[0].per > 0)
-          sprintf(strchr(str, 0), " %ds", seamark.lgt[0].per);
-        printf("<tag k=\"seamark:arc_caption\" v=\"%s\"/>\n", str);
-        printf("<tag k=\"seamark:arc_colour\" v=\"%s%s\"/>\n",
-               getval((Map_t*)ColMAP, (Key_t)seamark.lgt[sector].col),
-               getval((Map_t*)ColMAP, (Key_t)seamark.lgt[sector].alt));
-        printf("<tag k=\"seamark:arc_nodes\" v=\"%d\"/>\n", waynodes);
-      }
-      way = FALSE;
     }
     
     /* Process tag */
@@ -650,10 +675,17 @@ int main (int argc, const char * argv[]) {
               break;
               
             case LNDMRK:
-              if (getkey((Map_t*)AttSTR, attribute) == CATEGORY) {
-                seamark.shp = (Shp_t)getkey((Map_t*)ShpSTR, value);
-                if (seamark.shp == TOWER)
-                  seamark.shp = LANDTOWER;
+              switch (getkey((Map_t*)AttSTR, attribute)) {
+                case CATEGORY:
+                  seamark.shp = (Shp_t)getkey((Map_t*)ShpSTR, value);
+                  if (seamark.shp == TOWER)
+                    seamark.shp = LANDTOWER;
+                  break;
+                case FUNCTION:
+                  seamark.fnc = (Fnc_t)getkey((Map_t*)FncSTR, value);
+                  break;
+                default:
+                  printf("%s", line);
               }
               break;
             case OFSPLF:
@@ -675,18 +707,68 @@ int main (int argc, const char * argv[]) {
   return 0;
 }
 
-/* Construct light strings for individual sectors */
+/* Construct light strings for sectored lights */
 
 void lightstring(int idx, char *key) {
-  int i, j;
-  int colours = 0;
-  int rng = seamark.lgt[0].rng;
+  int i, j, k;
+  char colstr[20];
+  char rngstr[20];
+  struct {
+    Col_t col;
+    int rng;
+  } colrng[4];
+  for (i = 0; i < 4; i++) {
+    colrng[i].col = UNKCOL;
+    colrng[i].rng = seamark.lgt[0].rng;
+  }
   for (i = group[idx].matching, j = 0; i != 0; i >>= 1, j++) {
     if (i & 1) {
-      colours |= seamark.lgt[j].col;
-      if (seamark.lgt[j].rng > rng)
-        rng = seamark.lgt[j].rng;
+      for (k = 0; k < 4; k++) {
+        if (colrng[k].col == UNKCOL) {
+          colrng[k].col = seamark.lgt[j].col;
+        }
+        if (colrng[k].col == seamark.lgt[j].col) {
+          if (seamark.lgt[j].rng > colrng[k].rng) {
+            colrng[k].rng = seamark.lgt[j].rng;
+          }
+          break;
+        }
+      }
     }
+  }
+  for (i = j = k = 0; i < 4; i++) {
+    if (colrng[i].rng > j) j = colrng[i].rng;
+    if (k == 0) k = colrng[i].rng;
+    if ((colrng[i].rng < k) && (colrng[i].rng != 0)) k = colrng[i].rng;
+  }
+  strcpy(colstr, "");
+  strcpy(rngstr, "");
+  if (j != 0)
+    sprintf(strchr(rngstr, 0), "%d", j);
+  if (j == k) {
+    for (i = 0; i < 4; i++) {
+      if (colrng[i].col != UNKCOL)
+        strcat(colstr, getval((Map_t*)ColMAP, (Key_t)colrng[i].col));
+    }
+  } else {
+    for (i = 0; i < 4; i++) {
+      if (colrng[i].rng == j)
+        strcat(colstr, getval((Map_t*)ColMAP, (Key_t)colrng[i].col));
+    }
+    for (i = 0; i < 4; i++) {
+      if ((colrng[i].rng < j) && (colrng[i].rng > k)) {
+        strcat(colstr, getval((Map_t*)ColMAP, (Key_t)colrng[i].col));
+        if (rngstr[strlen(rngstr)-1] != '-')
+          strcat(rngstr, "-");
+      }
+    }
+    for (i = 0; i < 4; i++) {
+      if (colrng[i].rng == k)
+        strcat(colstr, getval((Map_t*)ColMAP, (Key_t)colrng[i].col));
+    }
+    if (rngstr[strlen(rngstr)-1] != '-')
+      strcat(rngstr, "/");
+    sprintf(strchr(rngstr, 0), "%d", k);
   }
   for (i = group[idx].matching, j = 0; (i & 1) == 0; i >>= 1, j++){}
   strcpy(str, "");
@@ -708,19 +790,20 @@ void lightstring(int idx, char *key) {
     sprintf(strchr(str, 0), "(%s)", seamark.lgt[0].grp);
   } else if (strlen(str) > 0)
     strcat(str, ".");
-  for (i = 1; i < 256; i <<= 1) {
-    if (i & colours)
-      strcat(str, getval((Map_t*)ColMAP, (Key_t)i));
-  }
+  strcat(str, colstr);
+  if (((seamark.lgt[j].per > 0) || (seamark.lgt[0].per > 0) ||
+      (seamark.lgt[j].hgt > 0) || (seamark.lgt[0].hgt > 0) || 
+       (strlen(rngstr) > 0)) && (str[strlen(str)-1] != ')'))
+    strcat(str, ".");
   if (seamark.lgt[j].per > 0)
-    sprintf(strchr(str, 0), " %ds", seamark.lgt[j].per);
+    sprintf(strchr(str, 0), "%ds", seamark.lgt[j].per);
   else if (seamark.lgt[0].per > 0)
-    sprintf(strchr(str, 0), " %ds", seamark.lgt[0].per);
+    sprintf(strchr(str, 0), "%ds", seamark.lgt[0].per);
   if (seamark.lgt[j].hgt > 0)
-    sprintf(strchr(str, 0), " %dm", seamark.lgt[j].hgt);
+    sprintf(strchr(str, 0), "%dm", seamark.lgt[j].hgt);
   else if (seamark.lgt[0].hgt > 0)
-    sprintf(strchr(str, 0), " %dm", seamark.lgt[0].hgt);
-  if (rng > 0)
-    sprintf(strchr(str, 0), " %dM", rng);
-  printf("    <tag k=\"%s\" v=\"%s\"/>\n", key, str);  
+    sprintf(strchr(str, 0), "%dm", seamark.lgt[0].hgt);
+  if (strlen(rngstr) > 0)
+    sprintf(strchr(str, 0), "%sM", rngstr);
+  printf("<tag k=\"%s\" v=\"%s\"/>\n", key, str);  
 }

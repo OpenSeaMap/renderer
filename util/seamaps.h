@@ -29,7 +29,7 @@ typedef enum {
 typedef struct { Obj_t key; char *val; } ObjSTR_t;
 
 typedef enum {
-  UNKATT, CATEGORY, SHAPE, COLOUR, COLPAT, SYSTEM, GROUP, PERIOD, RANGE, CHANNEL
+  UNKATT, CATEGORY, SHAPE, COLOUR, COLPAT, SYSTEM, GROUP, PERIOD, RANGE, CHANNEL, FUNCTION
 } Att_t;
 typedef struct { Att_t key; char *val; } AttSTR_t;
 
@@ -70,7 +70,7 @@ typedef enum {
 typedef struct { Vis_t key; char *val; } VisSTR_t;
 
 typedef enum {
-  UNKLIT, VERT, HORIZ, UPPER, LOWER, LEAD, REAR, FRONT, DIR, AERO, AIROBS, FOGDET, FLOOD, STRIP, SUBS, SPOT, MOIRE, EMERG, BEAR
+  UNKLIT, DIR, VERT, HORIZ, UPPER, LOWER, LEAD, REAR, FRONT, AERO, AIROBS, FOGDET, FLOOD, STRIP, SUBS, SPOT, MOIRE, EMERG, BEAR
 } Lit_t;
 typedef struct { Lit_t key; char *val; } LitSTR_t;
 
@@ -119,6 +119,12 @@ typedef enum {
 } Con_t;
 typedef struct { Con_t key; char *val; } ConSTR_t;
 
+typedef enum {
+  UNKFNC, HMO, CSTM, HLTH, HOSP, POFF, HOTEL, RWSTA, POLICE, WPOL, PILO, PILL, BANK, DCHQ, TRNS, FACT, PWRS, ADMIN, EDUC, CHCH, CHPL,
+  TMPL, PGDA, SHSH, BTMP, MOSQ, MRBT, LOOK, COMS, TV, RADO, RADR, LSUP, MWAV, COOL, OBSV, TIMB, CLK, CTRL, AMOR, STAD, BUSS
+} Fnc_t;
+typedef struct { Fnc_t key; char *val; } FncSTR_t;
+
 typedef enum { NULKEY } Key_t;
 typedef struct { Key_t key; char *val; } Map_t;
 
@@ -145,6 +151,7 @@ extern const StsSTR_t StsSTR[];
 extern const CnsSTR_t CnsSTR[];
 extern const ConSTR_t ConSTR[];
 extern const CatSTR_t SisMAP[];
+extern const FncSTR_t FncSTR[];
 
 extern Key_t getkey(Map_t[], char*);
 extern char *getval(Map_t[], Key_t);

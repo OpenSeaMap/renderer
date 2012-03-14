@@ -63,6 +63,7 @@ const AttSTR_t AttSTR[] = {
   {PERIOD, "period"},
   {RANGE, "range"},
   {CHANNEL, "channel"},
+  {FUNCTION, "function"},
   {UNKATT, ""}
 };
 
@@ -318,13 +319,13 @@ const LitSTR_t LitSTR[] = {
 };
 
 const LitSTR_t LitMAP[] = {
-  {VERT, "Vert"},
-  {HORIZ, "Horiz"},
-  {UPPER, "Upper"},
-  {LOWER, "Lower"},
-  {LEAD, "Leading"},
-  {REAR, "Rear"},
-  {FRONT, "Front"},
+  {VERT, "vert"},
+  {HORIZ, "hor"},
+  {UPPER, "upper"},
+  {LOWER, "lower"},
+  {LEAD, "leading"},
+  {REAR, "rear"},
+  {FRONT, "front"},
   {UNKLIT, ""}
 };
 
@@ -473,6 +474,51 @@ const ConSTR_t ConSTR[] = {
   {NCONS, "not_conspicuous"},
   {REFL, "reflector"},
   {UNKCON, ""}
+};
+
+const FncSTR_t FncSTR[] = {
+  {HMO, "harbour-master"},
+  {CSTM, "customs"},
+  {HLTH, "health"},
+  {HOSP, "hospital"},
+  {POFF, "post_office"},
+  {HOTEL, "hotel"},
+  {RWSTA, "railway_station"},
+  {POLICE, "police_station"},
+  {WPOL, "water-police_station"},
+  {PILO, "pilot_office"},
+  {PILL, "pilot_lookout"},
+  {BANK, "bank"},
+  {DCHQ, "district_control"},
+  {TRNS, "transit_shed"},
+  {FACT, "factory"},
+  {PWRS, "power_station"},
+  {ADMIN, "administrative"},
+  {EDUC, "educational"},
+  {CHCH, "church"},
+  {CHPL, "chapel"},
+  {TMPL, "temple"},
+  {PGDA, "pagoda"},
+  {SHSH, "shinto_shrine"},
+  {BTMP, "buddhist_temple"},
+  {MOSQ, "mosque"},
+  {MRBT, "marabout"},
+  {LOOK, "lookout"},
+  {COMS, "communication"},
+  {TV, "television"},
+  {RADO, "radio"},
+  {RADR, "radar"},
+  {LSUP, "light_support"},
+  {MWAV, "microwave"},
+  {COOL, "cooling"},
+  {OBSV, "observation"},
+  {TIMB, "time_ball"},
+  {CLK, "clock"},
+  {CTRL, "control"},
+  {AMOR, "airship_mooring"},
+  {STAD, "stadium"},
+  {BUSS, "bus_station"},
+  {UNKFNC, ""}
 };
 
 Key_t getkey(Map_t map[], char *val) {
