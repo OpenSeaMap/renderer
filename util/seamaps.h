@@ -142,6 +142,7 @@ extern const LitSTR_t LitSTR[];
 extern const LitSTR_t LitMAP[];
 extern const ExhSTR_t ExhSTR[];
 extern const PatSTR_t PatSTR[];
+extern const PatSTR_t PatMAP[];
 extern const TopSTR_t TopSTR[];
 extern const RtbSTR_t RtbSTR[];
 extern const RtbSTR_t RtbMAP[];

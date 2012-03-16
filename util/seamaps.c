@@ -350,6 +350,17 @@ const PatSTR_t PatSTR[] = {
   {NOPAT, ""}
 };
 
+const PatSTR_t PatMAP[] = {
+  {HSTR, "H"},
+  {VSTR, "V"},
+  {DIAG, "D"},
+  {SQUARED, "S"},
+  {BORDER, "B"},
+  {CROSS, "C"},
+  {SALT, "X"},
+  {NOPAT, ""}
+};
+
 const TopSTR_t TopSTR[] = {
   {CYL, "cylinder"},
   {CONE, "cone, point up"},
