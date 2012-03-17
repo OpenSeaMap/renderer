@@ -280,6 +280,7 @@ int main (int argc, const char * argv[]) {
           
           if ((i >= 0) && (group[i].matches > 0)) {
             lightstring(i, "seamark:light_primary");
+            printf("<tag k=\"seamark:light_colour\" v=\"Mg\"/>\n");
           }
           if ((j >= 0) && (group[j].matches > 0)) {
             lightstring(j, "seamark:light_secondary");
@@ -830,5 +831,4 @@ void lightstring(int idx, char *key) {
   if (strlen(rngstr) > 0)
     sprintf(strchr(str, 0), "%sM", rngstr);
   printf("<tag k=\"%s\" v=\"%s\"/>\n", key, str);  
-  printf("<tag k=\"seamark:light_colour\" v=\"%s\"/>\n", colstr);
 }
