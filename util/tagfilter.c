@@ -59,7 +59,8 @@ struct seamark_s {
   Cat_t cat;
   Fnc_t fnc;
   Fog_t fog;
-  char col[20];
+  char col_body[20];
+  char col_top[20];
   char fog_grp[40];
   char fog_per[40];
   char fog_rng[40];
@@ -212,8 +213,8 @@ int main (int argc, const char * argv[]) {
         printf("<tag k=\"seamark:rtb_char\" v=\"%s\"/>\n", str);
       }
       
-      if (strlen(seamark.col) > 0)
-        printf("<tag k=\"seamark:body_colour\" v=\"%s\"/>\n", seamark.col);
+      if (strlen(seamark.col_body) > 0)
+        printf("<tag k=\"seamark:body_colour\" v=\"%s\"/>\n", seamark.col_body);
 
       if (seamark.isLit) {
         
@@ -609,18 +610,16 @@ int main (int argc, const char * argv[]) {
                     strcat(str, getval((Map_t*)ColMAP, getkey((Map_t*)ColSTR, item)));
                     item = strtok(NULL, ";");
                   } while (item != NULL);
-                  if (strlen(seamark.col) > 0)
-                    strcat(str, seamark.col);
-                  strcpy(seamark.col, str);
-//                  printf("<tag k=\"seamark:body_colour\" v=\"%s\"/>\n", str);
+                  if (strlen(seamark.col_body) > 0)
+                    strcat(str, seamark.col_body);
+                  strcpy(seamark.col_body, str);
                   break;
                 case COLPAT:
                   strcpy(str, getval((Map_t*)PatMAP, getkey((Map_t*)PatSTR, value)));
-                  if (strlen(seamark.col) > 0)
-                    strcat(seamark.col, str);
+                  if (strlen(seamark.col_body) > 0)
+                    strcat(seamark.col_body, str);
                   else
-                    strcpy(seamark.col, str);
-//                  printf("<tag k=\"seamark:body_colour_pattern\" v=\"%s\"/>\n", value);
+                    strcpy(seamark.col_body, str);
                   break;
                 default:
                   printf("%s", line);
@@ -678,18 +677,16 @@ int main (int argc, const char * argv[]) {
                     strcat(str, getval((Map_t*)ColMAP, getkey((Map_t*)ColSTR, item)));
                     item = strtok(NULL, ";");
                   } while (item != NULL);
-                  if (strlen(seamark.col) > 0)
-                    strcat(str, seamark.col);
-                  strcpy(seamark.col, str);
-//                  printf("<tag k=\"seamark:body_colour\" v=\"%s\"/>\n", str);
+                  if (strlen(seamark.col_body) > 0)
+                    strcat(str, seamark.col_body);
+                  strcpy(seamark.col_body, str);
                   break;
                 case COLPAT:
                   strcpy(str, getval((Map_t*)PatMAP, getkey((Map_t*)PatSTR, value)));
-                  if (strlen(seamark.col) > 0)
-                    strcat(seamark.col, str);
+                  if (strlen(seamark.col_body) > 0)
+                    strcat(seamark.col_body, str);
                   else
-                    strcpy(seamark.col, str);
-//                  printf("<tag k=\"seamark:body_colour_pattern\" v=\"%s\"/>\n", value);
+                    strcpy(seamark.col_body, str);
                   break;
                 case CATEGORY:
                   seamark.cat = (Cat_t)getkey((Map_t*)CatSTR, value);
