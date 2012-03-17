@@ -830,4 +830,5 @@ void lightstring(int idx, char *key) {
   if (strlen(rngstr) > 0)
     sprintf(strchr(str, 0), "%sM", rngstr);
   printf("<tag k=\"%s\" v=\"%s\"/>\n", key, str);  
+  printf("<tag k=\"seamark:light_colour\" v=\"%s\"/>\n", colstr);
 }
