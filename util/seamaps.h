@@ -80,7 +80,7 @@ typedef enum {
 typedef struct { Exh_t key; char *val; } ExhSTR_t;
 
 typedef enum {
-  NOATL, COL, CHR, GRP, SEQ, PER, LIT, BEG, END, RAD, HGT, RNG, VIS, EXH, ORT, MLT, ALT
+  NOATL, COL, CHR, GRP, SEQ, PER, LIT, BEG, END, RAD, HGT, RNG, VIS, EXH, ORT, MLT, ALT, OBJ
 } Atl_t;
 typedef struct { Atl_t key; char *val; } AtlSTR_t;
 

@@ -486,6 +486,7 @@ int main (int argc, const char * argv[]) {
                   seamark.lgt[idx].rad = atof(item);
                   break;
                 default:
+                  printf("%s", line);
                   break;
               }
               if (way && (strcmp(attribute, "sector_nr") == 0)) {

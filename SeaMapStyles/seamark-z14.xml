@@ -425,19 +425,6 @@
     </rule>
 	</rule>
   
-	<!-- Light Flares -->
-  
-	<rule e="node" k="seamark:type|seamark:body_shape" v="*">
-    <rule e="node" k="seamark:light_colour" v="*">
-      <rule e="node" k="seamark:light_colour" v="W|Y|R|G|Am|Or">
-        <rule e="node" k="seamark:light_colour" v="W|Y|Am|Or"><symbol ref="Light_White_120" position="center"/></rule>
-        <rule e="node" k="seamark:light_colour" v="R"><symbol ref="Light_Red_120" position="center"/></rule>
-        <rule e="node" k="seamark:light_colour" v="G"><symbol ref="Light_Green_120" position="center"/></rule>
-      </rule> 
-      <else><symbol ref="Light_Magenta_120" position="center"/></else>
-    </rule> 
-  </rule> 
-  
 	<!-- Radar Reflector -->
   
   <rule e="node" k="seamark:radar_reflector" v="yes">
@@ -519,6 +506,19 @@
       <rule e="way" k="seamark:arc_style" v="dashed"><line class="arc-dashed-magenta" layer="-1"/></rule>
     </else>
   </rule>
+  
+	<!-- Light Flares -->
+  
+	<rule e="node" k="seamark:type|seamark:body_shape" v="*">
+    <rule e="node" k="seamark:light_colour" v="*">
+      <rule e="node" k="seamark:light_colour" v="W|Y|R|G|Am|Or">
+        <rule e="node" k="seamark:light_colour" v="W|Y|Am|Or"><symbol ref="Light_White_120" position="center"/></rule>
+        <rule e="node" k="seamark:light_colour" v="R"><symbol ref="Light_Red_120" position="center"/></rule>
+        <rule e="node" k="seamark:light_colour" v="G"><symbol ref="Light_Green_120" position="center"/></rule>
+      </rule> 
+      <else><symbol ref="Light_Magenta_120" position="center"/></else>
+    </rule> 
+  </rule> 
   
 	<!-- Marina -->
   

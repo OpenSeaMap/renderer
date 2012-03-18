@@ -250,6 +250,7 @@ const AtlSTR_t AtlSTR[] = {
   {ORT, "orientation"},
   {MLT, "multiple"},
   {ALT, "colour"},
+  {OBJ, "object"},
   {NOATL, ""}
 };
   
