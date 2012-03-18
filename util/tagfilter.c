@@ -222,7 +222,9 @@ int main (int argc, const char * argv[]) {
         
         if (secmax > 0) {
           int i, j, k, l, n;
+          Col_t cols = UNKCOL;
           for (i = 1; i <= secmax; i++) {
+            cols |= seamark.lgt[i].col;
             if (strlen(seamark.lgt[i].chr) > 0)
               strcpy(str, seamark.lgt[i].chr);
             else if (strlen(seamark.lgt[0].chr) > 0)
@@ -253,6 +255,11 @@ int main (int argc, const char * argv[]) {
               }
             }
           }
+          strcpy(colstr, "");
+          for (i = RED; i <= PINK; i <<= 1)
+            if (cols & i)
+              strcat(colstr, getval((Map_t*)ColMAP, i));
+          printf("<tag k=\"seamark:light_colour\" v=\"%s\"/>\n", colstr);
           
           /* Construct light strings for three most common groups */
           
@@ -280,7 +287,6 @@ int main (int argc, const char * argv[]) {
           
           if ((i >= 0) && (group[i].matches > 0)) {
             lightstring(i, "seamark:light_primary");
-            printf("<tag k=\"seamark:light_colour\" v=\"Mg\"/>\n");
           }
           if ((j >= 0) && (group[j].matches > 0)) {
             lightstring(j, "seamark:light_secondary");
