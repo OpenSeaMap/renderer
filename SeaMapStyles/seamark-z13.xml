@@ -225,7 +225,7 @@
           </rule>
           <else><symbol ref="Top_Can_Buoy_Small" position="center"/></else>
         </rule>
-        <rule e="node" k="seamark:body_shape" v="beacon|tower|stake">
+        <rule e="node" k="seamark:body_shape" v="beacon|tower">
           <rule e="node" k="seamark:top_colour" v="R|G|Y|RWR">
             <rule e="node" k="seamark:top_colour" v="R"><symbol ref="Top_Can_Red_Beacon" position="center"/></rule>
             <rule e="node" k="seamark:top_colour" v="G"><symbol ref="Top_Can_Green_Beacon" position="center"/></rule>
@@ -261,7 +261,7 @@
           </rule>
           <else><symbol ref="Top_Cone_Buoy_Small" position="center"/></else>
         </rule>
-        <rule e="node" k="seamark:body_shape" v="beacon|tower|stake">
+        <rule e="node" k="seamark:body_shape" v="beacon|tower">
           <rule e="node" k="seamark:top_colour" v="R|G|Y">
             <rule e="node" k="seamark:top_colour" v="R"><symbol ref="Top_Cone_Red_Beacon" position="center"/></rule>
             <rule e="node" k="seamark:top_colour" v="G"><symbol ref="Top_Cone_Green_Beacon" position="center"/></rule>
@@ -294,7 +294,7 @@
           </rule>
           <else><symbol ref="Top_Sphere_Buoy_Small" position="center"/></else>
         </rule>
-        <rule e="node" k="seamark:body_shape" v="beacon|tower|stake">
+        <rule e="node" k="seamark:body_shape" v="beacon|tower">
           <rule e="node" k="seamark:top_colour" v="R|RG">
             <rule e="node" k="seamark:top_colour" v="R"><symbol ref="Top_Sphere_Red_Beacon" position="center"/></rule>
             <rule e="node" k="seamark:top_colour" v="RG"><symbol ref="Top_Sphere_Red_Green_Beacon" position="center"/></rule>
@@ -325,7 +325,7 @@
           </rule>
           <else><symbol ref="Top_X_Buoy_Small" position="center"/></else>
         </rule>
-        <rule e="node" k="seamark:body_shape" v="beacon|tower|stake">
+        <rule e="node" k="seamark:body_shape" v="beacon|tower">
           <rule e="node" k="seamark:top_colour" v="R|Y">
             <rule e="node" k="seamark:top_colour" v="R"><symbol ref="Top_X_Red_Beacon" position="center"/></rule>
             <rule e="node" k="seamark:top_colour" v="Y"><symbol ref="Top_X_Yellow_Beacon" position="center"/></rule>
@@ -357,7 +357,7 @@
         <rule e="node" k="seamark:top_shape" v="2 cones point together"><symbol ref="Top_West_Buoy_Small" position="center"/></rule>
         <rule e="node" k="seamark:top_shape" v="2 spheres"><symbol ref="Top_Isol_Buoy_Small" position="center"/></rule>
       </rule>
-      <rule e="node" k="seamark:body_shape" v="beacon|tower|stake">
+      <rule e="node" k="seamark:body_shape" v="beacon|tower">
         <rule e="node" k="seamark:top_shape" v="2 cones up"><symbol ref="Top_North_Beacon" position="center"/></rule>
         <rule e="node" k="seamark:top_shape" v="2 cones down"><symbol ref="Top_South_Beacon" position="center"/></rule>
         <rule e="node" k="seamark:top_shape" v="2 cones base together"><symbol ref="Top_East_Beacon" position="center"/></rule>
@@ -417,7 +417,7 @@
         <rule e="node" k="seamark:top_shape" v="*"><symbol ref="Radar_Reflector_305" position="center"/></rule>
         <else><symbol ref="Radar_Reflector_250" position="center"/></else>
       </rule>
-      <rule e="node" k="seamark:body_shape" v="beacon|tower|stake">
+      <rule e="node" k="seamark:body_shape" v="beacon|tower">
         <rule e="node" k="seamark:top_shape" v="*"><symbol ref="Radar_Reflector_355" position="center"/></rule>
         <else><symbol ref="Radar_Reflector_280" position="center"/></else>
       </rule>
