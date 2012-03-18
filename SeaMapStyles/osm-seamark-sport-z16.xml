@@ -160,7 +160,7 @@
 			.whitewater-3 { fill: none; stroke: #ff8000; stroke-opacity: 0.75; stroke-width: 1.0px; stroke-linecap: butt; stroke-linejoin: round; }
 			.whitewater-4 { fill: none; stroke: #ff0000; stroke-opacity: 0.75; stroke-width: 1.0px; stroke-linecap: butt; stroke-linejoin: round; }
 			.whitewater-5 { fill: none; stroke: #8000ff; stroke-opacity: 0.75; stroke-width: 1.0px; stroke-linecap: butt; stroke-linejoin: round; }
-			.whitewater-6 { fill: none; stroke: #ff00ff; stroke-opacity: 0.75; stroke-width: 1.0px; stroke-linecap: butt; stroke-linejoin: round; }
+			.whitewater-6 { fill: none; stroke: #a000a0; stroke-opacity: 0.75; stroke-width: 1.0px; stroke-linecap: butt; stroke-linejoin: round; }
       
 			.area-name { font-family: "Arial"; font-weight: bold; font-size: 0.7px; text-anchor: middle; }
 			.whitewater-name { font-family: "Arial"; font-weight: bold; font-size: 0.7px; text-anchor: middle; }
