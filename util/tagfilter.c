@@ -228,11 +228,19 @@ int main (int argc, const char * argv[]) {
           int i, j, k, l, n;
           Col_t cols = UNKCOL;
           for (i = 1; i <= secmax; i++) {
+            if (strlen(seamark.lgt[i].chr) == 0)
+              strcpy(seamark.lgt[i].chr, seamark.lgt[0].chr);
+            if (strlen(seamark.lgt[i].grp) == 0)
+              strcpy(seamark.lgt[i].grp, seamark.lgt[0].grp);
+            if (seamark.lgt[i].per == 0)
+              seamark.lgt[i].per = seamark.lgt[0].per;
+            if (seamark.lgt[i].rng == 0)
+              seamark.lgt[i].rng = seamark.lgt[0].rng;
+            if (seamark.lgt[i].hgt == 0)
+              seamark.lgt[i].hgt = seamark.lgt[0].hgt;
             cols |= seamark.lgt[i].col;
             if (strlen(seamark.lgt[i].chr) > 0)
               strcpy(str, seamark.lgt[i].chr);
-            else if (strlen(seamark.lgt[0].chr) > 0)
-              strcpy(str, seamark.lgt[0].chr);
             else strcpy(str, "");
             if (strncmp(str, "Al.", 3) == 0)
               strcpy(str, &str[3]);
@@ -242,8 +250,6 @@ int main (int argc, const char * argv[]) {
               strcat(str, "Dir");
             if (seamark.lgt[i].per != 0)
               sprintf(strchr(str, 0), "%ds ", seamark.lgt[i].per);
-            else if (seamark.lgt[0].per != 0)
-              sprintf(strchr(str, 0), "%ds ", seamark.lgt[0].per);
             for (j = 0; j < 4; j++) {
               if (group[j].matches == 0) {
                 strcpy(group[j].charstr, str);
@@ -741,7 +747,7 @@ void lightstring(int idx, char *key) {
   } colrng[4];
   for (i = 0; i < 4; i++) {
     colrng[i].col = UNKCOL;
-    colrng[i].rng = seamark.lgt[0].rng;
+    colrng[i].rng = 0;
   }
   for (i = group[idx].matching, j = 0; i != 0; i >>= 1, j++) {
     if (i & 1) {
