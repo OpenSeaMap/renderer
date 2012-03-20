@@ -386,24 +386,38 @@ int main (int argc, const char * argv[]) {
                 seamark.shp = BEACON;
             case BOYISD:
             case BOYCAR:
+              if (seamark.shp == UNKSHP)
+                seamark.shp = PILLAR;
               printf("<tag k=\"seamark:class\" v=\"cardinal\"/>\n");
               break;
             case BCNLAT:
               if (seamark.shp == UNKSHP)
                 seamark.shp = BEACON;
+              printf("<tag k=\"seamark:class\" v=\"lateral\"/>\n");
+              break;
             case BOYLAT:
+              if (seamark.shp == UNKSHP)
+                seamark.shp = PILLAR;
               printf("<tag k=\"seamark:class\" v=\"lateral\"/>\n");
               break;
             case BCNSAW:
               if (seamark.shp == UNKSHP)
                 seamark.shp = BEACON;
+              printf("<tag k=\"seamark:class\" v=\"fairway\"/>\n");
+              break;
             case BOYSAW:
+              if (seamark.shp == UNKSHP)
+                seamark.shp = PILLAR;
               printf("<tag k=\"seamark:class\" v=\"fairway\"/>\n");
               break;
             case BCNSPP:
               if (seamark.shp == UNKSHP)
                 seamark.shp = BEACON;
+              printf("<tag k=\"seamark:class\" v=\"special\"/>\n");
+              break;
             case BOYSPP:
+              if (seamark.shp == UNKSHP)
+                seamark.shp = PILLAR;
               printf("<tag k=\"seamark:class\" v=\"special\"/>\n");
               break;
             case MORFAC:
