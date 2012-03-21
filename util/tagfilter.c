@@ -49,6 +49,7 @@ typedef struct {
   int rng;
   Lit_t lit;
   int mlt;
+  boolean ort;
   float rad;
 } Lgt_t;
 
@@ -246,7 +247,7 @@ int main (int argc, const char * argv[]) {
               strcpy(str, &str[3]);
             if (strcmp(str, "Al") == 0)
               strcpy(str, "F");
-            if ((seamark.lgt[i].lit == DIR) || (seamark.lgt[0].lit == DIR))
+            if (((seamark.lgt[i].lit == DIR) || (seamark.lgt[0].lit == DIR)) && seamark.lgt[i].ort)
               strcat(str, "Dir");
             if (seamark.lgt[i].per != 0)
               sprintf(strchr(str, 0), "%ds ", seamark.lgt[i].per);
@@ -384,6 +385,8 @@ int main (int argc, const char * argv[]) {
             case BCNISD:
               if (seamark.shp == UNKSHP)
                 seamark.shp = BEACON;
+              printf("<tag k=\"seamark:class\" v=\"cardinal\"/>\n");
+              break;
             case BOYISD:
             case BOYCAR:
               if (seamark.shp == UNKSHP)
@@ -504,6 +507,9 @@ int main (int argc, const char * argv[]) {
                   break;
                 case MLT:
                   seamark.lgt[idx].mlt = atoi(value);
+                  break;
+                case ORT:
+                  seamark.lgt[idx].ort = TRUE;
                   break;
                 case RAD:
                   item = strtok(value, ",;");
@@ -814,7 +820,7 @@ void lightstring(int idx, char *key) {
   }
   for (i = group[idx].matching, j = 0; (i & 1) == 0; i >>= 1, j++){}
   strcpy(str, "");
-  if ((seamark.lgt[j].lit == DIR) || (seamark.lgt[0].lit == DIR))
+  if (((seamark.lgt[j].lit == DIR) || (seamark.lgt[0].lit == DIR)) && seamark.lgt[0].ort)
     strcat(str, "Dir.");
   if (strlen(seamark.lgt[j].chr) > 0) {
     if (strcmp(seamark.lgt[j].chr, "Al") == 0)

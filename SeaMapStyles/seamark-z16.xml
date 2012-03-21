@@ -501,6 +501,13 @@
   <rule e="way|node" k="seamark:body_shape" v="flagstaff"><symbol ref="Flagstaff" position="center"/></rule>
   <rule e="way|node" k="seamark:body_shape" v="dish_aerial"><symbol ref="DishAerial" position="center"/></rule>
   <rule e="way|node" k="seamark:body_shape" v="chimney"><symbol ref="Chimney" position="center"/></rule>
+  <rule e="way|node" k="seamark:body_shape" v="churchtower"><symbol ref="ChurchTower" position="center"/></rule>
+  <rule e="way|node" k="seamark:body_shape" v="minaret"><symbol ref="Minaret" position="center"/></rule>
+  <rule e="way|node" k="seamark:body_shape" v="windsock"><symbol ref="Windsock" position="center"/></rule>
+  <rule e="way|node" k="seamark:body_shape" v="temple"><symbol ref="Temple" position="center"/></rule>
+  <rule e="way|node" k="seamark:body_shape" v="cross"><symbol ref="Cross" position="center"/></rule>
+  <rule e="way|node" k="seamark:body_shape" v="church"><symbol ref="Church" position="center"/></rule>
+  <rule e="way|node" k="seamark:body_shape" v="windmill"><symbol ref="Windmill" position="center"/></rule>
   <rule e="way|node" k="seamark:body_shape" v="cairn"><symbol ref="Cairn" position="center"/></rule>
 
   <!-- Platforms & Installation Buoys -->
