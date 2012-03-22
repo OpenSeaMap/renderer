@@ -820,7 +820,7 @@ void lightstring(int idx, char *key) {
   }
   for (i = group[idx].matching, j = 0; (i & 1) == 0; i >>= 1, j++){}
   strcpy(str, "");
-  if (((seamark.lgt[j].lit == DIR) || (seamark.lgt[0].lit == DIR)) && seamark.lgt[0].ort)
+  if (((seamark.lgt[j].lit == DIR) || (seamark.lgt[0].lit == DIR)) && seamark.lgt[j].ort)
     strcat(str, "Dir.");
   if (strlen(seamark.lgt[j].chr) > 0) {
     if (strcmp(seamark.lgt[j].chr, "Al") == 0)
