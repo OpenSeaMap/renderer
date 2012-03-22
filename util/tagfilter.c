@@ -186,6 +186,58 @@ int main (int argc, const char * argv[]) {
     
     if (!way && !node && (seamark.obj != UNKOBJ) && (*id != '-')) {
       
+      if ((seamark.obj == LNDMRK) || (seamark.obj == BUISGL)) {
+        switch (seamark.cat) {
+          case LMK_TOWR:
+            if ((seamark.fnc == CHCH) || (seamark.fnc == CHPL))
+              printf("<tag k=\"seamark:body_shape\" v=\"churchtower\"/>\n");
+            else
+              printf("<tag k=\"seamark:body_shape\" v=\"landtower\"/>\n");
+            break;
+          case LMK_SPIR:
+            if ((seamark.fnc == CHCH) || (seamark.fnc == CHPL))
+              printf("<tag k=\"seamark:body_shape\" v=\"churchspire\"/>\n");
+            else
+              printf("<tag k=\"seamark:body_shape\" v=\"spire\"/>\n");
+            break;
+          case LMK_DOME:
+            if ((seamark.fnc == CHCH) || (seamark.fnc == CHPL))
+              printf("<tag k=\"seamark:body_shape\" v=\"churchdome\"/>\n");
+            else
+              printf("<tag k=\"seamark:body_shape\" v=\"dome\"/>\n");
+            break;
+          case LMK_OBLK:
+          case LMK_STAT:
+          case LMK_CLMN:
+            printf("<tag k=\"seamark:body_shape\" v=\"monument\"/>\n");
+            break;
+          case NOCAT:
+            if (seamark.fnc == UNKFNC) {
+              printf("<tag k=\"seamark:body_shape\" v=\"lighthouse\"/>\n");
+            } else
+              switch (seamark.fnc) {
+              case PGDA:
+              case SHSH:
+              case BTMP:
+                printf("<tag k=\"seamark:body_shape\" v=\"temple\"/>\n");
+                break;
+              case MOSQ:
+                printf("<tag k=\"seamark:body_shape\" v=\"minaret\"/>\n");
+                break;
+              case MRBT:
+                printf("<tag k=\"seamark:body_shape\" v=\"spire\"/>\n");
+                break;
+              default:
+                printf("<tag k=\"seamark:body_shape\" v=\"%s\"/>\n", (char*)getval((Map_t*)FncSTR, (Key_t)seamark.fnc));
+                break;
+            }
+            break;
+          default:
+            printf("<tag k=\"seamark:body_shape\" v=\"%s\"/>\n", (char*)getval((Map_t*)CatSTR, (Key_t)seamark.cat));
+            break;
+        }
+      }
+      
       /* Construct fog signal string */
       
       if (seamark.fog != NOFOG) {
@@ -220,7 +272,7 @@ int main (int argc, const char * argv[]) {
         printf("<tag k=\"seamark:body_colour\" v=\"%s\"/>\n", seamark.col_body);
         printf("<tag k=\"seamark:body_design\" v=\"%s%s\"/>\n", seamark.col_body, seamark.pat_body);
       }
-
+      
       if (seamark.isLit) {
         
         /* Sort sectors into groups with same characteristics */
@@ -426,11 +478,7 @@ int main (int argc, const char * argv[]) {
             case MORFAC:
               break;
             case LNDMRK:
-              if (seamark.shp == UNKSHP) {
-                seamark.shp = HOUSE;
-                printf("<tag k=\"seamark:class\" v=\"light\"/>\n");
-              }
-             break;
+              break;
             case LITMAJ:
               seamark.shp = MAJOR;
               printf("<tag k=\"seamark:class\" v=\"light\"/>\n");
@@ -514,6 +562,14 @@ int main (int argc, const char * argv[]) {
                 case RAD:
                   item = strtok(value, ",;");
                   seamark.lgt[idx].rad = atof(item);
+                  break;
+                case SEQ:
+                case BEG:
+                case END:
+                case VIS:
+                case EXH:
+                case ALT:
+                case OBJ:
                   break;
                 default:
                   printf("%s", line);
@@ -725,15 +781,22 @@ int main (int argc, const char * argv[]) {
             case LNDMRK:
               switch (getkey((Map_t*)AttSTR, attribute)) {
                 case CATEGORY:
-                  seamark.shp = (Shp_t)getkey((Map_t*)ShpSTR, value);
-                  if (seamark.shp == TOWER)
-                    seamark.shp = LANDTOWER;
+                  seamark.cat = (Cat_t)getkey((Map_t*)CatSTR, value);
                   break;
                 case FUNCTION:
                   seamark.fnc = (Fnc_t)getkey((Map_t*)FncSTR, value);
                   break;
                 default:
-                  printf("%s", line);
+                  break;
+              }
+              break;
+            case BUISGL:
+              switch (getkey((Map_t*)AttSTR, attribute)) {
+                case FUNCTION:
+                  seamark.fnc = (Fnc_t)getkey((Map_t*)FncSTR, value);
+                  break;
+                default:
+                  break;
               }
               break;
             case OFSPLF:

@@ -469,6 +469,10 @@
   <rule e="way|node" k="seamark:body_shape" v="dish_aerial"><symbol ref="DishAerial" position="center"/></rule>
   <rule e="way|node" k="seamark:body_shape" v="chimney"><symbol ref="Chimney" position="center"/></rule>
   <rule e="way|node" k="seamark:body_shape" v="churchtower"><symbol ref="ChurchTower" position="center"/></rule>
+  <rule e="way|node" k="seamark:body_shape" v="churchspire"><symbol ref="ChurchSpire" position="center"/></rule>
+  <rule e="way|node" k="seamark:body_shape" v="churchdome"><symbol ref="ChurchDome" position="center"/></rule>
+  <rule e="way|node" k="seamark:body_shape" v="dome"><symbol ref="Dome" position="center"/></rule>
+  <rule e="way|node" k="seamark:body_shape" v="spire"><symbol ref="Spire" position="center"/></rule>
   <rule e="way|node" k="seamark:body_shape" v="minaret"><symbol ref="Minaret" position="center"/></rule>
   <rule e="way|node" k="seamark:body_shape" v="windsock"><symbol ref="Windsock" position="center"/></rule>
   <rule e="way|node" k="seamark:body_shape" v="temple"><symbol ref="Temple" position="center"/></rule>
@@ -476,6 +480,7 @@
   <rule e="way|node" k="seamark:body_shape" v="church"><symbol ref="Church" position="center"/></rule>
   <rule e="way|node" k="seamark:body_shape" v="windmill"><symbol ref="Windmill" position="center"/></rule>
   <rule e="way|node" k="seamark:body_shape" v="cairn"><symbol ref="Cairn" position="center"/></rule>
+  <rule e="way|node" k="seamark:body_shape" v="radar_scanner"><symbol ref="Signal_Station" position="center"/></rule>
   
   <!-- Platforms & Installation Buoys -->
   

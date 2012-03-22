@@ -50,6 +50,7 @@ const ObjSTR_t ObjSTR[] = {
   {RDOSTA, "radio_station"},
   {RADSTA, "radar_station"},
   {OFSPLF, "platform"},
+  {BUISGL, "building"},
   {UNKOBJ, ""}
 };
 
@@ -136,15 +137,16 @@ const CatSTR_t CatSTR[] = {
   {LMK_WNDM, "windmotor"},
   {LMK_WTRT, "water_tower"},
   {LMK_MAST, "mast"},
-  {LMK_WNDS, "wind_sock"},
+  {LMK_WNDS, "windsock"},
   {LMK_CLMN, "column"},
   {LMK_OBLK, "obelisk"},
   {LMK_STAT, "statue"},
   {LMK_CROS, "cross"},
   {LMK_DOME, "dome"},
-  {LMK_SCNR, "radar"},
+  {LMK_SCNR, "radar_scanner"},
   {LMK_WNDL, "windmill"},
   {LMK_SPIR, "spire"},
+  {LMK_MNRT, "minaret"},
   {NOCAT, ""}
 };
 
@@ -186,9 +188,6 @@ const ShpSTR_t ShpSTR[] = {
   {WATERTOWER, "water_tower"},
   {MAST, "mast"},
   {WINDSOCK, "wind_sock"},
-  {COLUMN, "column"},
-  {OBELISK, "obelisk"},
-  {STATUE, "statue"},
   {LANDCROSS, "cross"},
   {DOME, "dome"},
   {RADAR, "radar"},

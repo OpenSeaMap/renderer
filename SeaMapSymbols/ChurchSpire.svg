@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="landmarks.svg">
+   sodipodi:docname="ChurchSpire.svg">
   <defs
      id="defs4">
     <pattern
@@ -364,6 +364,106 @@
        id="SVGID_3_-8-6"
        xlink:href="#_x31_0_lpi_30_x25_-9"
        patternTransform="matrix(0.7467,-0.7467,0.7467,0.7467,3977.5254,-8206.5869)" />
+    <pattern
+       x="144"
+       y="200"
+       width="72"
+       height="72"
+       patternUnits="userSpaceOnUse"
+       id="_x31_0_lpi_30_x25_-3"
+       viewBox="20 -72 72 72">
+      <g
+         id="g3148-78">
+        <polygon
+           class="st4"
+           points="20,0 20,-72 92,-72 92,0   "
+           id="polygon3150-83" />
+        <line
+           class="st3"
+           x1="19.75"
+           y1="-3.601"
+           x2="92.25"
+           y2="-3.601"
+           id="line3152-8" />
+        <line
+           class="st3"
+           x1="19.75"
+           y1="-18"
+           x2="92.25"
+           y2="-18"
+           id="line3154-1" />
+        <line
+           class="st3"
+           x1="19.75"
+           y1="-32.4"
+           x2="92.25"
+           y2="-32.4"
+           id="line3156-53" />
+        <line
+           class="st3"
+           x1="19.75"
+           y1="-46.8"
+           x2="92.25"
+           y2="-46.8"
+           id="line3158-5" />
+        <line
+           class="st3"
+           x1="19.75"
+           y1="-61.2"
+           x2="92.25"
+           y2="-61.2"
+           id="line3160-4" />
+        <line
+           class="st3"
+           x1="0"
+           y1="-61.2"
+           x2="14"
+           y2="-61.2"
+           id="line3162-3" />
+        <line
+           class="st3"
+           x1="19.75"
+           y1="-10.8"
+           x2="92.25"
+           y2="-10.8"
+           id="line3164-65" />
+        <line
+           class="st3"
+           x1="19.75"
+           y1="-25.2"
+           x2="92.25"
+           y2="-25.2"
+           id="line3166-9" />
+        <line
+           class="st3"
+           x1="19.75"
+           y1="-39.601"
+           x2="92.25"
+           y2="-39.601"
+           id="line3168-5" />
+        <line
+           class="st3"
+           x1="19.75"
+           y1="-54"
+           x2="92.25"
+           y2="-54"
+           id="line3170-4" />
+        <line
+           class="st3"
+           x1="19.75"
+           y1="-68.4"
+           x2="92.25"
+           y2="-68.4"
+           id="line3172-9" />
+        <line
+           class="st3"
+           x1="0"
+           y1="-68.4"
+           x2="14"
+           y2="-68.4"
+           id="line3174-1" />
+      </g>
+    </pattern>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -372,11 +472,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4760854"
-     inkscape:cx="64.848204"
-     inkscape:cy="252.02381"
+     inkscape:zoom="5.0566667"
+     inkscape:cx="126.07119"
+     inkscape:cy="200.01326"
      inkscape:document-units="px"
-     inkscape:current-layer="g3789"
+     inkscape:current-layer="layer15"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1088"
@@ -402,37 +502,59 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     style="display:inline"
-     inkscape:label="Church Tower"
-     id="g3789"
-     inkscape:groupmode="layer">
+     inkscape:groupmode="layer"
+     id="layer15"
+     inkscape:label="Church Spire"
+     style="display:inline">
     <g
-       id="g6562">
+       style="display:inline"
+       id="g6558-7">
       <path
-         sodipodi:type="arc"
-         style="fill:#000000;fill-opacity:1;stroke:none"
-         id="path3793"
-         sodipodi:cx="150.17857"
-         sodipodi:cy="201.07143"
-         sodipodi:rx="4.8214288"
-         sodipodi:ry="5.1785712"
-         d="m 155,201.07143 a 4.8214288,5.1785712 0 1 1 -9.64286,0 4.8214288,5.1785712 0 1 1 9.64286,0 z"
-         transform="matrix(0.6222222,0,0,0.57931037,56.555558,83.517238)" />
+         inkscape:connector-curvature="0"
+         id="rect4626-0"
+         d="m 100,179 0,42 2.0625,0 c 0.51092,-6.17058 5.63062,-11 11.9375,-11 l 72,0 c 6.30688,0 11.42658,4.82942 11.9375,11 l 2.0625,0 0,-42 -2.0625,0 c -0.51092,6.17058 -5.63062,11 -11.9375,11 l -72,0 c -6.30688,0 -11.42658,-4.82942 -11.9375,-11 L 100,179 z"
+         style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       <path
-         transform="matrix(0.5091173,0,0,0.5091173,73.628513,98.181708)"
-         d="m 220.71832,199.98979 a 70.710678,70.710678 0 1 1 -141.421353,0 70.710678,70.710678 0 1 1 141.421353,0 z"
-         sodipodi:ry="70.710678"
-         sodipodi:rx="70.710678"
-         sodipodi:cy="199.98979"
-         sodipodi:cx="150.00764"
-         id="path4573"
-         style="color:#000000;fill:none;stroke:#000000;stroke-width:7.85673571;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         sodipodi:type="arc" />
+         id="rect4626-9-1"
+         d="m 171,150 -42,0 0,2.0625 c 6.17058,0.51092 11,5.63062 11,11.9375 l 0,72 c 0,6.30688 -4.82942,11.42658 -11,11.9375 l 0,2.0625 42,0 0,-2.0625 C 164.82942,247.42658 160,242.30688 160,236 l 0,-72 c 0,-6.30688 4.82942,-11.42658 11,-11.9375 L 171,150 z"
+         style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       style="display:inline"
+       id="g6396"
+       transform="matrix(0.99969695,0,0,0.99969694,0.04550103,0.06056932)">
+      <g
+         id="g28337"
+         inkscape:label="Signal Station"
+         style="display:inline"
+         transform="translate(0,40)">
+        <path
+           transform="matrix(0.99691401,0,0,0.97334632,-0.42719962,-33.916085)"
+           d="m 175.47619,199.2262 c 0,13.90574 -11.00634,25.17857 -24.58334,25.17857 -13.577,0 -24.58333,-11.27283 -24.58333,-25.17857 0,-13.90574 11.00633,-25.17858 24.58333,-25.17858 13.577,0 24.58334,11.27284 24.58334,25.17858 z"
+           sodipodi:ry="25.178572"
+           sodipodi:rx="24.583334"
+           sodipodi:cy="199.2262"
+           sodipodi:cx="150.89285"
+           id="path28351"
+           style="fill:none;stroke:#000000;stroke-width:4.06189823;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           sodipodi:type="arc" />
+        <path
+           transform="matrix(0.67096638,0,0,0.6382363,48.995592,31.251018)"
+           d="m 157.50001,201.7262 c 0,4.04351 -3.11802,7.32143 -6.96429,7.32143 -3.84627,0 -6.96429,-3.27792 -6.96429,-7.32143 0,-4.04352 3.11802,-7.32143 6.96429,-7.32143 3.84627,0 6.96429,3.27791 6.96429,7.32143 z"
+           sodipodi:ry="7.3214288"
+           sodipodi:rx="6.9642859"
+           sodipodi:cy="201.7262"
+           sodipodi:cx="150.53572"
+           id="path28593"
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.00030303;stroke-opacity:1"
+           sodipodi:type="arc" />
+      </g>
     </g>
   </g>
 </svg>
