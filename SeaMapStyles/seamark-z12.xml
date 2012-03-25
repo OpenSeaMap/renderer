@@ -475,28 +475,27 @@
   
 	<!-- Light Sectors -->
   
-	<rule e="way" k="seamark:light:object" v="light_major|landmark">
-    <rule e="way" k="seamark:light_radial" v="*"><line class="sector-radial" layer="-1"/></rule>
-    <rule e="way" k="seamark:light_arc|seamark:light_arc_al4" v="*">
-      <rule e="way" k="seamark:light_arc|seamark:light_arc_al4" v="white|yellow|red|green">
-        <rule e="way" k="seamark:light_arc|seamark:light_arc_al4" v="white|yellow">
-          <rule e="way" k="seamark:arc_style" v="solid"><line class="arc-yellow" layer="-1"/></rule>
-          <rule e="way" k="seamark:arc_style" v="dashed"><line class="arc-dashed-yellow" layer="-1"/></rule>
-        </rule>
-        <rule e="way" k="seamark:light_arc|seamark:light_arc_al4" v="red">
-          <rule e="way" k="seamark:arc_style" v="solid"><line class="arc-red" layer="-1"/></rule>
-          <rule e="way" k="seamark:arc_style" v="dashed"><line class="arc-dashed-red" layer="-1"/></rule>
-        </rule>
-        <rule e="way" k="seamark:light_arc|seamark:light_arc_al4" v="green">
-          <rule e="way" k="seamark:arc_style" v="solid"><line class="arc-green" layer="-1"/></rule>
-          <rule e="way" k="seamark:arc_style" v="dashed"><line class="arc-dashed-green" layer="-1"/></rule>
-        </rule>
+  <rule e="way" k="seamark:light_radial" v="*"><line class="sector-radial" layer="-1"/></rule>
+  
+  <rule e="way" k="seamark:light_arc|seamark:light_arc_al4" v="*">
+    <rule e="way" k="seamark:light_arc|seamark:light_arc_al4" v="white|yellow|red|green">
+      <rule e="way" k="seamark:light_arc|seamark:light_arc_al4" v="white|yellow">
+        <rule e="way" k="seamark:arc_style" v="solid"><line class="arc-yellow" layer="-1"/></rule>
+        <rule e="way" k="seamark:arc_style" v="dashed"><line class="arc-dashed-yellow" layer="-1"/></rule>
       </rule>
-      <else>
-        <rule e="way" k="seamark:arc_style" v="solid"><line class="arc-magenta" layer="-1"/></rule>
-        <rule e="way" k="seamark:arc_style" v="dashed"><line class="arc-dashed-magenta" layer="-1"/></rule>
-      </else>
+      <rule e="way" k="seamark:light_arc|seamark:light_arc_al4" v="red">
+        <rule e="way" k="seamark:arc_style" v="solid"><line class="arc-red" layer="-1"/></rule>
+        <rule e="way" k="seamark:arc_style" v="dashed"><line class="arc-dashed-red" layer="-1"/></rule>
+      </rule>
+      <rule e="way" k="seamark:light_arc|seamark:light_arc_al4" v="green">
+        <rule e="way" k="seamark:arc_style" v="solid"><line class="arc-green" layer="-1"/></rule>
+        <rule e="way" k="seamark:arc_style" v="dashed"><line class="arc-dashed-green" layer="-1"/></rule>
+      </rule>
     </rule>
+    <else>
+      <rule e="way" k="seamark:arc_style" v="solid"><line class="arc-magenta" layer="-1"/></rule>
+      <rule e="way" k="seamark:arc_style" v="dashed"><line class="arc-dashed-magenta" layer="-1"/></rule>
+    </else>
   </rule>
   
   <!-- Light Flares -->
