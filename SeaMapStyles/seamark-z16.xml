@@ -855,7 +855,7 @@
 			.wall-line { stroke-width: 0.2px; stroke-linecap: butt; stroke-linejoin: round; fill: none; fill-opacity: 0; stroke: #000000; }
 			.wall-dashed { stroke-width: 0.2px; stroke-dasharray: 1,1; stroke-linecap: butt; stroke-linejoin: round; fill: none; fill-opacity: 0; stroke: #000000; }
 			
-			.sector-radial { stroke-width: 0.08px; stroke-dasharray: 1.0,1.0; stroke-linecap: butt; stroke-linejoin: round; stroke-opacity: 0.5; fill: none; fill-opacity: 0; stroke: #000000; }
+			.sector-radial { stroke-width: 0.08px; stroke-dasharray: 1.0,1.0; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #808080; }
 			
 			.arc-red { stroke-width: 0.6px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #F40000; }
 			.arc-dashed-red { stroke-width: 1.2px; stroke-linecap: butt;	stroke-linejoin: round; stroke-dasharray: 1,1; fill: none; stroke: #F40000; }
