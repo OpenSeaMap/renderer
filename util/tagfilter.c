@@ -212,10 +212,10 @@ int main (int argc, const char * argv[]) {
             printf("<tag k=\"seamark:body_shape\" v=\"monument\"/>\n");
             break;
           case NOCAT:
-            if (seamark.fnc == UNKFNC) {
-              printf("<tag k=\"seamark:body_shape\" v=\"lighthouse\"/>\n");
-            } else
-              switch (seamark.fnc) {
+            switch (seamark.fnc) {
+              case UNKFNC:
+                printf("<tag k=\"seamark:body_shape\" v=\"lighthouse\"/>\n");
+                break;
               case PGDA:
               case SHSH:
               case BTMP:
