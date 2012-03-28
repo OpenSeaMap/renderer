@@ -775,6 +775,12 @@
     <line class="area-line" layer="-2" />
 	</rule>
   
+  <!-- Ports -->
+  
+  <rule e="node" k="seamark:type" v="crane">
+    <symbol ref="PortCrane" position="center"/>
+  </rule>
+  
 	<!-- Locks -->
   
 	<rule e="way|node" k="seamark:type" v="lock_basin">
