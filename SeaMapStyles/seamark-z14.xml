@@ -481,7 +481,6 @@
   <rule e="way|node" k="seamark:body_shape" v="windmill"><symbol ref="Windmill" position="center"/></rule>
   <rule e="way|node" k="seamark:body_shape" v="cairn"><symbol ref="Cairn" position="center"/></rule>
   <rule e="way|node" k="seamark:body_shape" v="radar_scanner"><symbol ref="Signal_Station" position="center"/></rule>
-  <rule e="way|node" k="seamark:body_shape" v="harbour-master"><symbol ref="harbour_master" position="center"/></rule>
   
   <!-- Platforms & Installation Buoys -->
   
