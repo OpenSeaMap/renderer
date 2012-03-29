@@ -152,7 +152,7 @@ while true; do
 	fi
 		latest=$(cat datestamp)
 	if [ $previous == $latest ]; then
-		sleep 1800
+		sleep 900
 	fi
 	previous=$latest
 done
