@@ -12,7 +12,7 @@
    version="1.1"
    id="svg8829"
    sodipodi:version="0.32"
-   inkscape:version="0.48.1 r9760"
+   inkscape:version="0.48.2 r9819"
    sodipodi:docname="Dot.svg"
    inkscape:export-xdpi="89.361702"
    inkscape:export-ydpi="89.361702"
@@ -56,18 +56,7 @@
    enabled="true"
    snapvisiblegridlinesonly="true" /></sodipodi:namedview>
 <defs
-   id="defs4">
-	
-	
-		<inkscape:perspective
-   id="perspective15"
-   inkscape:persp3d-origin="90 : 60 : 1"
-   sodipodi:type="inkscape:persp3d"
-   inkscape:vp_x="0 : 90 : 1"
-   inkscape:vp_y="0 : 1000 : 0"
-   inkscape:vp_z="180 : 90 : 1">
-		</inkscape:perspective>
-</defs>
+   id="defs4" />
 <g
    id="g2415">
 	
