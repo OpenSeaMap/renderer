@@ -13,8 +13,8 @@
    version="1.1"
    id="svg8829"
    sodipodi:version="0.32"
-   inkscape:version="0.48.1 r9760"
-   sodipodi:docname="Aardvaark.svg"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="RadioMast.svg"
    inkscape:export-xdpi="89.361702"
    inkscape:export-ydpi="89.361702"
    inkscape:export-filename="/Users/mherring/Desktop/try.png"
@@ -28,7 +28,7 @@
    xml:space="preserve"><metadata
    id="metadata14"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata>
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata>
 <sodipodi:namedview
    id="base"
    inkscape:window-height="1088"
@@ -58,29 +58,18 @@
    enabled="true"
    snapvisiblegridlinesonly="true" /></sodipodi:namedview>
 <defs
-   id="defs4">
-	
-	
-		<inkscape:perspective
-   id="perspective15"
-   inkscape:persp3d-origin="90 : 60 : 1"
-   sodipodi:type="inkscape:persp3d"
-   inkscape:vp_x="0 : 90 : 1"
-   inkscape:vp_y="0 : 1000 : 0"
-   inkscape:vp_z="180 : 90 : 1">
-		</inkscape:perspective>
-<pattern
-   patternTransform="matrix(0.7467 -0.7467 0.7467 0.7467 3977.5254 -8206.5869)"
-   xlink:href="#_x31_0_lpi_30_x25_-3"
-   id="SVGID_3_-2" /><clipPath
-   id="SVGID_2_"><use
-     xlink:href="#SVGID_1_"
-     style="overflow:visible"
-     id="use3208"
-     x="0"
-     y="0"
-     width="288"
-     height="400" /></clipPath></defs>
+   id="defs4"><pattern
+     patternTransform="matrix(0.7467 -0.7467 0.7467 0.7467 3977.5254 -8206.5869)"
+     xlink:href="#_x31_0_lpi_30_x25_-3"
+     id="SVGID_3_-2" /><clipPath
+     id="SVGID_2_"><use
+       xlink:href="#SVGID_1_"
+       style="overflow:visible"
+       id="use3208"
+       x="0"
+       y="0"
+       width="288"
+       height="400" /></clipPath></defs>
 <g
    id="g2415"
    transform="translate(0,80)">
