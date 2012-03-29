@@ -16,7 +16,7 @@ while true; do
 		rm tmp/sending
 		echo $(date)
 	fi
-	sleep 60
+	sleep 20
 	while [ -e tmp/deletions ]; do
 		mv tmp/deletions tmp/deleting
     while [ $(ps -a | grep -c sftp) -gt 1 ]; do
