@@ -443,11 +443,11 @@
       <symbol ref="Fog_Signal" position="center"/>
       <rule e="node" k="seamark:body_shape" v="float|super-buoy|barrel|spar|beacon|lighthouse|platform|fpso">
         <rule e="node" k="seamark:body_shape" v="spar|beacon">
-          <caption class="normal-text" dx="-0" dy="-0.2" text-anchor="end"><tag k="seamark:fog_char"/> .</caption>
+          <caption class="normal-text" text-anchor="end" k="seamark:fog_char" transform="translate(-0.7, -0.2)"/>
         </rule>
-        <else><caption class="normal-text" dx="-0" dy="-0.2" text-anchor="end"><tag k="seamark:fog_char"/> . . .</caption></else>
+        <else><caption class="normal-text" text-anchor="end" k="seamark:fog_char" transform="translate(-1.7, -0.2)"/></else>
       </rule>
-      <else><caption class="normal-text" dx="-0" dy="-0.2" text-anchor="end"><tag k="seamark:fog_char"/> . .</caption></else>
+      <else><caption class="normal-text" text-anchor="end" k="seamark:fog_char" transform="translate(-1.1, -0.2)"/></else>
     </rule>
 	</rule>
   
@@ -482,11 +482,11 @@
       <symbol ref="Radar_Station" position="center"/>
       <rule e="node" k="seamark:body_shape" v="float|super-buoy|beacon|tower|lighthouse">
         <rule e="node" k="seamark:body_shape" v="super-buoy|tower">
-          <caption class="normal-text" dx="-0" dy="-1.6" text-anchor="end"><tag k="seamark:rtb_char"/> . .</caption>
+          <caption class="normal-text" text-anchor="end" k="seamark:rtb_char" transform="translate(-1.3, -1.6)"/>
         </rule>
-        <else><caption class="normal-text" dx="-0" dy="-1.6" text-anchor="end"><tag k="seamark:rtb_char"/> .</caption></else>
+        <else><caption class="normal-text" text-anchor="end" k="seamark:rtb_char" transform="translate(-0.7, -1.6)"/></else>
       </rule>
-      <else><caption class="normal-text" dx="0" dy="-1.6" text-anchor="end"><tag k="seamark:rtb_char"/></caption></else>
+      <else><caption class="normal-text" text-anchor="end" k="seamark:rtb_char" transform="translate(-0.2, -1.6)"/></else>
     </rule>
   </rule>
   
