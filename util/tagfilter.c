@@ -16,7 +16,7 @@
 void lightstring(int, char*);
 
 char line[1000];
-char *tokens;
+char tokens[1000];
 char *ele;
 char *id;
 char *key;
@@ -77,7 +77,7 @@ struct seamark_s {
 int main (int argc, const char * argv[]) {
   
 	while (fgets(line, 1000, stdin) != NULL) {
-    tokens = strdup(line);
+    strcpy(tokens, line);
 		ele = strtok(tokens, " <");
     
     /* Start new seamark node */
