@@ -35,9 +35,9 @@ download () {
 					echo "$(date) wget error - retrying JXAPI" >> log.txt
 					sleep 60
 				done
-				osmosis -q --ri --rx file=world.osm 2> /dev/null
 	../util/smfilter -a 0.01 < world.osm | ../util/tagfilter > next.osm
 #	../util/smfilter -a 0.01 < merge.osm | ../util/tagfilter > next.osm
+				osmosis -q --ri --rx file=next.osm 2> /dev/null
 #	mv merge.osm world.osm
 	echo "$(date) successful download" >> log.txt
 }
