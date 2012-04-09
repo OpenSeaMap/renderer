@@ -35,6 +35,7 @@ download () {
 					echo "$(date) wget error - retrying JXAPI" >> log.txt
 					sleep 60
 				done
+				osmosis -q --ri --rx file=world.osm 2> /dev/null
 	../util/smfilter -a 0.01 < world.osm | ../util/tagfilter > next.osm
 #	../util/smfilter -a 0.01 < merge.osm | ../util/tagfilter > next.osm
 #	mv merge.osm world.osm
@@ -64,7 +65,7 @@ search () {
       yx=$(echo "scale=8; 4*a(1)*(1-((2*$tile)/${z[$1]}))" | bc -l)
       minlat=$(echo "scale=8; ((a((e($yx)-(1/e($yx)))/2))*180)/(4*a(1))" | bc -l)
 			if [ $minlat = 0 ]; then minlat=-85.0; fi
-      osmosis -q --rx file=tmp/panel-z$1.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=tmp/panel-z${zoom[$1]}.osm 2> /dev/null
+      osmosis -q --rx file=tmp/panel-z$1.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=tmp/panel-z${zoom[$1]}.osm
       timestamp=$(../util/checkdate tmp/panel-z${zoom[$1]}.osm)
       bb="$minlat,$minlon,$maxlat,$maxlon"
       tx=$((${x[$1]}+${i[$1]}))
