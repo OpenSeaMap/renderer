@@ -569,6 +569,7 @@ int main (int argc, const char * argv[]) {
                 case VIS:
                 case EXH:
                 case ALT:
+                  break;
                 case OBJ:
                   printf("%s", line);
                   break;
