@@ -1,16 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="320" width="320" version="1.0" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
- <metadata id="metadata6">
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-    <dc:format>image/svg+xml</dc:format>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <path id="path27763" d="m237.08 81.894l-5.6 16.718 4.03 1.313 5.6-16.687-4.03-1.344zm27.21-31.981l-26.43-8.788-11.57 33.788 26.42 8.637 11.58-33.637z" fill-rule="evenodd" transform="translate(-40 -40)" fill="#d40000"/>
- <rect id="rect2387" fill-rule="evenodd" height="6.8413" width="6.6371" stroke="#fff" y="11.63" x="110.58" fill="#fff"/>
- <path id="path2389" d="m193.8 12.753l26.65 8.577" stroke="#fff" stroke-width="1px" fill="none"/>
- <path id="path2391" d="m191.45 20.105l26.45 8.475" stroke="#fff" stroke-width="1px" fill="none"/>
- <path id="path2393" d="m204.7 23.789c-7.16-2.302-13.03-4.201-13.05-4.222-0.03-0.027 1.98-6.087 2.07-6.243 0.02-0.024 26.33 8.444 26.38 8.486 0.01 0.016-0.45 1.414-1.02 3.107-0.77 2.252-1.09 3.076-1.2 3.068-0.09-0.006-6.02-1.894-13.18-4.196z" fill-rule="evenodd" stroke="#fff" stroke-width=".10211" fill="#fff"/>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="320"
+   height="320"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="Top_Can_Red_White_Red_Buoy.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata6">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="850"
+     inkscape:window-width="1440"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false"
+     inkscape:zoom="9.7934289"
+     inkscape:cx="160"
+     inkscape:cy="293.92258"
+     inkscape:window-x="-4"
+     inkscape:window-y="0"
+     inkscape:current-layer="svg2"
+     inkscape:window-maximized="0" />
+  <defs
+     id="defs4" />
+  <path
+     d="M 237.075,81.89375 L 231.48125,98.6125 L 235.5125,99.925 L 241.10625,83.2375 L 237.075,81.89375 z M 264.2875,49.912542 L 237.8625,41.125042 L 226.2875,74.912502 L 252.7125,83.550002 L 264.2875,49.912542 z"
+     id="path27763"
+     style="fill:#d40000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+     transform="translate(-40, -40)"
+     sodipodi:nodetypes="cccccccccc" />
+  <rect
+     style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect2387"
+     width="6.6371036"
+     height="6.8413219"
+     x="110.58435"
+     y="11.629967" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 193.80342,12.753169 L 220.45394,21.330348 L 220.45394,21.330348"
+     id="path2389" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 191.4549,20.105037 L 217.90121,28.580107"
+     id="path2391" />
+  <path
+     style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.10210928;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 204.70344,23.789205 C 197.54303,21.487474 191.66715,19.587519 191.64592,19.567083 C 191.61821,19.5404 193.63324,13.479875 193.72158,13.324209 C 193.73525,13.300098 220.05338,21.767922 220.09542,21.809961 C 220.11143,21.825965 219.65297,23.224301 219.07661,24.917373 C 218.31015,27.168916 217.98757,27.992795 217.87554,27.984927 C 217.7913,27.979014 211.86386,26.090936 204.70344,23.789205 z"
+     id="path2393" />
 </svg>
