@@ -474,7 +474,7 @@
   
 	<!-- Light Sectors -->
   
-  <rule e="node" k="seamark:light:object" v="light_major|lighthouse">
+  <rule e="node" k="seamark:light:object" v="light_major|landmark">
     <rule e="way" k="seamark:light_radial" v="*"><line class="sector-radial" layer="-1"/></rule>
     <rule e="way" k="seamark:light_arc|seamark:light_arc_al4" v="*">
       <rule e="way" k="seamark:light_arc|seamark:light_arc_al4" v="white|yellow|red|green">
