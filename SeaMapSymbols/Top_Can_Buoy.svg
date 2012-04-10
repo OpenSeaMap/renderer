@@ -1,88 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.0"
-   width="300"
-   height="400"
-   id="svg2"
-   inkscape:version="0.48.2 r9819"
-   sodipodi:docname="Top_Can_Buoy.svg"
-   inkscape:label="Pillar"
-   style="display:inline">
-  <metadata
-     id="metadata2822">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <sodipodi:namedview
-     pagecolor="#000000"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1088"
-     id="namedview2820"
-     showgrid="true"
-     inkscape:zoom="7.9999999"
-     inkscape:cx="185.56629"
-     inkscape:cy="337.07387"
-     inkscape:window-x="1440"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer4"
-     inkscape:snap-grids="false">
-    <inkscape:grid
-       type="xygrid"
-       id="grid3180"
-       empspacing="5"
-       visible="true"
-       enabled="true"
-       snapvisiblegridlinesonly="true" />
-  </sodipodi:namedview>
-  <defs
-     id="defs4" />
-  <g
-     inkscape:groupmode="layer"
-     id="layer4"
-     inkscape:label="Top Can"
-     style="display:inline"
-     transform="translate(0,80)">
-    <g
-       id="g2972"
-       transform="translate(-11.00114,-36.763513)">
-      <path
-         transform="translate(-40,-40)"
-         style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none"
-         id="path27763-8"
-         d="m 264.2875,49.912542 -26.425,-8.7875 -11.575,33.78746 26.425,8.6375 11.575,-33.63746 z m -6.0625,3.61246 -8.0125,23.975 -17.0875,-6.2 8.0125,-23.97496 17.0875,6.19996 z"
-         sodipodi:nodetypes="cccccccccc" />
-    </g>
-    <path
-       style="fill:#000407;fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline"
-       id="path3468"
-       d="m 187.12755,1.9713871 -5.59375,16.7187499 4.03125,1.3125 5.59375,-16.6874999 -4.03125,-1.34375 z"
-       sodipodi:nodetypes="ccccc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.125;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 190.61629,77.546896 c -4.50313,-1.642871 -8.23758,-3.005696 -8.2988,-3.028501 -0.0803,-0.02991 7.69254,-23.562196 7.86632,-23.815314 0.0331,-0.04815 16.72,5.989814 16.83977,6.09326 0.0521,0.04503 -1.68554,5.40828 -3.8615,11.918331 -3.09106,9.247833 -4.00026,11.834578 -4.1573,11.82786 -0.11054,-0.0047 -3.88537,-1.352765 -8.38849,-2.995636 z"
-       id="path17872"
-       transform="translate(0,-80)" />
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="400" width="300" version="1.0" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata id="metadata2822">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer4" transform="translate(0,80)">
+  <g id="g2972" transform="translate(-11.001 -36.764)">
+   <path id="path27763-8" d="m264.29 49.913-26.425-8.7875-11.575 33.787 26.425 8.6375 11.575-33.637zm-6.0625 3.6125-8.0125 23.975-17.088-6.2 8.0125-23.975 17.088 6.2z" fill-rule="evenodd" transform="translate(-40,-40)" fill="#000407"/>
   </g>
+  <path id="path3468" d="m187.13 1.9714-5.5938 16.719 4.0312 1.3125 5.5938-16.687-4.0312-1.3438z" fill-rule="evenodd" fill="#000407"/>
+  <path id="path17872" d="m190.62 77.547c-4.5031-1.6429-8.2376-3.0057-8.2988-3.0285-0.0803-0.02991 7.6925-23.562 7.8663-23.815 0.0331-0.04815 16.72 5.9898 16.84 6.0933 0.0521 0.04503-1.6855 5.4083-3.8615 11.918-3.0911 9.2478-4.0003 11.835-4.1573 11.828-0.11054-0.0047-3.8854-1.3528-8.3885-2.9956z" transform="translate(0,-80)" stroke="#000" stroke-width=".125" fill="none"/>
+ </g>
 </svg>
