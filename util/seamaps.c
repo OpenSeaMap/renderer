@@ -171,6 +171,7 @@ const ShpSTR_t ShpSTR[] = {
   {STAKE, "post"},
   {STAKE, "pole"},
   {PERCH, "perch"},
+  {BOLLARD, "bollard"},
   {DOLPHIN, "dolphin"},
   {DEVDOLPHIN, "deviation_dolphin"},
   {POST, "post"},

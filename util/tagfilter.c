@@ -679,6 +679,9 @@ int main (int argc, const char * argv[]) {
                         seamark.shp = SPHERI;
                       printf("<tag k=\"seamark:top_shape\" v=\"mooring\"/>\n");
                       break;
+                    case MOR_BLRD:
+                      seamark.shp = BOLLARD;
+                      break;
                     case MOR_DLPN:
                       seamark.shp = DOLPHIN;
                       break;

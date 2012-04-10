@@ -401,6 +401,7 @@
   <rule e="node" k="seamark:body_shape" v="deviation_dolphin"><symbol ref="DeviationDolphin" position="center"/></rule>
   <rule e="node" k="seamark:body_shape" v="pile"><symbol ref="Post" position="center"/></rule>
   <rule e="node" k="seamark:body_shape" v="post"><symbol ref="Post" position="center"/></rule>
+  <rule e="node" k="seamark:body_shape" v="bollard"><symbol ref="Bollard" position="center"/></rule>
   
   <!-- Signal Stations -->
   
