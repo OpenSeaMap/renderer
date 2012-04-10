@@ -570,6 +570,7 @@ int main (int argc, const char * argv[]) {
                 case EXH:
                 case ALT:
                 case OBJ:
+                  printf("%s", line);
                   break;
                 default:
                   printf("%s", line);
