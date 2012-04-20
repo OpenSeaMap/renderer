@@ -603,6 +603,12 @@
     <line class="area-line" layer="-2" />
 	</rule>
   
+  <!-- Fairways -->
+  
+  <rule e="way" k="seamark:type" v="fairway">
+    <area class="fairway-area" layer="-2"/>
+  </rule>
+  
 	<!-- Locks -->
   
 	<rule e="way|node" k="seamark:type" v="lock_basin">
@@ -621,6 +627,8 @@
 			.separation-area { stroke: none; fill: #c480ff; fill-opacity: 0.5; }
 			.separation-line { stroke-width: 2px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #c480ff; stroke-opacity: 0.5; }
 			.separation-dashed { stroke-width: 1.0px; stroke-dasharray: 2,2; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #c480ff; stroke-opacity: 0.5; }
+			
+			.fairway-area { stroke: none; fill: #ffffff; fill-opacity: 0.5; }
 			
 			.lane-arrow-casing { fill: none; stroke-linecap: butt; stroke: #c480ff; stroke-opacity: 0.5; }
 			.lane-arrow-core { fill: none; stroke-linecap: butt; stroke: #b5d0d0; stroke-opacity: 1.0; }

@@ -342,6 +342,8 @@
 			.separation-area { stroke: none; fill: #c480ff; fill-opacity: 0.5; }
 			.separation-line { stroke-width: 4px; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #c480ff; stroke-opacity: 0.5; }
 			.separation-dashed { stroke-width: 4px; stroke-dasharray: 8,8; stroke-linecap: butt; stroke-linejoin: round; fill: none; stroke: #c480ff; stroke-opacity: 0.5; }
+
+			.fairway-area { stroke: none; fill: #ffffff; fill-opacity: 0.5; }
 			
 			.lane-arrow-casing { fill: none; stroke-linecap: butt; stroke: #c480ff; stroke-opacity: 0.5; }
 			.lane-arrow-core { fill: none; stroke-linecap: butt; stroke: #b5d0d0; stroke-opacity: 1.0; }
