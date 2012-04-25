@@ -406,6 +406,15 @@
       </rule>
     </rule>
     
+    <rule e="node" k="seamark:top_shape" v="2 cones point together">
+      <rule e="node" k="seamark:body_shape" v="beacon|tower|stake">
+        <rule e="node" k="seamark:top_design" v="RG|B">
+          <rule e="node" k="seamark:top_design" v="RG"><symbol ref="Top_ConesDU_Red_Green_Beacon" position="center"/></rule>
+        </rule>
+        <else><symbol ref="Top_Cross_Beacon" position="center"/></else>
+      </rule>
+    </rule>
+    
     <rule e="node" k="seamark:top_shape" v="x-shape">
       <rule e="node" k="seamark:body_shape" v="pillar|spar">
         <rule e="node" k="seamark:top_design" v="R|Y">
