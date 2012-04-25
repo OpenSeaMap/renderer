@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <unistd.h>
 #include "seamaps.h"
 
 void lightstring(int, char*);
@@ -76,9 +77,12 @@ struct seamark_s {
 
 int main (int argc, const char * argv[]) {
   
+//  sleep(2); // *** for debugger capture only
+ 
 	while (fgets(line, 1000, stdin) != NULL) {
     tokens = strdup(line);
 		ele = strtok(tokens, " <");
+    if ((strstr(ele, "relation") != NULL) || (strstr(ele, "/osm") != NULL)) seamark.obj = UNKOBJ;
     
     /* Start new seamark node */
     
@@ -271,6 +275,10 @@ int main (int argc, const char * argv[]) {
       if (strlen(seamark.col_body) > 0) {
         printf("<tag k=\"seamark:body_colour\" v=\"%s\"/>\n", seamark.col_body);
         printf("<tag k=\"seamark:body_design\" v=\"%s%s\"/>\n", seamark.col_body, seamark.pat_body);
+      }
+      if (strlen(seamark.col_top) > 0) {
+        printf("<tag k=\"seamark:top_colour\" v=\"%s\"/>\n", seamark.col_top);
+        printf("<tag k=\"seamark:top_design\" v=\"%s%s\"/>\n", seamark.col_top, seamark.pat_top);
       }
       
       if (seamark.isLit) {
@@ -590,16 +598,15 @@ int main (int argc, const char * argv[]) {
                   break;
                 case COLOUR:
                   item = strtok(value, ";");
-                  strcpy(str, "");
+                  strcpy(seamark.col_top, "");
                   do {
                     Col_t col = (Col_t)getkey((Map_t*)ColSTR, item);
-                    strcat(str, getval((Map_t*)ColMAP, (Key_t)col));
+                    strcat(seamark.col_top, getval((Map_t*)ColMAP, (Key_t)col));
                     item = strtok(NULL, ";");
                   } while (item != NULL);
-                  printf("<tag k=\"seamark:top_colour\" v=\"%s\"/>\n", str);
                   break;
                 case COLPAT:
-                  printf("<tag k=\"seamark:top_colour_pattern\" v=\"%s\"/>\n", value);
+                  strcpy(seamark.pat_top, getval((Map_t*)PatMAP, getkey((Map_t*)PatSTR, value)));
                   break;
                 default:
                   printf("%s", line);

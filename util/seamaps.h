@@ -90,7 +90,7 @@ typedef enum {
 typedef struct { Pat_t key; char *val; } PatSTR_t;
 
 typedef enum {
-  NOTOP, CYL, CONE, SPHERE, X_SHAPE, NORTH, SOUTH, EAST, WEST, SPHERES2, BOARD, DIAMOND, CIRCLE, TRIANGLE, TRIANGLE_INV, SQUARE
+  NOTOP, CYL, CONE, CONE_INV, SPHERE, X_SHAPE, NORTH, SOUTH, EAST, WEST, SPHERES2, BOARD, DIAMOND, CIRCLE, TRIANGLE, TRIANGLE_INV, SQUARE
 } Top_t;
 typedef struct { Top_t key; char *val; } TopSTR_t;
 

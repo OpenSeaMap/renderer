@@ -365,6 +365,7 @@ const PatSTR_t PatMAP[] = {
 const TopSTR_t TopSTR[] = {
   {CYL, "cylinder"},
   {CONE, "cone, point up"},
+  {CONE_INV, "cone, point down"},
   {SPHERE, "sphere"},
   {X_SHAPE, "x-shape"},
   {NORTH, "2 cones up"},
