@@ -308,7 +308,8 @@
     
     <rule e="node" k="seamark:top_shape" v="triangle, point up">
       <rule e="node" k="seamark:body_shape" v="beacon|tower|stake">
-        <rule e="node" k="seamark:top_design" v="WGB">
+        <rule e="node" k="seamark:top_design" v="G|WGB">
+          <rule e="node" k="seamark:top_design" v="G"><symbol ref="Top_Triangle_Green_Beacon" position="center"/></rule>
           <rule e="node" k="seamark:top_design" v="WGB"><symbol ref="Top_Triangle_White_Green_Beacon" position="center"/></rule>
         </rule>
         <else><symbol ref="Top_Triangle_Beacon" position="center"/></else>
@@ -317,7 +318,8 @@
     
     <rule e="node" k="seamark:top_shape" v="triangle, point down">
       <rule e="node" k="seamark:body_shape" v="beacon|tower|stake">
-        <rule e="node" k="seamark:top_design" v="WRB">
+        <rule e="node" k="seamark:top_design" v="R|WRB">
+          <rule e="node" k="seamark:top_design" v="R"><symbol ref="Top_Triangle_Inv_Red_Beacon" position="center"/></rule>
           <rule e="node" k="seamark:top_design" v="WRB"><symbol ref="Top_Triangle_Inv_White_Red_Beacon" position="center"/></rule>
         </rule>
         <else><symbol ref="Top_Triangle_Inv_Beacon" position="center"/></else>
