@@ -737,6 +737,12 @@
   <!-- Notices -->
   
   <rule e="node" k="seamark:type" v="notice">
+    <rule e="node" k="seamark:notice_top" v="board"><symbol ref="Board_Top" position="center"/></rule>
+    <rule e="node" k="seamark:notice_bottom" v="board"><symbol ref="Board_Bottom" position="center"/></rule>
+    <rule e="node" k="seamark:notice_bottom" v="triangle"><symbol ref="Triangle_Bottom" position="center"/></rule>
+    <rule e="node" k="seamark:notice_left" v="triangle"><symbol ref="Triangle_Left" position="center"/></rule>
+    <rule e="node" k="seamark:notice_right" v="triangle"><symbol ref="Triangle_Right" position="center"/></rule>
+    
     <rule e="node" k="seamark:notice:category" v="no_entry"><symbol ref="Notice_A1" position="center"/></rule>
     <rule e="node" k="seamark:notice:category" v="closed_area"><symbol ref="Notice_A1a" position="center"/></rule>
     <rule e="node" k="seamark:notice:category" v="no_overtaking"><symbol ref="Notice_A2" position="center"/></rule>

@@ -24,12 +24,12 @@ typedef enum {
   BOYCAR, BOYISD, BOYLAT, BOYSAW, BOYSPP, LITMAJ, LITMIN, LNDMRK,
   LITFLT, LITVES, TOPMAR, DAYMAR, FOGSIG, LIGHTS, RADRFL, RTPBCN,
   MORFAC, SISTAW, SISTAT, CGUSTA, PILBOP, RSCSTA, RDOSTA, RADSTA,
-  OFSPLF, BUISGL
+  OFSPLF, BUISGL, NOTMRK
 } Obj_t;
 typedef struct { Obj_t key; char *val; } ObjSTR_t;
 
 typedef enum {
-  UNKATT, CATEGORY, SHAPE, COLOUR, COLPAT, SYSTEM, GROUP, PERIOD, RANGE, CHANNEL, FUNCTION
+  UNKATT, CATEGORY, SHAPE, COLOUR, COLPAT, SYSTEM, GROUP, PERIOD, RANGE, CHANNEL, FUNCTION, ADDMRK
 } Att_t;
 typedef struct { Att_t key; char *val; } AttSTR_t;
 
@@ -125,6 +125,11 @@ typedef enum {
 } Fnc_t;
 typedef struct { Fnc_t key; char *val; } FncSTR_t;
 
+typedef enum {
+  NOADD, TBRD, BBRD, RTRI, LTRI, BTRI
+} Add_t;
+typedef struct { Add_t key; char *val; } AddSTR_t;
+
 typedef enum { NULKEY } Key_t;
 typedef struct { Key_t key; char *val; } Map_t;
 
@@ -153,6 +158,7 @@ extern const CnsSTR_t CnsSTR[];
 extern const ConSTR_t ConSTR[];
 extern const CatSTR_t SisMAP[];
 extern const FncSTR_t FncSTR[];
+extern const AddSTR_t AddSTR[];
 
 extern Key_t getkey(Map_t[], char*);
 extern char *getval(Map_t[], Key_t);

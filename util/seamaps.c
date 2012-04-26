@@ -51,6 +51,7 @@ const ObjSTR_t ObjSTR[] = {
   {RADSTA, "radar_station"},
   {OFSPLF, "platform"},
   {BUISGL, "building"},
+  {NOTMRK, "notice"},
   {UNKOBJ, ""}
 };
 
@@ -65,6 +66,7 @@ const AttSTR_t AttSTR[] = {
   {RANGE, "range"},
   {CHANNEL, "channel"},
   {FUNCTION, "function"},
+  {ADDMRK, "addition"},
   {UNKATT, ""}
 };
 
@@ -532,6 +534,15 @@ const FncSTR_t FncSTR[] = {
   {STAD, "stadium"},
   {BUSS, "bus_station"},
   {UNKFNC, ""}
+};
+
+const AddSTR_t AddSTR[] = {
+  {TBRD, "top_board"},
+	{BBRD, "bottom_board"},
+	{RTRI, "right_triangle"},
+	{LTRI, "left_triangle"},
+	{BTRI, "bottom_triangle"},
+	{NOADD, ""}
 };
 
 Key_t getkey(Map_t map[], char *val) {

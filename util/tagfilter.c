@@ -813,6 +813,37 @@ int main (int argc, const char * argv[]) {
               if ((getkey((Map_t*)AttSTR, attribute) == CATEGORY) && (strcmp(value, "fpso") == 0))
                 seamark.shp = FPSO;
               break;
+            case NOTMRK:
+              switch (getkey((Map_t*)AttSTR, attribute)) {
+                case ADDMRK:
+                  item = strtok(value, ";");
+                  do {
+                    switch ((Add_t)getkey((Map_t*)AddSTR, item)) {
+                      case TBRD:
+                        printf("<tag k=\"seamark:notice_top\" v=\"board\"/>\n");
+                        break;
+                      case BBRD:
+                        printf("<tag k=\"seamark:notice_bottom\" v=\"board\"/>\n");
+                        break;
+                      case RTRI:
+                        printf("<tag k=\"seamark:notice_right\" v=\"triangle\"/>\n");
+                        break;
+                      case LTRI:
+                        printf("<tag k=\"seamark:notice_left\" v=\"triangle\"/>\n");
+                        break;
+                      case BTRI:
+                        printf("<tag k=\"seamark:notice_bottom\" v=\"triangle\"/>\n");
+                        break;
+                      default:
+                        break;
+                    }
+                    item = strtok(NULL, ";");
+                  } while (item != NULL);
+                  break;
+                default:
+                  printf("%s", line);
+              }
+              break;
             default:
               printf("%s", line);
               break;
