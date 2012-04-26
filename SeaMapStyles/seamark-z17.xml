@@ -874,9 +874,9 @@
     <rule e="node" k="seamark:notice:category" v="sailing_craft_permitted"><symbol ref="Notice_E18" position="center"/></rule>
     <rule e="node" k="seamark:notice:category" v="unpowered_craft_permitted"><symbol ref="Notice_E19" position="center"/></rule>
     <rule e="node" k="seamark:notice:category" v="sailboards_permitted"><symbol ref="Notice_E20" position="center"/></rule>
-    <rule e="node" k="seamark:notice:category" v="radio_information"><symbol ref="Notice_E21" position="center"/></rule>
+    <rule e="node" k="seamark:notice:category" v="high_speeds_permitted"><symbol ref="Notice_E21" position="center"/></rule>
     <rule e="node" k="seamark:notice:category" v="water_bikes_permitted"><symbol ref="Notice_E22" position="center"/></rule>
-    <rule e="node" k="seamark:notice:category" v="high_speeds_permitted"><symbol ref="Notice_E23" position="center"/></rule>
+    <rule e="node" k="seamark:notice:category" v="radio_information"><symbol ref="Notice_E23" position="center"/></rule>
     <rule e="node" k="seamark:notice:category" v="launching_beaching_permitted"><symbol ref="Notice_E24" position="center"/></rule>
   </rule>
   
