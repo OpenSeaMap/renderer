@@ -52,6 +52,7 @@ const ObjSTR_t ObjSTR[] = {
   {OFSPLF, "platform"},
   {BUISGL, "building"},
   {NOTMRK, "notice"},
+  {PILPNT, "pile"},
   {UNKOBJ, ""}
 };
 

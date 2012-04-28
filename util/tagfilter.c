@@ -142,6 +142,8 @@ int main (int argc, const char * argv[]) {
             default:
               printf("<tag k=\"seamark:body_shape\" v=\"%s\"/>\n", (char*)getval((Map_t*)ShpSTR, (Key_t)seamark.shp));
           }
+        } else if ((seamark.obj == PILPNT) && (seamark.shp == PILE) && (seamark.lgt[0].col != UNKCOL)) {
+          printf("<tag k=\"seamark:body_shape\" v=\"light_minor\"/>\n");
         } else {
           printf("<tag k=\"seamark:body_shape\" v=\"%s\"/>\n", (char*)getval((Map_t*)ShpSTR, (Key_t)seamark.shp));
         }
@@ -517,6 +519,10 @@ int main (int argc, const char * argv[]) {
               if (seamark.shp == UNKSHP)
                 seamark.shp = PLATFORM;
               break;
+            case PILPNT:
+              if (seamark.shp == UNKSHP)
+                seamark.shp = PILE;
+              break;
             default:
               printf("%s", line);
           }
@@ -812,6 +818,24 @@ int main (int argc, const char * argv[]) {
             case OFSPLF:
               if ((getkey((Map_t*)AttSTR, attribute) == CATEGORY) && (strcmp(value, "fpso") == 0))
                 seamark.shp = FPSO;
+              break;
+            case PILPNT:
+              switch (getkey((Map_t*)AttSTR, attribute)) {
+                case COLOUR:
+                  seamark.shp = BEACON;
+                  item = strtok(value, ";");
+                  strcpy(seamark.col_body, "");
+                  do {
+                    strcat(seamark.col_body, getval((Map_t*)ColMAP, getkey((Map_t*)ColSTR, item)));
+                    item = strtok(NULL, ";");
+                  } while (item != NULL);
+                  break;
+                case COLPAT:
+                  strcpy(seamark.pat_body, getval((Map_t*)PatMAP, getkey((Map_t*)PatSTR, value)));
+                  break;
+                default:
+                  printf("%s", line);
+              }
               break;
             case NOTMRK:
               switch (getkey((Map_t*)AttSTR, attribute)) {
