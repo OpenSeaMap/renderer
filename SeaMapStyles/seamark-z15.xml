@@ -830,7 +830,7 @@
       <rule e="node" k="seamark:notice:category" v="telephone"><symbol ref="Notice_E14" position="center"/></rule>
       <rule e="node" k="seamark:notice:category" v="motor_craft_permitted"><symbol ref="Notice_E15" position="center"/></rule>
       <rule e="node" k="seamark:notice:category" v="sport_craft_permitted"><symbol ref="Notice_E16" position="center"/></rule>
-      <rule e="node" k="seamark:notice:category" v="water_skiing_permitted"><symbol ref="Notice_E17" position="center"/></rule>
+      <rule e="node" k="seamark:notice:category" v="waterskiing_permitted"><symbol ref="Notice_E17" position="center"/></rule>
       <rule e="node" k="seamark:notice:category" v="sailing_craft_permitted"><symbol ref="Notice_E18" position="center"/></rule>
       <rule e="node" k="seamark:notice:category" v="unpowered_craft_permitted"><symbol ref="Notice_E19" position="center"/></rule>
       <rule e="node" k="seamark:notice:category" v="sailboards_permitted"><symbol ref="Notice_E20" position="center"/></rule>
