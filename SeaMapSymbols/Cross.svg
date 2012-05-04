@@ -1,99 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="400" width="300" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
- <defs id="defs4">
-  <pattern id="SVGID_3_-8-6" xlink:href="#_x31_0_lpi_30_x25_-9" patternTransform="matrix(.7467 -.7467 .7467 .7467 3977.5 -8206.6)"/>
-  <clipPath id="SVGID_2_-5-6">
-   <use id="use3208-32-1" xlink:href="#SVGID_1_" height="400" width="288" y="0" x="0"/>
-  </clipPath>
- </defs>
- <metadata id="metadata7">
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-    <dc:format>image/svg+xml</dc:format>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:title/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <g id="layer14">
-  <g id="Chimney-0-7" transform="translate(6.0443 .041)" class="st10" stroke="#000" stroke-width="5" display="none" fill="none">
-   <circle id="circle5628-8" d="m 156.5,200.00101 c 0,6.90356 -5.59644,12.5 -12.5,12.5 -6.90356,0 -12.5,-5.59644 -12.5,-12.5 0,-6.90356 5.59644,-12.5 12.5,-12.5 6.90356,0 12.5,5.59644 12.5,12.5 z" display="inline" class="st2" cy="200" cx="144" r="12.5"/>
-   <path id="path5630-8" d="m154.02 65.573c2.085-4.296 10.428-6.448 10.428-10.744" display="inline" class="st2"/>
-   <path id="path5632-2" d="m134.23 65.083c-3.558-17.769 23.098-33.759 30.214-21.32" display="inline" class="st2"/>
-   <path id="path5634-9" d="m154.89 68.51" display="inline" class="st2"/>
-   <path id="path5636-1" d="m132.89 68.51" display="inline" class="st2"/>
-   <polyline id="polyline5638-3" display="inline" class="st2" points="119 200 134 71 154 71 169 200"/>
-   <path id="path5640-5" d="m159.93 39.938c41.957-41.761 82.291 64.239-0.461 20.63" display="inline" class="st2"/>
-   <line id="line5642-9" y2="200" display="inline" class="st2" y1="200" x2="181.5" x1="156.5"/>
-   <line id="line5644-8" y2="200" display="inline" class="st2" y1="200" x2="131.5" x1="106.5"/>
-  </g>
-  <g id="Monument-0-4" transform="translate(6.0443 .041)" display="none" class="st10">
-   <line id="line5647-0" stroke-width="5" y2="200" display="inline" class="st2" y1="200" stroke="#000" x2="181.5" x1="156.5" fill="none"/>
-   <line id="line5649-7" stroke-width="5" y2="200" display="inline" class="st2" y1="200" stroke="#000" x2="131.5" x1="106.5" fill="none"/>
-   <circle id="circle5651-6" stroke-width="5" d="m 156.5,200 c 0,6.90356 -5.59644,12.5 -12.5,12.5 -6.90356,0 -12.5,-5.59644 -12.5,-12.5 0,-6.90356 5.59644,-12.5 12.5,-12.5 6.90356,0 12.5,5.59644 12.5,12.5 z" display="inline" stroke="#000" class="st2" cy="200" cx="144" r="12.5" fill="none"/>
-   <g id="g5653-3" display="inline" class="st7">
-    <defs id="defs5655-61">
-     <path id="SVGID_1_-61-5" d="m175.5 63.5c0-17.404-14.1-31.5-31.5-31.5-17.404 0-31.5 14.096-31.5 31.5 0 9.572 4.27 18.138 11.003 23.914l-4.5 112.59h12c0-7.18 5.82-13 13-13s13 5.82 13 13h12l-4.5-112.59c6.73-5.772 11-14.338 11-23.91z"/>
-    </defs>
-    <clipPath id="SVGID_2_-3-4">
-     <use id="use5659-2" xlink:href="#SVGID_1_-61-5" height="1" width="1" y="0" x="0"/>
-    </clipPath>
-    <polygon id="polygon5662-9" clip-path="url(#SVGID_2_-5-6)" points="294 102.07 151.94 -40 -6 117.93 136.07 260" class="st0" fill="url(#SVGID_3_-8-6)"/>
-   </g>
-   <g id="g5664-7" display="inline" class="st7">
-    <g id="g5666-3">
-     <path id="path5668-7" d="m175.5 63c0-17.404-14.096-31.5-31.5-31.5s-31.5 14.096-31.5 31.5c0 9.572 4.271 18.138 11.003 23.914l-4.5 112.59h12c0-7.18 5.82-13 13-13s13 5.82 13 13h12l-4.5-112.59c6.73-5.772 11-14.338 11-23.91z" stroke="#000" stroke-width="5" class="st8" fill="none"/>
-    </g>
-   </g>
-  </g>
-  <g id="Radio_x5F_mast-9-2" transform="translate(6.0443 .041)" class="st10" stroke="#000" stroke-width="5" display="none" fill="none">
-   <circle id="circle5671-6" d="m 156.5,200.00101 c 0,6.90356 -5.59644,12.5 -12.5,12.5 -6.90356,0 -12.5,-5.59644 -12.5,-12.5 0,-6.90356 5.59644,-12.5 12.5,-12.5 6.90356,0 12.5,5.59644 12.5,12.5 z" display="inline" class="st2" cy="200" cx="144" r="12.5"/>
-   <line id="line5673-0" y2="200" display="inline" class="st2" y1="200" x2="181.5" x1="156.5"/>
-   <line id="line5675-1" y2="200" display="inline" class="st2" y1="200" x2="131.5" x1="106.5"/>
-   <polyline id="polyline5677-6" display="inline" class="st2" points="119 200 144 71 169 200"/>
-   <g id="g5679-5" class="st7" stroke-linecap="round" display="inline">
-    <path id="path5681-7" d="m176.69 40.093c7.63 8.062 12.31 18.934 12.31 30.907s-4.685 22.845-12.31 30.907" class="st9"/>
-    <path id="path5683-5" d="m111.31 40.093c-7.63 8.062-12.31 18.934-12.31 30.907s4.685 22.845 12.31 30.907" class="st9"/>
-    <path id="path5685-4" d="m167.61 93.322c5.51-5.823 8.89-13.675 8.89-22.322s-3.384-16.499-8.891-22.321" class="st9"/>
-    <path id="path5687-1" d="m120.39 48.678c-5.51 5.823-8.89 13.675-8.89 22.322s3.383 16.499 8.891 22.322" class="st9"/>
-   </g>
-  </g>
-  <g id="Flare_x5F_stack-44-0" stroke="#000" transform="translate(6.0443 .041)" display="none" class="st10">
-   <line id="line5701-71" stroke-width="5" y2="200" display="inline" class="st2" y1="200" x2="181.5" x1="156.5" fill="none"/>
-   <line id="line5703-77" stroke-width="5" y2="200" display="inline" class="st2" y1="200" x2="131.5" x1="106.5" fill="none"/>
-   <path id="path5705-7" d="m157.57 26.465c-12.57 28.802 11.05 39.827-3.57 58.452-5.75 7.326-15.88 10.083-21.5-0.667-14.033-26.818 31.25-63 31.25-63" display="inline" stroke-width="3" class="st1" fill="none"/>
-   <circle id="circle5707-7" stroke-width="5" d="m 156.5,200 c 0,6.90356 -5.59644,12.5 -12.5,12.5 -6.90356,0 -12.5,-5.59644 -12.5,-12.5 0,-6.90356 5.59644,-12.5 12.5,-12.5 6.90356,0 12.5,5.59644 12.5,12.5 z" display="inline" class="st2" cy="200" cx="144" r="12.5" fill="none"/>
-   <rect id="rect5709-3" stroke-width="5" display="inline" width="15" y="87.5" x="136.5" height="100" class="st6"/>
-  </g>
-  <g id="Flagstaff-6-3" transform="translate(6.0443 .041)" class="st10" stroke="#000" stroke-width="5" display="none" fill="none">
-   <line id="line5712-5" y2="200" display="inline" class="st2" y1="200" x2="181.5" x1="156.5"/>
-   <line id="line5714-9" y2="200" display="inline" class="st2" y1="200" x2="131.5" x1="106.5"/>
-   <circle id="circle5716-9" d="m 156.5,200 c 0,6.90356 -5.59644,12.5 -12.5,12.5 -6.90356,0 -12.5,-5.59644 -12.5,-12.5 0,-6.90356 5.59644,-12.5 12.5,-12.5 6.90356,0 12.5,5.59644 12.5,12.5 z" display="inline" class="st2" cy="200" cx="144" r="12.5"/>
-   <line id="line5718-8" y2="25" display="inline" class="st2" y1="187.5" x2="144" x1="144"/>
-   <polyline id="polyline5720-1" display="inline" class="st2" points="144 40 186 40 186 82 144 82"/>
-  </g>
-  <g id="Dish_x5F_aerial-0-82" stroke="#000" transform="translate(6.0443 .041)" display="none" class="st10">
-   <line id="line5723-66" stroke-width="5" y2="200" display="inline" class="st2" y1="200" x2="181.5" x1="156.5" fill="none"/>
-   <line id="line5725-03" stroke-width="5" y2="200" display="inline" class="st2" y1="200" x2="131.5" x1="106.5" fill="none"/>
-   <circle id="circle5727-8" stroke-width="5" d="m 156.5,200 c 0,6.90356 -5.59644,12.5 -12.5,12.5 -6.90356,0 -12.5,-5.59644 -12.5,-12.5 0,-6.90356 5.59644,-12.5 12.5,-12.5 6.90356,0 12.5,5.59644 12.5,12.5 z" display="inline" class="st2" cy="200" cx="144" r="12.5" fill="none"/>
-   <path id="path5729-0" d="m140.01 42.636c-22.984 13.27-29.292 45.37-14.092 71.698s46.154 36.914 69.138 23.644l-55.05-95.344z" display="inline" stroke-width="5" class="st2" fill="none"/>
-   <polygon id="polygon5731-1" display="inline" class="st6" points="146 137 151 187 137 187 142 137" stroke-width="5"/>
-   <polygon id="polygon5733-2" display="inline" class="st5" points="175.89 82.851 169.69 89.12 168.03 86.21" stroke-width="2"/>
-  </g>
-  <g id="Tower-6-50" transform="translate(6.0443 .041)" class="st10" stroke="#000" stroke-width="5" display="none" fill="none">
-   <line id="line5736-9" y2="71" display="inline" class="st2" y1="71" x2="160" x1="128"/>
-   <circle id="circle5738-4" d="m 156.5,200.00101 c 0,6.90356 -5.59644,12.5 -12.5,12.5 -6.90356,0 -12.5,-5.59644 -12.5,-12.5 0,-6.90356 5.59644,-12.5 12.5,-12.5 6.90356,0 12.5,5.59644 12.5,12.5 z" display="inline" class="st2" cy="200" cx="144" r="12.5"/>
-   <line id="line5740-7" y2="200" display="inline" class="st2" y1="200" x2="181.5" x1="156.5"/>
-   <line id="line5742-8" y2="200" display="inline" class="st2" y1="200" x2="131.5" x1="106.5"/>
-   <polyline id="polyline5744-3" display="inline" class="st2" points="119 200 128 71 128 32 160 32 160 71 169 200"/>
-  </g>
-  <g id="g5786" stroke="#000" fill="none">
-   <circle id="circle5690-0" stroke-width="5" d="m 156.5,200.00101 c 0,6.90356 -5.59644,12.5 -12.5,12.5 -6.90356,0 -12.5,-5.59644 -12.5,-12.5 0,-6.90356 5.59644,-12.5 12.5,-12.5 6.90356,0 12.5,5.59644 12.5,12.5 z" transform="translate(6.0443 .041)" cy="200" cx="144" r="12.5" class="st8"/>
-   <line id="line5692-0" stroke-width="5" y2="200.04" class="st8" y1="200.04" x2="187.54" x1="162.54"/>
-   <line id="line5694-1" stroke-width="5" y2="200.04" class="st8" y1="200.04" x2="137.54" x1="112.54"/>
-   <path id="path5782" d="m150 186v-152" stroke-width="8"/>
-   <path id="path5784" d="m119.01 71h61.977" stroke-width="8"/>
-  </g>
- </g>
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="300"
+   height="400">
+	<g id="cross" width="300" height="400">
+		<path d="m 119,67 0,8 62,0 0,-8 -62,0 z m 27,-33 0,152 8,0 0,-152 -8,0 z m -33.46875,163.53125 0,5 25,0 0,-5 -25,0 z m 50,0 0,5 25,0 0,-5 -25,0 z M 150.0443,185.041 c -8.25466,0 -15,6.74534 -15,15 0,8.25466 6.74534,15 15,15 8.25466,0 15,-6.74534 15,-15 0,-8.25466 -6.74534,-15 -15,-15 z m 0,5 c 5.55246,0 10,4.44754 10,10 0,5.55246 -4.44754,10 -10,10 -5.55246,0 -10,-4.44754 -10,-10 0,-5.55246 4.44754,-10 10,-10 z"/>
+	</g>
 </svg>

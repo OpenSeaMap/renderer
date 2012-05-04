@@ -18,7 +18,7 @@ const RegSTR_t RegSTR[] = {
 };
 
 const ObjSTR_t ObjSTR[] = {
-  {TYPTAG, "type"},
+  {MASTER, "type"},
   {OBJNAM, "name"},
   {LIGHTS, "light"},
   {LITMIN, "light_minor"},
@@ -53,6 +53,9 @@ const ObjSTR_t ObjSTR[] = {
   {BUISGL, "building"},
   {NOTMRK, "notice"},
   {PILPNT, "pile"},
+  {BCNWTW, "beacon_waterway"},
+  {BOYWTW, "buoy_waterway"},
+  {RESARE, "restricted_area"},
   {UNKOBJ, ""}
 };
 

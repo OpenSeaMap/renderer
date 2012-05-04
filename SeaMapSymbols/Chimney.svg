@@ -1,5 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
-<svg id="svg8829" xml:space="preserve" height="400" viewBox="0 0 300 400" xmlns:dc="http://purl.org/dc/elements/1.1/" width="300" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" y="0px" x="0px" enable-background="new 0 0 320 320"><metadata id="metadata14"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title/></cc:Work></rdf:RDF></metadata>
-<g id="layer1" transform="translate(0,80)"><g id="Chimney" transform="translate(5.9245 -79.916)" stroke="#000" stroke-width="5" fill="none"><circle id="circle3177" d="m 156.5,200.00101 c 0,6.90356 -5.59644,12.5 -12.5,12.5 -6.90356,0 -12.5,-5.59644 -12.5,-12.5 0,-6.90356 5.59644,-12.5 12.5,-12.5 6.90356,0 12.5,5.59644 12.5,12.5 z" cx="144" cy="200" r="12.5" class="st8"/><path id="path3179" d="m154.02 65.573c2.085-4.296 10.428-6.448 10.428-10.744" class="st8"/><path id="path3181" d="m134.23 65.083c-3.558-17.769 23.098-33.759 30.214-21.32" class="st8"/><path id="path3183" d="m154.89 68.51" class="st8"/><path id="path3185" d="m132.89 68.51" class="st8"/><polyline id="polyline3187" points="119 200 134 71 154 71 169 200" class="st8"/><path id="path3189" d="m159.93 39.938c41.957-41.761 82.291 64.239-0.461 20.63" class="st8"/><line id="line3191" y2="200" x2="181.5" y1="200" x1="156.5" class="st8"/><line id="line3193" y2="200" x2="131.5" y1="200" x1="106.5" class="st8"/></g></g>
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="300"
+   height="400">
+	<g id="chimney" width="300" height="400" transform="translate(5.9245,0)"
+     style="fill:none;stroke:#000000;stroke-width:5">
+     <circle cx="144" cy="200" r="12.5" />
+     <path d="m 154.02,65.573 c 2.085,-4.296 10.428,-6.448 10.428,-10.744"/>
+     <path d="m 134.23,65.083 c -3.558,-17.769 23.098,-33.759 30.214,-21.32"/>
+     <path d="M 154.89,68.51"/>
+     <path d="M 132.89,68.51"/>
+     <polyline points="119 200 134 71 154 71 169 200"/>
+     <path d="m 159.93,39.938 c 41.957,-41.761 82.291,64.239 -0.461,20.63"/>
+     <line y2="200" x2="181.5" y1="200" x1="156.5"/>
+     <line y2="200" x2="131.5" y1="200" x1="106.5"/>
+	</g>
 </svg>
