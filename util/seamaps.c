@@ -10,11 +10,11 @@
 #include "seamaps.h"
 
 const RegSTR_t RegSTR[] = {
-  {A, "iala-a"},
-  {B, "iala-b"},
-  {C, "cevni"},
-  {R, "riwr"},
-  {X, "other"}
+  {IALAA, "iala-a"},
+  {IALAB, "iala-b"},
+  {CEVNI, "cevni"},
+  {RIWR, "riwr"},
+  {OTHER, "other"}
 };
 
 const ObjSTR_t ObjSTR[] = {
@@ -56,6 +56,9 @@ const ObjSTR_t ObjSTR[] = {
   {BCNWTW, "beacon_waterway"},
   {BOYWTW, "buoy_waterway"},
   {RESARE, "restricted_area"},
+  {SLCONS, "shoreline_construction"},
+  {NAVLNE, "navigation_line"},
+  {RECTRC, "recommended_track"},
   {UNKOBJ, ""}
 };
 
@@ -64,12 +67,12 @@ const AttSTR_t AttSTR[] = {
   {SHAPE, "shape"},
   {COLOUR, "colour"},
   {COLPAT, "colour_pattern"},
-  {SYSTEM, "system"},
+  {MARSYS, "system"},
   {GROUP, "group"},
   {PERIOD, "period"},
   {RANGE, "range"},
-  {CHANNEL, "channel"},
-  {FUNCTION, "function"},
+  {COMCHA, "channel"},
+  {FUNCTN, "function"},
   {ADDMRK, "addition"},
   {UNKATT, ""}
 };
@@ -153,6 +156,24 @@ const CatSTR_t CatSTR[] = {
   {LMK_WNDL, "windmill"},
   {LMK_SPIR, "spire"},
   {LMK_MNRT, "minaret"},
+  {SLC_BWTR, "breakwater"},
+	{SLC_GRYN, "groyne"},
+	{SLC_MOLE, "mole"},
+	{SLC_PIER, "pier"},
+	{SLC_PPIR, "promenade_pier"},
+	{SLC_WHRF, "wharf"},
+	{SLC_TRWL, "training_wall"},
+	{SLC_RPRP, "rip_rap"},
+	{SLC_RVMT, "revetment"},
+	{SLC_SWAL, "sea_wall"},
+	{SLC_LSTP, "landing_steps"},
+	{SLC_RAMP, "ramp"},
+	{SLC_SWAY, "slipway"},
+	{SLC_FNDR, "fender"},
+	{SLC_SFWF, "solid_face_wharf"},
+	{SLC_OFWF, "open_face_wharf"},
+	{SLC_LRMP, "log_ramp"},
+	{SLC_LKWL, "lock_wall"},
   {NOCAT, ""}
 };
 
@@ -373,18 +394,18 @@ const TopSTR_t TopSTR[] = {
   {CONE, "cone, point up"},
   {CONE_INV, "cone, point down"},
   {SPHERE, "sphere"},
-  {X_SHAPE, "x-shape"},
+  {SALTIRE, "x-shape"},
   {NORTH, "2 cones up"},
   {SOUTH, "2 cones down"},
   {EAST, "2 cones base together"},
   {WEST, "2 cones point together"},
-  {SPHERES2, "2 spheres"},
+  {ISOL, "2 spheres"},
   {BOARD, "board"},
-  {DIAMOND, "diamond"},
+  {RHOMBUS, "rhombus"},
   {CIRCLE, "circle"},
   {TRIANGLE, "triangle, point up"},
   {TRIANGLE_INV, "triangle, point down"},
-  {SQUARE, "square"},
+  {RECTEQ, "square"},
   {NOTOP, ""}
 };
 
@@ -554,19 +575,19 @@ Key_t getkey(Map_t map[], char *val) {
   if (val != NULL) {
     for (i = 0; map[i].key != NULKEY; i++) {
       if (strcmp(map[i].val, val) == 0) {
-        return (map[i].key);
+        return map[i].key;
       }
     }
   }
-  return (0);
+  return 0;
 }
 
 char *getval(Map_t map[], Key_t key) {
   int i;
   for (i = 0; map[i].key != NULKEY; i++) {
     if (map[i].key == key) {
-      return (map[i].val);
+      return map[i].val;
     }
   }
-  return ("");
+  return "";
 }
