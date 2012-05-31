@@ -153,7 +153,7 @@ typedef enum { NULKEY } Key_t;
 typedef struct { Key_t key; char *val; } Map_t;
 
 extern const RegSTR_t RegSTR[];
-//extern const ObjSTR_t ObjSTR[];
+extern const ObjSTR_t ObjSTR[];
 extern const AttSTR_t AttSTR[];
 extern const CatSTR_t CatSTR[];
 extern const ShpSTR_t ShpSTR[];

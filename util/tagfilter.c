@@ -672,7 +672,7 @@ int main (int argc, const char * argv[]) {
                 case CATEGORY:
                   printf("<tag k=\"seamark:sis_type\" v=\"SS%s\"/>\n", getval((Map_t*)SisMAP, getkey((Map_t*)CatSTR, value)));
                   break;
-                case CHANNEL:
+                case COMCHA:
                   printf("<tag k=\"seamark:sis_chan\" v=\"Ch%s\"/>\n", value);
                   break;
                 default:
@@ -787,7 +787,7 @@ int main (int argc, const char * argv[]) {
                 case CATEGORY:
                   seamark.cat = (Cat_t)getkey((Map_t*)CatSTR, value);
                   break;
-                case SYSTEM:
+                case MARSYS:
                   break;
                 default:
                   printf("%s", line);
@@ -799,7 +799,7 @@ int main (int argc, const char * argv[]) {
                 case CATEGORY:
                   seamark.cat = (Cat_t)getkey((Map_t*)CatSTR, value);
                   break;
-                case FUNCTION:
+                case FUNCTN:
                   seamark.fnc = (Fnc_t)getkey((Map_t*)FncSTR, value);
                   break;
                 default:
@@ -808,7 +808,7 @@ int main (int argc, const char * argv[]) {
               break;
             case BUISGL:
               switch (getkey((Map_t*)AttSTR, attribute)) {
-                case FUNCTION:
+                case FUNCTN:
                   seamark.fnc = (Fnc_t)getkey((Map_t*)FncSTR, value);
                   break;
                 default:

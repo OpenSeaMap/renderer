@@ -693,6 +693,17 @@
     </else>
   </rule>
   
+  <!-- Anchorages -->
+  
+  <rule e="way|node" k="seamark:type" v="anchorage"><symbol ref="Anchorage" position="center"/></rule>
+  <rule e="node" k="seamark:type" v="anchor_berth"><symbol ref="Anchor_Berth" position="center"/></rule>
+  
+  <!-- Marina -->
+  
+  <rule e="way|node" k="seamark:type" v="harbour">
+    <rule e="way|node" k="seamark:harbour:category" v="marina|yacht|yacht_harbour"><symbol ref="Marina" position="center"/></rule>
+  </rule>
+  
 	<!-- Small Craft Facilities -->
   
   <rule e="way|node" k="seamark:type" v="small_craft_facility">
