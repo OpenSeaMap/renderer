@@ -32,13 +32,7 @@
 	</rule>
   
 	<rule e="node|way" k="sport" v="swimming">
-    <rule e="node|way" k="leisure|amenity" v="sports_centre|swimming_pool"></rule>
-    <else>
-      <rule e="node|way" k="building" v="*"></rule>
-      <else>
-        <symbol ref="swimming" position="center"/>
-      </else>
-    </else>
+    <symbol ref="swimming" position="center"/>
 	</rule>
   
 	<rule e="node|way" k="sport" v="windsurfing">
