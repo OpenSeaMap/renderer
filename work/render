@@ -1,47 +1,5 @@
 #!/bin/bash
 
-download () {
-	echo "$(date) fetching next db file" >> log.txt
-#	if [ -e merge.osm ]; then rm merge.osm; fi
-#	while [ ! -e merge.osm ]; do
-#		cat types.txt | while read type; do
-#			touch sort.osm
-#			while [ -e sort.osm ]; do
-##				while ! wget -q -T 1800 --limit-rate=500k -O xapi.osm http://jxapi.openstreetmap.org/xapi/api/0.6/*[seamark:type=$type]; do
-##				while ! wget -q -T 1800 --limit-rate=500k -O xapi.osm http://overpass-api.de/api/xapi?*[seamark:type=$type][@meta]; do
-#				sed s/*/$type/ types.osm3s > get.osm3s
-##				while !	wget -q -T 1800 -O xapi.osm --limit-rate=500k --post-file=get.osm3s http://www.overpass-api.de/api/interpreter; do
-#				while !	wget -q -T 1800 -O xapi.osm --limit-rate=500k --post-file=get.osm3s http://overpass.osm.rambler.ru/cgi/interpreter; do
-#					echo "$(date) wget error - retrying JXAPI" >> log.txt
-#					sleep 60
-#				done
-#				if osmosis -q --rx file=xapi.osm --s --wx file=sort.osm 2> /dev/null; then
-#					rm xapi.osm
-#					if [ -e merge.osm ]; then
-#						osmosis -q --rx file=merge.osm --rx file=sort.osm --m --wx file=tmp.osm 2> /dev/null
-#						mv tmp.osm merge.osm
-#						rm sort.osm
-#					else
-#						mv sort.osm merge.osm
-#					fi
-#				else
-#					echo "$(date) bad data" >> log.txt
-#					touch sort.osm
-#				fi
-#			done
-#		done
-#	done
-#				while ! wget -q -T 1800 --limit-rate=500k -O world.osm http://overpass.osm.rambler.ru/cgi/xapi?*[seamark:type=*][@meta]; do
-#					echo "$(date) wget error - retrying JXAPI" >> log.txt
-#					sleep 60
-#				done
-  ./Overpass/translate_xapi "*[seamark:type=*][@meta]" | ./Overpass/osm3s_query > world.osm
-	../util/smfilter -a 0.01 < world.osm | ../util/tagfilter > next.osm
-#	../util/smfilter -a 0.01 < merge.osm | ../util/tagfilter > next.osm
-#	mv merge.osm world.osm
-	echo "$(date) successful download" >> log.txt
-}
-
 search () {
   zoom[$1]=$(($1+1))
   x[$1]=$(($2*2))
@@ -128,9 +86,10 @@ if [ $# -eq 3 ]; then
 fi
 
 while true; do
-	if [ ! -e next.osm ]; then
-		download
-	fi
+	while [ ! -e next.osm ]; do
+		sleep 10
+	done
+	echo "$(date) Parse world data" >> log.txt
 	mv next.osm tmp/panel-z0.osm
 	search 0 0 0
 	latest=$previous
