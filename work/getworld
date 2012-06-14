@@ -1,7 +1,7 @@
 #!/bin/bash
 
 while true; do
-  ./Overpass/translate_xapi "*[seamark:type=*][@meta]" | ./Overpass/osm3s_query > tmp.osm
+  ./Overpass/translate_xapi "*[seamark:type=*][@meta]" | ./Overpass/osm3s_query > tmp.osm 2> /dev/null;
 	../util/smfilter -a 0.01 < tmp.osm | ../util/tagfilter > next.osm
 	mv tmp.osm world.osm
 done
