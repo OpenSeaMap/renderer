@@ -31,10 +31,11 @@ download () {
 #			done
 #		done
 #	done
-				while ! wget -q -T 1800 --limit-rate=500k -O world.osm http://overpass.osm.rambler.ru/cgi/xapi?*[seamark:type=*][@meta]; do
-					echo "$(date) wget error - retrying JXAPI" >> log.txt
-					sleep 60
-				done
+#				while ! wget -q -T 1800 --limit-rate=500k -O world.osm http://overpass.osm.rambler.ru/cgi/xapi?*[seamark:type=*][@meta]; do
+#					echo "$(date) wget error - retrying JXAPI" >> log.txt
+#					sleep 60
+#				done
+  ./Overpass/translate_xapi "*[seamark:type=*][@meta]" | ./Overpass/osm3s_query > world.osm
 	../util/smfilter -a 0.01 < world.osm | ../util/tagfilter > next.osm
 #	../util/smfilter -a 0.01 < merge.osm | ../util/tagfilter > next.osm
 #	mv merge.osm world.osm
@@ -151,8 +152,8 @@ while true; do
 		echo "$(date) Resumed" >> log.txt
 	fi
 		latest=$(cat datestamp)
-	if [ $previous == $latest ]; then
-		sleep 900
-	fi
+#	if [ $previous == $latest ]; then
+#		sleep 900
+#	fi
 	previous=$latest
 done
