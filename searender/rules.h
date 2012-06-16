@@ -57,18 +57,19 @@
 #define end_sequence free(val);}
 #define map(x) const Smap_t x[] = {
 
-#define colour_symbol(s,p,c) renderSymbol(item, (obj!=NULL)?obj->obj:0, s, p, c, CC, 0, 0, 0)
-#define colour_symbol_place(s,p,c,h) renderSymbol(item, (obj!=NULL)?obj->obj:0, s, p, c, h, 0, 0, 0)
-#define colour_symbol_position(s,p,c,h,x,y) renderSymbol(item, (obj!=NULL)?obj->obj:0, s, p, c, h, x, y, 0)
-#define colour_symbol_orientation(s,p,c,h,x,y,r) renderSymbol(item, (obj!=NULL)?obj->obj:0, s, p, c, h, x, y, r)
-#define symbol(s) renderSymbol(item, (obj!=NULL)?obj->obj:0, s, "", "#000000", CC, 0, 0, 0)
-#define symbol_place(s,h) renderSymbol(item, (obj!=NULL)?obj->obj:0, s, "", "#000000", h, 0, 0, 0)
-#define symbol_position(s,h,x,y) renderSymbol(item, (obj!=NULL)?obj->obj:0, s, "", "#000000", h, x, y, 0)
-#define symbol_orientation(s,h,x,y,r) renderSymbol(item, (obj!=NULL)?obj->obj:0, s, "", "#000000", h, x, y, r)
+#define colour_symbol(s,p,c) renderColourSymbol(item, (obj!=NULL)?obj->obj:0, s, p, c, CC, 0, 0, 0)
+#define colour_symbol_place(s,p,c,h) renderColourSymbol(item, (obj!=NULL)?obj->obj:0, s, p, c, h, 0, 0, 0)
+#define colour_symbol_position(s,p,c,h,x,y) renderColourSymbol(item, (obj!=NULL)?obj->obj:0, s, p, c, h, x, y, 0)
+#define colour_symbol_orientation(s,p,c,h,x,y,r) renderColourSymbol(item, (obj!=NULL)?obj->obj:0, s, p, c, h, x, y, r)
+#define symbol(s) renderSymbol(item, (obj!=NULL)?obj->obj:0, s, "", "", CC, 0, 0, 0)
+#define symbol_place(s,h) renderSymbol(item, (obj!=NULL)?obj->obj:0, s, "", "", h, 0, 0, 0)
+#define symbol_position(s,h,x,y) renderSymbol(item, (obj!=NULL)?obj->obj:0, s, "", "", h, x, y, 0)
+#define symbol_orientation(s,h,x,y,r) renderSymbol(item, (obj!=NULL)?obj->obj:0, s, "", "", h, x, y, r)
 #define symbol_cluster(x) renderCluster(item, x)
 #define symbol_notice renderNotice(item)
 #define light_sector_caption(n,t,s,o,y) renderSector(item, n, t, s, o, y)
 #define light_sector(n) renderSector(item, n, NULL, NULL, 0, 0)
+#define light_flare renderFlare(item)
 
 #define make_string(s) { char *string=strdup(s)
 #define make_char_string(x) { char *string=strdup(charString(item, x, 0))

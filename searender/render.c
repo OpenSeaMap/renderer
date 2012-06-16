@@ -51,7 +51,7 @@ char *light_colours[] = { [COL_UNK]="magenta", [COL_WHT]="#ffff00", [COL_BLK]=""
 char *light_letters[] = { [COL_UNK]="", [COL_WHT]="W", [COL_BLK]="", [COL_RED]="R", [COL_GRN]="G", [COL_BLU]="Bu", [COL_YEL]="Y",
   [COL_GRY]="", [COL_BRN]="", [COL_AMB]="Am", [COL_VIO]="Vi", [COL_ORG]="Or", [COL_MAG]="", [COL_PNK]="" };
 
-char *light_characters[] = { [CHR_UNKN]="", [CHR_F]="F", [CHR_FL]="Fl", [CHR_LFL]="LFl", [CHR_Q]="Q", [CHR_VQ]="VQ", [CHR_UQ]="UQ", [CHR_ISO]="Iso", [CHR_OC9]="Oc",
+char *light_characters[] = { [CHR_UNKN]="", [CHR_F]="F", [CHR_FL]="Fl", [CHR_LFL]="LFl", [CHR_Q]="Q", [CHR_VQ]="VQ", [CHR_UQ]="UQ", [CHR_ISO]="Iso", [CHR_OC]="Oc",
   [CHR_IQ]="IQ", [CHR_IVQ]="IVQ", [CHR_IUQ]="IUQ", [CHR_MO]="Mo", [CHR_FFL]="FFl", [CHR_FLLFL]="FlLFl", [CHR_OCFL]="OcFl", [CHR_FLFL]="FLFl", [CHR_ALOC]="Al.Oc",
   [CHR_ALLFL]="Al.LFl", [CHR_ALFL]="Al.Fl", [CHR_ALGR]="Al.Gr", [CHR_QLFL]="Q+LFl", [CHR_VQLFL]="VQ+LFl", [CHR_UQLFL]="UQ+LFl", [CHR_AL]="Al", [CHR_ALFFL]="Al.FFl" };
 
@@ -279,9 +279,13 @@ int renderSymbol(Item_t *item, Obja_t obj, char *symbol, char * panel, char *col
         x = -dx - params->width/2; y = -dy - params->height/2;
     }
     printf("<g id=\"%d\" transform=\"translate(%f, %f) scale(%f) translate(%f, %f) rotate(%f, %f, %f) \"> <use xlink:href=\"#%s\" style=\"fill:%s\"/> </g>\n",
-           ++ref, coord.x, coord.y, symbolScale[zoom], x, y, angle, -dx-x, -dy-y, sympan, body_colours[enumValue(colour, COLOUR)]);
+           ++ref, coord.x, coord.y, symbolScale[zoom], x, y, angle, -dx-x, -dy-y, sympan, colour);
   }
   return ref;
+}
+
+int renderColourSymbol(Item_t *item, Obja_t obj, char *symbol, char * panel, char *colour, Handle_t handle, double dx, double dy, double angle) {
+  return renderSymbol(item, obj, symbol, panel, body_colours[enumValue(colour, COLOUR)], handle, dx, dy, angle);
 }
 
 void renderCluster(Item_t *item, char *type) {
@@ -435,6 +439,16 @@ void renderNotice(Item_t *item) {
     renderSymbol(item, NOTMRK, base, "", "", CC, dx, dy, orient);
     renderSymbol(item, NOTMRK, symb, "", colour, CC, dx, dy, orient+flip);
   }
+}
+
+void renderFlare(Item_t *item) {
+  char *col = light_colours[COL_MAG];
+  Obj_t *obj = getObj(item, LIGHTS, 0);
+  Tag_t *tag;
+  if (((tag = getTag(obj, COLOUR)) != NULL) && (tag->val.val.l->next == NULL)) {
+    col = light_colours[tag->val.val.l->val];
+  }
+  renderSymbol(item, LIGHTS, "light", "", col, CC, 0, 0, 120);
 }
 
 void renderSector(Item_t *item, int s, char *text, char *style, double offset, int dy) {
@@ -730,6 +744,7 @@ int drawVector(Item_t *item, char *style, int dir) {
 }
 
 int drawLine(Item_t *item, char *style) {
+  if (item->flag != WAY) return 0;
   Ref_t *link = item->type.way.blink;
   double sx = 0.0;
   double lx = 0.0;
@@ -878,9 +893,30 @@ char *charString(Item_t *item, char *type, int idx) {
             }
             if ((tag = getTag(obj, LITCHR)) != NULL) {
               lights->chr = tag->val.val.e;
+              switch (lights->chr) {
+                case CHR_AL:
+                  lights->chr = CHR_F;
+                  break;
+                case CHR_ALOC:
+                  lights->chr = CHR_OC;
+                  break;
+                case CHR_ALLFL:
+                  lights->chr = CHR_LFL;
+                  break;
+                case CHR_ALFL:
+                  lights->chr = CHR_FL;
+                  break;
+                case CHR_ALFFL:
+                  lights->chr = CHR_FFL;
+                  break;
+                default:
+                  break;
+              }
             }
             if ((tag = getTag(obj, SIGGRP)) != NULL) {
               lights->grp = tag->val.val.a;
+            } else {
+              lights->grp = "";
             }
             if ((tag = getTag(obj, SIGPER)) != NULL) {
               lights->per = tag->val.val.f;
@@ -895,17 +931,22 @@ char *charString(Item_t *item, char *type, int idx) {
             }
           }
           strcpy(string2, "");
-          double colrng[14];
+          struct COLRNG {
+            int col;
+            double rng;
+          } colrng[14];
           while (lights != NULL) {
-            bzero(colrng, 14*sizeof(double));
-            colrng[lights->col] = lights->rng;
+            bzero(colrng, 14*sizeof(struct COLRNG));
+            colrng[lights->col].col = 1;
+            colrng[lights->col].rng = lights->rng;
             struct SECT *this = lights;
             struct SECT *next = lights->next;
             while (next != NULL) {
               if ((this->dir == next->dir) && (this->chr == next->chr) &&
-                  ((this->grp == next->grp) || (strcmp(this->grp, next->grp) == 0)) && (this->per == next->per)) {
-                if (next->rng > colrng[next->col])
-                  colrng[next->col] = next->rng;
+                  (strcmp(this->grp, next->grp) == 0) && (this->per == next->per)) {
+                colrng[next->col].col = 1;
+                if (next->rng > colrng[next->col].rng)
+                  colrng[next->col].rng = next->rng;
                 struct SECT *tmp = lights;
                 while (tmp->next != next) tmp = tmp->next;
                 tmp->next = next->next;
@@ -916,22 +957,25 @@ char *charString(Item_t *item, char *type, int idx) {
               }
             }
             if (this->dir) strcpy(string2, "Dir.");
-            if (this->chr == CHR_AL) strcat(string2, "F");
-            else strcat(string2, light_characters[this->chr]);
-            if (this->grp != NULL) {
+            strcat(string2, light_characters[this->chr]);
+            if (strcmp(this->grp, "") != 0) {
               sprintf(strchr(string2, 0), "(%s)", this->grp);
             } else {
               if (strlen(string2) > 0) strcat(string2, ".");
             }
             int n = 0;
-            for (int i = 0; i < 14; i++) if (colrng[i] != 0.0) n++;
+            for (int i = 0; i < 14; i++) if (colrng[i].col) n++;
             double max = 0.0;
-            for (int i = 0; i < 14; i++) if (colrng[i] > max) max = colrng[i];
+            for (int i = 0; i < 14; i++) if (colrng[i].col && (colrng[i].rng > max)) max = colrng[i].rng;
             double min = max;
-            for (int i = 0; i < 14; i++) if ((colrng[i] > 0.0) && (colrng[i] < min)) min = colrng[i];
-            for (int i = 0; i < 14; i++) if (colrng[i] == max) strcat(string2, light_letters[i]);
-            for (int i = 0; i < 14; i++) if ((colrng[i] < max) && (colrng[i] > min)) strcat(string2, light_letters[i]);
-            for (int i = 0; i < 14; i++) if (colrng[i] == min) strcat(string2, light_letters[i]);
+            for (int i = 0; i < 14; i++) if (colrng[i].col && (colrng[i].rng > 0.0) && (colrng[i].rng < min)) min = colrng[i].rng;
+            if (min == max) {
+              for (int i = 0; i < 14; i++) if (colrng[i].col) strcat(string2, light_letters[i]);
+            } else {
+              for (int i = 0; i < 14; i++) if (colrng[i].col && (colrng[i].rng == max)) strcat(string2, light_letters[i]);
+              for (int i = 0; i < 14; i++) if (colrng[i].col && (colrng[i].rng < max) && (colrng[i].rng > min)) strcat(string2, light_letters[i]);
+              for (int i = 0; i < 14; i++) if (colrng[i].col && colrng[i].rng == min) strcat(string2, light_letters[i]);
+            }
             strcat(string2, ".");
             if (this->per > 0.0) sprintf(strchr(string2, 0), "%gs", this->per);
             if (max > 0.0) {

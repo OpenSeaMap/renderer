@@ -40,7 +40,7 @@ int main (int argc, const char * argv[]) {
     exit (EXIT_FAILURE);
   }
   zoom = atoi(argv[1]);
-  if ((zoom < 0) || (zoom > 18)) {
+  if ((zoom < 0) || (zoom > 19)) {
     printf("zoom out of range\n");
     exit (EXIT_FAILURE);
   }

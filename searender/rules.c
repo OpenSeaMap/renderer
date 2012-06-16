@@ -15,6 +15,7 @@ object_rules(lights) {
   if (has_object("light")) {
     int n = object_count("light");
     if (n > 0) {
+      light_flare;
       for (int i = 1; i <= n; i++) {
         if (zoom >= 15) {
           make_char_string_indexed("light", i);
@@ -26,7 +27,8 @@ object_rules(lights) {
           }
         }
       }
-    }
+    } else if (zoom >= 14)
+      light_flare;
     if (zoom >= 15) {
       make_char_string("light");
       node_text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:start", 60, -10);

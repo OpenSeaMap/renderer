@@ -151,7 +151,7 @@ s57val_t functn[] = { [FNC_UNKN]={0, ""}, [FNC_HBRM]={2, "harbour-master"}, [FNC
   [FNC_STAD]={41, "stadium"}, [FNC_BUSS]={42, "bus_station"}, {0, NULL} };
 s57val_t hunits[] = { {1, "metres"}, {2, "feet"}, {3, "kilometres"}, {4, "hectometres"}, {5, "statute_miles"}, {6, "nautical_miles"}, {0, NULL} };
 s57val_t jrsdtn[] = { {1, "international"}, {2, "national"}, {3, "national_sub-division"}, {0, NULL} };
-s57val_t litchr[] = { [CHR_UNKN]={0, ""}, [CHR_F]={1, "F"}, [CHR_FL]={2, "Fl"}, [CHR_LFL]={3, "LFl"}, [CHR_Q]={4, "Q"}, [CHR_VQ]={5, "VQ"}, [CHR_UQ]={6, "UQ"}, [CHR_ISO]={7, "Iso"}, [CHR_OC9]={8, "Oc"},
+s57val_t litchr[] = { [CHR_UNKN]={0, ""}, [CHR_F]={1, "F"}, [CHR_FL]={2, "Fl"}, [CHR_LFL]={3, "LFl"}, [CHR_Q]={4, "Q"}, [CHR_VQ]={5, "VQ"}, [CHR_UQ]={6, "UQ"}, [CHR_ISO]={7, "Iso"}, [CHR_OC]={8, "Oc"},
   [CHR_IQ]={9, "IQ"}, [CHR_IVQ]={10, "IVQ"}, [CHR_IUQ]={11, "IUQ"}, [CHR_MO]={12, "Mo"}, [CHR_FFL]={13, "FFl"}, [CHR_FLLFL]={14, "FlLFl"}, [CHR_OCFL]={15, "OcFl"}, [CHR_FLFL]={16, "FLFl"}, [CHR_ALOC]={17, "Al.Oc"},
   [CHR_ALLFL]={18, "Al.LFl"}, [CHR_ALFL]={19, "Al.Fl"}, [CHR_ALGR]={20, "Al.Gr"}, [CHR_QLFL]={25, "Q+LFl"}, [CHR_VQLFL]={26, "VQ+LFl"}, [CHR_UQLFL]={27, "UQ+LFl"}, [CHR_AL]={28, "Al"}, [CHR_ALFFL]={29, "Al.FFl"}, {0, NULL} };
 s57val_t litvis[] = { {1, "high"}, {2, "low"}, {3, "faint"}, {4, "intensified"}, {5, "unintensified"}, {6, "restricted"}, {7, "obscured"}, {8, "part_obscured"}, {0, NULL} };

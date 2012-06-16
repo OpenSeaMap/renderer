@@ -25,10 +25,12 @@
 typedef enum {CC, TL, TR, TC, LC, RC, BL, BR, BC} Handle_t;
 
 extern void render();
+extern int renderColourSymbol(Item_t*, Obja_t, char*, char*, char*, Handle_t, double, double, double);
 extern int renderSymbol(Item_t*, Obja_t, char*, char*, char*, Handle_t, double, double, double);
 extern void renderCluster(Item_t*, char*);
 extern void renderNotice(Item_t*);
 extern void renderSector(Item_t*, int, char*, char*, double, int);
+extern void renderFlare(Item_t*);
 
 extern int drawLine(Item_t*, char*);
 extern int drawLineText(Item_t*, char*, char*, double, int, int);
