@@ -1,0 +1,18 @@
+all: s57toosm searender
+
+s57toosm: s57toosm.o s57obj.o s57att.o s57val.o
+	cc -o s57toosm s57toosm.o s57obj.o s57att.o s57val.o -liconv
+  
+searender: searender.o map.o render.o rules.o s57obj.o s57att.o s57val.o
+	cc -o searender searender.o map.o render.o rules.o s57obj.o s57att.o s57val.o -liconv
+
+s57toosm.o: s57toosm.c map.h s57obj.h s57att.h s57val.h
+searender.o: searender.c map.h render.h rules.h s57obj.h s57att.h s57val.h
+
+map.o: map.c map.h s57val.h
+render.o: render.c render.h map.h render.h s57val.h
+rules.o: rules.c rules.h map.h render.h s57obj.h s57att.h s57val.h
+s57obj.o: s57obj.c map.h s57obj.h s57att.h s57val.h
+s57att.o: s57att.c map.h s57obj.h s57att.h s57val.h
+s57val.o: s57val.c map.h s57obj.h s57att.h s57val.h
+
