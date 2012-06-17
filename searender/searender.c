@@ -31,6 +31,11 @@ int main (int argc, const char * argv[]) {
   Item_t *item = NULL;
   Obj_t *object = NULL;
   
+  maxlat = -90.0;
+  minlat = 90.0;
+  maxlon = -180.0;
+  minlon = 180.0;
+  
   sleep(2); // *** for debugger capture only
 
   set_conv("UTF-8");
@@ -114,6 +119,11 @@ int main (int argc, const char * argv[]) {
             if (object == NULL)
               object = addObj(item, obj, idx);
           addTag(object, attribute, value);
+          } else {
+            Atta_t att = enumAttribute(prefix, UNKOBJ);
+            if (att != UNKATT) {
+              addTag(&item->objs, prefix, value);
+            }
           }
         }
       else {

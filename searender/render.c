@@ -149,6 +149,9 @@ void render() {
 
   printf("<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\"\n");
   printf(" width=\"%f\" height=\"%f\">\n", lon2x(maxlon), lat2y(minlat));
+  
+  printf(" <rect x=\"0\" y=\"0\" width=\"%g\" height=\"%g\" style=\"fill:#b5d0d0;fill-opacity:1\"/>\n", lon2x(maxlon), lat2y(minlat)); //****** for testing only!!!!*******
+
   char line[2000];
   FILE *fp = fopen("symbols/symbols.svg", "r");
 	while (fgets(line, 2000, fp) != NULL) {
@@ -515,24 +518,16 @@ void renderSector(Item_t *item, int s, char *text, char *style, double offset, i
           r0 = 0.0;
           b0 = b1 = start;
           for (char *tpl = strtok_r(radstr, ";", &ttok); tpl != NULL; tpl = strtok_r(NULL, ";", &ttok)) {
-            char *ele;
             p0 = radial(pos, r0, b0);
-            span = b0 - end;
-            if (*tpl != ':') {
+            span = 0.0;
+            char *ele = strtok_r(tpl, ":", &etok);
+            if ((*tpl == ':') && (r0 == 0.0)) {
+              r1 = 0.2;
+            } else if (*tpl != ':') {
               r1 = atof(tpl);
-              if (r1 != r0) {
-                p1 = radial(pos, r1, b0);
-                if (!((start == 180.0) && (end == 180.0)))
-                  printf("<path d=\"M %g,%g L %g,%g\" style=\"fill:none;stroke:#808080;stroke-width:%g;stroke-dasharray:%g\"/>\n",
-                         p0.x, p0.y, p1.x, p1.y, (8 * symbolScale[zoom]), (20 * symbolScale[zoom]));
-                r0 = r1;
-                p0 = p1;
-              }
-              ele = strtok_r(tpl, ":", &etok);
-            } else {
-              etok = tpl;
+              ele = strtok_r(NULL, ":", &etok);
             }
-            while ((ele = strtok_r(NULL, ":", &etok)) != NULL) {
+            while (ele != NULL) {
               if (isalpha(*ele)) {
                 if (strcmp(ele, "suppress") == 0) arc = 2;
                 else if (strcmp(ele, "dashed") == 0) arc = 1;
@@ -540,6 +535,23 @@ void renderSector(Item_t *item, int s, char *text, char *style, double offset, i
               } else {
                 span = atof(ele);
               }
+              ele = strtok_r(NULL, ":", &etok);
+            }
+            if (span == 0.0) {
+              char *back = (ttok != NULL) ? strstr(ttok, "-") : NULL;
+              if (back != NULL) {
+                span = b0 - end + atof(back);
+              } else {
+                span = b0 - end;
+              }
+            }
+            if (r1 != r0) {
+              p1 = radial(pos, r1, b0);
+              if (!((start == 180.0) && (end == 180.0)))
+                printf("<path d=\"M %g,%g L %g,%g\" style=\"fill:none;stroke:#808080;stroke-width:%g;stroke-dasharray:%g\"/>\n",
+                       p0.x, p0.y, p1.x, p1.y, (8 * symbolScale[zoom]), (20 * symbolScale[zoom]));
+              r0 = r1;
+              p0 = p1;
             }
             if (span < 0.0) {
               b1 = end - span;
@@ -583,12 +595,12 @@ void renderSector(Item_t *item, int s, char *text, char *style, double offset, i
             b0 = b1;
             if (b0 == end) break;
           }
+          if (!((start == 180.0) && (end == 180.0)))
+            printf("<path d=\"M %g,%g L %g,%g\" style=\"fill:none;stroke:#808080;stroke-width:%g;stroke-dasharray:%g\"/>\n",
+                   pos.x, pos.y, p1.x, p1.y, (8 * symbolScale[zoom]), (20 * symbolScale[zoom]));
           free(radstr);
         }
       }
-      if (!((start == 180.0) && (end == 180.0)))
-        printf("<path d=\"M %g,%g L %g,%g\" style=\"fill:none;stroke:#808080;stroke-width:%g;stroke-dasharray:%g\"/>\n",
-               pos.x, pos.y, p1.x, p1.y, (8 * symbolScale[zoom]), (20 * symbolScale[zoom]));
     }
   }
 }
@@ -956,37 +968,39 @@ char *charString(Item_t *item, char *type, int idx) {
                 next = next->next;
               }
             }
-            if (this->dir) strcpy(string2, "Dir.");
-            strcat(string2, light_characters[this->chr]);
-            if (strcmp(this->grp, "") != 0) {
-              sprintf(strchr(string2, 0), "(%s)", this->grp);
-            } else {
-              if (strlen(string2) > 0) strcat(string2, ".");
+            if (this->chr != CHR_UNKN) {
+              if (this->dir) strcpy(string2, "Dir.");
+              strcat(string2, light_characters[this->chr]);
+              if (strcmp(this->grp, "") != 0) {
+                sprintf(strchr(string2, 0), "(%s)", this->grp);
+              } else {
+                if (strlen(string2) > 0) strcat(string2, ".");
+              }
+              int n = 0;
+              for (int i = 0; i < 14; i++) if (colrng[i].col) n++;
+              double max = 0.0;
+              for (int i = 0; i < 14; i++) if (colrng[i].col && (colrng[i].rng > max)) max = colrng[i].rng;
+              double min = max;
+              for (int i = 0; i < 14; i++) if (colrng[i].col && (colrng[i].rng > 0.0) && (colrng[i].rng < min)) min = colrng[i].rng;
+              if (min == max) {
+                for (int i = 0; i < 14; i++) if (colrng[i].col) strcat(string2, light_letters[i]);
+              } else {
+                for (int i = 0; i < 14; i++) if (colrng[i].col && (colrng[i].rng == max)) strcat(string2, light_letters[i]);
+                for (int i = 0; i < 14; i++) if (colrng[i].col && (colrng[i].rng < max) && (colrng[i].rng > min)) strcat(string2, light_letters[i]);
+                for (int i = 0; i < 14; i++) if (colrng[i].col && colrng[i].rng == min) strcat(string2, light_letters[i]);
+              }
+              strcat(string2, ".");
+              if (this->per > 0.0) sprintf(strchr(string2, 0), "%gs", this->per);
+              if (max > 0.0) {
+                sprintf(strchr(string2, 0), "%g", max);
+                if (n == 2) strcat(string2, "/");
+                else if (n > 2) strcat(string2, "-");
+                if (min < max) sprintf(strchr(string2, 0), "%g", min);
+                strcat(string2, "M");
+              }
+              if (strlen(string1) > 0) strcat(string1, "\n");
+              strcat(string1, string2);
             }
-            int n = 0;
-            for (int i = 0; i < 14; i++) if (colrng[i].col) n++;
-            double max = 0.0;
-            for (int i = 0; i < 14; i++) if (colrng[i].col && (colrng[i].rng > max)) max = colrng[i].rng;
-            double min = max;
-            for (int i = 0; i < 14; i++) if (colrng[i].col && (colrng[i].rng > 0.0) && (colrng[i].rng < min)) min = colrng[i].rng;
-            if (min == max) {
-              for (int i = 0; i < 14; i++) if (colrng[i].col) strcat(string2, light_letters[i]);
-            } else {
-              for (int i = 0; i < 14; i++) if (colrng[i].col && (colrng[i].rng == max)) strcat(string2, light_letters[i]);
-              for (int i = 0; i < 14; i++) if (colrng[i].col && (colrng[i].rng < max) && (colrng[i].rng > min)) strcat(string2, light_letters[i]);
-              for (int i = 0; i < 14; i++) if (colrng[i].col && colrng[i].rng == min) strcat(string2, light_letters[i]);
-            }
-            strcat(string2, ".");
-            if (this->per > 0.0) sprintf(strchr(string2, 0), "%gs", this->per);
-            if (max > 0.0) {
-              sprintf(strchr(string2, 0), "%g", max);
-              if (n == 2) strcat(string2, "/");
-              else if (n > 2) strcat(string2, "-");
-              if (min < max) sprintf(strchr(string2, 0), "%g", min);
-              strcat(string2, "M");
-            }
-            if (strlen(string1) > 0) strcat(string1, "\n");
-            strcat(string1, string2);
             lights = this->next;
             free(this);
             this = lights;
