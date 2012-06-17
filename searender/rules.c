@@ -40,7 +40,7 @@ object_rules(lights) {
 }
 
 object_rules(top_colours, char *shape, double dx, double dy, double th) {
-  char *symbol = strdup(shape);
+  make_string(shape);
   use_object("topmark")
   if (has_attribute("colour")) {
     int n = attribute_count("colour");
@@ -57,13 +57,13 @@ object_rules(top_colours, char *shape, double dx, double dy, double th) {
     attribute_sequence("colour");
     int i; for(i = 1; i <= n; i++) {
       panel[2] = '0' + i;
-      colour_symbol_orientation(symbol, panel, attribute_next, BC, dx, dy, th);
+      colour_symbol_orientation(string, panel, attribute_next, BC, dx, dy, th);
     }
     end_sequence
   }
-  symbol_orientation(symbol, BC, dx, dy, th);
+  symbol_orientation(string, BC, dx, dy, th);
   used
-  free(symbol);
+  free_string;
 }
 
 object_rules(topmarks, char *body_shape) {
@@ -123,11 +123,12 @@ object_rules(rtbs) {
 }
 
 object_rules(mark_colours, char* default_shape) {
-  char *shape;
-  if (attribute_test("shape", "tower|pillar|spar|barrel|can|conical|spherical|super-buoy"))
-    shape = strdup(attribute("shape"));
-  else
-    shape = strdup(default_shape);
+  make_string("");
+  if (attribute_test("shape", "tower|pillar|spar|barrel|can|conical|spherical|super-buoy")) {
+    add_string(attribute("shape"));
+  } else {
+    add_string(default_shape)
+  }
   if (has_attribute("colour")) {
     int n = attribute_count("colour");
     char panel[4] = {'0'+n, 0, 0, 0};
@@ -142,18 +143,18 @@ object_rules(mark_colours, char* default_shape) {
     attribute_sequence("colour");
     int i; for(i = 1; i <= n; i++) {
       panel[2] = '0' + i;
-      colour_symbol(shape, panel, attribute_next);
+      colour_symbol(string, panel, attribute_next);
     }
     end_sequence
   } 
-  symbol(shape);
-  if (has_object("topmark")) object(topmarks, shape);
+  symbol(string);
+  if (has_object("topmark")) object(topmarks, string);
   if (has_object("fog_signal")) object(fogs);
   if (has_object("radar_transponder")) object(rtbs);
-  if (has_object("radar_reflector")) object(refls, shape);
+  if (has_object("radar_reflector")) object(refls, string);
   if (has_object("light")) object(lights);
   if ((zoom >= 15) && has_item_attribute("name")) {
-    literal_switch(shape)
+    literal_switch(string)
     literal_case("beacon") node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
     literal_case("pillar|spar") node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 50, -50);
     literal_case("float|tower") node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
@@ -165,7 +166,7 @@ object_rules(mark_colours, char* default_shape) {
     }
     end_switch
   }
-  free(shape);
+  free_string;
 }
 
 object_rules(mark_shapes, char* default_shape) {
@@ -390,8 +391,14 @@ object_rules(landmarks) {
     attribute_case("radar_scanner") symbol("signal_station");
     attribute_default symbol(attribute("category"));
     end_switch
+  }
+  if (!has_attribute("function") && !has_attribute("category") && has_object("light")) {
+    symbol("lighthouse");
+    if ((zoom >= 15) && has_item_attribute("name"))
+      node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -70);
   } else {
-    if (!has_attribute("function") && has_object("light")) symbol("lighthouse");
+    if ((zoom >= 15) && has_item_attribute("name"))
+      node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
   }
   if (has_object("fog_signal")) object(fogs);
   if (has_object("radar_transponder")) object(rtbs);
