@@ -33,8 +33,8 @@ object_rules(lights) {
       make_char_string("light");
       node_text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:start", 60, -10);
       free_string;
-      if (has_type_attribute("name") && is_type("light_major|light_minor"))
-        node_text(type_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -50);
+      if (has_item_attribute("name") && is_type("light_major|light_minor"))
+        node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -50);
     }
   }
 }
@@ -152,16 +152,16 @@ object_rules(mark_colours, char* default_shape) {
   if (has_object("radar_transponder")) object(rtbs);
   if (has_object("radar_reflector")) object(refls, shape);
   if (has_object("light")) object(lights);
-  if ((zoom >= 15) && has_type_attribute("name")) {
+  if ((zoom >= 15) && has_item_attribute("name")) {
     literal_switch(shape)
-    literal_case("beacon") node_text(type_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
-    literal_case("pillar|spar") node_text(type_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 50, -50);
-    literal_case("float|tower") node_text(type_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
+    literal_case("beacon") node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
+    literal_case("pillar|spar") node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 50, -50);
+    literal_case("float|tower") node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
     literal_case("spherical|can|conical|float|tower|barrel") {
       if (has_object("topmark") || has_object("daymark") || is_type("mooring"))
-        node_text(type_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
+        node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
       else
-        node_text(type_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 0, -50);
+        node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 0, -50);
     }
     end_switch
   }
@@ -183,7 +183,7 @@ object_rules(mark_shapes, char* default_shape) {
         symbol("stake");
       }
       if (has_object("topmark")) object(topmarks, "stake");
-      if ((zoom >= 15) && (has_type_attribute("name"))) node_text(type_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
+      if ((zoom >= 15) && (has_item_attribute("name"))) node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
     }
     attribute_case("perch") {
       attribute_switch("category")
@@ -191,11 +191,11 @@ object_rules(mark_shapes, char* default_shape) {
       attribute_case("starboard") symbol("perchS");
       attribute_default symbol("stake");
       end_switch
-      if ((zoom >= 15) && has_object("name")) node_text(object_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
+      if ((zoom >= 15) && has_item_attribute("name")) node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
     }
     attribute_case("cairn") {
       symbol("cairn");
-      if ((zoom >= 15) && has_object("name")) node_text(object_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 30, -50);
+      if ((zoom >= 15) && has_item_attribute("name")) node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 30, -50);
     }
     attribute_default object(mark_colours, default_shape);
     end_switch
@@ -283,8 +283,8 @@ object_rules(shoreline) {
 object_rules(separation) {
   if (is_type("separation_zone|separation_crossing|separation_roundabout")) {
     area("stroke:none; fill:#c480ff; fill-opacity:0.5");
-    if (has_object("name")) {
-      area_text(object_attribute("name"), "font-family:Arial; font-weight:bold; font-size:200; text-anchor:middle");
+    if (has_item_attribute("name")) {
+      area_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:200; text-anchor:middle");
     }
   } else if (is_type("separation_line")) {
     line("stroke-width:15; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
@@ -304,7 +304,7 @@ object_rules(transits) {
   if (zoom >= 15) {
     make_string("");
     if (has_object("name")) {
-      add_string(object_attribute("name"));
+      add_string(item_attribute("name"));
       add_string(" ");
     }
     if (has_attribute("orientation")) {

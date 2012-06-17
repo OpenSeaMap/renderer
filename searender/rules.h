@@ -34,16 +34,15 @@
 #define use_object(x) { Obj_t *obj=getObj(item, enumType(x), 0);
 #define use_object_select(x,n) { Obj_t *obj=getObj(item, enumType(x), n);
 #define used }
-#define object_attribute(x) stringValue((getTag(obj, enumAttribute(x, obj->obj))->val))
 #define is_type(x) (compareTypes(item, x))
 #define has_object(x) (compareObjects(item, x))
 #define object_count(x) (countObjects(item, x))
 #define this_type stringType(item->objs.obj)
 
 #define has_attribute(x) (compareAttributes(obj, x))
-#define has_type_attribute(x) (compareAttributes(&item->objs, x))
+#define has_item_attribute(x) (compareAttributes(&item->objs, x))
 #define attribute(x) (stringValue(getTag(obj, enumAttribute(x, obj->obj))->val))
-#define type_attribute(x) (stringValue(getTag(&item->objs, enumAttribute(x, item->objs.obj))->val))
+#define item_attribute(x) (stringValue(getTag(&item->objs, enumAttribute(x, item->objs.obj))->val))
 #define literal_switch(x) { char *tag=x; if(tag == NULL);
 #define literal_case(x) else if (compareLiterals(tag, x))
 #define attribute_switch(x) { Tag_t *tag = getTag(obj, enumAttribute(x, obj->obj)); if(tag == NULL);
@@ -55,7 +54,6 @@
 #define attribute_sequence(x) {char *val = strdup(stringValue(getTag(obj, enumAttribute(x, obj->obj))->val)); char *ptr = NULL;
 #define attribute_next (ptr = strtok(ptr == NULL ? val : NULL, ";"))
 #define end_sequence free(val);}
-#define map(x) const Smap_t x[] = {
 
 #define colour_symbol(s,p,c) renderColourSymbol(item, (obj!=NULL)?obj->obj:0, s, p, c, CC, 0, 0, 0)
 #define colour_symbol_place(s,p,c,h) renderColourSymbol(item, (obj!=NULL)?obj->obj:0, s, p, c, h, 0, 0, 0)
@@ -91,6 +89,12 @@ extern void main_rules(Item_t*, Obj_t*);
  C Render rules macros
  =====================
  
+ Contexts
+ --------
+ In any object_rules block there exists an item and an object. The item is global to the entire block. The object
+ is initialized to the item type, but can be changed within sub-blocks. Additional arguments can be passed to
+ object_rules blocks and are also global to the whole block unless overloaded within sub-blocks.
+ 
  Blocks
  ------
  rules { <statements> } The main rules block.
@@ -106,27 +110,64 @@ extern void main_rules(Item_t*, Obj_t*);
  is_type(<types>) True if master object matches one of <types>
  has_object(<objects>) True if current item contains one of <objects>
  has_attribute(<attributes>) True if current object has tag matching one of <attributes>
+ has_item_attribute(<attributes>) True if current item has tag matching one of <attributes>
+ attribute_test(<attribute>, <values>) True if <attribute> has one of the <values>
  
  Selections
  ----------
- use_object(<object>) Start block using this <object>
+ use_object(<object>) Start block using this <object> with index=0
+ use_object_select(<object>, <index>) Start block using this <object> with <index>
  used Terminate block
  
  Value Selectors
  ---------------
- list(<key>) Initialises scan of semicolon-separated values in value field. Returns number of values.
- list_next Returns pointer to next value or NULL
- tokens(<value>) Initialises scan of colon-separated values in value field. Returns number of values.
- token_next Returns pointer to next value or NULL
+ attribute(<attribute>) get <attribute> value of current object
+ item_attribute(<attribute>) get <attribute> value of item
+ object_count(<object>) returns the highest contiguous index number of an <object>
+ attribute_count(<attribute>) Returns the number of enumeration values
+ attribute_next Returns next enumeration value
+ this_type return item type
  
+ Switch & Control Macros
+ -----------------------
+ literal_switch(<literal>) Switch on <literal> vlaues
+ literal_case(<value>) <literal> has this <value>
+ attribute_switch(<attribute>) Switch on <attribute> values
+ attribute_case(<value>) <attribute> has this <value>
+ attribute_default <attribute has all other values
+ end_switch Terminate switch
+ attribute_sequence(<attribute>) Step though list of enumeration values
+ end_sequence Terminate sequence
+ 
+ String Construction
+ -------------------
+ make_string(<string>) Create <string> instance 
+ make_char_string(<type>) Create signal characteristics string for <type>
+ make_char_string_indexed(<type>, <index>) Create signal characteristics string for <type> at <index>
+ add_string(<string>) Append <string> to current string
+ free_string Release current string
+  
  Rendering Instructions
  ----------------------
  symbol(<symbol>) Places symbol centred at either current node or current area
  symbol_place(<symbol>, <handle>) Places symbol with <handle> positioned at current node/area
  symbol_position(<symbol>, <handle>, <x>, <y>) Places symbol with <handle> offset <x>,<y> from current node/area
+ symbol_orientation(<symbol>, <handle>, <x>, <y>, <o>) Places symbol with <handle> offset <x>,<y> from current node/area and rotated <o> degrees
+ colour_symbol(<symbol>, <panel>, <colour>)
+ colour_symbol_place(<symbol>, <panel>, <colour>, <handle>)
+ colour_symbol_position(<symbol>, <panel>, <colour>, <handle>, <x>, <y>)
+ colour_symbol_orientation(<symbol>, <panel>, <colour>, <handle>, <x>, <y>, <o>)
+ symbol_cluster(<type>) Place cluster of symbols 
+ symbol_notice Place Notice Marks
  path(<style>) Draw path along current way.
  path_offset(<style>, <dy>) Draw a path along current way offset by <dy> from axis.
  area(<style>) Draw path around current closed way.
  area_offset(<style>, <dy>) Draw a path around current closed way offset by <dy> from axis.
- 
+ light_sector_caption(<index> , <text>, <style>, <offset>, (y offset>) Render light sector with characteristic string on sector arc
+ light_sector(<index>) Render uncaptioned light sector
+ light_flare Render light flare
+ line(<style>) Draw line with <style>
+ line_text(<text>, <style>, <offset> , <y offset> ,<reference>) Render <text> with <style> along line
+ area_text(<text> , <style>) Place <text with <style> at centroid of area 
+ node_text(<text>, <style>, <x offset>, <y offset>) Place <text> with <style> <offset x> and <offset y> from centre
  */
