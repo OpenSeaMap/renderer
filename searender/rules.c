@@ -15,24 +15,26 @@ object_rules(lights) {
   if (has_object("light")) {
     int n = object_count("light");
     if (n > 0) {
-      light_flare;
       for (int i = 1; i <= n; i++) {
         if (zoom >= 15) {
           make_char_string_indexed("light", i);
           light_sector_caption(i, string, "font-family:Arial; font-weight:normal; font-size:80; text-anchor:middle", 0.5, -20);
           free_string;
         } else {
-          if (zoom >= 12) {
+          if ((zoom >= 14) || ((zoom >= 12) && (is_type("light_major|landmark")))) {
             light_sector(i);
           }
         }
       }
-    } else if (zoom >= 14)
+    }
+    if ((zoom >= 14) || is_type("light_major|landmark"))
       light_flare;
     if (zoom >= 15) {
       make_char_string("light");
       node_text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:start", 60, -10);
       free_string;
+      if (has_type_attribute("name") && is_type("light_major|light_minor"))
+        node_text(type_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -50);
     }
   }
 }
@@ -181,7 +183,7 @@ object_rules(mark_shapes, char* default_shape) {
         symbol("stake");
       }
       if (has_object("topmark")) object(topmarks, "stake");
-      if ((zoom >= 15) && (has_object("name"))) node_text(object_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
+      if ((zoom >= 15) && (has_type_attribute("name"))) node_text(type_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
     }
     attribute_case("perch") {
       attribute_switch("category")

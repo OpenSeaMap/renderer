@@ -43,7 +43,7 @@
 #define has_attribute(x) (compareAttributes(obj, x))
 #define has_type_attribute(x) (compareAttributes(&item->objs, x))
 #define attribute(x) (stringValue(getTag(obj, enumAttribute(x, obj->obj))->val))
-#define type_attribute(x) (stringValue(getTag(&item->objs, enumAttribute(x, obj->obj))->val))
+#define type_attribute(x) (stringValue(getTag(&item->objs, enumAttribute(x, item->objs.obj))->val))
 #define literal_switch(x) { char *tag=x; if(tag == NULL);
 #define literal_case(x) else if (compareLiterals(tag, x))
 #define attribute_switch(x) { Tag_t *tag = getTag(obj, enumAttribute(x, obj->obj)); if(tag == NULL);
