@@ -40,18 +40,18 @@ int main (int argc, const char * argv[]) {
 
   set_conv("UTF-8");
   
-  if ((argc < 2) || (argc > 3)) {
-    printf("usage: searender zoom [bb]\n");
+  if ((argc < 3) || (argc > 4)) {
+    fprintf(stderr, "usage: searender symbols zoom [bb]\n");
     exit (EXIT_FAILURE);
   }
-  zoom = atoi(argv[1]);
+  zoom = atoi(argv[2]);
   if ((zoom < 0) || (zoom > 19)) {
     printf("zoom out of range\n");
     exit (EXIT_FAILURE);
   }
     
-  if (argc == 3) {
-    char *bbstr = strdup(argv[2]);
+  if (argc == 4) {
+    char *bbstr = strdup(argv[3]);
     bbstr = strtok(bbstr, ",");
     minlat = atof(bbstr);
     bbstr = strtok(NULL, ",");
@@ -166,5 +166,5 @@ int main (int argc, const char * argv[]) {
 */    }
   }
   
-  render();
+  render(argv[1]);
 }

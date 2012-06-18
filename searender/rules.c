@@ -414,6 +414,8 @@ object_rules(platforms) {
   } else {
     symbol("platform");
   }
+  if ((zoom >= 15) && has_item_attribute("name"))
+    node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
   if (has_object("fog_signal")) object(fogs);
   if (has_object("radar_transponder")) object(rtbs);
   if (has_object("light")) object(lights);

@@ -41,8 +41,8 @@ char string2[1000];
 
 typedef struct {char *key; char* val;} Smap_t;
 
-char *body_colours[] = { [COL_UNK]="#000000", [COL_WHT]="#ffffff", [COL_BLK]="#000000", [COL_RED]="#f40000", [COL_GRN]="#00f400",
-  [COL_BLU]="blue", [COL_YEL]="#fff400", [COL_GRY]="grey", [COL_BRN]="brown", [COL_AMB]="#fbf00f", [COL_VIO]="violet",
+char *body_colours[] = { [COL_UNK]="#000000", [COL_WHT]="#ffffff", [COL_BLK]="#000000", [COL_RED]="#d40000", [COL_GRN]="#00d400",
+  [COL_BLU]="blue", [COL_YEL]="#ffd400", [COL_GRY]="grey", [COL_BRN]="brown", [COL_AMB]="#fbf00f", [COL_VIO]="violet",
   [COL_ORG]="orange", [COL_MAG]="#f000f0", [COL_PNK]="pink" };
 
 char *light_colours[] = { [COL_UNK]="magenta", [COL_WHT]="#ffff00", [COL_BLK]="", [COL_RED]="#ff0000", [COL_GRN]="#00ff00", [COL_BLU]="#0000ff", [COL_YEL]="#ffff00",
@@ -143,17 +143,21 @@ XY_t radial(XY_t centre, double radius, double angle) {
   return position;
 }
 
-void render() {
+void render(char *symbols) {
   top = (1.0 - log(tan(maxlat * M_PI/180.0) + 1.0 / cos(maxlat * M_PI/180.0)) / M_PI) / 2.0 * 256.0 * 4096.0;
   mile = lat2y(maxlat) - lat2y(maxlat + (1.0/60.0));
 
   printf("<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\"\n");
   printf(" width=\"%f\" height=\"%f\">\n", lon2x(maxlon), lat2y(minlat));
   
-  printf(" <rect x=\"0\" y=\"0\" width=\"%g\" height=\"%g\" style=\"fill:#b5d0d0;fill-opacity:1\"/>\n", lon2x(maxlon), lat2y(minlat)); //****** for testing only!!!!*******
+//  printf(" <rect x=\"0\" y=\"0\" width=\"%g\" height=\"%g\" style=\"fill:#b5d0d0;fill-opacity:1\"/>\n", lon2x(maxlon), lat2y(minlat)); //****** for testing only!!!!*******
 
   char line[2000];
-  FILE *fp = fopen("symbols/symbols.svg", "r");
+  FILE *fp = fopen(symbols, "r");
+  if (fp == NULL) {
+    fprintf(stderr, "Symbol file not found\n");
+    exit(EXIT_FAILURE);
+  }
 	while (fgets(line, 2000, fp) != NULL) {
     printf("%s", line);
 		char *ele = strtok(line, " \t<");
@@ -298,8 +302,30 @@ void renderCluster(Item_t *item, char *type) {
   char **map = cluster_map(obja);
   if (map == NULL) return;
   switch (n) {
-    case 0:
-      renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 0), atta, 0)], "", "", CC, 0, 0, 0);
+    case 0: {
+      Obj_t *obj = getObj(item, obja, 0);
+      int n = countValues(getTag(obj, atta));
+      switch (n) {
+        case 1:
+          renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", CC, 0, 0, 0);
+          break;
+        case 2:
+          renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", RC, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(obj, atta, 1)], "", "", LC, 0, 0, 0);
+          break;
+        case 3:
+          renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", BC, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(obj, atta, 1)], "", "", TR, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(obj, atta, 2)], "", "", TL, 0, 0, 0);
+          break;
+        case 4:
+          renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", BR, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(obj, atta, 1)], "", "", BL, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(obj, atta, 2)], "", "", TR, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(obj, atta, 3)], "", "", TL, 0, 0, 0);
+          break;
+      }
+    }
       break;
     case 1:
       renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 1), atta, 0)], "", "", CC, 0, 0, 0);
@@ -882,7 +908,7 @@ char *charString(Item_t *item, char *type, int idx) {
       }
       break;
     case LIGHTS:
-      if (obj != NULL) {
+      {
         int secmax = countObjects(item, "light");
         if ((idx == 0) && (secmax > 0)) {
           struct SECT {
