@@ -28,9 +28,9 @@ tile () {
 		sleep 1
 	done
 	for k in {12..17}; do
-		perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-sport-z$k.xml -b $bb -o tmp/panel_$k.svg tmp/$1 2>/dev/null &
+		perl ./orp/orp.pl -r ./styles/osm-seamark-sport-z$k.xml -b $bb -o tmp/panel_$k.svg tmp/$1 2>/dev/null &
 	done;
-		perl ../orp/orp.pl -r ../SeaMapStyles/osm-seamark-sport-z18.xml -b $bb -o tmp/panel_18.svg tmp/$1 2>/dev/null
+		perl ./orp/orp.pl -r ./styles/osm-seamark-sport-z18.xml -b $bb -o tmp/panel_18.svg tmp/$1 2>/dev/null
   filename="sport_tiles/12/$tx/$ty.png"
   if [ -e $filename ]; then
     echo "rm $filename" >> tmp/deletions
