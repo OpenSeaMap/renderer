@@ -1,0 +1,1 @@
+date;rsync -ra -e ssh --delete sport_tiles/* malcolm@netz.smurf.noris.de:~/sport_tiles/;date

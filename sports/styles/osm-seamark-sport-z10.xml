@@ -15,7 +15,7 @@
 	showBorder="no"
 	showLicense="no"
 	showZoomControls="no"
-	symbolsDir="../SeaMapSymbols"
+	symbolsDir="./symbols"
 	meter2pixel="0.1375">
   
 	<rule e="way" k="whitewater:section_grade" v="0">
