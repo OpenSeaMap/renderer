@@ -1019,9 +1019,11 @@ char *charString(Item_t *item, char *type, int idx) {
               if (this->per > 0.0) sprintf(strchr(string2, 0), "%gs", this->per);
               if (max > 0.0) {
                 sprintf(strchr(string2, 0), "%g", max);
-                if (n == 2) strcat(string2, "/");
-                else if (n > 2) strcat(string2, "-");
-                if (min < max) sprintf(strchr(string2, 0), "%g", min);
+                if (min != max) {
+                  if (n == 2) strcat(string2, "/");
+                  else if (n > 2) strcat(string2, "-");
+                  if (min < max) sprintf(strchr(string2, 0), "%g", min);
+                }
                 strcat(string2, "M");
               }
               if (strlen(string1) > 0) strcat(string1, "\n");

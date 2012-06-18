@@ -36,7 +36,7 @@ int main (int argc, const char * argv[]) {
   maxlon = -180.0;
   minlon = 180.0;
   
-//  sleep(2); // *** for debugger capture only
+  sleep(2); // *** for debugger capture only
 
   set_conv("UTF-8");
   
