@@ -498,7 +498,7 @@ void renderSector(Item_t *item, int s, char *text, char *style, double offset, i
         r0 = atof(string1);
         p0 = radial(pos, r0, b0);
         printf("<path d=\"M %g,%g L %g,%g\" style=\"fill:none;stroke:#808080;stroke-width:%g;stroke-dasharray:%g\"/>\n",
-               pos.x, pos.y, p0.x, p0.y, (8 * symbolScale[zoom]), (20 * symbolScale[zoom]));
+               pos.x, pos.y, p0.x, p0.y, (4 * symbolScale[zoom]), (20 * symbolScale[zoom]));
         start = fmod(b0 + 2.0, 360.0);
         end = fmod(360.0 + b0 - 2.0, 360.0);
         Obj_t *adj;
@@ -575,7 +575,7 @@ void renderSector(Item_t *item, int s, char *text, char *style, double offset, i
               p1 = radial(pos, r1, b0);
               if (!((start == 180.0) && (end == 180.0)))
                 printf("<path d=\"M %g,%g L %g,%g\" style=\"fill:none;stroke:#808080;stroke-width:%g;stroke-dasharray:%g\"/>\n",
-                       p0.x, p0.y, p1.x, p1.y, (8 * symbolScale[zoom]), (20 * symbolScale[zoom]));
+                       p0.x, p0.y, p1.x, p1.y, (4 * symbolScale[zoom]), (20 * symbolScale[zoom]));
               r0 = r1;
               p0 = p1;
             }
@@ -623,7 +623,7 @@ void renderSector(Item_t *item, int s, char *text, char *style, double offset, i
           }
           if (!((start == 180.0) && (end == 180.0)))
             printf("<path d=\"M %g,%g L %g,%g\" style=\"fill:none;stroke:#808080;stroke-width:%g;stroke-dasharray:%g\"/>\n",
-                   pos.x, pos.y, p1.x, p1.y, (8 * symbolScale[zoom]), (20 * symbolScale[zoom]));
+                   pos.x, pos.y, p1.x, p1.y, (4 * symbolScale[zoom]), (20 * symbolScale[zoom]));
           free(radstr);
         }
       }
