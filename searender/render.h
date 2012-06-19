@@ -33,6 +33,7 @@ extern void renderSector(Item_t*, int, char*, char*, double, int);
 extern void renderFlare(Item_t*);
 
 extern int drawLine(Item_t*, char*);
+extern void drawLineArrows(Item_t*);
 extern int drawLineText(Item_t*, char*, char*, double, int, int);
 extern int drawArea(Item_t*, char*);
 extern int drawAreaText(Item_t*, char*, char*);

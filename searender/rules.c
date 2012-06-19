@@ -211,12 +211,12 @@ object_rules(buoys) {
     case 10:
       break;
     case 11:
-      if (is_type("buoy_safe_water") || has_object("radar_transponder"))
+      if (is_type("buoy_safe_water") || has_object("radar_transponder") || attribute_test("shape", "super-buoy"))
         object(mark_shapes, "pillar");
       break;
     case 12:
     case 13:
-      if (!is_type("buoy_special_purpose") || has_object("radar_transponder"))
+      if (!is_type("buoy_special_purpose") || has_object("radar_transponder") || attribute_test("shape", "super-buoy"))
         object(mark_shapes, "pillar");
       break;
     default:
@@ -290,7 +290,7 @@ object_rules(separation) {
   } else if (is_type("separation_line")) {
     line("stroke-width:15; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
   } else if (is_type("separation_lane")) {
-    line("stroke-width: 20; stroke-dasharray:70,30; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
+    line_arrows;
   } else if (is_type("separation_boundary")) {
     line("stroke-width: 10; stroke-dasharray:20,20; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
   }
@@ -323,6 +323,8 @@ object_rules(transits) {
 }
 
 object_rules(moorings) {
+  if ((zoom >= 11) && (zoom < 14) && attribute_test("shape", "super-buoy"))
+    object(mark_shapes, "super-buoy");
   if ((zoom >= 14) && (has_attribute("category"))) {
     attribute_switch("category")
     attribute_case("buoy") {

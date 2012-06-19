@@ -248,14 +248,13 @@ XY_t findCentroid(Item_t *item) {
   return coord;
 }
 
-int renderSymbol(Item_t *item, Obja_t obj, char *symbol, char * panel, char *colour, Handle_t handle, double dx, double dy, double angle) {
+int placeSymbol(XY_t coord, Obja_t obj, char *symbol, char * panel, char *colour, Handle_t handle, double dx, double dy, double angle) {
   if ((symbol == NULL) || (panel == NULL)) return 0;
   char sympan[100];
   strcpy(sympan, lookupShape(symbol, obj));
   strcat(sympan, panel);
   Hash_t *params = lookupSymbol(sympan);
   if (params != NULL) {
-    XY_t coord = findCentroid(item);
     double x, y;
     switch (handle) {
       case TL:
@@ -289,6 +288,10 @@ int renderSymbol(Item_t *item, Obja_t obj, char *symbol, char * panel, char *col
            ++ref, coord.x, coord.y, symbolScale[zoom], x, y, angle, -dx-x, -dy-y, sympan, colour);
   }
   return ref;
+}
+
+int renderSymbol(Item_t *item, Obja_t obj, char *symbol, char * panel, char *colour, Handle_t handle, double dx, double dy, double angle) {
+  return placeSymbol(findCentroid(item), obj, symbol, panel, colour, handle, dx, dy, angle);
 }
 
 int renderColourSymbol(Item_t *item, Obja_t obj, char *symbol, char * panel, char *colour, Handle_t handle, double dx, double dy, double angle) {
@@ -801,6 +804,48 @@ int drawLine(Item_t *item, char *style) {
     link = link->blink;
   }
   return drawVector(item, style, sx < 0.0 ? -1 : +1);
+}
+
+void drawLineArrows(Item_t *item) {
+  if (item->flag != WAY) return;
+  double size = 200.0 * symbolScale[zoom];
+  Ref_t *link = item->type.way.blink;
+  XY_t last = {0,0};
+  XY_t next = {lon2x(link->ref->type.node.lon), lat2y(link->ref->type.node.lat)};
+  XY_t old = next;
+  XY_t new = {0,0};
+  int gap = 0;
+  int piv = 0;
+  double angle = 0.0;
+  double rem = 0.0;
+  double len = size;
+  while (true) {
+    if (rem > len) {
+      if (piv) {
+        new.x = last.x + (len * cos(angle));
+        new.y = last.y + (len * sin(angle));
+        piv = 0;
+      } else {
+      new.x = old.x + (len * cos(angle));
+      new.y = old.y + (len * sin(angle));
+      }
+      if (!gap) {
+        placeSymbol(old, TSSLPT, "lane_arrow", "", "", BC, 0, 0, r2d(atan2((new.y - old.y), (new.x - old.x)))+90);
+      }
+      gap = !gap;
+      old = new;
+      len = gap ? (size / 2.0): size;
+      rem = sqrt(pow((next.x-new.x), 2) + pow((next.y-new.y), 2));
+    } else {
+      len -=rem;
+      last = next;
+      if ((link = link->blink) == NULL) break;
+      next.x = lon2x(link->ref->type.node.lon); next.y = lat2y(link->ref->type.node.lat);
+      rem = sqrt(pow((next.x-last.x), 2) + pow((next.y-last.y), 2));
+      angle = atan2((next.y - last.y), (next.x - last.x));
+      piv = 1;
+    }
+  }
 }
 
 int drawArea(Item_t *item, char *style) {
