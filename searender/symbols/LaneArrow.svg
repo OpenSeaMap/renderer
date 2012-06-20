@@ -1,0 +1,12 @@
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"  
+   version="1.1"
+   width="40"
+   height="200">
+  <symbol id="lane_arrow" width="40" height="200">
+    <path d="M 20,0 L 40,40 30,40 30,200 10,200 10,40 0,40 z"
+     style="fill:none;stroke:#c480ff;stroke-width:6;stroke-opacity:0.5" />
+  </symbol>
+  <use xlink:href="#lane_arrow" x="0" y="0" />
+</svg>
