@@ -65,7 +65,7 @@ search () {
       minlat=$(echo "scale=8; ((a((e($yx)-(1/e($yx)))/2))*180)/(4*a(1))" | bc -l)
 			if [ $minlat = 0 ]; then minlat=-85.0; fi
       osmosis -q --rx file=tmp/panel-z$1.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=tmp/panel-z${zoom[$1]}.osm
-      timestamp=$(./util/checkdate tmp/panel-z${zoom[$1]}.osm)
+      timestamp=$(../util/checkdate tmp/panel-z${zoom[$1]}.osm)
       bb="$minlat,$minlon,$maxlat,$maxlon"
       tx=$((${x[$1]}+${i[$1]}))
       ty=$((${y[$1]}+${j[$1]}))
@@ -134,7 +134,7 @@ while true; do
 	mv next.osm tmp/panel-z0.osm
 	search 0 0 0
 	latest=$previous
-	timestamp=$(./util/checkdate world.osm)
+	timestamp=$(../util/checkdate world.osm)
 	if [ $timestamp \> $latest ]; then
 		latest=$timestamp;
 	fi;
