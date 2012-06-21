@@ -605,8 +605,8 @@ void renderSector(Item_t *item, int s, char *text, char *style, double offset, i
                 printf("<path id=\"%d\" d=\"M %g,%g A %g,%g,0,%d,0,%g,%g\" style=\"fill:none;stroke:%s;stroke-width:%g\"/>\n",
                        ++ref, p1.x, p1.y, r1*mile, r1*mile, span>180.0, p0.x, p0.y, col, (20 * symbolScale[zoom]));
               if (text != NULL) {
-                double span = sqrt(pow((p0.x - p1.x), 2) + pow((p0.y - p1.y), 2));
-                if (span > (strlen(text) * textScale[zoom] * 50))
+                double chord = sqrt(pow((p0.x - p1.x), 2) + pow((p0.y - p1.y), 2));
+                if ((chord > (strlen(text) * textScale[zoom] * 50)) || ((b0 == 180.0) && (b1 == 180.0)))
                   drawLineText(item, text, style, offset, dy, ref);
               }
             } else if (arc == 1) {
@@ -769,17 +769,19 @@ double scaleStyle(char *style) {
 
 int drawVector(Item_t *item, char *style, int dir) {
   if (item->flag == WAY) {
-    printf("<path id=\"%d\" ", ++ref);
-    scaleStyle(style);
-    printf("d=\"M ");
     Ref_t *link = dir < 0 ? item->type.way.flink : item->type.way.blink;
-    while (link != NULL) {
-      printf("%f %f ", lon2x(link->ref->type.node.lon), lat2y(link->ref->type.node.lat));
-      link = dir < 0 ?  link->flink : link->blink;
+    if (link != NULL) {
+      printf("<path id=\"%d\" d=\"M ", ++ref);
+      while (link != NULL) {
+        printf("%f %f ", lon2x(link->ref->type.node.lon), lat2y(link->ref->type.node.lat));
+        link = dir < 0 ?  link->flink : link->blink;
+      }
+      if (dir == 0) printf("Z");
+      printf("\" ");
+      scaleStyle(style);
+      printf("/>\n");
+      return ref;
     }
-    if (dir == 0) printf("Z");
-    printf("\"/>\n");
-    return ref;
   }
   return 0;
 }
@@ -810,12 +812,13 @@ void drawLineArrows(Item_t *item) {
   if (item->flag != WAY) return;
   double size = 200.0 * symbolScale[zoom];
   Ref_t *link = item->type.way.blink;
+  if (link == NULL) return;
   XY_t last = {0,0};
   XY_t next = {lon2x(link->ref->type.node.lon), lat2y(link->ref->type.node.lat)};
   XY_t old = next;
   XY_t new = {0,0};
-  int gap = 0;
-  int piv = 0;
+  bool gap = false;
+  bool piv = false;
   double angle = 0.0;
   double rem = 0.0;
   double len = size;
@@ -824,10 +827,10 @@ void drawLineArrows(Item_t *item) {
       if (piv) {
         new.x = last.x + (len * cos(angle));
         new.y = last.y + (len * sin(angle));
-        piv = 0;
+        piv = false;
       } else {
-      new.x = old.x + (len * cos(angle));
-      new.y = old.y + (len * sin(angle));
+        new.x = old.x + (len * cos(angle));
+        new.y = old.y + (len * sin(angle));
       }
       if (!gap) {
         placeSymbol(old, TSSLPT, "lane_arrow", "", "", BC, 0, 0, r2d(atan2((new.y - old.y), (new.x - old.x)))+90);
@@ -839,11 +842,11 @@ void drawLineArrows(Item_t *item) {
     } else {
       len -=rem;
       last = next;
-      if ((link = link->blink) == NULL) break;
+      if ((link = link->blink) == NULL) return;
       next.x = lon2x(link->ref->type.node.lon); next.y = lat2y(link->ref->type.node.lat);
       rem = sqrt(pow((next.x-last.x), 2) + pow((next.y-last.y), 2));
       angle = atan2((next.y - last.y), (next.x - last.x));
-      piv = 1;
+      piv = true;
     }
   }
 }
@@ -886,7 +889,7 @@ int drawNodeText(Item_t *item, char *text, char *style, double dx, double dy) {
     printf("y=\"%f\">", y);
     while (line != NULL) {
       printf("<tspan x=\"%f\" dy=\"%f\">%s</tspan>\n", x, dy, line);
-      dy += size;
+      dy = size;
       line = strtok(NULL, "\n");
     }
     printf("</text>\n");
@@ -1013,12 +1016,12 @@ char *charString(Item_t *item, char *type, int idx) {
                 lights->alt = tag->val.val.l->next->val;
             }
           }
-          strcpy(string2, "");
           struct COLRNG {
             int col;
             double rng;
           } colrng[14];
           while (lights != NULL) {
+            strcpy(string2, "");
             bzero(colrng, 14*sizeof(struct COLRNG));
             colrng[lights->col].col = 1;
             colrng[lights->col].rng = lights->rng;
@@ -1113,7 +1116,7 @@ char *charString(Item_t *item, char *type, int idx) {
           if ((tag = getTag(obj, COLOUR)) != NULL) {
             int n = countValues(tag);
             if (!((n == 1) && (idx == 0) && (testTag(tag, COL_WHT)))) {
-              if (string1[strlen(string1)-1] != ')') 
+              if ((strlen(string1) > 0) && ((string1[strlen(string1)-1] != ')'))) 
                 strcat(string1, ".");
               Lst_t *lst = tag->val.val.l;
               while (lst != NULL) {

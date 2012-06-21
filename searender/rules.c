@@ -424,7 +424,8 @@ object_rules(platforms) {
 }
 
 object_rules(notices) {
-  symbol_notice;
+  if (zoom >= 14)
+    symbol_notice;
 }
 
 object_rules(marinas) {
@@ -439,8 +440,8 @@ object_rules(locks) {
 object_rules(distances) {
   if ((zoom>=16) && (has_attribute("category"))) {
     attribute_switch("category")
-    attribute_case("installed") symbol("DistanceI");
-    attribute_default symbol("DistanceU");
+    attribute_case("installed") symbol("distance_i");
+    attribute_default symbol("distance_u");
     end_switch
   }
 }
