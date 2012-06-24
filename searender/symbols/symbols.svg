@@ -363,9 +363,9 @@
      style="fill:#a30075;fill-opacity:1;stroke:none" />
   </symbol>
 <!-- Lane Arrow -->
-  <symbol id="lane_arrow" width="40" height="200">
-    <path d="M 20,3 L 37,37 30,37 30,197 10,197 10,37 3,37 z"
-     style="fill:none;stroke:#c480ff;stroke-width:6;stroke-opacity:0.5;strok-linejoin:miter" />
+  <symbol id="lane_arrow" width="50" height="250">
+    <path d="M 25,5 L 45,45 35,45 35,245 15,245 15,45 5,45 z"
+      style="fill:none;stroke:#c480ff;stroke-width:10;stroke-opacity:0.5;strok-linejoin:miter" />
   </symbol>
 <!-- Landing Steps -->
   <symbol id="landing_steps" width="60" height="60">

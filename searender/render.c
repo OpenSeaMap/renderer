@@ -810,7 +810,7 @@ int drawLine(Item_t *item, char *style) {
 
 void drawLineArrows(Item_t *item) {
   if (item->flag != WAY) return;
-  double size = 200.0 * symbolScale[zoom];
+  double size = 250.0 * symbolScale[zoom];
   Ref_t *link = item->type.way.blink;
   if (link == NULL) return;
   XY_t last = {0,0};
