@@ -11,7 +11,6 @@ clean () {
       cleanname="sport_tiles/${zoom[$1]}/$xc/$yc.png"
       if [ -e $cleanname ]; then
         rm $cleanname
-        echo "rm $cleanname" >> tmp/deletions
       fi
       if [ ${zoom[$1]} -lt 18 ]; then
         clean ${zoom[$1]} $xc $yc
@@ -32,20 +31,12 @@ tile () {
 	done;
 		perl ./orp/orp.pl -r ./styles/osm-seamark-sport-z18.xml -b $bb -o tmp/panel_18.svg tmp/$1 2>/dev/null
   filename="sport_tiles/12/$tx/$ty.png"
-  if [ -e $filename ]; then
-    echo "rm $filename" >> tmp/deletions
-  fi
   clean 12 $tx $ty
 	mkdir -p sport_tiles/12/$tx
 	inkscape tmp/panel_12.svg -e $filename -d 90 -a 256:256:512:512 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
-	while [ -e tmp/deletions ]; do
-		sleep 10
-	done
   if [ -e $filename ]; then
     if [ $(stat "$filename" | cut -f 8 -d' ') -lt 410 ]; then
       rm $filename
-    else
-      echo "put $filename cache/$(echo $filename | sed -e s?/?-?g)" >> tmp/12-$tx-$ty.send
     fi
   fi
 	./subtile 12 $tx $ty 256 512
@@ -55,25 +46,7 @@ tile () {
   echo "$(date) rendered 12 $tx $ty" >> log.txt
 }
 
-tile91011() {
-  for file in $(ls tmp | grep "sport_tiles\-"); do
-    tile=$(echo $file | sed -e s?-?/?g)
-    if [ $(stat tmp/$file | cut -f 8 -d' ') -ge 410 ]; then
-      mkdir -p $(dirname $tile)
-      mv -f tmp/$file $tile
-      echo "put $tile cache/$file" >> tmp/9-10-11.send
-    else
-      if [ -e $tile ]; then
-        rm $tile
-        echo "rm $tile" >> tmp/deletions
-      fi
-      rm tmp/$file
-    fi
-  done
-}
-
 while true; do
-	tile91011
   if [ $(ls tmp | grep -c "\_12\.osm") -eq 0 ]; then
     sleep 10
   else
@@ -89,7 +62,6 @@ while true; do
     	if [ -e tmp/$file ] ; then
 	    	rm tmp/$file
 	    fi
-			tile91011
   	done
   fi
 done

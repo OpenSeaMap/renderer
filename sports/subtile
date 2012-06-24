@@ -32,7 +32,6 @@ subsubtile () {
             fi
           fi
         else
-          echo "put $tilename cache/$(echo $tilename | sed -e s?/?-?g)" >> tmp/$1-$2-$3.send
           if [ ${zoom[$1]} -lt 18 ]; then
             if [ $(ps -a | grep -c inkscape) -lt 5 ]; then
               ./subtile ${zoom[$1]} $xs $ys $x0 $y1 &

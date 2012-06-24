@@ -83,18 +83,21 @@ search () {
           inkscape tmp/panel.svg -e tmp/panel.png -d 90 -a 256:256:512:512 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
           if [ -e tmp/panel.png ]; then
             if [ $(stat tmp/panel.png | cut -f 8 -d' ') -ge 410 ]; then
-              if [ ! -e tmp/sport_tiles-9-$tx9-$ty9.png ]; then
-                perl ./orp/orp.pl -r ./styles/osm-seamark-sport-z9.xml -b $bb9 -o tmp/panel.svg tmp/panel-z9.osm 2>/dev/null
-                inkscape tmp/panel.svg -e tmp/sport_tiles-9-$tx9-$ty9.png -d 11.25 -a 256:256:2304:2304 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
+              perl ./orp/orp.pl -r ./styles/osm-seamark-sport-z9.xml -b $bb9 -o tmp/panel.svg tmp/panel-z9.osm 2>/dev/null
+              inkscape tmp/panel.svg -e tmp/91011.png -d 11.25 -a 256:256:2304:2304 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
+              if [ $(stat tmp/91011.png | cut -f 8 -d' ') -ge 410 ]; then
+                mv tmp/91011.png sport_tiles/9/$tx9/$ty9.png
               fi
-              if [ ! -e tmp/sport_tiles-10-$tx10-$ty10.png ]; then
-                perl ./orp/orp.pl -r ./styles/osm-seamark-sport-z10.xml -b $bb10 -o tmp/panel.svg tmp/panel-z10.osm 2>/dev/null
-                inkscape tmp/panel.svg -e tmp/sport_tiles-10-$tx10-$ty10.png -d 22.5 -a 256:256:1280:1280 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
+              perl ./orp/orp.pl -r ./styles/osm-seamark-sport-z10.xml -b $bb10 -o tmp/panel.svg tmp/panel-z10.osm 2>/dev/null
+              inkscape tmp/panel.svg -e tmp/91011.png -d 22.5 -a 256:256:1280:1280 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
+              if [ $(stat tmp/91011.png | cut -f 8 -d' ') -ge 410 ]; then
+                mv tmp/91011.png sport_tiles/10/$tx10/$ty10.png
               fi
-              if [ ! -e tmp/sport_tiles-11-$tx11-$ty11.png ]; then
-                perl ./orp/orp.pl -r ./styles/osm-seamark-sport-z11.xml -b $bb11 -o tmp/panel.svg tmp/panel-z11.osm 2>/dev/null
-                inkscape tmp/panel.svg -e tmp/sport_tiles-11-$tx11-$ty11.png -d 45 -a 256:256:768:768 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
-              fi                                                                                                          
+              perl ./orp/orp.pl -r ./styles/osm-seamark-sport-z11.xml -b $bb11 -o tmp/panel.svg tmp/panel-z11.osm 2>/dev/null
+              inkscape tmp/panel.svg -e tmp/91011.png -d 45 -a 256:256:768:768 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
+              if [ $(stat tmp/91011.png | cut -f 8 -d' ') -ge 410 ]; then
+                mv tmp/91011.png sport_tiles/11/$tx11/$ty11.png
+              fi
               cp tmp/panel-z12.osm tmp/$tx\_$ty\_$bb\_12.osm
             fi
           fi
