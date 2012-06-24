@@ -1,3 +1,5 @@
+CFLAGS=-std=c99
+
 all: s57toosm searender
 
 s57toosm: s57toosm.o s57obj.o s57att.o s57val.o
