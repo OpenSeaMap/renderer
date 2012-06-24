@@ -87,8 +87,8 @@ rerender () {
       fi
     fi
     rr=0;
-    for ((i=0; ${i}<2; i=${i}+1)); do
-      for ((j=0; ${j}<2; j=${j}+1)); do
+    for ((i=0; ${i}<4; i=${i}+1)); do
+      for ((j=0; ${j}<4; j=${j}+1)); do
         tx=$((${x}*4+${i}))
         ty=$((${y}*4+${j}))
         if [ -e tiles/14/$tx/$ty.png ]; then
