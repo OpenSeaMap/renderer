@@ -8,14 +8,11 @@ download () {
 			touch sort.osm
 			while [ -e sort.osm ]; do
 				if [ "$type" = "sport=swimming" ]; then
-#					while ! wget -q -T 1800 -O xapi.osm --limit-rate=500k --post-file=swimming.osm3s http://www.overpass-api.de/api/interpreter; do
 					while ! wget -q -T 1800 -O xapi.osm --limit-rate=500k --post-file=swimming.osm3s http://overpass.osm.rambler.ru/cgi/interpreter; do
 						echo "$(date) wget error - retrying JXAPI" >> log.txt
 						sleep 60
 					done
 				else
-#					while ! wget -q -T 1800 --limit-rate=500k -O xapi.osm http://jxapi.openstreetmap.org/xapi/api/0.6/*[$type]; do
-#					while ! wget -q -T 1800 --limit-rate=500k -O xapi.osm http://overpass-api.de/api/xapi?*[$type][@meta]; do
 					while ! wget -q -T 1800 --limit-rate=500k -O xapi.osm http://overpass.osm.rambler.ru/cgi/xapi?*[$type][@meta]; do
 						echo "$(date) wget error - retrying JXAPI" >> log.txt
 						sleep 60

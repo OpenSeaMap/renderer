@@ -943,7 +943,7 @@ char *charString(Item_t *item, char *type, int idx) {
         if ((tag = getTag(obj, CATSIT)) != NULL)
           strcat(string1, sit_map[tag->val.val.l->val]);
         if ((tag = getTag(obj, COMCHA)) != NULL)
-          sprintf(strchr(string1, 0), " Ch.%s", stringValue(tag->val));
+          sprintf(strchr(string1, 0), "\nCh.%s", stringValue(tag->val));
       }
       break;
     case SISTAW:
@@ -952,7 +952,7 @@ char *charString(Item_t *item, char *type, int idx) {
         if ((tag = getTag(obj, CATSIW)) != NULL)
           strcat(string1, siw_map[tag->val.val.l->val]);
         if ((tag = getTag(obj, COMCHA)) != NULL)
-          sprintf(strchr(string1, 0), " Ch.%s", stringValue(tag->val));
+          sprintf(strchr(string1, 0), "\nCh.%s", stringValue(tag->val));
       }
       break;
     case LIGHTS:

@@ -458,7 +458,11 @@ object_rules(ports) {
 object_rules(harbours) {
   if (is_type("anchorage")) symbol("anchorage");
   if ((zoom >= 16) && is_type("anchor_berth")) symbol("anchor_berth");
-  if ((zoom >= 12) && is_type("harbour") && attribute_test("category", "marina|yacht|yacht_harbour")) symbol("marina");
+  if ((zoom >= 12) && is_type("harbour") && attribute_test("category", "marina|yacht")) {
+    symbol("marina");
+    if ((zoom >= 15) && (has_item_attribute("name")))
+      node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -70);
+  }
 }
 
 object_rules(areas) {
@@ -468,6 +472,8 @@ object_rules(areas) {
     if (attribute_test("category", "wind_farm")) {
       symbol("wind_farm");
       area("stroke-width:20;stroke-dasharray:20,20;fill:none;stroke:#000000");
+      if ((zoom >= 15) && (has_item_attribute("name")))
+        node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, 70);
     }
   }
 }
