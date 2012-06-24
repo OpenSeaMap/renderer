@@ -1,36 +1,9 @@
 #!/bin/bash
 
 while true; do
-	if [ -e tmp/sending ]; then
-		backoff=0
-    while [ $(ps -a | grep -c sftp) -gt 1 ]; do
-    	sleep 10
-    done          
-		while ! sftp -q -b tmp/sending malcolm@netz.smurf.noris.de; do
-			echo "SFTP failure - retrying"
-			touch pause
-			backoff=$(($backoff+1))
-			sleep $((60*$backoff))
-		done
-		rm -f pause
-		rm tmp/sending
-		echo $(date)
-	fi
-	sleep 20
-	while [ -e tmp/deletions ]; do
-		mv tmp/deletions tmp/deleting
-    while [ $(ps -a | grep -c sftp) -gt 1 ]; do
-    	sleep 10
-    done          
-		sftp -q -b tmp/deleting malcolm@netz.smurf.noris.de
-		rm tmp/deleting
-	done
-	sleep 10
-	if [ $(ls tmp | grep -c '.send') -ne 0 ]; then
-		for file in $(ls tmp | grep '.send'); do
-			mv tmp/$file tmp/send
-			cat tmp/send >> tmp/sending
-		done
-		rm tmp/send
-	fi
+  sleep 43000
+  touch pause
+  sleep 300
+  ./sync
+  rm pause
 done
