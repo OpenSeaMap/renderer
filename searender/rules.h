@@ -79,8 +79,7 @@
 #define line_arrows drawLineArrows(item)
 #define line_text(t,s,o,y,r) drawLineText(item, t, s, o, y, r)
 #define area(s) drawArea(item, s)
-#define area_text(t,s) drawAreaText(item, t, s)
-#define node_text(t,s,x,y) drawNodeText(item, t, s, x, y)
+#define text(t,s,x,y) drawText(item, t, s, x, y)
 
 extern void main_rules(Item_t*, Obj_t*);
 

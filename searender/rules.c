@@ -31,10 +31,10 @@ object_rules(lights) {
       light_flare;
     if (zoom >= 15) {
       make_char_string("light");
-      node_text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:start", 60, -10);
+      text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:start", 60, -10);
       free_string;
       if (has_item_attribute("name") && is_type("light_major|light_minor"))
-        node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -50);
+        text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -50);
     }
   }
 }
@@ -108,7 +108,7 @@ object_rules(fogs) {
   if (zoom >= 11) symbol("fog_signal");
   if (zoom >= 15) {
     make_char_string("fog_signal");
-    node_text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -60, -10);
+    text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -60, -10);
     free_string
   }
 }
@@ -117,7 +117,7 @@ object_rules(rtbs) {
   if (zoom >= 11) symbol("radar_station");
   if (zoom >= 15) {
     make_char_string("radar_transponder");
-    node_text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -40, -50);
+    text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -40, -50);
     free_string
   }
 }
@@ -155,14 +155,14 @@ object_rules(mark_colours, char* default_shape) {
   if (has_object("light")) object(lights);
   if ((zoom >= 15) && has_item_attribute("name")) {
     literal_switch(string)
-    literal_case("beacon") node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
-    literal_case("pillar|spar") node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 50, -50);
-    literal_case("float|tower") node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
+    literal_case("beacon") text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
+    literal_case("pillar|spar") text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 50, -50);
+    literal_case("float|tower") text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
     literal_case("spherical|can|conical|float|tower|barrel") {
       if (has_object("topmark") || has_object("daymark") || is_type("mooring"))
-        node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
+        text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
       else
-        node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 0, -50);
+        text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 0, -50);
     }
     end_switch
   }
@@ -184,7 +184,7 @@ object_rules(mark_shapes, char* default_shape) {
         symbol("stake");
       }
       if (has_object("topmark")) object(topmarks, "stake");
-      if ((zoom >= 15) && (has_item_attribute("name"))) node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
+      if ((zoom >= 15) && (has_item_attribute("name"))) text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
     }
     attribute_case("perch") {
       attribute_switch("category")
@@ -192,11 +192,11 @@ object_rules(mark_shapes, char* default_shape) {
       attribute_case("starboard") symbol("perchS");
       attribute_default symbol("stake");
       end_switch
-      if ((zoom >= 15) && has_item_attribute("name")) node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
+      if ((zoom >= 15) && has_item_attribute("name")) text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
     }
     attribute_case("cairn") {
       symbol("cairn");
-      if ((zoom >= 15) && has_item_attribute("name")) node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 30, -50);
+      if ((zoom >= 15) && has_item_attribute("name")) text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 30, -50);
     }
     attribute_default object(mark_colours, default_shape);
     end_switch
@@ -285,7 +285,7 @@ object_rules(separation) {
   if (is_type("separation_zone|separation_crossing|separation_roundabout")) {
     area("stroke:none; fill:#c480ff; fill-opacity:0.5");
     if (has_item_attribute("name")) {
-      area_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:200; text-anchor:middle");
+      text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:200; text-anchor:middle", 0, 0);
     }
   } else if (is_type("separation_line")) {
     line("stroke-width:15; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
@@ -355,7 +355,7 @@ object_rules(signals) {
       symbol("signal_station");
       if (zoom >= 15) {
         make_char_string(this_type);
-        node_text(string, "font-family:Arial; font-weight:normal; font-size:80; text-anchor:middle", 0.0, 65);
+        text(string, "font-family:Arial; font-weight:normal; font-size:80; text-anchor:middle", 0.0, 65);
         free_string
       }
     } else if (is_type("radio_station|radar_station")) {
@@ -397,10 +397,10 @@ object_rules(landmarks) {
   if (!has_attribute("function") && !has_attribute("category") && has_object("light")) {
     symbol("lighthouse");
     if ((zoom >= 15) && has_item_attribute("name"))
-      node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -70);
+      text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -70);
   } else {
     if ((zoom >= 15) && has_item_attribute("name"))
-      node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
+      text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
   }
   if (has_object("fog_signal")) object(fogs);
   if (has_object("radar_transponder")) object(rtbs);
@@ -417,7 +417,7 @@ object_rules(platforms) {
     symbol("platform");
   }
   if ((zoom >= 15) && has_item_attribute("name"))
-    node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
+    text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
   if (has_object("fog_signal")) object(fogs);
   if (has_object("radar_transponder")) object(rtbs);
   if (has_object("light")) object(lights);
@@ -461,7 +461,7 @@ object_rules(harbours) {
   if ((zoom >= 12) && is_type("harbour") && attribute_test("category", "marina|yacht")) {
     symbol("marina");
     if ((zoom >= 15) && (has_item_attribute("name")))
-      node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -70);
+      text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -90);
   }
 }
 
@@ -473,7 +473,7 @@ object_rules(areas) {
       symbol("wind_farm");
       area("stroke-width:20;stroke-dasharray:20,20;fill:none;stroke:#000000");
       if ((zoom >= 15) && (has_item_attribute("name")))
-        node_text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, 70);
+        text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, 70);
     }
   }
 }

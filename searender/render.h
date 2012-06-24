@@ -36,8 +36,7 @@ extern int drawLine(Item_t*, char*);
 extern void drawLineArrows(Item_t*);
 extern int drawLineText(Item_t*, char*, char*, double, int, int);
 extern int drawArea(Item_t*, char*);
-extern int drawAreaText(Item_t*, char*, char*);
-extern int drawNodeText(Item_t*, char*, char*, double, double);
+extern int drawText(Item_t*, char*, char*, double, double);
 
 extern bool compareTypes(Item_t*, char*);
 extern bool compareObjects(Item_t*, char*);

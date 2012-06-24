@@ -878,12 +878,13 @@ int drawAreaText(Item_t *item, char *text, char *style) {
   return 0;
 }
 
-int drawNodeText(Item_t *item, char *text, char *style, double dx, double dy) {
-  if (item->flag == NODE) {
+int drawText(Item_t *item, char *text, char *style, double dx, double dy) {
+  XY_t coord = findCentroid(item);
+  if ((coord.x > 0.0) || (coord.y > 0.0)) {
     printf("<text id=\"%d\" ", ++ref);
     double size = scaleStyle(style) * 1.1;
-    double x = lon2x(item->type.node.lon) + (dx*symbolScale[zoom]);
-    double y = lat2y(item->type.node.lat) + (dy*symbolScale[zoom]);
+    double x = coord.x + (dx*symbolScale[zoom]);
+    double y = coord.y + (dy*symbolScale[zoom]);
     char *line = strtok(text, "\n");
     double dy = 0.0;
     printf("y=\"%f\">", y);
