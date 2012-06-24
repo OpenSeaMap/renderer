@@ -283,7 +283,10 @@ object_rules(shoreline) {
 
 object_rules(separation) {
   if (is_type("separation_zone|separation_crossing|separation_roundabout")) {
-    area("stroke:none; fill:#c480ff; fill-opacity:0.5");
+    if (zoom <= 15)
+      area("stroke:none; fill:#c480ff; fill-opacity:0.5");
+    else
+      area("stroke:#c480ff; stroke-width:20; stroke-opacity:0.5; fill:none");
     if (has_item_attribute("name")) {
       text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:200; text-anchor:middle", 0, 0);
     }
