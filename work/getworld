@@ -2,7 +2,6 @@
 
 while true; do
   ./Overpass/translate_xapi "*[seamark:type=*][@meta]" | ./Overpass/osm3s_query > tmp.osm 2> /dev/null;
-	mv tmp.osm world.osm
-	../util/smfilter -a 0.01 < world.osm | ../util/tagfilter > tmp.osm
+	cp tmp.osm world.osm
 	mv tmp.osm next.osm
 done
