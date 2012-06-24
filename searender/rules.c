@@ -288,11 +288,11 @@ object_rules(separation) {
       text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:200; text-anchor:middle", 0, 0);
     }
   } else if (is_type("separation_line")) {
-    line("stroke-width:15; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
+    line("stroke-width:20; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
   } else if (is_type("separation_lane")) {
     line_arrows;
   } else if (is_type("separation_boundary")) {
-    line("stroke-width: 10; stroke-dasharray:20,20; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
+    line("stroke-width: 20; stroke-dasharray:40,40; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
   }
 }
 

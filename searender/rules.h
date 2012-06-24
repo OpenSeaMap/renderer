@@ -168,6 +168,5 @@ extern void main_rules(Item_t*, Obj_t*);
  light_flare Render light flare
  line(<style>) Draw line with <style>
  line_text(<text>, <style>, <offset> , <y offset> ,<reference>) Render <text> with <style> along line
- area_text(<text> , <style>) Place <text with <style> at centroid of area 
- node_text(<text>, <style>, <x offset>, <y offset>) Place <text> with <style> <offset x> and <offset y> from centre
+ text(<text>, <style>, <x offset>, <y offset>) Place <text> with <style> <offset x> and <offset y> from centre of item
  */
