@@ -9,9 +9,56 @@
 
 #include "rules.h"
 
+object_rules(refls, char *body_shape) {
+  if (zoom >= 14) {
+    char *shape = strdup(body_shape);
+    literal_switch(body_shape)
+    literal_case("pillar|spar") {
+      if (has_object("topmark")) symbol_orientation("radar_reflector", BC, -60, 180, 18.5);
+      else symbol_orientation("radar_reflector", BC, -35, 100, 18.5);
+    }
+    literal_case("can|conical|spherical|barrel") {
+      if (has_object("topmark")) symbol_orientation("radar_reflector", BC, -45, 120, 18.5);
+      else symbol_orientation("radar_reflector", BC, -15, 50, 18.5);
+    }
+    literal_case("tower|beacon|stake") {
+      if (has_object("topmark")) symbol_position("radar_reflector", BC, 0, 160);
+      else symbol_position("radar_reflector", BC, 0, 80);
+    }
+    literal_case("float|super-buoy") {
+      if (has_object("topmark")) symbol_position("radar_reflector", BC, 0, 130);
+      else symbol_position("radar_reflector", BC, 0, 50);
+    }
+    end_switch
+    free(shape);
+  }
+}
+
+object_rules(fogs) {
+  if (zoom >= 11) symbol("fog_signal");
+  if (zoom >= 15) {
+    make_char_string("fog_signal");
+    text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -60, -10);
+    free_string
+  }
+}
+
+object_rules(rtbs) {
+  if (zoom >= 11) symbol("radar_station");
+  if (zoom >= 15) {
+    make_char_string("radar_transponder");
+    text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -40, -50);
+    free_string
+  }
+}
+
 object_rules(lights) {
-  if (is_type("light_major")) symbol("light_major");
-  if ((is_type("light_minor|light")) && (zoom >= 14)) symbol("light_minor");
+  if (is_type("light_major|light_minor|light")) {
+    if (is_type("light_major")) symbol("light_major");
+    if ((is_type("light_minor|light")) && (zoom >= 14)) symbol("light_minor");
+    if (has_object("fog_signal")) object(fogs);
+    if (has_object("radar_transponder")) object(rtbs);
+  }
   if (has_object("light")) {
     int n = object_count("light");
     if (n > 0) {
@@ -77,49 +124,6 @@ object_rules(topmarks, char *body_shape) {
     end_switch
   }
   used
-}
-
-object_rules(refls, char *body_shape) {
-  if (zoom >= 14) {
-    char *shape = strdup(body_shape);
-    literal_switch(body_shape)
-    literal_case("pillar|spar") {
-      if (has_object("topmark")) symbol_orientation("radar_reflector", BC, -60, 180, 18.5);
-      else symbol_orientation("radar_reflector", BC, -35, 100, 18.5);
-    }
-    literal_case("can|conical|spherical|barrel") {
-      if (has_object("topmark")) symbol_orientation("radar_reflector", BC, -45, 120, 18.5);
-      else symbol_orientation("radar_reflector", BC, -15, 50, 18.5);
-    }
-    literal_case("tower|beacon|stake") {
-      if (has_object("topmark")) symbol_position("radar_reflector", BC, 0, 160);
-      else symbol_position("radar_reflector", BC, 0, 80);
-    }
-    literal_case("float|super-buoy") {
-      if (has_object("topmark")) symbol_position("radar_reflector", BC, 0, 130);
-      else symbol_position("radar_reflector", BC, 0, 50);
-    }
-    end_switch
-    free(shape);
-  }
-}
-
-object_rules(fogs) {
-  if (zoom >= 11) symbol("fog_signal");
-  if (zoom >= 15) {
-    make_char_string("fog_signal");
-    text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -60, -10);
-    free_string
-  }
-}
-
-object_rules(rtbs) {
-  if (zoom >= 11) symbol("radar_station");
-  if (zoom >= 15) {
-    make_char_string("radar_transponder");
-    text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -40, -50);
-    free_string
-  }
 }
 
 object_rules(mark_colours, char* default_shape) {
