@@ -101,7 +101,7 @@ cleanup () {
       tile=$(echo "scale=10; if ($tile < 0) $tile+4096 else $tile" | bc)
       minlon=$(echo "scale=10; (($tile/4096)*360)-180" | bc)
       tile=$(echo "scale=10; ($x+2)" | bc)
-      tile=$(echo "scale=10; if ($tile >= 4096}) $tile-4096 else $tile" | bc)
+      tile=$(echo "scale=10; if ($tile >= 4096) $tile-4096 else $tile" | bc)
       maxlon=$(echo "scale=10; (($tile/4096)*360)-180" | bc)
       tile=$(echo "scale=10; ($y-1)" | bc -l)
       tile=$(echo "scale=10; if ($tile < 0) 0 else $tile" | bc)
