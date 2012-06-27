@@ -56,7 +56,7 @@ char *light_characters[] = { [CHR_UNKN]="", [CHR_F]="F", [CHR_FL]="Fl", [CHR_LFL
   [CHR_ALLFL]="Al.LFl", [CHR_ALFL]="Al.Fl", [CHR_ALGR]="Al.Gr", [CHR_QLFL]="Q+LFl", [CHR_VQLFL]="VQ+LFl", [CHR_UQLFL]="UQ+LFl", [CHR_AL]="Al", [CHR_ALFFL]="Al.FFl" };
 
 char *top_shapes[] = { [TOP_UNKN]="", [TOP_CONE]="top_cone_up", [TOP_ICONE]="top_cone_down", [TOP_SPHR]="top_sphere", [TOP_ISD]="top_isol",
-  [TOP_CAN]="top_can", [TOP_BORD]="top_board", [TOP_SALT]="top_saltire", [TOP_CROS]="top_cross", [TOP_CUBE]="", [TOP_WEST]="top_west",
+  [TOP_CAN]="top_can", [TOP_BORD]="top_square", [TOP_SALT]="top_saltire", [TOP_CROS]="top_cross", [TOP_CUBE]="", [TOP_WEST]="top_west",
   [TOP_EAST]="top_east", [TOP_RHOM]="top_diamond", [TOP_NORTH]="top_north", [TOP_SOUTH]="top_south", [TOP_BESM]="", [TOP_IBESM]="",
   [TOP_FLAG]="", [TOP_SPRH]="", [TOP_SQUR]="top_square", [TOP_HRECT]="", [TOP_VRECT]="", [TOP_TRAP]="", [TOP_ITRAP]="",
   [TOP_TRI]="top_triangle_up", [TOP_ITRI]="top_triangle_down", [TOP_CIRC]="top_circle", [TOP_CRSS]="", [TOP_T]="", [TOP_TRCL]="",
