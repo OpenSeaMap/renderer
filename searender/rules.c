@@ -88,7 +88,6 @@ object_rules(lights) {
 
 object_rules(top_colours, char *shape, double dx, double dy, double th) {
   make_string(shape);
-  use_object("topmark")
   if (has_attribute("colour")) {
     int n = attribute_count("colour");
     char panel[4] = {'0'+n, 0, 0, 0};
@@ -109,12 +108,10 @@ object_rules(top_colours, char *shape, double dx, double dy, double th) {
     end_sequence
   }
   symbol_orientation(string, BC, dx, dy, th);
-  used
   free_string;
 }
 
 object_rules(topmarks, char *body_shape) {
-  use_object("topmark")
   if (has_attribute("shape")) {
     literal_switch(body_shape)
     literal_case("pillar|spar") object(top_colours, attribute("shape"), -33.5, 100, 18.5);
@@ -123,7 +120,6 @@ object_rules(topmarks, char *body_shape) {
     literal_case("can|conical|spherical|barrel") object(top_colours, attribute("shape"), -15.3, 37, 18.5);
     end_switch
   }
-  used
 }
 
 object_rules(mark_colours, char* default_shape) {
@@ -152,7 +148,15 @@ object_rules(mark_colours, char* default_shape) {
     end_sequence
   } 
   symbol(string);
-  if (has_object("topmark")) object(topmarks, string);
+  if (has_object("topmark")) {
+    use_object("topmark")
+    object(topmarks, string);
+    used
+  } else if (has_object("daymark")) {
+    use_object("daymark")
+    object(topmarks, string);
+    used
+  }
   if (has_object("fog_signal")) object(fogs);
   if (has_object("radar_transponder")) object(rtbs);
   if (has_object("radar_reflector")) object(refls, string);
@@ -187,7 +191,15 @@ object_rules(mark_shapes, char* default_shape) {
       } else {
         symbol("stake");
       }
-      if (has_object("topmark")) object(topmarks, "stake");
+      if (has_object("topmark")) { 
+        use_object("topmark")
+        object(topmarks, "stake");
+        used
+      } else if (has_object("daymark")) {
+        use_object("daymark")
+        object(topmarks, "stake");
+        used
+      }
       if ((zoom >= 15) && (has_item_attribute("name"))) text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
     }
     attribute_case("perch") {
