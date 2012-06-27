@@ -523,6 +523,7 @@ rules {
   type("distance_mark") object(distances);
   type("landmark") object(landmarks);
   type("crane") object(ports);
+  type("mooring") object(moorings);
   type("notice") object(notices);
   type("small_craft_facility") object(marinas);
   type("light_major") object(lights);
@@ -534,7 +535,6 @@ rules {
   type("signal_station_warning") object(signals);
   type("coastguard_station") object(signals);
   type("platform") object(platforms);
-  type("mooring") object(moorings);
   type("radio_station") object(signals);
   type("radar_station") object(signals);
   type("rescue_station") object(signals);
