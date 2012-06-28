@@ -8,7 +8,7 @@ download () {
 			touch sort.osm
 			while [ -e sort.osm ]; do
 				if [ "$type" = "sport=swimming" ]; then
-					while ! wget -q -T 1800 -O xapi.osm --limit-rate=500k --post-file=swimming.osm3s http://overpass.osm.rambler.ru/cgi/interpreter; do
+					while ! wget -q -T 3600 -O xapi.osm --limit-rate=500k --post-file=swimming.osm3s http://overpass.osm.rambler.ru/cgi/interpreter; do
 						echo "$(date) wget error - retrying JXAPI" >> log.txt
 						sleep 60
 					done
