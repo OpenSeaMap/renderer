@@ -148,9 +148,7 @@ while true; do
 		done
 		echo "$(date) Resumed" >> log.txt
 	fi
-		latest=$(cat datestamp)
-	if [ $previous == $latest ]; then
-		sleep 14400
-	fi
+	latest=$(cat datestamp)
+	sleep 14400
 	previous=$latest
 done
