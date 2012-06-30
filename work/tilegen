@@ -39,9 +39,11 @@ tile () {
   clean 12 $tx $ty
 	mkdir -p tiles/12/$tx
 	inkscape tmp/panel_12.svg -e $filename -d 90 -a 256:256:512:512 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
-	while [ -e tmp/deletions ]; do
-		sleep 1
-	done
+  if [ $(ls tmp | grep -c ".send") -ne 0 ]; then
+  	while [ -e tmp/deletions ]; do
+	  	sleep 1
+	  done
+	fi
   if [ -e $filename ]; then
     if [ $(stat "$filename" | cut -f 8 -d' ') -lt 410 ]; then
       rm $filename
