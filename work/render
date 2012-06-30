@@ -86,16 +86,33 @@ cleanup () {
         x=0
       fi
     fi
-    rr=0;
-    for ((i=0; ${i}<4; i=${i}+1)); do
-      for ((j=0; ${j}<4; j=${j}+1)); do
-        tx=$((${x}*4+${i}))
-        ty=$((${y}*4+${j}))
-        if [ -e tiles/14/$tx/$ty.png ]; then
-          rr=1;
-        fi
-      done
-    done    
+    if [ -e tiles/12/$x/$y.png ]; then
+      rr=1;
+    else
+      rr=0;
+      for ((i=0; $i<2; i=$i+1)); do
+        for ((j=0; $j<2; j=$j+1)); do
+          tx=$(($x*2+$i))
+          ty=$(($y*2+$j))
+          if [ -e tiles/13/$tx/$ty.png ]; then
+            rr=1
+            break 2
+          fi
+        done
+      done    
+      if [ $rr -eq 0 ]; then
+        for ((i=0; $i<4; i=$i+1)); do
+          for ((j=0; $j<4; j=$j+1)); do
+            tx=$(($x*4+$i))
+            ty=$(($y*4+$j))
+            if [ -e tiles/14/$tx/$ty.png ]; then
+              rr=1
+              break 2
+            fi
+          done
+        done    
+      fi
+    fi
     if [ $rr -ne 0 ]; then
       tile=$(echo "scale=10; ($x-1)" | bc)
       tile=$(echo "scale=10; if ($tile < 0) $tile+4096 else $tile" | bc)
