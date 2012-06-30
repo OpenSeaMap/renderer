@@ -1,7 +1,6 @@
 #!/bin/bash
 
 while true; do
-	sleep 1
 	if [ -e tmp/sending ]; then
 		backoff=0
 	  while [ $(ps -a | grep -c sftp) -gt 1 ]; do
@@ -17,6 +16,7 @@ while true; do
 		rm -f hold
 		echo $(date)
 	fi
+	sleep 20
 	while [ -e tmp/deletions ]; do
 		mv tmp/deletions tmp/deleting
     while [ $(ps -a | grep -c sftp) -gt 1 ]; do
@@ -24,14 +24,13 @@ while true; do
     done          
     sftp -q -b tmp/deleting malcolm@netz.smurf.noris.de
 		rm tmp/deleting
-  	sleep 20
 	done
+	sleep 20
 	if [ $(ls tmp | grep -c '.send') -ne 0 ]; then
 		for file in $(ls tmp | grep '.send'); do
 			mv tmp/$file tmp/send
 			cat tmp/send >> tmp/sending
 		done
 		rm tmp/send
-  	sleep 20
 	fi
 done
