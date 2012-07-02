@@ -13,7 +13,29 @@
 #define S57VAL_H
 
 #include "s57att.h"
-#include "map.h"
+
+typedef int Enum_t;
+typedef enum {S, A, L, E, F, I} Conv_t; 
+typedef struct VAL Val_t;
+typedef struct LST Lst_t;
+
+struct LST {
+  Lst_t *next;
+  Enum_t val;
+};
+
+struct VAL {
+  Atta_t key;
+  Conv_t type;
+  union {
+    char *s;
+    char *a;
+    Lst_t *l;
+    Enum_t e;
+    double f;
+    long i;
+  } val;
+};
 
 typedef  enum { MRK_UNKN, MRK_TOPB, MRK_BOTB, MRK_RTRI, MRK_LTRI, MRK_BTRI
 } AddMRK_t;
