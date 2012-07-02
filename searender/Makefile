@@ -14,7 +14,7 @@ searender.o: searender.c map.h render.h rules.h s57obj.h s57att.h s57val.h
 map.o: map.c map.h s57val.h
 render.o: render.c render.h map.h render.h s57val.h
 rules.o: rules.c rules.h map.h render.h s57obj.h s57att.h s57val.h
-s57obj.o: s57obj.c map.h s57obj.h s57att.h s57val.h
-s57att.o: s57att.c map.h s57obj.h s57att.h s57val.h
-s57val.o: s57val.c map.h s57obj.h s57att.h s57val.h
+s57obj.o: s57obj.c s57obj.h
+s57att.o: s57att.c s57obj.h s57att.h
+s57val.o: s57val.c s57obj.h s57att.h s57val.h
 
