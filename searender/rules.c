@@ -486,11 +486,11 @@ object_rules(harbours) {
 
 object_rules(areas) {
   if (is_type("fairway")) area("stroke:none;fill:#ffffff;fill-opacity:0.25");
-  if (is_type("restricted_area")) area("stroke-width:10;stroke-dasharray:20,20;stroke:#c480ff;stroke-opacity:0.5;fill:none");
+  if (is_type("restricted_area")) area("stroke-width:10;stroke-dasharray:40,40;stroke:#c480ff;stroke-opacity:0.5;fill:none");
   if (is_type("production_area")) {
     if (attribute_test("category", "wind_farm")) {
       symbol("wind_farm");
-      area("stroke-width:20;stroke-dasharray:20,20;fill:none;stroke:#000000");
+      area("stroke-width:20;stroke-dasharray:40,40;fill:none;stroke:#000000");
       if ((zoom >= 15) && (has_item_attribute("name")))
         text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, 70);
     }
