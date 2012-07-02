@@ -426,10 +426,10 @@ char *stringValue(Val_t val) {
   return outstr;
 }
 
-Val_t convertValue(char *key, char *val, Obja_t obj) {
+Val_t convertValue(char *val, Atta_t key, Obja_t obj) {
   Val_t value = {0, S, 0};
   char *tok;
-  value.key = enumAttribute(key, obj);
+  value.key = key;
   s57key_t *valkey = &keys[value.key];
   if (value.key != 0) {
     value.type = valkey->type;
