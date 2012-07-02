@@ -100,13 +100,13 @@ typedef enum {
   TOP_CIRC, TOP_CRSS, TOP_T, TOP_TRCL, TOP_CRCL, TOP_RHCL, TOP_CLTR, TOP_OTHR
 } TopSHP;
 
-extern void set_conv(char*);
+extern void set_conv(char*);                      // Initialise character conversions for S57 file input
 
-extern char *decodeValue(Attl_t, char*);
-//extern char *encodeValue(Attl_t, char*);
+extern char *decodeValue(Attl_t, char*);          // Convert S57 attribute value to OSeaM attribute value string
+//extern char *encodeValue(Attl_t, char*);        // Convert OSeaM attribute value string to S57 attribute value
 
-extern char *stringValue(Val_t);
-extern Enum_t enumValue(char*, Atta_t);
-extern Val_t convertValue(char*, char*, Obja_t);
+extern char *stringValue(Val_t);                  // Convert OSeaM value struct to OSeaM attribute value string
+extern Enum_t enumValue(char*, Atta_t);           // Convert OSeaM attribute value string to OSeaM enumeration
+extern Val_t convertValue(char*, char*, Obja_t);  // Convert OSeaM attribute value string to OSeaM value struct
 
 #endif

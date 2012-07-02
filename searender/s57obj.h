@@ -12,8 +12,6 @@
 #ifndef S57OBJ_H
 #define S57OBJ_H
 
-//#include "map.h"
-
 typedef int Objl_t;
 
 typedef enum {
@@ -31,12 +29,12 @@ typedef enum {
   OBJSIZ
 } Obja_t;
 
-extern char *decodeType(Objl_t);
-extern Objl_t encodeType(char*);
+extern char *decodeType(Objl_t);  // Convert S57 feature code to OSeaM object string
+extern Objl_t encodeType(char*);  // Convert OSM object string to S57 code
 
-extern Obja_t lookupType(Objl_t);
+extern Obja_t lookupType(Objl_t); // Convert S57 feature code to OSeaM enumeration
 
-extern char *stringType(Obja_t);
-extern Obja_t enumType(char*);
+extern char *stringType(Obja_t);  // Convert OSeaM enumeration to OSeaM object string
+extern Obja_t enumType(char*);    // Convert OSeaM object string to OSeaM enumeration
 
 #endif

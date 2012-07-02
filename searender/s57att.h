@@ -34,13 +34,13 @@ typedef enum {
   ATTSIZ
 } Atta_t;
 
-extern char *decodeAttribute(Attl_t);
-extern Attl_t encodeAttribute(char*, Objl_t);
+extern char *decodeAttribute(Attl_t);           // Convert S57 attribute code to OSeaM attribute string
+extern Attl_t encodeAttribute(char*, Objl_t);   // Convert OSeaM attribute string to S57 attribute code
 
-extern Atta_t lookupAttribute(Attl_t);
+extern Atta_t lookupAttribute(Attl_t);          // Convert S57 attribute code to OSeaM enumeration
 
-extern char *stringAttribute(Atta_t);
-extern Atta_t enumAttribute(char*, Obja_t);
+extern char *stringAttribute(Atta_t);           // Convert OSeaM enumeration to OSeaM attribute string
+extern Atta_t enumAttribute(char*, Obja_t);     // Convert OSeaM attribute string to OSeaM enumeration
 
 #endif
 
