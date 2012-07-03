@@ -426,7 +426,7 @@ char *stringValue(Val_t val) {
   return outstr;
 }
 
-Val_t convertValue(char *val, Atta_t key, Obja_t obj) {
+Val_t convertValue(char *val, Atta_t key) {
   Val_t value = {0, S, 0};
   char *tok;
   value.key = key;

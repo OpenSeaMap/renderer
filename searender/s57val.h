@@ -107,6 +107,6 @@ extern char *decodeValue(Attl_t, char*);          // Convert S57 attribute value
 
 extern char *stringValue(Val_t);                  // Convert OSeaM value struct to OSeaM attribute value string
 extern Enum_t enumValue(char*, Atta_t);           // Convert OSeaM attribute value string to OSeaM enumeration
-extern Val_t convertValue(char*, Atta_t, Obja_t); // Convert OSeaM attribute value string to OSeaM value struct
+extern Val_t convertValue(char*, Atta_t);         // Convert OSeaM attribute value string to OSeaM value struct
 
 #endif

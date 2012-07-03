@@ -92,7 +92,7 @@ Obj_t *getObj(Item_t *item, Obja_t obj, int idx) {
 
 Tag_t *addTag(Obj_t *obj, char *key, char *val) {
   Tag_t *link = calloc(1, sizeof(Tag_t));
-  link->val = convertValue(val, enumAttribute(key, obj->obj), obj->obj);
+  link->val = convertValue(val, enumAttribute(key, obj->obj));
   link->next = obj->tags;
   obj->tags = link;
   return link;
