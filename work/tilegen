@@ -29,9 +29,9 @@ tile () {
 		sleep 1
 	done
 	for k in {12..17}; do
-		../searender/searender ../searender/symbols/symbols.svg $k $bb >tmp/panel_$k.svg <tmp/$1 &
+		../searender/searender ../searender/symbols/symbols.defs $k $bb >tmp/panel_$k.svg <tmp/$1 &
 	done;
-		../searender/searender ../searender/symbols/symbols.svg 18 $bb >tmp/panel_18.svg <tmp/$1
+		../searender/searender ../searender/symbols/symbols.defs 18 $bb >tmp/panel_18.svg <tmp/$1
   filename="tiles/12/$tx/$ty.png"
   if [ -e $filename ]; then
     echo "rm $filename" >> tmp/deletions
