@@ -365,7 +365,7 @@
 <!-- Lane Arrow -->
   <symbol id="lane_arrow" width="80" height="250">
     <path d="M 40,5 L 75,50 55,50 55,245 25,245 25,50 5,50 z"
-      style="fill:none;stroke:#c480ff;stroke-width:10;stroke-opacity:0.5;strok-linejoin:miter" />
+      style="fill:none;stroke:#c480ff;stroke-width:10;stroke-opacity:0.5;stroke-linejoin:miter" />
   </symbol>
 <!-- Landing Steps -->
   <symbol id="landing_steps" width="60" height="60">
@@ -892,6 +892,11 @@
 <!-- Rescue -->
   <symbol id="rescue" width="100" height="100">
     <path d="m 50,7.1875 -10.71875,40.75 -4.25,0 0,4.03125 4.25,0 L 50,92.6875 60.71875,51.96875 l 4.28125,0 0,-4.03125 -4.28125,0 L 50,7.1875 z" />
+  </symbol>
+<!-- Restricted Line -->
+  <symbol id="restricted_line" width="40" height="40">
+    <path d="M 20,0 L 20,40 M 22,20 L 40,20"
+      style="fill:none;stroke:#c480ff;stroke-width:4" />
   </symbol>
 <!-- Sailing Club -->
   <symbol id="sailing_club" width="60" height="60">

@@ -54,9 +54,14 @@ object_rules(rtbs) {
 
 object_rules(lights) {
   if (is_type("light_major|light_minor|light")) {
-    if (is_type("light_major")) symbol("light_major");
-    if ((is_type("light_minor|light")) && (zoom >= 14)) symbol("light_minor");
-    if (has_object("fog_signal")) object(fogs);
+    if (is_type("light_major")) {
+      symbol("light_major");
+      if (has_object("fog_signal")) object(fogs);
+    }
+    if ((is_type("light_minor|light")) && (zoom >= 14)) {
+      symbol("light_minor");
+      if (has_object("fog_signal")) object(fogs);
+    }
     if (has_object("radar_transponder")) object(rtbs);
   }
   if (has_object("light")) {
@@ -309,7 +314,7 @@ object_rules(separation) {
   } else if (is_type("separation_line")) {
     line("stroke-width:20; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
   } else if (is_type("separation_lane")) {
-    line_arrows;
+    line_symbols("lane_arrow", 0.5);
   } else if (is_type("separation_boundary")) {
     line("stroke-width: 20; stroke-dasharray:40,40; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
   }
@@ -486,7 +491,7 @@ object_rules(harbours) {
 
 object_rules(areas) {
   if (is_type("fairway")) area("stroke:none;fill:#ffffff;fill-opacity:0.25");
-  if (is_type("restricted_area")) area("stroke-width:10;stroke-dasharray:40,40;stroke:#c480ff;stroke-opacity:0.5;fill:none");
+  if (is_type("restricted_area")) line_symbols("restricted_line", 1.0);
   if (is_type("production_area")) {
     if (attribute_test("category", "wind_farm")) {
       symbol("wind_farm");

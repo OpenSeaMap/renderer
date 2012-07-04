@@ -14,9 +14,9 @@
 #define d2r(x) (x * M_PI / 180.0)
 #define r2d(x) (x * 180.0 / M_PI)
 
-typedef struct HASH Hash_t;
-struct HASH {Hash_t *next; char *name; double width; double height;};
-Hash_t *hashtable[100];
+typedef struct SYMB Symb_t;
+struct SYMB {Symb_t *next; char *name; double width; double height;};
+Symb_t *symbtable[100];
 
 typedef struct {double x; double y;} XY_t;
 
@@ -183,12 +183,12 @@ void render(char *symbols) {
         hash += *ptr;
       }
       hash %= 100;
-      Hash_t *link = calloc(1, sizeof(Hash_t));
-      link->next = hashtable[hash];
+      Symb_t *link = calloc(1, sizeof(Symb_t));
+      link->next = symbtable[hash];
       link->name = name;
       link->width = width;
       link->height = height;
-      hashtable[hash] = link;
+      symbtable[hash] = link;
     }
   }
   fclose(fp);
@@ -196,7 +196,7 @@ void render(char *symbols) {
   printf("</svg>\n");
 }
 
-Hash_t *lookupSymbol(char *symbol) {
+Symb_t *lookupSymbol(char *symbol) {
   int hash;
   char *ptr;
   if (symbol == NULL) return NULL;
@@ -204,8 +204,8 @@ Hash_t *lookupSymbol(char *symbol) {
     hash += *ptr;
   }
   hash %= 100;
-  Hash_t *link;
-  for (link = hashtable[hash]; link != NULL; link = link->next) {
+  Symb_t *link;
+  for (link = symbtable[hash]; link != NULL; link = link->next) {
     if (strcmp(symbol, link->name) == 0)
       break;
   }
@@ -253,7 +253,7 @@ int placeSymbol(XY_t coord, Obja_t obj, char *symbol, char * panel, char *colour
   char sympan[100];
   strcpy(sympan, lookupShape(symbol, obj));
   strcat(sympan, panel);
-  Hash_t *params = lookupSymbol(sympan);
+  Symb_t *params = lookupSymbol(sympan);
   if (params != NULL) {
     double x, y;
     switch (handle) {
@@ -808,45 +808,48 @@ int drawLine(Item_t *item, char *style) {
   return drawVector(item, style, sx < 0.0 ? -1 : +1);
 }
 
-void drawLineArrows(Item_t *item) {
+void drawLineSymbols(Item_t *item, char *symbol, double space) {
   if (item->flag != WAY) return;
-  double size = 250.0 * symbolScale[zoom];
-  Ref_t *link = item->type.way.blink;
-  if (link == NULL) return;
-  XY_t last = {0,0};
-  XY_t next = {lon2x(link->ref->type.node.lon), lat2y(link->ref->type.node.lat)};
-  XY_t old = next;
-  XY_t new = {0,0};
-  bool gap = false;
-  bool piv = false;
-  double angle = 0.0;
-  double rem = 0.0;
-  double len = size;
-  while (true) {
-    if (rem > len) {
-      if (piv) {
-        new.x = last.x + (len * cos(angle));
-        new.y = last.y + (len * sin(angle));
-        piv = false;
+  Symb_t *params = lookupSymbol(symbol);
+  if (params != NULL) {
+    double size = params->height * symbolScale[zoom];
+    Ref_t *link = item->type.way.blink;
+    if (link == NULL) return;
+    XY_t last = {0,0};
+    XY_t next = {lon2x(link->ref->type.node.lon), lat2y(link->ref->type.node.lat)};
+    XY_t old = next;
+    XY_t new = {0,0};
+    bool gap = false;
+    bool piv = false;
+    double angle = 0.0;
+    double rem = 0.0;
+    double len = size;
+    while (true) {
+      if (rem > len) {
+        if (piv) {
+          new.x = last.x + (len * cos(angle));
+          new.y = last.y + (len * sin(angle));
+          piv = false;
+        } else {
+          new.x = old.x + (len * cos(angle));
+          new.y = old.y + (len * sin(angle));
+        }
+        if (!gap) {
+          placeSymbol(old, TSSLPT, symbol, "", "", BC, 0, 0, r2d(atan2((new.y - old.y), (new.x - old.x)))+90);
+        }
+        gap = !gap;
+        old = new;
+        len = gap ? (size * space): size;
+        rem = sqrt(pow((next.x-new.x), 2) + pow((next.y-new.y), 2));
       } else {
-        new.x = old.x + (len * cos(angle));
-        new.y = old.y + (len * sin(angle));
+        len -=rem;
+        last = next;
+        if ((link = link->blink) == NULL) return;
+        next.x = lon2x(link->ref->type.node.lon); next.y = lat2y(link->ref->type.node.lat);
+        rem = sqrt(pow((next.x-last.x), 2) + pow((next.y-last.y), 2));
+        angle = atan2((next.y - last.y), (next.x - last.x));
+        piv = true;
       }
-      if (!gap) {
-        placeSymbol(old, TSSLPT, "lane_arrow", "", "", BC, 0, 0, r2d(atan2((new.y - old.y), (new.x - old.x)))+90);
-      }
-      gap = !gap;
-      old = new;
-      len = gap ? (size / 2.0): size;
-      rem = sqrt(pow((next.x-new.x), 2) + pow((next.y-new.y), 2));
-    } else {
-      len -=rem;
-      last = next;
-      if ((link = link->blink) == NULL) return;
-      next.x = lon2x(link->ref->type.node.lon); next.y = lat2y(link->ref->type.node.lat);
-      rem = sqrt(pow((next.x-last.x), 2) + pow((next.y-last.y), 2));
-      angle = atan2((next.y - last.y), (next.x - last.x));
-      piv = true;
     }
   }
 }
