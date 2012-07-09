@@ -220,9 +220,9 @@ XY_t findCentroid(Item_t *item) {
     double sd = 0.0;
     double lx = 0.0;
     double ly = 0.0;
-    if ((item->type.way.flink->ref != item->type.way.blink->ref) && (item->type.way.blink->ref->next != NULL)) {
-      lx = lon2x(item->type.way.blink->ref->next->type.node.lon);
-      ly = lat2y(item->type.way.blink->ref->next->type.node.lat);
+    if ((item->type.way.flink->ref != item->type.way.blink->ref) && (item->type.way.blink->blink != NULL)) {
+      lx = lon2x(item->type.way.blink->blink->ref->type.node.lon);
+      ly = lat2y(item->type.way.blink->blink->ref->type.node.lat);
     } else {
       lx = lon2x(item->type.way.blink->ref->type.node.lon);
       ly = lat2y(item->type.way.blink->ref->type.node.lat);
