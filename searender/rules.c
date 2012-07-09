@@ -502,6 +502,10 @@ object_rules(areas) {
   }
 }
 
+object_rules(gauge) {
+  symbol("tide_gauge");
+}
+
 rules {
   
   type("shoreline_construction") object(shoreline);
@@ -557,6 +561,7 @@ rules {
   type("beacon_safe_water") object(beacons);
   type("beacon_special_purpose") object(beacons);
   type("beacon_waterway") object(beacons);
+  type("waterway_gauge") object(gauge);
   
 }
 
