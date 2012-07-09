@@ -503,7 +503,7 @@ object_rules(areas) {
 }
 
 object_rules(gauge) {
-  symbol("tide_gauge");
+  if (zoom >= 14) symbol("tide_gauge");
 }
 
 rules {
