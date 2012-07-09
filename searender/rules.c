@@ -504,7 +504,7 @@ object_rules(areas) {
         text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, 70);
     }
   }
-  if (is_type("sea_area") && has_item_attribute("name")) {
+  if (is_type("sea_area") && has_item_attribute("name") && (zoom >= 11)) {
     int ref = line("stroke:none;fill:none");
     if (ref != 0) {
       line_text(item_attribute("name"), "font-family:Arial; font-weight:normal; font-style:italic; font-size:200; text-anchor:middle", 0.5, 0, ref);
