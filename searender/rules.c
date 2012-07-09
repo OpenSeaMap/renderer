@@ -395,6 +395,10 @@ object_rules(signals) {
   if (has_object("light")) object(lights);
 }
 
+object_rules(gauge) {
+  if (zoom >= 14) symbol("tide_gauge");
+}
+
 object_rules(landmarks) {
   if ((zoom >= 12) && (has_attribute("function"))) {
     attribute_switch("function")
@@ -502,10 +506,6 @@ object_rules(areas) {
   }
 }
 
-object_rules(gauge) {
-  if (zoom >= 14) symbol("tide_gauge");
-}
-
 rules {
   
   type("shoreline_construction") object(shoreline);
@@ -542,6 +542,7 @@ rules {
   type("light_float") object(floats);
   type("signal_station_traffic") object(signals);
   type("signal_station_warning") object(signals);
+  type("waterway_gauge") object(gauge);
   type("coastguard_station") object(signals);
   type("platform") object(platforms);
   type("radio_station") object(signals);
@@ -561,7 +562,6 @@ rules {
   type("beacon_safe_water") object(beacons);
   type("beacon_special_purpose") object(beacons);
   type("beacon_waterway") object(beacons);
-  type("waterway_gauge") object(gauge);
   
 }
 

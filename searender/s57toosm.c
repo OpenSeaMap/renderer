@@ -395,24 +395,24 @@ int main (int argc, const char * argv[]) {
             node_t *enode = findNode(eref->rcid, eref->rcnm);
             node_t *cnode = findNode(enode->ref->rcid, enode->ref->rcnm);
             if (cnode->id == 0) {
-              printf("<node id='%ld' lat='%f' lon='%f' version='1'/>\n", id, cnode->xy->lat, cnode->xy->lon);
               cnode->id = --id;
+              printf("<node id='%ld' lat='%f' lon='%f' version='1'/>\n", id, cnode->xy->lat, cnode->xy->lon);
             }
             coordinate_t *xy;
             for (xy = enode->xy; xy != NULL; xy = xy->next) {
               if (xy->id == 0) {
-                printf("<node id='%ld' lat='%f' lon='%f' version='1'/>\n", id, xy->lat, xy->lon);
                 xy->id = --id;
+                printf("<node id='%ld' lat='%f' lon='%f' version='1'/>\n", id, xy->lat, xy->lon);
               }
             }
             cnode = findNode(enode->ref->next->rcid, enode->ref->next->rcnm);
             if (cnode->id == 0) {
-              printf("<node id='%ld' lat='%f' lon='%f' version='1'/>\n", id, cnode->xy->lat, cnode->xy->lon);
               cnode->id = --id;
+              printf("<node id='%ld' lat='%f' lon='%f' version='1'/>\n", id, cnode->xy->lat, cnode->xy->lon);
             }
             eref = eref->next;
           } while (eref != NULL);
-          printf("<way id='%ld' version='1'>\n", id);
+          printf("<way id='%ld' version='1'>\n", fptr->id);
           eref = fptr->ref;
           long last = 0;
           do {
