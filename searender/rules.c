@@ -504,12 +504,22 @@ object_rules(areas) {
         text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, 70);
     }
   }
-  if (is_type("sea_area") && has_item_attribute("name") && (zoom >= 11)) {
-    int ref = line("stroke:none;fill:none");
-    if (ref != 0) {
-      line_text(item_attribute("name"), "font-family:Arial; font-weight:normal; font-style:italic; font-size:200; text-anchor:middle", 0.5, 0, ref);
-    } else {
-      text(item_attribute("name"), "font-family:Arial; font-weight:normal; font-style:italic; font-size:200; text-anchor:middle", 0, 0);
+  if (is_type("sea_area") && has_item_attribute("name")) {
+    if (has_attribute("category")) {
+      int ref = line("stroke:none;fill:none");
+      make_string("");
+      attribute_switch("category")
+      attribute_case("reach") { if (zoom >= 10) add_string("font-family:Arial;font-weight:normal;font-style:italic;font-size:200;text-anchor:middle") }
+      attribute_case("bay|shoal") { if (zoom >= 12) add_string("font-family:Arial;font-weight:normal;font-style:italic;font-size:200;text-anchor:middle") }
+      end_switch
+      if (strlen(string) > 0) {
+        if (ref != 0) {
+          line_text(item_attribute("name"), string, 0.5, 0, ref);
+        } else {
+          text(item_attribute("name"), string, 0, 0);
+        }
+      }
+      free_string
     }
   }
 }

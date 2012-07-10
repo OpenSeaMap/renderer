@@ -72,7 +72,7 @@
 #define make_string(s) { char *string=strdup(s)
 #define make_char_string(x) { char *string=strdup(charString(item, x, 0))
 #define make_char_string_indexed(x, n) { char *string=strdup(charString(item, x, n))
-#define add_string(s) string = realloc(string, strlen(string) + strlen(s) + 1); strcat(string, s);
+#define add_string(s) {string = realloc(string, strlen(string) + strlen(s) + 1); strcat(string, s);}
 #define free_string free(string); }
 
 #define line(s) drawLine(item, s)
