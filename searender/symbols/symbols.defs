@@ -894,8 +894,8 @@
     <path d="m 50,7.1875 -10.71875,40.75 -4.25,0 0,4.03125 4.25,0 L 50,92.6875 60.71875,51.96875 l 4.28125,0 0,-4.03125 -4.28125,0 L 50,7.1875 z" />
   </symbol>
 <!-- Restricted Line -->
-  <symbol id="restricted_line" width="40" height="40">
-    <path d="M 20,0 L 20,40 M 22,20 L 40,20"
+  <symbol id="restricted_line" width="30" height="30">
+    <path d="M 15,0 L 15,30 M 17,15 L 30,15"
       style="fill:none;stroke:#c480ff;stroke-width:4" />
   </symbol>
 <!-- Sailing Club -->
