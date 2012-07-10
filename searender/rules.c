@@ -531,6 +531,13 @@ object_rules(areas) {
   }
 }
 
+object_rules(waterways) {
+  if (has_item_attribute("name") && (zoom >= 14)) {
+    int ref = line("stroke:none;fill:none");
+    line_text(item_attribute("name"), "font-family:Arial;font-weight:bold;font-size:80;text-anchor:middle", 0.5, 15, ref);
+  }
+}
+
 rules {
   
   type("shoreline_construction") object(shoreline);
@@ -546,6 +553,7 @@ rules {
   type("dredged_area") object(areas);
   type("restricted_area") object(areas);
   type("sea_area") object(areas);
+  type("waterway_axis") object(waterways);
 
   type("recommended_track") object(transits);
   type("navigation_line") object(transits);

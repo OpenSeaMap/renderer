@@ -425,7 +425,7 @@ int main (int argc, const char * argv[]) {
               }
             } else {
               if (eref->ornt == 2) {
-                long ids[1000];
+                long ids[10000];
                 int i = 0;
                 ids[i++] = findNode(enode->ref->rcid, enode->ref->rcnm)->id;
                 coordinate_t *xy;
@@ -530,7 +530,7 @@ int main (int argc, const char * argv[]) {
         node_t *enode = findNode(inners->rcid, inners->rcnm);
         node_t *cnode;
           if (inners->ornt == 2) {
-            long ids[1000];
+            long ids[10000];
             int i = 0;
             ids[i++] = findNode(enode->ref->rcid, enode->ref->rcnm)->id;
             coordinate_t *xy;
