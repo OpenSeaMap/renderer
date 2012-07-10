@@ -506,13 +506,14 @@ object_rules(areas) {
   }
   if (is_type("sea_area") && has_item_attribute("name")) {
     if (has_attribute("category")) {
-      int ref = line("stroke:none;fill:none");
       make_string("");
       attribute_switch("category")
       attribute_case("reach") { if (zoom >= 10) add_string("font-family:Arial;font-weight:normal;font-style:italic;font-size:200;text-anchor:middle") }
       attribute_case("bay|shoal") { if (zoom >= 12) add_string("font-family:Arial;font-weight:normal;font-style:italic;font-size:200;text-anchor:middle") }
+      attribute_case("narrows") { if (zoom >= 12) add_string("font-family:Arial;font-weight:normal;font-style:italic;font-size:100;text-anchor:middle") }
       end_switch
       if (strlen(string) > 0) {
+        int ref = line("stroke:none;fill:none");
         if (ref != 0) {
           line_text(item_attribute("name"), string, 0.5, 0, ref);
         } else {
