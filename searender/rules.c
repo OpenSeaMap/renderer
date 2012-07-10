@@ -494,7 +494,8 @@ object_rules(harbours) {
 }
 
 object_rules(areas) {
-  if (is_type("fairway")) area("stroke:none;fill:#ffffff;fill-opacity:0.25");
+  if (is_type("fairway")) area("stroke:#c480ff;stroke-width:10;stroke-dasharray:50,50;fill:#ffffff;fill-opacity:0.25");
+  if (is_type("dredged_area")) area("stroke:#000000;stroke-width:10;stroke-dasharray:50,50;fill:#ffffff;fill-opacity:0.25");
   if (is_type("restricted_area")) line_symbols("restricted_line", 1.0);
   if (is_type("production_area")) {
     if (attribute_test("category", "wind_farm")) {
@@ -542,6 +543,7 @@ rules {
   type("sandwaves") object(areas);
   type("production_area") object(areas);
   type("fairway") object(areas);
+  type("dredged_area") object(areas);
   type("restricted_area") object(areas);
   type("sea_area") object(areas);
 
