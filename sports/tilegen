@@ -46,7 +46,23 @@ tile () {
   echo "$(date) rendered 12 $tx $ty" >> log.txt
 }
 
+tile91011() {
+  for file in $(ls tmp | grep "tiles\-"); do
+		tile=$(echo $file | sed -e s?-?/?g)
+		if [ $(stat tmp/$file | cut -f 8 -d' ') -ge 410 ]; then
+			mkdir -p $(dirname $tile)
+			mv -f tmp/$file $tile
+		else
+			if [ -e $tile ]; then
+				rm $tile
+			fi
+			rm tmp/$file
+		fi
+  done
+}
+
 while true; do
+  tile91011
   if [ $(ls tmp | grep -c "\_12\.osm") -eq 0 ]; then
     sleep 10
   else
@@ -62,6 +78,7 @@ while true; do
     	if [ -e tmp/$file ] ; then
 	    	rm tmp/$file
 	    fi
+	    tile91011
   	done
   fi
 done
