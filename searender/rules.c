@@ -47,7 +47,7 @@ object_rules(rtbs) {
   if (zoom >= 11) symbol("radar_station");
   if (zoom >= 15) {
     make_char_string("radar_transponder");
-    text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -40, -50);
+    text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -40, -40);
     free_string
   }
 }
