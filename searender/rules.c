@@ -432,6 +432,7 @@ object_rules(landmarks) {
   }
   if (has_object("fog_signal")) object(fogs);
   if (has_object("radar_transponder")) object(rtbs);
+  if (has_object("radar_station") && (zoom >= 12)) symbol("radar_station");
   if (has_object("light")) object(lights);
 }
 
