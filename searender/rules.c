@@ -379,7 +379,7 @@ object_rules(signals) {
       symbol("signal_station");
       if (zoom >= 15) {
         make_char_string(this_type);
-        text(string, "font-family:Arial; font-weight:normal; font-size:80; text-anchor:middle", 0.0, 65);
+        text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 0.0, 65);
         free_string
       }
     } else if (is_type("radio_station|radar_station")) {
