@@ -309,7 +309,7 @@ object_rules(separation) {
     else
       area("stroke:#c480ff; stroke-width:20; stroke-opacity:0.5; fill:none");
     if ((zoom >= 10) && has_item_attribute("name")) {
-      text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:200; text-anchor:middle", 0, 0);
+      text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:150; text-anchor:middle", 0, 0);
     }
   } else if (is_type("separation_line")) {
     line("stroke-width:20; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
