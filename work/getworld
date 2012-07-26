@@ -1,7 +1,7 @@
 #!/bin/bash
 
 while true; do
-  if [ ./Overpass/translate_xapi "*[seamark:type=*][@meta]" | ./Overpass/osm3s_query > tmp.osm 2> /dev/null ]; then
+  if [ $(./Overpass/translate_xapi "*[seamark:type=*][@meta]" | ./Overpass/osm3s_query > tmp.osm 2> /dev/null) ]; then
   	cp tmp.osm world.osm
 	  mv tmp.osm next.osm
 	else
