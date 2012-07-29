@@ -132,11 +132,14 @@ rerender () {
     if [ $(grep -c seamark tmp/panel-rr.osm) -ne 0 ]; then
       rr=1
     fi
+    echo "$x" > rrx
+    echo "$y" > rry
     if [ $rr -ne 0 ]; then
       bb="$minlat,$minlon,$maxlat,$maxlon"
       cp tmp/panel-rr.osm tmp/$x\_$y\_$bb\_12.osm
-      echo "$x" > rrx
-      echo "$y" > rry
+      break
+    fi
+    if [ -e next.osm ]; then
       break
     fi
   done
