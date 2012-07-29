@@ -166,10 +166,7 @@ fi
 
 while true; do
 	while [ ! -e next.osm ]; do
-    if [ $(ls tmp | grep -c "\_12\.osm") -lt 5 ]; then
-  	  rerender
-  	fi
-		sleep 1
+    rerender
 	done
 	echo "$(date) Parse world data" >> log.txt
 	mv next.osm tmp/panel-z0.osm
