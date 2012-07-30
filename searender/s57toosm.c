@@ -512,12 +512,12 @@ int main (int argc, const char * argv[]) {
           }
           aptr = findFeature(slaves);
           slaves = slaves != NULL ? slaves->next : NULL;
-        } while (aptr != NULL);
+        } while (!way && (aptr != NULL));
         if (args > 2)
           printf(" <tag k='source' v='%s'/>\n", argv[2]);
         if (way)
           printf("</way>\n");
-        else 
+        else
           printf("</node>\n");
       }
     }
