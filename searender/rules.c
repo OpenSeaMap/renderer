@@ -475,6 +475,10 @@ object_rules(distances) {
   }
 }
 
+object_rules(bridges) {
+  if (zoom >= 16) symbol_cluster("bridge");
+}
+
 object_rules(ports) {
   if (zoom>=14) {
     if (is_type("crane")) {
@@ -502,6 +506,8 @@ object_rules(areas) {
   if (is_type("dredged_area")) {
     if (zoom < 16 ) area("stroke:#000000;stroke-width:10;stroke-dasharray:50,50;fill:#ffffff;fill-opacity:0.25");
     else area("stroke:#000000;stroke-width:10;stroke-dasharray:50,50;fill:none");
+    if ((zoom >= 12) && has_item_attribute("name"))
+      text(item_attribute("name"), "font-family:Arial;font-weight:normal;font-size:100;text-anchor:middle", 0, 0);
   }
   if (is_type("restricted_area")) line_symbols("restricted_line", 1.0);
   if (is_type("production_area")) {
@@ -577,6 +583,7 @@ rules {
   type("mooring") object(moorings);
   type("notice") object(notices);
   type("small_craft_facility") object(marinas);
+  type("bridge") object(bridges);
   type("light_major") object(lights);
   type("light_minor") object(lights);
   type("light") object(lights);

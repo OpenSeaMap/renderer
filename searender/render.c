@@ -299,54 +299,69 @@ int renderColourSymbol(Item_t *item, Obja_t obj, char *symbol, char * panel, cha
 }
 
 void renderCluster(Item_t *item, char *type) {
-  int n = countObjects(item, type);
   Obja_t obja = enumType(type);
-  Atta_t atta = enumAttribute("category", obja);
-  char **map = cluster_map(obja);
-  if (map == NULL) return;
-  switch (n) {
-    case 0: {
-      Obj_t *obj = getObj(item, obja, 0);
-      int n = countValues(getTag(obj, atta));
+  switch (obja) {
+    case SMCFAC: {
+      int n = countObjects(item, type);
+      Atta_t atta = enumAttribute("category", obja);
+      char **map = cluster_map(obja);
+      if (map == NULL) return;
       switch (n) {
+        case 0: {
+          Obj_t *obj = getObj(item, obja, 0);
+          int n = countValues(getTag(obj, atta));
+          switch (n) {
+            case 1:
+              renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", CC, 0, 0, 0);
+              break;
+            case 2:
+              renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", RC, 0, 0, 0);
+              renderSymbol(item, obja, map[getTagEnum(obj, atta, 1)], "", "", LC, 0, 0, 0);
+              break;
+            case 3:
+              renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", BC, 0, 0, 0);
+              renderSymbol(item, obja, map[getTagEnum(obj, atta, 1)], "", "", TR, 0, 0, 0);
+              renderSymbol(item, obja, map[getTagEnum(obj, atta, 2)], "", "", TL, 0, 0, 0);
+              break;
+            case 4:
+              renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", BR, 0, 0, 0);
+              renderSymbol(item, obja, map[getTagEnum(obj, atta, 1)], "", "", BL, 0, 0, 0);
+              renderSymbol(item, obja, map[getTagEnum(obj, atta, 2)], "", "", TR, 0, 0, 0);
+              renderSymbol(item, obja, map[getTagEnum(obj, atta, 3)], "", "", TL, 0, 0, 0);
+              break;
+          }
+        }
+          break;
         case 1:
-          renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", CC, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 1), atta, 0)], "", "", CC, 0, 0, 0);
           break;
         case 2:
-          renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", RC, 0, 0, 0);
-          renderSymbol(item, obja, map[getTagEnum(obj, atta, 1)], "", "", LC, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 1), atta, 0)], "", "", RC, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 2), atta, 0)], "", "", LC, 0, 0, 0);
           break;
         case 3:
-          renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", BC, 0, 0, 0);
-          renderSymbol(item, obja, map[getTagEnum(obj, atta, 1)], "", "", TR, 0, 0, 0);
-          renderSymbol(item, obja, map[getTagEnum(obj, atta, 2)], "", "", TL, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 1), atta, 0)], "", "", BC, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 2), atta, 0)], "", "", TR, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 3), atta, 0)], "", "", TL, 0, 0, 0);
           break;
         case 4:
-          renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", BR, 0, 0, 0);
-          renderSymbol(item, obja, map[getTagEnum(obj, atta, 1)], "", "", BL, 0, 0, 0);
-          renderSymbol(item, obja, map[getTagEnum(obj, atta, 2)], "", "", TR, 0, 0, 0);
-          renderSymbol(item, obja, map[getTagEnum(obj, atta, 3)], "", "", TL, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 1), atta, 0)], "", "", BR, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 2), atta, 0)], "", "", BL, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 3), atta, 0)], "", "", TR, 0, 0, 0);
+          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 4), atta, 0)], "", "", TL, 0, 0, 0);
           break;
       }
     }
       break;
-    case 1:
-      renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 1), atta, 0)], "", "", CC, 0, 0, 0);
+    case BRIDGE: {
+      Tag_t *tag = getTag(getObj(item, BRIDGE, 0), VERCLR);
+      if (tag != NULL) {
+        renderSymbol(item, obja, "clear_v", "", "", CC, 0, 0, 0);
+        drawText(item, stringValue(tag->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 0, 12);
+      }
+    }
       break;
-    case 2:
-      renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 1), atta, 0)], "", "", RC, 0, 0, 0);
-      renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 2), atta, 0)], "", "", LC, 0, 0, 0);
-      break;
-    case 3:
-      renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 1), atta, 0)], "", "", BC, 0, 0, 0);
-      renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 2), atta, 0)], "", "", TR, 0, 0, 0);
-      renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 3), atta, 0)], "", "", TL, 0, 0, 0);
-      break;
-    case 4:
-      renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 1), atta, 0)], "", "", BR, 0, 0, 0);
-      renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 2), atta, 0)], "", "", BL, 0, 0, 0);
-      renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 3), atta, 0)], "", "", TR, 0, 0, 0);
-      renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 4), atta, 0)], "", "", TL, 0, 0, 0);
+    default:
       break;
   }
 }

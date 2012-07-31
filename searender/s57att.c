@@ -65,7 +65,7 @@ char *osmattributes[ATTSIZ] = {
   [SIGGRP]="group", [SIGPER]="period", [SIGSEQ]="sequence", [SOUACC]="accuracy", [SDISMX]="maximum_sounding", [SDISMN]="minimum_sounding", [SORDAT]="source_date", [SORIND]="source",
   [STATUS]="status", [SURATH]="authority", [SUREND]="end_date", [SURSTA]="start_date", [SURTYP]="survey", [TECSOU]="technique", [TXTDSC]="description", [TIMEND]="end_time", [TIMSTA]="start_time",
   [TOPSHP]="shape", [TRAFIC]="flow", [VALACM]="variation_change", [VALDCO]="depth", [VALLMA]="anomaly", [VALMAG]="variation", [VALMXR]="maximum_range", [VALNMR]="range", [VALSOU]="sounding",
-  [VERACC]="vertical_accuracy", [VERCLR]="vertical_clearance", [VERCCL]="clearance_closed", [VERCOP]="clearance_open", [VERCSA]="clearance_safe", [VERDAT]="vertical_datum",
+  [VERACC]="vertical_accuracy", [VERCLR]="clearance_height", [VERCCL]="clearance_height_closed", [VERCOP]="clearance_height_open", [VERCSA]="clearance_height_safe", [VERDAT]="vertical_datum",
   [VERLEN]="vertical_length", [WATLEV]="water_level", [CAT_TS]="category", [PUNITS]="units", [NINFOM]="national_information", [NOBJNM]="national_name", [NPLDST]="national_pilot_district",
   [NTXTDS]="national_description", [HORDAT]="horizontal_datum", [POSACC]="positional_accuracy", [QUAPOS]="position_quality", [ADDMRK]="addition", [CATBNK]="category", [CATNMK]="category",
   [CLSDNG]="class", [DIRIMP]="impact", [DISBK1]="distance_start", [DISBK2]="distance_end", [DISIPU]="distance_up", [DISIPD]="distance_down", [ELEVA1]="minimum_elevation",
