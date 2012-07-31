@@ -354,10 +354,22 @@ void renderCluster(Item_t *item, char *type) {
     }
       break;
     case BRIDGE: {
-      Tag_t *tag = getTag(getObj(item, BRIDGE, 0), VERCLR);
-      if (tag != NULL) {
+      Tag_t *tagv = getTag(getObj(item, BRIDGE, 0), VERCLR);
+      Tag_t *tagc = getTag(getObj(item, BRIDGE, 0), VERCCL);
+      Tag_t *tago = getTag(getObj(item, BRIDGE, 0), VERCOP);
+      if (tagv != NULL) {
         renderSymbol(item, obja, "clear_v", "", "", CC, 0, 0, 0);
-        drawText(item, stringValue(tag->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 0, 12);
+        drawText(item, stringValue(tagv->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 0, 12);
+      }
+      else if ((tagc != NULL) && (tago == NULL)) {
+        renderSymbol(item, obja, "clear_v", "", "", CC, 0, 0, 0);
+        drawText(item, stringValue(tagc->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 0, 12);
+      }
+      else if ((tagc != NULL) && (tago != NULL)) {
+        renderSymbol(item, obja, "clear_v", "", "", RC, 5, 0, 0);
+        drawText(item, stringValue(tagc->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", -35, 12);
+        renderSymbol(item, obja, "clear_v", "", "", LC, -5, 0, 0);
+        drawText(item, stringValue(tago->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 35, 12);
       }
     }
       break;
