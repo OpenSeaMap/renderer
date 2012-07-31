@@ -160,9 +160,9 @@
   </symbol>
 <!-- Clear V -->
   <symbol id="clear_v" width="60" height="60">
-    <rect width="58" height="58" rx="16" ry="16" x="1" y="1"
+    <rect width="60" height="60" rx="16" ry="16" x="1" y="1"
      style="fill:#ffffff;stroke:none" />
-    <path d="M 20,2 L 40,2 M 30,2 L 30,10 M 20,58 L 40,58 M 30,58 L 30,50"
+    <path d="M 20,5 L 40,5 M 30,5 L 30,15 M 20,55 L 40,55 M 30,55 L 30,45"
       style="stroke:#000000;stroke-width:4"/>
   </symbol>
 <!-- Cone -->
