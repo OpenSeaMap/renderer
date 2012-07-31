@@ -161,7 +161,7 @@
 <!-- Clear V -->
   <symbol id="clear_v" width="60" height="60">
     <rect width="58" height="58" rx="16" ry="16" x="1" y="1"
-     style="fill:#ffffff;fill-opacity:0.5;stroke:none" />
+     style="fill:#ffffff;stroke:none" />
     <path d="M 20,2 L 40,2 M 30,2 L 30,10 M 20,58 L 40,58 M 30,58 L 30,50"
       style="stroke:#000000;stroke-width:4"/>
   </symbol>

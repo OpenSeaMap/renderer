@@ -514,7 +514,7 @@ int main (int argc, const char * argv[]) {
           slaves = slaves != NULL ? slaves->next : NULL;
         } while (!way && (aptr != NULL));
         if (args > 2)
-          printf(" <tag k='source' v='%s'/>\n", argv[2]);
+          printf(" <tag k='seamark:source' v='%s'/>\n", argv[2]);
         if (way)
           printf("</way>\n");
         else
