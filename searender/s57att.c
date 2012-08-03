@@ -47,7 +47,7 @@ Attl_t iencattributes[ATTSIZ] = {
 };
 
 char *osmattributes[ATTSIZ] = {
-  [UNKATT]="", [AGENCY]="agency", [BCNSHP]="shape", [BUISHP]="shape", [BOYSHP]="shape", [BURDEP]="depth", [CALSGN]="callsign", [CATAIR]="category", [CATACH]="category", [CATBRG]="category",
+  [UNKATT]="", [AGENCY]="agency", [BCNSHP]="shape", [BUISHP]="shape", [BOYSHP]="shape", [BURDEP]="depth_buried", [CALSGN]="callsign", [CATAIR]="category", [CATACH]="category", [CATBRG]="category",
   [CATBUA]="category", [CATCBL]="category", [CATCAN]="category", [CATCAM]="category", [CATCHP]="category", [CATCOA]="category", [CATCTR]="category", [CATCON]="category", [CATCOV]="category",
   [CATCRN]="category", [CATDAM]="category", [CATDIS]="category", [CATDOC]="category", [CATDPG]="category", [CATFNC]="category", [CATFRY]="category", [CATFIF]="category", [CATFOG]="category",
   [CATFOR]="category", [CATGAT]="category", [CATHAF]="category", [CATHLK]="category", [CATICE]="category", [CATINB]="category", [CATLND]="category", [CATLMK]="category", [CATLAM]="category",

@@ -160,7 +160,7 @@ s57val_t natcon[] = { {1, "masonry"}, {2, "concreted"}, {3, "loose_boulders"}, {
 s57val_t natsur[] = { {1, "mud"}, {2, "clay"}, {3, "silt"}, {4, "sand"}, {5, "stone"}, {6, "gravel"}, {7, "pebbles"}, {8, "cobbles"}, {9, "rock"}, {11, "lava"}, {14, "coral"}, {17, "shells"}, {18, "boulder"}, {0, NULL} };
 s57val_t natqua[] = { {1, "fine"}, {2, "medium"}, {3, "coarse"}, {4, "broken"}, {5, "sticky"}, {6, "soft"}, {7, "stiff"}, {8, "volcanic"}, {9, "calcareous"}, {10, "hard"}, {0, NULL} };
 s57val_t prodct[] = { {1, "oil"}, {2, "gas"}, {3, "water"}, {4, "stone"}, {5, "coal"}, {6, "ore"}, {7, "chemicals"}, {8, "drinking_water"}, {9, "milk"}, {10, "bauxite"}, {11, "coke"}, {12, "iron_ingots"}, {13, "salt"},
-  {14, "sand"}, {15, "timber"}, {16, "sawdust"}, {17, "scrap_l"}, {18, "lng"}, {19, "liquified_petroleum gas"}, {20, "wine"}, {21, "cement"}, {22, "grain"}, {0, NULL} };
+  {14, "sand"}, {15, "timber"}, {16, "sawdust"}, {17, "scrap"}, {18, "lng"}, {19, "lpg"}, {20, "wine"}, {21, "cement"}, {22, "grain"}, {0, NULL} };
 s57val_t quasou[] = { {1, "known"}, {2, "unknown"}, {3, "doubtful"}, {4, "unreliable"}, {5, "no_bottom_found"}, {6, "least_known"}, {7, "least_unknown"}, {8, "not_surveyed"}, {9, "not_confirmed"}, {10, "maintained"},
   {11, "not_maintained"}, {0, NULL} };
 s57val_t restrn[] = { {1, "no_anchoring"}, {2, "restricted_anchoring"}, {3, "no_fishing"}, {4, "restricted_fishing"}, {5, "no_trawling"}, {6, "restricted_trawling"}, {7, "no_entry"}, {8, "restricted_entry"},
