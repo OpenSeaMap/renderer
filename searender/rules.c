@@ -551,9 +551,19 @@ object_rules(waterways) {
   }
 }
 
+object_rules(pipelines) {
+  line_symbols("pipeline", 1.0);
+}
+
+object_rules(cables) {
+  line_symbols("cable", 0.0);
+}
+
 rules {
   
   type("shoreline_construction") object(shoreline);
+  type("pipeline_submarine") object(pipelines);
+  type("cable_submarine") object(cables);
   type("separation_zone") object(separation);
   type("separation_crossing") object(separation);
   type("separation_roundabout") object(separation);
