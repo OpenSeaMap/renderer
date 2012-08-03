@@ -855,9 +855,9 @@
        style="fill:#d400d4;fill-opacity:1" />
   </symbol>
 <!-- Pipeline -->
-  <symbol id="pipeline" width="30" height="30">
-    <path d="M 15,0 L 15,30" style="fill:none;stroke:#c480ff;stroke-width:4" />
-    <circle r="5" cx="15" cy="5" style="stroke:none;fill:#c480ff" />
+  <symbol id="pipeline" width="30" height="60">
+    <path d="M 15,0 L 15,60" style="fill:none;stroke:#c480ff;stroke-width:8" />
+    <circle r="10" cx="15" cy="10" style="stroke:none;fill:#c480ff" />
   </symbol>
 <!-- Platform -->
   <symbol id="platform" width="300" height="400">
