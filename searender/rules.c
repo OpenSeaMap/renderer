@@ -552,7 +552,7 @@ object_rules(waterways) {
 }
 
 object_rules(pipelines) {
-  line_symbols("pipeline", 1.0);
+  line_symbols("pipeline", 0.0);
 }
 
 object_rules(cables) {
