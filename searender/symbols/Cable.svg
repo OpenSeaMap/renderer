@@ -6,7 +6,7 @@
    height="60">
   <symbol id="cable" width="30" height="60">
     <path d="M 5,0 6.4,5 10,10 15,15 20,20 23.6,25 25,30 23.6,35 20,40 15,45 10,50 6.4,55 5,60"
-      style="fill:none;stroke:#c480ff;stroke-width:4" />
+      style="fill:none;stroke:#c480ff;stroke-width:8" />
   </symbol>
   <use xlink:href="#cable" x="0" y="0" />
 </svg>
