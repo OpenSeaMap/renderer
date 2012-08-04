@@ -27,7 +27,7 @@ const double textScale[] = {256.0, 128.0, 64.0, 32.0, 16.0, 8.0, 4.0, 2.0, 1.0,
   0.5556, 0.3086, 0.1714, 0.0953, 0.0529, 0.0294, 0.0163, 0.0091, 0.0050, 0.0028, 0.0163};
 
 bool bb = false;
-double minlat, minlon, maxlat, maxlon, top, mile;
+double minlat, minlon, maxlat, maxlon, top, xmax, ymax, mile;
 int zoom;
 int ref = 0;
 
@@ -146,11 +146,13 @@ XY_t radial(XY_t centre, double radius, double angle) {
 void render(char *symbols) {
   top = (1.0 - log(tan(maxlat * M_PI/180.0) + 1.0 / cos(maxlat * M_PI/180.0)) / M_PI) / 2.0 * 256.0 * 4096.0;
   mile = lat2y(maxlat) - lat2y(maxlat + (1.0/60.0));
+  xmax = lon2x(maxlon);
+  ymax = lat2y(minlat);
 
   printf("<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\"\n");
   printf(" width=\"%f\" height=\"%f\">\n", lon2x(maxlon), lat2y(minlat));
   
-//  printf(" <rect x=\"0\" y=\"0\" width=\"%g\" height=\"%g\" style=\"fill:#b5d0d0;fill-opacity:1\"/>\n", lon2x(maxlon), lat2y(minlat)); //****** for testing only!!!!*******
+//  printf(" <rect x=\"0\" y=\"0\" width=\"%g\" height=\"%g\" style=\"fill:#b5d0d0;fill-opacity:1\"/>\n", xmax, ymax); //****** for testing only!!!!*******
 
   char line[2000];
   FILE *fp = fopen(symbols, "r");
@@ -861,7 +863,7 @@ void drawLineSymbols(Item_t *item, char *symbol, double space) {
           new.x = old.x + (len * cos(angle));
           new.y = old.y + (len * sin(angle));
         }
-        if (!gap) {
+        if ((!gap) && (new.x > 0.0) && (new.x < xmax) && (new.y > 0.0) && (new.y < ymax)) {
           placeSymbol(old, TSSLPT, symbol, "", "", BC, 0, 0, r2d(atan2((new.y - old.y), (new.x - old.x)))+90);
         }
         gap = !gap;
