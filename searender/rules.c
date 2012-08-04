@@ -362,10 +362,10 @@ object_rules(moorings) {
         object(top_colours, "top_mooring", -15.3, 37, 18.5);
       }
     }
-    attribute_case("dolphin") symbol("dolphin");
-    attribute_case("pile|post") symbol("post");
-    attribute_case("bollard") symbol("bollard");
-    attribute_case("deviation_dolphin") symbol("deviation_dolphin");
+    attribute_case("dolphin") { if (zoom >= 16) symbol("dolphin"); }
+    attribute_case("pile|post") { if (zoom >= 16) symbol("post"); }
+    attribute_case("bollard") { if (zoom >= 16) symbol("bollard"); }
+    attribute_case("deviation_dolphin") { if (zoom >= 16)symbol("deviation_dolphin"); }
     end_switch
   }
   if (has_object("fog_signal")) object(fogs);
