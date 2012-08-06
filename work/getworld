@@ -2,6 +2,5 @@
 
 while true; do
   ./Overpass/translate_xapi "*[seamark:type=*][@meta]" | ./Overpass/osm3s_query > tmp.osm 2> /dev/null
- 	cp tmp.osm world.osm
   mv tmp.osm next.osm
 done

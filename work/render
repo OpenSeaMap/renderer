@@ -169,6 +169,7 @@ while true; do
     rerender
 	done
 	echo "$(date) Parse world data" >> log.txt
+	cp next.osm tmp/world.osm
 	mv next.osm tmp/panel-z0.osm
 	search 0 0 0
 	latest=$previous
