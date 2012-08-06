@@ -80,7 +80,8 @@ object_rules(lights) {
         }
       }
     }
-    if ((zoom >= 14) || is_type("light_major|landmark"))
+    if ((zoom >= 14) || is_type("light_major|landmark") ||
+        ((zoom >= 11) && (has_object("radar_transponder"))))
       light_flare;
     if (zoom >= 15) {
       make_char_string("light");
