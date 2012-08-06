@@ -166,7 +166,8 @@ fi
 
 while true; do
 	while [ ! -e next.osm ]; do
-    rerender
+#    rerender
+    sleep 30
 	done
 	echo "$(date) Parse world data" >> log.txt
 	cp next.osm tmp/world.osm
