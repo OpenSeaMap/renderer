@@ -58,8 +58,9 @@ object_rules(lights) {
       symbol("light_major");
       if (has_object("fog_signal")) object(fogs);
     }
-    if ((is_type("light_minor|light")) && (zoom >= 14)) {
-      symbol("light_minor");
+    if (is_type("light_minor|light")) {
+      if ((zoom >= 14) || ((zoom >= 11) && (has_object("radar_transponder"))))
+        symbol("light_minor");
       if (has_object("fog_signal")) object(fogs);
     }
     if (has_object("radar_transponder")) object(rtbs);
