@@ -3,11 +3,10 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"  
    version="1.1"
    width="30"
-   height="120">
-  <symbol id="cable" width="30" height="120">
-    <path d="M 5,0 6.4,5 10,10 15,15 20,20 23.6,25 25,30 23.6,35 20,40 15,45 10,50 6.4,55 5,60
-      6.4,65 10,70 15,75 20,80 23.6,85 25,90 23.6,95 20,100 15,105 10,110 6.4,115 5,120"
-      style="fill:none;stroke:#c480ff;stroke-width:8" />
+   height="64">
+  <symbol id="cable" width="30" height="64">
+    <path d="M 5,0 6.4,5 10,10 15,15 20,20 23.6,25 25,30 23.6,35 20,40 15,45 10,50 6.4,55 5,60"
+      style="fill:none;stroke:#c480ff;stroke-width:8;stroke-linecap:round" />
   </symbol>
   <use xlink:href="#cable" x="0" y="0" />
 </svg>

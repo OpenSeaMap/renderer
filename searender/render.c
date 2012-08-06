@@ -842,6 +842,7 @@ void drawLineSymbols(Item_t *item, char *symbol, double space) {
   Symb_t *params = lookupSymbol(symbol);
   if (params != NULL) {
     double size = params->height * symbolScale[zoom];
+    if (space == 0.0) size *= 0.9375;
     Ref_t *link = item->type.way.blink;
     if (link == NULL) return;
     XY_t last = {0,0};
@@ -866,7 +867,7 @@ void drawLineSymbols(Item_t *item, char *symbol, double space) {
         if ((!gap) && (new.x > 0.0) && (new.x < xmax) && (new.y > 0.0) && (new.y < ymax)) {
           placeSymbol(old, TSSLPT, symbol, "", "", BC, 0, 0, r2d(atan2((new.y - old.y), (new.x - old.x)))+90);
         }
-        gap = !gap;
+        if (space > 0.0) gap = !gap;
         old = new;
         len = gap ? (size * space): size;
         rem = sqrt(pow((next.x-new.x), 2) + pow((next.y-new.y), 2));

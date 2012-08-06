@@ -74,10 +74,9 @@
     <circle cx="20" cy="20" r="12" style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4" />
   </symbol>
 <!-- Cable -->
-  <symbol id="cable" width="30" height="120">
-    <path d="M 5,0 6.4,5 10,10 15,15 20,20 23.6,25 25,30 23.6,35 20,40 15,45 10,50 6.4,55 5,60
-      6.4,65 10,70 15,75 20,80 23.6,85 25,90 23.6,95 20,100 15,105 10,110 6.4,115 5,120"
-      style="fill:none;stroke:#c480ff;stroke-width:8" />
+  <symbol id="cable" width="30" height="64">
+    <path d="M 5,0 6.4,5 10,10 15,15 20,20 23.6,25 25,30 23.6,35 20,40 15,45 10,50 6.4,55 5,60"
+      style="fill:none;stroke:#c480ff;stroke-width:8;stroke-linecap:round" />
   </symbol>
 <!-- Cairn -->
   <symbol id="cairn" width="300" height="400">
@@ -856,9 +855,9 @@
        style="fill:#d400d4;fill-opacity:1" />
   </symbol>
 <!-- Pipeline -->
-  <symbol id="pipeline" width="30" height="120">
-    <path d="M 15,60 L 15,120" style="fill:none;stroke:#c480ff;stroke-width:8" />
-    <circle r="10" cx="15" cy="70" style="stroke:none;fill:#c480ff" />
+  <symbol id="pipeline" width="30" height="60">
+    <path d="M 15,0 L 15,60" style="fill:none;stroke:#c480ff;stroke-width:8" />
+    <circle r="10" cx="15" cy="10" style="stroke:none;fill:#c480ff" />
   </symbol>
 <!-- Platform -->
   <symbol id="platform" width="300" height="400">
