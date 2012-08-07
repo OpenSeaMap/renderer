@@ -734,10 +734,12 @@ bool compareAttributes(Obj_t *objl, char *attributes) {
 int countValues(Tag_t *tag) {
   int i = 0;
   Lst_t *ptr;
-  if (tag->val.type == E)
-    return 1;
-  if (tag->val.type == L)
-    for(i = 0, ptr = tag->val.val.l; ptr != NULL; ptr = ptr->next, i++);
+  if (tag != NULL ) {
+    if (tag->val.type == E)
+      return 1;
+    if (tag->val.type == L)
+      for(i = 0, ptr = tag->val.val.l; ptr != NULL; ptr = ptr->next, i++);
+  }
   return i;
 }
 
