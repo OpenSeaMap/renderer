@@ -88,7 +88,7 @@ object_rules(lights) {
       text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:start", 60, -10);
       free_string;
       if (has_item_attribute("name") && is_type("light_major|light_minor"))
-        text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -50);
+        text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -70);
     }
   }
 }
