@@ -98,6 +98,21 @@ ObjAtt_t objattributes[] = {
   {UNKOBJ, RADIUS}, {LIGHTS, LITRAD}, {UNKOBJ, UNKATT}
 };
 
+typedef enum {NON, NOT, YES} Ver_t;
+
+Ver_t verifyAttribute(Obja_t obja, Atta_t atta) {
+  Ver_t ver = NOT;
+  for (int i = 0; objattributes[i].att != UNKATT; i++) {
+    if (objattributes[i].att == atta) {
+      if (objattributes[i].obj == obja)
+        return YES;
+      else
+        ver = NON;
+    }
+  }
+  return ver;
+}
+
 Atta_t lookupAttribute(Attl_t attl) {
   if (attl < 10000)
     for (int i = 0; i < ATTSIZ; i++) {
@@ -116,23 +131,9 @@ char *decodeAttribute(Attl_t attl) {
   return osmattributes[lookupAttribute(attl)];
 }
 
-typedef enum {NON, NOT, YES} Ver_t;
-
-Ver_t verifyAttribute(Obja_t obja, Atta_t atta) {
-  Ver_t ver = NOT;
-  for (int i = 0; objattributes[i].att != UNKATT; i++) {
-    if (objattributes[i].att == atta) {
-      if (objattributes[i].obj == obja)
-        return YES;
-      else
-        ver = NON;
-    }
-  }
-  return ver;
-}
-
 Attl_t encodeAttribute(char *attr, Objl_t objl) {
-  return s57attributes[enumAttribute(attr, lookupType(objl))];
+  Atta_t atta = enumAttribute(attr, lookupType(objl));
+  return s57attributes[atta] != 0 ? s57attributes[atta] : iencattributes[atta];
 }
 
 char *stringAttribute(Atta_t atta) {

@@ -38,20 +38,21 @@
 #define has_object(x) (compareObjects(item, x))
 #define object_count(x) (countObjects(item, x))
 #define this_type stringType(item->objs.obj)
+#define feature (testFeature(item))
 
 #define has_attribute(x) (compareAttributes(obj, x))
 #define has_item_attribute(x) (compareAttributes(&item->objs, x))
-#define attribute(x) (stringValue(getTag(obj, enumAttribute(x, obj->obj))->val))
-#define item_attribute(x) (stringValue(getTag(&item->objs, enumAttribute(x, item->objs.obj))->val))
+#define attribute(x) (stringValue(getAtt(obj, enumAttribute(x, obj->obj))->val))
+#define item_attribute(x) (stringValue(getAtt(&item->objs, enumAttribute(x, item->objs.obj))->val))
 #define literal_switch(x) { char *tag=x; if(tag == NULL);
 #define literal_case(x) else if (compareLiterals(tag, x))
-#define attribute_switch(x) { Tag_t *tag = getTag(obj, enumAttribute(x, obj->obj)); if(tag == NULL);
-#define attribute_case(x) else if (compareValues(tag, x))
+#define attribute_switch(x) { Att_t *att = getAtt(obj, enumAttribute(x, obj->obj)); if(att == NULL);
+#define attribute_case(x) else if (compareValues(att, x))
 #define attribute_default else
-#define attribute_test(x,v) (has_attribute(x) && compareValues(getTag(obj, enumAttribute(x, obj->obj)), v))
+#define attribute_test(x,v) (has_attribute(x) && compareValues(getAtt(obj, enumAttribute(x, obj->obj)), v))
 #define end_switch }
-#define attribute_count(x) countValues(getTag(obj, enumAttribute(x, obj->obj)))
-#define attribute_sequence(x) {char *val = strdup(stringValue(getTag(obj, enumAttribute(x, obj->obj))->val)); char *ptr = NULL;
+#define attribute_count(x) countValues(getAtt(obj, enumAttribute(x, obj->obj)))
+#define attribute_sequence(x) {char *val = strdup(stringValue(getAtt(obj, enumAttribute(x, obj->obj))->val)); char *ptr = NULL;
 #define attribute_next (ptr = strtok(ptr == NULL ? val : NULL, ";"))
 #define end_sequence free(val);}
 

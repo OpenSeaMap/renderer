@@ -36,7 +36,9 @@ int main (int argc, const char * argv[]) {
   maxlon = -180.0;
   minlon = 180.0;
   
-//  sleep(2); // *** for debugger capture only
+#ifdef DEBUG
+  sleep(2); // *** for debugger capture
+#endif
 
   set_conv("UTF-8");
   
@@ -103,8 +105,9 @@ int main (int argc, const char * argv[]) {
       strtok(NULL, "\"'");
       key = strtok(NULL, "\"'");
       strtok(NULL, "\"'");
-      if (strncmp(key, "seamark:", 8) != 0) continue;
       value = strtok(NULL, "\"'");
+      addTag(item, key, value);
+      if (strncmp(key, "seamark:", 8) != 0) continue;
       prefix = strtok(key, ":");
       prefix = strtok(NULL, ":");
       idx = 0;
@@ -118,11 +121,11 @@ int main (int argc, const char * argv[]) {
             object = getObj(item, obj, idx);
             if (object == NULL)
               object = addObj(item, obj, idx);
-          addTag(object, attribute, value);
+          addAtt(object, attribute, value);
           } else {
             Atta_t att = enumAttribute(prefix, UNKOBJ);
             if (att != UNKATT) {
-              addTag(&item->objs, prefix, value);
+              addAtt(&item->objs, prefix, value);
             }
           }
         }
@@ -136,7 +139,7 @@ int main (int argc, const char * argv[]) {
           object = getObj(item, obj, idx);
           if (object == NULL)
             object = addObj(item, obj, idx);
-          addTag(object, attribute, value);
+          addAtt(object, attribute, value);
         }
       }
     } else if ((strcmp(ele, "nd") == 0) && (flag == WAY)) {

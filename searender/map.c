@@ -72,6 +72,15 @@ Item_t *getItem(char *id) {
   return link;
 }
 
+Tag_t *addTag(Item_t *item, char *key, char *val) {
+  Tag_t *link = calloc(1, sizeof(Tag_t));
+  link->key = strdup(key);
+  link->val = strdup(val);
+  link->next = item->tags;
+  item->tags = link;
+  return link;
+}
+
 Obj_t *addObj(Item_t *item, Obja_t obj, int idx) {
   Obj_t *link = calloc(1, sizeof(Obj_t));
   link->obj = obj;
@@ -90,16 +99,16 @@ Obj_t *getObj(Item_t *item, Obja_t obj, int idx) {
   return link;
 }
 
-Tag_t *addTag(Obj_t *obj, char *key, char *val) {
-  Tag_t *link = calloc(1, sizeof(Tag_t));
+Att_t *addAtt(Obj_t *obj, char *key, char *val) {
+  Att_t *link = calloc(1, sizeof(Att_t));
   link->val = convertValue(val, enumAttribute(key, obj->obj));
-  link->next = obj->tags;
-  obj->tags = link;
+  link->next = obj->atts;
+  obj->atts = link;
   return link;
 }
 
-Tag_t *getTag(Obj_t *obj, Atta_t key) {
-  Tag_t *link = obj != NULL ? obj->tags : NULL;
+Att_t *getAtt(Obj_t *obj, Atta_t key) {
+  Att_t *link = obj != NULL ? obj->atts : NULL;
   while (link != NULL) {
     if (link->val.key == key) break;
     link = link->next;
@@ -107,13 +116,13 @@ Tag_t *getTag(Obj_t *obj, Atta_t key) {
   return link;
 }
 
-Enum_t getTagEnum(Obj_t *obj, Atta_t key, int idx) {
-  Tag_t *tag = getTag(obj, key);
-  if (tag == NULL) return 0;
-  if (tag->val.type == E)
-    return tag->val.val.e;
-  else if (tag->val.type == L) {
-    Lst_t *val = tag->val.val.l;
+Enum_t getAttEnum(Obj_t *obj, Atta_t key, int idx) {
+  Att_t *att = getAtt(obj, key);
+  if (att == NULL) return 0;
+  if (att->val.type == E)
+    return att->val.val.e;
+  else if (att->val.type == L) {
+    Lst_t *val = att->val.val.l;
     for (int i = 0; i < idx; i++) {
       if (val->next == NULL) return 0;
       val = val->next;
@@ -122,10 +131,10 @@ Enum_t getTagEnum(Obj_t *obj, Atta_t key, int idx) {
   } else return 0;
 }
 
-bool testTag(Tag_t *tag, Enum_t val) {
-  if ((tag->val.type == E) && (tag->val.val.e == val)) return true;
-  else if (tag->val.type == L) {
-    Lst_t *lst = tag->val.val.l;
+bool testAtt(Att_t *att, Enum_t val) {
+  if ((att->val.type == E) && (att->val.val.e == val)) return true;
+  else if (att->val.type == L) {
+    Lst_t *lst = att->val.val.l;
     while (lst != NULL) {
       if (lst->val == val) break;
       lst = lst->next;

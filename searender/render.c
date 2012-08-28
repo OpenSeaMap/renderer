@@ -19,6 +19,7 @@ struct SYMB {Symb_t *next; char *name; double width; double height;};
 Symb_t *symbtable[100];
 
 typedef struct {double x; double y;} XY_t;
+typedef struct {double lat; double lon;} LL_t;
 
 const double symbolScale[] = {256.0, 128.0, 64.0, 32.0, 16.0, 8.0, 4.0, 2.0, 1.0,
   0.61, 0.372, 0.227, 0.138, 0.0843, 0.0514, 0.0313, 0.0191, 0.0117, 0.007, 0.138};
@@ -214,6 +215,17 @@ Symb_t *lookupSymbol(char *symbol) {
   return link;
 }
 
+Feature_t testFeature(Item_t *item) {
+  if (item->flag == WAY) {
+    if ((item->type.way.flink->ref != item->type.way.blink->ref) && (item->type.way.blink->blink != NULL)) {
+      return LINE;
+    } else {
+      return AREA;
+    }
+  }
+  return POINT;
+}
+
 XY_t findCentroid(Item_t *item) {
   XY_t coord;
   if (item->flag == WAY) {
@@ -311,67 +323,67 @@ void renderCluster(Item_t *item, char *type) {
       switch (n) {
         case 0: {
           Obj_t *obj = getObj(item, obja, 0);
-          int n = countValues(getTag(obj, atta));
+          int n = countValues(getAtt(obj, atta));
           switch (n) {
             case 1:
-              renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", CC, 0, 0, 0);
+              renderSymbol(item, obja, map[getAttEnum(obj, atta, 0)], "", "", CC, 0, 0, 0);
               break;
             case 2:
-              renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", RC, 0, 0, 0);
-              renderSymbol(item, obja, map[getTagEnum(obj, atta, 1)], "", "", LC, 0, 0, 0);
+              renderSymbol(item, obja, map[getAttEnum(obj, atta, 0)], "", "", RC, 0, 0, 0);
+              renderSymbol(item, obja, map[getAttEnum(obj, atta, 1)], "", "", LC, 0, 0, 0);
               break;
             case 3:
-              renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", BC, 0, 0, 0);
-              renderSymbol(item, obja, map[getTagEnum(obj, atta, 1)], "", "", TR, 0, 0, 0);
-              renderSymbol(item, obja, map[getTagEnum(obj, atta, 2)], "", "", TL, 0, 0, 0);
+              renderSymbol(item, obja, map[getAttEnum(obj, atta, 0)], "", "", BC, 0, 0, 0);
+              renderSymbol(item, obja, map[getAttEnum(obj, atta, 1)], "", "", TR, 0, 0, 0);
+              renderSymbol(item, obja, map[getAttEnum(obj, atta, 2)], "", "", TL, 0, 0, 0);
               break;
             case 4:
-              renderSymbol(item, obja, map[getTagEnum(obj, atta, 0)], "", "", BR, 0, 0, 0);
-              renderSymbol(item, obja, map[getTagEnum(obj, atta, 1)], "", "", BL, 0, 0, 0);
-              renderSymbol(item, obja, map[getTagEnum(obj, atta, 2)], "", "", TR, 0, 0, 0);
-              renderSymbol(item, obja, map[getTagEnum(obj, atta, 3)], "", "", TL, 0, 0, 0);
+              renderSymbol(item, obja, map[getAttEnum(obj, atta, 0)], "", "", BR, 0, 0, 0);
+              renderSymbol(item, obja, map[getAttEnum(obj, atta, 1)], "", "", BL, 0, 0, 0);
+              renderSymbol(item, obja, map[getAttEnum(obj, atta, 2)], "", "", TR, 0, 0, 0);
+              renderSymbol(item, obja, map[getAttEnum(obj, atta, 3)], "", "", TL, 0, 0, 0);
               break;
           }
         }
           break;
         case 1:
-          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 1), atta, 0)], "", "", CC, 0, 0, 0);
+          renderSymbol(item, obja, map[getAttEnum(getObj(item, obja, 1), atta, 0)], "", "", CC, 0, 0, 0);
           break;
         case 2:
-          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 1), atta, 0)], "", "", RC, 0, 0, 0);
-          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 2), atta, 0)], "", "", LC, 0, 0, 0);
+          renderSymbol(item, obja, map[getAttEnum(getObj(item, obja, 1), atta, 0)], "", "", RC, 0, 0, 0);
+          renderSymbol(item, obja, map[getAttEnum(getObj(item, obja, 2), atta, 0)], "", "", LC, 0, 0, 0);
           break;
         case 3:
-          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 1), atta, 0)], "", "", BC, 0, 0, 0);
-          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 2), atta, 0)], "", "", TR, 0, 0, 0);
-          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 3), atta, 0)], "", "", TL, 0, 0, 0);
+          renderSymbol(item, obja, map[getAttEnum(getObj(item, obja, 1), atta, 0)], "", "", BC, 0, 0, 0);
+          renderSymbol(item, obja, map[getAttEnum(getObj(item, obja, 2), atta, 0)], "", "", TR, 0, 0, 0);
+          renderSymbol(item, obja, map[getAttEnum(getObj(item, obja, 3), atta, 0)], "", "", TL, 0, 0, 0);
           break;
         case 4:
-          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 1), atta, 0)], "", "", BR, 0, 0, 0);
-          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 2), atta, 0)], "", "", BL, 0, 0, 0);
-          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 3), atta, 0)], "", "", TR, 0, 0, 0);
-          renderSymbol(item, obja, map[getTagEnum(getObj(item, obja, 4), atta, 0)], "", "", TL, 0, 0, 0);
+          renderSymbol(item, obja, map[getAttEnum(getObj(item, obja, 1), atta, 0)], "", "", BR, 0, 0, 0);
+          renderSymbol(item, obja, map[getAttEnum(getObj(item, obja, 2), atta, 0)], "", "", BL, 0, 0, 0);
+          renderSymbol(item, obja, map[getAttEnum(getObj(item, obja, 3), atta, 0)], "", "", TR, 0, 0, 0);
+          renderSymbol(item, obja, map[getAttEnum(getObj(item, obja, 4), atta, 0)], "", "", TL, 0, 0, 0);
           break;
       }
     }
       break;
     case BRIDGE: {
-      Tag_t *tagv = getTag(getObj(item, BRIDGE, 0), VERCLR);
-      Tag_t *tagc = getTag(getObj(item, BRIDGE, 0), VERCCL);
-      Tag_t *tago = getTag(getObj(item, BRIDGE, 0), VERCOP);
-      if (tagv != NULL) {
+      Att_t *attv = getAtt(getObj(item, BRIDGE, 0), VERCLR);
+      Att_t *attc = getAtt(getObj(item, BRIDGE, 0), VERCCL);
+      Att_t *atto = getAtt(getObj(item, BRIDGE, 0), VERCOP);
+      if (attv != NULL) {
         renderSymbol(item, obja, "clear_v", "", "", CC, 0, 0, 0);
-        drawText(item, stringValue(tagv->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 0, 12);
+        drawText(item, stringValue(attv->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 0, 12);
       }
-      else if ((tagc != NULL) && (tago == NULL)) {
+      else if ((attc != NULL) && (atto == NULL)) {
         renderSymbol(item, obja, "clear_v", "", "", CC, 0, 0, 0);
-        drawText(item, stringValue(tagc->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 0, 12);
+        drawText(item, stringValue(attc->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 0, 12);
       }
-      else if ((tagc != NULL) && (tago != NULL)) {
+      else if ((attc != NULL) && (atto != NULL)) {
         renderSymbol(item, obja, "clear_v", "", "", RC, 5, 0, 0);
-        drawText(item, stringValue(tagc->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", -35, 12);
+        drawText(item, stringValue(attc->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", -35, 12);
         renderSymbol(item, obja, "clear_v", "", "", LC, -5, 0, 0);
-        drawText(item, stringValue(tago->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 35, 12);
+        drawText(item, stringValue(atto->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 35, 12);
       }
     }
       break;
@@ -409,7 +421,7 @@ void renderNotice(Item_t *item) {
       if (obj == NULL) continue;
       Atta_t add;
       int idx = 0;
-      while ((add = getTagEnum(obj, ADDMRK, idx++)) != MRK_UNKN) {
+      while ((add = getAttEnum(obj, ADDMRK, idx++)) != MRK_UNKN) {
         if ((add == MRK_LTRI) && (i == 2)) swap = true;
         if ((add == MRK_RTRI) && (i != 2)) swap = true;
       }
@@ -418,11 +430,11 @@ void renderNotice(Item_t *item) {
   for (int i = 0; i <=2; i++) {
     Obj_t *obj = getObj(item, NOTMRK, i);
     if (obj == NULL) continue;
-    Atta_t category = getTagEnum(obj, CATNMK, i);
+    Atta_t category = getAttEnum(obj, CATNMK, i);
     Atta_t add;
     int idx = 0;
     int top=0, bottom=0, left=0, right=0;
-    while ((add = getTagEnum(obj, ADDMRK, idx++)) != MRK_UNKN) {
+    while ((add = getAttEnum(obj, ADDMRK, idx++)) != MRK_UNKN) {
       switch (add) {
         case MRK_TOPB:
           top = add;
@@ -441,7 +453,7 @@ void renderNotice(Item_t *item) {
           break;
       }
     }
-    double orient = getTag(obj, ORIENT) != NULL ? getTag(obj, ORIENT)->val.val.f : 0.0;
+    double orient = getAtt(obj, ORIENT) != NULL ? getAtt(obj, ORIENT)->val.val.f : 0.0;
     double flip = 0.0;
     char *symb = notice_map[category];
     char *base = "";
@@ -505,9 +517,9 @@ void renderNotice(Item_t *item) {
 void renderFlare(Item_t *item) {
   char *col = light_colours[COL_MAG];
   Obj_t *obj = getObj(item, LIGHTS, 0);
-  Tag_t *tag;
-  if (((tag = getTag(obj, COLOUR)) != NULL) && (tag->val.val.l->next == NULL)) {
-    col = light_colours[tag->val.val.l->val];
+  Att_t *att;
+  if (((att = getAtt(obj, COLOUR)) != NULL) && (att->val.val.l->next == NULL)) {
+    col = light_colours[att->val.val.l->val];
   }
   renderSymbol(item, LIGHTS, "light", "", col, CC, 0, 0, 120);
 }
@@ -515,18 +527,18 @@ void renderFlare(Item_t *item) {
 void renderSector(Item_t *item, int s, char *text, char *style, double offset, int dy) {
   Obj_t *sector;
   double start, end;
-  Tag_t *tag;
+  Att_t *att;
   XY_t p0, p1;
   double r0, r1;
   double b0, b1, span;
   char *col;
   XY_t pos = findCentroid(item);
   if ((sector = getObj(item, LIGHTS, s)) != NULL) {
-    strcpy(string1, (tag = getTag(sector, LITRAD)) != NULL ? tag->val.val.a : "0.2");
-    if (((tag = getTag(sector, CATLIT)) != NULL) && (testTag(tag, LIT_DIR)) && ((tag = getTag(sector, ORIENT)) != NULL)) {
-      b0 = fmod(540.0 - tag->val.val.f, 360.0);
-      if ((tag = getTag(sector, COLOUR)) != NULL) {
-        col = light_colours[tag->val.val.l->val];
+    strcpy(string1, (att = getAtt(sector, LITRAD)) != NULL ? att->val.val.a : "0.2");
+    if (((att = getAtt(sector, CATLIT)) != NULL) && (testAtt(att, LIT_DIR)) && ((att = getAtt(sector, ORIENT)) != NULL)) {
+      b0 = fmod(540.0 - att->val.val.f, 360.0);
+      if ((att = getAtt(sector, COLOUR)) != NULL) {
+        col = light_colours[att->val.val.l->val];
         r0 = atof(string1);
         p0 = radial(pos, r0, b0);
         printf("<path d=\"M %g,%g L %g,%g\" style=\"fill:none;stroke:#808080;stroke-width:%g;stroke-dasharray:%g\"/>\n",
@@ -537,9 +549,9 @@ void renderSector(Item_t *item, int s, char *text, char *style, double offset, i
         for (int i = s-1; i <= s+1; i++) {
           if (i == s) continue;
           if ((adj = getObj(item, LIGHTS, i)) == NULL) continue;
-          Tag_t *tag;
-          if (((tag = getTag(adj, CATLIT)) != NULL) && (testTag(tag, LIT_DIR)) && ((tag = getTag(adj, ORIENT)) != NULL)) {
-            b1 = fmod(540.0 - tag->val.val.f, 360.0);
+          Att_t *att;
+          if (((att = getAtt(adj, CATLIT)) != NULL) && (testAtt(att, LIT_DIR)) && ((att = getAtt(adj, ORIENT)) != NULL)) {
+            b1 = fmod(540.0 - att->val.val.f, 360.0);
             if (fabs(b0 - b1) > 180.0) {
               if (b0 < b1) b0 += 360.0;
               else b1 += 360.0;
@@ -554,8 +566,8 @@ void renderSector(Item_t *item, int s, char *text, char *style, double offset, i
         p1 = radial(pos, r0, end);
         printf("<path id=\"%d\" d=\"M %g,%g A %g,%g,0,0,1,%g,%g\" style=\"fill:none;stroke:%s;stroke-width:%g\"/>\n",
                ++ref, p0.x, p0.y, r0*mile, r0*mile, p1.x, p1.y, col, (20 * symbolScale[zoom]));
-        if (tag->val.val.l->next != NULL) {
-          char *col = light_colours[tag->val.val.l->next->val];
+        if (att->val.val.l->next != NULL) {
+          char *col = light_colours[att->val.val.l->next->val];
           r1 = r0 - (20 * symbolScale[zoom]/mile);
           p0 = radial(pos, r1, start);
           p1 = radial(pos, r1, end);
@@ -563,16 +575,16 @@ void renderSector(Item_t *item, int s, char *text, char *style, double offset, i
                  p0.x, p0.y, r1*mile, r1*mile, p1.x, p1.y, col, (20 * symbolScale[zoom]));
         }
       }
-    } else if ((tag = getTag(sector, SECTR1)) != NULL) {
-      start = fmod(540.0 - tag->val.val.f, 360.0);
-      if ((tag = getTag(sector, SECTR2)) != NULL) {
-        end = fmod(540.0 - tag->val.val.f, 360.0);
+    } else if ((att = getAtt(sector, SECTR1)) != NULL) {
+      start = fmod(540.0 - att->val.val.f, 360.0);
+      if ((att = getAtt(sector, SECTR2)) != NULL) {
+        end = fmod(540.0 - att->val.val.f, 360.0);
         start += start < end ? 360.0 : 0.0;
-        if ((tag = getTag(sector, COLOUR)) != NULL) {
+        if ((att = getAtt(sector, COLOUR)) != NULL) {
           char *ttok, *etok;
           char *radstr = strdup(string1);
           int arc = 0;
-          col = light_colours[tag->val.val.l->val];
+          col = light_colours[att->val.val.l->val];
           r0 = 0.0;
           b0 = b1 = start;
           for (char *tpl = strtok_r(radstr, ";", &ttok); tpl != NULL; tpl = strtok_r(NULL, ";", &ttok)) {
@@ -642,8 +654,8 @@ void renderSector(Item_t *item, int s, char *text, char *style, double offset, i
               printf("<path d=\"M %g,%g A %g,%g,0,%d,1,%g,%g\" style=\"fill:none;stroke:%s;stroke-width:%g;stroke-opacity:0.5;stroke-dasharray:%g\"/>\n",
                      p0.x, p0.y, r1*mile, r1*mile, span>180.0, p1.x, p1.y, col, (10 * symbolScale[zoom]), (30 * symbolScale[zoom]));
             }
-            if ((arc == 0) && (tag->val.val.l->next != NULL)) {
-              char *col = light_colours[tag->val.val.l->next->val];
+            if ((arc == 0) && (att->val.val.l->next != NULL)) {
+              char *col = light_colours[att->val.val.l->next->val];
               double r2 = r1 - (20 * symbolScale[zoom]/mile);
               XY_t p2 = radial(pos, r2, b0);
               XY_t p3 = radial(pos, r2, b1);
@@ -715,15 +727,15 @@ bool compareAttributes(Obj_t *objl, char *attributes) {
   char *attstr = strtok(string1, "|");
   bool result = false;
   while (attstr != NULL) {
-    Atta_t att = enumAttribute(attstr, objl->obj);
-    if (att == 0) break;
-    Tag_t *tag = objl->tags;
-    while (tag != NULL) {
-      if (tag->val.key == att) {
+    Atta_t atta = enumAttribute(attstr, objl->obj);
+    if (atta == 0) break;
+    Att_t *att = objl->atts;
+    while (att != NULL) {
+      if (att->val.key == atta) {
         result = true;
         break;
       }
-      tag = tag->next;
+      att = att->next;
     }
     if (result) break;
     attstr = strtok(NULL, "|");
@@ -731,14 +743,14 @@ bool compareAttributes(Obj_t *objl, char *attributes) {
   return result;
 }
 
-int countValues(Tag_t *tag) {
+int countValues(Att_t *att) {
   int i = 0;
   Lst_t *ptr;
-  if (tag != NULL ) {
-    if (tag->val.type == E)
+  if (att != NULL ) {
+    if (att->val.type == E)
       return 1;
-    if (tag->val.type == L)
-      for(i = 0, ptr = tag->val.val.l; ptr != NULL; ptr = ptr->next, i++);
+    if (att->val.type == L)
+      for(i = 0, ptr = att->val.val.l; ptr != NULL; ptr = ptr->next, i++);
   }
   return i;
 }
@@ -767,7 +779,7 @@ bool compareLiterals(char *values, char *cases) {
   return result;
 }
 
-bool compareValues(Tag_t *val, char *cases) {
+bool compareValues(Att_t *val, char *cases) {
   if (val == NULL) return false;
   return compareLiterals(stringValue((val->val)), cases);
 }
@@ -937,58 +949,58 @@ int drawText(Item_t *item, char *text, char *style, double dx, double dy) {
 
 char *charString(Item_t *item, char *type, int idx) {
   strcpy(string1, "");
-  Tag_t *tag = NULL;
+  Att_t *att = NULL;
   Obj_t *obj = getObj(item, enumType(type), idx);
   switch (enumType(type)) {
     case CGUSTA:
       strcpy(string1, "CG");
-      if ((obj != NULL) && (tag = getTag(obj, COMCHA)) != NULL)
-        sprintf(strchr(string1, 0), " Ch.%s", stringValue(tag->val));
+      if ((obj != NULL) && (att = getAtt(obj, COMCHA)) != NULL)
+        sprintf(strchr(string1, 0), " Ch.%s", stringValue(att->val));
       break;
     case FOGSIG:
       if (obj != NULL) {
-        if ((tag = getTag(obj, CATFOG)) != NULL)
-          strcat(string1, fog_signals[tag->val.val.e]);
-        if ((tag = getTag(obj, SIGGRP)) != NULL)
-          sprintf(strchr(string1, 0), "(%s)", stringValue(tag->val));
+        if ((att = getAtt(obj, CATFOG)) != NULL)
+          strcat(string1, fog_signals[att->val.val.e]);
+        if ((att = getAtt(obj, SIGGRP)) != NULL)
+          sprintf(strchr(string1, 0), "(%s)", stringValue(att->val));
         else 
           strcat(string1, " ");
-        if ((tag = getTag(obj, SIGPER)) != NULL)
-          sprintf(strchr(string1, 0), "%ss ", stringValue(tag->val));
-        if ((tag = getTag(obj, VALMXR)) != NULL)
-          sprintf(strchr(string1, 0), "%sM", stringValue(tag->val));
+        if ((att = getAtt(obj, SIGPER)) != NULL)
+          sprintf(strchr(string1, 0), "%ss ", stringValue(att->val));
+        if ((att = getAtt(obj, VALMXR)) != NULL)
+          sprintf(strchr(string1, 0), "%sM", stringValue(att->val));
       }
       break;
     case RTPBCN:
       if (obj != NULL) {
-        if ((tag = getTag(obj, CATRTB)) != NULL)
-          strcat(string1, rtb_map[tag->val.val.e]);
-        if ((tag = getTag(obj, SIGGRP)) != NULL)
-          sprintf(strchr(string1, 0), "(%s)", stringValue(tag->val));
+        if ((att = getAtt(obj, CATRTB)) != NULL)
+          strcat(string1, rtb_map[att->val.val.e]);
+        if ((att = getAtt(obj, SIGGRP)) != NULL)
+          sprintf(strchr(string1, 0), "(%s)", stringValue(att->val));
         else 
           strcat(string1, " ");
-        if ((tag = getTag(obj, SIGPER)) != NULL)
-          sprintf(strchr(string1, 0), "%ss ", stringValue(tag->val));
-        if ((tag = getTag(obj, VALMXR)) != NULL)
-          sprintf(strchr(string1, 0), "%sM", stringValue(tag->val));
+        if ((att = getAtt(obj, SIGPER)) != NULL)
+          sprintf(strchr(string1, 0), "%ss ", stringValue(att->val));
+        if ((att = getAtt(obj, VALMXR)) != NULL)
+          sprintf(strchr(string1, 0), "%sM", stringValue(att->val));
       }
       break;
     case SISTAT:
       strcpy(string1, "SS");
       if (obj != NULL) {
-        if ((tag = getTag(obj, CATSIT)) != NULL)
-          strcat(string1, sit_map[tag->val.val.l->val]);
-        if ((tag = getTag(obj, COMCHA)) != NULL)
-          sprintf(strchr(string1, 0), "\nCh.%s", stringValue(tag->val));
+        if ((att = getAtt(obj, CATSIT)) != NULL)
+          strcat(string1, sit_map[att->val.val.l->val]);
+        if ((att = getAtt(obj, COMCHA)) != NULL)
+          sprintf(strchr(string1, 0), "\nCh.%s", stringValue(att->val));
       }
       break;
     case SISTAW:
       strcpy(string1, "SS");
       if (obj != NULL) {
-        if ((tag = getTag(obj, CATSIW)) != NULL)
-          strcat(string1, siw_map[tag->val.val.l->val]);
-        if ((tag = getTag(obj, COMCHA)) != NULL)
-          sprintf(strchr(string1, 0), "\nCh.%s", stringValue(tag->val));
+        if ((att = getAtt(obj, CATSIW)) != NULL)
+          strcat(string1, siw_map[att->val.val.l->val]);
+        if ((att = getAtt(obj, COMCHA)) != NULL)
+          sprintf(strchr(string1, 0), "\nCh.%s", stringValue(att->val));
       }
       break;
     case LIGHTS:
@@ -1010,11 +1022,11 @@ char *charString(Item_t *item, char *type, int idx) {
             tmp->next = lights;
             lights = tmp;
             obj = getObj(item, LIGHTS, i);
-            if ((tag = getTag(obj, CATLIT)) != NULL) {
-              lights->dir = testTag(tag, LIT_DIR);
+            if ((att = getAtt(obj, CATLIT)) != NULL) {
+              lights->dir = testAtt(att, LIT_DIR);
             }
-            if ((tag = getTag(obj, LITCHR)) != NULL) {
-              lights->chr = tag->val.val.e;
+            if ((att = getAtt(obj, LITCHR)) != NULL) {
+              lights->chr = att->val.val.e;
               switch (lights->chr) {
                 case CHR_AL:
                   lights->chr = CHR_F;
@@ -1035,21 +1047,21 @@ char *charString(Item_t *item, char *type, int idx) {
                   break;
               }
             }
-            if ((tag = getTag(obj, SIGGRP)) != NULL) {
-              lights->grp = tag->val.val.a;
+            if ((att = getAtt(obj, SIGGRP)) != NULL) {
+              lights->grp = att->val.val.a;
             } else {
               lights->grp = "";
             }
-            if ((tag = getTag(obj, SIGPER)) != NULL) {
-              lights->per = tag->val.val.f;
+            if ((att = getAtt(obj, SIGPER)) != NULL) {
+              lights->per = att->val.val.f;
             }
-            if ((tag = getTag(obj, VALNMR)) != NULL) {
-              lights->rng = tag->val.val.f;
+            if ((att = getAtt(obj, VALNMR)) != NULL) {
+              lights->rng = att->val.val.f;
             }
-            if ((tag = getTag(obj, COLOUR)) != NULL) {
-              lights->col = tag->val.val.l->val;
-              if (tag->val.val.l->next != NULL)
-                lights->alt = tag->val.val.l->next->val;
+            if ((att = getAtt(obj, COLOUR)) != NULL) {
+              lights->col = att->val.val.l->val;
+              if (att->val.val.l->next != NULL)
+                lights->alt = att->val.val.l->next->val;
             }
           }
           struct COLRNG {
@@ -1118,18 +1130,18 @@ char *charString(Item_t *item, char *type, int idx) {
             this = lights;
           }
         } else {
-          if ((tag = getTag(obj, CATLIT)) != NULL) {
-            if (testTag(tag, LIT_DIR))
+          if ((att = getAtt(obj, CATLIT)) != NULL) {
+            if (testAtt(att, LIT_DIR))
               strcat(string1, "Dir");
           }
-          if ((tag = getTag(obj, MLTYLT)) != NULL)
-            sprintf(strchr(string1, 0), "%s", stringValue(tag->val));
-          if ((tag = getTag(obj, LITCHR)) != NULL) {
-            char *chrstr = strdup(stringValue(tag->val));
-            Tag_t *grp = getTag(obj, SIGGRP);
+          if ((att = getAtt(obj, MLTYLT)) != NULL)
+            sprintf(strchr(string1, 0), "%s", stringValue(att->val));
+          if ((att = getAtt(obj, LITCHR)) != NULL) {
+            char *chrstr = strdup(stringValue(att->val));
+            Att_t *grp = getAtt(obj, SIGGRP);
             if (grp != NULL) {
               char *grpstr = strdup(stringValue(grp->val));
-              switch (tag->val.val.e) {
+              switch (att->val.val.e) {
                 case CHR_QLFL:
                   sprintf(strchr(string1, 0), "Q(%s)+LFl", grpstr);
                   break;
@@ -1149,46 +1161,46 @@ char *charString(Item_t *item, char *type, int idx) {
             }
             free(chrstr);
           }
-          if ((tag = getTag(obj, COLOUR)) != NULL) {
-            int n = countValues(tag);
-            if (!((n == 1) && (idx == 0) && (testTag(tag, COL_WHT)))) {
+          if ((att = getAtt(obj, COLOUR)) != NULL) {
+            int n = countValues(att);
+            if (!((n == 1) && (idx == 0) && (testAtt(att, COL_WHT)))) {
               if ((strlen(string1) > 0) && ((string1[strlen(string1)-1] != ')'))) 
                 strcat(string1, ".");
-              Lst_t *lst = tag->val.val.l;
+              Lst_t *lst = att->val.val.l;
               while (lst != NULL) {
                 strcat(string1, light_letters[lst->val]);
                 lst = lst->next;
               }
             }
           }
-          if ((idx == 0) && (tag = getTag(obj, CATLIT)) != NULL) {
-            if (testTag(tag, LIT_VERT))
+          if ((idx == 0) && (att = getAtt(obj, CATLIT)) != NULL) {
+            if (testAtt(att, LIT_VERT))
               strcat(string1, "(vert)");
-            if (testTag(tag, LIT_HORI))
+            if (testAtt(att, LIT_HORI))
               strcat(string1, "(hor)");
           }
           if ((strlen(string1) > 0) &&
-              ((getTag(obj, SIGPER) != NULL) ||
-               (getTag(obj, HEIGHT) != NULL) ||
-               (getTag(obj, VALMXR) != NULL)) &&
+              ((getAtt(obj, SIGPER) != NULL) ||
+               (getAtt(obj, HEIGHT) != NULL) ||
+               (getAtt(obj, VALMXR) != NULL)) &&
               (string1[strlen(string1)-1] != ')'))
             strcat(string1, ".");
-          if ((tag = getTag(obj, SIGPER)) != NULL)
-            sprintf(strchr(string1, 0), "%ss", stringValue(tag->val));
+          if ((att = getAtt(obj, SIGPER)) != NULL)
+            sprintf(strchr(string1, 0), "%ss", stringValue(att->val));
           if ((idx == 0) && (item->objs.obj != LITMIN)) {
-            if ((tag = getTag(obj, HEIGHT)) != NULL)
-              sprintf(strchr(string1, 0), "%sm", stringValue(tag->val));
-            if ((tag = getTag(obj, VALNMR)) != NULL)
-              sprintf(strchr(string1, 0), "%sM", stringValue(tag->val));
+            if ((att = getAtt(obj, HEIGHT)) != NULL)
+              sprintf(strchr(string1, 0), "%sm", stringValue(att->val));
+            if ((att = getAtt(obj, VALNMR)) != NULL)
+              sprintf(strchr(string1, 0), "%sM", stringValue(att->val));
           }
-          if ((idx == 0) && (tag = getTag(obj, CATLIT)) != NULL) {
-            if (testTag(tag, LIT_FRNT))
+          if ((idx == 0) && (att = getAtt(obj, CATLIT)) != NULL) {
+            if (testAtt(att, LIT_FRNT))
               strcat(string1, "(Front)");
-            if (testTag(tag, LIT_REAR))
+            if (testAtt(att, LIT_REAR))
               strcat(string1, "(Rear)");
-            if (testTag(tag, LIT_UPPR))
+            if (testAtt(att, LIT_UPPR))
               strcat(string1, "(Upper)");
-            if (testTag(tag, LIT_LOWR))
+            if (testAtt(att, LIT_LOWR))
               strcat(string1, "(Lower)");
           }
         }

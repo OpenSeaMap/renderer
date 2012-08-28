@@ -41,9 +41,10 @@ typedef struct NODE Node_t;
 typedef struct WMBS Wmbs_t;
 typedef struct OBJ Obj_t;
 typedef struct TAG Tag_t;
+typedef struct ATT Att_t;
 
-struct TAG {
-  Tag_t *next;
+struct ATT {
+  Att_t *next;
   Val_t val;
 };
 
@@ -51,7 +52,7 @@ struct OBJ {
   Obj_t *next;
   Obja_t obj;
   int idx;
-  Tag_t *tags;
+  Att_t *atts;
 };
 
 struct WMBS {
@@ -93,10 +94,17 @@ struct RELN {
   Memb_t *blink;
 };
 
+struct TAG {
+  Tag_t *next;
+  char *key;
+  char *val;
+};
+
 struct ITEM {
   Item_t *items[10];
   Item_t *next;
   char *id;
+  Tag_t *tags;
   Mshp_t *mshp;
   Obj_t objs;
   Flag_t flag;
@@ -110,13 +118,14 @@ struct ITEM {
 extern Item_t map;
 extern Item_t *addItem(Flag_t);
 extern Item_t *getItem(char*);
+extern Tag_t *addTag(Item_t*, char*, char*);
 extern Obj_t *addObj(Item_t*, Obja_t, int);
 extern Obj_t *getObj(Item_t*, Obja_t, int);
 extern Ref_t *addRef(Item_t*, char*);
 extern Memb_t *addMemb(Item_t*, char*, char*);
-extern Tag_t *addTag(Obj_t*, char*, char*);
-extern Tag_t *getTag(Obj_t*, Atta_t);
-extern Enum_t getTagEnum(Obj_t*, Atta_t, int);
-extern bool testTag(Tag_t*, Enum_t);
+extern Att_t *addAtt(Obj_t*, char*, char*);
+extern Att_t *getAtt(Obj_t*, Atta_t);
+extern Enum_t getAttEnum(Obj_t*, Atta_t, int);
+extern bool testAtt(Att_t*, Enum_t);
 
 #endif

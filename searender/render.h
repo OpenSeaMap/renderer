@@ -23,6 +23,7 @@
 #include "map.h"
 
 typedef enum {CC, TL, TR, TC, LC, RC, BL, BR, BC} Handle_t;
+typedef enum {POINT, LINE, AREA} Feature_t;
 
 extern void render();
 extern int renderColourSymbol(Item_t*, Obja_t, char*, char*, char*, Handle_t, double, double, double);
@@ -43,10 +44,11 @@ extern bool compareObjects(Item_t*, char*);
 extern int countObjects(Item_t*, char*);
 extern bool compareAttributes(Obj_t*, char*);
 
-extern int countValues(Tag_t*);
-extern bool compareValues(Tag_t*, char*);
+extern int countValues(Att_t*);
+extern bool compareValues(Att_t*, char*);
 extern bool compareLiterals(char*, char*);
 extern char *charString(Item_t*, char*, int);
+extern Feature_t testFeature(Item_t*);
 
 extern Item_t *findItem(char*);
 extern Item_t *findNext();

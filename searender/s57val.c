@@ -39,7 +39,7 @@ s57val_t catach[] = { {1, "unrestricted"}, {2, "deep_water"}, {3, "tanker"}, {4,
 s57val_t catbrg[] = { {1, "fixed"}, {2, "opening"}, {3, "swing"}, {4, "lifting"}, {5, "bascule"}, {6, "pontoon"}, {7, "draw"}, {8, "transporter"}, {9, "footbridge"}, {10, "viaduct"},
   {11, "aqueduct"}, {12, "suspension"}, {0, NULL} };
 s57val_t catbua[] = { {1, "urban"}, {2, "settlement"}, {3, "village"}, {4, "town"}, {5, "city"}, {6, "holiday_village"}, {0, NULL} };
-s57val_t catcbl[] = { {1, "power"}, {2, "telecom"}, {3, "transmission"}, {4, "telephone"}, {5, "telegraph"}, {6, "mooring"}, {7, "ferry"}, {0, NULL} };
+s57val_t catcbl[] = { {1, "power"}, {2, "telecom"}, {3, "transmission"}, {4, "telephone"}, {5, "telegraph"}, {6, "mooring"}, {7, "optical"}, {8, "ferry"}, {0, NULL} };
 s57val_t catcan[] = { {1, "transportation"}, {2, "drainage"}, {3, "irrigation"}, {0, NULL} };
 s57val_t catcam[] = { {1, "north"}, {2, "east"}, {3, "south"}, {4, "west"}, {0, NULL} };
 s57val_t catchp[] = { {1, "custom"}, {2, "border"}, {0, NULL} };
@@ -142,7 +142,7 @@ s57val_t convis[] = { {1, "conspicuous"}, {2, "not_conspicuous"}, {0, NULL} };
 s57val_t dunits[] = { {1, "metres"}, {2, "fathoms_feet"}, {3, "fathoms"}, {4, "fathoms_fractions"}, {0, NULL} };
 s57val_t exclit[] = { {1, "24h"}, {2, "day"}, {3, "fog"}, {4, "night"}, {5, "warning"}, {6, "storm"}, {0, NULL} };
 s57val_t expsou[] = { {1, "within"}, {2, "shoaler"}, {3, "deeper"}, {0, NULL} };
-s57val_t functn[] = { [FNC_UNKN]={0, ""}, [FNC_HBRM]={2, "harbour-master"}, [FNC_CSTM]={3, "custom"}, [FNC_HLTH]={4, "health"}, [FNC_HOSP]={5, "hospital"}, [FNC_POST]={6, "post_office"}, [FNC_HOTL]={7, "hotel"},
+s57val_t functn[] = { [FNC_UNKN]={0, ""}, [FNC_HBRM]={2, "harbour-master"}, [FNC_CSTM]={3, "customs"}, [FNC_HLTH]={4, "health"}, [FNC_HOSP]={5, "hospital"}, [FNC_POST]={6, "post_office"}, [FNC_HOTL]={7, "hotel"},
   [FNC_RAIL]={8, "railway_station"}, [FNC_POLC]={9, "police_station"}, [FNC_WPOL]={10, "water-police_station"}, [FNC_PILO]={11, "pilot_office"}, [FNC_PILL]={12, "pilot_lookout"}, [FNC_BANK]={13, "bank"},
   [FNC_DIST]={14, "district_control"}, [FNC_TRNS]={15, "transit_shed"}, [FNC_FCTY]={16, "factory"}, [FNC_POWR]={17, "power_station"}, [FNC_ADMIN]={18, "administrative"}, [FNC_EDUC]={19, "educational"},
   [FNC_CHCH]={20, "church"}, [FNC_CHPL]={21, "chapel"}, [FNC_TMPL]={22, "temple"}, [FNC_PGDA]={23, "pagoda"}, [FNC_SHSH]={24, "shinto_shrine"}, [FNC_BTMP]={25, "buddhist_temple"}, [FNC_MOSQ]={26, "mosque"},
