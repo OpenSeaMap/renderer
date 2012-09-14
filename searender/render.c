@@ -856,24 +856,24 @@ void drawLineSymbols(Item_t *item, char *symbol, double space) {
   Symb_t *params = lookupSymbol(symbol);
   if (params != NULL) {
     double size = params->height * symbolScale[zoom];
-    if (space == 0.0) size *= 0.9375;
+    if (space == 0.0) size *= 0.875;
     Ref_t *link = item->type.way.blink;
     if (link == NULL) return;
     XY_t last = {0,0};
     XY_t next = {lon2x(link->ref->type.node.lon), lat2y(link->ref->type.node.lat)};
     XY_t old = next;
     XY_t new = {0,0};
-    bool gap = false;
+    bool gap = (space > 0.0);
+    double len = gap ? size * space * 0.5 : size;
     bool piv = false;
     double angle = 0.0;
     double rem = 0.0;
-    double len = size;
     while (true) {
       if (rem > len) {
         if (piv) {
-          new.x = last.x + (len * cos(angle));
-          new.y = last.y + (len * sin(angle));
-          piv = false;
+          double flen = (space == 0.0) ? len / 0.9375 : len;
+          new.x = last.x + (flen * cos(angle));
+          new.y = last.y + (flen * sin(angle));
         } else {
           new.x = old.x + (len * cos(angle));
           new.y = old.y + (len * sin(angle));
@@ -882,6 +882,7 @@ void drawLineSymbols(Item_t *item, char *symbol, double space) {
           placeSymbol(old, TSSLPT, symbol, "", "", BC, 0, 0, r2d(atan2((new.y - old.y), (new.x - old.x)))+90);
         }
         if (space > 0.0) gap = !gap;
+        piv = false;
         old = new;
         len = gap ? (size * space): size;
         rem = sqrt(pow((next.x-new.x), 2) + pow((next.y-new.y), 2));
