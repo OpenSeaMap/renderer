@@ -79,6 +79,7 @@
 #define line(s) drawLine(item, s)
 #define line_symbols(s,g) drawLineSymbols(item, s, g)
 #define line_text(t,s,o,y,r) drawLineText(item, t, s, o, y, r)
+#define way_text(t,s,o,y,r) drawWayText(item, t, s, o, y, r)
 #define area(s) drawArea(item, s)
 #define text(t,s,x,y) drawText(item, t, s, x, y)
 

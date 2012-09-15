@@ -532,9 +532,9 @@ object_rules(areas) {
       if (strlen(string) > 0) {
         int ref = line("stroke:none;fill:none");
         if (ref != 0) {
-          line_text(item_attribute("name"), string, 0.5, 0, ref);
+          way_text(item_attribute("name"), string, 0.5, 0, ref);
           if (attribute_test("category", "shoal"))
-            line_text("(Shoal)", "font-family:Arial;font-weight:normal;font-size:100;text-anchor:middle", 0.5, 75, ref);
+            way_text("(Shoal)", "font-family:Arial;font-weight:normal;font-size:100;text-anchor:middle", 0.5, 75, ref);
         } else {
           text(item_attribute("name"), string, 0, 0);
           if (attribute_test("category", "shoal"))

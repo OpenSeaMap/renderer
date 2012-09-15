@@ -35,7 +35,8 @@ extern void renderFlare(Item_t*);
 
 extern int drawLine(Item_t*, char*);
 extern void drawLineSymbols(Item_t*, char*, double);
-extern int drawLineText(Item_t*, char*, char*, double, int, int);
+extern int drawLineText(Item_t*, char*, char*, double, double, int);
+extern int drawWayText(Item_t*, char*, char*, double, double, int);
 extern int drawArea(Item_t*, char*);
 extern int drawText(Item_t*, char*, char*, double, double);
 

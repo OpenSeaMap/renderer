@@ -903,7 +903,7 @@ int drawArea(Item_t *item, char *style) {
   return drawVector(item, style, 0);
 }
 
-int drawLineText(Item_t *item, char *text, char *style, double offset, int dy, int path) {
+int drawLineText(Item_t *item, char *text, char *style, double offset, double dy, int path) {
   printf("<text id=\"%d\" ", ++ref);
   scaleStyle(style);
   if (offset > 1.0)
@@ -913,17 +913,24 @@ int drawLineText(Item_t *item, char *text, char *style, double offset, int dy, i
   return ref;
 }
 
-int drawAreaText(Item_t *item, char *text, char *style) {
+int drawAreaText(Item_t *item, char *text, char *style, double dy) {
   if (item->flag == WAY) {
     XY_t coord = findCentroid(item);
     if ((coord.x > 0.0) || (coord.y > 0.0)) {
       printf("<text id=\"%d\" ", ++ref);
       scaleStyle(style);
-      printf("x=\"%f\" y=\"%f\">%s</text>\n", coord.x, coord.y, text);
+      printf("x=\"%f\" y=\"%f\">%s</text>\n", coord.x, coord.y + dy*symbolScale[zoom], text);
     }
     return ref;
   }
   return 0;
+}
+
+int drawWayText(Item_t *item, char *text, char *style, double offset, double dy, int path) {
+  if ((item->type.way.flink->ref != item->type.way.blink->ref) && (item->type.way.blink->blink != NULL))
+    return drawLineText(item, text, style, offset, dy, path);
+  else
+    return drawAreaText(item, text, style, dy);
 }
 
 int drawText(Item_t *item, char *text, char *style, double dx, double dy) {
@@ -946,7 +953,6 @@ int drawText(Item_t *item, char *text, char *style, double dx, double dy) {
   }
   return 0;
 }
-
 
 char *charString(Item_t *item, char *type, int idx) {
   strcpy(string1, "");
