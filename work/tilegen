@@ -82,7 +82,7 @@ while true; do
   	  if [ -e hold ]; then
     		echo "Holding..."
 			  while [ -e hold ]; do
-  				sleep 60
+  				sleep 10
   			done
   			echo "Resuming"
     		break
