@@ -34,7 +34,7 @@ extern void renderSector(Item_t*, int, char*, char*, double, int);
 extern void renderFlare(Item_t*);
 
 extern int drawLine(Item_t*, char*);
-extern void drawLineSymbols(Item_t*, char*, double);
+extern void drawLineSymbols(Item_t*, char*, double, char*, int);
 extern int drawLineText(Item_t*, char*, char*, double, double, int);
 extern int drawWayText(Item_t*, char*, char*, double, double, int);
 extern int drawArea(Item_t*, char*);
@@ -50,6 +50,10 @@ extern bool compareValues(Att_t*, char*);
 extern bool compareLiterals(char*, char*);
 extern char *charString(Item_t*, char*, int);
 extern Feature_t testFeature(Item_t*);
+
+bool testArea(Item_t*);
+bool testLine(Item_t*);
+bool testNode(Item_t*);
 
 extern Item_t *findItem(char*);
 extern Item_t *findNext();

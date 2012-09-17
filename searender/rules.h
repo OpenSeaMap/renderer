@@ -39,6 +39,9 @@
 #define object_count(x) (countObjects(item, x))
 #define this_type stringType(item->objs.obj)
 #define feature (testFeature(item))
+#define is_node (testNode(item))
+#define is_line (testLine(item))
+#define is_area (testArea(item))
 
 #define has_attribute(x) (compareAttributes(obj, x))
 #define has_item_attribute(x) (compareAttributes(&item->objs, x))
@@ -77,7 +80,7 @@
 #define free_string free(string); }
 
 #define line(s) drawLine(item, s)
-#define line_symbols(s,g) drawLineSymbols(item, s, g)
+#define line_symbols(s,g,ss,n) drawLineSymbols(item, s, g, ss, n)
 #define line_text(t,s,o,y,r) drawLineText(item, t, s, o, y, r)
 #define way_text(t,s,o,y,r) drawWayText(item, t, s, o, y, r)
 #define area(s) drawArea(item, s)

@@ -316,7 +316,7 @@ object_rules(separation) {
   } else if (is_type("separation_line")) {
     line("stroke-width:20; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
   } else if (is_type("separation_lane")) {
-    line_symbols("lane_arrow", 0.5);
+    line_symbols("lane_arrow", 0.5, NULL, 0);
   } else if (is_type("separation_boundary")) {
     line("stroke-width: 20; stroke-dasharray:40,40; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
   }
@@ -491,7 +491,10 @@ object_rules(ports) {
 }
 
 object_rules(harbours) {
-  if (is_type("anchorage")) symbol("anchorage");
+  if (is_type("anchorage")) {
+    symbol("anchorage");
+    if (is_area) line_symbols("restricted_line", 0.5, "line_anchor", 10);
+  }
   if ((zoom >= 16) && is_type("anchor_berth")) symbol("anchor_berth");
   if ((zoom >= 12) && is_type("harbour") && attribute_test("category", "marina|yacht")) {
     symbol("marina");
@@ -511,7 +514,7 @@ object_rules(areas) {
     if ((zoom >= 12) && has_item_attribute("name"))
       text(item_attribute("name"), "font-family:Arial;font-weight:normal;font-size:100;text-anchor:middle", 0, 0);
   }
-  if (is_type("restricted_area")) line_symbols("restricted_line", 1.0);
+  if (is_type("restricted_area")) line_symbols("restricted_line", 1.0, NULL, 0);
   if (is_type("production_area")) {
     if (attribute_test("category", "wind_farm")) {
       symbol("wind_farm");
@@ -554,11 +557,11 @@ object_rules(waterways) {
 }
 
 object_rules(pipelines) {
-  line_symbols("pipeline", 1.0);
+  line_symbols("pipeline", 1.0, NULL, 0);
 }
 
 object_rules(cables) {
-  line_symbols("cable", 0.0);
+  line_symbols("cable", 0.0, NULL, 0);
 }
 
 rules {

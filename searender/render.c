@@ -137,6 +137,18 @@ double lat2y(double lat) {
   return (((1.0 - log(tan(lat * M_PI/180.0) + 1.0 / cos(lat * M_PI/180.0)) / M_PI) / 2.0 * 256.0 * 4096.0) - top);
 }
 
+bool testArea(Item_t *item) {
+  return ((item->flag == WAY) && (item->type.way.flink->ref == item->type.way.blink->ref));
+}
+
+bool testLine(Item_t *item) {
+  return ((item->flag == WAY) && (item->type.way.flink->ref != item->type.way.blink->ref));
+}
+
+bool testNode(Item_t *item) {
+  return (item->flag == NODE);
+}
+
 XY_t radial(XY_t centre, double radius, double angle) {
   XY_t position;
   position.x = centre.x - (radius * mile * sin(d2r(angle)));
@@ -851,12 +863,12 @@ int drawLine(Item_t *item, char *style) {
   return drawVector(item, style, sx < 0.0 ? -1 : +1);
 }
 
-void drawLineSymbols(Item_t *item, char *symbol, double space) {
+void drawLineSymbols(Item_t *item, char *prisymb, double space, char *secsymb, int ratio) {
   if (item->flag != WAY) return;
-  Symb_t *params = lookupSymbol(symbol);
-  if (params != NULL) {
-    double size = params->height * symbolScale[zoom];
-    if (space == 0.0) size *= 0.875;
+  Symb_t *pparams = lookupSymbol(prisymb);
+  Symb_t *sparams = lookupSymbol(secsymb);
+  if (sparams == NULL) ratio = 0;
+  if (pparams != NULL) {
     Ref_t *link = item->type.way.blink;
     if (link == NULL) return;
     XY_t last = {0,0};
@@ -864,10 +876,15 @@ void drawLineSymbols(Item_t *item, char *symbol, double space) {
     XY_t old = next;
     XY_t new = {0,0};
     bool gap = (space > 0.0);
-    double len = gap ? size * space * 0.5 : size;
     bool piv = false;
     double angle = 0.0;
     double rem = 0.0;
+    int scount = ratio;
+    char *symbol = prisymb;
+    double psize = pparams->height * symbolScale[zoom];
+    double ssize = (sparams != NULL) ? sparams->height * symbolScale[zoom] : 0.0;
+    if (space == 0.0) psize *= 0.875;
+    double len = gap ? psize * space * 0.5 : psize;
     while (true) {
       if (rem > len) {
         if (piv) {
@@ -884,7 +901,13 @@ void drawLineSymbols(Item_t *item, char *symbol, double space) {
         if (space > 0.0) gap = !gap;
         piv = false;
         old = new;
-        len = gap ? (size * space): size;
+        len = gap ? (psize * space): (--scount == 0) ? ssize : psize;
+        if (scount == 0) {
+          symbol = secsymb;
+          scount = ratio;
+        } else {
+          symbol = prisymb;
+        }
         rem = sqrt(pow((next.x-new.x), 2) + pow((next.y-new.y), 2));
       } else {
         len -=rem;
