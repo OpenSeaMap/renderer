@@ -493,7 +493,7 @@ object_rules(ports) {
 object_rules(harbours) {
   if (is_type("anchorage")) {
     symbol("anchorage");
-    if (is_area) line_symbols("restricted_line", 0.5, "line_anchor", 10);
+    if ((zoom >= 12) && (is_area)) line_symbols("restricted_line", 0.5, "line_anchor", 10);
   }
   if ((zoom >= 16) && is_type("anchor_berth")) symbol("anchor_berth");
   if ((zoom >= 12) && is_type("harbour") && attribute_test("category", "marina|yacht")) {
