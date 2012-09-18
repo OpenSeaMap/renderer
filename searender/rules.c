@@ -559,11 +559,11 @@ object_rules(waterways) {
 }
 
 object_rules(pipelines) {
-  line_symbols("pipeline", 1.0, NULL, 0);
+  if (zoom >= 12) line_symbols("pipeline", 1.0, NULL, 0);
 }
 
 object_rules(cables) {
-  line_symbols("cable", 0.0, NULL, 0);
+  if (zoom >= 12) line_symbols("cable", 0.0, NULL, 0);
 }
 
 rules {
