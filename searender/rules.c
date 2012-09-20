@@ -499,8 +499,9 @@ object_rules(harbours) {
     if ((zoom >= 12) && (is_area)) line_symbols("restricted_line", 0.5, "line_anchor", 10);
   }
   if ((zoom >= 16) && is_type("anchor_berth")) symbol("anchor_berth");
-  if ((zoom >= 12) && is_type("harbour") && attribute_test("category", "marina|yacht")) {
-    symbol("marina");
+  if ((zoom >= 12) && is_type("harbour")) {
+    if (attribute_test("category", "marina|yacht")) symbol("marina");
+    else symbol("harbour");
     if ((zoom >= 15) && (has_item_attribute("name")))
       text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -90);
   }
