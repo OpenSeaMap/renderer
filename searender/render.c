@@ -241,32 +241,32 @@ Feature_t testFeature(Item_t *item) {
 XY_t findCentroid(Item_t *item) {
   XY_t coord;
   if (item->flag == WAY) {
-    double sx = 0.0;
-    double sy = 0.0;
-    double sd = 0.0;
-    double lx = 0.0;
-    double ly = 0.0;
+    double slon = 0.0;
+    double slat = 0.0;
+    double sarc = 0.0;
+    double llon = 0.0;
+    double llat = 0.0;
     if ((item->type.way.flink->ref != item->type.way.blink->ref) && (item->type.way.blink->blink != NULL)) {
-      lx = lon2x(item->type.way.blink->blink->ref->type.node.lon);
-      ly = lat2y(item->type.way.blink->blink->ref->type.node.lat);
+      llon = item->type.way.blink->blink->ref->type.node.lon;
+      llat = item->type.way.blink->blink->ref->type.node.lat;
     } else {
-      lx = lon2x(item->type.way.blink->ref->type.node.lon);
-      ly = lat2y(item->type.way.blink->ref->type.node.lat);
+      llon = item->type.way.blink->ref->type.node.lon;
+      llat = item->type.way.blink->ref->type.node.lat;
     }
     Ref_t *link = item->type.way.blink;
     while (link != NULL) {
-      double x = lon2x(link->ref->type.node.lon);
-      double y = lat2y(link->ref->type.node.lat);
-      double d = sqrt(pow((x-lx), 2) + pow((y-ly), 2));
-      sx += (x * d);
-      sy += (y * d);
-      sd += d;
-      lx = x;
-      ly = y;
+      double lon = link->ref->type.node.lon;
+      double lat = link->ref->type.node.lat;
+      double arc = sqrt(pow((lon-llon), 2) + pow((lat-llat), 2));
+      slon += (lon * arc);
+      slat += (lat * arc);
+      sarc += arc;
+      llon = lon;
+      llat = lat;
       link = link->blink;
     }
-    coord.x = sd > 0.0 ? sx/sd : 0.0;
-    coord.y = sd > 0.0 ? sy/sd : 0.0;
+    coord.x = lon2x(sarc > 0.0 ? slon/sarc : 0.0);
+    coord.y = lat2y(sarc > 0.0 ? slat/sarc : 0.0);
   } else {
     coord.x = lon2x(item->type.node.lon);
     coord.y = lat2y(item->type.node.lat);
