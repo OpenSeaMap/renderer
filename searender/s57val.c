@@ -34,7 +34,7 @@ s57val_t buishp[] = { {1, "non-specific"}, {2, "tower"}, {3, "spire"}, {4, "cupo
 s57val_t boyshp[] = { [BOY_UNKN]={0, ""}, [BOY_CONE]={1, "conical"}, [BOY_CAN]={2, "can"}, [BOY_SPHR]={3, "spherical"}, [BOY_PILR]={4, "pillar"}, [BOY_SPAR]={5, "spar"}, [BOY_BARL]={6, "barrel"},
   [BOY_SUPR]={7, "super-buoy"}, [BOY_ICE]={8, "ice_buoy"}, {0, NULL} };
 s57val_t catair[] = { {1, "military"}, {2, "civil"}, {3, "military_heliport"}, {4, "civil_heliport"}, {5, "glider"}, {6, "small_planes"}, {8, "emergency"}, {0, NULL} };
-s57val_t catach[] = { {1, "unrestricted"}, {2, "deep_water"}, {3, "tanker"}, {4, "explosives"}, {5, "quarantine"}, {6, "sea-plane"}, {7, "small_craft"}, {8, "small_craft_mooring"},
+s57val_t catach[] = { {1, "unrestricted"}, {2, "deep_water"}, {3, "tanker"}, {4, "explosives"}, {5, "quarantine"}, {6, "seaplane"}, {7, "small_craft"}, {8, "small_craft_mooring"},
   {9, "24_hour"}, {10, "limited_period"}, {0, NULL} };
 s57val_t catbrg[] = { {1, "fixed"}, {2, "opening"}, {3, "swing"}, {4, "lifting"}, {5, "bascule"}, {6, "pontoon"}, {7, "draw"}, {8, "transporter"}, {9, "footbridge"}, {10, "viaduct"},
   {11, "aqueduct"}, {12, "suspension"}, {0, NULL} };
@@ -187,7 +187,7 @@ s57val_t cat_ts[] = { {1, "flood"}, {2, "ebb"}, {3, "other"}, {0, NULL} };
 s57val_t punits[] = { {1, "metres"}, {2, "degrees"}, {3, "millimetres"}, {4, "feet"}, {5, "cables"}, {0, NULL} };
 s57val_t quapos[] = { {1, "surveyed"}, {2, "unsurveyed"}, {3, "part-surveyed"}, {4, "approximate"}, {5, "doubtful"}, {6, "unreliable"}, {7, "reported_unsurveyd"}, {8, "unconfirmed"}, {9, "estimated"},
   {10, "precise"}, {11, "calculated"}, {0, NULL} };
-s57val_t catachi[] = { {1, "unrestricted"}, {2, "deep-water"}, {3, "tanker"}, {4, "explosives"}, {5, "quarantine"}, {6, "sea-plane"}, {7, "small_craft"}, {9, "24_hours"}, {10, "pushing-navigation_vessels"},
+s57val_t catachi[] = { {1, "unrestricted"}, {2, "deep-water"}, {3, "tanker"}, {4, "explosives"}, {5, "quarantine"}, {6, "seaplane"}, {7, "small_craft"}, {9, "24_hours"}, {10, "pushing-navigation_vessels"},
   {11, "non-pushing-navigation_vessels"}, {0, NULL} };
 s57val_t verdat[] = { {1, "mlws"}, {2, "mllws"}, {3, "msl"}, {4, "llw"}, {5, "mlw"}, {6, "llws"}, {7, "amlws"}, {8, "islw"}, {9, "lws"}, {10, "alat"},  {11, "nllw"}, {12, "mllw"}, {13, "lw"}, {14, "amlw"}, {15, "amllw"},
   {16, "mhw"}, {17, "mhws"}, {18, "hw"}, {19, "amsl"}, {20, "hws"}, {21, "mhhw"}, {22, "eslw"}, {23, "lat"}, {24, "local"}, {25, "igld1985"}, {26, "mlw"}, {27, "llwlt"}, {28, "hhwlt"}, {29, "nhhw"}, {30, "hat"},

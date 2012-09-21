@@ -508,6 +508,12 @@ object_rules(harbours) {
 }
 
 object_rules(areas) {
+  if (is_type("seaplane_landing_area")) {
+    symbol("seaplane");
+    if ((zoom >= 15) && (has_item_attribute("name")))
+      text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -90);
+    if ((zoom >= 12) && (is_area)) line_symbols("restricted_line", 0.5, "line_plane", 10);
+  }
   if (is_type("fairway")) {
     if (zoom < 16) area("stroke:#c480ff;stroke-width:8;stroke-dasharray:50,50;fill:#ffffff;fill-opacity:0.25");
     else area("stroke:#c480ff;stroke-width:8;stroke-dasharray:50,50;fill:none");
@@ -584,6 +590,7 @@ rules {
   type("fairway") object(areas);
   type("dredged_area") object(areas);
   type("restricted_area") object(areas);
+  type("seaplane_landing_area") object(areas);
   type("sea_area") object(areas);
   type("waterway_axis") object(waterways);
 
