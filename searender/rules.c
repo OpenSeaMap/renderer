@@ -577,8 +577,8 @@ object_rules(cables) {
 rules {
   
   type("shoreline_construction") object(shoreline);
-  type("pipeline_submarine") object(pipelines);
-  type("cable_submarine") object(cables);
+//  type("pipeline_submarine") object(pipelines);
+//  type("cable_submarine") object(cables);
   type("separation_zone") object(separation);
   type("separation_crossing") object(separation);
   type("separation_roundabout") object(separation);
