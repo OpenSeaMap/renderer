@@ -1,24 +1,5 @@
 #!/bin/bash
 
-check () {
-  zoom[$1]=$(($1+1))
-  x[$1]=$(($2*2))
-  y[$1]=$(($3*2))
-  for ((i[$1]=0; ${i[$1]}<2; i[$1]=${i[$1]}+1)); do
-    for ((j[$1]=0; ${j[$1]}<2; j[$1]=${j[$1]}+1)); do
-      xc=$((${x[$1]}+${i[$1]}))
-      yc=$((${y[$1]}+${j[$1]}))
-      if [ -e tiles/${zoom[$1]}/$xc/$yc.png ]; then
-        clean=1
-        break 2
-      fi
-      if [ ${zoom[$1]} -lt 16 ]; then
-        check ${zoom[$1]} $xc $yc
-      fi
-    done
-  done
-}
-
 search () {
   zoom[$1]=$(($1+1))
   x[$1]=$(($2*2))
@@ -50,33 +31,19 @@ search () {
         if [ ${zoom[$1]} -lt 12 ]; then
           if [ ${zoom[$1]} -eq 9 ]; then
             bb9=$bb; tx9=$tx; ty9=$ty
-            if [ -e tiles/9/$tx9/$ty9.png ]; then
-              ../searender/searender ../searender/symbols/symbols.defs 9 $bb9 >tmp/panel.svg <tmp/panel-z9.osm
-	            inkscape tmp/panel.svg -e tmp/tiles-9-$tx9-$ty9.png -d 11.25 -a 256:256:2304:2304 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
-	          fi
           fi
           if [ ${zoom[$1]} -eq 10 ]; then
             bb10=$bb; tx10=$tx; ty10=$ty
-            if [ -e tiles/10/$tx10/$ty10.png ]; then
-              ../searender/searender ../searender/symbols/symbols.defs 10 $bb10 >tmp/panel.svg <tmp/panel-z10.osm
-              inkscape tmp/panel.svg -e tmp/tiles-10-$tx10-$ty10.png -d 22.5 -a 256:256:1280:1280 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
-            fi
           fi
           if [ ${zoom[$1]} -eq 11 ]; then
             bb11=$bb; tx11=$tx; ty11=$ty
-            if [ -e tiles/11/$tx11/$ty11.png ]; then
-              ../searender/searender ../searender/symbols/symbols.defs 11 $bb11 >tmp/panel.svg <tmp/panel-z11.osm
-              inkscape tmp/panel.svg -e tmp/tiles-11-$tx11-$ty11.png -d 45 -a 256:256:768:768 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
-            fi
           fi
           search ${zoom[$1]} $tx $ty
         else
           ../searender/searender ../searender/symbols/symbols.defs 19 $bb >tmp/rrpanel.svg <tmp/rrpanel-z12.osm
           inkscape tmp/rrpanel.svg -e tmp/rrpanel.png -d 90 -a 256:256:512:512 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
-          clean=0
-          check 12 $tx $ty
           if [ -e tmp/rrpanel.png ]; then
-            if [ -e tiles/12/$tx/$ty.png -o $clean -ne 0 -o $(stat tmp/rrpanel.png | cut -f 8 -d' ') -ge 410 ]; then
+            if [ $(stat tmp/rrpanel.png | cut -f 8 -d' ') -ge 410 ]; then
 			        if [ ! -e tmp/tiles-9-$tx9-$ty9.png ]; then
 	              ../searender/searender ../searender/symbols/symbols.defs 9 $bb9 >tmp/rrpanel.svg <tmp/rrpanel-z9.osm
 	  		        inkscape tmp/rrpanel.svg -e tmp/tiles-9-$tx9-$ty9.png -d 11.25 -a 256:256:2304:2304 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
