@@ -19,11 +19,6 @@ check () {
   done
 }
 
-        else
-          ../searender/searender ../searender/symbols/symbols.defs 19 $bb >tmp/panel.svg <tmp/panel-z12.osm
-          inkscape tmp/panel.svg -e tmp/panel.png -d 90 -a 256:256:512:512 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
-          if [ -e tmp/panel.png ]; then
-
 search () {
   zoom[$1]=$(($1+1))
   x[$1]=$(($2*2))
