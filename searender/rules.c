@@ -515,8 +515,12 @@ object_rules(areas) {
     if ((zoom >= 12) && (is_area)) line_symbols("restricted_line", 0.5, "line_plane", 10);
   }
   if (is_type("fairway")) {
-    if (zoom < 16) area("stroke:#c480ff;stroke-width:8;stroke-dasharray:50,50;fill:#ffffff;fill-opacity:0.25");
-    else area("stroke:#c480ff;stroke-width:8;stroke-dasharray:50,50;fill:none");
+    if (extent > 2.0) {
+      if (zoom < 16) area("stroke:#c480ff;stroke-width:8;stroke-dasharray:50,50;fill:#ffffff;fill-opacity:0.25");
+      else area("stroke:#c480ff;stroke-width:8;stroke-dasharray:50,50;fill:none");
+    } else {
+      if (zoom >= 14) area("stroke:none;fill:#ffffff;fill-opacity:0.25");
+    }
   }
   if (is_type("dredged_area")) {
     if (zoom < 16 ) area("stroke:#000000;stroke-width:10;stroke-dasharray:50,50;fill:#ffffff;fill-opacity:0.25");
@@ -567,18 +571,30 @@ object_rules(waterways) {
 }
 
 object_rules(pipelines) {
-  if (zoom >= 12) line_symbols("pipeline", 1.0, NULL, 0);
+  if (is_type("pipeline_submarine") && (zoom >= 14)) line_symbols("pipeline", 1.0, NULL, 0);
+  if (is_type("pipeline_overhead") && (zoom >= 14)) {
+//   line_symbols("pipeline", 1.0, NULL, 0);
+  }
 }
 
 object_rules(cables) {
-  if (zoom >= 12) line_symbols("cable", 0.0, NULL, 0);
+  if (is_type("cable_submarine") && (zoom >= 14)) line_symbols("cable", 0.0, NULL, 0);
+  if (is_type("cable_overhead") && (zoom >= 14)) {
+    if (attribute_test("category", "power|transmission")) {
+    } else {
+      
+    }
+//   line_symbols("cable", 0.0, NULL, 0);
+  }
 }
 
 rules {
   
   type("shoreline_construction") object(shoreline);
-//  type("pipeline_submarine") object(pipelines);
-//  type("cable_submarine") object(cables);
+  //  type("pipeline_submarine") object(pipelines);
+  //  type("cable_submarine") object(cables);
+  type("pipeline_overhead") object(pipelines);
+  type("cable_overhead") object(cables);
   type("separation_zone") object(separation);
   type("separation_crossing") object(separation);
   type("separation_roundabout") object(separation);

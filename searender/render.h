@@ -50,6 +50,7 @@ extern bool compareValues(Att_t*, char*);
 extern bool compareLiterals(char*, char*);
 extern char *charString(Item_t*, char*, int);
 extern Feature_t testFeature(Item_t*);
+extern double calcArea(Item_t*);
 
 bool testArea(Item_t*);
 bool testLine(Item_t*);

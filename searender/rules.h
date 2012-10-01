@@ -42,6 +42,7 @@
 #define is_node (testNode(item))
 #define is_line (testLine(item))
 #define is_area (testArea(item))
+#define extent (calcArea(item))
 
 #define has_attribute(x) (compareAttributes(obj, x))
 #define has_item_attribute(x) (compareAttributes(&item->objs, x))

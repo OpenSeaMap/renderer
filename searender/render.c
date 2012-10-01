@@ -229,13 +229,30 @@ Symb_t *lookupSymbol(char *symbol) {
 
 Feature_t testFeature(Item_t *item) {
   if (item->flag == WAY) {
-    if ((item->type.way.flink->ref != item->type.way.blink->ref) && (item->type.way.blink->blink != NULL)) {
-      return LINE;
-    } else {
+    if (item->type.way.flink->ref == item->type.way.blink->ref) {
       return AREA;
+    } else {
+      return LINE;
     }
   }
   return POINT;
+}
+
+double calcArea(Item_t *item) {
+  if (testFeature(item) == AREA) {
+    double llon = item->type.way.flink->ref->type.node.lon;
+    double llat = item->type.way.flink->ref->type.node.lat;
+    Ref_t *link = item->type.way.flink->flink;
+    double area = 0.0;
+    while (link != NULL) {
+      area += ((lon2x(llon) * lat2y(link->ref->type.node.lat)) - (lat2y(llat) * lon2x(link->ref->type.node.lon)));
+      llon = link->ref->type.node.lon;
+      llat = link->ref->type.node.lat;
+      link = link->flink;
+    }
+    return fabs(area) / 2.0 / mile / mile;
+  }
+  return 0.0;
 }
 
 XY_t findCentroid(Item_t *item) {
@@ -381,6 +398,7 @@ void renderCluster(Item_t *item, char *type) {
       break;
     case BRIDGE: {
       Att_t *attv = getAtt(getObj(item, BRIDGE, 0), VERCLR);
+      if (attv == NULL) attv = getAtt(getObj(item, BRIDGE, 0), VERCSA);
       Att_t *attc = getAtt(getObj(item, BRIDGE, 0), VERCCL);
       Att_t *atto = getAtt(getObj(item, BRIDGE, 0), VERCOP);
       if (attv != NULL) {
