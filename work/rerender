@@ -7,67 +7,74 @@ search () {
   z[$1]=$((2**${zoom[$1]}))
   for ((i[$1]=0; ${i[$1]}<2; i[$1]=${i[$1]}+1)); do
     for ((j[$1]=0; ${j[$1]}<2; j[$1]=${j[$1]}+1)); do
-      os=$(echo "scale=10; ${z[$1]}/4096" | bc)
-      tile=$(echo "scale=10; (${x[$1]}+${i[$1]}-$os)" | bc)
-      tile=$(echo "scale=10; if ($tile < 0) $tile+${z[$1]} else $tile" | bc)
-      minlon=$(echo "scale=10; (($tile/${z[$1]})*360)-180" | bc)
-      tile=$(echo "scale=10; (${x[$1]}+${i[$1]}+1+$os)" | bc)
-      tile=$(echo "scale=10; if ($tile >= ${z[$1]}) $tile-${z[$1]} else $tile" | bc)
-      maxlon=$(echo "scale=10; (($tile/${z[$1]})*360)-180" | bc)
-      tile=$(echo "scale=10; (${y[$1]}+${j[$1]}-$os)" | bc -l)
-      tile=$(echo "scale=10; if ($tile < 0) 0 else $tile" | bc)
-      yx=$(echo "scale=10; 4*a(1)*(1-((2*$tile)/${z[$1]}))" | bc -l)
-      maxlat=$(echo "scale=10; ((a((e($yx)-(1/e($yx)))/2))*180)/(4*a(1))" | bc -l)
-      tile=$(echo "scale=10; (${y[$1]}+${j[$1]}+1+$os)" | bc -l)
-      tile=$(echo "scale=10; if ($tile >= ${z[$1]}) ${z[$1]}-1 else $tile" | bc)
-      yx=$(echo "scale=10; 4*a(1)*(1-((2*$tile)/${z[$1]}))" | bc -l)
-      minlat=$(echo "scale=10; ((a((e($yx)-(1/e($yx)))/2))*180)/(4*a(1))" | bc -l)
-			if [ $minlat = 0 ]; then minlat=-85.0; fi
-      osmosis -q --rx file=tmp/panel-z0.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=tmp/rrpanel-z${zoom[$1]}.osm 2> /dev/null
-      if [ $(grep -c seamark tmp/rrpanel-z${zoom[$1]}.osm) -ne 0 ]; then
+      if [ ${zoom[$1]} -ge 9 ]; then
+        os=$(echo "scale=10; ${z[$1]}/4096" | bc)
+        tile=$(echo "scale=10; (${x[$1]}+${i[$1]}-$os)" | bc)
+        tile=$(echo "scale=10; if ($tile < 0) $tile+${z[$1]} else $tile" | bc)
+        minlon=$(echo "scale=10; (($tile/${z[$1]})*360)-180" | bc)
+        tile=$(echo "scale=10; (${x[$1]}+${i[$1]}+1+$os)" | bc)
+        tile=$(echo "scale=10; if ($tile >= ${z[$1]}) $tile-${z[$1]} else $tile" | bc)
+        maxlon=$(echo "scale=10; (($tile/${z[$1]})*360)-180" | bc)
+        tile=$(echo "scale=10; (${y[$1]}+${j[$1]}-$os)" | bc -l)
+        tile=$(echo "scale=10; if ($tile < 0) 0 else $tile" | bc)
+        yx=$(echo "scale=10; 4*a(1)*(1-((2*$tile)/${z[$1]}))" | bc -l)
+        maxlat=$(echo "scale=10; ((a((e($yx)-(1/e($yx)))/2))*180)/(4*a(1))" | bc -l)
+        tile=$(echo "scale=10; (${y[$1]}+${j[$1]}+1+$os)" | bc -l)
+        tile=$(echo "scale=10; if ($tile >= ${z[$1]}) ${z[$1]}-1 else $tile" | bc)
+        yx=$(echo "scale=10; 4*a(1)*(1-((2*$tile)/${z[$1]}))" | bc -l)
+        minlat=$(echo "scale=10; ((a((e($yx)-(1/e($yx)))/2))*180)/(4*a(1))" | bc -l)
+			  if [ $minlat = 0 ]; then minlat=-85.0; fi
+        osmosis -q --rx file=tmp/panel-z0.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=tmp/rrpanel-z${zoom[$1]}.osm 2> /dev/null
         bb="$minlat,$minlon,$maxlat,$maxlon"
         tx=$((${x[$1]}+${i[$1]}))
         ty=$((${y[$1]}+${j[$1]}))
         if [ ${zoom[$1]} -lt 12 ]; then
           if [ ${zoom[$1]} -eq 9 ]; then
-            bb9=$bb; tx9=$tx; ty9=$ty
+            if [ -e tiles/9/$tx/$ty.png -o $(grep -c seamark tmp/rrpanel-z9.osm) -ne 0 ]; then
+              ../searender/searender ../searender/symbols/symbols.defs 9 $bb >tmp/rrpanel.svg <tmp/rrpanel-z9.osm
+	    		    inkscape tmp/rrpanel.svg -e tmp/tiles-9-$tx-$ty.png -d 11.25 -a 256:256:2304:2304 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
+  					fi
           fi
           if [ ${zoom[$1]} -eq 10 ]; then
-            bb10=$bb; tx10=$tx; ty10=$ty
+			      if [ -e tiles/10/$tx/$ty.png -o $(grep -c seamark tmp/rrpanel-z10.osm) -ne 0 ]; then
+              ../searender/searender ../searender/symbols/symbols.defs 10 $bb >tmp/rrpanel.svg <tmp/rrpanel-z10.osm
+              inkscape tmp/rrpanel.svg -e tmp/tiles-10-$tx-$ty.png -d 22.5 -a 256:256:1280:1280 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
+			      fi
           fi
           if [ ${zoom[$1]} -eq 11 ]; then
-            bb11=$bb; tx11=$tx; ty11=$ty
+			      if [ ! -e tiles/11/$tx/$ty.png -o $(grep -c seamark tmp/rrpanel-z11.osm) -ne 0 ]; then
+ 	            ../searender/searender ../searender/symbols/symbols.defs 11 $bb >tmp/rrpanel.svg <tmp/rrpanel-z11.osm
+  	          inkscape tmp/rrpanel.svg -e tmp/tiles-11-$tx-$ty.png -d 45 -a 256:256:768:768 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
+			      fi
           fi
           search ${zoom[$1]} $tx $ty
-        else
-          ../searender/searender ../searender/symbols/symbols.defs 19 $bb >tmp/rrpanel.svg <tmp/rrpanel-z12.osm
-          inkscape tmp/rrpanel.svg -e tmp/rrpanel.png -d 90 -a 256:256:512:512 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
-          if [ -e tmp/rrpanel.png ]; then
-            if [ $(stat tmp/rrpanel.png | cut -f 8 -d' ') -ge 410 ]; then
-			        if [ ! -e tmp/tiles-9-$tx9-$ty9.png ]; then
-	              ../searender/searender ../searender/symbols/symbols.defs 9 $bb9 >tmp/rrpanel.svg <tmp/rrpanel-z9.osm
-	  		        inkscape tmp/rrpanel.svg -e tmp/tiles-9-$tx9-$ty9.png -d 11.25 -a 256:256:2304:2304 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
-					    fi
-					    if [ ! -e tmp/tiles-10-$tx10-$ty10.png ]; then
-	              ../searender/searender ../searender/symbols/symbols.defs 10 $bb10 >tmp/rrpanel.svg <tmp/rrpanel-z10.osm
- 			          inkscape tmp/rrpanel.svg -e tmp/tiles-10-$tx10-$ty10.png -d 22.5 -a 256:256:1280:1280 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
-					    fi
-					    if [ ! -e tmp/tiles-11-$tx11-$ty11.png ]; then
-    	          ../searender/searender ../searender/symbols/symbols.defs 11 $bb11 >tmp/rrpanel.svg <tmp/rrpanel-z11.osm
- 		  	        inkscape tmp/rrpanel.svg -e tmp/tiles-11-$tx11-$ty11.png -d 45 -a 256:256:768:768 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
-					    fi
-					    while [ $(ls tmp/ | grep -c _12.osm) -ne 0 ]; do
-					      sleep 60
-					    done
-              cp tmp/rrpanel-z12.osm tmp/$tx\_$ty\_$bb\_12.osm
-            fi
-          fi
+#        else
+#          if [ $(grep -c seamark tmp/rrpanel-z${zoom[$1]}.osm) -ne 0 ]; then
+#            ../searender/searender ../searender/symbols/symbols.defs 19 $bb >tmp/rrpanel.svg <tmp/rrpanel-z12.osm
+#            inkscape tmp/rrpanel.svg -e tmp/rrpanel.png -d 90 -a 256:256:512:512 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
+#            if [ -e tmp/rrpanel.png ]; then
+#              if [ $(stat tmp/rrpanel.png | cut -f 8 -d' ') -ge 410 ]; then
+#					      while [ $(ls tmp/ | grep -c _12.osm) -ne 0 ]; do
+#					        sleep 60
+#					      done
+#                cp tmp/rrpanel-z12.osm tmp/$tx\_$ty\_$bb\_12.osm
+#              fi
+#            fi
+#          fi
         fi
+      else
+        search ${zoom[$1]} $tx $ty
       fi
     done
   done
 }
 
-while true; do
-	search 0 0 0
-done
+if [ $# -eq 0 ]; then
+  while true; do
+	  search 0 0 0
+  done
+else
+  if [ $# -eq 3 ]; then
+    search $1 $2 $3
+  fi
+fi
