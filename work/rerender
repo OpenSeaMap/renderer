@@ -26,6 +26,8 @@ search () {
   z[$1]=$((2**${zoom[$1]}))
   for ((i[$1]=0; ${i[$1]}<2; i[$1]=${i[$1]}+1)); do
     for ((j[$1]=0; ${j[$1]}<2; j[$1]=${j[$1]}+1)); do
+      tx=$((${x[$1]}+${i[$1]}))
+      ty=$((${y[$1]}+${j[$1]}))
       if [ ${zoom[$1]} -ge 9 ]; then
         os=$(echo "scale=10; ${z[$1]}/4096" | bc)
         tile=$(echo "scale=10; (${x[$1]}+${i[$1]}-$os)" | bc)
@@ -45,8 +47,6 @@ search () {
 			  if [ $minlat = 0 ]; then minlat=-85.0; fi
         osmosis -q --rx file=tmp/panel-z0.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=tmp/rrpanel-z${zoom[$1]}.osm 2> /dev/null
         bb="$minlat,$minlon,$maxlat,$maxlon"
-        tx=$((${x[$1]}+${i[$1]}))
-        ty=$((${y[$1]}+${j[$1]}))
         if [ ${zoom[$1]} -lt 12 ]; then
           if [ ${zoom[$1]} -eq 9 ]; then
             if [ -e tiles/9/$tx/$ty.png -o $(grep -c seamark tmp/rrpanel-z9.osm) -ne 0 ]; then
