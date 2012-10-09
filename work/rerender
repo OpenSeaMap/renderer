@@ -72,7 +72,7 @@ search () {
           check 12 $tx $ty
           if [ -e tiles/12/$tx/$ty.png -o $clean -ne 0 -o $(grep -c seamark tmp/rrpanel-z12.osm) -ne 0 ]; then
 			      while [ $(ls tmp/ | grep -c _12.osm) -ne 0 ]; do
-			        sleep 60
+			        sleep 20
 			      done
             cp tmp/rrpanel-z12.osm tmp/$tx\_$ty\_$bb\_12.osm
           fi
