@@ -61,7 +61,7 @@ search () {
 			      fi
           fi
           if [ ${zoom[$1]} -eq 11 ]; then
-			      if [ ! -e tiles/11/$tx/$ty.png -o $(grep -c seamark tmp/rrpanel-z11.osm) -ne 0 ]; then
+			      if [ -e tiles/11/$tx/$ty.png -o $(grep -c seamark tmp/rrpanel-z11.osm) -ne 0 ]; then
  	            ../searender/searender ../searender/symbols/symbols.defs 11 $bb >tmp/rrpanel.svg <tmp/rrpanel-z11.osm
   	          inkscape tmp/rrpanel.svg -e tmp/tiles-11-$tx-$ty.png -d 45 -a 256:256:768:768 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
 			      fi
@@ -70,7 +70,7 @@ search () {
         else
           clean=0
           check 12 $tx $ty
-          if [ -e tiles/12/$tx/$ty.png -o $clean -ne 0 -o $(grep -c seamark tmp/rrpanel-z${zoom[$1]}.osm) -ne 0 ]; then
+          if [ -e tiles/12/$tx/$ty.png -o $clean -ne 0 -o $(grep -c seamark tmp/rrpanel-z12.osm) -ne 0 ]; then
 			      while [ $(ls tmp/ | grep -c _12.osm) -ne 0 ]; do
 			        sleep 60
 			      done
