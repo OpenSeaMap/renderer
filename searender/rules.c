@@ -411,7 +411,7 @@ object_rules(landmarks) {
     attribute_default symbol(attribute("function"));
     end_switch
   }
-  if ((zoom >= 12) && (has_attribute("category"))) {
+  if (((zoom >= 12) || (has_object("light"))) && (has_attribute("category"))) {
     attribute_switch("category")
     attribute_case("statue|column|obelisk") symbol("monument");
     attribute_case("tower") {
