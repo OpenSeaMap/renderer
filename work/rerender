@@ -46,8 +46,12 @@ search () {
       bb="$minlat,$minlon,$maxlat,$maxlon"
 		  if [ $minlat = 0 ]; then minlat=-85.0; fi
       if [ $ns -ne 0 ]; then
-        osmosis -q --rx file=tmp/rrpanel-z$1.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=tmp/rrpanel-z${zoom[$1]}.osm 2> /dev/null
-        ns=$(grep -c seamark tmp/rrpanel-z9.osm)
+        if [ ${zoom[$1]} -lt 9 ]; then
+          osmosis -q --rx file=tmp/panel-z0.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=tmp/rrpanel-z${zoom[$1]}.osm 2> /dev/null
+        else
+          osmosis -q --rx file=tmp/rrpanel-z$1.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=tmp/rrpanel-z${zoom[$1]}.osm 2> /dev/null
+        fi
+        ns=$(grep -c seamark tmp/rrpanel-z${zoom[$1]}.osm)
       fi
       if [ ${zoom[$1]} -lt 12 ]; then
         if [ ${zoom[$1]} -eq 9 ]; then
@@ -85,7 +89,6 @@ echo "9 $tx $ty"
 }
 
 ns=1
-cp tmp/panel-z0.osm tmp/rrpanel-z0.osm
 while true; do
   search 0 0 0
 done
