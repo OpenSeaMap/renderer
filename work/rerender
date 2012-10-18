@@ -12,7 +12,7 @@ check () {
         clean=1
         break 2
       fi
-      if [ ${zoom[$1]} -lt 16 ]; then
+      if [ ${zoom[$1]} -lt 14 ]; then
         check ${zoom[$1]} $xc $yc
       fi
     done
