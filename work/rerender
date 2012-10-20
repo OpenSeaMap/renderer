@@ -58,19 +58,19 @@ search () {
       if [ ${zoom[$1]} -lt 12 ]; then
         if [ ${zoom[$1]} -eq 9 ]; then
 echo "9 $tx $ty"
-          if [ -e tiles/9/$tx/$ty.png -o $ns[9] -ne 0 ]; then
+          if [ -e tiles/9/$tx/$ty.png -o ${ns[9]} -ne 0 ]; then
             ../searender/searender ../searender/symbols/symbols.defs 9 $bb >tmp/rrpanel.svg <tmp/rrpanel-z9.osm
      		    inkscape tmp/rrpanel.svg -e tmp/tiles-9-$tx-$ty.png -d 11.25 -a 256:256:2304:2304 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
  					fi
         fi
         if [ ${zoom[$1]} -eq 10 ]; then
-		      if [ -e tiles/10/$tx/$ty.png -o $ns[10] -ne 0 ]; then
+		      if [ -e tiles/10/$tx/$ty.png -o ${ns[10]} -ne 0 ]; then
             ../searender/searender ../searender/symbols/symbols.defs 10 $bb >tmp/rrpanel.svg <tmp/rrpanel-z10.osm
             inkscape tmp/rrpanel.svg -e tmp/tiles-10-$tx-$ty.png -d 22.5 -a 256:256:1280:1280 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
 		      fi
         fi
         if [ ${zoom[$1]} -eq 11 ]; then
-		      if [ -e tiles/11/$tx/$ty.png -o $ns[11] -ne 0 ]; then
+		      if [ -e tiles/11/$tx/$ty.png -o ${ns[11]} -ne 0 ]; then
             ../searender/searender ../searender/symbols/symbols.defs 11 $bb >tmp/rrpanel.svg <tmp/rrpanel-z11.osm
  	          inkscape tmp/rrpanel.svg -e tmp/tiles-11-$tx-$ty.png -d 45 -a 256:256:768:768 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
 		      fi
@@ -79,7 +79,7 @@ echo "9 $tx $ty"
       else
         clean=0
         check 12 $tx $ty
-        if [ -e tiles/12/$tx/$ty.png -o $clean -ne 0 -o $ns[12] -ne 0 ]; then
+        if [ -e tiles/12/$tx/$ty.png -o $clean -ne 0 -o ${ns[12]} -ne 0 ]; then
   	      while [ $(ls tmp/ | grep -c _12.osm) -ne 0 ]; do
 		        sleep 20
 		      done
