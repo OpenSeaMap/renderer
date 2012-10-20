@@ -51,7 +51,7 @@ search () {
         else
           osmosis -q --rx file=tmp/rrpanel-z$1.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=tmp/rrpanel-z${zoom[$1]}.osm 2> /dev/null
         fi
-        ns[zoom[$1]]=$(grep -c seamark tmp/rrpanel-z${zoom[$1]}.osm)
+        ns[${zoom[$1]}]=$(grep -c seamark tmp/rrpanel-z${zoom[$1]}.osm)
       fi
       if [ ${zoom[$1]} -lt 12 ]; then
         if [ ${zoom[$1]} -eq 9 ]; then
