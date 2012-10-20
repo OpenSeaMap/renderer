@@ -45,30 +45,30 @@ search () {
       minlat=$(echo "scale=10; ((a((e($yx)-(1/e($yx)))/2))*180)/(4*a(1))" | bc -l)
       bb="$minlat,$minlon,$maxlat,$maxlon"
 		  if [ $minlat = 0 ]; then minlat=-85.0; fi
-      if [ $ns -ne 0 ]; then
+      if [ ${ns[$1]} -ne 0 ]; then
         if [ ${zoom[$1]} -lt 9 ]; then
           osmosis -q --rx file=tmp/panel-z0.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=tmp/rrpanel-z${zoom[$1]}.osm 2> /dev/null
         else
           osmosis -q --rx file=tmp/rrpanel-z$1.osm --bb top=$maxlat left=$minlon bottom=$minlat right=$maxlon completeWays=yes --wx file=tmp/rrpanel-z${zoom[$1]}.osm 2> /dev/null
         fi
-        ns=$(grep -c seamark tmp/rrpanel-z${zoom[$1]}.osm)
+        ns[zoom[$1]]=$(grep -c seamark tmp/rrpanel-z${zoom[$1]}.osm)
       fi
       if [ ${zoom[$1]} -lt 12 ]; then
         if [ ${zoom[$1]} -eq 9 ]; then
 echo "9 $tx $ty"
-          if [ -e tiles/9/$tx/$ty.png -o $ns -ne 0 ]; then
+          if [ -e tiles/9/$tx/$ty.png -o $ns[9] -ne 0 ]; then
             ../searender/searender ../searender/symbols/symbols.defs 9 $bb >tmp/rrpanel.svg <tmp/rrpanel-z9.osm
      		    inkscape tmp/rrpanel.svg -e tmp/tiles-9-$tx-$ty.png -d 11.25 -a 256:256:2304:2304 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
  					fi
         fi
         if [ ${zoom[$1]} -eq 10 ]; then
-		      if [ -e tiles/10/$tx/$ty.png -o $ns -ne 0 ]; then
+		      if [ -e tiles/10/$tx/$ty.png -o $ns[10] -ne 0 ]; then
             ../searender/searender ../searender/symbols/symbols.defs 10 $bb >tmp/rrpanel.svg <tmp/rrpanel-z10.osm
             inkscape tmp/rrpanel.svg -e tmp/tiles-10-$tx-$ty.png -d 22.5 -a 256:256:1280:1280 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
 		      fi
         fi
         if [ ${zoom[$1]} -eq 11 ]; then
-		      if [ -e tiles/11/$tx/$ty.png -o $ns -ne 0 ]; then
+		      if [ -e tiles/11/$tx/$ty.png -o $ns[11] -ne 0 ]; then
             ../searender/searender ../searender/symbols/symbols.defs 11 $bb >tmp/rrpanel.svg <tmp/rrpanel-z11.osm
  	          inkscape tmp/rrpanel.svg -e tmp/tiles-11-$tx-$ty.png -d 45 -a 256:256:768:768 -y 0 -b "#000000" 1>/dev/null 2>/dev/null
 		      fi
@@ -77,7 +77,7 @@ echo "9 $tx $ty"
       else
         clean=0
         check 12 $tx $ty
-        if [ -e tiles/12/$tx/$ty.png -o $clean -ne 0 -o $ns -ne 0 ]; then
+        if [ -e tiles/12/$tx/$ty.png -o $clean -ne 0 -o $ns[12] -ne 0 ]; then
   	      while [ $(ls tmp/ | grep -c _12.osm) -ne 0 ]; do
 		        sleep 20
 		      done
@@ -88,7 +88,7 @@ echo "9 $tx $ty"
   done
 }
 
-ns=1
+ns[0]=1
 while true; do
   search 0 0 0
 done
