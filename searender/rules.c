@@ -89,7 +89,7 @@ object_rules(lights) {
       text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:start", 60, -10);
       free_string;
       if (has_item_attribute("name") && !has_item_attribute("fixme") && is_type("light_major|light_minor"))
-        text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -70);
+        text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -80);
     }
   }
 }
@@ -588,6 +588,20 @@ object_rules(cables) {
   }
 }
 
+object_rules(wrecks) {
+  if (zoom >= 12) {
+    if (has_attribute("category")) {
+      attribute_switch("category")
+      attribute_case("dangerous|mast_showing") symbol("wreck_d");
+      attribute_case("hull_showing") symbol("wreck_s");
+      attribute_default symbol("wreck_nd");
+      end_switch
+    } else {
+      symbol("wreck_nd");
+    }
+  }
+}
+
 rules {
   
   type("shoreline_construction") object(shoreline);
@@ -640,6 +654,7 @@ rules {
   type("radar_station") object(signals);
   type("rescue_station") object(signals);
   type("pilot_boarding") object(signals);
+  type("wreck") object(wrecks);
   type("buoy_lateral") object(buoys);
   type("buoy_cardinal") object(buoys);
   type("buoy_isolated_danger") object(buoys);
