@@ -140,14 +140,16 @@ object_rules(mark_colours, char* default_shape) {
   if (has_attribute("colour")) {
     int n = attribute_count("colour");
     char panel[4] = {'0'+n, 0, 0, 0};
-    attribute_switch("colour_pattern")
-    attribute_case("horizontal") panel[1] = 'H';
-    attribute_case("vertical") panel[1] = 'V';
-    attribute_case("diagonal") panel[1] = 'D';
-    attribute_case("squared") panel[1] = 'S';
-    attribute_case("cross") panel[1] = 'C';
-    attribute_case("saltire") panel[1] = 'X';
-    end_switch;
+    if (has_attribute("colour_pattern")) {
+      attribute_switch("colour_pattern")
+      attribute_case("horizontal") panel[1] = 'H';
+      attribute_case("vertical") panel[1] = 'V';
+      attribute_case("diagonal") panel[1] = 'D';
+      attribute_case("squared") panel[1] = 'S';
+      attribute_case("cross") panel[1] = 'C';
+      attribute_case("saltire") panel[1] = 'X';
+      end_switch;
+    }
     attribute_sequence("colour");
     int i; for(i = 1; i <= n; i++) {
       panel[2] = '0' + i;
@@ -211,11 +213,13 @@ object_rules(mark_shapes, char* default_shape) {
       if ((zoom >= 15) && (has_item_attribute("name"))) text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
     }
     attribute_case("perch") {
-      attribute_switch("category")
-      attribute_case("port") symbol("perchP");
-      attribute_case("starboard") symbol("perchS");
-      attribute_default symbol("stake");
-      end_switch
+      if (has_attribute("category")) {
+        attribute_switch("category")
+        attribute_case("port") symbol("perchP");
+        attribute_case("starboard") symbol("perchS");
+        attribute_default symbol("stake");
+        end_switch
+      }
       if ((zoom >= 15) && has_item_attribute("name")) text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
     }
     attribute_case("cairn") {
@@ -605,6 +609,7 @@ object_rules(wrecks) {
 
 rules {
   
+  type("") ;
   type("shoreline_construction") object(shoreline);
   //  type("pipeline_submarine") object(pipelines);
   //  type("cable_submarine") object(cables);
