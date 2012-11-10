@@ -426,7 +426,7 @@ object_rules(landmarks) {
     attribute_default symbol(attribute("function"));
     end_switch
   }
-  if (((zoom >= 12) || (has_object("light"))) && (has_attribute("category"))) {
+  if (((zoom >= 12) || (has_object("light"))) && has_attribute("category")) {
     attribute_switch("category")
     attribute_case("statue|column|obelisk") symbol("monument");
     attribute_case("tower") {
@@ -434,6 +434,12 @@ object_rules(landmarks) {
         symbol("church_tower");
       else
         symbol("land_tower");
+    }
+    attribute_case("mast") {
+      if (attribute_test("function", "communication|television|radio|radar"))
+        symbol("radio_mast");
+      else
+        symbol("mast");
     }
     attribute_case("cross") symbol("land_cross");
     attribute_case("radar_scanner") symbol("land_tower");
