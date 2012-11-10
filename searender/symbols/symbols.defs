@@ -510,13 +510,13 @@
   </symbol>
 <!-- Notice A4 -->
   <symbol id="notice_a4" width="60" height="60">
-    <path d="m 15,45.5 5,0 0,-23 4,0 -6.5,-8 -6.5,8 4,0 z" />
-    <path d="m 40,45.5 5,0 0,-23 4,0 -6.5,-8 -6.5,8 4,0 z" />
+    <path d="m 15,15.5 5,0 0,23 4,0 -6.5,8 -6.5,-8 4,0 z" style="fill:#000000;fill-opacity:1;stroke:none" />
+    <path d="m 40,45.5 5,0 0,-23 4,0 -6.5,-8 -6.5,8 4,0 z" style="fill:#000000;fill-opacity:1;stroke:none" />
   </symbol>
 <!-- Notice A4_1 -->
   <symbol id="notice_a4_1" width="60" height="60">
-    <path d="m 17.5,14.5 -6.5,8 4,0 0,8 -4,5 4,0 0,10 5,0 0,-10 4,0 -4,-5 0,-8 4,0 -6.5,-8 z" />
-    <path d="m 42.5,14.5 -6.5,8 4,0 0,8 -4,5 4,0 0,10 5,0 0,-10 4,0 -4,-5 0,-8 4,0 -6.5,-8 z" />
+    <path d="m 17.5,45.5 -6.5,-8 4,0 0,-8 -4,-5 4,0 0,-10 5,0 0,10 4,0 -4,5 0,8 4,0 -6.5,8 z" style="fill:#000000;fill-opacity:1;stroke:none" />
+    <path d="m 42.5,14.5 -6.5,8 4,0 0,8 -4,5 4,0 0,10 5,0 0,-10 4,0 -4,-5 0,-8 4,0 -6.5,-8 z" style="fill:#000000;fill-opacity:1;stroke:none" />
   </symbol>
 <!-- Notice A5/E5 -->
   <symbol id="notice_p" width="60" height="60">
