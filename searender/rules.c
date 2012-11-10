@@ -212,11 +212,21 @@ object_rules(mark_shapes, char* default_shape) {
       }
       if ((zoom >= 15) && (has_item_attribute("name"))) text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
     }
-    attribute_case("perch") {
+    attribute_case("perch|withy") {
       if (has_attribute("category")) {
         attribute_switch("category")
-        attribute_case("port") symbol("perchP");
-        attribute_case("starboard") symbol("perchS");
+        attribute_case("port") {
+          if (attribute_test("shape", "perch"))
+            symbol("perchP");
+          else
+            symbol("withyP");
+        }
+        attribute_case("starboard") {
+          if (attribute_test("shape", "perch"))
+            symbol("perchS");
+          else
+            symbol("withyS");
+        }
         attribute_default symbol("stake");
         end_switch
       }
@@ -426,7 +436,7 @@ object_rules(landmarks) {
         symbol("land_tower");
     }
     attribute_case("cross") symbol("land_cross");
-    attribute_case("radar_scanner") symbol("signal_station");
+    attribute_case("radar_scanner") symbol("land_tower");
     attribute_default symbol(attribute("category"));
     end_switch
   }
