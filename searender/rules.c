@@ -544,8 +544,8 @@ object_rules(areas) {
     }
   }
   if (is_type("dredged_area")) {
-    if (zoom < 16 ) area("stroke:#000000;stroke-width:10;stroke-dasharray:50,50;fill:#ffffff;fill-opacity:0.25");
-    else area("stroke:#000000;stroke-width:10;stroke-dasharray:50,50;fill:none");
+    if (zoom < 16 ) area("stroke:#000000;stroke-width:8;stroke-dasharray:25,25;fill:#ffffff;fill-opacity:0.25");
+    else area("stroke:#000000;stroke-width:8;stroke-dasharray:25,25;fill:none");
     if ((zoom >= 12) && has_item_attribute("name"))
       text(item_attribute("name"), "font-family:Arial;font-weight:normal;font-size:100;text-anchor:middle", 0, 0);
   }
