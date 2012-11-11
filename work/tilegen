@@ -50,7 +50,7 @@ tile () {
     fi
   fi
 	./subtile 12 $tx $ty 256 512
-  while [ $(ps -a | grep -c inkscape) -gt 1 ]; do
+  while [ $(ps -a | grep -c inkscape) -gt 1 -o  $(ps -a | grep -c subtile) -gt 1 ]; do
 		sleep 1
   done
   echo "$(date) rendered 12 $tx $ty" >> log.txt
