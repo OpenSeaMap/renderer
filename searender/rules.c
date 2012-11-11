@@ -584,6 +584,16 @@ object_rules(areas) {
   }
 }
 
+object_rules(obstructions) {
+  if (is_area) {
+    if (zoom >= 12) area("stroke:#000000;stroke-width:5;stroke-dasharray:5,5;fill:none");
+  } else if (is_line) {
+    if (zoom >= 12) line("stroke:#000000;stroke-width:5;stroke-dasharray:5,5;fill:none");
+  } else {
+    
+  }
+}
+
 object_rules(waterways) {
   if (has_item_attribute("name") && (zoom >= 14)) {
     int ref = line("stroke:none;fill:none");
@@ -644,6 +654,7 @@ rules {
   type("restricted_area") object(areas);
   type("seaplane_landing_area") object(areas);
   type("sea_area") object(areas);
+  type("obstruction") object(obstructions);
   type("waterway_axis") object(waterways);
 
   type("recommended_track") object(transits);
