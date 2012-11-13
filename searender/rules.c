@@ -535,6 +535,10 @@ object_rules(areas) {
       text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -90);
     if ((zoom >= 12) && (is_area)) line_symbols("restricted_line", 0.5, "line_plane", 10);
   }
+  if (is_type("marine_farm")) {
+    symbol("marine_farm");
+    if ((zoom >= 12) && !(is_node)) line("stroke:#000000;stroke-width:8;stroke-dasharray:50,50;fill:none");
+  }
   if (is_type("fairway")) {
     if (extent > 2.0) {
       if (zoom < 16) area("stroke:#c480ff;stroke-width:8;stroke-dasharray:50,50;fill:#ffffff;fill-opacity:0.25");
@@ -655,6 +659,7 @@ rules {
   type("seaplane_landing_area") object(areas);
   type("sea_area") object(areas);
   type("obstruction") object(obstructions);
+  type("marine_farm") object (areas);
   type("waterway_axis") object(waterways);
 
   type("recommended_track") object(transits);
