@@ -537,7 +537,7 @@ object_rules(areas) {
   }
   if (is_type("marine_farm")) {
     symbol("marine_farm");
-    if ((zoom >= 12) && !(is_node)) line("stroke:#000000;stroke-width:4;stroke-dasharray:10,10;fill:none");
+    if ((zoom >= 14) && !(is_node)) line("stroke:#000000;stroke-width:4;stroke-dasharray:10,10;fill:none");
   }
   if (is_type("fairway")) {
     if (extent > 2.0) {
