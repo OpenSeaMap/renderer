@@ -509,7 +509,11 @@ object_rules(ports) {
       if (attribute_test("category", "container_crane")) symbol("container_crane");
       else symbol("port_crane");
     }
-    if (is_type("hulk")) area("fill:#ffe000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1");
+    if (is_type("hulk")) {
+      area("fill:#ffe000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1");
+      if ((zoom >= 15) && (has_item_attribute("name")))
+        text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:70; text-anchor:middle", 0, 0);
+    }
   }
 }
 
