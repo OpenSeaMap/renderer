@@ -941,7 +941,10 @@ void drawLineSymbols(Item_t *item, char *prisymb, double space, char *secsymb, i
 }
 
 int drawArea(Item_t *item, char *style) {
-  return drawVector(item, style, 0);
+  if (testArea(item))
+    return drawVector(item, style, 0);
+  else
+    return 0;
 }
 
 int drawLineText(Item_t *item, char *text, char *style, double offset, double dy, int path) {

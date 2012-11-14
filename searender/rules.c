@@ -509,6 +509,7 @@ object_rules(ports) {
       if (attribute_test("category", "container_crane")) symbol("container_crane");
       else symbol("port_crane");
     }
+    if (is_type("hulk")) area("fill:#ffe000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1");
   }
 }
 
@@ -672,6 +673,7 @@ rules {
   type("lock_basin_part") object(locks);
   type("gate") object(locks);
   type("distance_mark") object(distances);
+  type("hulk") object(ports);
   type("landmark") object(landmarks);
   type("crane") object(ports);
   type("mooring") object(moorings);
