@@ -147,6 +147,7 @@ bool testAtt(Att_t *att, Enum_t val) {
 Ref_t *addRef(Item_t *item, char *ref) {
   Ref_t *link = calloc(1, sizeof(Ref_t));
   link->ref = getItem(ref);
+  if (link->ref == NULL) return NULL;
   Wmbs_t *node = calloc(1, sizeof(Wmbs_t));
   node->way = item;
   node->next = link->ref->type.node.ways;

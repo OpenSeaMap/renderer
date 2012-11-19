@@ -66,6 +66,8 @@ int main (int argc, const char * argv[]) {
   }
     
 	while (fgets(line, 10000, stdin) != NULL) {
+    char copy[1000];
+    strcpy(copy, line);
 		ele = strtok(line, " \t<");
     if ((strcmp(ele, "bounds") == 0) && !bb)  {
       char *token = strtok(NULL, " =");
