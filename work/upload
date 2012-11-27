@@ -1,6 +1,7 @@
 #!/bin/bash
 
 while true; do
+	sleep 1
 	if [ -e tmp/sending ]; then
 		backoff=0
 		while ! sftp -q -b tmp/sending malcolm@netz.smurf.noris.de; do
@@ -12,15 +13,14 @@ while true; do
 		rm tmp/sending
 		rm -f hold
 		echo $(date)
+		sleep 20
 	fi
-	sleep 20
 	while [ -e tmp/deletions ]; do
 		mv tmp/deletions tmp/deleting
     sftp -q -b tmp/deleting malcolm@netz.smurf.noris.de
 		rm tmp/deleting
 		sleep 1
 	done
-	sleep 20
 	if [ $(ls tmp | grep -c '.send') -ne 0 ]; then
 		for file in $(ls tmp | grep '.send'); do
 			mv tmp/$file tmp/send
