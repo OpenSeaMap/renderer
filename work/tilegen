@@ -90,6 +90,7 @@ while true; do
     	fi
     	tile $file
 	    tile91011
+	    break
   	done
   fi
 done
