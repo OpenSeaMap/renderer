@@ -176,7 +176,7 @@ object_rules(mark_colours, char* default_shape) {
     literal_case("beacon") text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
     literal_case("pillar|spar") text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 50, -50);
     literal_case("float|tower") text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
-    literal_case("spherical|can|conical|float|tower|barrel") {
+    literal_case("spherical|can|conical|float|super-buoy|tower|barrel") {
       if (has_object("topmark") || has_object("daymark") || is_type("mooring"))
         text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
       else
