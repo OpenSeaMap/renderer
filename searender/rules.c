@@ -558,7 +558,12 @@ object_rules(areas) {
     if ((zoom >= 12) && has_item_attribute("name"))
       text(item_attribute("name"), "font-family:Arial;font-weight:normal;font-size:100;text-anchor:middle", 0, 0);
   }
-  if (is_type("restricted_area")) line_symbols("restricted_line", 1.0, NULL, 0);
+  if (is_type("restricted_area") && (zoom >= 12)) {
+    line_symbols("restricted_line", 1.0, NULL, 0);
+    if (attribute_test("category", "no_wake")) {
+      symbol("no_wake");
+    }
+  }
   if (is_type("production_area")) {
     if (attribute_test("category", "wind_farm")) {
       symbol("wind_farm");
