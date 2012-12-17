@@ -599,12 +599,20 @@ object_rules(areas) {
 }
 
 object_rules(obstructions) {
-  if (is_area) {
-    if (zoom >= 12) area("stroke:#000000;stroke-width:5;stroke-dasharray:5,5;fill:none");
-  } else if (is_line) {
-    if (zoom >= 12) line("stroke:#000000;stroke-width:5;stroke-dasharray:5,5;fill:none");
-  } else {
-    
+  if (is_type("pipeline_submarine")) {
+    if (is_area) {
+      if (zoom >= 12) area("stroke:#000000;stroke-width:5;stroke-dasharray:5,5;fill:none");
+    } else if (is_line) {
+      if (zoom >= 12) line("stroke:#000000;stroke-width:5;stroke-dasharray:5,5;fill:none");
+    }
+  } else if ((is_type("rock")) && (zoom>=12)) {
+    if (has_attribute("water_level")) {
+      attribute_switch("water_level")
+      attribute_case("covers") symbol("rock_c");
+      attribute_case("awash") symbol("rock_a");
+      attribute_default symbol("rock");
+      end_switch;
+    } else symbol("rock");
   }
 }
 
@@ -669,6 +677,7 @@ rules {
   type("seaplane_landing_area") object(areas);
   type("sea_area") object(areas);
   type("obstruction") object(obstructions);
+  type("rock") object(obstructions);
   type("marine_farm") object (areas);
   type("waterway_axis") object(waterways);
 

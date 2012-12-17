@@ -957,6 +957,25 @@
     <path d="M 15,0 L 15,30 M 17,15 L 30,15"
       style="fill:none;stroke:#c480ff;stroke-width:4" />
   </symbol>
+<!-- Rock -->
+  <symbol id="rock" width="80" height="80">
+    <ellipse cx="40" cy="40" rx="39" ry="39"
+      style="stroke:#000000;stroke-width:2px;stroke-opacity:1;stroke-dasharray:5,5;fill:#80c0ff;fill-opacity:1" />
+    <path d="M 40,15 L 40,65 M 15,40 L 65,40" style="stroke:#000000;stroke-width:5px;stroke-opacity:1" />
+  </symbol>
+<!-- RockA -->
+  <symbol id="rock_a" width="80" height="80">
+    <ellipse cx="40" cy="40" rx="39" ry="39"
+      style="stroke:#000000;stroke-width:2px;stroke-opacity:1;stroke-dasharray:5,5;fill:#80c0ff;fill-opacity:1" />
+    <path d="M 40,15 L 40,65 M 15,40 L 65,40" style="stroke:#000000;stroke-width:5px;stroke-opacity:1" />
+    <path d="M 25,25 L 25,25 M 25,55 L 25,55 M 55,25 L 55,25 M 55,55 L 55,55" style="stroke:#000000;stroke-width:8px;stroke-opacity:1;stroke-linecap:round" />
+  </symbol>
+<!-- RockC -->
+  <symbol id="rock_c" width="80" height="80">
+    <ellipse cx="40" cy="40" rx="39" ry="39"
+      style="stroke:#000000;stroke-width:2px;stroke-opacity:1;stroke-dasharray:5,5;fill:#80c0ff;fill-opacity:1" />
+    <path d="M 28,18 L 52,62 M 28,62 L 52,18 M 15,40 L 65,40" style="stroke:#000000;stroke-width:5px;stroke-opacity:1" />
+  </symbol>
 <!-- Sailing Club -->
   <symbol id="sailing_club" width="60" height="60">
     <rect width="58" height="58" rx="10" ry="10" x="1" y="1"
