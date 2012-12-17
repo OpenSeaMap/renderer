@@ -596,6 +596,7 @@ object_rules(areas) {
       free_string
     }
   }
+  if (is_type("sandwaves") && (zoom>=12)) area("fill:url(#sandwaves)");
 }
 
 object_rules(obstructions) {

@@ -986,7 +986,7 @@
      style="fill:#a30075;stroke:none" />
    </symbol>
 <!-- Sandwaves -->
-  <pattern id="sandwaves" width="10" height="10" x="0" y="0" patternUnits="userSpaceOnUse" patternTransform="scale(5)">
+  <pattern id="sandwaves" width="10" height="10" x="0" y="0" patternUnits="userSpaceOnUse">
     <path fill="none" stroke="#ffd400" stroke-width="0.5"
       d="M0.00,3.45 L0.33,3.08 L0.66,2.5 L0.99,1.93 L1.32,1.60 L1.65,1.61 L1.82,1.95 L1.99,2.5 L2.16,3.03 L2.33,3.34
          L2.50,3.33 L2.83,3.01 L3.16,2.5 L3.49,2.01 L3.82,1.72 L4.15,1.73 L4.32,2.03 L4.49,2.5 L4.66,2.96 L4.83,3.22 L5.00,3.21

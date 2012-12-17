@@ -36,7 +36,7 @@ s57val_t boyshp[] = { [BOY_UNKN]={0, ""}, [BOY_CONE]={1, "conical"}, [BOY_CAN]={
 s57val_t catair[] = { {1, "military"}, {2, "civil"}, {3, "military_heliport"}, {4, "civil_heliport"}, {5, "glider"}, {6, "small_planes"}, {8, "emergency"}, {0, NULL} };
 s57val_t catach[] = { {1, "unrestricted"}, {2, "deep_water"}, {3, "tanker"}, {4, "explosives"}, {5, "quarantine"}, {6, "seaplane"}, {7, "small_craft"}, {8, "small_craft_mooring"},
   {9, "24_hour"}, {10, "limited_period"}, {0, NULL} };
-s57val_t catbrg[] = { {1, "fixed"}, {2, "opening"}, {3, "swing"}, {4, "lifting"}, {5, "bascule"}, {6, "pontoon"}, {7, "draw"}, {8, "transporter"}, {9, "footbridge"}, {10, "viaduct"},
+s57val_t catbrg[] = { {1, "fixed"}, {2, "opening"}, {3, "swing"}, {4, "lifting"}, {5, "bascule"}, {6, "pontoon"}, {7, "drawbridge"}, {8, "transporter"}, {9, "footbridge"}, {10, "viaduct"},
   {11, "aqueduct"}, {12, "suspension"}, {0, NULL} };
 s57val_t catbua[] = { {1, "urban"}, {2, "settlement"}, {3, "village"}, {4, "town"}, {5, "city"}, {6, "holiday_village"}, {0, NULL} };
 s57val_t catcbl[] = { {1, "power"}, {2, "telecom"}, {3, "transmission"}, {4, "telephone"}, {5, "telegraph"}, {6, "mooring"}, {7, "optical"}, {8, "ferry"}, {0, NULL} };
