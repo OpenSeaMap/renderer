@@ -193,6 +193,7 @@ s57val_t verdat[] = { {1, "mlws"}, {2, "mllws"}, {3, "msl"}, {4, "llw"}, {5, "ml
   {16, "mhw"}, {17, "mhws"}, {18, "hw"}, {19, "amsl"}, {20, "hws"}, {21, "mhhw"}, {22, "eslw"}, {23, "lat"}, {24, "local"}, {25, "igld1985"}, {26, "mlw"}, {27, "llwlt"}, {28, "hhwlt"}, {29, "nhhw"}, {30, "hat"},
   {31, "llwrl"}, {32, "lhwrl"}, {33, "lmwrl"}, {34, "ehw_dglw"}, {35, "hshw_dhsw"}, {36, "rlwl_donau"}, {37, "hshw_donau"}, {38, "drlwrl_olr"}, {39, "rpwl"}, {40, "rnbl"}, {41, "ohio_rd"}, {0, NULL} };
 s57val_t addmrk[] = { [MRK_UNKN]={0, ""}, [MRK_TOPB]={1, "top_board"}, [MRK_BOTB]={2, "bottom_board"}, [MRK_RTRI]={3, "right_triangle"}, [MRK_LTRI]={4, "left_triangle"}, [MRK_BTRI]={5, "bottom_triangle"}, {0, NULL} };
+s57val_t bnkwtw[] = { {1, "left"}, {2, "right"}, {0, NULL} };
 s57val_t catbnk[] = { {1, "steep"}, {2, "flat"}, {3, "fastened"}, {4, "unfastened"}, {0, NULL} };
 s57val_t catnmk[] = { [NMK_UNKN]={0, ""}, [NMK_NENT]={1, "no_entry"}, [NMK_CLSA]={2, "closed_area"}, [NMK_NOVK]={3, "no_overtaking"}, [NMK_NCOV]={4, "no_convoy_overtaking"}, [NMK_NPAS]={5, "no_passing"},
   [NMK_NBRT]={6, "no_berthing"}, [NMK_NBLL]={7, "no_berthing_lateral_limit"}, [NMK_NANK]={8, "no_anchoring"}, [NMK_NMOR]={9, "no_mooring"}, [NMK_NTRN]={10, "no_turning"}, [NMK_NWSH]={11, "no_wash"},
@@ -284,12 +285,13 @@ s57key_t keys[] = {
   [HIGWAT]={17080, F, NULL}, [HIGNAM]={17081, S, NULL}, [LOWWAT]={17082, F, NULL}, [LOWNAM]={17083, S, NULL}, [MEAWAT]={17084, F, NULL}, [MEANAM]={17085, S, NULL}, [OTHWAT]={17086, F, NULL},
   [OTHNAM]={17087, S, NULL}, [REFLEV]={17088, E, reflev}, [SDRLEV]={17089, S, NULL}, [VCRLEV]={17090, S, NULL}, [SCHREF]={17093, S, NULL}, [USESHP]={17094, E, useshp}, [CURVHW]={17095, F, NULL},
   [CURVLW]={17096, F, NULL}, [CURVMW]={17097, F, NULL}, [CURVOW]={17098, F, NULL}, [APTREF]={17099, S, NULL}, [SHPTYP]={33066, E, shptyp}, [UPDMSG]={40000, S, NULL}, [ADDMRK]={17050, L, addmrk},
-  [CATBNK]={17051, E, catbnk}, [CATNMK]={17052, E, catnmk}, [CATBRT]={17066, L, catbrt}, [CATBUN]={17067, L, catbun}, [CATCCL]={17068, L, catccl}, [CATCOM]={17069, L, catcom}, [CATHBR]={17070, L, cathbr},
-  [CATRFD]={17071, L, catrfd}, [CATTML]={17072, L, cattml}, [CATGAG]={17078, L, catgag}, [CATVTR]={17091, L, catvtr}, [CATTAB]={17092, E, cattab}, [CATEXS]={17100, E, catexs}, [CATWWM]={17112, E, catwwm},
-  [LG_SPD]={18001, F, NULL}, [LG_SPR]={18002, L, lg_spr}, [LG_BME]={18003, F, NULL}, [LG_LGS]={18004, F, NULL}, [LG_DRT]={18005, F, NULL}, [LG_WDP]={18006, F, NULL}, [LG_WDU]={18007, E, lg_wdu},
-  [LG_REL]={18008, L, lg_rel}, [LG_FNC]={18009, L, lg_fnc}, [LG_DES]={18010, S, NULL}, [LG_PBR]={18011, S, NULL}, [LC_CSI]={18012, L, lc_csi}, [LC_CSE]={18013, L, lc_cse}, [LC_ASI]={18014, L, lc_asi},
-  [LC_ASE]={18015, L, lc_ase}, [LC_CCI]={18016, L, lc_cci}, [LC_CCE]={18017, L, lc_cce}, [LC_BM1]={18018, F, NULL}, [LC_BM2]={18019, F, NULL}, [LC_LG1]={18020, F, NULL}, [LC_LG2]={18021, F, NULL},
-  [LC_DR1]={18022, F, NULL}, [LC_DR2]={18023, F, NULL}, [LC_SP1]={18024, F, NULL}, [LC_SP2]={18025, F, NULL}, [LC_WD1]={18026, F, NULL}, [LC_WD2]={18027, F, NULL}, [LITRAD]={0, A, NULL},
+  [BNKWTW]={99999, E, bnkwtw}, [CATBNK]={17051, E, catbnk}, [CATNMK]={17052, E, catnmk}, [CATBRT]={17066, L, catbrt}, [CATBUN]={17067, L, catbun}, [CATCCL]={17068, L, catccl}, [CATCOM]={17069, L, catcom},
+  [CATHBR]={17070, L, cathbr}, [CATRFD]={17071, L, catrfd}, [CATTML]={17072, L, cattml}, [CATGAG]={17078, L, catgag}, [CATVTR]={17091, L, catvtr}, [CATTAB]={17092, E, cattab}, [CATEXS]={17100, E, catexs},
+  [CATWWM]={17112, E, catwwm}, [LG_SPD]={18001, F, NULL}, [LG_SPR]={18002, L, lg_spr}, [LG_BME]={18003, F, NULL}, [LG_LGS]={18004, F, NULL}, [LG_DRT]={18005, F, NULL}, [LG_WDP]={18006, F, NULL},
+  [LG_WDU]={18007, E, lg_wdu}, [LG_REL]={18008, L, lg_rel}, [LG_FNC]={18009, L, lg_fnc}, [LG_DES]={18010, S, NULL}, [LG_PBR]={18011, S, NULL}, [LC_CSI]={18012, L, lc_csi}, [LC_CSE]={18013, L, lc_cse},
+  [LC_ASI]={18014, L, lc_asi}, [LC_ASE]={18015, L, lc_ase}, [LC_CCI]={18016, L, lc_cci}, [LC_CCE]={18017, L, lc_cce}, [LC_BM1]={18018, F, NULL}, [LC_BM2]={18019, F, NULL}, [LC_LG1]={18020, F, NULL},
+  [LC_LG2]={18021, F, NULL}, [LC_DR1]={18022, F, NULL}, [LC_DR2]={18023, F, NULL}, [LC_SP1]={18024, F, NULL}, [LC_SP2]={18025, F, NULL}, [LC_WD1]={18026, F, NULL}, [LC_WD2]={18027, F, NULL},
+  [LITRAD]={0, A, NULL},
   {17000, L, catach}, {17002, L, catsit}, {17003, L, catsiw}, {17004, L, restrn}, {17005, E, verdat}, {17006, L, NULL}, {17007, E, catfry}, {17008, L, cathaf}, {17009, E, marsys}, {17010, L, catchp},
   {17011, E, catlam}, {17012, E, catslc}, {17101, E, catcbl}, {17102, L, cathlk}, {17103, E, hunits}, {17104, E, watlev},
   {-1, S, NULL}

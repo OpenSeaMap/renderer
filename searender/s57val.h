@@ -39,6 +39,8 @@ struct VAL {
 
 typedef  enum { MRK_UNKN, MRK_TOPB, MRK_BOTB, MRK_RTRI, MRK_LTRI, MRK_BTRI
 } AddMRK_t;
+typedef  enum { BNK_UNKN, BNK_LEFT, BNK_RGHT
+} BnkWTW_t;
 typedef enum {
   BCN_UNKN, BCN_STAK, BCN_WTHY, BCN_TOWR, BCN_LATT, BCN_PILE, BCN_CARN, BCN_BUOY, BCN_POLE, BCN_PRCH, BCN_POST
 } BcnSHP_t;
