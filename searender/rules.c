@@ -526,8 +526,13 @@ object_rules(harbours) {
   }
   if ((zoom >= 16) && is_type("anchor_berth")) symbol("anchor_berth");
   if ((zoom >= 12) && is_type("harbour")) {
-    if (attribute_test("category", "marina|yacht")) symbol("marina");
-    else symbol("harbour");
+    if (has_attribute("category")) {
+      attribute_switch("category")
+      attribute_case("marina|yacht") symbol("marina");
+      attribute_case("marina_no_facilites") symbol("marina_nf");
+      attribute_default symbol("harbour");
+      end_switch
+    } else symbol("harbour");
     if ((zoom >= 15) && (has_item_attribute("name")))
       text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -90);
   }
