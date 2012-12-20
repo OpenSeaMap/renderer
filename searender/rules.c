@@ -606,7 +606,7 @@ object_rules(obstructions) {
     } else if (is_line) {
       if (zoom >= 12) line("stroke:#000000;stroke-width:5;stroke-dasharray:5,5;fill:none");
     }
-  } else if ((is_type("rock")) && (zoom>=12)) {
+  } else if ((is_type("rock")) && (zoom>=14)) {
     if (has_attribute("water_level")) {
       attribute_switch("water_level")
       attribute_case("covers") symbol("rock_c");
@@ -643,7 +643,7 @@ object_rules(cables) {
 }
 
 object_rules(wrecks) {
-  if (zoom >= 12) {
+  if (zoom >= 14) {
     if (has_attribute("category")) {
       attribute_switch("category")
       attribute_case("dangerous|mast_showing") symbol("wreck_d");

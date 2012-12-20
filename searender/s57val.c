@@ -214,7 +214,9 @@ s57val_t catnmk[] = { [NMK_UNKN]={0, ""}, [NMK_NENT]={1, "no_entry"}, [NMK_CLSA]
   [NMK_MWAR]={86, "main_waterway_ahead_right"}, [NMK_MWAL]={87, "main_waterway_ahead_left"}, [NMK_WARL]={88, "main_waterway_ahead_right_secondary_left"}, [NMK_WALR]={89, "main_waterway_ahead_left_secondary_right"},
   [NMK_PEND]={90, "prohibition_ends"}, [NMK_DWTR]={91, "drinking_water"}, [NMK_TELE]={92, "telephone"}, [NMK_MTCP]={93, "motor_craft_permitted"}, [NMK_SPCP]={94, "sport_craft_permitted"}, [NMK_WSKP]={95, "waterskiing_permitted"},
   [NMK_SLCP]={96, "sailing_craft_permitted"}, [NMK_UPCP]={97, "unpowered_craft_permitted"}, [NMK_SLBP]={98, "sailboards_permitted"}, [NMK_RADI]={99, "radio_information"},
-  [NMK_WTBP]={100, "waterbikes_permitted"}, [NMK_HSCP]={101, "high_speeds_permitted"}, [NMK_LBGP]={102, "launching_beaching_permitted"}, {0, NULL} };
+  [NMK_WTBP]={100, "waterbikes_permitted"}, [NMK_HSCP]={101, "high_speeds_permitted"}, [NMK_LBGP]={102, "launching_beaching_permitted"},
+  [NMK_KTPM]={103, "keep_to_port_margin"}, [NMK_KTSM]={104, "keep_to_starboard_margin"}, [NMK_KTMR]={105, "keep_to_mid-river"}, [NMK_CRTP]={106, "cross_river_to_port"}, [NMK_CRTS]={107, "cross_river_to_starboard"},
+  [NMK_TRBM]={108, "traffic_between_margins"}, [NMK_RSPD]={109, "reduce_speed"}, {0, NULL} };
 s57val_t clsdng[] = { {1, "one_blue"}, {2, "two_blue"}, {3, "three_blue"}, {4, "no_blue"}, {0, NULL} };
 s57val_t dirimp[] = { {1, "upstream"}, {2, "downstream"}, {3, "left_bank"}, {4, "right_bank"}, {5, "to_harbour"}, {0, NULL} };
 s57val_t fnctnm[] = { {1, "prohibition"}, {2, "regulation"}, {3, "restriction"}, {4, "recommendation"}, {5, "information"}, {0, NULL} };
