@@ -518,7 +518,7 @@ object_rules(ports) {
 }
 
 object_rules(harbours) {
-  if (is_type("anchorage")) {
+  if ((zoom >= 12) && is_type("anchorage")) {
     symbol("anchorage");
     if ((zoom >= 15) && (has_item_attribute("name")))
       text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -90);
