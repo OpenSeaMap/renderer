@@ -584,21 +584,27 @@ object_rules(areas) {
       attribute_case("reach") { if (zoom >= 10) add_string("font-family:Arial;font-weight:normal;font-style:italic;font-size:150;text-anchor:middle") }
       attribute_case("bay") { if (zoom >= 12) add_string("font-family:Arial;font-weight:normal;font-style:italic;font-size:150;text-anchor:middle") }
       attribute_case("shoal") { if (zoom >= 14) {
-        area("stroke:#c480ff;stroke-width:4;stroke-dasharray:25,25;fill:none");
-        add_string("font-family:Arial;font-weight:normal;font-style:italic;font-size:150;text-anchor:middle") }
+        if (is_area) {
+          area("stroke:#c480ff;stroke-width:4;stroke-dasharray:25,25;fill:none");
+          if (has_item_attribute("name")) text(item_attribute("name"), "font-family:Arial;font-weight:normal;font-style:italic;font-size:75;text-anchor:middle", 0, -40);
+          text("(Shoal)", "font-family:Arial;font-weight:normal;font-size:60;text-anchor:middle", 0, 0);
+        } else if (is_line) {
+          if (has_item_attribute("name")) way_text(item_attribute("name"), "font-family:Arial;font-weight:normal;font-style:italic;font-size:75;text-anchor:middle", 0.5, -40, line("stroke:none;fill:none"));
+          way_text("(Shoal)", "font-family:Arial;font-weight:normal;font-size:60;text-anchor:middle", 0.5, 0, line("stroke:none;fill:none"));
+        } else {
+          if (has_item_attribute("name")) text(item_attribute("name"), "font-family:Arial;font-weight:normal;font-style:italic;font-size:75;text-anchor:middle", 0, -40);
+          text("(Shoal)", "font-family:Arial;font-weight:normal;font-size:60;text-anchor:middle", 0, 0);
+        }
+      }
       }
       attribute_case("gat|narrows") { if (zoom >= 12) add_string("font-family:Arial;font-weight:normal;font-style:italic;font-size:100;text-anchor:middle") }
       end_switch
-      if (strlen(string) > 0) {
+      if ((strlen(string) > 0) && !attribute_test("category", "shoal")) {
         int ref = line("stroke:none;fill:none");
         if (ref != 0) {
           if (has_item_attribute("name")) way_text(item_attribute("name"), string, 0.5, 0, ref);
-          if (attribute_test("category", "shoal"))
-            way_text("(Shoal)", "font-family:Arial;font-weight:normal;font-size:100;text-anchor:middle", 0.5, 75, ref);
         } else {
           if (has_item_attribute("name")) text(item_attribute("name"), string, 0, 0);
-          if (attribute_test("category", "shoal"))
-            text("(Shoal)", "font-family:Arial;font-weight:normal;font-size:100;text-anchor:middle", 0, 75);
         }
       }
       free_string
