@@ -577,23 +577,26 @@ object_rules(areas) {
         text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, 70);
     }
   }
-  if (is_type("sea_area") && has_item_attribute("name")) {
+  if (is_type("sea_area")) {
     if (has_attribute("category")) {
       make_string("");
       attribute_switch("category")
       attribute_case("reach") { if (zoom >= 10) add_string("font-family:Arial;font-weight:normal;font-style:italic;font-size:150;text-anchor:middle") }
       attribute_case("bay") { if (zoom >= 12) add_string("font-family:Arial;font-weight:normal;font-style:italic;font-size:150;text-anchor:middle") }
-      attribute_case("shoal") { if (zoom >= 14) add_string("font-family:Arial;font-weight:normal;font-style:italic;font-size:150;text-anchor:middle") }
+      attribute_case("shoal") { if (zoom >= 14) {
+        area("stroke:#c480ff;stroke-width:4;stroke-dasharray:25,25;fill:none");
+        add_string("font-family:Arial;font-weight:normal;font-style:italic;font-size:150;text-anchor:middle") }
+      }
       attribute_case("gat|narrows") { if (zoom >= 12) add_string("font-family:Arial;font-weight:normal;font-style:italic;font-size:100;text-anchor:middle") }
       end_switch
       if (strlen(string) > 0) {
         int ref = line("stroke:none;fill:none");
         if (ref != 0) {
-          way_text(item_attribute("name"), string, 0.5, 0, ref);
+          if (has_item_attribute("name")) way_text(item_attribute("name"), string, 0.5, 0, ref);
           if (attribute_test("category", "shoal"))
             way_text("(Shoal)", "font-family:Arial;font-weight:normal;font-size:100;text-anchor:middle", 0.5, 75, ref);
         } else {
-          text(item_attribute("name"), string, 0, 0);
+          if (has_item_attribute("name")) text(item_attribute("name"), string, 0, 0);
           if (attribute_test("category", "shoal"))
             text("(Shoal)", "font-family:Arial;font-weight:normal;font-size:100;text-anchor:middle", 0, 75);
         }
