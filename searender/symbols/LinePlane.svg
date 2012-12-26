@@ -10,5 +10,5 @@
      style="fill:#c480ff;stroke:none" />
     <line x1="28" y1="40" x2="36" y2="36" style="fill:none;stroke:#c480ff;stroke-width:5" />
   </symbol>
-  <use xlink:href="#seaplane" x="0" y="0" />
+  <use xlink:href="#line_plane" x="0" y="0" />
 </svg>
