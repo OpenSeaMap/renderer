@@ -539,11 +539,11 @@ object_rules(harbours) {
 }
 
 object_rules(areas) {
-  if (is_type("seaplane_landing_area")) {
+  if ((zoom >= 12) && is_type("seaplane_landing_area")) {
     symbol("seaplane");
     if ((zoom >= 15) && (has_item_attribute("name")))
       text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -90);
-    if ((zoom >= 12) && (is_area)) line_symbols("restricted_line", 0.5, "line_plane", 10);
+    if (is_area) line_symbols("restricted_line", 0.5, "line_plane", 10);
   }
   if (is_type("marine_farm")) {
     if (zoom >= 14) symbol("marine_farm");
