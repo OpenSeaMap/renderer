@@ -529,7 +529,7 @@ object_rules(harbours) {
     if (has_attribute("category")) {
       attribute_switch("category")
       attribute_case("marina|yacht") symbol("marina");
-      attribute_case("marina_no_facilites") symbol("marina_nf");
+      attribute_case("marina_no_facilities") symbol("marina_nf");
       attribute_default symbol("harbour");
       end_switch
     } else symbol("harbour");
@@ -610,7 +610,7 @@ object_rules(areas) {
       free_string
     }
   }
-  if (is_type("sandwaves") && (zoom>=12)) area("fill:url(#sandwaves)");
+//  if (is_type("sandwaves") && (zoom>=12)) area("fill:url(#sandwaves)");
 }
 
 object_rules(obstructions) {
@@ -684,7 +684,7 @@ rules {
   type("separation_line") object(separation);
   type("separation_lane") object(separation);
   type("separation_boundary") object(separation);
-  type("sandwaves") object(areas);
+//  type("sandwaves") object(areas);
   type("production_area") object(areas);
   type("fairway") object(areas);
   type("dredged_area") object(areas);
