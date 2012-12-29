@@ -95,6 +95,8 @@ char *notice_map[] = { [NMK_UNKN]="notice", [NMK_NENT]="notice_a1", [NMK_CLSA]="
   [NMK_WALR]="notice_crossing_l", [NMK_PEND]="notice_e11", [NMK_DWTR]="notice_e13", [NMK_TELE]="notice_e14", [NMK_MTCP]="notice_motor", [NMK_SPCP]="notice_sport", [NMK_WSKP]="notice_waterski",
   [NMK_SLCP]="notice_sailboat", [NMK_UPCP]="notice_rowboat", [NMK_SLBP]="notice_sailboard", [NMK_RADI]="notice_vhf", [NMK_WTBP]="notice_waterbike", [NMK_HSCP]="notice_speedboat", [NMK_LBGP]="notice_slipway" };
 
+char *bniwr_map[] = { [NMK_OPTR]="notice_or", [NMK_OPTL]="notice_ol",[NMK_KTPM]="notice_pm", [NMK_KTSM]="notice_sm", [NMK_KTMR]="notice_mr", [NMK_CRTP]="notice_cp", [NMK_CRTS]="notice_cs", [NMK_TRBM]="notice_bm", [NMK_RSPD]="notice_rs" };
+
 char **cluster_map(Obja_t obj) {
   switch (obj) {
     case NOTMRK:
@@ -484,47 +486,69 @@ void renderNotice(Item_t *item) {
       }
     }
     double orient = getAtt(obj, ORIENT) != NULL ? getAtt(obj, ORIENT)->val.val.f : 0.0;
+    int system = getAtt(obj, MARSYS) != NULL ? getAtt(obj, MARSYS)->val.val.e : 0;
     double flip = 0.0;
-    char *symb = notice_map[category];
+    char *symb = NULL;
     char *base = "";
     char *colour = "black";
-    switch (category) {
-      case NMK_NOVK...NMK_NWSH:
-      case NMK_NMTC...NMK_NLBG:
-        base = "notice_a";
-        break;
-      case NMK_MVTL...NMK_CHDR:
-        base = "notice_b";
-        break;
-      case NMK_PRTL...NMK_PRTR:
-      case NMK_OVHC...NMK_LBGP:
-        base = "notice_e";
-        colour = "white";
-        break;
-      default:
-        break;
-    }
-    switch (category) {
-      case NMK_MVTL:
-      case NMK_ANKP:
-      case NMK_PRTL:
-      case NMK_MWAL:
-      case NMK_MWAR:
-        flip = 180.0;
-        break;
-      case NMK_SWWR:
-      case NMK_WRSL:
-      case NMK_WARL:
-        flip = -90.0;
-        break;
-      case NMK_SWWC:
-      case NMK_SWWL:
-      case NMK_WLSR:
-      case NMK_WALR:
-        flip = 90.0;
-        break;
-      default:
-        break;
+    if ((system == SYS_BWR2) || (system == SYS_BNWR)) symb = bniwr_map[category];
+    if (symb == NULL) symb = notice_map[category];
+    if ((system == SYS_BWR2) || (system == SYS_BNWR)) {
+      int bank = getAtt(obj, BNKWTW) != NULL ? getAtt(obj, BNKWTW)->val.val.e : 0;
+      switch (bank) {
+        case BWW_LEFT:
+          base = "notice_blb";
+          colour = "red";
+          break;
+        case BWW_RGHT:
+          base = "notice_brb";
+          colour = "green";
+          break;
+        default:
+          base = "notice_bsi";
+          colour = "black";
+          break;
+      }
+      
+    } else {
+      switch (category) {
+        case NMK_NOVK...NMK_NWSH:
+        case NMK_NMTC...NMK_NLBG:
+          base = "notice_a";
+          break;
+        case NMK_MVTL...NMK_CHDR:
+          base = "notice_b";
+          break;
+        case NMK_PRTL...NMK_PRTR:
+        case NMK_OVHC...NMK_LBGP:
+          base = "notice_e";
+          colour = "white";
+          break;
+        default:
+          break;
+      }
+      switch (category) {
+        case NMK_MVTL:
+        case NMK_ANKP:
+        case NMK_PRTL:
+        case NMK_MWAL:
+        case NMK_MWAR:
+          flip = 180.0;
+          break;
+        case NMK_SWWR:
+        case NMK_WRSL:
+        case NMK_WARL:
+          flip = -90.0;
+          break;
+        case NMK_SWWC:
+        case NMK_SWWL:
+        case NMK_WLSR:
+        case NMK_WALR:
+          flip = 90.0;
+          break;
+        default:
+          break;
+      }
     }
     if (n == 2) {
       dx = (((i != 2) && swap) || ((i == 2) && !swap)) ? -30.0 : 30.0;

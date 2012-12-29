@@ -155,7 +155,8 @@ s57val_t litchr[] = { [CHR_UNKN]={0, ""}, [CHR_F]={1, "F"}, [CHR_FL]={2, "Fl"}, 
   [CHR_IQ]={9, "IQ"}, [CHR_IVQ]={10, "IVQ"}, [CHR_IUQ]={11, "IUQ"}, [CHR_MO]={12, "Mo"}, [CHR_FFL]={13, "FFl"}, [CHR_FLLFL]={14, "FlLFl"}, [CHR_OCFL]={15, "OcFl"}, [CHR_FLFL]={16, "FLFl"}, [CHR_ALOC]={17, "Al.Oc"},
   [CHR_ALLFL]={18, "Al.LFl"}, [CHR_ALFL]={19, "Al.Fl"}, [CHR_ALGR]={20, "Al.Gr"}, [CHR_QLFL]={25, "Q+LFl"}, [CHR_VQLFL]={26, "VQ+LFl"}, [CHR_UQLFL]={27, "UQ+LFl"}, [CHR_AL]={28, "Al"}, [CHR_ALFFL]={29, "Al.FFl"}, {0, NULL} };
 s57val_t litvis[] = { {1, "high"}, {2, "low"}, {3, "faint"}, {4, "intensified"}, {5, "unintensified"}, {6, "restricted"}, {7, "obscured"}, {8, "part_obscured"}, {0, NULL} };
-s57val_t marsys[] = { {1, "iala-a"}, {2, "iala-b"}, {9, "none"}, {10, "other"}, {11, "cevni"}, {12, "riwr"}, {0, NULL} };
+s57val_t marsys[] = { [SYS_UNKN]={0, ""}, [SYS_IALA]={1, "iala-a"}, [SYS_IALB]={2, "iala-b"}, [SYS_NONE]={9, "none"}, [SYS_OTHR]={10, "other"}, [SYS_CEVN]={11, "cevni"}, [SYS_RIWR]={12, "riwr"},
+  [SYS_BWR2]={13, "bniwr2"}, [SYS_BNWR]={14, "bniwr"}, [SYS_PPWB]={15, "ppwbc"}, {0, NULL} };
 s57val_t natcon[] = { {1, "masonry"}, {2, "concreted"}, {3, "loose_boulders"}, {4, "hard-surfaced"}, {5, "unsurfaced"}, {6, "wooden"}, {7, "metal"}, {8, "grp"}, {9, "painted"}, {0, NULL} };
 s57val_t natsur[] = { {1, "mud"}, {2, "clay"}, {3, "silt"}, {4, "sand"}, {5, "stone"}, {6, "gravel"}, {7, "pebbles"}, {8, "cobbles"}, {9, "rock"}, {11, "lava"}, {14, "coral"}, {17, "shells"}, {18, "boulder"}, {0, NULL} };
 s57val_t natqua[] = { {1, "fine"}, {2, "medium"}, {3, "coarse"}, {4, "broken"}, {5, "sticky"}, {6, "soft"}, {7, "stiff"}, {8, "volcanic"}, {9, "calcareous"}, {10, "hard"}, {0, NULL} };
@@ -193,7 +194,7 @@ s57val_t verdat[] = { {1, "mlws"}, {2, "mllws"}, {3, "msl"}, {4, "llw"}, {5, "ml
   {16, "mhw"}, {17, "mhws"}, {18, "hw"}, {19, "amsl"}, {20, "hws"}, {21, "mhhw"}, {22, "eslw"}, {23, "lat"}, {24, "local"}, {25, "igld1985"}, {26, "mlw"}, {27, "llwlt"}, {28, "hhwlt"}, {29, "nhhw"}, {30, "hat"},
   {31, "llwrl"}, {32, "lhwrl"}, {33, "lmwrl"}, {34, "ehw_dglw"}, {35, "hshw_dhsw"}, {36, "rlwl_donau"}, {37, "hshw_donau"}, {38, "drlwrl_olr"}, {39, "rpwl"}, {40, "rnbl"}, {41, "ohio_rd"}, {0, NULL} };
 s57val_t addmrk[] = { [MRK_UNKN]={0, ""}, [MRK_TOPB]={1, "top_board"}, [MRK_BOTB]={2, "bottom_board"}, [MRK_RTRI]={3, "right_triangle"}, [MRK_LTRI]={4, "left_triangle"}, [MRK_BTRI]={5, "bottom_triangle"}, {0, NULL} };
-s57val_t bnkwtw[] = { {1, "left"}, {2, "right"}, {0, NULL} };
+s57val_t bnkwtw[] = { [BWW_UNKN]={0, ""}, [BWW_LEFT]={1, "left"}, [BWW_RGHT]={2, "right"}, {0, NULL} };
 s57val_t catbnk[] = { {1, "steep"}, {2, "flat"}, {3, "fastened"}, {4, "unfastened"}, {0, NULL} };
 s57val_t catnmk[] = { [NMK_UNKN]={0, ""}, [NMK_NENT]={1, "no_entry"}, [NMK_CLSA]={2, "closed_area"}, [NMK_NOVK]={3, "no_overtaking"}, [NMK_NCOV]={4, "no_convoy_overtaking"}, [NMK_NPAS]={5, "no_passing"},
   [NMK_NBRT]={6, "no_berthing"}, [NMK_NBLL]={7, "no_berthing_lateral_limit"}, [NMK_NANK]={8, "no_anchoring"}, [NMK_NMOR]={9, "no_mooring"}, [NMK_NTRN]={10, "no_turning"}, [NMK_NWSH]={11, "no_wash"},
