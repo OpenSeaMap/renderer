@@ -96,7 +96,7 @@ char *notice_map[] = { [NMK_UNKN]="notice", [NMK_NENT]="notice_a1", [NMK_CLSA]="
   [NMK_SLCP]="notice_sailboat", [NMK_UPCP]="notice_rowboat", [NMK_SLBP]="notice_sailboard", [NMK_RADI]="notice_vhf", [NMK_WTBP]="notice_waterbike", [NMK_HSCP]="notice_speedboat", [NMK_LBGP]="notice_slipway" };
 
 char *bniwr_map[] = { [NMK_NANK]="notice_bnank", [NMK_LMHR]="notice_blmhr",
-  [NMK_OPTR]="notice_or", [NMK_OPTL]="notice_ol", [NMK_KTPM]="notice_pm", [NMK_KTSM]="notice_sm", [NMK_KTMR]="notice_mr", [NMK_CRTP]="notice_cp", [NMK_CRTS]="notice_cs", [NMK_TRBM]="notice_bm", [NMK_RSPD]="notice_rs" };
+  [NMK_OPTR]="notice_bor", [NMK_OPTL]="notice_bol", [NMK_KTPM]="notice_bpm", [NMK_KTSM]="notice_bsm", [NMK_KTMR]="notice_bmr", [NMK_CRTP]="notice_bcp", [NMK_CRTS]="notice_bcs", [NMK_TRBM]="notice_bbm", [NMK_RSPD]="notice_brs" };
 
 char **cluster_map(Obja_t obj) {
   switch (obj) {
@@ -497,7 +497,6 @@ void renderNotice(Item_t *item) {
       switch (category) {
         case NMK_NANK:
         case NMK_LMHR:
-        case NMK_WRAL...NMK_WLAR:
         case NMK_KTPM...NMK_RSPD:
         {
           int bank = getAtt(obj, BNKWTW) != NULL ? getAtt(obj, BNKWTW)->val.val.e : 0;
