@@ -495,7 +495,7 @@ void renderNotice(Item_t *item) {
     if (symb == NULL) symb = notice_map[category];
     if ((system == SYS_BWR2) || (system == SYS_BNWR)) {
       int bank = getAtt(obj, BNKWTW) != NULL ? getAtt(obj, BNKWTW)->val.val.e : 0;
-      switch (bank) {
+/*      switch (bank) {
         case BWW_LEFT:
           base = "notice_blb";
           colour = "red";
@@ -509,7 +509,7 @@ void renderNotice(Item_t *item) {
           colour = "black";
           break;
       }
-      
+*/      
     } else {
       switch (category) {
         case NMK_NOVK...NMK_NWSH:
