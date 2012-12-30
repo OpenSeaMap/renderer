@@ -477,8 +477,10 @@ object_rules(platforms) {
 }
 
 object_rules(notices) {
-  if (zoom >= 14)
+  if (zoom >= 14) {
     symbol_notice;
+    if (has_object("light")) object(lights);
+  }
 }
 
 object_rules(marinas) {
