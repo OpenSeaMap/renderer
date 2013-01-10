@@ -1178,7 +1178,10 @@ char *charString(Item_t *item, char *type, int idx) {
               if (this->dir) strcpy(string2, "Dir.");
               strcat(string2, light_characters[this->chr]);
               if (strcmp(this->grp, "") != 0) {
-                sprintf(strchr(string2, 0), "(%s)", this->grp);
+                if (this->grp[0] == '(')
+                  sprintf(strchr(string2, 0), "%s", this->grp);
+                else
+                  sprintf(strchr(string2, 0), "(%s)", this->grp);
               } else {
                 if (strlen(string2) > 0) strcat(string2, ".");
               }
