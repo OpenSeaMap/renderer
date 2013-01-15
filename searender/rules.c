@@ -707,7 +707,7 @@ rules {
   type("lock_basin") object(locks);
   type("lock_basin_part") object(locks);
   type("gate") object(locks);
-  type("distance_mark") object(distances);
+//  type("distance_mark") object(distances);
   type("hulk") object(ports);
   type("landmark") object(landmarks);
   type("crane") object(ports);
