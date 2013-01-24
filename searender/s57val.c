@@ -170,7 +170,7 @@ s57val_t restrn[] = { {1, "no_anchoring"}, {2, "restricted_anchoring"}, {3, "no_
   {25, "no_stopping"}, {26, "no_landing"}, {27, "restricted_speed"}, {28, "overtaking prohibited"}, {29, "overtaking of convoys by convoys prohibited"}, {30, "passing or overtaking prohibited"},
   {31, "berthing prohibited"}, {32, "berthing restricted"}, {33, "making fast prohibited"}, {34, "making fast restricted"}, {35, "turning prohibited"}, {36, "restricted fairway depth"}, {0, NULL} };
 s57val_t siggen[] = { {1, "automatic"}, {2, "wave"}, {3, "hand"}, {4, "wind"}, {0, NULL} };
-s57val_t status[] = { {1, "permanent"}, {2, "occasional"}, {3, "recommended"}, {4, "not_in_use"}, {5, "intermittent"}, {6, "reserved"}, {7, "tempory"}, {8, "private"}, {9, "mandatory"}, {11, "extinguished"},
+s57val_t status[] = { {1, "permanent"}, {2, "occasional"}, {3, "recommended"}, {4, "not_in_use"}, {5, "intermittent"}, {6, "reserved"}, {7, "temporary"}, {8, "private"}, {9, "mandatory"}, {11, "extinguished"},
   {12, "illuminated"}, {13, "historic"}, {14, "public"}, {15, "synchronised"}, {16, "watched"}, {17, "unwatched"}, {18, "existence_doubtful"}, {19, "on_request"}, {20, "drop_away"}, {21, "rising"}, {22, "increasing"},
   {23, "decreasing"}, {24, "strong"}, {25, "good"}, {26, "moderately"}, {27, "poor"}, {0, NULL} };
 s57val_t surtyp[] = { {1, "sketch"}, {2, "controlled"}, {4, "examination"}, {5, "passage"}, {6, "remote"}, {0, NULL} };
