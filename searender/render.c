@@ -518,6 +518,56 @@ void renderNotice(Item_t *item) {
         default:
           break;
       }
+    } else if (system == SYS_PPWB) {
+      int bank = getAtt(obj, BNKWTW) != NULL ? getAtt(obj, BNKWTW)->val.val.e : 0;
+      if (bank != 0) {
+        switch (category) {
+          case NMK_WLAR:
+            if (bank == BNK_LEFT)
+              base = "notice_pwlarl";
+            else
+              base = "notice_pwlarr";
+            break;
+          case NMK_WRAL:
+            if (bank == BNK_LEFT)
+              base = "notice_pwrall";
+            else
+              base = "notice_pwralr";
+            break;
+          case NMK_KTPM:
+            if (bank == BNK_LEFT)
+              base = "notice_ppml";
+            else
+              base = "notice_ppmr";
+            break;
+          case NMK_KTSM:
+            if (bank == BNK_LEFT)
+              base = "notice_psml";
+            else
+              base = "notice_psmr";
+            break;
+          case NMK_KTMR:
+            if (bank == BNK_LEFT)
+              base = "notice_pmrl";
+            else
+              base = "notice_pmrr";
+            break;
+          case NMK_CRTP:
+          if (bank == BNK_LEFT)
+              base = "notice_pcpl";
+            else
+              base = "notice_pcpr";
+            break;
+          case NMK_CRTS:
+            if (bank == BNK_LEFT)
+              base = "notice_pcsl";
+            else
+              base = "notice_pcsr";
+            break;
+          default:
+            break;
+        }
+      }
     } else {
       symb = notice_map[category];
       switch (category) {
