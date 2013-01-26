@@ -150,6 +150,6 @@ while true; do
 		echo "$(date) Resumed" >> log.txt
 	fi
 	latest=$(cat datestamp)
-	sleep 14400
+	sleep 43200
 	previous=$latest
 done
