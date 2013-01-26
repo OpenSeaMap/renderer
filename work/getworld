@@ -1,6 +1,6 @@
 #!/bin/bash
 
 while true; do
-  ./Overpass/translate_xapi "*[seamark:type=*][@meta]" | ./Overpass/osm3s_query > tmp.osm 2> /dev/null
-  mv tmp.osm next.osm
+  ./Overpass/translate_xapi "*[seamark:type=*][@meta]" | ./Overpass/osm3s_query > xapi.osm 2> /dev/null
+  mv xapi.osm next.osm
 done
