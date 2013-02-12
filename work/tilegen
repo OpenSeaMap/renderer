@@ -47,7 +47,8 @@ tile () {
     if [ $(stat "$filename" | cut -f 8 -d' ') -lt 410 ]; then
       rm $filename
     else
-      echo "put $filename cache/$(echo $filename | sed -e s?/?-?g)" >> tmp/12-$tx-$ty.send
+#      echo "put $filename cache/$(echo $filename | sed -e s?/?-?g)" >> tmp/12-$tx-$ty.send
+      echo "put $filename $filename" >> tmp/12-$tx-$ty.send
     fi
   fi
 	./subtile 12 $tx $ty 256 512
@@ -63,7 +64,8 @@ tile91011() {
 		if [ $(stat tmp/$file | cut -f 8 -d' ') -ge 410 ]; then
 			mkdir -p $(dirname $tile)
 			mv -f tmp/$file $tile
-			echo "put $tile cache/$file" >> tmp/9-10-11.send
+#			echo "put $tile cache/$file" >> tmp/9-10-11.send
+			echo "put $tile $tile" >> tmp/9-10-11.send
 		else
 			if [ -e $tile ]; then
 				rm $tile

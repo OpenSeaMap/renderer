@@ -4,7 +4,8 @@ while true; do
 	sleep 1
 	if [ -e tmp/sending ]; then
 		backoff=0
-		while ! sftp -q -b tmp/sending malcolm@netz.smurf.noris.de; do
+#		while ! sftp -q -b tmp/sending malcolm@netz.smurf.noris.de; do
+		while ! sftp -q -b tmp/sending mherring@t1.openseamap.org; do
 			echo "SFTP failure - retrying"
 			touch hold
 			backoff=$(($backoff+1))
@@ -17,7 +18,8 @@ while true; do
 	fi
 	while [ -e tmp/deletions ]; do
 		mv tmp/deletions tmp/deleting
-    sftp -q -b tmp/deleting malcolm@netz.smurf.noris.de
+#    sftp -q -b tmp/deleting malcolm@netz.smurf.noris.de
+    sftp -q -b tmp/deleting mherring@t1.openseamap.org
 		rm tmp/deleting
 		sleep 1
 	done
