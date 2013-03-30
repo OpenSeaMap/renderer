@@ -127,7 +127,9 @@ feature_t *findFeature(pointer_t *ref) {
 
 int main (int argc, const char * argv[]) {
 
-//  sleep(2); // *** for debugger capture only
+#ifdef DEBUG
+  sleep(2); // *** for debugger capture
+#endif
   
   int args = 1;
   
