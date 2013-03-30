@@ -333,8 +333,10 @@ object_rules(separation) {
     line("stroke-width:20; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
   } else if (is_type("separation_lane")) {
     line_symbols("lane_arrow", 0.5, NULL, 0);
-  } else if (is_type("separation_boundary") || is_type("inshore_traffic_zone")) {
+  } else if (is_type("separation_boundary")) {
     line("stroke-width: 20; stroke-dasharray:40,40; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
+  } else if (is_type("inshore_traffic_zone")) {
+    line_symbols("restricted_line", 1.0, NULL, 0);
   }
 }
 
