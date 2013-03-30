@@ -333,7 +333,7 @@ object_rules(separation) {
     line("stroke-width:20; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
   } else if (is_type("separation_lane")) {
     line_symbols("lane_arrow", 0.5, NULL, 0);
-  } else if (is_type("separation_boundary")) {
+  } else if (is_type("separation_boundary") || is_type("inshore_traffic_zone")) {
     line("stroke-width: 20; stroke-dasharray:40,40; stroke-linecap:butt; stroke-linejoin:round; fill:none; stroke:#c480ff; stroke-opacity:0.5");
   }
 }
@@ -686,6 +686,7 @@ rules {
   type("separation_line") object(separation);
   type("separation_lane") object(separation);
   type("separation_boundary") object(separation);
+  type("inshore_traffic_zone") object(separation);
 //  type("sandwaves") object(areas);
   type("production_area") object(areas);
   type("fairway") object(areas);
