@@ -534,6 +534,7 @@ object_rules(harbours) {
       attribute_switch("category")
       attribute_case("marina|yacht") symbol("marina");
       attribute_case("marina_no_facilities") symbol("marina_nf");
+      attribute_case("fishing") symbol("fishing_harbour");
       attribute_default symbol("harbour");
       end_switch
     } else symbol("harbour");
