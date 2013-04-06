@@ -409,14 +409,17 @@ void renderCluster(Item_t *item, char *type) {
         drawText(item, stringValue(attv->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 0, 12);
       }
       else if ((attc != NULL) && (atto == NULL)) {
+        char *string=strdup(stringValue(attc->val));
+        string = realloc(string, strlen(string) + 3); strcat(string, "/-");
         renderSymbol(item, obja, "clear_v", "", "", CC, 0, 0, 0);
-        drawText(item, stringValue(attc->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 0, 12);
+        drawText(item, string, "font-family:Arial; font-weight:normal; font-size:60; text-anchor:middle", 0, 10);
       }
       else if ((attc != NULL) && (atto != NULL)) {
-        renderSymbol(item, obja, "clear_v", "", "", RC, 5, 0, 0);
-        drawText(item, stringValue(attc->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", -35, 12);
-        renderSymbol(item, obja, "clear_v", "", "", LC, -5, 0, 0);
-        drawText(item, stringValue(atto->val), "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 35, 12);
+        char *string=strdup(stringValue(attc->val));
+        string = realloc(string, strlen(string) + 2); strcat(string, "/");
+        string = realloc(string, strlen(string) + strlen(stringValue(atto->val)) + 1); strcat(string, stringValue(atto->val));
+        renderSymbol(item, obja, "clear_v", "", "", CC, 0, 0, 0);
+        drawText(item, string, "font-family:Arial; font-weight:normal; font-size:50; text-anchor:middle", 0, 8);
       }
     }
       break;
