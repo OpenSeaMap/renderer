@@ -89,8 +89,11 @@ s57val_t catpyl[] = { {1, "power"}, {2, "telecom"}, {3, "aerial"}, {4, "bridge"}
 s57val_t catqua[] = { {1, "a"}, {2, "b"}, {3, "c"}, {4, "d"}, {5, "e"}, {6, "not_evaluated"}, {0, NULL} };
 s57val_t catras[] = { {1, "surveillance"}, {2, "coast"}, {0, NULL} };
 s57val_t catrtb[] = { [RTB_UNKN]={0, ""}, [RTB_RAMK]={1, "ramark"}, [RTB_RACN]={2, "racon"}, [RTB_LDG]={3, "leading"}, {0, NULL} };
-s57val_t catros[] = { {1, "omnidirectional"}, {2, "directional"}, {3, "rotating_pattern"}, {4, "consol"}, {5, "rdf"}, {6, "qtg"}, {7, "aeronautical"}, {8, "decca"}, {9, "loran"}, {10, "dgps"}, {11, "toran"},
-  {12, "omega"}, {13, "syledis"}, {14, "chaika"}, {0, NULL} };
+s57val_t catros[] = { [ROS_UNKN]={0, ""}, [ROS_OMNI]={1, "omnidirectional"}, [ROS_DIRL]={2, "directional"}, [ROS_ROTP]={3, "rotating_pattern"}, [ROS_CNSL]={4, "consol"}, [ROS_RDF]={5, "rdf"}, [ROS_QTG]={6, "qtg"},
+  [ROS_AERO]={7, "aeronautical"}, [ROS_DECA]={8, "decca"}, [ROS_LORN]={9, "loran"}, [ROS_DGPS]={10, "dgps"}, [ROS_TORN]={11, "toran"}, [ROS_OMGA]={12, "omega"}, [ROS_SYLD]={13, "syledis"}, [ROS_CHKA]={14, "chaika"},
+  [ROS_PCOM]={15, "public_communication"}, [ROS_COMB]={16, "commercial_broadcast"}, [ROS_FACS]={17, "facsimile"}, [ROS_TIME]={18, "time_signal"}, [ROS_PAIS]={19, "ais"}, [ROS_SAIS]={20, "s-ais"}, [ROS_VAIS]={21, "v-ais"},
+  [ROS_VANC]={22, "v-ais_north_cardinal"}, [ROS_VASC]={23, "v-ais_south_cardinal"}, [ROS_VAEC]={24, "v-ais_east_cardinal"}, [ROS_VAWC]={25, "v-ais_west_cardinal"}, [ROS_VAPL]={26, "v-ais_port_lateral"},
+  [ROS_VASL]={27, "v-ais_starboard_lateral"}, [ROS_VAID]={28, "v-ais_isolated_danger"}, [ROS_VASW]={29, "v-ais_safe_water"}, [ROS_VASP]={30, "v-ais_special_purpose"}, [ROS_VAWK]={31, "v-ais_wreck"}, {0, NULL} };
 s57val_t cattrk[] = { {1, "fixed_marks"}, {2, "no_fixed_marks"}, {0, NULL} };
 s57val_t catrsc[] = { {1, "lifeboat"}, {2, "rocket"}, {3, "lifeboat_rocket"}, {4, "refuge_shipwrecked"}, {5, "refuge_intertidal"}, {6, "lifeboat_on_mooring"}, {7, "radio"}, {8, "first_aid"}, {0, NULL} };
 s57val_t catrea[] = { {1, "safety"}, {2, "no_anchoring"}, {3, "no_fishing"}, {4, "nature_reserve"}, {5, "bird_sanctuary"}, {6, "game_reserve"}, {7, "seal_sanctuary"}, {8, "degaussing_range"}, {9, "military"},

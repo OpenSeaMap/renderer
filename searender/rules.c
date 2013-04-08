@@ -52,6 +52,16 @@ object_rules(rtbs) {
   }
 }
 
+object_rules(rdos) {
+  if (zoom >= 11) symbol("radar_station");
+  if (zoom >= 15) {
+    use_object("radio_station");
+    if (attribute_test("category", "ais|s-ais"))
+      text("AIS", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    used
+  }
+}
+
 object_rules(lights) {
   if (is_type("light_major|light_minor|light")) {
     if (is_type("light_major")) {
@@ -65,6 +75,7 @@ object_rules(lights) {
       }
     }
     if (has_object("radar_transponder")) object(rtbs);
+    if (has_object("radio_station")) object(rdos);
   }
   if (has_object("light")) {
     int n = object_count("light");
@@ -89,7 +100,7 @@ object_rules(lights) {
       text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:start", 60, -10);
       free_string;
       if (has_item_attribute("name") && !has_item_attribute("fixme") && is_type("light_major|light_minor"))
-        text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -80);
+        text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -100);
     }
   }
 }
@@ -169,6 +180,7 @@ object_rules(mark_colours, char* default_shape) {
   }
   if (has_object("fog_signal")) object(fogs);
   if (has_object("radar_transponder")) object(rtbs);
+  if (has_object("radio_station")) object(rdos);
   if (has_object("radar_reflector")) object(refls, string);
   if (has_object("light")) object(lights);
   if ((zoom >= 15) && has_item_attribute("name")) {
@@ -390,6 +402,7 @@ object_rules(moorings) {
   }
   if (has_object("fog_signal")) object(fogs);
   if (has_object("radar_transponder")) object(rtbs);
+  if (has_object("radio_station")) object(rdos);
   if (has_object("light")) object(lights);
 }
 
@@ -412,7 +425,35 @@ object_rules(signals) {
   }
   if (has_object("fog_signal")) object(fogs);
   if (has_object("radar_transponder")) object(rtbs);
+  if (has_object("radio_station")) object(rdos);
   if (has_object("light")) object(lights);
+}
+
+object_rules(radios) {
+  if (zoom >= 12) {
+    symbol("signal_station");
+    symbol("radar_station");
+    if (is_type("radio_station") && has_attribute("category")) {
+      if (attribute_test("category", "v-ais|v-ais_north_cardinal|v-ais_south_cardinal|v-ais_east_cardinal|v-ais_west_cardinal|v-ais_port_lateral") ||
+          attribute_test("category", "v-ais_starboard_lateral|v-ais_isolated_danger|v-ais_safe_water|v-ais_special_purpose|v-ais_wreck")) {
+        text("V-AIS", "font-family:Arial; font-weight:normal; font-size:80; text-anchor:middle", 0.0, 80);
+        attribute_switch("category")
+        attribute_case("v-ais_north_cardinal") symbol_orientation("top_north", BC, 0, 25, 0);
+        attribute_case("v-ais_south_cardinal") symbol_orientation("top_south", BC, 0, 25, 0);
+        attribute_case("v-ais_east_cardinal") symbol_orientation("top_east", BC, 0, 25, 0);
+        attribute_case("v-ais_west_cardinal") symbol_orientation("top_west", BC, 0, 25, 0);
+        attribute_case("v-ais_port_lateral") symbol_orientation("top_can", BC, 0, 25, 0);
+        attribute_case("v-ais_starboard_lateral") symbol_orientation("top_cone_up", BC, 0, 25, 0);
+        attribute_case("v-ais_isolated_danger") symbol_orientation("top_isol", BC, 0, 25, 0);
+        attribute_case("v-ais_safe_water") symbol_orientation("top_sphere", BC, 0, 25, 0);
+        attribute_case("v-ais_special_purpose") symbol_orientation("top_saltire", BC, 0, 25, 0);
+        attribute_case("v-ais_wreck") symbol_orientation("top_cross", BC, 0, 25, 0);
+        end_switch
+      }
+    }
+    if (has_object("fog_signal")) object(fogs);
+    if (has_object("light")) object(lights);
+  }
 }
 
 object_rules(gauge) {
@@ -451,13 +492,14 @@ object_rules(landmarks) {
   if (!has_attribute("function") && !has_attribute("category") && has_object("light")) {
     symbol("lighthouse");
     if ((zoom >= 15) && has_item_attribute("name"))
-      text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -70);
+      text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -100);
   } else {
     if ((zoom >= 15) && has_item_attribute("name"))
       text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
   }
   if (has_object("fog_signal")) object(fogs);
   if (has_object("radar_transponder")) object(rtbs);
+  if (has_object("radio_station")) object(rdos);
   if (has_object("radar_station") && (zoom >= 12)) symbol("radar_station");
   if (has_object("light")) object(lights);
 }
@@ -475,6 +517,7 @@ object_rules(platforms) {
     text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
   if (has_object("fog_signal")) object(fogs);
   if (has_object("radar_transponder")) object(rtbs);
+  if (has_object("radio_station")) object(rdos);
   if (has_object("light")) object(lights);
 }
 
@@ -729,8 +772,8 @@ rules {
   type("waterway_gauge") object(gauge);
   type("coastguard_station") object(signals);
   type("platform") object(platforms);
-  type("radio_station") object(signals);
-  type("radar_station") object(signals);
+  type("radio_station") object(radios);
+  type("radar_station") object(radios);
   type("rescue_station") object(signals);
   type("pilot_boarding") object(signals);
   type("wreck") object(wrecks);
