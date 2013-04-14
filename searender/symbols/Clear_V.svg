@@ -2,11 +2,11 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"  
    version="1.1"
-   width="60"
-   height="60">
-  <symbol id="clear_v" width="60" height="60">
-    <circle r="30" cx="30" cy="30" style="fill:#ffffff;stroke:none" />
-    <path d="M 20,5 L 40,5 M 30,5 L 30,15 M 20,55 L 40,55 M 30,55 L 30,45"
+   width="80"
+   height="80">
+  <symbol id="clear_v" width="80" height="80">
+    <circle r="40" cx="40" cy="40" style="fill:#ffffff;stroke:none" />
+    <path d="M 30,5 L 50,5 M 40,5 L 40,15 M 30,75 L 50,75 M 40,75 L 40,65"
       style="stroke:#000000;stroke-width:4"/>
   </symbol>
   <use xlink:href="#clear_v" x="0" y="0" />

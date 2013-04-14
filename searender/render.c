@@ -412,7 +412,7 @@ void renderCluster(Item_t *item, char *type) {
         char *string=strdup(stringValue(attc->val));
         string = realloc(string, strlen(string) + 3); strcat(string, "/-");
         renderSymbol(item, obja, "clear_v", "", "", CC, 0, 0, 0);
-        drawText(item, string, "font-family:Arial; font-weight:normal; font-size:60; text-anchor:middle", 0, 10);
+        drawText(item, string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:middle", 0, 12);
         free(string);
       }
       else if ((attc != NULL) && (atto != NULL)) {
@@ -420,7 +420,7 @@ void renderCluster(Item_t *item, char *type) {
         string = realloc(string, strlen(string) + 2); strcat(string, "/");
         string = realloc(string, strlen(string) + strlen(stringValue(atto->val)) + 1); strcat(string, stringValue(atto->val));
         renderSymbol(item, obja, "clear_v", "", "", CC, 0, 0, 0);
-        drawText(item, string, "font-family:Arial; font-weight:normal; font-size:50; text-anchor:middle", 0, 8);
+        drawText(item, string, "font-family:Arial; font-weight:normal; font-size:60; text-anchor:middle", 0, 10);
         free(string);
       }
     }
