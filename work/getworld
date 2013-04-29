@@ -1,7 +1,7 @@
 #!/bin/bash
 
 while true; do
-  while [ $(ls tmp | grep -c '.osm') -gt 30 ]; do
+  while [ $(ls tmp | grep -c '\_12.osm') -gt 30 ]; do
     sleep 60
   done
   ./Overpass/translate_xapi "*[seamark:type=*][@meta]" | ./Overpass/osm3s_query > xapi.osm 2> /dev/null
