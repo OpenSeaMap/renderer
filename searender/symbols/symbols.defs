@@ -163,6 +163,12 @@
   <rect width="72" height="72" x="114" y="164" style="fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none" />
   <path d="m 155,200 c 0,2.76136 -2.23856,5 -5,5 -2.76144,0 -5,-2.23854 -5,-5 0,-2.76136 2.23856,-5 5,-5 2.76144,0 5,2.23854 5,5 z"/>
   </symbol>
+<!-- Clear H -->
+  <symbol id="clear_h" width="80" height="80">
+    <circle r="40" cx="40" cy="40" style="fill:#ffffff;stroke:none" />
+    <path d="M 5,30 L 5,50 M 5,40 L 15,40 M 75,30 L 75,50 M 75,40 L 65,40"
+      style="stroke:#000000;stroke-width:4"/>
+  </symbol>
 <!-- Clear V -->
   <symbol id="clear_v" width="80" height="80">
     <circle r="40" cx="40" cy="40" style="fill:#ffffff;stroke:none" />
