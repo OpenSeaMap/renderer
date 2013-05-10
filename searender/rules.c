@@ -505,7 +505,7 @@ object_rules(landmarks) {
 }
 
 object_rules(buildings) {
-  if ((zoom >= 14) && (has_attribute("function"))) {
+  if ((zoom >= 16) && (has_attribute("function"))) {
     attribute_switch("function")
     attribute_case("harbour-master") symbol("harbour_master");
     attribute_case("health|hospital") symbol("hospital");
