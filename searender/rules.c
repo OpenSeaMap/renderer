@@ -504,6 +504,16 @@ object_rules(landmarks) {
   if (has_object("light")) object(lights);
 }
 
+object_rules(buildings) {
+  if ((zoom >= 14) && (has_attribute("function"))) {
+    attribute_switch("function")
+    attribute_case("harbour-master") symbol("harbour_master");
+    attribute_case("health|hospital") symbol("hospital");
+    attribute_case("customs") symbol("customs");
+    end_switch
+  }
+}
+
 object_rules(platforms) {
   if (has_attribute("category")) {
     attribute_switch("category")
@@ -757,6 +767,7 @@ rules {
 //  type("distance_mark") object(distances);
   type("hulk") object(ports);
   type("landmark") object(landmarks);
+  type("building") object(buildings);
   type("crane") object(ports);
   type("mooring") object(moorings);
   type("notice") object(notices);
