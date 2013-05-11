@@ -145,7 +145,7 @@ s57val_t convis[] = { {1, "conspicuous"}, {2, "not_conspicuous"}, {0, NULL} };
 s57val_t dunits[] = { {1, "metres"}, {2, "fathoms_feet"}, {3, "fathoms"}, {4, "fathoms_fractions"}, {0, NULL} };
 s57val_t exclit[] = { {1, "24h"}, {2, "day"}, {3, "fog"}, {4, "night"}, {5, "warning"}, {6, "storm"}, {0, NULL} };
 s57val_t expsou[] = { {1, "within"}, {2, "shoaler"}, {3, "deeper"}, {0, NULL} };
-s57val_t functn[] = { [FNC_UNKN]={0, ""}, [FNC_HBRM]={2, "harbour-master"}, [FNC_CSTM]={3, "customs"}, [FNC_HLTH]={4, "health"}, [FNC_HOSP]={5, "hospital"}, [FNC_POST]={6, "post_office"}, [FNC_HOTL]={7, "hotel"},
+s57val_t functn[] = { [FNC_UNKN]={0, ""}, [FNC_HBRM]={2, "harbour_master"}, [FNC_CSTM]={3, "customs"}, [FNC_HLTH]={4, "health"}, [FNC_HOSP]={5, "hospital"}, [FNC_POST]={6, "post_office"}, [FNC_HOTL]={7, "hotel"},
   [FNC_RAIL]={8, "railway_station"}, [FNC_POLC]={9, "police_station"}, [FNC_WPOL]={10, "water-police_station"}, [FNC_PILO]={11, "pilot_office"}, [FNC_PILL]={12, "pilot_lookout"}, [FNC_BANK]={13, "bank"},
   [FNC_DIST]={14, "district_control"}, [FNC_TRNS]={15, "transit_shed"}, [FNC_FCTY]={16, "factory"}, [FNC_POWR]={17, "power_station"}, [FNC_ADMIN]={18, "administrative"}, [FNC_EDUC]={19, "educational"},
   [FNC_CHCH]={20, "church"}, [FNC_CHPL]={21, "chapel"}, [FNC_TMPL]={22, "temple"}, [FNC_PGDA]={23, "pagoda"}, [FNC_SHSH]={24, "shinto_shrine"}, [FNC_BTMP]={25, "buddhist_temple"}, [FNC_MOSQ]={26, "mosque"},
