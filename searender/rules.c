@@ -56,8 +56,23 @@ object_rules(rdos) {
   if (zoom >= 11) symbol("radar_station");
   if (zoom >= 15) {
     use_object("radio_station");
-    if (attribute_test("category", "ais|s-ais"))
-      text("AIS", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    attribute_switch("category")
+    attribute_case("ais|s-ais") text("AIS", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    attribute_case("omnidirectional") text("RC", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    attribute_case("directional") text("RD", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    attribute_case("rotating_pattern") text("RW", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    attribute_case("consol") text("Consol", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    attribute_case("rdf") text("RG", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    attribute_case("qtg") text("R", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    attribute_case("aeronautical") text("AeroRC", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    attribute_case("decca") text("Decca", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    attribute_case("loran") text("Loran", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    attribute_case("dgps") text("DGPS", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    attribute_case("toran") text("Toran", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    attribute_case("omega") text("Omega", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    attribute_case("syledis") text("Syledis", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    attribute_case("chiaka") text("Chiaka", "font-family:Arial; font-weight:normal; font-size:70; text-anchor:end", -30, -70);
+    end_switch
     used
   }
 }
