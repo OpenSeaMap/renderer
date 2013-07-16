@@ -11,7 +11,7 @@
 
 #ifndef S57VAL_H
 #define S57VAL_H
-
+#define _BSD_SOURCE
 #include "s57att.h"
 
 typedef int Enum_t;

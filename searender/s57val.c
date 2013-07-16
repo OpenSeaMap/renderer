@@ -9,6 +9,7 @@
 
 /* Conversion of S-57 ATTL & ATVL values to OSeaM attribute tag values */
 
+#include "s57val.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -16,7 +17,6 @@
 #include <iconv.h>
 #include <unistd.h>
 
-#include "s57val.h"
 
 typedef const struct {
   Enum_t atvl;
@@ -360,7 +360,7 @@ char *decodeValue(Attl_t attl, char *atvl) {
     case S: {
       size_t in = strlen(atvl);
       size_t out = 999;
-      bzero(outstr, out);
+      memset(outstr,0, out);
       char *to = outstr;
       iconv(conv, &atvl, &in, &to, &out);
       for (int i = 0; outstr[i] != 0; i++) {
@@ -435,7 +435,7 @@ char *stringValue(Val_t val) {
 }
 
 Val_t convertValue(char *val, Atta_t key) {
-  Val_t value = {0, S, 0};
+  Val_t value = {0, S, {0}};
   char *tok;
   value.key = key;
   s57key_t *valkey = &keys[value.key];

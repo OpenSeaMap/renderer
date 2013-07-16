@@ -11,6 +11,7 @@
 #ifndef map_h
 #define map_h
 
+#define _BSD_SOURCE
 #ifndef system_h
 #define system_h
 #include <stdio.h>

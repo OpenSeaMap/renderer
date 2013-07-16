@@ -10,6 +10,11 @@
 #ifndef searender_render_h
 #define searender_render_h
 
+#define _BSD_SOURCE
+#ifndef __USE_BSD
+ #define __USE_BSD
+#endif
+#include <strings.h>
 #ifndef system_h
 #define system_h
 #include <stdio.h>
