@@ -500,7 +500,7 @@ object_rules(landmarks) {
         symbol("mast");
     }
     attribute_case("cross") symbol("land_cross");
-    attribute_case("radar_scanner") symbol("land_tower");
+    attribute_case("radar_scanner") symbol("radio_mast");
     attribute_default symbol(attribute("category"));
     end_switch
   }
@@ -563,11 +563,22 @@ object_rules(locks) {
 }
 
 object_rules(distances) {
-  if ((zoom>=16) && (has_attribute("category"))) {
-    attribute_switch("category")
-    attribute_case("installed") symbol("distance_i");
-    attribute_default symbol("distance_u");
-    end_switch
+  if ((zoom>=16) && has_attribute("category") && !(attribute_test("category", "not_installed"))) {
+    symbol("distance_i");
+    if (has_attribute("distance")) {
+      make_string(attribute("distance"));
+      if (has_attribute("units")) {
+        attribute_switch("units")
+        attribute_case("metres") add_string("m")
+        attribute_case("hectometres") add_string("hm")
+        attribute_case("kilolmeters") add_string("km")
+        attribute_case("statute_miles") add_string("M")
+        attribute_case("nautical_miles") add_string("NM")
+        end_switch
+      }
+      text(string, "font-family:Arial; font-weight:normal; font-size:50; text-anchor:middle", 0, 40);
+      free_string;
+    }
   }
 }
 
@@ -779,7 +790,7 @@ rules {
   type("lock_basin") object(locks);
   type("lock_basin_part") object(locks);
   type("gate") object(locks);
-//  type("distance_mark") object(distances);
+  type("distance_mark") object(distances);
   type("hulk") object(ports);
   type("landmark") object(landmarks);
   type("building") object(buildings);
