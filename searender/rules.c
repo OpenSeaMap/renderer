@@ -558,25 +558,30 @@ object_rules(marinas) {
 }
 
 object_rules(locks) {
-  if ((zoom>=13) && is_type("lock_basin|lock_basin_part")) symbol("lock");
-  if ((zoom>=15) && is_type("gate")) symbol("lock_gate");
+  if ((zoom >= 13) && is_type("lock_basin|lock_basin_part")) symbol("lock");
+  if ((zoom >= 15) && is_type("gate")) symbol("lock_gate");
 }
 
 object_rules(distances) {
-  if ((zoom>=16) && has_attribute("category") && !(attribute_test("category", "not_installed"))) {
-    symbol("distance_i");
-    if (has_attribute("distance")) {
-      make_string(attribute("distance"));
+  if (zoom >= 14) {
+    if (has_attribute("category") && !(attribute_test("category", "not_installed")))
+      symbol("distance_i");
+    else
+      symbol("distance_u");
+    if (has_attribute("distance") && (zoom >= 15)) {
+      make_string("");
       if (has_attribute("units")) {
         attribute_switch("units")
-        attribute_case("metres") add_string("m")
-        attribute_case("hectometres") add_string("hm")
-        attribute_case("kilolmeters") add_string("km")
-        attribute_case("statute_miles") add_string("M")
-        attribute_case("nautical_miles") add_string("NM")
+        attribute_case("metres") add_string("m ")
+        attribute_case("feet") add_string("ft ")
+        attribute_case("hectometres") add_string("hm ")
+        attribute_case("kilometres") add_string("km ")
+        attribute_case("statute_miles") add_string("M ")
+        attribute_case("nautical_miles") add_string("NM ")
         end_switch
       }
-      text(string, "font-family:Arial; font-weight:normal; font-size:50; text-anchor:middle", 0, 40);
+      add_string(attribute("distance"));
+      text(string, "font-family:Arial; font-weight:normal; font-size:60; text-anchor:middle", 0, 45);
       free_string;
     }
   }
