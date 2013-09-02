@@ -54,6 +54,9 @@ typedef enum {
   FOG_UNKN, FOG_EXPL, FOG_DIA, FOG_SIRN, FOG_NAUT, FOG_REED, FOG_TYPH, FOG_BELL, FOG_WHIS, FOG_GONG, FOG_HORN
 } CatFOG_t;
 typedef enum {
+  DIS_UNKN, DIS_NINS, DIS_POLE, DIS_BORD, DIS_SHUK
+} CatDIS_t;
+typedef enum {
   LIT_NONE, LIT_DIR, LIT_LEAD, LIT_AERO, LIT_AIR, LIT_FOG, LIT_FLDL, LIT_STRP, LIT_SUBS, LIT_SPOT, LIT_FRNT, LIT_REAR, LIT_LOWR,
   LIT_UPPR, LIT_MOIR, LIT_EMRG, LIT_BRNG, LIT_HORI, LIT_VERT
 } CatLIT_t;
@@ -111,6 +114,8 @@ typedef enum {
   } MarSYS;
 typedef enum { BWW_UNKN, BWW_LEFT, BWW_RGHT
 } BnkWTW;
+typedef enum { UNI_UNKN, UNI_MTR, UNI_FEET, UNI_KMTR, UNI_HMTR, UNI_SMIL, UNI_NMIL
+} UniUNI;
 
 extern void set_conv(char*);                      // Initialise character conversions for S57 file input
 

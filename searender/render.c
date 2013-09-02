@@ -898,7 +898,7 @@ bool compareLiterals(char *values, char *cases) {
 }
 
 bool compareValues(Att_t *val, char *cases) {
-  if ((val == NULL) || (val->val.val.e == 0)) return false;
+  if (val == NULL) return false;
   return compareLiterals(stringValue((val->val)), cases);
 }
 

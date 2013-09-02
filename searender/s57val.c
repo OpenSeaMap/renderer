@@ -49,7 +49,7 @@ s57val_t catcon[] = { {1, "aerial"}, {2, "belt"}, {0, NULL} };
 s57val_t catcov[] = { {1, "coverage"}, {2, "no_coverage"}, {0, NULL} };
 s57val_t catcrn[] = { {1, "non-specific"}, {2, "container"}, {3, "sheerlegs"}, {4, "travelling"}, {5, "a-frame"}, {0, NULL} };
 s57val_t catdam[] = { {1, "weir"}, {2, "dam"}, {3, "flood_barrage"}, {0, NULL} };
-s57val_t catdis[] = { {1, "not_installed"}, {2, "pole"}, {3, "board"}, {4, "unknown_shape"}, {0, NULL} };
+s57val_t catdis[] = { [DIS_UNKN]={0, ""}, [DIS_NINS]={1, "not_installed"}, [DIS_POLE]={2, "pole"}, [DIS_BORD]={3, "board"}, [DIS_SHUK]={4, "unknown_shape"}, {0, NULL} };
 s57val_t catdoc[] = { {1, "tidal"}, {2, "non-tidal"}, {0, NULL} };
 s57val_t catdpg[] = { {1, "general"}, {2, "chemical"}, {3, "nuclear"}, {4, "explosives"}, {5, "spoil"}, {6, "vessel"}, {0, NULL} };
 s57val_t catfnc[] = { {1, "fence"}, {2, "muir"}, {3, "hedge"}, {4, "wall"}, {0, NULL} };
@@ -152,7 +152,7 @@ s57val_t functn[] = { [FNC_UNKN]={0, ""}, [FNC_HBRM]={2, "harbour_master"}, [FNC
   [FNC_MRBT]={27, "marabout"}, [FNC_LOOK]={28, "lookout"}, [FNC_COMM]={29, "communication"}, [FNC_TV]={30, "television"}, [FNC_RADO]={31, "radio"}, [FNC_RADR]={32, "radar"}, [FNC_LGHT]={33, "light_support"},
   [FNC_MCWV]={34, "microwave"}, [FNC_COOL]={35, "cooling"}, [FNC_OBS]={36, "observation"}, [FNC_TMBL]={37, "time_ball"}, [FNC_CLOK]={38, "clock"}, [FNC_CTRL]={39, "control"}, [FNC_ASHM]={40, "airship_mooring"},
   [FNC_STAD]={41, "stadium"}, [FNC_BUSS]={42, "bus_station"}, {0, NULL} };
-s57val_t hunits[] = { {1, "metres"}, {2, "feet"}, {3, "kilometres"}, {4, "hectometres"}, {5, "statute_miles"}, {6, "nautical_miles"}, {0, NULL} };
+s57val_t hunits[] = { [UNI_UNKN]={0, ""}, [UNI_MTR]={1, "metres"}, [UNI_FEET]={2, "feet"}, [UNI_KMTR]={3, "kilometres"}, [UNI_HMTR]={4, "hectometres"}, [UNI_SMIL]={5, "statute_miles"}, [UNI_NMIL]={6, "nautical_miles"}, {0, NULL} };
 s57val_t jrsdtn[] = { {1, "international"}, {2, "national"}, {3, "national_sub-division"}, {0, NULL} };
 s57val_t litchr[] = { [CHR_UNKN]={0, ""}, [CHR_F]={1, "F"}, [CHR_FL]={2, "Fl"}, [CHR_LFL]={3, "LFl"}, [CHR_Q]={4, "Q"}, [CHR_VQ]={5, "VQ"}, [CHR_UQ]={6, "UQ"}, [CHR_ISO]={7, "Iso"}, [CHR_OC]={8, "Oc"},
   [CHR_IQ]={9, "IQ"}, [CHR_IVQ]={10, "IVQ"}, [CHR_IUQ]={11, "IUQ"}, [CHR_MO]={12, "Mo"}, [CHR_FFL]={13, "FFl"}, [CHR_FLLFL]={14, "FlLFl"}, [CHR_OCFL]={15, "OcFl"}, [CHR_FLFL]={16, "FLFl"}, [CHR_ALOC]={17, "Al.Oc"},
