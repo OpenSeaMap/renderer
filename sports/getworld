@@ -1,0 +1,25 @@
+#!/bin/bash
+
+while true; do
+	sleep 43200
+	cat types.txt | while read type; do
+		touch sort.osm
+		while [ -e sort.osm ]; do
+    	./Overpass/translate_xapi "*[$type][@meta]" | ./Overpass/osm3s_query > xapi.osm 2> /dev/null
+			if osmosis -q --rx file=xapi.osm --s --wx file=sort.osm 2> /dev/null; then
+				rm xapi.osm
+				if [ -e merge.osm ]; then
+					osmosis -q --rx file=merge.osm --rx file=sort.osm --m --wx file=tmp.osm 2> /dev/null
+					mv tmp.osm merge.osm
+					rm sort.osm
+				else
+					mv sort.osm merge.osm
+				fi
+			else
+				touch sort.osm
+			fi
+		done
+	done
+	mv merge.osm next.osm
+	scp next.osm mini5.local:~/renderer/sports/
+done
