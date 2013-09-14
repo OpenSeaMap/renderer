@@ -1,33 +1,5 @@
 #!/bin/bash
 
-download () {
-	echo "$(date) fetching next db file" >> log.txt
-	if [ -e merge.osm ]; then rm merge.osm; fi
-	while [ ! -e merge.osm ]; do
-		cat types.txt | while read type; do
-			touch sort.osm
-			while [ -e sort.osm ]; do
-        ./Overpass/translate_xapi "*[$type][@meta]" | ./Overpass/osm3s_query > xapi.osm 2> /dev/null
-				if osmosis -q --rx file=xapi.osm --s --wx file=sort.osm 2> /dev/null; then
-					rm xapi.osm
-					if [ -e merge.osm ]; then
-						osmosis -q --rx file=merge.osm --rx file=sort.osm --m --wx file=tmp.osm 2> /dev/null
-						mv tmp.osm merge.osm
-						rm sort.osm
-					else
-						mv sort.osm merge.osm
-					fi
-				else
-					echo "$(date) bad data" >> log.txt
-					touch sort.osm
-				fi
-			done
-		done
-	done
-	mv merge.osm next.osm
-	echo "$(date) successful download" >> log.txt
-}
-
 search () {
   zoom[$1]=$(($1+1))
   x[$1]=$(($2*2))
@@ -115,10 +87,12 @@ fi
 
 while true; do
 	if [ ! -e next.osm ]; then
-		download
+		sleep 300
 	fi
+	sleep 60
 	cp next.osm world.osm
 	mv next.osm tmp/panel-z0.osm
+	echo "$(date) Parse world data" >> log.txt
 	search 0 0 0
 	latest=$previous
 	timestamp=$(../util/checkdate world.osm)
@@ -139,6 +113,5 @@ while true; do
 		echo "$(date) Resumed" >> log.txt
 	fi
 	latest=$(cat datestamp)
-	sleep 43200
 	previous=$latest
 done
