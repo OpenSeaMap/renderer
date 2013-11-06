@@ -170,8 +170,8 @@ s57val_t quasou[] = { {1, "known"}, {2, "unknown"}, {3, "doubtful"}, {4, "unreli
 s57val_t restrn[] = { {1, "no_anchoring"}, {2, "restricted_anchoring"}, {3, "no_fishing"}, {4, "restricted_fishing"}, {5, "no_trawling"}, {6, "restricted_trawling"}, {7, "no_entry"}, {8, "restricted_entry"},
   {9, "no_dredging"}, {10, "restricted_dredging"}, {11, "no_diving"}, {12, "restricted_diving"}, {13, "no_wake"}, {14, "to_be_avoided"}, {15, "no_construction"}, {16, "no_discharging"}, {17, "restricted_discharging"},
   {18, "no_ exploration_development"}, {19, "restricted_exploration_development"}, {20, "no_drilling"}, {21, "restricted_drilling"}, {22, "no_historical_artifacts_removal"}, {23, "no_lightering"}, {24, "no_dragging"},
-  {25, "no_stopping"}, {26, "no_landing"}, {27, "restricted_speed"}, {28, "overtaking prohibited"}, {29, "overtaking of convoys by convoys prohibited"}, {30, "passing or overtaking prohibited"},
-  {31, "berthing prohibited"}, {32, "berthing restricted"}, {33, "making fast prohibited"}, {34, "making fast restricted"}, {35, "turning prohibited"}, {36, "restricted fairway depth"}, {0, NULL} };
+  {25, "no_stopping"}, {26, "no_landing"}, {27, "restricted_speed"}, {28, "no_overtaking"}, {29, "no_convoy_overtaking"}, {30, "no_passing_overtaking"},
+  {31, "no_berthing"}, {32, "restricted_berthing"}, {33, "no_making_fast"}, {34, "restricted_making_fast"}, {35, "no_turning"}, {36, "restricted_fairway_depth"}, {0, NULL} };
 s57val_t siggen[] = { {1, "automatic"}, {2, "wave"}, {3, "hand"}, {4, "wind"}, {0, NULL} };
 s57val_t status[] = { {1, "permanent"}, {2, "occasional"}, {3, "recommended"}, {4, "not_in_use"}, {5, "intermittent"}, {6, "reserved"}, {7, "temporary"}, {8, "private"}, {9, "mandatory"}, {11, "extinguished"},
   {12, "illuminated"}, {13, "historic"}, {14, "public"}, {15, "synchronised"}, {16, "watched"}, {17, "unwatched"}, {18, "existence_doubtful"}, {19, "on_request"}, {20, "drop_away"}, {21, "rising"}, {22, "increasing"},

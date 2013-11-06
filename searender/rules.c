@@ -78,16 +78,18 @@ object_rules(rdos) {
 }
 
 object_rules(lights) {
-  if (is_type("light_major|light_minor|light")) {
+  if (is_type("light_major|light_minor|light|pile")) {
     if (is_type("light_major")) {
       symbol("light_major");
       if (has_object("fog_signal")) object(fogs);
-    }
-    if (is_type("light_minor|light")) {
+    } else if (is_type("light_minor|light")) {
       if ((zoom >= 14) || ((zoom >= 11) && (has_object("radar_transponder")))) {
         symbol("light_minor");
         if (has_object("fog_signal")) object(fogs);
       }
+    } else if (is_type("pile")) {
+      if (has_object("light") && (zoom >= 14)) symbol("light_minor");
+      else if (zoom >= 16) symbol("post");
     }
     if (has_object("radar_transponder")) object(rtbs);
     if (has_object("radio_station")) object(rdos);
@@ -336,6 +338,14 @@ object_rules(shoreline) {
   int ref;
   if ((zoom >= 12) && has_attribute("category")) {
     attribute_switch("category")
+    attribute_case("slipway") {
+      area("fill:#ffe000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1");
+      if ((zoom >= 16) && has_object("small_craft_facility")) {
+        use_object("small_craft_facility")
+        if (attribute_test("category", "slipway")) symbol_cluster("small_craft_facility");
+        used
+      }
+    }
     attribute_case("training_wall") {
       if (attribute_test("water_level", "covers")) {
         ref = line("stroke-width:10; stroke-dasharray:40,40; stroke-linecap:butt; stroke-linejoin:round; stroke:#000000; fill:none");
@@ -525,6 +535,10 @@ object_rules(buildings) {
     attribute_case("harbour_master") symbol("harbour_master");
     attribute_case("health|hospital") symbol("hospital");
     attribute_case("customs") symbol("customs");
+    attribute_case("pagoda") symbol("temple");
+    attribute_case("mosque") symbol("minaret");
+    attribute_case("marabout") symbol("spire");
+    attribute_default symbol(attribute("function"));
     end_switch
   }
 }
@@ -554,6 +568,11 @@ object_rules(notices) {
 }
 
 object_rules(marinas) {
+  if (has_object("shoreline_construction")) {
+    use_object("shoreline_construction")
+    if (attribute_test("category", "slipway")) area("fill:#ffe000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1");
+    used
+  }
   if (zoom >= 16) symbol_cluster("small_craft_facility");
 }
 
@@ -703,11 +722,14 @@ object_rules(areas) {
 }
 
 object_rules(obstructions) {
-  if (is_type("pipeline_submarine")) {
-    if (is_area) {
-      if (zoom >= 12) area("stroke:#000000;stroke-width:5;stroke-dasharray:5,5;fill:none");
-    } else if (is_line) {
-      if (zoom >= 12) line("stroke:#000000;stroke-width:5;stroke-dasharray:5,5;fill:none");
+  if (is_type("obstruction") && (zoom >= 12)) {
+    if (has_attribute("category")) {
+      attribute_switch("category")
+      attribute_case("boom") {
+        int ref = line("stroke:#000000;stroke-width:5;stroke-dasharray:20,20;fill:none");
+        if (zoom >= 15) line_text("Boom", "font-family:Arial; font-weight:normal; font-size:80; text-anchor:middle", 0.5, -20, ref);
+      }
+      end_switch;
     }
   } else if ((is_type("rock")) && (zoom>=14)) {
     if (has_attribute("water_level")) {
@@ -804,9 +826,10 @@ rules {
   type("notice") object(notices);
   type("small_craft_facility") object(marinas);
   type("bridge") object(bridges);
-  type("light_major") object(lights);
+  type("pile") object(lights);
   type("light_minor") object(lights);
   type("light") object(lights);
+  type("light_major") object(lights);
   type("light_vessel") object(floats);
   type("light_float") object(floats);
   type("signal_station_traffic") object(signals);
