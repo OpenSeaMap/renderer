@@ -635,9 +635,10 @@ object_rules(harbours) {
   if ((zoom >= 12) && is_type("harbour")) {
     if (has_attribute("category")) {
       attribute_switch("category")
+      attribute_case("fishing") symbol("fishing_harbour");
+      attribute_case("roro|ferry|naval|tanker|passenger|container|bulk|cargo") symbol("harbour");
       attribute_case("marina|yacht") symbol("marina");
       attribute_case("marina_no_facilities") symbol("marina_nf");
-      attribute_case("fishing") symbol("fishing_harbour");
       attribute_default symbol("harbour");
       end_switch
     } else symbol("harbour");

@@ -70,7 +70,7 @@ char *osmtypes[OBJSIZ] = {
   [WRECKS]="wreck", [TS_FEB]="tidal_stream", [M_ACCY]="", [M_CSCL]="", [M_COVR]="coverage", [M_HDAT]="", [M_HOPA]="", [M_NPUB]="", [M_NSYS]="", [M_PROD]="", [M_QUAL]="data_quality",
   [M_SDAT]="", [M_SREL]="", [M_UNIT]="", [M_VDAT]="", [C_AGGR]="", [C_ASSO]="", [C_STAC]="", [$AREAS]="", [$LINES]="", [$CSYMB]="", [$COMPS]="", [$TEXTS]="",
   [NOTMRK]="notice", [WTWAXS]="waterway_axis", [WTWPRF]="waterway_profile", [BRGARE]="bridge_area", [BUNSTA]="bunker_station", [COMARE]="communication_area", [HRBBSN]="harbour_basin",
-  [LOKARE]="lock_area", [LKBSPT]="lock_basin_part", [PRTARE]="port_area", [BCNWTW]="beacon_waterway", [BOYWTW]="buoy_waterway", [REFDMP]="refuse_dump", [RTPLPT]="route_planning_point",
+  [LOKARE]="lock_area", [LKBSPT]="lock_basin_part", [PRTARE]="port_area", [BCNWTW]="beacon_lateral", [BOYWTW]="buoy_lateral", [REFDMP]="refuse_dump", [RTPLPT]="route_planning_point",
   [TERMNL]="terminal", [TRNBSN]="turning_basin", [WTWARE]="waterway_area", [WTWGAG]="waterway_gauge", [TISDGE]="time_schedule", [VEHTRF]="vehicle_transfer", [EXCNST]="exceptional_structure",
   [LG_SDM]="", [LG_VSP]="", [LITMAJ]="light_major", [LITMIN]="light_minor"
 };
