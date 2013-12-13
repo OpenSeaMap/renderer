@@ -59,7 +59,7 @@ s57val_t catfog[] = { [FOG_UNKN]={0, ""}, [FOG_EXPL]={1, "explosive"}, [FOG_DIA]
   [FOG_TYPH]={6, "tyfon"}, [FOG_BELL]={7, "bell"}, [FOG_WHIS]={8, "whistle"}, [FOG_GONG]={9, "gong"}, [FOG_HORN]={10, "horn"}, {0, NULL} };
 s57val_t catfor[] = { {1, "castle"}, {2, "fort"}, {3, "battery"}, {4, "blockhouse"}, {5, "martello_tower"}, {6, "redoubt"}, {0, NULL} };
 s57val_t catgat[] = { {1, "general"}, {2, "flood_barrage"}, {3, "caisson"}, {4, "lock"}, {5, "dyke"}, {6, "sluice"}, {0, NULL} };
-s57val_t cathaf[] = { {1, "roro"}, {2, "timber"}, {3, "ferry"}, {4, "fishing"}, {5, "yacht"}, {6, "naval"}, {7, "tanker"}, {8, "passenger"}, {9, "shipyard"}, {10, "container"}, {11, "bulk"},
+s57val_t cathaf[] = { {1, "roro"}, {2, "timber"}, {3, "ferry"}, {4, "fishing"}, {5, "marina"}, {6, "naval"}, {7, "tanker"}, {8, "passenger"}, {9, "shipyard"}, {10, "container"}, {11, "bulk"},
   {12, "syncrolift"}, {13, "straddle_carrier"}, {14, "marina"}, {16, "service_repair"}, {17, "quarantine"}, {18, "marina_no_facilities"}, {0, NULL} };
 s57val_t cathlk[] = { {1, "floating_restaurant"}, {2, "historic"}, {3, "museum"}, {4, "accommodation"}, {5, "floating_breakwater"}, {6, "casino_boat"}, {0, NULL} };
 s57val_t catice[] = { {1, "fast"}, {2, "sea"}, {3, "growler"}, {4, "pancake"}, {5, "glacier"}, {6, "peak"}, {7, "pack"}, {8, "polar"}, {0, NULL} };
