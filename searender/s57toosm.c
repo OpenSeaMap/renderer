@@ -30,6 +30,7 @@ typedef struct REFERENCE {
   int ornt;
   int usag;
   int topi;
+  int mask;
   struct REFERENCE *next;
 } reference_t;
 
@@ -297,6 +298,8 @@ int main (int argc, const char * argv[]) {
           ref->ornt = atoi(val);
         } else if (strcmp(ele, "USAG") == 0) {
           ref->usag = atoi(val);
+        } else if (strcmp(ele, "MASK") == 0) {
+          ref->mask = atoi(val);
         } else if (strcmp(ele, "RIND") == 0) {
           pointer_t *link = calloc(1, sizeof(pointer_t));
           link->agen = agen;
@@ -423,7 +426,7 @@ int main (int argc, const char * argv[]) {
             if (eref->usag == 2) {
               if (inners == NULL) {
                 inners = eref;
-                members[multi++] = id;
+                members[multi++] = fptr->id;
               }
             } else {
               if (eref->ornt == 2) {
