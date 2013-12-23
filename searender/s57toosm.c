@@ -544,16 +544,16 @@ int main (int argc, const char * argv[]) {
             }
             ids[i++] = findNode(enode->ref->next->rcid, enode->ref->next->rcnm)->id;
             do {
-              if (first == 0) first = ids[i];
               if (ids[--i] != last)
                 printf(" <nd ref='%ld'/>\n", ids[i]);
+              if (first == 0) first = ids[i];
             } while (i > 0);
             last = ids[0];
           } else {
             cnode = findNode(enode->ref->rcid, enode->ref->rcnm);
-            if (first == 0) first = cnode->id;
             if (cnode->id != last)
               printf(" <nd ref='%ld'/>\n", cnode->id);
+            if (first == 0) first = cnode->id;
             coordinate_t *xy;
             for (xy = enode->xy; xy != NULL; xy = xy->next) {
               printf(" <nd ref='%ld'/>\n", xy->id);
@@ -567,6 +567,7 @@ int main (int argc, const char * argv[]) {
             printf("</way>\n");
             printf("<way id='%ld' version='1'>\n", --id);
             members[multi++] = id;
+            first = 0;
           }
         }
         inners = inners->next;
