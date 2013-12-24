@@ -150,6 +150,7 @@ int main (int argc, const char * argv[]) {
   
 	while (fgets(line, 1000, stdin) != NULL) {
 		ele = strtok(line, " ");
+    if (ele == NULL) continue;
     if (strcmp(ele, "Field") == 0) {
       ele = strtok(NULL, " :");
     }

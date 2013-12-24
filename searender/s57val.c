@@ -285,7 +285,7 @@ s57key_t keys[] = {
   [TS_TSV]={160, A, NULL}, [T_ACWL]={161, E, NULL}, [T_HWLW]={162, A, NULL}, [T_MTOD]={163, E, NULL}, [T_THDF]={164, A, NULL}, [T_TINT]={165, I, NULL}, [T_TSVL]={166, A, NULL}, [T_VAHC]={167, A, NULL},
   [TIMEND]={168, A, NULL}, [TIMSTA]={169, A, NULL}, [$TINTS]={170, E, NULL}, [TOPSHP]={171, E, topshp}, [TRAFIC]={172, E, trafic}, [VALACM]={173, F, NULL}, [VALDCO]={174, F, NULL}, [VALLMA]={175, F, NULL},
   [VALMAG]={176, F, NULL}, [VALMXR]={177, F, NULL}, [VALNMR]={178, F, NULL}, [VALSOU]={179, F, NULL}, [VERACC]={180, F, NULL}, [VERCLR]={181, F, NULL}, [VERCCL]={182, F, NULL}, [VERCOP]={183, F, NULL},
-  [VERCSA]={184, F, NULL}, [VERDAT]={185, E, NULL}, [VERLEN]={186, F, NULL}, [WATLEV]={187, E, watlev}, [CAT_TS]={188, E, cat_ts}, [PUNITS]={189, E, punits}, [NINFOM]={300, S, NULL}, [NOBJNM]={301, S, NULL},
+  [VERCSA]={184, F, NULL}, [VERDAT]={185, E, verdat}, [VERLEN]={186, F, NULL}, [WATLEV]={187, E, watlev}, [CAT_TS]={188, E, cat_ts}, [PUNITS]={189, E, punits}, [NINFOM]={300, S, NULL}, [NOBJNM]={301, S, NULL},
   [NPLDST]={302, S, NULL}, [$NTXST]={303, S, NULL}, [NTXTDS]={304, S, NULL}, [HORDAT]={400, E, NULL}, [POSACC]={401, F, NULL}, [QUAPOS]={402, E, quapos}, [CLSDNG]={17055, E, clsdng}, [DIRIMP]={17056, L, dirimp},
   [DISBK1]={17057, F, NULL}, [DISBK2]={17058, F, NULL}, [DISIPU]={17059, F, NULL}, [DISIPD]={17060, F, NULL}, [ELEVA1]={17061, F, NULL}, [ELEVA2]={17062, F, NULL}, [FNCTNM]={17063, E, fnctnm},
   [WTWDIS]={17064, F, NULL}, [BUNVES]={17065, E, bunves}, [COMCTN]={17073, S, NULL}, [HORCLL]={17074, F, NULL}, [HORCLW]={17075, F, NULL}, [TRSHGD]={17076, L, trshgd}, [UNLOCD]={17077, S, NULL},
@@ -299,7 +299,7 @@ s57key_t keys[] = {
   [LC_ASI]={18014, L, lc_asi}, [LC_ASE]={18015, L, lc_ase}, [LC_CCI]={18016, L, lc_cci}, [LC_CCE]={18017, L, lc_cce}, [LC_BM1]={18018, F, NULL}, [LC_BM2]={18019, F, NULL}, [LC_LG1]={18020, F, NULL},
   [LC_LG2]={18021, F, NULL}, [LC_DR1]={18022, F, NULL}, [LC_DR2]={18023, F, NULL}, [LC_SP1]={18024, F, NULL}, [LC_SP2]={18025, F, NULL}, [LC_WD1]={18026, F, NULL}, [LC_WD2]={18027, F, NULL},
   [LITRAD]={0, A, NULL},
-  {17000, L, catach}, {17002, L, catsit}, {17003, L, catsiw}, {17004, L, restrn}, {17005, E, verdat}, {17006, L, NULL}, {17007, E, catfry}, {17008, L, cathaf}, {17009, E, marsys}, {17010, L, catchp},
+  {17000, L, catach}, {17002, L, catsit}, {17003, L, catsiw}, {17004, L, restrn}, {17005, E, verdat}, {17006, L, catbrg}, {17007, E, catfry}, {17008, L, cathaf}, {17009, E, marsys}, {17010, L, catchp},
   {17011, E, catlam}, {17012, E, catslc}, {17101, E, catcbl}, {17102, L, cathlk}, {17103, E, hunits}, {17104, E, watlev},
   {-1, S, NULL}
 };
