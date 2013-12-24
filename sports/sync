@@ -1,1 +1,5 @@
-date;rsync -ra -e ssh --delete sport_tiles/* malcolm@netz.smurf.noris.de:~/sport_tiles/;date
+date
+while ! rsync -rz --delete --timeout=300 -e ssh sport_tiles/ mherring@t1.openseamap.org:~/sport_tiles/; do
+	date
+done
+date

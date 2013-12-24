@@ -86,9 +86,9 @@ if [ $# -eq 3 ]; then
 fi
 
 while true; do
-	if [ ! -e next.osm ]; then
+	while [ ! -e next.osm ]; do
 		sleep 300
-	fi
+	done
 	sleep 60
 	cp next.osm world.osm
 	mv next.osm tmp/panel-z0.osm
