@@ -32,7 +32,7 @@ double minlat, minlon, maxlat, maxlon, top, xmax, ymax, mile;
 int zoom;
 int ref = 0;
 
-Item_t map = {{0,0,0,0,0,0,0,0,0,0}, NULL, NULL, NULL, EMPTY, 0, 0};
+Item_t map = {{0,0,0,0,0,0,0,0,0,0}, NULL, NULL, NULL, EMPTY, {0}, 0};
 
 Item_t *item = NULL;
 Obja_t type = 0;
@@ -459,9 +459,9 @@ void renderNotice(Item_t *item) {
       if (obj == NULL) continue;
       Atta_t add;
       int idx = 0;
-      while ((add = getAttEnum(obj, ADDMRK, idx++)) != MRK_UNKN) {
-        if ((add == MRK_LTRI) && (i == 2)) swap = true;
-        if ((add == MRK_RTRI) && (i != 2)) swap = true;
+      while ((add = getAttEnum(obj, ADDMRK, idx++)) != (Atta_t)MRK_UNKN) {
+        if ((add == (Atta_t)MRK_LTRI) && (i == 2)) swap = true;
+        if ((add == (Atta_t)MRK_RTRI) && (i != 2)) swap = true;
       }
     }
   }
@@ -472,7 +472,7 @@ void renderNotice(Item_t *item) {
     Atta_t add;
     int idx = 0;
     int top=0, bottom=0, left=0, right=0;
-    while ((add = getAttEnum(obj, ADDMRK, idx++)) != MRK_UNKN) {
+    while ((add = getAttEnum(obj, ADDMRK, idx++)) != (Atta_t)MRK_UNKN) {
       switch (add) {
         case MRK_TOPB:
           top = add;

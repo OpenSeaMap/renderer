@@ -1,12 +1,12 @@
-CFLAGS=-std=c99
+CFLAGS=-std=c99 -Wall
 
 all: s57toosm searender
 
 s57toosm: s57toosm.o s57obj.o s57att.o s57val.o
-	cc -o s57toosm s57toosm.o s57obj.o s57att.o s57val.o -liconv
+	cc -o s57toosm s57toosm.o s57obj.o s57att.o s57val.o -lm
   
 searender: searender.o map.o render.o rules.o s57obj.o s57att.o s57val.o
-	cc -o searender searender.o map.o render.o rules.o s57obj.o s57att.o s57val.o -liconv
+	cc -o searender searender.o map.o render.o rules.o s57obj.o s57att.o s57val.o -lm
 
 s57toosm.o: s57toosm.c map.h s57obj.h s57att.h s57val.h
 searender.o: searender.c map.h render.h rules.h s57obj.h s57att.h s57val.h
@@ -18,3 +18,6 @@ s57obj.o: s57obj.c s57obj.h
 s57att.o: s57att.c s57obj.h s57att.h
 s57val.o: s57val.c s57obj.h s57att.h s57val.h
 
+
+clean:
+	rm -f *.o s57toosm searender
