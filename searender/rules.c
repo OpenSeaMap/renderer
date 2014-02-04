@@ -672,7 +672,7 @@ object_rules(areas) {
     if ((zoom >= 12) && has_item_attribute("name"))
       text(item_attribute("name"), "font-family:Arial;font-weight:normal;font-size:100;text-anchor:middle", 0, 0);
   }
-  if (is_type("restricted_area") && (zoom >= 12)) {
+  if (is_type("restricted_area|military_area") && (zoom >= 12)) {
     line_symbols("restricted_line", 1.0, NULL, 0);
     if (attribute_test("category", "no_wake")) {
       symbol("no_wake");
@@ -802,6 +802,7 @@ rules {
   type("fairway") object(areas);
   type("dredged_area") object(areas);
   type("restricted_area") object(areas);
+  type("military_area") object(areas);
   type("seaplane_landing_area") object(areas);
   type("sea_area") object(areas);
   type("obstruction") object(obstructions);

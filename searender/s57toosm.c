@@ -96,6 +96,7 @@ double maxlat = -90.0;
 double maxlon = -180.0;
 
 char line[1000];
+int linen = 0;
 char *ele;
 char *val;
 
@@ -108,6 +109,10 @@ node_t *findNode(int rcid, int rcnm) {
       break;
     }
     nptr = nptr->next;
+  }
+  if (nptr == NULL) {
+    printf("ERROR: Node not found, line %d\n", linen);
+    exit(EXIT_FAILURE);
   }
   return (nptr);
 }
@@ -122,6 +127,10 @@ feature_t *findFeature(pointer_t *ref) {
       break;
     }
     fptr = fptr->next;
+  }
+  if (fptr == NULL) {
+    printf("ERROR: Feature not found, line %d\n", linen);
+    exit(EXIT_FAILURE);
   }
   return (fptr);
 }
@@ -149,6 +158,7 @@ int main (int argc, const char * argv[]) {
   /* Build S-57 model from output of 8211view */
   
 	while (fgets(line, 1000, stdin) != NULL) {
+    linen++;
 		ele = strtok(line, " ");
     if (ele == NULL) continue;
     if (strcmp(ele, "Field") == 0) {
@@ -399,6 +409,10 @@ int main (int argc, const char * argv[]) {
           reference_t *eref = fptr->ref;
           do {
             node_t *enode = findNode(eref->rcid, eref->rcnm);
+            if (enode->ref == NULL) {
+              printf("ERROR: Node not found, line %d\n", linen);
+              exit(EXIT_FAILURE);
+            }
             node_t *cnode = findNode(enode->ref->rcid, enode->ref->rcnm);
             if (cnode->id == 0) {
               cnode->id = --id;
@@ -410,6 +424,10 @@ int main (int argc, const char * argv[]) {
                 xy->id = --id;
                 printf("<node id='%ld' lat='%f' lon='%f' version='1'/>\n", id, xy->lat, xy->lon);
               }
+            }
+            if (enode->ref->next == NULL) {
+              printf("ERROR: Node not found, line %d\n", linen);
+              exit(EXIT_FAILURE);
             }
             cnode = findNode(enode->ref->next->rcid, enode->ref->next->rcnm);
             if (cnode->id == 0) {
