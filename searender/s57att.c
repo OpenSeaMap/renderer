@@ -70,7 +70,7 @@ char *osmattributes[ATTSIZ] = {
   [NTXTDS]="national_description", [HORDAT]="horizontal_datum", [POSACC]="positional_accuracy", [QUAPOS]="position_quality", [ADDMRK]="addition", [BNKWTW]="bank", [CATBNK]="category",
   [CATNMK]="category", [CLSDNG]="class", [DIRIMP]="impact", [DISBK1]="distance_start", [DISBK2]="distance_end", [DISIPU]="distance_up", [DISIPD]="distance_down", [ELEVA1]="minimum_elevation",
   [ELEVA2]="maximum_elevation", [FNCTNM]="function", [WTWDIS]="distance", [BUNVES]="availibility", [CATBRT]="category", [CATBUN]="category", [CATCCL]="category", [CATHBR]="category",
-  [CATRFD]="category", [CATTML]="category", [COMCTN]="communication", [HORCLL]="clearance_length", [HORCLW]="clearance_width", [TRSHGD]="goods", [UNLOCD]="locode", [CATGAG]="category",
+  [CATRFD]="category", [CATTML]="category", [COMCTN]="communication", [HORCLL]="clearance_length", [HORCLW]="clearance_width", [TRSHGD]="goods", [UNLOCD]="", [CATGAG]="category",
   [HIGWAT]="high_value", [HIGNAM]="high_name", [LOWWAT]="low_value", [LOWNAM]="low_name", [MEAWAT]="mean_value", [MEANAM]="mean_name", [OTHWAT]="local_value", [OTHNAM]="local_name",
   [REFLEV]="gravity_reference", [SDRLEV]="sounding_name", [VCRLEV]="vertical_name", [CATVTR]="category", [CATTAB]="operation", [SCHREF]="schedule", [USESHP]="use", [CURVHW]="high_velocity",
   [CURVLW]="low_velocity", [CURVMW]="mean_velocity", [CURVOW]="other_velocity", [APTREF]="passing_time", [CATEXS]="category", [CATWWM]="category", [SHPTYP]="ship", [UPDMSG]="message",
