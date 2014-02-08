@@ -57,7 +57,7 @@ char *osmattributes[ATTSIZ] = {
   [CATSLO]="category", [CATSCF]="category", [CATSPM]="category", [CATTSS]="category", [CATVEG]="category", [CATWAT]="category", [CATWED]="category", [CATWRK]="category", [CATZOC]="category",
   [COLOUR]="colour", [COLPAT]="colour_pattern", [COMCHA]="channel", [CONDTN]="condition", [CONRAD]="reflectivity", [CONVIS]="conspicuity", [CURVEL]="velocity", [DATEND]="end_date",
   [DATSTA]="start_date", [DRVAL1]="minimum_depth", [DRVAL2]="maximum_depth", [DUNITS]="depth_units", [ELEVAT]="elevation", [ESTRNG]="estimated_range", [EXCLIT]="exhibition", [EXPSOU]="exposition",
-  [FUNCTN]="function", [HEIGHT]="height", [HUNITS]="units", [HORACC]="accuracy", [HORCLR]="clearance", [HORLEN]="length", [HORWID]="width", [ICEFAC]="factor", [INFORM]="information",
+  [FUNCTN]="function", [HEIGHT]="height", [HUNITS]="units", [HORACC]="accuracy", [HORCLR]="clearance_width", [HORLEN]="length", [HORWID]="width", [ICEFAC]="factor", [INFORM]="information",
   [JRSDTN]="jurisdiction", [$JUSTH]="", [$JUSTV]="", [LIFCAP]="maximum_load", [LITCHR]="character", [LITVIS]="visibility", [MARSYS]="system", [MLTYLT]="multiple", [NATION]="nationality",
   [NATCON]="construction", [NATSUR]="surface", [NATQUA]="surface_qualification", [NMDATE]="nm_date", [OBJNAM]="name", [ORIENT]="orientation", [PEREND]="end_date", [PERSTA]="start_date",
   [PICREP]="representation", [PILDST]="pilot_district", [PRCTRY]="producing_country", [PRODCT]="product", [PUBREF]="reference", [QUASOU]="quality", [RADWAL]="wavelength", [RADIUS]="radius",
