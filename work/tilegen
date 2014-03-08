@@ -88,9 +88,11 @@ while true; do
   			echo "Resuming"
     		break
     	fi
+    	while [ -e tmp/deletions ]; do
+    	  sleep 1
+    	done
     	tile $file
 	    tile91011
-	    break
   	done
   fi
 done
