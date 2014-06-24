@@ -239,6 +239,11 @@ object_rules(mark_shapes, char* default_shape) {
         object(topmarks, "stake");
         used
       }
+      if (has_object("fog_signal")) object(fogs);
+      if (has_object("radar_transponder")) object(rtbs);
+      if (has_object("radio_station")) object(rdos);
+      if (has_object("radar_reflector")) object(refls, "stake");
+      if (has_object("light")) object(lights);
       if ((zoom >= 15) && (has_item_attribute("name"))) text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
     }
     attribute_case("perch|withy") {

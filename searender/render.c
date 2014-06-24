@@ -278,8 +278,8 @@ XY_t findCentroid(Item_t *item) {
       double lon = link->ref->type.node.lon;
       double lat = link->ref->type.node.lat;
       double arc = sqrt(pow((lon-llon), 2) + pow((lat-llat), 2));
-      slon += ((lon + llon) / 2 * arc);
-      slat += ((lat + llat) / 2 * arc);
+      slon += (lon * arc);
+      slat += (lat * arc);
       sarc += arc;
       llon = lon;
       llat = lat;

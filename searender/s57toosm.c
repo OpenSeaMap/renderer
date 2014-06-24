@@ -30,7 +30,6 @@ typedef struct REFERENCE {
   int ornt;
   int usag;
   int topi;
-  int mask;
   struct REFERENCE *next;
 } reference_t;
 
@@ -96,7 +95,6 @@ double maxlat = -90.0;
 double maxlon = -180.0;
 
 char line[1000];
-int linen = 0;
 char *ele;
 char *val;
 
@@ -109,10 +107,6 @@ node_t *findNode(int rcid, int rcnm) {
       break;
     }
     nptr = nptr->next;
-  }
-  if (nptr == NULL) {
-    printf("ERROR: Node not found, line %d\n", linen);
-    exit(EXIT_FAILURE);
   }
   return (nptr);
 }
@@ -127,10 +121,6 @@ feature_t *findFeature(pointer_t *ref) {
       break;
     }
     fptr = fptr->next;
-  }
-  if (fptr == NULL) {
-    printf("ERROR: Feature not found, line %d\n", linen);
-    exit(EXIT_FAILURE);
   }
   return (fptr);
 }
@@ -158,9 +148,7 @@ int main (int argc, const char * argv[]) {
   /* Build S-57 model from output of 8211view */
   
 	while (fgets(line, 1000, stdin) != NULL) {
-    linen++;
 		ele = strtok(line, " ");
-    if (ele == NULL) continue;
     if (strcmp(ele, "Field") == 0) {
       ele = strtok(NULL, " :");
     }
@@ -309,8 +297,6 @@ int main (int argc, const char * argv[]) {
           ref->ornt = atoi(val);
         } else if (strcmp(ele, "USAG") == 0) {
           ref->usag = atoi(val);
-        } else if (strcmp(ele, "MASK") == 0) {
-          ref->mask = atoi(val);
         } else if (strcmp(ele, "RIND") == 0) {
           pointer_t *link = calloc(1, sizeof(pointer_t));
           link->agen = agen;
@@ -409,10 +395,6 @@ int main (int argc, const char * argv[]) {
           reference_t *eref = fptr->ref;
           do {
             node_t *enode = findNode(eref->rcid, eref->rcnm);
-            if (enode->ref == NULL) {
-              printf("ERROR: Node not found, line %d\n", linen);
-              exit(EXIT_FAILURE);
-            }
             node_t *cnode = findNode(enode->ref->rcid, enode->ref->rcnm);
             if (cnode->id == 0) {
               cnode->id = --id;
@@ -424,10 +406,6 @@ int main (int argc, const char * argv[]) {
                 xy->id = --id;
                 printf("<node id='%ld' lat='%f' lon='%f' version='1'/>\n", id, xy->lat, xy->lon);
               }
-            }
-            if (enode->ref->next == NULL) {
-              printf("ERROR: Node not found, line %d\n", linen);
-              exit(EXIT_FAILURE);
             }
             cnode = findNode(enode->ref->next->rcid, enode->ref->next->rcnm);
             if (cnode->id == 0) {
@@ -445,7 +423,7 @@ int main (int argc, const char * argv[]) {
             if (eref->usag == 2) {
               if (inners == NULL) {
                 inners = eref;
-                members[multi++] = fptr->id;
+                members[multi++] = id;
               }
             } else {
               if (eref->ornt == 2) {
@@ -563,16 +541,16 @@ int main (int argc, const char * argv[]) {
             }
             ids[i++] = findNode(enode->ref->next->rcid, enode->ref->next->rcnm)->id;
             do {
+              if (first == 0) first = ids[i];
               if (ids[--i] != last)
                 printf(" <nd ref='%ld'/>\n", ids[i]);
-              if (first == 0) first = ids[i];
             } while (i > 0);
             last = ids[0];
           } else {
             cnode = findNode(enode->ref->rcid, enode->ref->rcnm);
+            if (first == 0) first = cnode->id;
             if (cnode->id != last)
               printf(" <nd ref='%ld'/>\n", cnode->id);
-            if (first == 0) first = cnode->id;
             coordinate_t *xy;
             for (xy = enode->xy; xy != NULL; xy = xy->next) {
               printf(" <nd ref='%ld'/>\n", xy->id);
@@ -586,7 +564,6 @@ int main (int argc, const char * argv[]) {
             printf("</way>\n");
             printf("<way id='%ld' version='1'>\n", --id);
             members[multi++] = id;
-            first = 0;
           }
         }
         inners = inners->next;
