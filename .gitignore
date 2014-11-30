@@ -1,0 +1,6 @@
+# vim swap files
+.*.sw?
+
+*.o
+searender/searender
+searender/s57toosm
