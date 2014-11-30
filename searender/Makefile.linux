@@ -8,10 +8,10 @@ clean:
 	rm -vf *.o s57toosm searender
 
 s57toosm: s57toosm.o s57obj.o s57att.o s57val.o
-	cc -o s57toosm s57toosm.o s57obj.o s57att.o s57val.o -liconv
+	cc -o s57toosm s57toosm.o s57obj.o s57att.o s57val.o
   
 searender: searender.o map.o render.o rules.o s57obj.o s57att.o s57val.o
-	cc -o searender searender.o map.o render.o rules.o s57obj.o s57att.o s57val.o -liconv
+	cc -o searender searender.o map.o render.o rules.o s57obj.o s57att.o s57val.o
 
 s57toosm.o: s57toosm.c map.h s57obj.h s57att.h s57val.h
 searender.o: searender.c map.h render.h rules.h s57obj.h s57att.h s57val.h
