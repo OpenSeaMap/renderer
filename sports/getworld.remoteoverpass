@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# should need around 30 minutes per run (20141131)
+while true; do
+    # twice a day extract types and
+    cat types.txt | while read type; do
+        touch sort.osm
+        while [ -e sort.osm ]; do
+            # get all matching nodes from Overpass
+            wget -O xapi.osm http://overpass.osm.rambler.ru/cgi/xapi?*[$type][@meta]
+            # put found nodes into sort.osm
+            if ~/bin/osmosis -q --rx file=xapi.osm --s --wx file=sort.osm 2> /dev/null; then
+                rm xapi.osm
+                if [ -e merge.osm ]; then
+                    # check for differences to supress doubles and append them
+                    ~/bin/osmosis -q --rx file=merge.osm --rx file=sort.osm --m --wx file=tmp.osm 2> /dev/null
+                    mv tmp.osm merge.osm
+                    rm sort.osm
+                else
+                    # create new
+                    mv sort.osm merge.osm
+                fi
+            else
+                touch sort.osm
+            fi
+        done
+    done
+    mv merge.osm next.osm
+done
+
+# send the next.osm to the rendering server (i.e. echo as of 20141131)
+#rsync push to echo
+# rsync -rvz -e 'ssh -i ../Access/alexej-openssh-priv.txt -p 22001' next.osm alexej@213.95.21.157:sports-renderer/ 
+# sleep for half a day
+# sleep 43200
