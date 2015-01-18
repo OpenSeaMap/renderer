@@ -32,7 +32,7 @@ double minlat, minlon, maxlat, maxlon, top, xmax, ymax, mile;
 int zoom;
 int ref = 0;
 
-Item_t map = {{0,0,0,0,0,0,0,0,0,0}, NULL, NULL, NULL, EMPTY, 0, 0};
+Item_t map = {{0,0,0,0,0,0,0,0,0,0}, NULL, NULL, NULL,  NULL, NULL, EMPTY, 0};
 
 Item_t *item = NULL;
 Obja_t type = 0;
@@ -47,7 +47,7 @@ char *body_colours[] = { [COL_UNK]="#000000", [COL_WHT]="#ffffff", [COL_BLK]="#0
   [COL_ORG]="orange", [COL_MAG]="#f000f0", [COL_PNK]="pink" };
 
 char *light_colours[] = { [COL_UNK]="magenta", [COL_WHT]="#ffff00", [COL_BLK]="", [COL_RED]="#ff0000", [COL_GRN]="#00ff00", [COL_BLU]="#0000ff", [COL_YEL]="#ffff00",
-  [COL_GRY]="", [COL_BRN]="", [COL_AMB]="amber", [COL_VIO]="violet", [COL_ORG]="orange", [COL_MAG]="magenta", [COL_PNK]="" };
+  [COL_GRY]="", [COL_BRN]="", [COL_AMB]="#ffc200", [COL_VIO]="violet", [COL_ORG]="orange", [COL_MAG]="magenta", [COL_PNK]="" };
 
 char *light_letters[] = { [COL_UNK]="", [COL_WHT]="W", [COL_BLK]="", [COL_RED]="R", [COL_GRN]="G", [COL_BLU]="Bu", [COL_YEL]="Y",
   [COL_GRY]="", [COL_BRN]="", [COL_AMB]="Am", [COL_VIO]="Vi", [COL_ORG]="Or", [COL_MAG]="", [COL_PNK]="" };
@@ -1036,12 +1036,14 @@ int drawArea(Item_t *item, char *style) {
 }
 
 int drawLineText(Item_t *item, char *text, char *style, double offset, double dy, int path) {
-  printf("<text id=\"%d\" ", ++ref);
-  scaleStyle(style);
-  if (offset > 1.0)
-    printf("><textPath xlink:href=\"#%d\" startOffset=\"%f\"><tspan dy=\"%f\">%s</tspan></textPath></text>\n", path, offset*text[zoom], dy*symbolScale[zoom], text);
-  else
-    printf("><textPath xlink:href=\"#%d\" startOffset=\"%f%%\"><tspan dy=\"%f\">%s</tspan></textPath></text>\n", path, offset*100, dy*symbolScale[zoom], text);
+  if (path != 0) {
+    printf("<text id=\"%d\" ", ++ref);
+    scaleStyle(style);
+    if (offset > 1.0)
+      printf("><textPath xlink:href=\"#%d\" startOffset=\"%f\"><tspan dy=\"%f\">%s</tspan></textPath></text>\n", path, offset*text[zoom], dy*symbolScale[zoom], text);
+    else
+      printf("><textPath xlink:href=\"#%d\" startOffset=\"%f%%\"><tspan dy=\"%f\">%s</tspan></textPath></text>\n", path, offset*100, dy*symbolScale[zoom], text);
+  }
   return ref;
 }
 

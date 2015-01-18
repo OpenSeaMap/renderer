@@ -384,7 +384,7 @@ object_rules(separation) {
 
 object_rules(transits) {
   int ref;
-  if (zoom >= 12) {
+  if (zoom >= 14) {
     if (is_type("recommended_track")) ref = line("stroke-width:8; stroke:#000000; stroke-linecap:butt; fill:none");
     else if (is_type("navigation_line")) ref = line("stroke-width:8; stroke-dasharray:20,20; stroke:#000000; stroke-linecap:butt; fill:none");
   }
@@ -481,6 +481,8 @@ object_rules(radios) {
         end_switch
       }
     }
+    if ((zoom >= 15) && has_item_attribute("name"))
+      text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -140);
     if (has_object("fog_signal")) object(fogs);
     if (has_object("light")) object(lights);
   }

@@ -105,7 +105,7 @@ int main (int argc, const char * argv[]) {
       strtok(NULL, "\"'");
       key = strtok(NULL, "\"'");
       strtok(NULL, "\"'");
-      value = strtok(NULL, "\"'");
+      value = strtok(NULL, "\"");
       addTag(item, key, value);
       if (strncmp(key, "seamark:", 8) != 0) continue;
       prefix = strtok(key, ":");
