@@ -1,1 +1,1 @@
-date;rsync -ra -e ssh --delete tiles/* malcolm@netz.smurf.noris.de:~/tiles/;date
+date;rsync -rz --delete -e 'ssh -p 2215' tiles/ mherring@t1.openseamap.org:~/tiles/;date
