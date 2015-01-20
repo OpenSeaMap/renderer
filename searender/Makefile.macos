@@ -1,6 +1,11 @@
+.PHONY: clean
+
 CFLAGS=-std=c99
 
 all: s57toosm searender
+
+clean:
+	rm -vf *.o s57toosm searender
 
 s57toosm: s57toosm.o s57obj.o s57att.o s57val.o
 	cc -o s57toosm s57toosm.o s57obj.o s57att.o s57val.o -liconv
