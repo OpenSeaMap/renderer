@@ -355,7 +355,7 @@ object_rules(shoreline) {
       if (attribute_test("water_level", "covers")) {
         ref = line("stroke-width:10; stroke-dasharray:40,40; stroke-linecap:butt; stroke-linejoin:round; stroke:#000000; fill:none");
         if (zoom >= 15) line_text("(covers)", "font-family:Arial; font-weight:normal; font-size:80; text-anchor:middle", 0.5, 50, ref);
-      } else line("stroke-width:10; stroke-linecap:butt; stroke-linejoin:round; stroke:#000000; fill:none");
+      } else ref = line("stroke-width:10; stroke-linecap:butt; stroke-linejoin:round; stroke:#000000; fill:none");
       if (zoom >= 15) line_text("Training Wall", "font-family:Arial; font-weight:normal; font-size:80; text-anchor:middle", 0.5, -20, ref);
     }
     end_switch
