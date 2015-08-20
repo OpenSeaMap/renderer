@@ -4,6 +4,10 @@ while true; do
 	while [ ! -e next.osm ]; do
     sleep 10
 	done
+	while [ ! -e done ]; do
+    sleep 10
+	done
+	rm done
 	echo "$(date) Parse world data" >> log.txt
 	if [ $(echo $(date "+%M"|sed 's/^0//')) -lt 5 ]; then
   	java -jar jharbour.jar <world.osm >harbours.xml
@@ -33,4 +37,5 @@ while true; do
 		done
 		echo "$(date) Resumed" >> log.txt
 	fi
+	scp -q hs mini5.local:~/openseamap/work/done
 done

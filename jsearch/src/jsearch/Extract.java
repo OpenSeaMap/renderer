@@ -182,7 +182,7 @@ public class Extract {
 		in = new BufferedReader(new FileReader(filename));
 		buf.add("<?xml version='1.0' encoding='UTF-8'?>");
 		buf.add("<osm version='0.6' upload='false' generator='Jrender'>");
-		buf.add(String.format("<bounds minlat='%.8f' minlon='%.8f' maxlat='%.8f' maxlon='%.8f'/>", box.minlat, box.minlon, box.maxlat, box.maxlon));
+		buf.add(String.format(Locale.ENGLISH, "<bounds minlat='%.8f' minlon='%.8f' maxlat='%.8f' maxlon='%.8f'/>", box.minlat, box.minlon, box.maxlat, box.maxlon));
 		while ((ln = in.readLine()) != null) {
 			if (inOsm) {
 				if (inNode) {
