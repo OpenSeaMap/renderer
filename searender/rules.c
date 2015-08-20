@@ -498,6 +498,7 @@ object_rules(landmarks) {
     attribute_case("pagoda") symbol("temple");
     attribute_case("mosque") symbol("minaret");
     attribute_case("marabout") symbol("spire");
+    attribute_case("chapel") symbol("church");
     attribute_default symbol(attribute("function"));
     end_switch
   }
@@ -505,7 +506,7 @@ object_rules(landmarks) {
     attribute_switch("category")
     attribute_case("statue|column|obelisk") symbol("monument");
     attribute_case("tower") {
-      if (attribute_test("function", "church"))
+      if (attribute_test("function", "church|chapel"))
         symbol("church_tower");
       else
         symbol("land_tower");
