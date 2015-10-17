@@ -11,6 +11,9 @@ while true; do
       while [ $(ls tmp | grep -c "\.send") -gt 30 ]; do
         sleep 30
       done
+      while [ $(ps -a | grep jtile | grep -c java) -gt 3 ]; do
+		    sleep 1
+      done
   	  if [ -e hold ]; then
     		echo "Holding..."
 			  while [ -e hold ]; do
@@ -37,9 +40,6 @@ while true; do
   	    ../searender/searender ../searender/symbols/symbols.defs $z >tmp/$tx-$ty-$z.svg <tmp/$file
     	fi
       rm tmp/$file
-      while [ $(ps -a | grep jtile | grep -c java) -gt 3 ]; do
-		    sleep 1
-      done
       java -jar jtile.jar tmp/ tiles/ $z $tx $ty &
       echo "$(date) rendering $z $tx $ty" >> log.txt
   	done

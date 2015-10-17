@@ -489,7 +489,19 @@ object_rules(radios) {
 }
 
 object_rules(gauge) {
-  if (zoom >= 14) symbol("tide_gauge");
+  if (zoom >= 14) {
+    if (has_attribute("category")) {
+      attribute_switch("category")
+      attribute_case("recording|recording_remote_access") symbol("signal_station");
+      attribute_default symbol("tide_gauge");
+      end_switch
+    } else {
+      symbol("tide_gauge");
+    }
+    if (has_object("light")) object(lights);
+    if ((zoom >= 15) && has_item_attribute("name"))
+      text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:60; text-anchor:middle", 0, -100);
+  }
 }
 
 object_rules(landmarks) {
