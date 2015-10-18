@@ -490,11 +490,8 @@ object_rules(radios) {
 
 object_rules(gauge) {
   if (zoom >= 14) {
-    if (has_attribute("category")) {
-      attribute_switch("category")
-      attribute_case("recording|recording_remote_access") symbol("signal_station");
-      attribute_default symbol("tide_gauge");
-      end_switch
+    if (attribute_test("category", "recording|recording_remote_access")) {
+      symbol("signal_station");
     } else {
       symbol("tide_gauge");
     }
