@@ -1,0 +1,11 @@
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"  
+   version="1.1"
+   width="120"
+   height="60">
+  <symbol id="berth" width="120" height="60">
+    <rect width="116" height="56" rx="30" ry="30" x="2" y="2" style="fill:#ffffff;fill-opacity:0.5;stroke:#a30075;stroke-width:4" />
+  </symbol>
+  <use xlink:href="#berth" x="0" y="0" />
+</svg>

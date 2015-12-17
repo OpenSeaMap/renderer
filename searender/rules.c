@@ -649,6 +649,11 @@ object_rules(harbours) {
     if ((zoom >= 12) && (is_area)) line_symbols("restricted_line", 0.5, "line_anchor", 10);
   }
   if ((zoom >= 16) && is_type("anchor_berth")) symbol("anchor_berth");
+  if ((zoom >= 16) && is_type("berth")) {
+    symbol("berth");
+    if (has_item_attribute("name"))
+      text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, 15);
+  }
   if ((zoom >= 12) && is_type("harbour")) {
     if (has_attribute("category")) {
       attribute_switch("category")
@@ -694,6 +699,9 @@ object_rules(areas) {
     if (attribute_test("category", "no_wake")) {
       symbol("no_wake");
     }
+  }
+  if (is_type("precautionary_area") && (zoom >= 12)) {
+    area("stroke-width:10;stroke-dasharray:40,40;fill:none;stroke:#c480ff");
   }
   if (is_type("production_area")) {
     if (attribute_test("category", "wind_farm")) {
@@ -819,6 +827,7 @@ rules {
   type("fairway") object(areas);
   type("dredged_area") object(areas);
   type("restricted_area") object(areas);
+  type("precautionary_area") object(areas);
   type("military_area") object(areas);
   type("seaplane_landing_area") object(areas);
   type("sea_area") object(areas);
@@ -841,6 +850,7 @@ rules {
   type("landmark") object(landmarks);
   type("building") object(buildings);
   type("crane") object(ports);
+  type("berth") object(harbours);
   type("mooring") object(moorings);
   type("notice") object(notices);
   type("small_craft_facility") object(marinas);

@@ -3,7 +3,7 @@
 while true; do
 	sleep 1
 	if [ -e tmp/sending ]; then
-		sftp -q -B 131072 -P 2215 -b tmp/sending mherring@t1.openseamap.org>/dev/null
+		sftp -q -B 131072 -b tmp/sending 195.37.132.70>/dev/null
 		rm tmp/sending
 		echo $(date) Sent
 		sleep 3

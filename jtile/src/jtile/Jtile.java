@@ -52,7 +52,7 @@ public class Jtile {
 				int ynam = (scale * ytile) + yn;
 				String dstnam = dstdir + z + "/" + xdir + "/" + ynam + ".png";
 				deletes.remove(dstnam);
-				send.add("put " + dstnam + " cache/tiles-" + z + "-" + xdir + "-" + ynam + ".png");
+				send.add("put " + dstnam + " tiles/" + z + "/" + xdir + "/" + ynam + ".png");
 				File ofile = new File(dstdir + "/" + z + "/" + xdir + "/");
 				ofile.mkdirs();
 				OutputStream ostream = new FileOutputStream(dstdir + "/" + z + "/" + xdir + "/" + ynam + ".png");
@@ -95,7 +95,7 @@ public class Jtile {
 			trans.transcode(input, output);
 			String dstnam = dstdir + zoom + "/" + xtile + "/" + ytile + ".png";
 			if (bos.size() > 446) {
-				send.add("put " + dstnam + " cache/tiles-" + zoom + "-" + xtile + "-" + ytile + ".png");
+				send.add("put " + dstnam + " tiles/" + zoom + "/" + xtile + "/" + ytile + ".png");
 				File ofile = new File(dstdir + "/" + zoom + "/" + xtile + "/");
 				ofile.mkdirs();
 				OutputStream ostream = new FileOutputStream(dstdir + "/" + zoom + "/" + xtile + "/" + ytile + ".png");

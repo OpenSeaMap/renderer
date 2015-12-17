@@ -62,6 +62,12 @@
   <symbol id="beacon2V2" height="400" width="300">
     <path d="m 150.10593,159.17018 0,-28.81356 2.11865,0 2.11864,0 0,28.81356 0,28.81356 -2.11864,0 -2.11865,0 0,-28.81356 z" style="fill-opacity:1;stroke:none" />
   </symbol>
+  <use xlink:href="#berth" x="0" y="0" />
+<!-- Berth -->
+  <symbol id="berth" width="120" height="60">
+    <rect width="116" height="56" rx="30" ry="30" x="2" y="2" style="fill:none;stroke:#a30075;stroke-width:4" />
+  </symbol>
+  <use xlink:href="#berth" x="0" y="0" />
 <!-- Boatyard -->
   <symbol id="boatyard" width="60" height="60">
     <path d="m 15.930129,0.99981078 28.14006,0 c 8.27122,0 14.93,6.65878002 14.93,14.93000022 l 0,28.14006 c 0,8.27122 -6.65878,14.93 -14.93,14.93 l -28.14006,0 c -8.2712198,0 -14.9299998,-6.65878 -14.9299998,-14.93 l 0,-28.14006 c 0,-8.2712202 6.65878,-14.93000022 14.9299998,-14.93000022 z"
