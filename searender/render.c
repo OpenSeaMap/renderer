@@ -1074,7 +1074,8 @@ int drawText(Item_t *item, char *text, char *style, double dx, double dy) {
     double size = scaleStyle(style) * 1.1;
     double x = coord.x + (dx*symbolScale[zoom]);
     double y = coord.y + (dy*symbolScale[zoom]);
-    char *line = strtok(text, "\n");
+    char *textc = strdup(text);
+    char *line = strtok(textc, "\n");
     double dy = 0.0;
     printf("y=\"%f\">", y);
     while (line != NULL) {
@@ -1082,6 +1083,7 @@ int drawText(Item_t *item, char *text, char *style, double dx, double dy) {
       dy = size;
       line = strtok(NULL, "\n");
     }
+    free(textc);
     printf("</text>\n");
     return ref;
   }
