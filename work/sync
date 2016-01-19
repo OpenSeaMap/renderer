@@ -1,1 +1,11 @@
-date;rsync -rz --delete -e 'ssh -p 2215' tiles/ mherring@t1.openseamap.org:~/tiles/;date
+echo z9: $(date);rsync -r --delete -e ssh tiles/9/ 195.37.132.70:~/tiles/9/
+echo z10: $(date);rsync -r --delete -e ssh tiles/10/ 195.37.132.70:~/tiles/10/
+echo z11: $(date);rsync -r --delete -e ssh tiles/11/ 195.37.132.70:~/tiles/11/
+echo z12: $(date);rsync -r --delete -e ssh tiles/12/ 195.37.132.70:~/tiles/12/
+echo z13: $(date);rsync -r --delete -e ssh tiles/13/ 195.37.132.70:~/tiles/13/
+echo z14: $(date);rsync -r --delete -e ssh tiles/14/ 195.37.132.70:~/tiles/14/
+echo z15: $(date);rsync -r --delete -e ssh tiles/15/ 195.37.132.70:~/tiles/15/
+echo z16: $(date);rsync -r --delete -e ssh tiles/16/ 195.37.132.70:~/tiles/16/
+echo z17: $(date);rsync -r --delete -e ssh tiles/17/ 195.37.132.70:~/tiles/17/
+echo z18: $(date);rsync -r --delete -e ssh tiles/18/ 195.37.132.70:~/tiles/18/
+echo done $(date)

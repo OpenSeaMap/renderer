@@ -12,7 +12,7 @@ clean () {
       if [ -e $cleanname ]; then
 				echo "rm $cleanname"
         rm $cleanname
-        echo "rm $cleanname" >> tmp/deletions
+        echo "rm $cleanname" >> tmp/clear.tmp
       fi
       if [ ${zoom[$1]} -lt 18 ]; then
         clean ${zoom[$1]} $xc $yc
@@ -25,6 +25,10 @@ cleanname="tiles/$1/$2/$3.png"
 if [ -e $cleanname ]; then
 	echo "rm $cleanname"
   rm $cleanname
-  echo "rm $cleanname" >> tmp/deletions
+  echo "rm $cleanname" >> tmp/clear.tmp
 fi
 clean $1 $2 $3
+if [ -e tmp/clear.tmp ]; then
+  mv tmp/clear.tmp tmp/clear.send
+fi
+

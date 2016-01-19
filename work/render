@@ -10,11 +10,11 @@ while true; do
 	rm done
 	echo "$(date) Parse world data" >> log.txt
 	if [ $(echo $(date "+%M"|sed 's/^0//')) -lt 5 ]; then
-  	java -jar jharbour.jar <world.osm >harbours.xml
-	  scp -q -C -P 2215 harbours.xml mherring@t1.openseamap.org:~/tiles/
-	  echo "$(date) Harbours uploaded" >> log.txt
+#  	java -jar jharbour.jar <world.osm >harbours.xml
+#	  scp -q -C -P 2215 harbours.xml mherring@t1.openseamap.org:~/tiles/
+#	  echo "$(date) Harbours uploaded" >> log.txt
   	if [ $(echo $(date "+%H"|sed 's/^0//')) -eq 0 ]; then
-  	  scp -q -C -P 2215 world.osm mherring@t1.openseamap.org:~/tiles/
+  	  scp -q -C world.osm 195.37.132.70:~/tiles/
   	  echo "$(date) World uploaded" >> log.txt
   	fi
 	fi
