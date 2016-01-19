@@ -745,7 +745,10 @@ object_rules(areas) {
     }
   }
 //  if (is_type("sandwaves") && (zoom>=12)) area("fill:url(#sandwaves)");
-  if (is_type("weed") && attribute_test("category", "kelp") && (zoom>=12)) area("fill:url(#kelp)");
+  if (is_type("weed") && attribute_test("category", "kelp") && (zoom>=12)) {
+    if (is_node) symbol("kelp_p");
+    else if (is_area) area("fill:url(#kelp_a)");
+  }
 }
 
 object_rules(obstructions) {
