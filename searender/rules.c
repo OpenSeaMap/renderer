@@ -745,6 +745,10 @@ object_rules(areas) {
     }
   }
 //  if (is_type("sandwaves") && (zoom>=12)) area("fill:url(#sandwaves)");
+  if (is_type("weed") && attribute_test("category", "kelp") && (zoom>=12)) {
+    if (is_node) symbol("kelp_p");
+    else if (is_area) area("fill:url(#kelp_a)");
+  }
 }
 
 object_rules(obstructions) {
@@ -831,6 +835,7 @@ rules {
   type("military_area") object(areas);
   type("seaplane_landing_area") object(areas);
   type("sea_area") object(areas);
+  type("weed") object(areas);
   type("obstruction") object(obstructions);
   type("rock") object(obstructions);
   type("marine_farm") object (areas);
