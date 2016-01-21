@@ -197,8 +197,8 @@ public class Jsearch {
 						}
 					}
 					if ((next && nnodes.containsKey(id)) || (!next && cnodes.containsKey(id))) {
-						int xtile = lon2xtile(lon, 12);
-						int ytile = lat2ytile(lat, 12);
+						int xtile = TileConversion.lon2xtile(lon, 12);
+						int ytile = TileConversion.lat2ytile(lat, 12);
 						z9s.put(((xtile / 8) * 512) + (ytile / 8), true);
 						z10s.put(((xtile / 4) * 1024) + (ytile / 4), true);
 						z11s.put(((xtile / 2) * 2048) + (ytile / 2), true);
@@ -218,25 +218,33 @@ public class Jsearch {
 			int x = (t / 512) * 8;
 			int y = (t % 512) * 8;
 			MapBB bb = new MapBB();
-			bb.minlon = tile2lon((x + 4094) % 4096, 12);
-			bb.maxlon = tile2lon((x + 10) % 4095, 12);
-			bb.minlat = tile2lat(Math.min((y + 10), 4095), 12);
-			bb.maxlat = tile2lat(Math.max((y - 2), 0), 12);
+			bb.minlon = TileConversion.tile2lon((x + 4094) % 4096, 12);
+			bb.maxlon = TileConversion.tile2lon((x + 10) % 4095, 12);
+			bb.minlat = TileConversion.tile2lat(Math.min((y + 10), 4095), 12);
+			bb.maxlat = TileConversion.tile2lat(Math.max((y - 2), 0), 12);
 			ArrayList<String> ext = Extract.extractData(dir + "next.osm", bb);
-			PrintStream out = new PrintStream(dir + "tmp/" + (t / 512) + "-" + (t % 512) + "-9.osm");
+			String z9nam = dir + "tmp/" + (t / 512) + "-" + (t % 512) + "-9.osm";
+			PrintStream out = new PrintStream(z9nam);
 			for (String line : ext) {
 				out.println(line);
 			}
 			out.close();
+
+			// Add additional nodes to ways
+			File inputOSM = new File(z9nam);
+			File tempOutput = new File(z9nam + ".output");
+			NodeAdder nodeAdder = new NodeAdder(z10s, z11s, z12s);
+			nodeAdder.addNodes(inputOSM, tempOutput);
+			tempOutput.renameTo(inputOSM);
 		}
 		for (int t : z10s.keySet()) {
 			int x = (t / 1024) * 4;
 			int y = (t % 1024) * 4;
 			MapBB bb = new MapBB();
-			bb.minlon = tile2lon((x + 4094) % 4096, 12);
-			bb.maxlon = tile2lon((x + 6) % 4095, 12);
-			bb.minlat = tile2lat(Math.min((y + 6), 4095), 12);
-			bb.maxlat = tile2lat(Math.max((y - 2), 0), 12);
+			bb.minlon = TileConversion.tile2lon((x + 4094) % 4096, 12);
+			bb.maxlon = TileConversion.tile2lon((x + 6) % 4095, 12);
+			bb.minlat = TileConversion.tile2lat(Math.min((y + 6), 4095), 12);
+			bb.maxlat = TileConversion.tile2lat(Math.max((y - 2), 0), 12);
 			ArrayList<String> ext = Extract.extractData(dir + "tmp/" + ((t / 1024) / 2) + "-" + ((t % 1024) / 2) + "-9.osm", bb);
 			PrintStream out = new PrintStream(dir + "tmp/" + (t / 1024) + "-" + (t % 1024) + "-10.osm");
 			for (String line : ext) {
@@ -248,10 +256,10 @@ public class Jsearch {
 			int x = (t / 2048) * 2;
 			int y = (t % 2048) * 2;
 			MapBB bb = new MapBB();
-			bb.minlon = tile2lon((x + 4094) % 4096, 12);
-			bb.maxlon = tile2lon((x + 4) % 4095, 12);
-			bb.minlat = tile2lat(Math.min((y + 4), 4095), 12);
-			bb.maxlat = tile2lat(Math.max((y - 2), 0), 12);
+			bb.minlon = TileConversion.tile2lon((x + 4094) % 4096, 12);
+			bb.maxlon = TileConversion.tile2lon((x + 4) % 4095, 12);
+			bb.minlat = TileConversion.tile2lat(Math.min((y + 4), 4095), 12);
+			bb.maxlat = TileConversion.tile2lat(Math.max((y - 2), 0), 12);
 			ArrayList<String> ext = Extract.extractData(dir + "tmp/" + ((t / 2048) / 2) + "-" + ((t % 2048) / 2) + "-10.osm", bb);
 			String z11nam = dir + "tmp/" + (t / 2048) + "-" + (t % 2048) + "-11.osm";
 			PrintStream out = new PrintStream(z11nam);
@@ -264,13 +272,15 @@ public class Jsearch {
 					if (z12s.containsKey(i*4096+j)) {
 						z12s.remove(i*4096+j);
 						bb = new MapBB();
-						bb.minlon = tile2lon((i + 4095) % 4096, 12);
-						bb.maxlon = tile2lon((i + 2) % 4095, 12);
-						bb.minlat = tile2lat(Math.min((j + 2), 4095), 12);
-						bb.maxlat = tile2lat(Math.max((j - 1), 0), 12);
+						bb.minlon = TileConversion.tile2lon((i + 4095) % 4096, 12);
+						bb.maxlon = TileConversion.tile2lon((i + 2) % 4095, 12);
+						bb.minlat = TileConversion.tile2lat(Math.min((j + 2), 4095), 12);
+						bb.maxlat = TileConversion.tile2lat(Math.max((j - 1), 0), 12);
 						ext = Extract.extractData(z11nam, bb);
 						out = new PrintStream(dir + "tmp/" + i + "-" + j + "-12.osm");
 						for (String line : ext) {
+
+
 							out.println(line);
 						}
 						out.close();
@@ -278,43 +288,16 @@ public class Jsearch {
 				}
 			}
 		}
-		
+
 		System.exit(0);
-	}
-
-	static int lon2xtile(double lon, int zoom) {
-		int xtile = (int) Math.floor((lon + 180) / 360 * (1 << zoom));
-		if (xtile < 0)
-			xtile = 0;
-		if (xtile >= (1 << zoom))
-			xtile = ((1 << zoom) - 1);
-		return (xtile);
-	}
-
-	static int lat2ytile(double lat, int zoom) {
-		int ytile = (int) Math.floor((1 - Math.log(Math.tan(Math.toRadians(lat)) + 1 / Math.cos(Math.toRadians(lat))) / Math.PI) / 2 * (1 << zoom));
-		if (ytile < 0)
-			ytile = 0;
-		if (ytile >= (1 << zoom))
-			ytile = ((1 << zoom) - 1);
-		return (ytile);
 	}
 
 	MapBB tile2bb(final int x, final int y, final int zoom) {
 		MapBB bb = new MapBB();
-		bb.maxlat = tile2lat(y, zoom);
-		bb.minlat = tile2lat(y + 1, zoom);
-		bb.minlon = tile2lon(x, zoom);
-		bb.maxlon = tile2lon(x + 1, zoom);
+		bb.maxlat = TileConversion.tile2lat(y, zoom);
+		bb.minlat = TileConversion.tile2lat(y + 1, zoom);
+		bb.minlon = TileConversion.tile2lon(x, zoom);
+		bb.maxlon = TileConversion.tile2lon(x + 1, zoom);
 		return bb;
-	}
-
-	static double tile2lon(int x, int z) {
-		return x / Math.pow(2.0, z) * 360.0 - 180;
-	}
-
-	static double tile2lat(int y, int z) {
-		double n = Math.PI - (2.0 * Math.PI * y) / Math.pow(2.0, z);
-		return Math.toDegrees(Math.atan(Math.sinh(n)));
 	}
 }
