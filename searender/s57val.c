@@ -185,7 +185,7 @@ s57val_t topshp[] = { [TOP_UNKN]={0, ""}, [TOP_CONE]={1, "cone, point up"}, [TOP
   [TOP_NORTH]={13, "2 cones up"}, [TOP_SOUTH]={14, "2 cones down"}, [TOP_BESM]={15, "besom, point up"}, [TOP_IBESM]={16, "besom, point down"}, [TOP_FLAG]={17, "flag"}, [TOP_SPRH]={18, "sphere over rhombus"},
   [TOP_SQUR]={19, "square"}, [TOP_HRECT]={20, "rectangle, horizontal"}, [TOP_VRECT]={21, "rectangle, vertical"}, [TOP_TRAP]={22, "trapezium, up"}, [TOP_ITRAP]={23, "trapezium, down"}, [TOP_TRI]={24, "triangle, point up"},
   [TOP_ITRI]={25, "triangle, point down"}, [TOP_CIRC]={26, "circle"}, [TOP_CRSS]={27, "2 upright crosses"}, [TOP_T]={28, "t-shape"}, [TOP_TRCL]={29, "triangle, point up over circle"}, [TOP_CRCL]={30, "upright cross over circle"},
-  [TOP_RHCL]={31, "rhombus over circle"}, [TOP_CLTR]={32, "circle over triangle, point up"}, [TOP_OTHR]={33, "other"}, {0, NULL} };
+  [TOP_RHCL]={31, "rhombus over circle"}, [TOP_CLTR]={32, "circle over triangle, point up"}, [TOP_OTHR]={33, "other"}, [TOP_CYSP]={34, "cylinder over sphere"}, [TOP_COSP]={35, "cone, point up over sphere"}, {0, NULL} };
 s57val_t trafic[] = { {1, "inbound"}, {2, "outbbound"}, {3, "one-way"}, {4, "two-way"}, {0, NULL} };
 s57val_t watlev[] = { {1, "part-submerged"}, {2, "dry"}, {3, "submerged"}, {4, "covers"}, {5, "awash"}, {6, "floods"}, {7, "floating"}, {8, "above_mwl"}, {9, "below_mwl"}, {0, NULL} };
 s57val_t cat_ts[] = { {1, "flood"}, {2, "ebb"}, {3, "other"}, {0, NULL} };

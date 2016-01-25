@@ -744,7 +744,7 @@ object_rules(areas) {
       free_string
     }
   }
-//  if (is_type("sandwaves") && (zoom>=12)) area("fill:url(#sandwaves)");
+  if (is_type("sandwaves") && (zoom>=12)) area("fill:url(#sandwaves)");
   if (is_type("weed") && attribute_test("category", "kelp") && (zoom>=12)) {
     if (is_node) symbol("kelp_p");
     else if (is_area) area("fill:url(#kelp_a)");
@@ -826,7 +826,7 @@ rules {
   type("separation_lane") object(separation);
   type("separation_boundary") object(separation);
   type("inshore_traffic_zone") object(separation);
-//  type("sandwaves") object(areas);
+  type("sandwaves") object(areas);
   type("production_area") object(areas);
   type("fairway") object(areas);
   type("dredged_area") object(areas);
