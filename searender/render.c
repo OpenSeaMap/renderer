@@ -61,7 +61,7 @@ char *top_shapes[] = { [TOP_UNKN]="", [TOP_CONE]="top_cone_up", [TOP_ICONE]="top
   [TOP_EAST]="top_east", [TOP_RHOM]="top_diamond", [TOP_NORTH]="top_north", [TOP_SOUTH]="top_south", [TOP_BESM]="", [TOP_IBESM]="",
   [TOP_FLAG]="", [TOP_SPRH]="", [TOP_SQUR]="top_square", [TOP_HRECT]="", [TOP_VRECT]="", [TOP_TRAP]="", [TOP_ITRAP]="",
   [TOP_TRI]="top_triangle_up", [TOP_ITRI]="top_triangle_down", [TOP_CIRC]="top_circle", [TOP_CRSS]="", [TOP_T]="", [TOP_TRCL]="",
-  [TOP_CRCL]="", [TOP_RHCL]="", [TOP_CLTR]="", [TOP_OTHR]="" };
+  [TOP_CRCL]="", [TOP_RHCL]="", [TOP_CLTR]="", [TOP_OTHR]="", [TOP_CYSP]="top_can_sphere", [TOP_COSP]="top_cone_sphere" };
 
 char *fog_signals[] = { [FOG_UNKN]="", [FOG_EXPL]="Explos", [FOG_DIA]="Dia", [FOG_SIRN]="Siren", [FOG_NAUT]="Horn",
   [FOG_REED]="Horn", [FOG_TYPH]="Horn", [FOG_BELL]="Bell", [FOG_WHIS]="Whis", [FOG_GONG]="Gong", [FOG_HORN]="Horn" };
