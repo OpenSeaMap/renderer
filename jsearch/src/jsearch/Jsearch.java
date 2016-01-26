@@ -1,4 +1,5 @@
 /* Copyright 2014 Malcolm Herring
+ * Copyright 2016 Consilium Marine & Safety AB, Palle Raabjerg <palle.raabjerg@consilium.se>
  *
  * This is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
