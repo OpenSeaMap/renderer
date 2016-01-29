@@ -31,15 +31,16 @@ public class NodeAdder {
     // so there should be no ID collisions.
     private Long nextID;
     // z10s, z11s, z12s hash maps, used for flagging additional tiles for rendering.
-    private HashMap<Integer, Boolean> z10s, z11s, z12s;
+    private HashMap<Integer, Boolean> z9s, z10s, z11s, z12s;
     
-    public NodeAdder (HashMap<Integer, Boolean> z10s, HashMap<Integer, Boolean> z11s, HashMap<Integer, Boolean> z12s) {
+    public NodeAdder (HashMap<Integer, Boolean> z9s, HashMap<Integer, Boolean> z10s, HashMap<Integer, Boolean> z11s, HashMap<Integer, Boolean> z12s) {
+    	this.z9s = z9s;
     	this.z10s = z10s;
     	this.z11s = z11s;
     	this.z12s = z12s;
     }
     
-    public void addNodes(File inputFile, File outputFile) throws IOException, JDOMException, DataConversionException {
+    public HashMap<Integer, Boolean> addNodes(File inputFile, File outputFile) throws IOException, JDOMException, DataConversionException {
 	    SAXBuilder saxBuilder = new SAXBuilder();
 	    Document document = saxBuilder.build(inputFile);
 	    
@@ -49,6 +50,8 @@ public class NodeAdder {
 	    newNodes = new ArrayList<Element>();
 	    
 	    nextID = 0L;
+	    
+	    HashMap<Integer, Boolean> addedz9s = new HashMap<Integer, Boolean>();
 	    
 	    for (Element rootChild : OSMroot.getChildren()) {
 	    	Long elementID = -1L;
@@ -72,7 +75,7 @@ public class NodeAdder {
 	    		if (lastnd != null) {
 	    			Integer nd2Index = rootChild.indexOf(wayChild);
 	    			Element currentnd = wayChild;
-	    			createMissingNodes(ndsToAdd,
+	    			addedz9s = createMissingNodes(ndsToAdd,
 	    					resolveNdRef(lastnd.getAttribute("ref").getLongValue()),
 	    					resolveNdRef(currentnd.getAttribute("ref").getLongValue()), nd2Index);
 	    		}
@@ -105,6 +108,8 @@ public class NodeAdder {
 	    } catch (IOException e) {
 	    	System.err.println(e);
 	    }
+	    
+	    return addedz9s;
     }
     
     private void addNodeToRoot(Element nodeElement) throws DataConversionException{
@@ -116,7 +121,7 @@ public class NodeAdder {
     	return rootNodes.get(refnr);
     }
     
-    private void createMissingNodes(LinkedHashMap<Integer, ArrayList<Element>> addedNds, Element node1, Element node2, Integer nd2Index) throws DataConversionException {
+    private HashMap<Integer, Boolean> createMissingNodes(LinkedHashMap<Integer, ArrayList<Element>> addedNds, Element node1, Element node2, Integer nd2Index) throws DataConversionException {
         Double lon1 = node1.getAttribute("lon").getDoubleValue();
         Double lat1 = node1.getAttribute("lat").getDoubleValue();
         Double lon2 = node2.getAttribute("lon").getDoubleValue();
@@ -127,6 +132,8 @@ public class NodeAdder {
         Double yco2 = TileConversion.lat2ytileco(lat2, 12);
         Double distance = Math.sqrt(Math.pow((xco2-xco1), 2.0) + Math.pow((yco2-yco1), 2.0));
         Integer numExtraNodes = 0;
+        
+		HashMap<Integer, Boolean> addedz9s = new HashMap<Integer, Boolean>();
         
         // If distance between two nodes in a way is above 3 tiles,
         // we add 1 node for each tile beyond that 
@@ -155,6 +162,8 @@ public class NodeAdder {
                 // Flag additional tiles for rendering
                 Integer xtile = TileConversion.lon2xtile(lon, 12);
                 Integer ytile = TileConversion.lat2ytile(lat, 12);
+				addedz9s.put(((xtile / 8) * 512) + (ytile / 8), true);
+				z9s.put(((xtile / 8) * 512) + (ytile / 8), true);
 				z10s.put(((xtile / 4) * 1024) + (ytile / 4), true);
 				z11s.put(((xtile / 2) * 2048) + (ytile / 2), true);
 				for (int x = xtile - 1; x <= xtile + 1; x++) {
@@ -169,5 +178,6 @@ public class NodeAdder {
         	}
         	addedNds.put(nd2Index, nodesToAdd);
         }
+        return addedz9s;
     }
 }
