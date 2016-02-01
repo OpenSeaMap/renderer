@@ -16,7 +16,7 @@ import jsearch.Jsearch.MapBB;
 
 public class Extract {
 
-	public static ArrayList<String> extractData(String filedata, MapBB box) throws IOException {
+	public static ArrayList<String> extractData(String filename, MapBB box) throws IOException {
 
 		HashMap<Long, Long> nodes = new HashMap<Long, Long>();
 		HashMap<Long, Long> ways = new HashMap<Long, Long>();
@@ -36,7 +36,7 @@ public class Extract {
 		boolean needed = false;
 		String ln;
 
-		in = new BufferedReader(new StringReader(filedata));
+		in = new BufferedReader(new FileReader(filename));
 		while ((ln = in.readLine()) != null) {
 			if (inOsm) {
 				if (inNode) {
@@ -141,7 +141,7 @@ public class Extract {
 		}
 		in.close();
 		
-		in = new BufferedReader(new StringReader(filedata));
+		in = new BufferedReader(new FileReader(filename));
 		while ((ln = in.readLine()) != null) {
 			if (inOsm) {
 				if (inWay) {
@@ -179,7 +179,7 @@ public class Extract {
 		}
 		in.close();
 		
-		in = new BufferedReader(new StringReader(filedata));
+		in = new BufferedReader(new FileReader(filename));
 		buf.add("<?xml version='1.0' encoding='UTF-8'?>");
 		buf.add("<osm version='0.6' upload='false' generator='Jrender'>");
 		buf.add(String.format(Locale.ENGLISH, "<bounds minlat='%.8f' minlon='%.8f' maxlat='%.8f' maxlon='%.8f'/>", box.minlat, box.minlon, box.maxlat, box.maxlon));

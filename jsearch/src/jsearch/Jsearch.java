@@ -11,8 +11,6 @@
 package jsearch;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
 
 public class Jsearch {
@@ -218,9 +216,8 @@ public class Jsearch {
 		} while (next);
 		
 		HashMap<Integer, Boolean> z9sClone = new HashMap<Integer, Boolean>(z9s);
-		String nextContent = new String(Files.readAllBytes(Paths.get(dir + "next.osm")));
 		for (int t : z9sClone.keySet()) {
-			String z9nam = makez9osm(t, nextContent, dir);
+			String z9nam = makez9osm(t, dir);
 			
 			// Add additional nodes to ways
 			File inputOSM = new File(z9nam);
@@ -231,7 +228,7 @@ public class Jsearch {
 			
 			// Build any additional z9 osm files
 			for (int u : addedz9s.keySet()) {
-				makez9osm(u, nextContent, dir);
+				makez9osm(u, dir);
 			}
 		}
 		for (int t : z10s.keySet()) {
@@ -242,8 +239,7 @@ public class Jsearch {
 			bb.maxlon = TileConversion.tile2lon((x + 6) % 4095, 12);
 			bb.minlat = TileConversion.tile2lat(Math.min((y + 6), 4095), 12);
 			bb.maxlat = TileConversion.tile2lat(Math.max((y - 2), 0), 12);
-			String z9fileContent = new String(Files.readAllBytes(Paths.get(dir + "tmp/" + ((t / 1024) / 2) + "-" + ((t % 1024) / 2) + "-9.osm")));
-			ArrayList<String> ext = Extract.extractData(z9fileContent, bb);
+			ArrayList<String> ext = Extract.extractData(dir + "tmp/" + ((t / 1024) / 2) + "-" + ((t % 1024) / 2) + "-9.osm", bb);
 			PrintStream out = new PrintStream(dir + "tmp/" + (t / 1024) + "-" + (t % 1024) + "-10.osm");
 			for (String line : ext) {
 				out.println(line);
@@ -258,16 +254,13 @@ public class Jsearch {
 			bb.maxlon = TileConversion.tile2lon((x + 4) % 4095, 12);
 			bb.minlat = TileConversion.tile2lat(Math.min((y + 4), 4095), 12);
 			bb.maxlat = TileConversion.tile2lat(Math.max((y - 2), 0), 12);
-			String z10fileContent = new String(Files.readAllBytes(Paths.get(dir + "tmp/" + ((t / 2048) / 2) + "-" + ((t % 2048) / 2) + "-10.osm")));
-			ArrayList<String> ext = Extract.extractData(z10fileContent, bb);
+			ArrayList<String> ext = Extract.extractData(dir + "tmp/" + ((t / 2048) / 2) + "-" + ((t % 2048) / 2) + "-10.osm", bb);
 			String z11nam = dir + "tmp/" + (t / 2048) + "-" + (t % 2048) + "-11.osm";
 			PrintStream out = new PrintStream(z11nam);
 			for (String line : ext) {
 				out.println(line);
 			}
 			out.close();
-			
-			String z11fileContent = new String(Files.readAllBytes(Paths.get(z11nam)));
 			for (int i = (x+4095)%4096; i < x+3; i = (i+1)%4096) {
 				for (int j = Math.max(y-1, 0); j < y+3; j = Math.min(j+1, 4095)) {
 					if (z12s.containsKey(i*4096+j)) {
@@ -277,7 +270,7 @@ public class Jsearch {
 						bb.maxlon = TileConversion.tile2lon((i + 2) % 4095, 12);
 						bb.minlat = TileConversion.tile2lat(Math.min((j + 2), 4095), 12);
 						bb.maxlat = TileConversion.tile2lat(Math.max((j - 1), 0), 12);
-						ext = Extract.extractData(z11fileContent, bb);
+						ext = Extract.extractData(z11nam, bb);
 						out = new PrintStream(dir + "tmp/" + i + "-" + j + "-12.osm");
 						for (String line : ext) {
 
@@ -293,7 +286,7 @@ public class Jsearch {
 		System.exit(0);
 	}
 
-	static private String makez9osm(int t, String nextContent, String dir) throws IOException {
+	static private String makez9osm(int t, String dir) throws IOException {
 		int x = (t / 512) * 8;
 		int y = (t % 512) * 8;
 		MapBB bb = new MapBB();
@@ -301,7 +294,7 @@ public class Jsearch {
 		bb.maxlon = TileConversion.tile2lon((x + 10) % 4095, 12);
 		bb.minlat = TileConversion.tile2lat(Math.min((y + 10), 4095), 12);
 		bb.maxlat = TileConversion.tile2lat(Math.max((y - 2), 0), 12);
-		ArrayList<String> ext = Extract.extractData(nextContent, bb);
+		ArrayList<String> ext = Extract.extractData(dir + "next.osm", bb);
 		String z9nam = dir + "tmp/" + (t / 512) + "-" + (t % 512) + "-9.osm";
 		PrintStream out = new PrintStream(z9nam);
 		for (String line : ext) {
