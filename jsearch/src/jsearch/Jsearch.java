@@ -254,8 +254,9 @@ public class Jsearch {
 			bb.maxlon = TileConversion.tile2lon((x + 4) % 4095, 12);
 			bb.minlat = TileConversion.tile2lat(Math.min((y + 4), 4095), 12);
 			bb.maxlat = TileConversion.tile2lat(Math.max((y - 2), 0), 12);
-			ArrayList<String> ext = Extract.extractData(dir + "tmp/" + ((t / 2048) / 2) + "-" + ((t % 2048) / 2) + "-10.osm", bb);
 			String z11nam = dir + "tmp/" + (t / 2048) + "-" + (t % 2048) + "-11.osm";
+			String z10nam = dir + "tmp/" + ((t / 2048) / 2) + "-" + ((t % 2048) / 2) + "-10.osm";
+			ArrayList<String> ext = Extract.extractData(z10nam, bb);
 			PrintStream out = new PrintStream(z11nam);
 			for (String line : ext) {
 				out.println(line);
@@ -270,11 +271,10 @@ public class Jsearch {
 						bb.maxlon = TileConversion.tile2lon((i + 2) % 4095, 12);
 						bb.minlat = TileConversion.tile2lat(Math.min((j + 2), 4095), 12);
 						bb.maxlat = TileConversion.tile2lat(Math.max((j - 1), 0), 12);
+						String z12nam = dir + "tmp/" + i + "-" + j + "-12.osm";
 						ext = Extract.extractData(z11nam, bb);
-						out = new PrintStream(dir + "tmp/" + i + "-" + j + "-12.osm");
+						out = new PrintStream(z12nam);
 						for (String line : ext) {
-
-
 							out.println(line);
 						}
 						out.close();
@@ -282,11 +282,10 @@ public class Jsearch {
 				}
 			}
 		}
-
 		System.exit(0);
 	}
 
-	static private String makez9osm(int t, String dir) throws IOException {
+	static private void makez9osm(int t, String dir, String z9nam) throws IOException {
 		int x = (t / 512) * 8;
 		int y = (t % 512) * 8;
 		MapBB bb = new MapBB();
