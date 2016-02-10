@@ -262,7 +262,7 @@ public class Jsearch {
 				out.println(line);
 			}
 			out.close();
-			for (int i = (x+4095)%4096; i < x+3; i = (i+1)%4096) {
+			for (int i = (x+4095)%4096; i < x+3; i = i+1) {
 				for (int j = Math.max(y-1, 0); j < y+3; j = Math.min(j+1, 4095)) {
 					if (z12s.containsKey(i*4096+j)) {
 						z12s.remove(i*4096+j);
