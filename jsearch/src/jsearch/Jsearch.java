@@ -217,18 +217,25 @@ public class Jsearch {
 		
 		HashMap<Integer, Boolean> z9sClone = new HashMap<Integer, Boolean>(z9s);
 		for (int t : z9sClone.keySet()) {
-			String z9nam = makez9osm(t, dir);
-			
+			String z9nam = dir + "tmp/" + (t / 512) + "-" + (t % 512) + "-9.osm";
+			if (!(new File(z9nam).exists())) {
+				makez9osm(t, dir, z9nam);
+			}
+
 			// Add additional nodes to ways
 			File inputOSM = new File(z9nam);
 			File tempOutput = new File(z9nam + ".output");
 			NodeAdder nodeAdder = new NodeAdder(z9s, z10s, z11s, z12s);
 			HashMap<Integer, Boolean> addedz9s = nodeAdder.addNodes(inputOSM, tempOutput);
 			tempOutput.renameTo(inputOSM);
-			
+
 			// Build any additional z9 osm files
 			for (int u : addedz9s.keySet()) {
-				makez9osm(u, dir);
+				String z9name = dir + "tmp/" + (u / 512) + "-" + (u % 512) + "-9.osm";
+			
+				if (!(new File(z9name).exists())) {
+					makez9osm(u, dir, z9name);
+				}
 			}
 		}
 		for (int t : z10s.keySet()) {
@@ -294,13 +301,11 @@ public class Jsearch {
 		bb.minlat = TileConversion.tile2lat(Math.min((y + 10), 4095), 12);
 		bb.maxlat = TileConversion.tile2lat(Math.max((y - 2), 0), 12);
 		ArrayList<String> ext = Extract.extractData(dir + "next.osm", bb);
-		String z9nam = dir + "tmp/" + (t / 512) + "-" + (t % 512) + "-9.osm";
 		PrintStream out = new PrintStream(z9nam);
 		for (String line : ext) {
 			out.println(line);
 		}
 		out.close();
-		return z9nam;
 	}
 	
 	MapBB tile2bb(final int x, final int y, final int zoom) {
