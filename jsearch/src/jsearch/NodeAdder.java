@@ -75,9 +75,9 @@ public class NodeAdder {
 	    		if (lastnd != null) {
 	    			Integer nd2Index = rootChild.indexOf(wayChild);
 	    			Element currentnd = wayChild;
-	    			addedz9s = createMissingNodes(ndsToAdd,
+	    			addedz9s.putAll(createMissingNodes(ndsToAdd,
 	    					resolveNdRef(lastnd.getAttribute("ref").getLongValue()),
-	    					resolveNdRef(currentnd.getAttribute("ref").getLongValue()), nd2Index);
+	    					resolveNdRef(currentnd.getAttribute("ref").getLongValue()), nd2Index));
 	    		}
 	    		lastnd = wayChild;
 	    	}
