@@ -152,7 +152,7 @@ public class NodeAdder {
                 nodeElement.setAttribute("lon", lon.toString());
                 nodeElement.setAttribute("version", "1");
                 nodeElement.setAttribute("timestamp", "0000-01-27T21:03:16Z");
-                nodeElement.setAttribute("changeset", "0");
+                nodeElement.setAttribute("changeset", "8");
                 nodeElement.setAttribute("uid", "0");
                 nodeElement.setAttribute("user", "");
                 addNodeToRoot(nodeElement);
