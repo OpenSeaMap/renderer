@@ -1,0 +1,16 @@
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"  
+   version="1.0"
+   width="300"
+   height="400">
+  <symbol id="lattice" width="300" height="400">
+    <path d="M 130,200 L 140,200 C 140,185 160,185 160,200 L 170,200 L 165,130 L 135,130 Z"
+      style="stroke:none;fill:#ff0000" />
+    <circle cx="150" cy="200" r="10" style="fill:none;stroke:#000000;stroke-width:4" />
+    <path d="M 120,200 L 140,200 M 160,200 L 180,200 M 130,200 L 135,130 L 165,130 L 170,200
+      M 130,190 L 167,175 M 170,190 L 133,175 M 133,140 L 167,155 M 167,140 L 133,155"
+      style="fill:none;stroke:#000000;stroke-width:4" />
+  </symbol>
+  <use xlink:href="#lattice" x="0" y="0" />
+</svg>

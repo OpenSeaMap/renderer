@@ -21,7 +21,7 @@ object_rules(refls, char *body_shape) {
       if (has_object("topmark")) symbol_orientation("radar_reflector", BC, -45, 120, 18.5);
       else symbol_orientation("radar_reflector", BC, -15, 50, 18.5);
     }
-    literal_case("tower|beacon|stake") {
+    literal_case("lattice|tower|beacon|stake") {
       if (has_object("topmark")) symbol_position("radar_reflector", BC, 0, 160);
       else symbol_position("radar_reflector", BC, 0, 80);
     }
@@ -78,18 +78,40 @@ object_rules(rdos) {
 }
 
 object_rules(lights) {
+  if (has_object("topmark")) {
+    use_object("topmark")
+    if (attribute_test("status", "illuminated") && (zoom >= 14)) {
+      symbol("floodlit");
+    }
+    used
+  }
   if (is_type("light_major|light_minor|light|pile")) {
     if (is_type("light_major")) {
       symbol("light_major");
       if (has_object("fog_signal")) object(fogs);
     } else if (is_type("light_minor|light")) {
       if ((zoom >= 14) || ((zoom >= 11) && (has_object("radar_transponder")))) {
-        symbol("light_minor");
+        if (has_object("light")) {
+          use_object("light")
+          if (attribute_test("category", "floodlight") && (zoom >= 14)) {
+            symbol("signal_station");
+          } else {
+            symbol("light_minor");
+          }
+          used
+        }
         if (has_object("fog_signal")) object(fogs);
       }
     } else if (is_type("pile")) {
-      if (has_object("light") && (zoom >= 14)) symbol("light_minor");
-      else if (zoom >= 16) symbol("post");
+      if (has_object("light") && (zoom >= 14)) {
+        use_object("light")
+        if (attribute_test("category", "floodlight") && (zoom >= 14)) {
+          symbol("signal_station");
+        } else {
+          symbol("light_minor");
+        }
+        used
+      } else if (zoom >= 16) symbol("post");
     }
     if (has_object("radar_transponder")) object(rtbs);
     if (has_object("radio_station")) object(rdos);
@@ -110,13 +132,14 @@ object_rules(lights) {
       }
     }
     if ((zoom >= 14) || is_type("light_major|landmark") ||
-        ((zoom >= 11) && (has_object("radar_transponder"))))
+        ((zoom >= 11) && (has_object("radar_transponder")))) {
       light_flare;
+    }
     if (zoom >= 15) {
       make_char_string("light");
       text(string, "font-family:Arial; font-weight:normal; font-size:70; text-anchor:start", 60, -10);
       free_string;
-      if (has_item_attribute("name") && !has_item_attribute("fixme") && is_type("light_major|light_minor"))
+      if (has_item_attribute("name") && !has_item_attribute("fixme") && is_type("light_major"))
         text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -100);
     }
   }
@@ -151,7 +174,7 @@ object_rules(topmarks, char *body_shape) {
   if (has_attribute("shape")) {
     literal_switch(body_shape)
     literal_case("pillar|spar") object(top_colours, attribute("shape"), -33.5, 100, 18.5);
-    literal_case("tower|beacon|stake") object(top_colours, attribute("shape"), 0, 73, 0);
+    literal_case("lattice|tower|beacon|stake") object(top_colours, attribute("shape"), 0, 73, 0);
     literal_case("float|super-buoy") object(top_colours, attribute("shape"), 0, 44, 0);
     literal_case("can|conical|spherical|barrel") object(top_colours, attribute("shape"), -15.3, 37, 18.5);
     end_switch
@@ -160,7 +183,7 @@ object_rules(topmarks, char *body_shape) {
 
 object_rules(mark_colours, char* default_shape) {
   make_string("");
-  if (attribute_test("shape", "tower|pillar|spar|barrel|can|conical|spherical|super-buoy")) {
+  if (attribute_test("shape", "lattice|tower|pillar|spar|barrel|can|conical|spherical|super-buoy")) {
     add_string(attribute("shape"));
   } else {
     add_string(default_shape)
@@ -202,7 +225,7 @@ object_rules(mark_colours, char* default_shape) {
   if (has_object("light")) object(lights);
   if ((zoom >= 15) && has_item_attribute("name")) {
     literal_switch(string)
-    literal_case("beacon") text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
+    literal_case("lattice|beacon") text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 20, -50);
     literal_case("pillar|spar") text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 50, -50);
     literal_case("float|tower") text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:start", 60, -50);
     literal_case("spherical|can|conical|float|super-buoy|tower|barrel") {
@@ -298,6 +321,9 @@ object_rules(buoys) {
 }
 
 object_rules(beacons) {
+  if (attribute_test("status", "illuminated") && (zoom >= 14)) {
+    symbol("floodlit");
+  }
   switch (zoom) {
     case 9:
     case 10:
@@ -383,12 +409,15 @@ object_rules(separation) {
 }
 
 object_rules(transits) {
-  int ref;
+  int ref = 0;
   if (zoom >= 14) {
-    if (is_type("recommended_track")) ref = line("stroke-width:8; stroke:#000000; stroke-linecap:butt; fill:none");
-    else if (is_type("navigation_line")) ref = line("stroke-width:8; stroke-dasharray:20,20; stroke:#000000; stroke-linecap:butt; fill:none");
+    if (is_type("recommended_track") && is_line) {
+      if (nodes == 2)ref = line("stroke-width:8; stroke:#000000; stroke-linecap:butt; fill:none");
+      else line("stroke-width:8; stroke-dasharray:10,10; stroke:#000000; stroke-linecap:butt; fill:none");
+    }
+    else if (is_type("navigation_line") && is_line) ref = line("stroke-width:8; stroke-dasharray:20,20; stroke:#000000; stroke-linecap:butt; fill:none");
   }
-  if (zoom >= 15) {
+  if ((ref != 0) && (zoom >= 15)) {
     make_string("");
     if (has_object("name")) {
       add_string(item_attribute("name"));
@@ -462,7 +491,6 @@ object_rules(signals) {
 object_rules(radios) {
   if (zoom >= 12) {
     symbol("signal_station");
-    symbol("radar_station");
     if (is_type("radio_station") && has_attribute("category")) {
       if (attribute_test("category", "v-ais|v-ais_north_cardinal|v-ais_south_cardinal|v-ais_east_cardinal|v-ais_west_cardinal|v-ais_port_lateral") ||
           attribute_test("category", "v-ais_starboard_lateral|v-ais_isolated_danger|v-ais_safe_water|v-ais_special_purpose|v-ais_wreck")) {
@@ -485,6 +513,8 @@ object_rules(radios) {
       text(item_attribute("name"), "font-family:Arial; font-weight:bold; font-size:80; text-anchor:middle", 0, -140);
     if (has_object("fog_signal")) object(fogs);
     if (has_object("light")) object(lights);
+    if (has_object("radar_transponder")) object(rtbs);
+    if (has_object("radio_station")) object(rdos);
   }
 }
 
@@ -502,6 +532,9 @@ object_rules(gauge) {
 }
 
 object_rules(landmarks) {
+  if (attribute_test("status", "illuminated") && (zoom >= 14)) {
+    symbol("floodlit");
+  }
   if ((zoom >= 12) && (has_attribute("function"))) {
     attribute_switch("function")
     attribute_case("pagoda") symbol("temple");
@@ -547,6 +580,9 @@ object_rules(landmarks) {
 }
 
 object_rules(buildings) {
+  if (attribute_test("status", "illuminated") && (zoom >= 14)) {
+    symbol("floodlit");
+  }
   if ((zoom >= 16) && (has_attribute("function"))) {
     attribute_switch("function")
     attribute_case("harbour_master") symbol("harbour_master");
@@ -591,11 +627,6 @@ object_rules(marinas) {
     used
   }
   if (zoom >= 16) symbol_cluster("small_craft_facility");
-}
-
-object_rules(locks) {
-  if ((zoom >= 13) && is_type("lock_basin|lock_basin_part")) symbol("lock");
-  if ((zoom >= 15) && is_type("gate")) symbol("lock_gate");
 }
 
 object_rules(distances) {
@@ -677,8 +708,10 @@ object_rules(areas) {
     if (is_area) line_symbols("restricted_line", 0.5, "line_plane", 10);
   }
   if (is_type("marine_farm")) {
-    if (zoom >= 14) symbol("marine_farm");
-    if ((zoom >= 16) && !(is_node)) line("stroke:#000000;stroke-width:4;stroke-dasharray:10,10;fill:none");
+    if (zoom >= 14) {
+      symbol("marine_farm");
+      if (!is_node) line("stroke:#000000;stroke-width:5;stroke-dasharray:20,20;fill:none");
+    }
   }
   if (is_type("fairway")) {
     if (extent > 2.0) {
@@ -744,7 +777,7 @@ object_rules(areas) {
       free_string
     }
   }
-  if (is_type("sandwaves") && (zoom>=12)) area("fill:url(#sandwaves)");
+//  if (is_type("sandwaves") && (zoom>=12)) area("fill:url(#sandwaves)");
   if (is_type("weed") && attribute_test("category", "kelp") && (zoom>=12)) {
     if (is_node) symbol("kelp_p");
     else if (is_area) area("fill:url(#kelp_a)");
@@ -847,9 +880,6 @@ rules {
   type("harbour") object(harbours);
   type("anchorage") object(harbours);
   type("anchor_berth") object(harbours);
-  type("lock_basin") object(locks);
-  type("lock_basin_part") object(locks);
-  type("gate") object(locks);
   type("distance_mark") object(distances);
   type("hulk") object(ports);
   type("landmark") object(landmarks);

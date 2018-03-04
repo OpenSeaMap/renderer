@@ -55,6 +55,7 @@ extern double calcArea(Item_t*);
 bool testArea(Item_t*);
 bool testLine(Item_t*);
 bool testNode(Item_t*);
+int countNodes(Item_t*);
 
 extern Item_t *findItem(char*);
 extern Item_t *findNext();
