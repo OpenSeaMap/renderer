@@ -59,9 +59,11 @@ char *light_characters[] = { [CHR_UNKN]="", [CHR_F]="F", [CHR_FL]="Fl", [CHR_LFL
 char *top_shapes[] = { [TOP_UNKN]="", [TOP_CONE]="top_cone_up", [TOP_ICONE]="top_cone_down", [TOP_SPHR]="top_sphere", [TOP_ISD]="top_isol",
   [TOP_CAN]="top_can", [TOP_BORD]="top_square", [TOP_SALT]="top_saltire", [TOP_CROS]="top_cross", [TOP_CUBE]="", [TOP_WEST]="top_west",
   [TOP_EAST]="top_east", [TOP_RHOM]="top_diamond", [TOP_NORTH]="top_north", [TOP_SOUTH]="top_south", [TOP_BESM]="", [TOP_IBESM]="",
-  [TOP_FLAG]="", [TOP_SPRH]="", [TOP_SQUR]="top_square", [TOP_HRECT]="", [TOP_VRECT]="", [TOP_TRAP]="", [TOP_ITRAP]="",
+  [TOP_FLAG]="", [TOP_SPRH]="", [TOP_SQUR]="top_square", [TOP_HRECT]="top_rectangle_h", [TOP_VRECT]="top_rectangle_v", [TOP_TRAP]="", [TOP_ITRAP]="",
   [TOP_TRI]="top_triangle_up", [TOP_ITRI]="top_triangle_down", [TOP_CIRC]="top_circle", [TOP_CRSS]="", [TOP_T]="", [TOP_TRCL]="",
-  [TOP_CRCL]="", [TOP_RHCL]="", [TOP_CLTR]="", [TOP_OTHR]="", [TOP_CYSP]="top_can_sphere", [TOP_COSP]="top_cone_sphere" };
+  [TOP_CRCL]="", [TOP_RHCL]="", [TOP_CLTR]="", [TOP_OTHR]="", [TOP_CYSP]="top_can_sphere", [TOP_COSP]="top_cone_sphere",
+  [TOP_ARRW]="top_arrow"
+};
 
 char *fog_signals[] = { [FOG_UNKN]="", [FOG_EXPL]="Explos", [FOG_DIA]="Dia", [FOG_SIRN]="Siren", [FOG_NAUT]="Horn",
   [FOG_REED]="Horn", [FOG_TYPH]="Horn", [FOG_BELL]="Bell", [FOG_WHIS]="Whis", [FOG_GONG]="Gong", [FOG_HORN]="Horn" };
@@ -73,7 +75,7 @@ char *siw_map[] = { [SIW_UNKN]="", [SIW_DNGR]="(Danger)", [SIW_OBST]="", [SIW_CA
   [SIW_WTHR]="(Weather)", [SIW_STRM]="(Storm)", [SIW_ICE]="(Ice)", [SIW_TIME]="(Time)", [SIW_TIDE]="(Tide)", [SIW_TSTR]="(Stream)",
   [SIW_TIDG]="", [SIW_TIDS]="", [SIW_DIVE]="", [SIW_WTLG]="", [SIW_VRCL]="", [SIW_DPTH]="" };
 
-char *rtb_map[] = { [RTB_UNKN]="", [RTB_RAMK]="Racon", [RTB_RACN]="Ramark", [RTB_LDG]="" };
+char *rtb_map[] = { [RTB_UNKN]="", [RTB_RACN]="Racon", [RTB_RAMK]="Ramark", [RTB_LDG]="" };
 
 char *scf_map[] = { [SCF_UNKN]="", [SCF_VBTH]="visitor_berth", [SCF_CLUB]="sailing_club", [SCF_BHST]="crane", [SCF_SMKR]="", [SCF_BTYD]="boatyard", [SCF_INN]="",
   [SCF_RSRT]="", [SCF_CHDR]="chandler", [SCF_PROV]="", [SCF_DCTR]="", [SCF_PHRM]="", [SCF_WTRT]="water", [SCF_FUEL]="fuel", [SCF_ELEC]="", [SCF_BGAS]="",
@@ -150,6 +152,20 @@ bool testLine(Item_t *item) {
 
 bool testNode(Item_t *item) {
   return (item->flag == NODE);
+}
+
+int countNodes(Item_t *item) {
+  if (item->flag == WAY) {
+    int n = 1;
+    Ref_t *link = item->type.way.flink->flink;
+    while (link != NULL) {
+      n++;
+      link = link->flink;
+    }
+    return n;
+  } else {
+    return 1;
+  }
 }
 
 XY_t radial(XY_t centre, double radius, double angle) {
@@ -633,13 +649,26 @@ void renderNotice(Item_t *item) {
 }
 
 void renderFlare(Item_t *item) {
-  char *col = light_colours[COL_MAG];
-  Obj_t *obj = getObj(item, LIGHTS, 0);
+  int col = COL_UNK;
+  Obj_t *obj;
   Att_t *att;
-  if (((att = getAtt(obj, COLOUR)) != NULL) && (att->val.val.l->next == NULL)) {
-    col = light_colours[att->val.val.l->val];
+  int n = countObjects(item, "light");
+  for (int i = 0; i <= n; i++) {
+    if ((obj = getObj(item, LIGHTS, i)) != NULL) {
+      if (((att = getAtt(obj, CATLIT)) != NULL) && (testAtt(att, LIT_FLDL))) {
+        renderSymbol(item, LIGHTS, "floodlit", "", "", CC, 0, 0, 90);
+      } else {
+    	  if (((att = getAtt(obj, COLOUR)) != NULL) && (col == COL_UNK) && (att->val.val.l->next == NULL)) {
+    		  col = att->val.val.l->val;
+    	  } else if ((att != NULL) && ((att->val.val.l->val != col) || (att->val.val.l->next != NULL))) {
+    		  col = COL_MAG;
+        }
+      }
+    }
   }
-  renderSymbol(item, LIGHTS, "light", "", col, CC, 0, 0, 120);
+  if (col != COL_UNK) {
+	  renderSymbol(item, LIGHTS, "light", "", light_colours[col], CC, 0, 0, 120);
+  }
 }
 
 void renderSector(Item_t *item, int s, char *text, char *style, double offset, int dy) {
@@ -1153,6 +1182,7 @@ char *charString(Item_t *item, char *type, int idx) {
         struct SECT {
           struct SECT *next;
           int dir;
+          int fld;
           LitCHR_t chr;
           ColCOL_t col;
           ColCOL_t alt;
@@ -1167,6 +1197,7 @@ char *charString(Item_t *item, char *type, int idx) {
           obj = getObj(item, LIGHTS, i);
           if ((att = getAtt(obj, CATLIT)) != NULL) {
             lights->dir = testAtt(att, LIT_DIR);
+            lights->fld = testAtt(att, LIT_FLDL);
           }
           if ((att = getAtt(obj, LITCHR)) != NULL) {
             lights->chr = att->val.val.e;
@@ -1219,7 +1250,7 @@ char *charString(Item_t *item, char *type, int idx) {
           struct SECT *this = lights;
           struct SECT *next = lights->next;
           while (next != NULL) {
-            if ((this->dir == next->dir) && (this->chr == next->chr) &&
+            if (!next->fld && (this->dir == next->dir) && (this->chr == next->chr) &&
                 (strcmp(this->grp, next->grp) == 0) && (this->per == next->per)) {
               colrng[next->col].col = 1;
               if (next->rng > colrng[next->col].rng)

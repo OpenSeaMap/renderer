@@ -358,6 +358,20 @@
     <path d="m 162.04496,196.30755 c -0.83217,-2.80181 -2.91298,-5.35573 -5.88452,-7.22247 -1.16991,-0.73494 -2.78888,-1.26969 -4.34323,-1.43458 -0.58262,-0.0618 -1.21424,-0.13756 -1.4036,-0.16833 l -0.34428,-0.056 0,-5.66257 0,-5.66257 16.2994,0 16.29939,0 5.75929,-3.28899 c 3.16761,-1.80895 5.7721,-3.25058 5.78775,-3.20362 0.0156,0.0469 -2.0888,6.25819 -4.67655,13.80276 l -4.705,13.71739 -11.26455,0.0264 -11.26456,0.0264 -0.25954,-0.87385 z"
      style="fill-opacity:1;stroke:none" />
   </symbol>
+  <symbol id="floodlit" width="100" height="100">
+    <path
+      d="M 30,19 C 34,12 43,9 50,14 l 0,36 z"
+      style="fill:none;stroke:#ffff00;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <path
+      d="M 70,19 C 67,12 56,9 50,14 l 0,36 z"
+      style="fill:none;stroke:#ffff00;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <path
+      d="m 84,35 c 1,-9 -6,-16 -14,-16 L 50,50 Z"
+      style="fill:none;stroke:#ffff00;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <path
+      d="M 16,35 C 15,26 23,19 30,19 l 20,31 z"
+      style="fill:none;stroke:#ffff00;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+  </symbol>
 <!-- Fog Signal -->
   <symbol id="fog_signal" width="300" height="400" style="fill:none;stroke:#d400d4">
     <path
@@ -433,6 +447,16 @@
   <symbol id="land_tower" width="300" height="400">
     <path d="m 131.5,29.5 0,2.5 0,38.8125 0,0.1875 -8.84375,126.5 -10.15625,0 0,5 22.71875,0 c 1.20308,7.06805 7.38229,12.5 14.78125,12.5 7.39896,0 13.57817,-5.43195 14.78125,-12.5 l 22.71875,0 0,-5 -10.15625,0 L 168.5,71 l 0,-0.1875 0,-38.8125 0,-2.5 -2.5,0 -32,0 -2.5,0 z m 5,5 27,0 0,34 -27,0 0,-34 z m -0.15625,39 27.3125,0 8.65625,124 -7.53125,0 C 163.57817,190.43195 157.39896,185 150,185 c -7.39896,0 -13.57817,5.43195 -14.78125,12.5 l -7.53125,0 8.65625,-124 z M 150,190 c 5.55246,0 10,4.44754 10,10 0,5.55246 -4.44754,10 -10,10 -5.55246,0 -10,-4.44754 -10,-10 0,-5.55246 4.44754,-10 10,-10 z"
      style="fill:#000000;fill-opacity:1" />
+  </symbol>
+  <symbol id="lattice" width="300" height="400">
+    <circle cx="150" cy="200" r="10" style="fill:none;stroke:#000000;stroke-width:4" />
+    <path d="M 120,200 L 140,200 M 160,200 L 180,200 M 130,200 L 135,130 L 165,130 L 170,200
+      M 130,190 L 167,175 M 170,190 L 133,175 M 133,140 L 167,155 M 167,140 L 133,155"
+      style="fill:none;stroke:#000000;stroke-width:4" />
+  </symbol>
+  <symbol id="lattice1" width="300" height="400">
+    <path d="M 130,200 L 140,200 C 140,185 160,185 160,200 L 170,200 L 165,130 L 135,130 Z"
+      style="fill-opacity:1;stroke:none" />
   </symbol>
 <!-- Laundrette -->
   <symbol id="laundrette" width="60" height="60">
@@ -1215,8 +1239,12 @@
   </symbol>
 <!-- Signal Station -->
   <symbol id="signal_station" width="60" height="60">
-    <path d="M 30.03125,3.53125 C 15.37581,3.53125 3.46875,15.42186 3.46875,30 c 0,14.57815 11.90706,26.46875 26.5625,26.46875 14.65544,0 26.5,-11.8906 26.5,-26.46875 0,-14.57814 -11.84456,-26.46875 -26.5,-26.46875 z m 0,3.9375 c 12.41465,0 22.4375,10.03859 22.4375,22.53125 0,12.49267 -10.02285,22.53125 -22.4375,22.53125 -12.41465,0 -22.5,-10.03858 -22.5,-22.53125 0,-12.49266 10.08535,-22.53125 22.5,-22.53125 z M 30,25.3125 c -2.580752,0 -4.65625,2.106777 -4.65625,4.6875 0,2.580723 2.075498,4.65625 4.65625,4.65625 2.580752,0 4.6875,-2.075527 4.6875,-4.65625 0,-2.580723 -2.106748,-4.6875 -4.6875,-4.6875 z"
-       style="fill:#000000;fill-opacity:1" />
+    <circle
+     r="4.5" cy="30" cx="30"
+     style="fill:#000000;fill-opacity:1;stroke:none;" />
+    <circle
+     r="17.5" cy="30" cx="30"
+     style="fill:none;stroke:#000000;stroke-width:4;stroke-opacity:1" />
   </symbol>
 <!-- Slipway -->
   <symbol id="slipway" width="60" height="60">
@@ -1438,6 +1466,11 @@
     <path d="m 44.656246,7.3963368 c -2.09605,0 -3.78861,1.72147 -3.78861,3.8533102 0,2.13184 1.69256,3.85332 3.78861,3.85332 2.09604,0 3.82155,-1.72148 3.82155,-3.85332 0,-2.1318402 -1.72551,-3.8533102 -3.82155,-3.8533102 z m -29.4523,0.40209 c -2.09604,0 -3.82155,1.72147 -3.82155,3.8533102 0,2.13184 1.72551,3.85331 3.82155,3.85331 2.09604,0 3.7886,-1.72147 3.7886,-3.85331 0,-2.1318402 -1.69256,-3.8533102 -3.7886,-3.8533102 z m 33.86685,9.4154802 -9.75155,0.067 -2.86616,2.61355 0.23061,14.207 2.73439,-0.067 -0.16473,-11.29188 1.51545,0 0.16472,29.48622 2.47083,0.16754 0.32944,-17.89278 1.35072,0.10052 0.56006,17.65823 2.6685,-0.067 -0.033,-29.68727 1.41661,0.13403 0.32945,11.55994 2.80027,0.067 -0.56005,-14.54207 -3.19561,-2.51303 z m -39.07207,0.16754 -5.17227,15.58079 2.24022,0.90469 3.65683,-11.05734 1.05422,0.16754 -4.151,15.84884 3.49211,0.067 0.49417,13.23529 2.30611,0 0.39533,-12.96723 1.44955,0 0.23061,12.90022 2.33906,0 0.23061,-13.00074 3.82155,-0.067 -4.151,-15.51377 1.12011,-0.67015 3.36033,11.22487 2.47083,-1.37379 -5.04049,-14.97766 -10.14688,-0.30156 z"
      style="fill:#a30075" />
   </symbol>
+<!-- Top Arrow -->
+  <symbol id="top_arrow" width="80" height="80">
+    <path d="M 40,80 L 40,50 L 20,50 L 10,60 L 20,70 L 40,70"
+     style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </symbol>
 <!-- Top Board -->
   <symbol id="top_board" width="40" height="80">
     <path d="M 1,41 L 39,41 39,79 1,79 z" style="stroke:#000000;stroke-width:2;fill:none" />
@@ -1636,6 +1669,104 @@
      style="fill-opacity:1;stroke:none" />
     <path d="m 13.028142,66.535443 6.975603,-13.951046 6.952694,13.894867 c 3.823981,7.642177 6.954558,13.920148 6.956837,13.951046 0.0023,0.0309 -6.265455,0.05618 -13.928297,0.05618 l -13.9324408,0 6.9756038,-13.951046 z"
      style="fill-opacity:1;stroke:none" />
+  </symbol>
+<!-- Top RectangleH -->
+  <symbol id="top_rectangle_h" width="40" height="80" >
+    <path d="M 6,79 L 6,58 L 34,58 L 34,79 Z"
+      style="stroke:#000000;stroke-width:2;fill:none"/>
+  </symbol>
+  <symbol id="top_rectangle_h1" width="40" height="80" >
+    <path d="M 6,79 L 6,58 L 34,58 L 34,79 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_h2H1" width="40" height="80" >
+    <path d="M 6,68.5 L 6,58 L 34,58 L 34,68.5 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_h2H2" width="40" height="80" >
+    <path d="M 6,79 L 6,68.5 L 34,68.5 L 34,79 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_h3H1" width="40" height="80" >
+    <path d="M 6,65 L 6,58 L 34,58 L 34,65 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_h3H2" width="40" height="80" >
+    <path d="M 6,72 L 6,65 L 34,65 L 34,72 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_h3H3" width="40" height="80" >
+    <path d="M 6,79 L 6,72 L 34,72 L 34,79 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_h2V1" width="40" height="80" >
+    <path d="M 6,79 L 6,58 L 20,58 L 20,79 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_h2V2" width="40" height="80" >
+    <path d="M 20,79 L 20,58 L 34,58 L 34,79 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_h3V1" width="40" height="80" >
+    <path d="M 6,79 L 6,58 L 16,58 L 16,79 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_h3V2" width="40" height="80" >
+    <path d="M 16,79 L 16,58 L 25,58 L 25,79 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_h3V3" width="40" height="80" >
+    <path d="M 25,79 L 25,58 L 34,58 L 34,79 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+<!-- Top RectangleV -->
+  <symbol id="top_rectangle_v" width="40" height="80" >
+    <path d="M 9.5,79 L 9.5,51 L 30.5,51 L 30.5,79 Z"
+       style="stroke:#000000;stroke-width:2;fill:none"/>
+  </symbol>
+  <symbol id="top_rectangle_v1" width="40" height="80" >
+    <path d="M 9.5,79 L 9.5,51 L 30.5,51 L 30.5,79 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_v2H1" width="40" height="80" >
+    <path d="M 9.5,65 L 9.5,51 L 30.5,51 L 30.5,65 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_v2H2" width="40" height="80" >
+    <path d="M 9.5,79 L 9.5,65 L 30.5,65 L 30.5,79 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_v3H1" width="40" height="80" >
+    <path d="M 9.5,60 L 9.5,51 L 30.5,51 L 30.5,60 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_v3H2" width="40" height="80" >
+    <path d="M 9.5,69 L 9.5,60 L 30.5,60 L 30.5,69 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_v3H3" width="40" height="80" >
+    <path d="M 9.5,79 L 9.5,69 L 30.5,69 L 30.5,79 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_v2V1" width="40" height="80" >
+    <path d="M 9.5,79 L 9.5,51 L 20.5,51 L 20.5,79 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_v2V2" width="40" height="80" >
+    <path d="M 20,79 L 20,51 L 30.5,51 L 30.5,79 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_v3V1" width="40" height="80" >
+    <path d="M 9.5,79 L 9.5,51 L 16.5,51 L 16.5,79 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_v3V2" width="40" height="80" >
+    <path d="M 16.5,79 L 16.5,51 L 23.5,51 L 23.5,79 Z"
+      style="fill-opacity:1;stroke:none"/>
+  </symbol>
+  <symbol id="top_rectangle_v3V3" width="40" height="80" >
+    <path d="M 23.5,79 L 23.5,51 L 30.5,51 L 30.5,79 Z"
+      style="fill-opacity:1;stroke:none"/>
   </symbol>
 <!-- Top Saltire -->
   <symbol id="top_saltire" width="60" height="80">
