@@ -103,7 +103,12 @@ public class Extract {
 							} else if (token.matches("^type=.+")) {
 								type = (token.split("[\"\']")[1]);
 							} else if (token.matches("^role=.+")) {
-								role = (token.split("[\"\']")[1]);
+								// Role may sometimes be empty
+								// See last relation in 247-198-9.osm for instance.
+								String[] roleExtract = token.split("[\"\']");
+								if (roleExtract.length > 1) {
+									role = roleExtract[1];
+								}
 							}
 						}
 						if ((role.equals("outer") || role.equals("inner")) && type.equals("way")) {
@@ -178,7 +183,7 @@ public class Extract {
 			}
 		}
 		in.close();
-		
+
 		in = new BufferedReader(new FileReader(filename));
 		buf.add("<?xml version='1.0' encoding='UTF-8'?>");
 		buf.add("<osm version='0.6' upload='false' generator='Jrender'>");
@@ -248,7 +253,6 @@ public class Extract {
 			}
 		}
 		in.close();
-		
 		return buf;
 	}
 }
